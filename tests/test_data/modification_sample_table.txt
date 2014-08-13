@@ -1,0 +1,7 @@
+#Order number	Originating base	Long abbreviation	Full name	Oneletter-HTML	PDB abbreviation	Cathegory
+
+FIR	A	first	first_full_name	F	UNK	test
+SEC	B	second	second_full_name	S	UNK	test
+
+# line with junk and comment sign
+

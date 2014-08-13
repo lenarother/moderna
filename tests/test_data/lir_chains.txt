@@ -1,0 +1,3 @@
+1EHZ.pdb	A
+pr0047Hc.pdb	C
+pr0047Hc_with_gap_and_N.pdb	C
