@@ -1,5 +1,5 @@
 ================================================
-moderna - A program for comparative RNA modeling
+ModeRNA - A program for comparative RNA modeling
 ================================================
 
 
@@ -157,11 +157,11 @@ Components of ModeRNA are based upon the following pieces of scientific literatu
 -------------------------------------------------------------------------
 
 
-==========================
-pyscaffold original README
-==========================
+============================
+Notes from pyscaffold README
+============================
 
-Your project was successfully set up with PyScaffold 0.9.
+This project was set up with PyScaffold 0.9.
 Following features are available:
 
 Packaging
@@ -219,8 +219,4 @@ Keep your project's scaffold up-to-date by applying
 ``putput --update my_project`` when a new version of PyScaffold was released.
 It may also be used to change the url, license and description setting.
 
-
-.. note::
-
-    Replace the content of this file with a description of your project.
 
