@@ -1,0 +1,160 @@
+
+Release notes for ModeRNA 1.7.1
+-------------------------------
+(September 2011)
+
+- compatibility bug with Biopython 1.5.8 fixed.
+
+
+Release notes for ModeRNA 1.7.0
+-------------------------------
+(May 2011)
+
+- new command: get_stacking() 
+- reformats atom names.
+- added recognition of m7G-mRNA-cap
+- resi.pucker is available.
+- get_base_pairs return BasePairInteraction objects.
+- Technical changes:
+  - code borrowed from pycogent removed.
+  - major refactoring of ModernaFragment and related classes. 
+  - get_... methods of Sequence replaced by properties.
+  - package structure revised: moderna.analyze and moderna.builder created.
+  - package moderna.topology_matcher merged into moderna.analyze.
+  - Resolved circulare dependencies: the module moderna.py is now commands.py --> from moderna import * DOES NOT CHANGE.
+  - cleanup in the code using pylint.
+
+
+Release notes for ModeRNA 1.6.0
+-------------------------------
+(November 2010)
+
+- new command: write_secstruc()
+- new command: change_sequence()
+- phosphates are fixed by clean_structure() trying to avoid clashes.
+- non-terminal phosphates are fixed by clean_structure() as well.
+- sequences are no longer equal if they only differ by modifications.
+- bug fixed in extend_helix()
+- bug fixed in automatic alignment refinement.
+- bug fixed in loading fragments with backbone breaks.
+- better string representation of structures and alignments in Python shell.
+- improved output of geometry analysis.
+
+
+Release notes for ModeRNA 1.5.2
+-------------------------------
+(October 2010)
+
+- standard A-RNA helix based on fiber diffraction data added.
+- fixed bugs in RNAChain.
+- fixed bugs in ligand recognition and structure cleanup.
+- added validation of input for all toplevel commands.
+- explicit Sequence(seq) in some commands no longer required.
+- Bio.PDB warnings are suppressed.
+
+
+Release notes for ModeRNA 1.5.1
+-------------------------------
+(August 2010)
+
+- added recognition of ATP, ADP, AMP, GTP, and many more.
+- fixed bug in command line interface.
+- fixed bug: ions + water not marked as modifications any more.
+- improved ligand recognition
+- improved structure cleanup
+- renamed commands:
+    insert_2D_fragment -> insert_two_strand_fragment
+    find_loop -> find_fragment
+    insert_loop -> insert_fragment
+    write_loop_candidates -> write_fragment_candidates
+    apply_loop -> apply_indel
+    apply_all_loops -> apply_all_indels
+- replaced 'stem residue' by 'anchor residue'	
+
+
+Release notes for ModeRNA 1.5
+-----------------------------
+(July 2010)
+
+- Many new functions for modeling with secondary structures:
+- New command: get_secstruc        -  returns dot-bracket structure.
+- New command: extend_helix        -  adds a WC-paired region.
+- New command: shrink_helix        -  removes a region between two WC-pairs.
+- New command: add_pair_to_base    -  adds a corresponding WC-paired base.
+- New command: insert_2D_fragment  -  adds a 2D motif from a file.
+- Linker search can be done with secondary structure constraints.
+- Command fix_structure() renamed to clean_structure().
+- Command clean_structure adds P to residues if it is missing.
+- Command match_template_with_alignment() fixes small inaccuracies in the alignment.
+- Refactored ModernaAlignment, RNAChain, and RNAResidue.
+- Complete documentation checked.
+- Lots of small bugfixes and refactorings.
+
+
+Release notes for ModeRNA 1.4
+-----------------------------
+(March 2010)
+	
+- Mac installation proven working.
+- ModeRNA can be installed by 'python setup.py install'
+- two new commands: fix_structure() and examine_structure()
+- improved documentation on the website.
+- improved MMTK support & MMTK installation guide.
+- criteria for backbone breaks are stricter - more breaks being recognized.
+- BackboneBuilder recognizes intra-residue clashes and messy phosphate groups.
+- backbones are fixed using Richardsons suite fragments.
+- Linker library can be generated without RNAView (uses a list of chains).
+- bug in interpreting gaps at alignment ends fixed.
+- updated linker library.
+
+
+Release notes for ModeRNA 1.3
+-----------------------------
+(February 2010)
+
+- new command: fix_backbone(model)
+- improved loop modeling: 50 candidates examined, distances and RMSD and clashes are only criteria for selection.
+- improved remodeling of backbones: using PhosphateBuilder and FCCDLoopCloser
+- more strict distance criteria what is a discontinuous backbone.
+- faster (374 tests pass in 430 sec instead of 950 sec)
+- allowed insertion of long fragments (<100nt).
+- compatible with Biopython 1.53 (element column of atoms).
+- refactored ModernaFragment.py.
+- added chmod a+x moderna/moderna.py to docs.
+
+
+Release notes for ModeRNA 1.2
+-----------------------------
+(late 2009)
+ 
+- target and template sequences in the alignment file are switched:
+--- target ---> the first sequence in the alignment file
+--- template ---> the second sequene in the alignment file
+
+
+Release notes for ModeRNA 1.1
+-----------------------------
+(mid 2009)
+
+- There is a new command: renumber_chain(model, start_id)
+- Linker insertion uses different atoms now - better loops than before. The linker database has been updated.
+- automatic alignment can handle more complicated cases:
+  CC---AAAUGUUU
+  CCAAA---U-UUU
+  (adjacent gaps and gaps interrupted by one base)
+
+- The main functions can now be imported by :
+>>> from moderna import *
+>>> t = load_template('1ehz.ent')
+
+Cleanup & bugfixes:
+- Numeric is no longer necessary -> uses Numpy instead.
+- Some module names have been changed to be consistently in CamelCase.
+- Class and function names made more consistent.
+- unnecessary files have been deleted.
+- better error messages when files are missing.
+- test data files cleaned up.
+- PDB Parser no longer contained -> Bio.PDB used
+- Dihedral no longer contained -> Bio.PDB used
+- rnasuperposition no longer contained -> shifted to main repository.
+- many small bugfixes
