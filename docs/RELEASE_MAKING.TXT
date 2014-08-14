@@ -1,0 +1,68 @@
+
+How to make a release of ModeRNA:
+
+
+1) Get OK from everybody working on the code since the last release.
+
+2) Stop working on the code
+
+3) run all tests:
+- ModeRNA/test/test_ModeRNA_all.py
+- ModeRNA/test/test_gap_in_model.py
+- ModeRNA/test/test_lir_database.py
+- moderna_django/manage.py test moderna
+
+4) Set the version number
+- in README.TXT
+- in setup.py
+- in commands.py
+- in __init__.py 
+- in moderna/moderna.py
+
+5) edit RELEASE_NOTES.TXT.
+
+6) hg ci; hg push
+
+7) Build the source release using repos/ModeRNA/setup.py build
+- Make a .tar.gz file with version number out of the subdir of build/
+  cd build
+  mv lib.linux.... moderna_source_x.y.z
+  tar -cf moderna_source_x.y.z.tar moderna_source_x.y.z
+  gzip moderna_source_x.y.z.tar
+
+- Repack the .tar.gz file to a .zip file.
+  zip -r moderna_source_x.y.z.zip moderna_source_x.y.z
+ 
+8) Copy the release files to moderna_django/site_media/
+- Copy the .tar.gz and .zip releases moderna_django/site_media
+- Add the .tar.gz and .zip releases to SVN
+
+9) Change the hyperlinks and version number
+- in templates/download.html 
+- in templates/installing.html
+
+10) Copy the release notes to moderna_django/site_media
+
+11) svn ci
+
+12) ssh to the server, svn up (Kaja)
+
+13) Go through the "Priority 10" tests in doc/manual_test_protocol.pdf
+
+14) Announce the release.
+- Edit moderna_django/templates/index.html
+- Write a mail to the lab
+- Write to other peer users.
+
+
+------------------- REMOVED --------------------------------------
+9) Build the binary release using repos/ModeRNA/moderna/setup.py 
+9.1-9.2) UPDATE: USE moderna/setup.py NOT ModeRNA/setup.py and change nothing.
+#----------------
+9.1) uncomment the line #console... in setup.py 
+9.2) manually add the ModeRNA/moderna_cli.py file and rename it to moderna.py
+9.3) C:\python26\python.exe setup.py py2exe
+9.4) try 'moderna.exe' -h in the dist folder
+9.5) rename the dist/ folder to Moderna_windows_1.X/
+9.6) Make a .zip file with version number out of it
+
