@@ -2,7 +2,7 @@
 #
 # AlignmentMatcher.py
 #
-# Changes Alignment object so it matches a given template.
+# Fixes Alignment object so that it matches a given template.
 #
 # http://iimcb.genesilico.pl/moderna/
 #
@@ -23,6 +23,7 @@ from moderna.Errors import AlignmentError
 
 BREAK = alphabet['_']
 GAP = alphabet['-']
+
 
 class PairQueue(object):
     """
@@ -100,7 +101,7 @@ class AlignmentMatcher(object):
         template = Sequence(transposed[1])
         if len(target) != len(template):
             raise AlignmentError("Error correcting alignment; lenghts differ:\n%s\%s"%(str(target), str(template)))
-        self.align.aligned_sequences = (target, template)
+        self.align.aligned_sequences = target, template
         
     def check_breaks(self, guide, apos, dqueue, result):
         """Reacts on underscores in either of the sequences."""
@@ -128,22 +129,27 @@ class AlignmentMatcher(object):
         """Reacts on matches and mismatches."""
         temp, targ = apos.template_letter, apos.target_letter
         if temp.short_abbrev == ANY_RESIDUE:
-            log.write_message(".. incomplete template residue in alignment position %i (%s/%s) - alignment edited."%(dqueue.i_ali+1, guide, temp))
+            log.write_message(".. incomplete template residue in alignment position %i (%s/%s) - alignment edited." \
+                              % (dqueue.i_ali+1, guide, temp))
             result.append((targ, guide))
         elif guide.short_abbrev == ANY_RESIDUE:
-            log.write_message(".. unknown residue in alignment position %i (%s/%s) - alignment edited."%(dqueue.i_ali+1, guide, temp))
+            log.write_message(".. unknown residue in alignment position %i (%s/%s) - alignment edited." \
+                              % (dqueue.i_ali+1, guide, temp))
             result.append((targ, guide))
         elif guide.original_base != temp.original_base:
-            log.write_message(".. different nucleobase in alignment position %i (%s/%s) - please check manually."%(dqueue.i_ali+1, guide, temp))
+            log.write_message(".. different nucleobase in alignment position %i (%s/%s) - please check manually." \
+                              % (dqueue.i_ali+1, guide, temp))
             result.append((targ, temp))
         elif guide != temp and guide.original_base == temp.original_base:
-            log.write_message(".. different modified base found in alignment position %i (%s/%s) - alignment edited."%(dqueue.i_ali+1, guide, temp))
+            log.write_message(".. different modified base found in alignment position %i (%s/%s) - alignment edited." \
+                              % (dqueue.i_ali+1, guide, temp))
             result.append((targ, guide))
         elif guide == temp:
             result.append((targ, guide))
         else:
             # there may be cases not covered - report and ignore them
-            log.write_message(".. don't know what to do about alignment position %i (%s/%s) - ignored."%(dqueue.i_ali+1, guide, temp))
+            log.write_message(".. don't know what to do about alignment position %i (%s/%s) - ignored." \
+                              % (dqueue.i_ali+1, guide, temp))
             result.append((targ, temp))
         dqueue.next_both()
 

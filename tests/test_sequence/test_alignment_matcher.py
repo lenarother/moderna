@@ -14,13 +14,19 @@ class AlignmentMatcherTests(TestCase):
         self.target_seq = Sequence("ACUGUGAYUA[UACCU#PG")
     
     def test_init(self):
+        """Initializing Matcher"""
         a = AlignmentMatcher(self.ali)
         self.assertEqual(a.align, self.ali)
         
     def test_is_target_identical(self):
+        """Compare template and target"""
         a = AlignmentMatcher(self.ali)
         self.assertTrue(a.is_target_identical(self.target_seq))
         self.assertFalse(a.is_target_identical(self.template_seq))
+
+    def test_target_with_break(self):
+        """Backbone gap breaks identity in target"""
+        a = AlignmentMatcher(self.ali)
         with_break = Sequence("ACUGUGAY_UA[UACCU#PG")
         self.assertFalse(a.is_target_identical(with_break))
     
@@ -28,10 +34,15 @@ class AlignmentMatcherTests(TestCase):
         a = AlignmentMatcher(self.ali)
         self.assertFalse(a.is_template_identical(self.target_seq))
         self.assertTrue(a.is_template_identical(self.template_seq))
+
+    def test_template_with_break(self):
+        """Backbone gap breaks identity in template"""
+        a = AlignmentMatcher(self.ali)
         with_break = Sequence("GCGGAUUUALCUCAG")
         self.assertTrue(a.is_template_identical, with_break)
         
     def test_fix_template_seq(self):
+        """Fix template sequence"""
         modified = Sequence("GCG7APU_UALCYC.G")
         expected  = 'GCG7A----PU_UALCUC.G'
         a = AlignmentMatcher(self.ali)
@@ -45,7 +56,6 @@ class AlignmentMatcherTests(TestCase):
         expected  = 'GCG7A----PU_UALCUC.G'
         a = AlignmentMatcher(self.ali)
         a.fix_template_seq(modified)
-        print self.ali
         self.assertEqual(self.ali.aligned_target_seq, Sequence("ACUGUGAYUA[-UACCU#PG"))
                                                                             
     def test_fix_example(self):

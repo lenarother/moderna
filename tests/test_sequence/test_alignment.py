@@ -10,7 +10,6 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
@@ -64,14 +63,14 @@ GCGGA----UUUALCUCAG
 
     def test_boxes_basic(self):
         """Makes sure that the Alignment class deals in proper way with boxes"""  
-        self.assertEqual(len(self.a.copy),7)
-        self.assertEqual(len(self.a.copy_backbone),0)
-        self.assertEqual(len(self.a.exchange),4)
-        self.assertEqual(len(self.a.add_modifications),3)
-        self.assertEqual(len(self.a.remove_modifications),1)
-        self.assertEqual(len(self.a.add_fragment),1)
-        self.assertEqual(len(self.a.add_fragment[0]),8)
-        self.assertEqual(len(self.a.difficult),0) 
+        self.assertEqual(len(self.a.copy), 7)
+        self.assertEqual(len(self.a.copy_backbone), 0)
+        self.assertEqual(len(self.a.exchange), 4)
+        self.assertEqual(len(self.a.add_modifications), 3)
+        self.assertEqual(len(self.a.remove_modifications), 1)
+        self.assertEqual(len(self.a.add_fragment), 1)
+        self.assertEqual(len(self.a.add_fragment[0]), 8)
+        self.assertEqual(len(self.a.difficult), 0)
         
     def test_boxes_nonoverlapping(self):
         """AlignmentPositionObjects should each be in only one bolignment should not be initialized if sequences differx."""
@@ -338,27 +337,6 @@ BOX_SAMPLES = [
     "ccccccccccccccc333333"
     ),
 
-#    (
-#    "AAAAAAAA-----AAAAAAAAA", 
-#    "AAA-----AAAAAAAAAAAAAA", 
-#    "ccFFFFFF.....Fcccccccc"
-#    ), 
-#    (
-#    "AAA-----AAAAAAAAAAAAAA", 
-#    "AAAAAAAA-----AAAAAAAAA", 
-#    "ccF.....FFFFFFcccccccc"
-#    ), 
-#    (
-#    "----AAAAAAAAAAAAAAAAAA------", 
-#    "AAAA----AAAAAAAAA-----AAAAAA", 
-#    "....5555ccccccccc33333......"
-#    ), 
-#    (
-#    "AAAA----AAAAAAAAA-----AAAAAA", 
-#    "----AAAAAAAAAAAAAAAAAA------", 
-#    "5555....ccccccccc.....333333"
-#    ), 
-    
 ]    
 
 SHRUNK_GAPS = """

@@ -10,7 +10,6 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
@@ -74,14 +73,24 @@ GCGGA----UUUALCUCAG
         """Alignment position indices need to be consistent."""
         for i in range(1,10):
             self.assertEqual(i,self.a[i].alignment_position)        
-            
+
+    def test_set_aligned_sequences(self):
+        """Both sequences can be set"""
+        self.a.set_aligned_sequences(Sequence('AAUU'), Sequence('GGCC'))
+        self.assertEqual(self.a.aligned_target_seq, Sequence('AAUU'))
+        self.assertEqual(self.a.aligned_template_seq, Sequence('GGCC'))
+
+    def test_set_aligned_sequences_fail(self):
+        """Both sequences need to have equal length"""
+        self.assertRaises(AlignmentError, self.a.set_aligned_sequences, Sequence('AAUU'), Sequence('GGC'))
+
     def test_get_aligned_template_seq(self):
         """Should return a string with the sequence plus gaps."""
-        self.assertEqual(self.a.aligned_template_seq,Sequence('GCGGA----UUUALCUCAG'))
+        self.assertEqual(self.a.aligned_template_seq, Sequence('GCGGA----UUUALCUCAG'))
 
     def test_get_aligned_target_seq(self):
         """Should return a string with the sequence plus gaps."""
-        self.assertEqual(self.a.aligned_target_seq,Sequence('ACUGUGAYUA[UACCU#PG'))
+        self.assertEqual(self.a.aligned_target_seq, Sequence('ACUGUGAYUA[UACCU#PG'))
 
     def test_load_gapstart(self):
         """Should load an alignment that starts with a gap."""

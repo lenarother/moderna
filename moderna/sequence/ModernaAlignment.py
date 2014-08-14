@@ -257,6 +257,7 @@ class Alignment(object):
     # compatibility functions exposing self.alignment to the rest of ModeRNA
     #
     #TODO: get rid of these and use some compositional pattern.
+
     def __getattribute__(self, attr):
         try:
             return object.__getattribute__(self, attr)
