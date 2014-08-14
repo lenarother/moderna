@@ -15,9 +15,9 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 
-from Constants import MODIFICATION_NAMES_TABLE_PATH, ANY_RESIDUE, \
+from moderna.Constants import MODIFICATION_NAMES_TABLE_PATH, ANY_RESIDUE, \
     RESIDUE_WITHOUT_ONE_LETTER_ABBREV 
-from Errors import AlphabetError
+from moderna.Errors import AlphabetError
 
 
 class AlphabetEntry(object):

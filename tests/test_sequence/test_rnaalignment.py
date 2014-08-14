@@ -16,10 +16,10 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
-from moderna.RNAAlignment import RNAAlignment, RNAAlignmentParser
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.RNAAlignment import RNAAlignment, RNAAlignmentParser
+from moderna.sequence.ModernaSequence import Sequence
 from moderna.Errors import AlignmentError,  AlphabetError, SequenceError
-from test_data import *
+from tests.test_data import *
 import os
 
 OUT_NAME = 'out.fasta'

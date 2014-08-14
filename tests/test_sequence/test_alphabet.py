@@ -21,12 +21,12 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
-from moderna.ModernaAlphabet import Alphabet, AlphabetEntry
+from moderna.sequence.ModernaAlphabet import Alphabet, AlphabetEntry
 from moderna.Constants import ANY_RESIDUE, UNKNOWN_RESIDUE_SHORT, \
     UNKNOWN_RESIDUE_ONELETTER,  RESIDUE_WITHOUT_ONE_LETTER_ABBREV, \
     MODIFICATION_NAMES_TABLE_PATH
 from moderna.Errors import AlphabetError
-from test_data import *
+from tests.test_data import *
 
 class AlphabetTests(TestCase):
     """

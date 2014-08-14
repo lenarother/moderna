@@ -17,7 +17,7 @@ __status__ = "Production"
 from RNAResidue import RNAResidue
 from Bio.PDB import PDBParser
 from ModernaSuperimposer import ModernaSuperimposer
-from ModernaAlphabet import alphabet
+from sequence.ModernaAlphabet import alphabet
 from Bio.PDB.Vector import rotaxis2m
 from Errors import ModernaResidueError
 import math

@@ -35,9 +35,9 @@ __status__ = "Production"
 from LogFile import log
 from RNAModel import RnaModel
 from Template import Template
-from ModernaAlphabet import Alphabet
-from ModernaSequence import Sequence
-from ModernaAlignment import Alignment
+from sequence.ModernaAlphabet import Alphabet
+from sequence.ModernaSequence import Sequence
+from sequence.ModernaAlignment import Alignment
 from ModernaStructure import ModernaStructure
 from ModernaFragment import ModernaFragment53, ModernaFragment5, ModernaFragment3
 from SecstrucFragment import ModernaFragmentStrand, ModernaFragment2D
@@ -49,7 +49,7 @@ from analyze.GeometryAnalyzer import GeometryAnalyzer
 from analyze.StackingCalculator import StackingCalculator
 from builder.BackboneBuilder import BackboneBuilder
 from CheckPdb import PdbController
-from AlignmentMatcher import AlignmentMatcher
+from sequence.AlignmentMatcher import AlignmentMatcher
 
 from Errors import ModernaStructureError, ModernaSuperimposerError, \
             ModernaResidueError, ExchangeBaseError, \
