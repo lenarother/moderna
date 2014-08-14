@@ -101,7 +101,7 @@ class AlignmentMatcher(object):
         template = Sequence(transposed[1])
         if len(target) != len(template):
             raise AlignmentError("Error correcting alignment; lenghts differ:\n%s\%s"%(str(target), str(template)))
-        self.align.aligned_sequences = target, template
+        self.align.set_aligned_sequences(target, template)
         
     def check_breaks(self, guide, apos, dqueue, result):
         """Reacts on underscores in either of the sequences."""
@@ -174,8 +174,8 @@ class AlignmentMatcher(object):
                 self.check_breaks(guide, apos, dqueue, result)
             else:
                 self.check_matches(guide, apos, dqueue, result)
-            
+
         self.set_aligned_sequences(result)
         log.write_message("\ntemplate          : %s"%seq)
-        log.write_message("alignment (after) : %s\n"%str(self.align.target_seq))
+        log.write_message("alignment (after) : %s\n"%str(self.align))
 

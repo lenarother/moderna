@@ -233,7 +233,7 @@ CUUUA-CCC
         """Introduces small corrections on alignment."""
         a = Alignment("""> target
 ACUGUGAYUA[UACCU#P-G
-> target with small errors.
+> template with small errors.
 GCG7A----U.UAGCUCA_G
         """)
         t = Template(MINI_TEMPLATE,'file')

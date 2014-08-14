@@ -167,6 +167,16 @@ GCGGA----UUUALCUCAG
         ali = Alignment(ADJACENT_GAPS_US)
         self.assertEqual(str(ali),SHRUNK_GAPS_US)
 
+    def test_update_boxes_after_seq(self):
+        '''Remove test after refactoring boxes out of alignment.'''
+        ali = Alignment('''> target
+GGCG
+> template
+GGC7
+''')
+        ali.set_aligned_sequences(Sequence('GGC7'), Sequence('GGCG'))
+        self.assertListEqual(ali.remove_modifications, [])
+
     def test_complicated_trna_alignment(self):
         ali = Alignment("""> 1j2b_D.pdb
 GGGCCCGUGGUCUAGUU_--------G-ACGCC-GCCC-UUACGAGGCGGAG-----------G-UC-CGGGGUUC-A--AG--U-C-CC--C-G-CG-GGCCCA-CCA
