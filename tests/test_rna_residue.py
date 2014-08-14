@@ -17,7 +17,7 @@ from moderna.RNAResidue import RNAResidue
 from moderna.analyze.BaseRecognizer import BaseRecognizer, BaseRecognitionError
 from Bio.PDB import PDBParser
 from moderna.Errors import RNAResidueError
-from moderna.ModernaAlphabet import Alphabet
+from moderna.sequence.ModernaAlphabet import Alphabet
 from moderna.Constants import BIO153
 
 from test_data import *

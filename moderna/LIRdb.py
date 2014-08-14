@@ -18,7 +18,7 @@ __status__ = "Production"
 import sys, re, os, os.path
 
 from ModernaStructure import ModernaStructure
-from ModernaSequence import Sequence
+from sequence.ModernaSequence import Sequence
 
 from LIR import Lir, LirRecord
 from Errors import LirError, LirRecordError

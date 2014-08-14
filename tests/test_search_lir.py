@@ -18,7 +18,7 @@ from unittest import main, TestCase
 from moderna.LIR import LirRecord
 from moderna.ModernaStructure import ModernaStructure
 from moderna.ModernaFragment import ModernaFragment
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaSequence import Sequence
 from moderna.SearchLIR import FragmentFinder, FragmentCandidates, LirQuery, LirHit, LirScoringOption
 from moderna import load_model, fix_backbone, find_fragment
 from test_data import *

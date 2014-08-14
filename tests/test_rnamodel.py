@@ -19,11 +19,10 @@ from moderna.Template import Template
 from moderna.RNAModel import RnaModel
 from moderna.ModernaStructure import ModernaStructure
 from moderna.Errors import ModernaStructureError, RenumeratorError
-from moderna.ModernaSequence import Sequence
 from moderna.analyze.BaseRecognizer import BaseRecognizer
 from moderna.ModernaFragment import ModernaFragment53, keep_first_last
-from moderna.ModernaAlignment import Alignment
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaAlignment import Alignment
+from moderna.sequence.ModernaSequence import Sequence
 from moderna import load_model, find_fragment, copy_some_residues, \
     insert_fragment, match_template_with_alignment, clean_structure, \
     renumber_chain, match_alignment_with_model

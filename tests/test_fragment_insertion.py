@@ -20,7 +20,7 @@ from moderna.ModernaFragment import ModernaFragment5,  \
 from moderna.FragmentInsertion import FragmentInserter
 from moderna.RNAModel import RnaModel
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaSequence import Sequence
 from moderna.Errors import ModernaFragmentError
 from test_data import *
 
