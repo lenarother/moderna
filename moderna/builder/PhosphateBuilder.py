@@ -175,7 +175,7 @@ class PhosphateBuilder(object):
         i = 0
         maxcyc = 50
         step = 120
-        delta = 100+epsilon
+        delta = 100 + epsilon
         MAX_J = 5
         MAX_K = 5
         tor1, tor2 = 0.0, 0.0

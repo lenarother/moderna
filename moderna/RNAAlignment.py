@@ -501,4 +501,4 @@ class RNAAlignmentParser(object):
         """Place to add Secstruc stuff."""
         pass
         
-    
+

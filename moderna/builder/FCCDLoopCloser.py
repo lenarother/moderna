@@ -21,8 +21,6 @@ in Calpha space,
 BMC Bioinformatics 2005, 6:159doi:10.1186/1471-2105-6-159.
 """
 
-#TODO: Code ready for BioPython. KR 2010/05/07
-
 __author__ = "Kristian Rother, Magdalena Rother, Tomasz Puton"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __license__ = "GPL"

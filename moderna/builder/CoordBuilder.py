@@ -19,8 +19,6 @@ for in silico protein synthesis.
 J Comput Chem. 2005 Jul 30;26(10):1063-8.
 """
 
-#TODO: Code ready for BioPython. KR 2010/05/07
-
 __author__ = "Kristian Rother, Magdalena Rother, Tomasz Puton"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __license__ = "GPL"
