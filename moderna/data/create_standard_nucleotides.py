@@ -14,7 +14,7 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Prototype"
 
 from moderna.ModernaStructure import ModernaResidue,ModernaStructure
-from moderna.BaseRecognizer import BaseRecognizer
+from moderna.analyze.BaseRecognizer import BaseRecognizer
 
 NUC_PATH = 'standard_nucleotides/'
 A_RESIDUE = NUC_PATH+'a.ent'

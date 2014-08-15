@@ -79,6 +79,11 @@ not present in the template.
     * Template object
     * Alignment object
     * RnaModel object
+
+.. doctest::
+
+    >>> add_all_modifications(t,a,m)
+    bla
     """
     template = validate_template(template)
     alignment = validate_alignment(alignment)

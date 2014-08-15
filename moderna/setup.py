@@ -19,38 +19,44 @@ __status__ = "Production"
 from distutils.core import setup
 import os
 import os.path
-
+import inspect
+import Errors
 #
 # setup script to generate Windows executable only!
 #
 if os.sep!='/':
     import py2exe
 
+MPATH = os.path.dirname(inspect.getfile(Errors))
+print MPATH
+DATA = MPATH + os.sep + 'data' + os.sep
+
 def all_from_dir(path):
+    path = os.path.abspath(path)
     if path[-1] != os.sep:
         path += os.sep
-    files = [path+f for f in os.listdir(path) if not f=='.svn']
+    files = [path + f for f in os.listdir(path) if not f=='.svn']
     return path, files
 
 file_list = [
-              ('.',['LICENSE_GPL.TXT','README.TXT','RELEASE_NOTES.TXT']),
-              ('data'+os.sep,[
-                  'data'+os.sep+'LIR_fragments.lib',
-                  'data'+os.sep+'rnaDB05_list.txt',
-                  'data'+os.sep+'modification_names_table',
-                  'data'+os.sep+'modification_topologies.txt',
-                  'data'+os.sep+'modifications',
-                  'data'+os.sep+'helix.pdb',
-                  'data'+os.sep+'suite_clusters.txt',
-                  'data'+os.sep+'pair_fragment.pdb',
-                  'data'+os.sep+'single_strand.pdb',
-                  'data'+os.sep+'phosphate_group.pdb',
-                  'data'+os.sep+'IsostericityMatrices.txt',
+              ('.', ['LICENSE_GPL.TXT','README.TXT','RELEASE_NOTES.TXT']),
+              (DATA, [
+                  DATA + 'LIR_fragments.lib',
+                  DATA + 'rnaDB05_list.txt',
+                  DATA + 'modification_names_table',
+                  DATA + 'modification_topologies.txt',
+                  DATA + 'modifications',
+                  DATA + 'helix.pdb',
+                  DATA + 'suite_clusters.txt',
+                  DATA + 'pair_fragment.pdb',
+                  DATA + 'single_strand.pdb',
+                  DATA + 'phosphate_group.pdb',
+                  DATA + 'IsostericityMatrices.txt',
               ]),
-               all_from_dir('data'+os.sep+'modification_fragments'),
-               all_from_dir('data'+os.sep+'rnaDB05'),
-               all_from_dir('data'+os.sep+'standard_bases'),
-               all_from_dir('data'+os.sep+'base_pairs'),
+               all_from_dir( 'modification_fragments'), # DATA +
+               all_from_dir(DATA + 'rnaDB05'),
+               all_from_dir(DATA + 'standard_bases'),
+               all_from_dir(DATA + 'base_pairs'),
     ]
 
 setup(

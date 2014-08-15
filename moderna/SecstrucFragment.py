@@ -30,7 +30,8 @@ class ModernaFragment53Strands(ModernaFragment53):
     """
     Abstract class for inserting secondary structural elements.    
     Defines two strands in the fragment: 
-        strand5 (upstream) and strand3 (downstream).
+    * strand5 (upstream)
+    * strand3 (downstream).
     Allows for a second insertion step.
         
     Checks whether the upper part is connected (and whether on one or two sides).
@@ -42,7 +43,7 @@ class ModernaFragment53Strands(ModernaFragment53):
                         |---------|
        anchor5_upper    anchor3_upper
     
-frag_anchor5_upper    frag_anchor3_upper
+    frag_anchor5_upper    frag_anchor3_upper
                         |---------|                                     example bulge fragment
         strand5    |----       strand3
                         |---------|

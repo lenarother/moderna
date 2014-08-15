@@ -558,7 +558,11 @@ class FragmentCandidates(object):
     def write_fragment_candidates(self, directory_name='LIR_candidates',  with_anchor_residues=False,  with_model=False, write_anchors_to_file=False,  log=True):
         """
         Writes pdb files with all fragment candidates.
-        Candidates can be easly checked manualy by calling 'pymol *' in candidates directory
+        Candidates can be checked manually by calling
+
+            > pymol *
+
+         in the candidates directory.
         
         Arguments:
         - directory name 
