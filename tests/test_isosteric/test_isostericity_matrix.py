@@ -10,14 +10,12 @@ __author__ = "Pawel Skiba, Magdalena Rother, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "0.1.0"
 __maintainer__ = "Pawel Skiba"
 __email__ = "pw.skiba@gmail.com"
 __status__ = "Prototype"
 
 from unittest import main, TestCase
-from moderna.IsostericityMatrices import IsostericityMatrices
-from test_data import *
+from moderna.isosteric.IsostericityMatrices import IsostericityMatrices
 
 
 class IsostericityMatrixTests(TestCase):

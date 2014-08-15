@@ -16,8 +16,8 @@ __email__ = "pw.skiba@gmail.com"
 __status__ = "Prototype"
 
 
-from Constants import DATA_PATH
-from LogFile import log
+from moderna.Constants import DATA_PATH
+from moderna.LogFile import log
 
 class IsostericityMatrices:
     """
