@@ -10,7 +10,6 @@ __author__ = "Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Kristian Rother"
 __email__ = "krother@genesilico.pl"
 __status__ = "Production"
@@ -18,7 +17,6 @@ __status__ = "Production"
 
 from Errors import ModernaError, ParameterError
 from LogFile import log
-from examples.usage_examples import COMMAND_EXAMPLES
 
 
 def simple_decorator(decorator):
@@ -52,10 +50,6 @@ def toplevel_function(func):
     """If a ModeRNA Error occurs, it will be written to the logfile.
     Also adds examples to the documentation strings.
     """
-    if not COMMAND_EXAMPLES.has_key(func.__name__):
-        raise ValueError("No example for ModeRNA function: %s"%func.__name__)
-    func.__doc__ += '\nExamples:\n%s'%COMMAND_EXAMPLES[func.__name__]
-    
     def catch_and_log_errors(*args, **kwargs):
         try:
             return func(*args, **kwargs)

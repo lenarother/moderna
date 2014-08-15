@@ -30,6 +30,7 @@ Contents
 .. toctree::
    :maxdepth: 2
    
+   ModeRNA Commands <commands.rst>
    Module Reference <_rst/modules>
 
 
