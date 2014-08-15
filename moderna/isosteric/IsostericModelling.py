@@ -11,20 +11,19 @@ __author__ = "Pawel Skiba, Magdalena Rother, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "0.1.0"
 __maintainer__ = "Pawel Skiba"
 __email__ = "pw.skiba@gmail.com"
 __status__ = "Prototype"
 
 
-from moderna import *
-from ModernaResidue import ModernaResidue
+#from moderna import *
+from moderna.ModernaResidue import ModernaResidue
 from IsostericityMatrices import IsostericityMatrices
 from Isostericity import Isostericity
-from Errors import IsostericityError
-from LogFile import log
+from moderna.Errors import IsostericityError
+from moderna.LogFile import log
 import os
-from Constants import BASE_PAIR_PATH
+from moderna.Constants import BASE_PAIR_PATH
 
 def create_alignment(model, template):
     """

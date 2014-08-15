@@ -31,7 +31,6 @@ from test_structure_library import StructureLibraryTests
 from test_check_pdb import CheckPdbTests
 from test_write_pdb import WritePDBTests
 from test_moderna_superimposer import SuperimposerTests
-from test_isostericity_matrix import IsostericityMatrixTests
 
 # RNA analysis
 from test_chain_discontinuity import ChainDiscontinuityTests
@@ -55,6 +54,7 @@ from test_lirdb import LirDbTests
 from test_renumerator import RenumeratorTests
 from test_fragment_insertion import FragmentInserterTests
 from test_builder import *
+from test_isosteric import *
 
 from test_rnamodel import BasicRnaModelTests, RetainTemplateTests, IndelQualityTests
 
