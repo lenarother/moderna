@@ -2,9 +2,7 @@
 ModeRNA - A program for comparative RNA modeling
 ================================================
 
-
-(c) 2009 by Magdalena Rother, Kristian Rother, Tomasz Puton 
-         and Janusz M. Bujnicki
+Copyright 2009 by Magdalena Rother, Kristian Rother, Tomasz Puton and Janusz M. Bujnicki
 
 Version 1.7.1
 
