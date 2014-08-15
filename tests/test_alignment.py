@@ -10,7 +10,6 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
@@ -143,13 +142,11 @@ GCGGA----UUUALCUCAG
         self.assertEqual(len(a.add_fragment_5p), 0)
         self.assertEqual(len(a.add_fragment_3p), 0)
         
-        
     def test_close_gaps(self):
         """Gaps close to each other should also work."""
         a = Alignment(CLOSEGAPS)
         self.assertEqual(len(a.difficult), 0)
         self.assertEqual(len(a.add_fragment), 4)
-        
         
     def test_short_with_insert(self):
         a = Alignment(WITH_INSERT)

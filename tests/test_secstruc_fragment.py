@@ -66,16 +66,16 @@ class ModernaFragment2DTests(TestCase):
     def test_renumber(self):
         """Both strands are numbered."""
         mf = ModernaFragment2D(self.motif, \
-                        anchor5=self.rna['30'], anchor3=self.rna['40'], \
-                        anchor5_upper=self.rna['31'], anchor3_upper=self.rna['39'], \
-                        frag5_upper=self.motif['196'], frag3_upper=self.motif['217'], \
-                        model=self.rna)
+                 anchor5=self.rna['30'], anchor3=self.rna['40'], \
+                 anchor5_upper=self.rna['31'], anchor3_upper=self.rna['39'], \
+                 frag5_upper=self.motif['196'], frag3_upper=self.motif['217'], \
+                 model=self.rna)
         mf.prepare_anchor_residues()
         self.assertEqual([r.identifier for r in mf._get_resis_to_renumber()], ['30', '196', '217', '218', '40'])
         self.assertEqual(mf._get_numbers_to_renumber(self.rna), ['30', '31','39', None, '40'])
         mf.renumber(self.rna)
         numbers = [r.identifier for r in mf.struc]
-        self.assertEqual(numbers, ['30','31','39','39A','40'])
+        self.assertEqual(numbers, ['30','31','39','40','41'])
 
     def test_numeration_with_model(self):
         """Fragments are renumbered on both strands with everything in between"""
@@ -87,7 +87,7 @@ class ModernaFragment2DTests(TestCase):
         mf.prepare_anchor_residues()
         mf.renumber(self.rna)
         numbers = [r.identifier for r in mf.struc]
-        self.assertEqual(numbers, ['30', '31', '39', '39A', '40'])
+        self.assertEqual(numbers, ['30', '31', '39', '40', '41'])
 
     def test_seq_and_secstruc(self):
         """After preparing everything, the fragment has the right sequence and secstruc"""
@@ -103,7 +103,7 @@ class ModernaFragment2DTests(TestCase):
         self.assertEqual(frag.struc.get_secstruc(), '((.......).)')
         numbers = [r.identifier for r in frag.struc]
         self.assertEqual(numbers, ['30','31','32', '33', \
-            '34','35','36','37','38','39','39A','40'])
+            '34','35','36','37','38','39','40','41'])
         
     def test_eliminate_middle(self):
         """Builds a fragment to shorten the connection between two anchor pairs"""

@@ -398,6 +398,10 @@ class CommandTests(TestCase):
         self.assertEqual(m.get_sequence(), Sequence("CUGCCUQUC/CGGC"))
         self.assertEqual(m.get_secstruc(), "..((.......).)")
         
+    def test_insert_fragment_3res(self):
+        m = load_model('test_data/rna_structures/1qf6.ent', 'B')
+        f = find_fragment(m, '1', '2', Sequence('AAA'))
+        insert_fragment(m, f[0])
     #----------------------------------------------------------
     def test_get_base_pairs(self):
         result = get_base_pairs(self.t)

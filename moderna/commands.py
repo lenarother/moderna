@@ -50,6 +50,7 @@ from analyze.StackingCalculator import StackingCalculator
 from builder.BackboneBuilder import BackboneBuilder
 from CheckPdb import PdbController
 from AlignmentMatcher import AlignmentMatcher
+import renumber_chain as rc
 
 from Errors import ModernaStructureError, ModernaSuperimposerError, \
             ModernaResidueError, ExchangeBaseError, \
@@ -424,7 +425,6 @@ The chain id that the model should have can be specified optionally.
     if template: template = validate_template(template)
     if alignment: alignment = validate_alignment(alignment)
     
-    model = RnaModel(template=template, alignment=alignment, model_chain_name=model_chain_name, data_type=None, data=None)
     if template and alignment:
         if not match_template_with_alignment(template,alignment):
             raise ModernaError("""Template and alignment sequences do not match!
@@ -432,8 +432,13 @@ The model cannot be built automatically.
 Template : %s
 Alignment: %s
 """%(template.get_sequence(),alignment.template_seq))
+
+        renumber_template(template, alignment)
+        model = RnaModel(template=template, alignment=alignment, model_chain_name=model_chain_name, data_type=None, data=None)
         model.create_model()
         match_alignment_with_model(alignment,model)
+    else:
+        model = RnaModel(model_chain_name=model_chain_name)    
     return model
 
 
@@ -1037,8 +1042,46 @@ Starts with the given identifier. The new numeration is continuous.
     """
     struc = validate_structure(struc)
     start_identifier = validate_resnum(start_identifier)
-    struc.renumber_chain(start_identifier)
-    
+    rc.renumber_chain(struc, start_identifier)
+
+
+@toplevel_function
+def renumber_template(template, alignment):
+    """*renumber_template(template, alignment)*
+
+Renumbers the residues of a template to facilitate future insertions
+into the model.
+
+:Arguments:
+    * Template object
+    * Pairwise target/template alignment
+    """
+    #KR: this is operative code which would look even better in Template.py or RNAModel.py
+    # currently some redundnacy with RNAModel.renumber_template. Did not check how much they overlap.
+    template = validate_structure(template)
+    seq = str(alignment.aligned_sequences[1])
+    seq += "@"  # a little hack to avoid "open" rightmost gaps
+    gaps = []
+    gap_length = 0
+    shift = 0	# remember that each insertion shifts the numbering!
+    res_num = None
+    res_iter = template.__iter__()
+    for s in seq:
+        if s=="-":
+            if gap_length==0:
+                start_pos = res_num
+            gap_length += 1
+        elif s!='_':
+            if s!="@":
+                res = res_iter.next()
+                res_num = res.number
+            if gap_length > 0:
+                gaps.append((start_pos + shift, gap_length))
+                shift += gap_length
+                gap_length = 0
+    for gap in gaps:
+        rc.insert_gap(template, gap[0], gap[1])
+
 
 @toplevel_function
 def rotate_chi(residue, angle=90):

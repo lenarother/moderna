@@ -15,15 +15,14 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from ModernaStructure import ModernaStructure
-from ModernaSequence import Sequence
 from FragmentInsertion import FragmentInserter
 from ModernaFragment import ModernaFragment, AnchorResidue, \
     ModernaFragment53, ModernaFragment5, ModernaFragment3, \
     keep_nothing, ALL_FROM_MODEL, ALL_FROM_FRAGMENT
 from Errors import ModernaFragmentError
 from Constants import HELIX_SUPERPOSITION, SINGLE_PAIR, \
-                        PAIR_PURINE_SUPERPOSITION,  PAIR_PYRIMIDINE_SUPERPOSITION, \
-                        BASE_PAIR_PATH, WC_BASE_PAIRS
+               PAIR_PURINE_SUPERPOSITION,  PAIR_PYRIMIDINE_SUPERPOSITION, \
+               BASE_PAIR_PATH, WC_BASE_PAIRS
 
 
 class ModernaFragment53Strands(ModernaFragment53):
@@ -33,23 +32,24 @@ class ModernaFragment53Strands(ModernaFragment53):
         strand5 (upstream) and strand3 (downstream).
     Allows for a second insertion step.
         
-    Checks whether the upper part is connected (and whether on one or two sides).
+    Checks whether the upper part is connected 
+    (and whether on one or two sides).
     New_sequence e.g. 'AAAA_UUUU' 
 
                          ______
                         |         |
-                        |---------|                                     upper part from model
+                        |---------|        upper part from model
                         |---------|
        anchor5_upper    anchor3_upper
     
 frag_anchor5_upper    frag_anchor3_upper
-                        |---------|                                     example bulge fragment
+                        |---------|        example bulge fragment
         strand5    |----       strand3
                         |---------|
           frag_anchor5     frag_anchor3
     
                   anchor5    anchor3
-                        |---------|                                      already existing helix from model 
+                        |---------|        already existing helix from model 
                         |---------|
                         
     """
@@ -116,6 +116,17 @@ frag_anchor5_upper    frag_anchor3_upper
         """Returns new numbers for 3' strand."""
         return [self.strand3_upper_id] + [None] * (self._strand3_length-2) 
 
+    def _renumber_fixed_anchor_ids(self, model):
+        #KR: patch the residue numbers that may have been changed before
+        gaps = self._prepared_gaps
+        gap5 = gaps[0]
+        gap3 = gaps[1]
+        self.strand5_upper_id = str(int(gap5[0]) + gap5[1] + 1) 
+        self.strand3_upper_id = gap3[0] 
+        anchor3_new_num = str(int(self.strand3_upper_id) + gap3[1] + 1)
+        self.anchor3.fixed_resi = model[anchor3_new_num]
+        self.anchor3.fixed_id = anchor3_new_num
+    
     def _get_numbers_to_renumber(self, struc):
         """Returns a list where residues to be renumbered are marked as None"""
         return [self.anchor5.fixed_id] \

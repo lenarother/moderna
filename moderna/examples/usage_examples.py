@@ -173,6 +173,8 @@ boolean = match_template_with_alignment(t,a)""",
 
     'renumber_chain':"""renumber_chain(m,'1')""", 
 
+    'renumber_template':"""renumber_template(t,a)""",
+
     'remove_modification':"""remove_modification(m['5'])
 remove_modification(t['5'], m)
 remove_modification(t['5'], m, '5A')""", 

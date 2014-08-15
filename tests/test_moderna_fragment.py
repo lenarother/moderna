@@ -118,7 +118,7 @@ class ModernaFragmentTests(TestCase):
         """Should exist as an abstract method."""
         f1 = ModernaFragment(self.s1)
         f1.renumber()
-        self.assertEqual([r.identifier for r in self.s1], ['1A', '1B', '1C', '1D'])
+        self.assertEqual([r.identifier for r in self.s1], ['1', '2', '3', '4'])
 
     def test_abstract_methods(self):
         """Some placeholder methods should be there."""
@@ -273,12 +273,12 @@ class ModernaFragment53Tests(TestCase):
         f1 = ModernaFragment53(self.s1, anchor5=self.m['10'], anchor3=self.m['13'])
         f1.prepare_anchor_residues()
         f1.renumber()
-        self.assertEqual([r.identifier for r in self.s1],['10','10A','10B','13'])
+        self.assertEqual([r.identifier for r in self.s1],['10','11','12','13'])
         # second example
         f2 = ModernaFragment53(self.s2,anchor5=self.m['1'], anchor3=self.m['4'], new_sequence=Sequence('GL'))        
         f2.prepare_anchor_residues()
         f2.renumber()
-        self.assertEqual([r.identifier for r in self.s2], ['1','1A','1B','4'])
+        self.assertEqual([r.identifier for r in self.s2], ['1','2','3','4'])
 
     def test_superimpose_fragment(self):
         """Should apply superimposition and return RMSD"""

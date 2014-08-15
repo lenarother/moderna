@@ -15,6 +15,7 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from ModernaStructure import ModernaStructure
+from renumber_chain import renumber_chain
 
 class Template(ModernaStructure):
     """
@@ -47,4 +48,5 @@ class Template(ModernaStructure):
             self.template_residues[str(number)] = resi
             number += 1
         if self.check_letters_in_residue_numeration(): 
-            self.renumber_chain()
+            renumber_chain(self)
+            

@@ -128,11 +128,14 @@ class FragmentCandidatesTests(TestCase):
 class WriteFragmentCandidatesTests(TestCase):
     #KR: load model and candidates only once --> saves lots of time
     m = load_model('test_data/gaps/gap7_template.pdb','D')
-    candidates = m.find_fragment_candidates(m['515'], m['519'],Sequence('DDG'), 10)#, lir_path='test_data/')     
+    candidates = []
     #TODO: solve path problem: RNAModel needs to know LIR db file as optional parameter
     
     def setUp(self):
         self.remove_dir()
+        if not self.candidates:
+            self.candidates = self.m.find_fragment_candidates(self.m['515'], self.m['519'],Sequence('DDG'), 10)
+            #, lir_path='test_data/')
         
     def remove_dir(self,dirname='test_data/loop_candidates'):
         if os.access('test_data/loop_candidates', os.F_OK):

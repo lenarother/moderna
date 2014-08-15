@@ -18,7 +18,7 @@ __status__ = "Production"
 from ModernaSuperimposer import ModernaSuperimposer
 from ModernaResidue import ModernaResidue
 from analyze.ClashRecognizer import ClashRecognizer
-from Renumerator import Renumerator
+from Renumerator import LetterRenumerator, NumberRenumerator
 from Errors import ModernaFragmentError
 from Constants import LIR_SUPERPOSITION5, LIR_SUPERPOSITION3
 
@@ -252,7 +252,32 @@ match number of fragment residues to change (%i).'\
         new_ids += [None] * len(self.nonanchor_residues)
         return new_ids
 
-    def renumber(self, struc=None):
+    def _get_prepared_gaps(self):
+        """Returns a list of anchors and gap lengths required for renumbering."""
+        nums = self._get_numbers_to_renumber(None)
+        gaps = []
+        last_n = 0
+        anchor = 0
+        gap_length = 0
+        shift = 0
+        for n in nums:
+            if n is not None:
+                if last_n is None:
+                    gaps.append((str(int(anchor) + shift), gap_length))
+                    shift += gap_length
+                    gap_length = 0
+                else:
+                    anchor = n
+            else:
+                gap_length += 1
+            last_n = n
+        return gaps
+
+    def _renumber_fixed_anchor_ids(self, model):
+        """Changes the numbers of fixed anchors to conform the new numbering."""
+        pass
+
+    def renumber(self, struc=None, renumerator=NumberRenumerator):
         """
         changes anchor and all numeration of all residues, 
         takes care about numbers that should be kept from model.
@@ -260,12 +285,9 @@ match number of fragment residues to change (%i).'\
         new_resi = self._get_resis_to_renumber()
         new_ids = self._get_numbers_to_renumber(struc)
         new_ids = self._keep_func(self, new_ids, struc)
-        # remove all residues
-        for resi in list(self.struc):
-            self.struc.remove_residue(resi.identifier)
-        # renumerate
-        renumerator = Renumerator(new_resi, new_ids)
-        new_ids = renumerator.get_identifiers_list()
+        self.struc.remove_all_residues()
+        # renumber
+        new_ids = renumerator(new_ids).get_identifiers()
         for new_id, resi in zip(new_ids, new_resi):
             self.struc.add_residue(resi, number=new_id)
         
@@ -320,7 +342,7 @@ class ModernaFragment3(ModernaFragment):
                 keep=keep_nothing, strict=True):        
         ModernaFragment.__init__(self, struc, new_sequence, keep, strict)
         self.anchor3 = AnchorResidue(anchor3, list(self.struc)[-1], \
-                                                    sup_r3, ALL_FROM_MODEL)
+                                                   sup_r3, ALL_FROM_MODEL)
 
     @property
     def anchor_residues(self):
@@ -344,6 +366,12 @@ class ModernaFragment3(ModernaFragment):
     def _get_numbers_to_renumber(self, struc):
         """Returns a list of kept ids or Nones for renumbering."""
         return [None] * len(self.nonanchor_residues) + [self.anchor3.fixed_id]
+
+    def _renumber_fixed_anchor_ids(self, model):
+        gaps = self._prepared_gaps
+        new_num = str(int(gaps[0][0]) + gaps[0][1] + 1)
+        self.anchor3.fixed_resi = model[new_num]
+        self.anchor3.fixed_id = new_num
 
     def fix_backbone(self): 
         """Repairs backbone breaks at all anchors."""
@@ -381,7 +409,7 @@ class ModernaFragment53(ModernaFragment):
         """
         return [self.anchor5.fixed_id] \
             + struc.find_residues_in_range(self.anchor5.fixed_id, \
-                                                            self.anchor3.fixed_id)\
+                                           self.anchor3.fixed_id)\
             + [self.anchor3.fixed_id]
     
     def _get_resis_to_renumber(self):
@@ -398,6 +426,12 @@ class ModernaFragment53(ModernaFragment):
         return [self._prepared_anchors[0].identifier] \
             + [None] * len(self.nonanchor_residues) \
             + [self._prepared_anchors[1].identifier]
+
+    def _renumber_fixed_anchor_ids(self, model):
+        gaps = self._prepared_gaps
+        new_num = str(int(gaps[0][0]) + gaps[0][1] + 1)
+        self.anchor3.fixed_resi = model[new_num]
+        self.anchor3.fixed_id = new_num
     
     def fix_backbone(self): 
         """Repairs backbone breaks at all anchors."""

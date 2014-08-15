@@ -52,11 +52,11 @@ from test_search_lir import FragmentFinderTests, FragmentCandidatesTests, WriteF
 from test_lir import LirRecordTests
 from test_lir_insertions import LIRInsertionTests
 from test_lirdb import LirDbTests
-from test_renumerator import RenumeratorTests
+from test_renumerator import RenumeratorTests, NumberRenumeratorTests, LetterRenumeratorTests
 from test_fragment_insertion import FragmentInserterTests
 from test_builder import *
 
-from test_rnamodel import BasicRnaModelTests, RetainTemplateTests, IndelQualityTests
+from test_rnamodel import BasicRnaModelTests, AutomaticRnaModelTests, RetainTemplateTests, IndelQualityTests
 
 # toplevel functions
 from test_commands import CommandTests

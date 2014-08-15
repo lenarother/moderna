@@ -10,7 +10,6 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
@@ -81,18 +80,6 @@ class ModernaStructureTests(TestCase):
         s.renumber_residue('5','12A')
         self.assertTrue(s['12A'])
                     
-    def test_chain_renumbering(self):
-        """Chain should be renumbered"""
-        m = ModernaStructure('file',RNA_1EHZ)
-        m.renumber_chain('100')
-        # check residues
-        self.assertEqual(m['100'].long_abbrev,'G')
-        self.assertEqual(m['107'].long_abbrev,'U')
-        self.assertEqual(m['109'].long_abbrev,'m2G')
-        self.assertEqual(m['175'].long_abbrev,'A')
-        self.assertEqual(m['115'].long_abbrev,'D')
-        self.assertRaises(RNAChainError,m.renumber_chain,'77A')  
-
     def test_checking_letters_in_residues_numeration(self):
         """Presence of letters in residues numeration should be detected"""
         m = ModernaStructure('file',RNA_1EHZ)

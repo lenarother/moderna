@@ -36,12 +36,14 @@ class LIRDatabaseTests(TestCase):
             if len(line) == 17:
                 st = library.get_structure_part(line[1], line[2], line[3], line[4])
                 seq = Sequence(line[6])
+                print 'SEQ', seq
                 fr = ModernaFragment53('residues', st[line[3] : line[4]], line[2], st[line[3]], st[line[4]], None, None, None )     
-                assert len(fr)-2==int(line[0])
+                assert len(fr)-2 == int(line[0])
                 fr_seq = fr.get_sequence()
-                print '1',seq,'2',fr_seq
-                assert seq==fr_seq
-            if i%100==0: print i
+                print '1', seq, '2', fr_seq
+                assert seq == fr_seq
+            if i%100==0: 
+                print i
                 
 
 if __name__ == '__main__':

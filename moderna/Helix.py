@@ -21,6 +21,7 @@ from SecstrucFragment import ModernaFragment2D, ModernaFragment553, \
 from FragmentInsertion import FragmentInserter
 from ModernaSequence import Sequence
 from Renumerator import renumber_section
+from renumber_chain import renumber_chain
 from Constants import HELIX, HELIX_SUPERPOSITION, WC_BASE_PAIRS
 from Errors import ModernaFragmentError
 
@@ -60,7 +61,7 @@ class HelixBuilder(object):
         """
         Renumbers 5' strand starting from 1, and 3' strand starting from 401.
         """
-        helix.renumber_chain()
+        renumber_chain(helix)
         strand3 = helix.strand3
         first = int(strand3[0].identifier)
         last = int(strand3[-1].identifier)

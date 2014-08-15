@@ -47,6 +47,13 @@ class ModernaStructure(RNAChain):
         for identifier in removed_residues_identifiers:
             self.remove_residue(identifier)
         return removed_residues_identifiers
+    
+    def remove_all_residues(self):
+        '''
+        Removes all residues from the structure.
+        '''
+        for resi in list(self):
+            self.remove_residue(resi.identifier)               
 
     def find_residues_in_range(self,  start_id=None,  stop_id=None):
         """Returns identifiers of residues in the given range"""
@@ -133,39 +140,8 @@ class ModernaStructure(RNAChain):
         resi = self[old_number]
         self.remove_residue(old_number)
         self.add_residue(resi, new_number)    
-        log.write_message('Residue %s ---> renumbered to %s' % (str(old_number),  str(new_number)))
+        log.write_message('Residue %s ---> renumbered to %s' % (str(old_number),  str(new_number)))    
     
-    def renumber_chain(self, start_residue='1'):
-        """
-        Changes chain numeration. Provides continous chain numeration 
-        starting from given number (by default 1)
-
-        Arguments:
-        * start number (by default 1)
-        """
-        try:
-            num = int(start_residue)
-        except ValueError: 
-            raise ModernaStructureError('Cannot start numeration with %s, requires number' % str(start_residue)) 
-        
-        self.sort_residues()
-        counter = num
-        temp_resi_list = []
-        for resi in self:
-            temp_resi = resi
-            self.remove_residue(resi.identifier)
-            temp_resi.change_number(str(counter))
-            temp_resi.id = (temp_resi.id[0], temp_resi.id[1], ' ')
-            temp_resi_list.append(temp_resi)
-            counter += 1
-
-        for resi in temp_resi_list:
-            self.add_residue(resi)
-        self.sort_residues()
-        
-        log.write_message('Chain was renumbered. The first residue is now %s.' % str(start_residue))
-        
-        
     def change_sequence(self, new_seq,  start_id=None,  stop_id=None):
         """
 Changes whole sequence (or indicated fragment) into a given one.
