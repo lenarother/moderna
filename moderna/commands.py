@@ -42,8 +42,8 @@ from ModernaStructure import ModernaStructure
 from ModernaFragment import ModernaFragment53, ModernaFragment5, ModernaFragment3
 from SecstrucFragment import ModernaFragmentStrand, ModernaFragment2D
 from Helix import HelixBuilder, HelixFragmentBuilder
-from LIR import Lir
-from SearchLIR import *
+from fragment_library.LIR import Lir
+from fragment_library.SearchLIR import *
 from analyze.ClashRecognizer import ClashRecognizer
 from analyze.GeometryAnalyzer import GeometryAnalyzer
 from analyze.StackingCalculator import StackingCalculator

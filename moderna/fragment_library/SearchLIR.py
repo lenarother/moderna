@@ -14,31 +14,23 @@ __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
-import re, os, math, pdb
+import os
 from math import pi
-import csv
 from numpy import array
-from Bio.PDB import PDBParser, PDBIO 
-from Bio.PDB.Structure import Structure
-from Bio.PDB.Model import Model
-from Bio.PDB.Chain import Chain
-from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 from LIR import Lir, LirRecord
-from ModernaAlphabet import alphabet
-from ModernaStructure import ModernaStructure
-from ModernaFragment import ModernaFragment53, keep_first_last
-from FragmentInsertion import FragmentInserter
-from ModernaResidue import ModernaResidue
-from ModernaSequence import Sequence
-from analyze.HBondCalculator import HBondCalculator
+from moderna.ModernaStructure import ModernaStructure
+from moderna.ModernaFragment import keep_first_last
+from moderna.FragmentInsertion import FragmentInserter
+from moderna.ModernaSequence import Sequence
+from moderna.analyze.HBondCalculator import HBondCalculator
 from StructureLibrary import library 
-from Errors import LirError, SearchLirError,  LirCandidatesError
+from moderna.Errors import LirError, SearchLirError,  LirCandidatesError
 
-from Constants import DATA_PATH, MODULE_PATH, PATH_TO_LIR_STRUCTURES, \
-                LIR_DATABASE_PATH, LIR_DIRECTORY_PATH, MAX_DIST_STEM, \
-                NUMBER_OF_FRAGMENT_CANDIDATES, PI2
+from moderna.Constants import PATH_TO_LIR_STRUCTURES, \
+                LIR_DATABASE_PATH, MAX_DIST_STEM, \
+                NUMBER_OF_FRAGMENT_CANDIDATES
 
-from LogFile import log
+from moderna.LogFile import log
 struc_cache = {}
 
 DIST_MASK = array([0, 1, 1, 1, 1, 0, 0, 1, 1])

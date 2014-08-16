@@ -10,7 +10,6 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.1"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
@@ -21,7 +20,7 @@ from ModernaStructure import ModernaStructure
 from Template import Template
 from RNAModel import RnaModel
 from ModernaFragment import ModernaFragment
-from SearchLIR import LirHit, FragmentCandidates
+from fragment_library.SearchLIR import LirHit, FragmentCandidates
 from ModernaResidue import ModernaResidue
 from ModernaAlignment import Alignment
 from ModernaSequence import Sequence

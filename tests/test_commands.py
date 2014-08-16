@@ -17,7 +17,7 @@ __status__ = "Production"
 from unittest import main, TestCase
 from moderna import *
 from moderna.LogFile import log
-import os
+import re
 from moderna.ModernaSequence import Sequence
 from moderna.ModernaAlignment import Alignment
 from moderna.ModernaFragment import ModernaFragment

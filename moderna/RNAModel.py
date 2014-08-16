@@ -24,7 +24,7 @@ from ModernaResidue import ModernaResidue
 from ModernaSuperimposer import ModernaSuperimposer
 from Renumerator import NumberRenumerator, LetterRenumerator
 from renumber_chain import renumber_all_residues, insert_gap
-from SearchLIR import FragmentFinder
+from fragment_library.SearchLIR import FragmentFinder
 from Constants import PATH_TO_LIR_STRUCTURES, B_FACTOR_COPY, SINGLE_STRAND,  NUMBER_OF_FRAGMENT_CANDIDATES,  BACKBONE_ATOMS
 from Errors import RnaModelError
 from LogFile import log

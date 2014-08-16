@@ -15,14 +15,13 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import TestCase, main
 from moderna.ModernaStructure import ModernaStructure
-from moderna.SearchLIR import FragmentFinder
+from moderna.fragment_library.SearchLIR import FragmentFinder
 from moderna.ModernaSequence import Sequence
 from random import random
 from moderna.Constants import DATA_PATH, PATH_TO_LIR_STRUCTURES, SINGLE_STRAND
@@ -42,7 +41,7 @@ class LIRInsertionTests(TestCase):
     def test_insert_in_itself(self):
         """Best fragment for LIR structures should come from itself."""
         for length, struc, chain, stem5, stem3, seq in FRAGMENTS_TO_INSERT:
-            m = load_model(PATH_TO_LIR_STRUCTURES+struc, chain)
+            m = load_model(PATH_TO_LIR_STRUCTURES + struc, chain)
             lf = FragmentFinder(m[stem5], m[stem3], Sequence(seq), m, 2)
             candidates = lf.find_fragment_candidates()
             if len(candidates)>0:
