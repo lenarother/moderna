@@ -28,7 +28,7 @@ from Bio.PDB.Atom import Atom
 from analyze.GeometryParameters import BACKBONE_DIST_MATRIX, \
     PHOSPHATE_DIST_MATRIX, O3_P_DIST_LOW, O3_P_DIST_HI
 from numpy import array
-from ModernaAlphabet import alphabet
+from sequence.ModernaAlphabet import alphabet
 from analyze.BaseRecognizer import BaseRecognizer, BaseRecognitionError
 from analyze.BasePairCalculator import base_pair_calc
 from analyze.PuckerCalculator import PuckerCalculator

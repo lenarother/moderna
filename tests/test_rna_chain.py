@@ -10,7 +10,6 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
@@ -21,7 +20,7 @@ import os, tempfile
 from Bio.PDB.Model import Model
 from Bio.PDB.PDBParser import PDBParser
 from moderna.Errors import ModernaResidueError, RNAChainError
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaSequence import Sequence
 from moderna.ModernaResidue import ModernaResidue
 
 from test_data import *

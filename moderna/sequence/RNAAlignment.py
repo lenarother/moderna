@@ -16,8 +16,8 @@ __status__ = "Production"
 
 import re
 from ModernaSequence import Sequence
-from Constants import ANY_RESIDUE
-from Errors import AlignmentError
+from moderna.Constants import ANY_RESIDUE
+from moderna.Errors import AlignmentError
 
 DEFAULT_SHRINK = True
 
@@ -45,8 +45,8 @@ class AlignmentPosition(object):
         self.template_position = template_position
         self.template_letter = template_letter # as AlphabetEntry
         self.alignment_position = alignment_position
-        self.target_identifier = None
-        self.template_identifier = None
+        #self.target_identifier = None
+        #self.template_identifier = None
 
     def __repr__(self):
         return '%s%s-%s%s' % ( \
@@ -169,88 +169,69 @@ class RNAAlignment(object):
     >>> ali.template_numeration[5]
     """
     #TODO: complete doctest
-    def __init__(self, data, shrink=DEFAULT_SHRINK):
+    def __init__(self, name1, seq1, name2, seq2, shrink=DEFAULT_SHRINK):
         """
-        Creates an Alignment from a ((name1, seq1), (name2,seq2)) tuple.
+        Creates an Alignment from two sequences.
         """
         self.alignment = []
-        self.template_seq_name = None
-        self.target_seq_name = None
-        self.target_numeration = {}
-        self.template_numeration = {}
-        
-        self._sequences = []
-        self._set_alignment(data)
-        
+        self.target_seq_name = name1
+        self.template_seq_name = name2
+        self.aligned_sequences = []
+        self.set_aligned_sequences(seq1, seq2)
+
         if shrink:
             self.remove_gapped_columns()
             self.remove_excess_gaps()
 
     @property        
     def template_seq(self):
-        """Returns template sequence as a Sequence instance."""
-        return self._sequences[1].seq_without_gaps
+        """Returns template sequence as a Sequence object."""
+        return self.aligned_sequences[1].seq_without_gaps
         
     @property
     def target_seq(self):
-        """Returns target sequence as a Sequence instance."""
-        return self._sequences[0].seq_without_gaps
+        """Returns target sequence as a Sequence object."""
+        return self.aligned_sequences[0].seq_without_gaps
 
     @property
     def aligned_template_seq(self):
-        return self._sequences[1]
+        return self.aligned_sequences[1]
         
     @property
     def aligned_target_seq(self):
-        return self._sequences[0]
+        return self.aligned_sequences[0]
 
-    def _get_aligned_sequences(self):
-        return self._sequences
-        
-    def _set_aligned_sequences(self, data):
-        self._set_alignment(((self.target_seq_name, data[0]), \
-                                        (self.template_seq_name, data[1])))
-
-    aligned_sequences = property(_get_aligned_sequences, \
-                                 _set_aligned_sequences)
-
-    def _set_alignment(self, data):
-        """Sets name and contents of aligned sequences."""
-        self.target_seq_name = data[0][0]
-        self.template_seq_name = data[1][0]
-        self._set_alignment_positions(data[0][1], data[1][1])
-        
-    def _set_alignment_positions(self, seq1, seq2):
+    def set_aligned_sequences(self, seq1, seq2):
         """Sets alignment to a list of AlignmentPosition instances."""
         self.alignment = []
-        self._sequences = (seq1, seq2)
+        self.aligned_sequences = (seq1, seq2)
         i_alignment = 1
         i_template = 1
         i_target = 1
         ali_length = len(seq1)
         seq1 = seq1.seq_alphabet_list
         seq2 = seq2.seq_alphabet_list
+        if not len(seq1) == len(seq2):
+            raise AlignmentError('Sequence lengths in alignment do not match (%i, %i)' % (len(seq1), len(seq2)))
 
-        for position in range(ali_length):
+        for pos in range(ali_length):
             # default values for creating AlignmentPositions
-            target_letter = seq1[position]
-            template_letter = seq2[position]
+            target_letter = seq1[pos]
+            template_letter = seq2[pos]
             target_position = i_target
             template_position = i_template
             alignment_position = i_alignment
             
-            if (seq1[position].short_abbrev == '-' \
-                    or seq1[position].short_abbrev == '_')  \
-                and (seq2[position].short_abbrev == '-' \
-                     or seq2[position].short_abbrev == '_'): 
+            if seq1[pos].short_abbrev in ['-', '_'] \
+                and seq2[pos].short_abbrev in ['-', '_']:
                 continue
 
-            elif seq2[position].short_abbrev == '-':
+            elif seq2[pos].short_abbrev == '-':
                 template_position = None
                 template_letter = None
                 i_target += 1
 
-            elif seq1[position].short_abbrev == '-':
+            elif seq1[pos].short_abbrev == '-':
                 target_position = None
                 target_letter = None
                 i_template += 1
@@ -267,7 +248,7 @@ class RNAAlignment(object):
                     alignment_position = alignment_position
                     )
             self.alignment.append(apos)
-        self._set_numeration()
+
 
     #
     # administrative methods
@@ -277,6 +258,7 @@ class RNAAlignment(object):
         Allows to get AlignmentPositions using an index
         or a list of AlignmentPosition instances.
         """
+        #TODO: replace by list slice in alignment
         if type(args) == int:
             if args in range(1, len(self.alignment) + 1): 
                 return self.alignment[args-1]
@@ -300,14 +282,6 @@ class RNAAlignment(object):
 
     def __iter__(self):
         return self.alignment.__iter__()
-
-    def _set_numeration(self):
-        """Fill in dicts target_numeration and template_numeration."""
-        for apos in self.alignment:
-            if apos.target_position: 
-                self.target_numeration[apos.target_position] = apos
-            if apos.template_position: 
-                self.template_numeration[apos.template_position] = apos
 
     def get_identical_positions(self):
         """
@@ -399,7 +373,7 @@ class RNAAlignment(object):
 
     def remove_gapped_columns(self):
         """Removes all columns with only gaps"""
-        seq1, seq2 = self._sequences
+        seq1, seq2 = self.aligned_sequences
         i = 0
         while i < len(seq1):
             if seq1[i].long_abbrev == '-' and seq2[i].long_abbrev == '-':
@@ -407,7 +381,7 @@ class RNAAlignment(object):
                 seq2 = self.remove_positions(seq2, [i], [])
             else:
                 i += 1
-        self._set_alignment_positions(seq1, seq2)
+        self.set_aligned_sequences(seq1, seq2)
 
     def remove_excess_gaps(self):
         """Removes excess gaps in situations like
@@ -418,7 +392,7 @@ this becomes
 AAAAGGGGGG
 AAAAAAGGGG
         """
-        seq1, seq2 = self._sequences
+        seq1, seq2 = self.aligned_sequences
         i = 1
         while i < len(seq1): # go through all positions of alignment
             assert len(seq1) == len(seq2)
@@ -435,7 +409,7 @@ AAAAAAGGGG
                 seq1 = self.remove_positions(seq1, rem1, keep)
                 seq2 = self.remove_positions(seq2, rem2, keep)
             i += 1
-        self._set_alignment_positions(seq1, seq2)
+        self.set_aligned_sequences(seq1, seq2)
         #TODO: should write log message.
 
     def explore_gap_and_remove(self, seq1, seq2, i):
@@ -464,6 +438,7 @@ AAAAAAGGGG
         return remove_from_1, remove_from_2, keep
 
 
+
 class RNAAlignmentParser(object):
     """
     Parses an alignment from FASTA format.
@@ -478,10 +453,9 @@ class RNAAlignmentParser(object):
             sequence = re.sub("[\r\s\t]+", '', ''.join(sequence))
             temp_aln.append((defline, Sequence(sequence)))
 
-        if not len(temp_aln[0][1]) == len(temp_aln[1][1]):
-            raise AlignmentError('Template and target sequences have different size. Could not create the alignment.')
-            
-        alignment = RNAAlignment(temp_aln, shrink)
+        name1, seq1 = temp_aln[0]
+        name2, seq2 = temp_aln[1]
+        alignment = RNAAlignment(name1, seq1, name2, seq2, shrink)
         #TODO: remove this check after kicking underscores out.
         for apos in alignment:
             if not apos.check_underscore():
@@ -496,9 +470,6 @@ class RNAAlignmentParser(object):
         except IOError:
             raise AlignmentError('File does not exist: %s '%filename)
         return self.get_alignment(data)
+
         
-    def get_alignment_from_vienna(self, vienna_string, shrink=DEFAULT_SHRINK):
-        """Place to add Secstruc stuff."""
-        pass
-        
-    
+

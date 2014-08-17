@@ -14,7 +14,7 @@ __status__ = "Prototype"
 
 from unittest import main, TestCase
 from moderna.Helix import HelixBuilder, HelixFragmentBuilder
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaSequence import Sequence
 from moderna.FragmentInsertion import FragmentInserter
 from moderna.Errors import ModernaFragmentError
 from moderna.Constants import HELIX

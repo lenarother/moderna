@@ -16,7 +16,7 @@ from unittest import main, TestCase
 from moderna.SecstrucFragment import ModernaFragment2D, ModernaFragmentStrand
 from moderna.RNAModel import RnaModel
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaSequence import Sequence
 from moderna.FragmentInsertion import FragmentInserter
 from moderna.Errors import ModernaFragmentError
 from moderna.Constants import HELIX

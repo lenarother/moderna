@@ -18,7 +18,7 @@ from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
 from moderna.ModernaResidue import ModernaResidue
 from moderna.analyze.BaseRecognizer import BaseRecognizer
-from moderna.ModernaAlphabet import Alphabet
+from moderna.sequence.ModernaAlphabet import Alphabet
 from moderna.Errors import ModernaResidueError
 from moderna import load_model
 import re

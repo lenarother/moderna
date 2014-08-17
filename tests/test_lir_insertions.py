@@ -15,7 +15,6 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
@@ -23,7 +22,7 @@ __status__ = "Production"
 from unittest import TestCase, main
 from moderna.ModernaStructure import ModernaStructure
 from moderna.SearchLIR import FragmentFinder
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaSequence import Sequence
 from random import random
 from moderna.Constants import DATA_PATH, PATH_TO_LIR_STRUCTURES, SINGLE_STRAND
 from moderna import *

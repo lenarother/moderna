@@ -18,13 +18,12 @@ from unittest import main, TestCase
 import sys
 from moderna.LogFile import log
 
+# RNA sequences and alignments
+from test_sequence import *
+
 # data infrastructure
-from test_alphabet import AlphabetTests, AlphabetEntryTests
-from test_alignment_position import AlignmentPositionTests
-from test_sequence import SequenceTests
 from test_rna_residue import RNAResidueTests
 from test_rna_chain import RNAChainTests
-from test_rnaalignment import RNAAlignmentTests, RNAAlignmentParserTests
 from test_moderna_residue import ModernaResidueTests
 from test_moderna_structure import ModernaStructureTests
 from test_structure_library import StructureLibraryTests
@@ -38,8 +37,6 @@ from test_analyze import *
 
 # RNA modeling
 from test_add_remove_modification import RemoveModificationTests, AddModificationTests, ExchangeModificationTests
-from test_alignment import AlignmentTests
-from test_alignment_matcher import AlignmentMatcherTests
 from test_copy_residue import CopyResidueTests
 from test_exchange_bases import ExchangeBaseTests
 from test_chi_rotation import ChiRotationTests

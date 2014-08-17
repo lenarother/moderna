@@ -17,7 +17,7 @@ __status__ = "Production"
 from RNAResidue import RNAResidue
 from Bio.PDB import PDBParser
 from ModernaSuperimposer import ModernaSuperimposer
-from ModernaAlphabet import alphabet
+from sequence.ModernaAlphabet import alphabet
 from Bio.PDB.Vector import rotaxis2m
 from Errors import ModernaResidueError
 import math
@@ -300,7 +300,7 @@ Keys in each rule dict: ['modification_name', 'original_base', 'remove',
     def mutate_unknown_residue(self):
         """
         Makes a C out of unknown residue (X, .) on ribose and N* (N9,N1) atoms.
-        When ribise and N* are nor present raises an error.
+        When ribose and N* are nor present raises an error.
         C can be then changed into any modification / standard residues.
         """
         for x in RIBOSE:

@@ -10,16 +10,15 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
-from moderna.ModernaAlignment import Alignment
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaAlignment import Alignment
+from moderna.sequence.ModernaSequence import Sequence
 from moderna.Errors import AlignmentError,  AlphabetError, SequenceError
-from test_data import *
+from tests.test_data import *
 import os
 
 OUT_NAME = 'out.fasta'
@@ -64,14 +63,14 @@ GCGGA----UUUALCUCAG
 
     def test_boxes_basic(self):
         """Makes sure that the Alignment class deals in proper way with boxes"""  
-        self.assertEqual(len(self.a.copy),7)
-        self.assertEqual(len(self.a.copy_backbone),0)
-        self.assertEqual(len(self.a.exchange),4)
-        self.assertEqual(len(self.a.add_modifications),3)
-        self.assertEqual(len(self.a.remove_modifications),1)
-        self.assertEqual(len(self.a.add_fragment),1)
-        self.assertEqual(len(self.a.add_fragment[0]),8)
-        self.assertEqual(len(self.a.difficult),0) 
+        self.assertEqual(len(self.a.copy), 7)
+        self.assertEqual(len(self.a.copy_backbone), 0)
+        self.assertEqual(len(self.a.exchange), 4)
+        self.assertEqual(len(self.a.add_modifications), 3)
+        self.assertEqual(len(self.a.remove_modifications), 1)
+        self.assertEqual(len(self.a.add_fragment), 1)
+        self.assertEqual(len(self.a.add_fragment[0]), 8)
+        self.assertEqual(len(self.a.difficult), 0)
         
     def test_boxes_nonoverlapping(self):
         """AlignmentPositionObjects should each be in only one bolignment should not be initialized if sequences differx."""
@@ -167,6 +166,16 @@ GCGGA----UUUALCUCAG
         """Should not shrink underscore positions."""
         ali = Alignment(ADJACENT_GAPS_US)
         self.assertEqual(str(ali),SHRUNK_GAPS_US)
+
+    def test_update_boxes_after_seq(self):
+        '''Remove test after refactoring boxes out of alignment.'''
+        ali = Alignment('''> target
+GGCG
+> template
+GGC7
+''')
+        ali.set_aligned_sequences(Sequence('GGC7'), Sequence('GGCG'))
+        self.assertListEqual(ali.remove_modifications, [])
 
     def test_complicated_trna_alignment(self):
         ali = Alignment("""> 1j2b_D.pdb
@@ -338,27 +347,6 @@ BOX_SAMPLES = [
     "ccccccccccccccc333333"
     ),
 
-#    (
-#    "AAAAAAAA-----AAAAAAAAA", 
-#    "AAA-----AAAAAAAAAAAAAA", 
-#    "ccFFFFFF.....Fcccccccc"
-#    ), 
-#    (
-#    "AAA-----AAAAAAAAAAAAAA", 
-#    "AAAAAAAA-----AAAAAAAAA", 
-#    "ccF.....FFFFFFcccccccc"
-#    ), 
-#    (
-#    "----AAAAAAAAAAAAAAAAAA------", 
-#    "AAAA----AAAAAAAAA-----AAAAAA", 
-#    "....5555ccccccccc33333......"
-#    ), 
-#    (
-#    "AAAA----AAAAAAAAA-----AAAAAA", 
-#    "----AAAAAAAAAAAAAAAAAA------", 
-#    "5555....ccccccccc.....333333"
-#    ), 
-    
 ]    
 
 SHRUNK_GAPS = """
