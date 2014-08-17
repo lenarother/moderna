@@ -20,7 +20,7 @@ from FragmentInsertion import FragmentInserter
 from ModernaFragment import ModernaFragment, AnchorResidue, \
     ModernaFragment53, ModernaFragment5, ModernaFragment3, \
     keep_nothing, ALL_FROM_MODEL, ALL_FROM_FRAGMENT
-from Errors import ModernaFragmentError
+from util.Errors import ModernaFragmentError
 from Constants import HELIX_SUPERPOSITION, SINGLE_PAIR, \
                         PAIR_PURINE_SUPERPOSITION,  PAIR_PYRIMIDINE_SUPERPOSITION, \
                         BASE_PAIR_PATH, WC_BASE_PAIRS

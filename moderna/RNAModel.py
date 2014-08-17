@@ -27,11 +27,7 @@ from ModernaSuperimposer import ModernaSuperimposer
 from LIR import *
 from SearchLIR import FragmentFinder,  FragmentCandidates,  LirScoringOption, LirQuery,  LirHit
 from Constants import PATH_TO_LIR_STRUCTURES, B_FACTOR_COPY, SINGLE_STRAND,  NUMBER_OF_FRAGMENT_CANDIDATES,  BACKBONE_ATOMS
-from Errors import ModernaStructureError, ModernaSuperimposerError, \
-            ModernaResidueError, ExchangeBaseError, \
-            RemoveModificationError, AddModificationError,\
-            RnaModelError, ModernaError
-from LogFile import log
+from util.LogFile import log
 
 
 class RnaModel(ModernaStructure):

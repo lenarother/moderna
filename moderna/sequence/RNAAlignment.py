@@ -17,7 +17,7 @@ __status__ = "Production"
 import re
 from ModernaSequence import Sequence
 from moderna.Constants import ANY_RESIDUE
-from moderna.Errors import AlignmentError
+from moderna.util.Errors import AlignmentError
 
 DEFAULT_SHRINK = True
 

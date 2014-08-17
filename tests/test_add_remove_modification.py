@@ -19,9 +19,8 @@ from moderna.ModernaStructure import ModernaStructure
 from moderna.ModernaResidue import ModernaResidue
 from moderna.analyze.BaseRecognizer import BaseRecognizer
 from moderna.sequence.ModernaAlphabet import Alphabet
-from moderna.Errors import ModernaResidueError
+from moderna.util.Errors import ModernaResidueError
 from moderna import load_model
-import re
 from test_data import *
 
 class RemoveModificationTests(TestCase):

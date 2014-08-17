@@ -16,11 +16,9 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure, ModernaResidue
-import os, tempfile
-from Bio.PDB.Model import Model
-from moderna.Errors import ModernaStructureError, ModernaResidueError, RNAChainError
+from moderna.util.Errors import ModernaStructureError, ModernaResidueError, RNAChainError
 from moderna.sequence.ModernaSequence import Sequence
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 from moderna import load_model
 
 from test_data import *

@@ -18,11 +18,6 @@ import re, os, math, pdb
 from math import pi
 import csv
 from numpy import array
-from Bio.PDB import PDBParser, PDBIO 
-from Bio.PDB.Structure import Structure
-from Bio.PDB.Model import Model
-from Bio.PDB.Chain import Chain
-from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 from LIR import Lir, LirRecord
 from sequence.ModernaAlphabet import alphabet
 from ModernaStructure import ModernaStructure
@@ -32,13 +27,14 @@ from ModernaResidue import ModernaResidue
 from sequence.ModernaSequence import Sequence
 from analyze.HBondCalculator import HBondCalculator
 from StructureLibrary import library 
-from Errors import LirError, SearchLirError,  LirCandidatesError
+from util.Errors import LirError, SearchLirError,  LirCandidatesError
 
 from Constants import DATA_PATH, MODULE_PATH, PATH_TO_LIR_STRUCTURES, \
                 LIR_DATABASE_PATH, LIR_DIRECTORY_PATH, MAX_DIST_STEM, \
                 NUMBER_OF_FRAGMENT_CANDIDATES, PI2
 
-from LogFile import log
+from util.LogFile import log
+
 struc_cache = {}
 
 DIST_MASK = array([0, 1, 1, 1, 1, 0, 0, 1, 1])

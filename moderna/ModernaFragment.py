@@ -19,7 +19,7 @@ from ModernaSuperimposer import ModernaSuperimposer
 from ModernaResidue import ModernaResidue
 from analyze.ClashRecognizer import ClashRecognizer
 from Renumerator import Renumerator
-from Errors import ModernaFragmentError
+from util.Errors import ModernaFragmentError
 from Constants import LIR_SUPERPOSITION5, LIR_SUPERPOSITION3
 
 #

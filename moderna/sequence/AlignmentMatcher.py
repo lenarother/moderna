@@ -16,10 +16,10 @@ __status__ = "Production"
 
 
 from ModernaSequence import Sequence
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 from ModernaAlphabet import alphabet
 from moderna.Constants import ANY_RESIDUE
-from moderna.Errors import AlignmentError
+from moderna.util.Errors import AlignmentError
 
 BREAK = alphabet['_']
 GAP = alphabet['-']

@@ -16,7 +16,7 @@ from unittest import main, TestCase
 from moderna.RNAResidue import RNAResidue
 from moderna.analyze.BaseRecognizer import BaseRecognizer, BaseRecognitionError
 from Bio.PDB import PDBParser
-from moderna.Errors import RNAResidueError
+from moderna.util.Errors import RNAResidueError
 from moderna.sequence.ModernaAlphabet import Alphabet
 from moderna.Constants import BIO153
 

@@ -15,7 +15,7 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 
 from test_alphabet import AlphabetTests, AlphabetEntryTests
 from test_alignment_position import AlignmentPositionTests

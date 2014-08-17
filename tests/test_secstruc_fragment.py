@@ -18,7 +18,6 @@ from moderna.RNAModel import RnaModel
 from moderna.ModernaStructure import ModernaStructure
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.FragmentInsertion import FragmentInserter
-from moderna.Errors import ModernaFragmentError
 from moderna.Constants import HELIX
 from moderna import fix_backbone
 from moderna import load_template, create_model, copy_some_residues, create_fragment, load_model

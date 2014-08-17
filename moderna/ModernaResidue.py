@@ -19,7 +19,7 @@ from Bio.PDB import PDBParser
 from ModernaSuperimposer import ModernaSuperimposer
 from sequence.ModernaAlphabet import alphabet
 from Bio.PDB.Vector import rotaxis2m
-from Errors import ModernaResidueError
+from util.Errors import ModernaResidueError
 import math
 
 from Constants import UNKNOWN_RESIDUE_SHORT, \

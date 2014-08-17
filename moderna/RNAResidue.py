@@ -34,7 +34,7 @@ from analyze.BasePairCalculator import base_pair_calc
 from analyze.PuckerCalculator import PuckerCalculator
 from builder.CoordBuilder import build_coord
 
-from Errors import RNAResidueError
+from util.Errors import RNAResidueError
 
 from Constants import BACKBONE_ATOMS,  \
                 BACKBONE_RIBOSE_ATOMS_WITHOUT_O2, \

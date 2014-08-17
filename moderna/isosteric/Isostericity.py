@@ -39,9 +39,9 @@ from IsostericityMatrices import IsostericityMatrices
 from moderna.ModernaResidue import ModernaResidue
 from moderna.ModernaStructure import ModernaStructure
 from moderna.ModernaSuperimposer import ModernaSuperimposer
-from moderna.Errors import IsostericityError
+from moderna.util.Errors import IsostericityError
 from moderna.analyze import BasePairCalculator
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 import os
 
 class Isostericity:

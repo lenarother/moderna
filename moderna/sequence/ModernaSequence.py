@@ -17,7 +17,7 @@ __status__ = "Production"
 import re
 from ModernaAlphabet import alphabet
 from moderna.Constants import STANDARD_BASES
-from moderna.Errors import SequenceError
+from moderna.util.Errors import SequenceError
 
 RE_NEW_NOMENCLATURE = re.compile('\d\d\d[A,C,U,G,a,c,t,g,X,N,H,<,;]')
 SPECIAL_ABBREVS = ['a', 'c', 't', 'g', 'X', 'N', 'H', '<', ';', 'Q']

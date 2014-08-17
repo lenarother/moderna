@@ -24,7 +24,6 @@ from numpy import array
 from Bio.PDB import PDBParser
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 from ModernaStructure import *
-from Errors import LirError, LirRecordError
 
 # In the production version, the code needs to operate
 # on objects rather than files. We need to keep this
