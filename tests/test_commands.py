@@ -89,8 +89,7 @@ class CommandTests(TestCase):
         add_pair_to_base(m, '3', '20', Sequence('C'))
         self.assertEqual(m.get_sequence(), Sequence('GCGGAUUUALCUCAG_C'))
         self.assertEqual(m.get_secstruc(), '..(............)')
-        m.write_pdb_file('frag.pdb')
-        
+
     #----------------------------------------------------------
     def test_apply_alignment(self):
         """Do everything except inserting indels."""
@@ -384,9 +383,7 @@ class CommandTests(TestCase):
     def test_insert_fragment_cand_secstruc(self):
         m = load_model(RNA_HAIRPIN, 'D')
         #TODO: try this example
-        #candidates = find_fragment(m, '30', '40', Sequence('ACGGCCCCGU'), 20, secstruc='(((....)))')
         candidates = find_fragment(m, '30', '40', Sequence('ACCGCCCGGU'), 20, secstruc='(((....)))')
-        candidates[0].fragment_instance.struc.write_pdb_file('frag2.pdb')
         insert_fragment(m, candidates[0])
         self.assertEqual(m.get_sequence(), Sequence("CUGACCGCCCGGUC"))
         self.assertEqual(m.get_secstruc(), "..((((....))))")

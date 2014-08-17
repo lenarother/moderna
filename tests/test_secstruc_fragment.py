@@ -185,7 +185,6 @@ class ModernaFragmentStrandTests(TestCase):
             mf  = ModernaFragmentStrand(anchor=self.rna[num], identifier=ident, new_sequence=Sequence(seq))
             self.rna.insert_fragment(mf)
         self.rna.fix_backbone()
-        self.rna.write_pdb_file('frag.pdb')
         self.assertEqual(self.rna.get_secstruc(), '.(((((.........)))))')
         self.assertEqual(self.rna.get_sequence(), Sequence('GCGGAUUUALCUCAG_AU_CCG'))
 
