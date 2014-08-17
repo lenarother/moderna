@@ -472,4 +472,14 @@ class RNAAlignmentParser(object):
         return self.get_alignment(data)
 
         
+def read_alignment(data, shrink=DEFAULT_SHRINK):
+    parser = RNAAlignmentParser()
+    if os.access(data, os.F_OK):
+        alignment = parser.get_alignment_from_file(data, shrink)
+    elif data.startswith('>'):
+        alignment = parser.get_alignment(data, shrink)
+    else:
+        raise AlignmentError('Alignment not in FASTA format or file does not exist: %s'%data)
+    log.write_message('Alignment loaded from %s:%s'%(data, str(self)))
+    return alignment
 

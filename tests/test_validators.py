@@ -21,7 +21,7 @@ from moderna.Template import Template
 from moderna.RNAModel import RnaModel
 from moderna.ModernaFragment import ModernaFragment53
 from moderna.ModernaResidue import ModernaResidue
-from moderna.sequence.ModernaAlignment import Alignment
+from moderna.sequence.RNAAlignment import read_alignment
 from moderna.sequence.ModernaSequence import Sequence
 from Bio.PDB import PDBParser
 from test_data import TEST_DATA_PATH, A_RESIDUE, MINI_TEMPLATE, MINI_ALIGNMENT_FILE
@@ -78,8 +78,8 @@ class ValidatorTests(TestCase):
     """
     def test_validate_alignment(self):
         ali_str = "> target\n--AAAA\n> template\nGGGG--\n"
-        ali = Alignment(ali_str)
-        exp_ali = Alignment(MINI_ALIGNMENT_FILE)
+        ali = read_alignment(ali_str)
+        exp_ali = read_alignment(MINI_ALIGNMENT_FILE)
         self.assertEqual(str(validate_alignment(ali)), str(ali))
         self.assertEqual(str(validate_alignment(ali_str)), str(ali))
         self.assertEqual(str(validate_alignment(MINI_ALIGNMENT_FILE)), str(exp_ali))

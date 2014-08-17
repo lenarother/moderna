@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 #
-# ModernaAlignment
+# ModelingRecipe
 #
-# Class Alignment - parses alignment from fasta file and returns list of AlignmentPosition instances.
+# ModelingRecipe sorts alignment positions into different boxes (1 box == 1 operation, e.g. copying residues)
 # 
 # http://iimcb.genesilico.pl/moderna/
 #
@@ -15,25 +15,35 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 import os
-from moderna.Constants import STANDARD_BASES
-from moderna.Errors import AlignmentError
-from RNAAlignment import RNAAlignmentParser, DEFAULT_SHRINK
-from moderna.LogFile import log
+from Constants import STANDARD_BASES
+from Errors import AlignmentError
+from sequence.RNAAlignment import RNAAlignmentParser, DEFAULT_SHRINK
+from LogFile import log
 
 MODES = ['has_gap', 'is_mismatch', 'has_template_gap', \
     'has_target_gap', 'is_unidentified']
 
-class AlignmentBox:
-    pass
-    #TODO: use this or not?
 
-class Alignment(object):
-    #TODO: get rid of the Decorator pattern
+class ModelingRecipe(object):
     """
-    Deals with alignment in fasta format.
-    
-    Implements the Decorator pattern (decorates RNAAlignment).
-    
+    """
+    def __init__(self):
+        self.copy = []
+        self.copy_backbone = []
+        self.exchange = []
+        self.remove_modifications = [] 
+        self.add_modifications = []
+        self.add_fragment = []
+        self.difficult = [] # ??? report that an user should see this
+        self.add_fragment_5p = []
+        self.add_fragment_3p = []
+
+        # MR: PROPOSAL: make orer of modeling_tasks flexible.
+        #self.order = {'copy_backbone': 1, ...}
+        # def set_order
+
+class RecipeMaker(object):
+    """
     All AlignmentPosition instances from an alignment are packed into boxes 
     which represent tasks for modeling.
     There are fallowing boxes:
@@ -46,30 +56,10 @@ class Alignment(object):
     gap that doesn't have any other gap in target or template in distance less than 2
     - difficult ---> gaps different than above  
     """
-    def __init__(self, data, shrink=DEFAULT_SHRINK):
-        self.alignment = None
-        parser = RNAAlignmentParser()
-        if os.access(data, os.F_OK):
-            self.alignment = parser.get_alignment_from_file(data, shrink)
-        elif data.startswith('>'):
-            self.alignment = parser.get_alignment(data, shrink)
-        else:
-            raise AlignmentError('Alignment not in FASTA format or file does not exist: %s'%data)
-        log.write_message('Alignment loaded from %s:%s'%(data, str(self)))
-
-        # BOXES
-        self.copy = []
-        self.copy_backbone = []
-        self.exchange = []
-        self.remove_modifications = [] 
-        self.add_modifications = []
-        self.add_fragment = []
-        self.difficult = [] # ??? report that an user should see this
-        self.add_fragment_5p = []
-        self.add_fragment_3p = []
+    def __init__(self, alignment):
+        self.recipe = ModelingRecipe()
+        self.alignment = alignment
         self.set_alignment_properties()
-        #TODO: use subclasses for modeling tasks?
-
 
     def get_differences (self, mode='is_different'):
         """
@@ -106,23 +96,23 @@ class Alignment(object):
         By defult removes apos from all boxes besides add_fragment ons.
         """
         if copy_box and apos in self.copy: 
-            self.copy.remove(apos)
+            self.recipe.copy.remove(apos)
         if copy_bb_box and apos in self.copy_backbone: 
-            self.copy_backbone.remove(apos)
+            self.recipe.copy_backbone.remove(apos)
         if exchange_box and apos in self.exchange: 
-            self.exchange.remove(apos)
+            self.recipe.exchange.remove(apos)
         if add_m_box and apos in self.add_modifications: 
-            self.add_modifications.remove(apos)
+            self.recipe.add_modifications.remove(apos)
         if rm_m_box and apos in self.remove_modifications: 
-            self.remove_modifications.remove(apos)
+            self.recipe.remove_modifications.remove(apos)
         if add_box and apos in self.add_fragment: 
-            self.add_fragment.remove(apos)
+            self.recipe.add_fragment.remove(apos)
         if add5_box and apos in self.add_fragment_5p: 
-            self.add_fragment_5p.remove(apos)
+            self.recipe.add_fragment_5p.remove(apos)
         if add3_box and apos in self.add_fragment_3p: 
-            self.add_fragment_3p.remove(apos)
+            self.recipe.add_fragment_3p.remove(apos)
         if difficult_box and apos in self.difficult: 
-            self.difficult.remove(apos)
+            self.recipe.difficult.remove(apos)
         #TODO is this used?
 
     def segregate_gaps(self, gaps_devided):
@@ -240,54 +230,13 @@ class Alignment(object):
         Fill in alignment 'boxes'.
         See class description.
         """
-        self.copy = self.alignment.get_identical_positions()
-        self.copy_backbone = self.get_differences('is_unidentified')
+        self.recipe.copy = self.alignment.get_identical_positions()
+        self.recipe.copy_backbone = self.get_differences('is_unidentified')
         
         differences = self.get_differences('is_mismatch')
-        self.exchange = [ap for ap in differences if ap.target_letter.long_abbrev in STANDARD_BASES and ap.template_letter.long_abbrev in STANDARD_BASES]
-        self.add_modifications = [ap for ap in differences if ap.target_letter.long_abbrev not in STANDARD_BASES]
-        self.remove_modifications = [ap for ap in differences if ap.target_letter.long_abbrev in STANDARD_BASES and ap.template_letter.long_abbrev not in STANDARD_BASES]
+        self.recipe.exchange = [ap for ap in differences if ap.target_letter.long_abbrev in STANDARD_BASES and ap.template_letter.long_abbrev in STANDARD_BASES]
+        self.recipe.add_modifications = [ap for ap in differences if ap.target_letter.long_abbrev not in STANDARD_BASES]
+        self.recipe.remove_modifications = [ap for ap in differences if ap.target_letter.long_abbrev in STANDARD_BASES and ap.template_letter.long_abbrev not in STANDARD_BASES]
 
         self.set_add_fragment_property('has_template_gap')
         self.set_add_fragment_property('has_target_gap')
-
-    #
-    # Implementing the Decorator Pattern
-    #
-    # compatibility functions exposing self.alignment to the rest of ModeRNA
-    #
-    #TODO: get rid of these and use some compositional pattern.
-
-    def __getattribute__(self, attr):
-        try:
-            return object.__getattribute__(self, attr)
-        except TypeError:
-            return self.alignment.__getattribute__(attr)
-        except AttributeError:
-            return self.alignment.__getattribute__(attr)
-
-    def _get_aligned_sequences(self):
-        return self.alignment.aligned_sequences
-        #KR: properties + decorator class sucks
-        #TODO: improve this
-        
-    def set_aligned_sequences(self, seq1, seq2):
-        self.alignment.set_aligned_sequences(seq1, seq2)
-        self.set_alignment_properties()
-            
-    aligned_sequences = property(_get_aligned_sequences)
-
-    def __len__(self):
-        return len(self.alignment)
-    
-    def __iter__(self):
-        return self.alignment.__iter__()
-        
-    def __getitem__(self, args):
-        return self.alignment.__getitem__(args)
-        
-    def __str__(self):
-        return str(self.alignment)
-
-    def __repr__(self):
-        return str(self.alignment)

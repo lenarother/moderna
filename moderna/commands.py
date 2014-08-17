@@ -37,7 +37,7 @@ from RNAModel import RnaModel
 from Template import Template
 from sequence.ModernaAlphabet import Alphabet
 from sequence.ModernaSequence import Sequence
-from sequence.ModernaAlignment import Alignment
+from sequence.RNAAlignment import read_alignment
 from ModernaStructure import ModernaStructure
 from ModernaFragment import ModernaFragment53, ModernaFragment5, ModernaFragment3
 from SecstrucFragment import ModernaFragmentStrand, ModernaFragment2D
@@ -842,7 +842,7 @@ For modified bases, see the 'concepts' section of the manual.
     * path+filename of a FASTA file
     """
     file_path = validate_filename(file_path)
-    return Alignment(file_path) 
+    return read_alignment(file_path) 
 
 
 @toplevel_function

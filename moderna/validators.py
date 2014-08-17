@@ -23,7 +23,7 @@ from RNAModel import RnaModel
 from ModernaFragment import ModernaFragment
 from SearchLIR import LirHit, FragmentCandidates
 from ModernaResidue import ModernaResidue
-from sequence.ModernaAlignment import Alignment
+from sequence.RNAAlignment import RNAAlignment
 from sequence.ModernaSequence import Sequence
 from sequence.ModernaAlphabet import alphabet
 from Errors import ParameterError, AlphabetError
@@ -55,10 +55,10 @@ def validate_fragment(frag):
 
 def validate_alignment(ali):
     """Checks alignment string or object"""
-    if isinstance(ali, Alignment):
+    if isinstance(ali, RNAAlignment):
         return ali
     elif isinstance(ali, str):
-        return Alignment(ali)
+        return RNAAlignment(ali)
     raise ParameterError("Bad parameter: '%s' must be a pairwise Alignment (object or fasta string)."%str(ali))
     
 def validate_seq(seq):
