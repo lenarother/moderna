@@ -21,7 +21,7 @@ from moderna.ModernaFragment import ModernaFragment,  ModernaFragment5,  \
 from moderna.RNAModel import RnaModel
 from moderna.ModernaStructure import ModernaStructure
 from moderna.sequence.ModernaSequence import Sequence
-from moderna.Errors import ModernaFragmentError, ModernaSuperimposerError
+from moderna.util.Errors import ModernaFragmentError, ModernaSuperimposerError
 from moderna.Constants import HELIX
 from moderna import load_template, create_model, copy_some_residues, create_fragment
 from test_data import *

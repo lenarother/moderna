@@ -16,10 +16,8 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 from moderna.RNAChain import RNAChain
-import os, tempfile
-from Bio.PDB.Model import Model
 from Bio.PDB.PDBParser import PDBParser
-from moderna.Errors import ModernaResidueError, RNAChainError
+from moderna.util.Errors import ModernaResidueError, RNAChainError
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.ModernaResidue import ModernaResidue
 

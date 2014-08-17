@@ -17,7 +17,7 @@ __status__ = "Production"
 from unittest import main, TestCase
 from moderna.sequence.ModernaAlignment import Alignment
 from moderna.sequence.ModernaSequence import Sequence
-from moderna.Errors import AlignmentError,  AlphabetError, SequenceError
+from moderna.util.Errors import AlignmentError,  AlphabetError, SequenceError
 from tests.test_data import *
 import os
 

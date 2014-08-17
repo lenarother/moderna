@@ -17,13 +17,8 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaResidue import ModernaResidue
-from moderna.Errors import ModernaStructureError,ModernaResidueError
 from moderna.builder.BackboneBuilder import BackboneBuilder
 from moderna.analyze.GeometryParameters import GeometryStandards
-from moderna.analyze.GeometryAnalyzer import GeometryAnalyzer
-from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
-import math
 from test_data import *
 from moderna.Constants import BIO153
 

@@ -17,8 +17,6 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaResidue import ModernaResidue
-from moderna.Errors import ModernaStructureError,ModernaResidueError
 from moderna.builder.PhosphateBuilder import PhosphateBuilder
 from moderna.analyze.GeometryParameters import GeometryStandards
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral

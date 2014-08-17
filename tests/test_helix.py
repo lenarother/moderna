@@ -16,7 +16,7 @@ from unittest import main, TestCase
 from moderna.Helix import HelixBuilder, HelixFragmentBuilder
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.FragmentInsertion import FragmentInserter
-from moderna.Errors import ModernaFragmentError
+from moderna.util.Errors import ModernaFragmentError
 from moderna.Constants import HELIX
 from moderna import load_template, create_model, copy_some_residues, create_fragment, load_model
 from test_data import *

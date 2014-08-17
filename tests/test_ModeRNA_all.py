@@ -16,7 +16,7 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 import sys
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 
 # RNA sequences and alignments
 from test_sequence import *
@@ -57,7 +57,7 @@ from test_rnamodel import BasicRnaModelTests, RetainTemplateTests, IndelQualityT
 
 # toplevel functions
 from test_commands import CommandTests
-from test_validators import ValidatorTests, StrucValidatorTests
+from test_util import ValidatorTests, StrucValidatorTests
 from test_commandline import CommandlineTests
 
 if __name__ == '__main__':

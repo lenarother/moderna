@@ -16,14 +16,12 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 from moderna import *
-from moderna.LogFile import log
-import os
+from moderna.util.LogFile import log
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.sequence.ModernaAlignment import Alignment
 from moderna.ModernaFragment import ModernaFragment
 from moderna.Template import Template
 from moderna.RNAModel import RnaModel
-from moderna.Errors import ModernaResidueError
 from Bio.PDB import PDBParser
 from moderna.analyze.GeometryAnalyzer import GeometryAnalyzer
 from moderna.Constants import HELIX

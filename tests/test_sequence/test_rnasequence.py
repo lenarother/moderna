@@ -17,7 +17,7 @@ __status__ = "Production"
 from unittest import main, TestCase
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.sequence.ModernaAlphabet import AlphabetEntry
-from moderna.Errors import SequenceError, AlphabetError
+from moderna.util.Errors import SequenceError, AlphabetError
 
 class SequenceTests(TestCase):
     """
