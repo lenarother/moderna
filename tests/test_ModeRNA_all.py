@@ -27,7 +27,6 @@ from test_rna_chain import RNAChainTests
 from test_rnaalignment import RNAAlignmentTests, RNAAlignmentParserTests
 from test_moderna_residue import ModernaResidueTests
 from test_moderna_structure import ModernaStructureTests
-from test_structure_library import StructureLibraryTests
 from test_check_pdb import CheckPdbTests
 from test_write_pdb import WritePDBTests
 from test_moderna_superimposer import SuperimposerTests
@@ -48,13 +47,10 @@ from test_moderna_fragment import ModernaFragmentTests, \
     ModernaFragment5Tests, ModernaFragment3Tests, ModernaFragment53Tests, AnchorResidueTests
 from test_secstruc_fragment import ModernaFragment2DTests, ModernaFragmentStrandTests
 from test_helix import HelixTests, HelixFragmentBuilderTests
-from test_search_lir import FragmentFinderTests, FragmentCandidatesTests, WriteFragmentCandidatesTests, LirHitTests
-from test_lir import LirRecordTests
-from test_lir_insertions import LIRInsertionTests
-from test_lirdb import LirDbTests
 from test_renumerator import RenumeratorTests, NumberRenumeratorTests, LetterRenumeratorTests
 from test_fragment_insertion import FragmentInserterTests
 from test_builder import *
+from test_fragment_library import *
 
 from test_rnamodel import BasicRnaModelTests, AutomaticRnaModelTests, RetainTemplateTests, IndelQualityTests
 

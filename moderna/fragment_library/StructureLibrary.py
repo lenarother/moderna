@@ -14,8 +14,8 @@ __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
-from ModernaStructure import ModernaStructure
-from ModernaFragment import ModernaFragment53
+from moderna.ModernaStructure import ModernaStructure
+from moderna.ModernaFragment import ModernaFragment53
 import os, tempfile
 
 class StructureLibraryError(Exception): pass
