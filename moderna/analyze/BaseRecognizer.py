@@ -17,7 +17,7 @@ __status__ = "Production"
 
 from MolecularGraph import AnnotatedMolecule
 from MolTopologies import read_nucleotide_topologies
-from moderna.Errors import BaseRecognitionError
+from moderna.util.Errors import BaseRecognitionError
 from Constants import AMINO, STANDARD_BASES, HETERO_GROUPS, PHOSPHATE_GROUP, \
     NUCLEOTIDE_ATOMS
 from moderna.Constants import MODIFICATION_TOPOLOGY_FILE

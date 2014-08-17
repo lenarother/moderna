@@ -20,10 +20,8 @@ __status__ = "Prototype"
 from moderna.ModernaResidue import ModernaResidue
 from IsostericityMatrices import IsostericityMatrices
 from Isostericity import Isostericity
-from moderna.Errors import IsostericityError
-from moderna.LogFile import log
+from moderna.util.Errors import IsostericityError
 import os
-from moderna.Constants import BASE_PAIR_PATH
 
 def create_alignment(model, template):
     """

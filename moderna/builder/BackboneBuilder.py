@@ -32,7 +32,7 @@ from CoordBuilder import build_coord
 from moderna.analyze.RNASuites import TORSIONS, DEFAULT_TORSIONS
 #from Constants import DATA_PATH, BIO153
 from numpy import array
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 
 GEO_STD = GeometryStandards()
 O3_P_DIST  = GEO_STD.get_standard("X:O3',X+1:P")

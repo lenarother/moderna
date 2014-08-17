@@ -17,7 +17,7 @@ __status__ = "Prototype"
 
 
 from moderna.Constants import DATA_PATH
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 
 class IsostericityMatrices:
     """

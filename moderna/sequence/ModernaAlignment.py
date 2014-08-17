@@ -16,9 +16,9 @@ __status__ = "Production"
 
 import os
 from moderna.Constants import STANDARD_BASES
-from moderna.Errors import AlignmentError
+from moderna.util.Errors import AlignmentError
 from RNAAlignment import RNAAlignmentParser, DEFAULT_SHRINK
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 
 MODES = ['has_gap', 'is_mismatch', 'has_template_gap', \
     'has_target_gap', 'is_unidentified']

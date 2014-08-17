@@ -22,7 +22,7 @@ from FragmentInsertion import FragmentInserter
 from sequence.ModernaSequence import Sequence
 from Renumerator import renumber_section
 from Constants import HELIX, HELIX_SUPERPOSITION, WC_BASE_PAIRS
-from Errors import ModernaFragmentError
+from util.Errors import ModernaFragmentError
 
 class Helix(ModernaStructure):
     """

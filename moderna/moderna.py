@@ -44,10 +44,8 @@ while MODULE_PATH in sys.path:
 sys.path.append(MODULE_PATH)
 
 from moderna import *
-from LogFile import log
-from optparse import OptionParser 
+from optparse import OptionParser
 from commands import *
-from Errors import ModernaError
 
 ########################################  MAIN  ##########################################
 

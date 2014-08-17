@@ -21,8 +21,8 @@ from RNAChain import RNAChain
 from analyze.BasePairCalculator import base_pair_calc
 from builder.BackboneBuilder import BackboneBuilder
 from sequence.ModernaSequence import Sequence
-from Errors import ModernaStructureError
-from LogFile import log
+from util.Errors import ModernaStructureError
+from util.LogFile import log
 
 #TODO: PDB structures 3ftm and 3fic are messed up. 
 # Should ModeRNA do something reasonable with them anyway?

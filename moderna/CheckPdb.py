@@ -26,7 +26,7 @@ from ModernaSuperimposer import ModernaSuperimposer
 from builder.PhosphateBuilder import TerminalPhosphateBuilder
 
 from Constants import MISSING_RESIDUE, UNKNOWN_RESIDUE_SHORT, PHOSPHATE_GROUP, RIBOSE, BACKBONE_ATOMS, AA_ATOMS,  BIO153,  BASE_PATH, BACKBONE_RIBOSE_ATOMS,  PHOSPHORYLATED_NUCLEOTIDES
-from LogFile import log
+from util.LogFile import log
 
 
 # what about aa
