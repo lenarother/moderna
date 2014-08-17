@@ -21,8 +21,8 @@ from Bio.PDB.Model import Model
 from Bio.PDB.Chain import Chain
 from RNAResidue import BACKBONE_DIST_MATRIX, DIST_TOLERANCE, O3_P_DIST_HI
 from ModernaResidue import ModernaResidue
-from ModernaAlphabet import alphabet
-from ModernaSequence import Sequence
+from sequence.ModernaAlphabet import alphabet
+from sequence.ModernaSequence import Sequence
 from Constants import MISSING_RESIDUE
 from Errors import RNAChainError, ModernaStructureError
 import os

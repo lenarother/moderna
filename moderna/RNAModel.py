@@ -15,8 +15,8 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from Bio.PDB import PDBParser
-from ModernaAlphabet import alphabet
-from ModernaSequence import Sequence
+from sequence.ModernaAlphabet import alphabet
+from sequence.ModernaSequence import Sequence
 from ModernaStructure import ModernaStructure
 from Template import Template
 from ModernaFragment import ModernaFragment53, ModernaFragment5, \

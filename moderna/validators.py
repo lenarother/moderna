@@ -23,9 +23,9 @@ from RNAModel import RnaModel
 from ModernaFragment import ModernaFragment
 from SearchLIR import LirHit, FragmentCandidates
 from ModernaResidue import ModernaResidue
-from ModernaAlignment import Alignment
-from ModernaSequence import Sequence
-from ModernaAlphabet import alphabet
+from sequence.ModernaAlignment import Alignment
+from sequence.ModernaSequence import Sequence
+from sequence.ModernaAlphabet import alphabet
 from Errors import ParameterError, AlphabetError
 import os, re
 

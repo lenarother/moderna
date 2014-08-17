@@ -15,10 +15,10 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 import os
-from Constants import STANDARD_BASES
-from Errors import AlignmentError
+from moderna.Constants import STANDARD_BASES
+from moderna.Errors import AlignmentError
 from RNAAlignment import RNAAlignmentParser, DEFAULT_SHRINK
-from LogFile import log
+from moderna.LogFile import log
 
 MODES = ['has_gap', 'is_mismatch', 'has_template_gap', \
     'has_target_gap', 'is_unidentified']
@@ -127,7 +127,7 @@ class Alignment(object):
 
     def segregate_gaps(self, gaps_devided):
         """ 
-        Segragate given gaps list into proper boxes
+        Segregate given gaps list into proper boxes
         (add_fragmen, add_fragment_5p, add_fragment_3p, difficult).
         """
         for gap in gaps_devided: # gap is a tuple of ap belonging to one gap
@@ -257,6 +257,7 @@ class Alignment(object):
     # compatibility functions exposing self.alignment to the rest of ModeRNA
     #
     #TODO: get rid of these and use some compositional pattern.
+
     def __getattribute__(self, attr):
         try:
             return object.__getattribute__(self, attr)
@@ -270,11 +271,11 @@ class Alignment(object):
         #KR: properties + decorator class sucks
         #TODO: improve this
         
-    def _set_aligned_sequences(self, data):
-        self.alignment.aligned_sequences = data
+    def set_aligned_sequences(self, seq1, seq2):
+        self.alignment.set_aligned_sequences(seq1, seq2)
         self.set_alignment_properties()
             
-    aligned_sequences = property(_get_aligned_sequences, _set_aligned_sequences)
+    aligned_sequences = property(_get_aligned_sequences)
 
     def __len__(self):
         return len(self.alignment)

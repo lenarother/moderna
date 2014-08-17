@@ -34,14 +34,14 @@ look out for TODO's below.
 """
 
 
-from Constants import DATA_PATH
+from moderna.Constants import DATA_PATH
 from IsostericityMatrices import IsostericityMatrices
-from ModernaResidue import ModernaResidue
-from ModernaStructure import ModernaStructure
-from ModernaSuperimposer import ModernaSuperimposer
-from Errors import IsostericityError
-from analyze import BasePairCalculator
-from LogFile import log
+from moderna.ModernaResidue import ModernaResidue
+from moderna.ModernaStructure import ModernaStructure
+from moderna.ModernaSuperimposer import ModernaSuperimposer
+from moderna.Errors import IsostericityError
+from moderna.analyze import BasePairCalculator
+from moderna.LogFile import log
 import os
 
 class Isostericity:

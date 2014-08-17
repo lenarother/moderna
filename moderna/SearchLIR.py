@@ -24,12 +24,12 @@ from Bio.PDB.Model import Model
 from Bio.PDB.Chain import Chain
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 from LIR import Lir, LirRecord
-from ModernaAlphabet import alphabet
+from sequence.ModernaAlphabet import alphabet
 from ModernaStructure import ModernaStructure
 from ModernaFragment import ModernaFragment53, keep_first_last
 from FragmentInsertion import FragmentInserter
 from ModernaResidue import ModernaResidue
-from ModernaSequence import Sequence
+from sequence.ModernaSequence import Sequence
 from analyze.HBondCalculator import HBondCalculator
 from StructureLibrary import library 
 from Errors import LirError, SearchLirError,  LirCandidatesError

@@ -20,7 +20,7 @@ from ModernaResidue import ModernaResidue
 from RNAChain import RNAChain
 from analyze.BasePairCalculator import base_pair_calc
 from builder.BackboneBuilder import BackboneBuilder
-from ModernaSequence import Sequence
+from sequence.ModernaSequence import Sequence
 from Errors import ModernaStructureError
 from LogFile import log
 

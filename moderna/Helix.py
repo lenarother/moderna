@@ -19,7 +19,7 @@ from ModernaFragment import ModernaFragment53
 from SecstrucFragment import ModernaFragment2D, ModernaFragment553, \
         ModernaFragment533, ModernaFragment53Strands
 from FragmentInsertion import FragmentInserter
-from ModernaSequence import Sequence
+from sequence.ModernaSequence import Sequence
 from Renumerator import renumber_section
 from Constants import HELIX, HELIX_SUPERPOSITION, WC_BASE_PAIRS
 from Errors import ModernaFragmentError

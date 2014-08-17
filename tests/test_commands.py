@@ -18,8 +18,8 @@ from unittest import main, TestCase
 from moderna import *
 from moderna.LogFile import log
 import os
-from moderna.ModernaSequence import Sequence
-from moderna.ModernaAlignment import Alignment
+from moderna.sequence.ModernaSequence import Sequence
+from moderna.sequence.ModernaAlignment import Alignment
 from moderna.ModernaFragment import ModernaFragment
 from moderna.Template import Template
 from moderna.RNAModel import RnaModel

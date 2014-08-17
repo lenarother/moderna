@@ -18,7 +18,7 @@ from unittest import main, TestCase
 from moderna.analyze.BaseRecognizer import BaseRecognizer
 from Bio.PDB import PDBParser
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaSequence import Sequence
 from moderna.Errors import BaseRecognitionError
 from moderna.Constants import PATH_TO_LIR_STRUCTURES
 from test_data import *

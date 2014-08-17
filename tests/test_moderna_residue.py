@@ -19,7 +19,7 @@ from moderna.ModernaResidue import ModernaResidue
 from moderna.analyze.BaseRecognizer import BaseRecognizer, BaseRecognitionError
 from Bio.PDB import PDBParser
 from moderna.Errors import ModernaStructureError
-from moderna.ModernaAlphabet import Alphabet
+from moderna.sequence.ModernaAlphabet import Alphabet
 from moderna.Constants import BIO153
 from moderna import load_model
 

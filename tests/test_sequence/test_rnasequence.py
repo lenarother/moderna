@@ -15,8 +15,8 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
-from moderna.ModernaSequence import Sequence
-from moderna.ModernaAlphabet import AlphabetEntry
+from moderna.sequence.ModernaSequence import Sequence
+from moderna.sequence.ModernaAlphabet import AlphabetEntry
 from moderna.Errors import SequenceError, AlphabetError
 
 class SequenceTests(TestCase):
@@ -50,7 +50,7 @@ class SequenceTests(TestCase):
         s = "P[]*#37T<>"
         # KR: add remaining modifications here
         seq = Sequence(s)
-        self.assertEqual(seq.seq_with_modifications,s)
+        self.assertEqual(seq.seq_with_modifications, s)
         
     def test_create_sequence_error(self):
         """Non-base characters should raise an error.""" 

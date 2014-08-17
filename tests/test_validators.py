@@ -10,7 +10,6 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
@@ -22,8 +21,8 @@ from moderna.Template import Template
 from moderna.RNAModel import RnaModel
 from moderna.ModernaFragment import ModernaFragment53
 from moderna.ModernaResidue import ModernaResidue
-from moderna.ModernaAlignment import Alignment
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaAlignment import Alignment
+from moderna.sequence.ModernaSequence import Sequence
 from Bio.PDB import PDBParser
 from test_data import TEST_DATA_PATH, A_RESIDUE, MINI_TEMPLATE, MINI_ALIGNMENT_FILE
 from moderna.validators import validate_structure, validate_template, validate_model, \
