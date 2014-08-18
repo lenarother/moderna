@@ -86,32 +86,28 @@ class RecipeMaker(object):
             return differences
         raise AlignmentError("Bad mode type. Should be one of %s."%str(MODES))
         
-    def remove_ap_from_box(self, apos, copy_box=True, copy_bb_box=True, \
-                           exchange_box=True, add_m_box=True, rm_m_box=True, \
-                           add_box=False, add5_box=False, add3_box=False, \
-                           difficult_box=True):
-        #TODO: change definition
+    def remove_ap_from_box(self, apos):
         """
         Removes given AlignmentPosition from given boxes.
         By defult removes apos from all boxes besides add_fragment ons.
         """
-        if copy_box and apos in self.copy: 
+        if apos in self.recipe.copy:
             self.recipe.copy.remove(apos)
-        if copy_bb_box and apos in self.copy_backbone: 
+        if apos in self.recipe.copy_backbone:
             self.recipe.copy_backbone.remove(apos)
-        if exchange_box and apos in self.exchange: 
+        if apos in self.recipe.exchange:
             self.recipe.exchange.remove(apos)
-        if add_m_box and apos in self.add_modifications: 
+        if apos in self.recipe.add_modifications:
             self.recipe.add_modifications.remove(apos)
-        if rm_m_box and apos in self.remove_modifications: 
+        if apos in self.recipe.remove_modifications:
             self.recipe.remove_modifications.remove(apos)
-        if add_box and apos in self.add_fragment: 
+        if apos in self.recipe.add_fragment:
             self.recipe.add_fragment.remove(apos)
-        if add5_box and apos in self.add_fragment_5p: 
+        if apos in self.recipe.add_fragment_5p:
             self.recipe.add_fragment_5p.remove(apos)
-        if add3_box and apos in self.add_fragment_3p: 
+        if apos in self.recipe.add_fragment_3p:
             self.recipe.add_fragment_3p.remove(apos)
-        if difficult_box and apos in self.difficult: 
+        if apos in self.recipe.difficult:
             self.recipe.difficult.remove(apos)
         #TODO is this used?
 
@@ -125,55 +121,55 @@ class RecipeMaker(object):
             if gap[0].alignment_position == 1:
                 # gap at beginning of alignment
                 if gap[0].target_letter: 
-                    self.add_fragment_5p.append(gap)
+                    self.recipe.add_fragment_5p.append(gap)
 
             elif gap[0].alignment_position == 2:
                 # gap at the second position in the alignment
-                ap_1before = self[gap[0].alignment_position -1]
+                ap_1before = self.alignment[gap[0].alignment_position -1]
 
                 if gap[0].target_letter and ap_1before.target_letter: 
                 # AA
                 # A-
                     self.remove_ap_from_box(ap_1before)
-                    self.add_fragment_5p.append([ap_1before]+ gap)   
+                    self.recipe.add_fragment_5p.append([ap_1before]+ gap)
 
                 elif gap[0].target_letter and ap_1before.template_letter:                       
                 # -A
                 # A-
-                    self.add_fragment_5p.append(gap)   
+                    self.recipe.add_fragment_5p.append(gap)
 
                 elif ap_1before.target_letter and ap_1before.template_letter:
                 # A-
                 # AA
                     self.remove_ap_from_box(ap_1before)
-                    self.add_fragment_5p.append([ap_1before])   
+                    self.recipe.add_fragment_5p.append([ap_1before])
 
 
             elif gap[-1].alignment_position == len(self.alignment):
                 # gap at end of alignment
                 if gap[0].target_letter: 
-                    self.add_fragment_3p.append(gap)
+                    self.recipe.add_fragment_3p.append(gap)
 
             elif gap[-1].alignment_position == len(self.alignment)-1:           
                 # gap at the second position before the end of the alignment
-                ap_1after = self.alignment[len(self)]
+                ap_1after = self.alignment[len(self.alignment)]
     
                 if gap[-1].target_letter and ap_1after.target_letter:
                 # AA
                 # -A
                     self.remove_ap_from_box(ap_1after)
-                    self.add_fragment_3p.append(gap+[ap_1after])                       
+                    self.recipe.add_fragment_3p.append(gap+[ap_1after])
 
                 elif gap[-1].target_letter and ap_1after.template_letter:
                 # A-
                 # -A
-                    self.add_fragment_3p.append(gap)    
+                    self.recipe.add_fragment_3p.append(gap)
 
                 elif ap_1after.target_letter and ap_1after.template_letter:
                 # AA
                 # -A
                     self.remove_ap_from_box(ap_1after)
-                    self.add_fragment_3p.append([ap_1after])                       
+                    self.recipe.add_fragment_3p.append([ap_1after])
 
             # REGULAR GAPS IN THE MIDDLE OF THE ALIGNMENT
             else:
@@ -185,16 +181,16 @@ class RecipeMaker(object):
                 #if ap_1before.is_different('gap') or ap_2before.is_different('gap') \
                 #or ap_1after.is_different('gap') or ap_2after.is_different('gap'):
                 if ap_1before.has_gap() or ap_1after.has_gap():
-                    self.difficult.append(gap)
+                    self.recipe.difficult.append(gap)
                     #self.difficult.append(gap)
                     # MM CHANGES:
                 elif  ap_2before.has_gap() or ap_2after.has_gap():
-                    self.add_fragment.append([ap_1before] + gap + [ap_1after])
+                    self.recipe.add_fragment.append([ap_1before] + gap + [ap_1after])
                     #TODO: too long gaps should remain difficult
                     #TODO: gaps close to each other should be inserted,
                     #      but with one base less cut on each side.
                     #      --> also 
-                else: self.add_fragment.append([ap_2before, ap_1before] + gap + [ap_1after, ap_2after])
+                else: self.recipe.add_fragment.append([ap_2before, ap_1before] + gap + [ap_1after, ap_2after])
       
 
     def set_add_fragment_property(self, mode='has_template_gap'):

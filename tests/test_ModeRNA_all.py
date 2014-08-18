@@ -36,6 +36,7 @@ from test_chain_discontinuity import ChainDiscontinuityTests
 from test_analyze import *
 
 # RNA modeling
+from test_modeling_recipe import RecipeMakerTests
 from test_add_remove_modification import RemoveModificationTests, AddModificationTests, ExchangeModificationTests
 from test_copy_residue import CopyResidueTests
 from test_exchange_bases import ExchangeBaseTests

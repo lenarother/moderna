@@ -14,10 +14,11 @@ __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
-import re
+import re, os
 from ModernaSequence import Sequence
 from moderna.Constants import ANY_RESIDUE
 from moderna.Errors import AlignmentError
+from moderna.LogFile import log
 
 DEFAULT_SHRINK = True
 
@@ -480,6 +481,6 @@ def read_alignment(data, shrink=DEFAULT_SHRINK):
         alignment = parser.get_alignment(data, shrink)
     else:
         raise AlignmentError('Alignment not in FASTA format or file does not exist: %s'%data)
-    log.write_message('Alignment loaded from %s:%s'%(data, str(self)))
+    log.write_message('Alignment loaded from %s:%s'%(data, str(alignment)))
     return alignment
 
