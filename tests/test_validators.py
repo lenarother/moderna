@@ -72,6 +72,7 @@ class StrucValidatorTests(TestCase):
         self.assertRaises(ParameterError, validate_fragment, self.m)
         self.assertRaises(ParameterError, validate_fragment, self.struc)
 
+
 class ValidatorTests(TestCase):
     """
     Tests for parameter validation functions.

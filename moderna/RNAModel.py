@@ -18,6 +18,7 @@ from Bio.PDB import PDBParser
 from sequence.ModernaAlphabet import alphabet
 from sequence.ModernaSequence import Sequence
 from ModernaStructure import ModernaStructure
+from ModelingRecipe import RecipeMaker
 from Template import Template
 from ModernaFragment import ModernaFragment53, ModernaFragment5, \
     ModernaFragment3, keep_first, keep_last
@@ -39,17 +40,22 @@ class RnaModel(ModernaStructure):
     Collects preliminary structure model of RNA molecule.
 
     Arguments:
-    * template - structure of template as a Template object (must corespond with template sequence in aligment)
-    * alignment - template-target sequence aligment as a Alignment object
+    * template - structure of template as a Template object (must corespond with template sequence in alignment)
+    * alignment - template-target sequence alignment as a Alignment object
     """
 
     def __init__(self, template=None, alignment=None, model_chain_name='A', data_type=None, data=None, seq=None):
         ModernaStructure.__init__(self, data_type=data_type, data=data, chain_name=model_chain_name, seq=seq)
-        #TODO: order of arguments is inconsistent. 
+        #TODO: order of arguments is inconsistent.
+        #TODO: template + alignment should be obligatory
+        #TODO: replace alignment by recipe
+        #TODO: rename to SingleTemplateModeling and/or refactor classes for tasks out.
         self.template = template
         if template:
             self.template.set_template_numeration()
-        self.alignment = alignment        
+        if alignment:
+            self.recipe = RecipeMaker(alignment).recipe
+        self.alignment = alignment
         self.s = ModernaSuperimposer()
 
 ##################################### COPYING #################################
@@ -96,7 +102,7 @@ class RnaModel(ModernaStructure):
         Copies all residues identical (acording alignment) in both: a template and ia  
         """
         if self.alignment and self.template:
-            for ap in self.alignment.copy:
+            for ap in self.recipe.copy:
                 res = self.template.template_residues[str(ap.template_position)]
                 if not modifications and res.modified: pass 
                 else: self.copy_one_residue(res, strict=strict)
@@ -123,7 +129,7 @@ class RnaModel(ModernaStructure):
         Copies all residues identical (acording alignment) in both: a template and ia  
         """
         if self.alignment and self.template:
-            for ap in self.alignment.copy_backbone:
+            for ap in self.recipe.copy_backbone:
                 res = self.template.template_residues[str(ap.template_position)]
                 self.copy_one_residue_backbone(res, strict=strict)
         else: raise RnaModelError('There is no template or/and alignmnt')
@@ -174,7 +180,7 @@ class RnaModel(ModernaStructure):
         Exchanges all bases acording to given alignment.
         """
         if self.alignment and self.template:
-            for ap in self.alignment.exchange:
+            for ap in self.recipe.exchange:
                 res = self.template.template_residues[str(ap.template_position)]
                 name = ap.target_letter.original_base
                 self.exchange_one_base(res, name)
@@ -220,7 +226,7 @@ class RnaModel(ModernaStructure):
         Copies all this residues without modification into model.
         """
         if self.alignment and self.template:
-            for ap in self.alignment.remove_modifications:
+            for ap in self.recipe.remove_modifications:
                 res = self.template.template_residues[str(ap.template_position)]
                 temp_resi = ModernaResidue(res)
                 temp_resi.remove_modification()
@@ -256,7 +262,7 @@ class RnaModel(ModernaStructure):
         """
         """
         if self.alignment and self.template:
-            for ap in self.alignment.add_modifications:                
+            for ap in self.recipe.add_modifications:
                 temp_resi = ModernaResidue(self.template.template_residues[str(ap.template_position)]) 
                 old_name = temp_resi.long_abbrev
                 temp_resi.add_modification(ap.target_letter.long_abbrev)
@@ -327,7 +333,7 @@ class RnaModel(ModernaStructure):
         Deals with indels in the model.
         """
         if self.alignment and self.template: # KR: is template necessary?
-            for fragment in self.alignment.add_fragment:
+            for fragment in self.recipe.add_fragment:
                 seq=[]
                 for ap in fragment:
                     if ap.target_letter: seq.append(ap.target_letter)
@@ -365,9 +371,9 @@ class RnaModel(ModernaStructure):
 
     def add_missing_5p(self):
         """ """
-        if self.alignment and len(self.alignment.add_fragment_5p)>0:
+        if self.alignment and len(self.recipe.add_fragment_5p)>0:
             anchor3 = [r for r in self][0]
-            ap_list = self.alignment.add_fragment_5p[0]
+            ap_list = self.recipe.add_fragment_5p[0]
             seq = Sequence(''.join([ap.target_letter.short_abbrev for ap in ap_list]))
             all_resis = [r for r in Template(SINGLE_STRAND,'file',  'A')]
             while len(all_resis)-1 <len(ap_list): all_resis=self._elongate_strand(all_resis)
@@ -378,9 +384,9 @@ class RnaModel(ModernaStructure):
 
     def add_missing_3p(self):
         """ """    
-        if self.alignment and len(self.alignment.add_fragment_3p)>0:
+        if self.alignment and len(self.recipe.add_fragment_3p)>0:
             anchor5 = [r for r in self][-1]
-            ap_list = self.alignment.add_fragment_3p[0]
+            ap_list = self.recipe.add_fragment_3p[0]
             seq = Sequence(''.join([ap.target_letter.short_abbrev for ap in ap_list]))
             all_resis = [r for r in Template(SINGLE_STRAND,'file',  'A')]
             while len(all_resis)-1 <len(ap_list): all_resis=self._elongate_strand(all_resis)
