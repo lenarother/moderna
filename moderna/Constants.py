@@ -19,14 +19,6 @@ import Bio
 from analyze.Constants import *
 from builder.Constants import *
 
-#######################  BioPython version   ############################
-
-BIO153 = False
-if hasattr(Bio, '__version__'):
-    # BioPython 1.51 has no version attribute
-    if float(Bio.__version__[:4]) >= 1.53: # BioPython 1.53 or higher
-        BIO153 = True 
-        
 #######################   path settings  ############################
 
 MODULE_PATH, MODULE_NAME = os.path.split(__file__)

@@ -40,7 +40,7 @@ from Constants import BACKBONE_ATOMS,  \
                 BACKBONE_RIBOSE_ATOMS_WITHOUT_O2, \
                 STANDARD_BASES, ANY_RESIDUE, \
                 PURINE_NEIGHBOR_TABLE, PYRIMIDINE_NEIGHBOR_TABLE, \
-                BIO153, DONORS, ACCEPTORS, \
+                DONORS, ACCEPTORS, \
                 H_GENERATE_STEP,  H_COVALENT_BOND, H_ANGLE_ONE, H_ANGLE_TWO
 
 DIST_TOLERANCE = 1.05
@@ -121,15 +121,10 @@ Argument:
             # copy all atoms, in case the original is manipulated.
             for atom in pdb_residue.child_list:
                 if not atom.name[0] in '*H123': #.startswith('H'):
-                    if BIO153:
-                        element = re.sub('[\s\d]', '', atom.name) [0] or 'C'
-                        new_at = Atom(atom.name, atom.coord, atom.bfactor, \
-                            atom.occupancy, atom.altloc, atom.fullname, \
-                            atom.serial_number, element=element)
-                    else:
-                        new_at = Atom(atom.name, atom.coord, atom.bfactor, \
-                            atom.occupancy, atom.altloc, atom.fullname, \
-                            atom.serial_number)
+                    element = re.sub('[\s\d]', '', atom.name) [0] or 'C'
+                    new_at = Atom(atom.name, atom.coord, atom.bfactor, \
+                        atom.occupancy, atom.altloc, atom.fullname, \
+                        atom.serial_number, element=element)
                     self.add(new_at)
         else:
             # use the old atoms (saves time)

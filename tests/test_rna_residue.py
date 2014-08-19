@@ -18,7 +18,6 @@ from moderna.analyze.BaseRecognizer import BaseRecognizer, BaseRecognitionError
 from Bio.PDB import PDBParser
 from moderna.util.Errors import RNAResidueError
 from moderna.sequence.ModernaAlphabet import Alphabet
-from moderna.Constants import BIO153
 
 from test_data import *
 
@@ -56,8 +55,7 @@ class RNAResidueTests(TestCase):
         resi = RNAResidue(self.a)
         self.assertEqual(resi["C4'"].name,"C4'")
         self.assertEqual(resi["C4'"].fullname," C4'")
-        if BIO153:
-            self.assertEqual(resi["C4'"].element,'C')
+        self.assertEqual(resi["C4'"].element,'C')
             
     def test_init(self):
         """Residues should be initializable."""

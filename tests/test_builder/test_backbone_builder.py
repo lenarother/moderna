@@ -20,7 +20,6 @@ from moderna.ModernaStructure import ModernaStructure
 from moderna.builder.BackboneBuilder import BackboneBuilder
 from moderna.analyze.GeometryParameters import GeometryStandards
 from test_data import *
-from moderna.Constants import BIO153
 
 DISCONNECTED = TEST_DATA_PATH + 'rna_structures/disconnected.pdb'
 BB_MESSED_UP = TEST_DATA_PATH + 'rna_structures/bb_messed_up.pdb'
@@ -58,9 +57,8 @@ class BackboneBuilderTests(TestCase):
         self.assertTrue(self.resi2["O5'"])
         self.assertEqual(self.resi2["P"].fullname, ' P')
         self.assertEqual(self.resi2["O5'"].fullname, " O5'")
-        if BIO153:
-            self.assertEqual(self.resi2["P"].element, 'P')
-            self.assertEqual(self.resi2["O5'"].element, "O")
+        self.assertEqual(self.resi2["P"].element, 'P')
+        self.assertEqual(self.resi2["O5'"].element, "O")
         
 
     def test_build_op1op2(self):
