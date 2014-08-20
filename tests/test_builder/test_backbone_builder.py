@@ -16,7 +16,7 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
-from moderna.analyze.ChainConnectivity import are_residues_connected, is_chain_continuous
+from moderna.analyze.ChainConnectivity import are_residues_connected, is_chain_continuous, is_backbone_intact
 from moderna.ModernaStructure import ModernaStructure
 from moderna.builder.BackboneBuilder import BackboneBuilder
 from moderna.analyze.GeometryParameters import GeometryStandards
@@ -43,7 +43,7 @@ class BackboneBuilderTests(TestCase):
         
     def test_validation(self):
         """Makes sure test data is set up properly."""
-        self.assertFalse(self.resi2.is_backbone_intact())
+        self.assertFalse(is_backbone_intact(self.resi2))
         self.assertFalse(are_residues_connected(self.resi1,self.resi2))
                          
     def test_build_backbone(self):
@@ -62,7 +62,6 @@ class BackboneBuilderTests(TestCase):
         if BIO153:
             self.assertEqual(self.resi2["P"].element, 'P')
             self.assertEqual(self.resi2["O5'"].element, "O")
-        
 
     def test_build_op1op2(self):
         """Checks whether the OP1 and OP2 atoms are constructed."""
@@ -110,7 +109,6 @@ class BackboneBuilderTests(TestCase):
         self.assertTrue(struc['33'].is_phosphate_intact())
         self.assertFalse(struc['33'].is_backbone_congested())
         self.assertFalse(struc['32'].is_backbone_congested())
-        
 
     def test_build_conserve_c2c3(self):
         """downstream C2' and C3' positions should not change"""

@@ -19,7 +19,7 @@ from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
 from moderna.builder.PhosphateBuilder import PhosphateBuilder
 from moderna.analyze.GeometryParameters import GeometryStandards
-from moderna.analyze.ChainConnectivity import are_residues_connected
+from moderna.analyze.ChainConnectivity import are_residues_connected, is_backbone_intact
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 import math
 from test_data import *
@@ -38,7 +38,7 @@ class PhosphateBuilderTests(TestCase):
         
     def test_validation(self):
         """Makes sure test data is set up properly."""
-        self.assertFalse(self.resi2.is_backbone_intact())
+        self.assertFalse(is_backbone_intact(self.resi2))
         self.assertFalse(are_residues_connected(self.resi1,self.resi2))
                          
     def test_build_backbone(self):

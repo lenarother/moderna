@@ -26,7 +26,7 @@ from test_stacking_calculator import StackingCalculatorTests
 from test_clash_recognizer import FindClashesTests
 from test_base_recognizer import BaseRecognizerTests
 from test_topology_matcher import MolParserTests, AnnotatedMoleculeTests
-from test_chain_connectivity import ChainConnectivityTests
+from test_chain_connectivity import ChainConnectivityTests, ResidueIntegrityTests
 
 if __name__ == '__main__':
     log.write_to_stderr = False
