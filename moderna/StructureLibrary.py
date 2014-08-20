@@ -21,7 +21,6 @@ import os, tempfile
 class StructureLibraryError(Exception): pass
 
 class StructureLibrary:
-    #TODO: rename to FragmentLibrary?
     """
     A class that produces ModernaStructure objects.
     If the same PDB file is loaded twice, the structure is cached.
@@ -29,19 +28,11 @@ class StructureLibrary:
     on disk at runtime.
     (Implements the Factory Pattern for ModernaStructure)
     """
-    def __init__(self, path, seq_file=None):
+    def __init__(self, path):
         self.path = path
         self.structures = {}
         self.sequences = {}
-        if seq_file:
-            self.read_sequences(seq_file)
-            
-    def read_sequences(self, seq_file):
-        for l in open(seq_file):
-            name, chain, seq = l.strip().split()
-            key = (name, chain)
-            self.sequences[key] = seq
-        
+
     def get_structure(self, name, chain='A'):
         """Returns a ModernaStructure object from a PDB file."""
         key = (name, chain)
@@ -119,8 +110,3 @@ class StructureLibrary:
      
 
 library = StructureLibrary('')
-
-if __name__ == '__main__':
-    """Create file with sequences for even faster caching."""
-    chain_file = sys.argv[1]
-    #TODO: discuss with Lena
