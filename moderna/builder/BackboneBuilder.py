@@ -30,7 +30,7 @@ from moderna.ModernaResidue import ModernaResidue
 from FCCDLoopCloser import FCCDLoopCloser
 from CoordBuilder import build_coord
 from moderna.analyze.RNASuites import TORSIONS, DEFAULT_TORSIONS
-#from Constants import DATA_PATH, BIO153
+from moderna.analyze.ChainConnectivity import are_residues_connected
 from numpy import array
 from moderna.util.LogFile import log
 
@@ -60,7 +60,7 @@ class BackboneBuilder(object):
         log.write_message(str(self.is_intact()))
         self.write_resi_status(self.resi1)
         self.write_resi_status(self.resi2)
-        if self.struc.are_residues_connected(self.resi1, self.resi2):
+        if are_residues_connected(self.resi1, self.resi2):
             log.write_message('connection between both residues OK')
         else:
             log.write_message('connection between both residues BROKEN')
@@ -82,7 +82,7 @@ class BackboneBuilder(object):
         """Checks whether the backbone is complete."""
         if not self.resi1.is_backbone_intact(mode="3'") or \
             not self.resi2.is_backbone_intact(mode="5'") or \
-            not self.struc.are_residues_connected(self.resi1, self.resi2) or \
+            not are_residues_connected(self.resi1, self.resi2) or \
             not self.resi2.is_phosphate_intact() or \
             self.resi1.is_backbone_congested(mode="3'") or \
                 self.resi2.is_backbone_congested(mode="5'"):

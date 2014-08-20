@@ -16,6 +16,7 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
+from moderna.analyze.ChainConnectivity import are_residues_connected, is_chain_continuous
 from moderna.ModernaStructure import ModernaStructure
 from moderna.builder.BackboneBuilder import BackboneBuilder
 from moderna.analyze.GeometryParameters import GeometryStandards
@@ -43,7 +44,7 @@ class BackboneBuilderTests(TestCase):
     def test_validation(self):
         """Makes sure test data is set up properly."""
         self.assertFalse(self.resi2.is_backbone_intact())
-        self.assertFalse(self.struc.are_residues_connected(self.resi1,self.resi2))
+        self.assertFalse(are_residues_connected(self.resi1,self.resi2))
                          
     def test_build_backbone(self):
         """Checks whether the P+O5' atoms are constructed."""
@@ -91,9 +92,9 @@ class BackboneBuilderTests(TestCase):
         """Structure example should not be OK"""
         # trna Leu by Marcin Skorupskiego
         struc = ModernaStructure('file',DISCONNECTED)
-        self.assertFalse(struc.is_chain_continuous())
+        self.assertFalse(is_chain_continuous(struc))
         bb = BackboneBuilder(struc['16'], struc['17'], struc)
-        self.assertTrue(struc.is_chain_continuous())
+        self.assertTrue(is_chain_continuous(struc))
         
     def _test_repair_congested(self):
         """Should avoid clashes between atoms."""

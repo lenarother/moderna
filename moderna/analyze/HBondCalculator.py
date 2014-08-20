@@ -15,15 +15,11 @@ __email__ = "krother@genesilico.pl"
 __status__ = "Prototype"
 # -*- coding: cp1250 -*-
 
-from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
-from math import pi, sin, cos, degrees
-from numpy import array, cross
-
-from Bio import PDB
+from Bio.PDB.Vector import calc_angle
+from math import degrees
 from Bio.PDB.Vector import Vector
-from numpy import array
 from Constants import MAX_C1_DIST, MAXD1, MAXD2
-
+from moderna.Constants import BACKBONE_RIBOSE_ATOMS
 #TODO: bifurcated bonds
 #TODO: different parameter sets
 #TODO: h-bond tolerance depending on b-factor
@@ -45,8 +41,8 @@ It should be a H-bond that occurs between donor and acceptor
 atoms, both of which belong to a base, and with the distance
 between the two atoms (N or O) <3.4A.
 """
-        if self.donor.name in RIBOSE_BB_ATOMS: return False
-        if self.acceptor.name in RIBOSE_BB_ATOMS: return False
+        if self.donor.name in BACKBONE_RIBOSE_ATOMS: return False
+        if self.acceptor.name in BACKBONE_RIBOSE_ATOMS: return False
         if self.donor.name[0] == 'C' or self.acceptor.name[0] == 'C': return False
         if self.dist >= 3.4: return False
         return True

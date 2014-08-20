@@ -31,9 +31,6 @@ from test_check_pdb import CheckPdbTests
 from test_write_pdb import WritePDBTests
 from test_moderna_superimposer import SuperimposerTests
 
-# RNA analysis
-from test_chain_discontinuity import ChainDiscontinuityTests
-from test_analyze import *
 
 # RNA modeling
 from test_add_remove_modification import RemoveModificationTests, AddModificationTests, ExchangeModificationTests
@@ -50,6 +47,7 @@ from test_lir_insertions import LIRInsertionTests
 from test_lirdb import LirDbTests
 from test_renumerator import RenumeratorTests
 from test_fragment_insertion import FragmentInserterTests
+from test_analyze import *
 from test_builder import *
 from test_isosteric import *
 
