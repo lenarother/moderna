@@ -9,8 +9,6 @@
 
 """
 Superclass that supports work with PDB.Residue objects
-
- http://iimcb.genesilico.pl/moderna/ 
 """
 
 __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
@@ -25,8 +23,6 @@ __status__ = "Production"
 import re
 from Bio.PDB.Residue import Residue
 from Bio.PDB.Atom import Atom
-from analyze.GeometryParameters import BACKBONE_DIST_MATRIX, \
-    PHOSPHATE_DIST_MATRIX, O3_P_DIST_LOW, O3_P_DIST_HI
 from numpy import array
 from sequence.ModernaAlphabet import alphabet
 from analyze.BaseRecognizer import BaseRecognizer, BaseRecognitionError
@@ -36,32 +32,12 @@ from builder.CoordBuilder import build_coord
 
 from util.Errors import RNAResidueError
 
-from Constants import BACKBONE_ATOMS,  \
-                BACKBONE_RIBOSE_ATOMS_WITHOUT_O2, \
-                STANDARD_BASES, ANY_RESIDUE, \
+from Constants import STANDARD_BASES, ANY_RESIDUE, \
                 PURINE_NEIGHBOR_TABLE, PYRIMIDINE_NEIGHBOR_TABLE, \
                 BIO153, DONORS, ACCEPTORS, \
                 H_GENERATE_STEP,  H_COVALENT_BOND, H_ANGLE_ONE, H_ANGLE_TWO
 
-DIST_TOLERANCE = 1.05
-# distance for intra-residue backbone clashes
-CONGESTION_DISTANCE = 1.5 
 
-ATOMS_5P = ["P", "O5'", "C5'", "C4'"]
-ATOMS_3P = ["C3'", "O3'"]
-
-BB_SET_5P = ["P", "OP1", "OP2", "C5'", "O5'"]
-BB_SET_3P = ["O3'"]
-BB_SET = BB_SET_5P + BB_SET_3P
-
-BONDS = {
-"P":["OP1", "OP2", "O5'"], 
-"OP1":["P"], 
-"OP2":["P"], 
-"C5'":["C4'", "O5'"], 
-"O3'":["C3'"], 
-"O5'":["C5'", "P"], 
-         }
 
 H_GENERATE_TORSIONS = range(0, 360, H_GENERATE_STEP)
 
@@ -266,17 +242,6 @@ Argument:
     def category(self):
         """Returns the cathegory of the nucleotide."""
         return self.alphabet_entry.category
-    
-    # ------------------ backbone torsions ------------------------
-    @property
-    def pucker(self):
-        """Returns ribose pucker."""
-        pcalc = PuckerCalculator()
-        return pcalc.get_pucker(self)
-        
-    @property
-    def beta(self):
-        return dihedral(self["P"], self["O5'"], self["C5'"], self["C4'"])
 
     # ------------------- helper functions to work with atoms ------------------
     def get_atom_vector(self, name):
@@ -297,7 +262,6 @@ Argument:
                     raise KeyError("Atom %s not found"%name )
 
 
-    # ------------- METHODS FOR CHECKING RESIDUE INTEGRITY --------------------
     def check_atoms(self, names):
         """Returns True if all atom names in the given list exist."""
         try:
@@ -306,70 +270,7 @@ Argument:
         except KeyError:
             return False
 
-    def is_backbone_complete(self):
-        """Returns True if all backbone atoms are present."""
-        return self.check_atoms(BACKBONE_ATOMS)
 
-    def is_ribose_complete(self):
-        """Returns True if all ribose atoms are present."""
-        return self.check_atoms(BACKBONE_RIBOSE_ATOMS_WITHOUT_O2)
-
-    def is_backbone_intact(self, tolerance=1.0, mode=None):
-        """
-Checks whether all the backbone atoms in the residue are connected.
-Returns True/False value. In case any backbone atoms are missing\
-raises an exception.
-        """
-        if mode == "5'": 
-            atoms = ATOMS_5P
-        elif mode == "3'": 
-            atoms = ATOMS_3P
-        try:
-            for atom in BACKBONE_DIST_MATRIX:
-                if mode and (atom[0] not in atoms and atom[1] not in atoms): 
-                    continue
-                low_dist, hi_dist = BACKBONE_DIST_MATRIX[atom]
-                dist = self[atom[0]] - self[atom[1]]
-                if not (low_dist <= dist <= hi_dist * tolerance): 
-                    return False
-            return True
-        except KeyError: # missing atoms
-            return False
-            
-    def is_phosphate_intact(self, tolerance=1.0):
-        """Checks whether P-OP1 and P-OP2 distances are OK."""
-        try:
-            for atom in PHOSPHATE_DIST_MATRIX:
-                low_dist, hi_dist = PHOSPHATE_DIST_MATRIX[atom]
-                dist = self[atom[0]] - self[atom[1]]
-                if not (low_dist <= dist <= hi_dist * tolerance): 
-                    return False
-            return True
-        except KeyError: # missing atoms
-            return False
-        
-    def is_backbone_congested(self, congestion_dist=CONGESTION_DISTANCE, \
-                        mode=None):
-        """Checks whether backbone atoms clash into others."""
-        atoms = BB_SET
-        if mode == "5'": 
-            atoms = BB_SET_5P
-        elif mode == "3'": 
-            atoms = BB_SET_3P
-        for bb_name in atoms:
-            try:
-                atom1 = self[bb_name]
-                for atom2 in self:
-                    if atom2.name in atoms: 
-                        continue
-                    if atom2.name in BONDS[bb_name]: 
-                        continue
-                    dist = atom2-atom1
-                    if dist < congestion_dist:
-                        return True
-            except KeyError:
-                pass # skip missing atoms.
-                
     def get_bp(self, resi2):
         """returns an interaction type between two residues
         or None if there is no interaction"""

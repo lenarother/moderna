@@ -22,15 +22,12 @@ __maintainer__ = "Tomasz Puton"
 __email__ = "t.puton@amu.edu.pl"
 __status__ = "Production"
 
-# last comments: 2009/04/21 KR
-
 from Bio.PDB import NeighborSearch
 from Bio.PDB.PDBParser import PDBParser
 from Bio.PDB.Structure import Structure
 from Bio.PDB.Model import Model
 from Bio.PDB.Chain import Chain
-from Bio.PDB.Residue import Residue
-from moderna.ModernaStructure import ModernaStructure
+from ChainConnectivity import are_residues_connected
 from Constants import ATOM_RADII, SEARCH_RADIUS
 
 class ClashRecognizer:
@@ -47,8 +44,7 @@ it implements three public methods:
     #TODO: atom radii and search radius as configurable parameters?
     
     radius_cache = {} # memorize radii by atom full names
-    ms = ModernaStructure()   # placed this here to save time
-    
+
     def compare_residues(self, one, two):
         # !!! KR: this should go into ModernaResidue
         return cmp(one.id[1], two.id[1])    
@@ -145,8 +141,8 @@ it implements three public methods:
                 (first_atom.get_name() == 'P'\
                 and second_atom.get_name() == 'O3\'') \
                 and \
-                (self.ms.are_residues_connected(resi_1, resi_2) or \
-                self.ms.are_residues_connected(resi_2, resi_1)):
+                (are_residues_connected(resi_1, resi_2) or \
+                 are_residues_connected(resi_2, resi_1)):
                     # 15 May 2009:
                     # TP: feature requested by MM & KR
                     # Its really a temporary solution and it will be changed

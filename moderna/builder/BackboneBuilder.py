@@ -30,7 +30,8 @@ from moderna.ModernaResidue import ModernaResidue
 from FCCDLoopCloser import FCCDLoopCloser
 from CoordBuilder import build_coord
 from moderna.analyze.RNASuites import TORSIONS, DEFAULT_TORSIONS
-#from Constants import DATA_PATH, BIO153
+from moderna.analyze.ChainConnectivity import are_residues_connected, \
+    is_backbone_intact, is_phosphate_intact, is_backbone_congested
 from numpy import array
 from moderna.util.LogFile import log
 
@@ -60,32 +61,33 @@ class BackboneBuilder(object):
         log.write_message(str(self.is_intact()))
         self.write_resi_status(self.resi1)
         self.write_resi_status(self.resi2)
-        if self.struc.are_residues_connected(self.resi1, self.resi2):
+        if are_residues_connected(self.resi1, self.resi2):
             log.write_message('connection between both residues OK')
         else:
             log.write_message('connection between both residues BROKEN')
         
     def write_resi_status(self, resi):
         log.write_message('Status of residue: %s'%resi.identifier)
-        if resi.is_backbone_intact():
+        if is_backbone_intact(resi):
             log.write_message('\tbackbone  OK')
-        else: log.write_message('\tbackbone  INTERRUPTED')
-        if resi.is_phosphate_intact():
+        else:
+            log.write_message('\tbackbone  INTERRUPTED')
+        if is_phosphate_intact(resi):
             log.write_message('\tphosphate OK')
         else: log.write_message('\tphosphate BROKEN')
-        if resi.is_backbone_congested():
+        if is_backbone_congested(resi):
             log.write_message('\tclashes   OCCUR')
         else:
             log.write_message('\clashes   OK')
     
     def is_intact(self):
         """Checks whether the backbone is complete."""
-        if not self.resi1.is_backbone_intact(mode="3'") or \
-            not self.resi2.is_backbone_intact(mode="5'") or \
-            not self.struc.are_residues_connected(self.resi1, self.resi2) or \
-            not self.resi2.is_phosphate_intact() or \
-            self.resi1.is_backbone_congested(mode="3'") or \
-                self.resi2.is_backbone_congested(mode="5'"):
+        if not is_backbone_intact(self.resi1, mode="3'") or \
+            not is_backbone_intact(self.resi2, mode="5'") or \
+            not are_residues_connected(self.resi1, self.resi2) or \
+            not is_phosphate_intact(self.resi2) or \
+            is_backbone_congested(self.resi1, mode="3'") or \
+            is_backbone_congested(self.resi2, mode="5'"):
                 return False
         return True
 

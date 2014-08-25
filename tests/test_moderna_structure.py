@@ -154,6 +154,11 @@ class ModernaStructureTests(TestCase):
         self.assertEqual(seq, 'x_GAA')
         self.assertEqual(struc['900'].long_abbrev, 'm7Gpp_cap')
 
+    def test_is_connected_strict(self):
+        """All backbones need to be connected between two bases."""
+        s = ModernaStructure('file', BROKEN_BACKBONE)
+        self.assertEqual(s.get_sequence(), Sequence('G_C_GG_A_U_UUALCUCAG'))
+
 if __name__ == '__main__':
     main()
     

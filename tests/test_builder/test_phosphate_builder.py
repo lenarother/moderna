@@ -19,6 +19,7 @@ from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
 from moderna.builder.PhosphateBuilder import PhosphateBuilder
 from moderna.analyze.GeometryParameters import GeometryStandards
+from moderna.analyze.ChainConnectivity import are_residues_connected, is_backbone_intact
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 import math
 from test_data import *
@@ -37,8 +38,8 @@ class PhosphateBuilderTests(TestCase):
         
     def test_validation(self):
         """Makes sure test data is set up properly."""
-        self.assertFalse(self.resi2.is_backbone_intact())
-        self.assertFalse(self.struc.are_residues_connected(self.resi1,self.resi2))
+        self.assertFalse(is_backbone_intact(self.resi2))
+        self.assertFalse(are_residues_connected(self.resi1,self.resi2))
                          
     def test_build_backbone(self):
         """Checks whether the P+O5' atoms are constructed."""
@@ -124,7 +125,7 @@ class PhosphateBuilderTests(TestCase):
         """Checks whether two residues are properly connected."""
         bb = PhosphateBuilder(self.resi1,self.resi2)    
         bb.build()
-        self.assertTrue(self.struc.are_residues_connected(self.resi1,self.resi2))
+        self.assertTrue(are_residues_connected(self.resi1,self.resi2))
         
     def test_op1op2_geometry(self):
         """Checks whether the OP1 and OP2 geometry is OK."""

@@ -78,7 +78,6 @@ for atom in mol:
 """
 import os, re
 from MolTopologies import *
-from MolParameters import *
 from MolGraphParser import *
 
 PERMUTATIONS = (
