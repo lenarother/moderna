@@ -278,17 +278,3 @@ class ModernaFragmentStrand(ModernaFragment):
         return [self.anchor.fixed_id] \
         + struc.find_residues_in_range(self.identifier, self.identifier)
 
-
-# experimental function added by KR
-def construct_noncanonical_pair(model, resid1, resid2, bptype):
-    """
-    Builds a noncanonical base pair on the first residue.
-    bptype should be e.g. 'cWH_GA'
-    """
-    #TODO: add tests
-    if model.moderna_residues.has_key(resid2):
-        model.remove_residue(resid2)
-    bptype += '.pdb'
-    frag = ModernaFragmentStrand(data_type='file', data=BASE_PAIR_PATH+bptype, anchor=model[resid1],  identifier=resid2)
-    print [r for r in frag]
-    model.insert_fragment(frag)
