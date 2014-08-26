@@ -29,8 +29,6 @@ from Bio.PDB.Chain import Chain
 from Bio.PDB.Model import Model
 from Bio.PDB.Structure import Structure
 from Bio.PDB import PDBIO
-
-from Constants import BIO153
 from moderna import ModernaResidue
 
 
@@ -73,12 +71,10 @@ Supports conversion between old and new pdb files:
         Returns a new Atom object.
         """
         at_fullname = self.get_full_at_name(new_name)
-        if BIO153:
-            element = new_name.strip()[0]
-            if element not in "CHONSP": element = 'C'
-            new_at = Atom(new_name, at.coord, at.bfactor, at.occupancy, at.altloc, at_fullname, at.serial_number,  element=element)
-        else:
-            new_at = Atom(new_name, at.coord, at.bfactor, at.occupancy, at.altloc, at_fullname, at.serial_number) 
+        element = new_name.strip()[0]
+        if element not in "CHONSP":
+            element = 'C'
+        new_at = Atom(new_name, at.coord, at.bfactor, at.occupancy, at.altloc, at_fullname, at.serial_number, element=element)
         return new_at
         
         

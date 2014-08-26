@@ -22,7 +22,8 @@ from ModernaStructure import ModernaStructure
 from builder.PhosphateBuilder import TerminalPhosphateBuilder
 from analyze.ChainConnectivity import are_residues_connected, is_chain_continuous
 
-from Constants import MISSING_RESIDUE, UNKNOWN_RESIDUE_SHORT, PHOSPHATE_GROUP, RIBOSE, BACKBONE_ATOMS, AA_ATOMS,  BIO153,  BASE_PATH, BACKBONE_RIBOSE_ATOMS,  PHOSPHORYLATED_NUCLEOTIDES
+from Constants import MISSING_RESIDUE, UNKNOWN_RESIDUE_SHORT, PHOSPHATE_GROUP, RIBOSE, BACKBONE_ATOMS, AA_ATOMS, \
+    BACKBONE_RIBOSE_ATOMS,  PHOSPHORYLATED_NUCLEOTIDES
 from util.LogFile import log
 
 
@@ -413,17 +414,15 @@ class PdbController:
         self.P_missing = new_P_missing
                 
 
-    def change_at_name(self,resi,old_name,new_name):
+    def change_at_name(self, resi, old_name, new_name):
         """
         Changes single atom name.
         """
         at = resi[old_name]
-        if BIO153:
-            element = new_name[0]
-            if element not in "CHONSP": element = 'C'
-            new_at = Atom(new_name, at.coord, at.bfactor, at.occupancy, at.altloc, ' '+new_name, at.serial_number,  element=element)
-        else:
-            new_at = Atom(new_name, at.coord, at.bfactor, at.occupancy, at.altloc, ' '+new_name, at.serial_number) 
+        element = new_name[0]
+        if element not in "CHONSP":
+            element = 'C'
+        new_at = Atom(new_name, at.coord, at.bfactor, at.occupancy, at.altloc, ' '+new_name, at.serial_number,  element=element)
         resi.detach_child(old_name)
         resi.add(new_at)
         #print new_at.coord, new_at.bfactor, new_at.occupancy, new_at.altloc, new_name, new_at.serial_number

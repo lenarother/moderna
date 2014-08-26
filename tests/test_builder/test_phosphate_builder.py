@@ -23,7 +23,6 @@ from moderna.analyze.ChainConnectivity import are_residues_connected, is_backbon
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 import math
 from test_data import *
-from moderna.Constants import BIO153
 
 
 class PhosphateBuilderTests(TestCase):
@@ -56,9 +55,8 @@ class PhosphateBuilderTests(TestCase):
         self.assertTrue(self.resi2["O5'"])
         self.assertEqual(self.resi2["P"].fullname, ' P')
         self.assertEqual(self.resi2["O5'"].fullname, " O5'")
-        if BIO153:
-            self.assertEqual(self.resi2["P"].element, 'P')
-            self.assertEqual(self.resi2["O5'"].element, "O")
+        self.assertEqual(self.resi2["P"].element, 'P')
+        self.assertEqual(self.resi2["O5'"].element, "O")
         
 
     def test_build_op1op2(self):
