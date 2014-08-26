@@ -33,6 +33,7 @@ from test_moderna_superimposer import SuperimposerTests
 
 
 # RNA modeling
+from test_modeling_recipe import RecipeMakerTests
 from test_add_remove_modification import RemoveModificationTests, AddModificationTests, ExchangeModificationTests
 from test_copy_residue import CopyResidueTests
 from test_exchange_bases import ExchangeBaseTests

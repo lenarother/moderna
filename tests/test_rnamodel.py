@@ -21,7 +21,7 @@ from moderna.ModernaStructure import ModernaStructure
 from moderna.util.Errors import ModernaStructureError, RenumeratorError
 from moderna.analyze.BaseRecognizer import BaseRecognizer
 from moderna.ModernaFragment import ModernaFragment53, keep_first_last
-from moderna.sequence.ModernaAlignment import Alignment
+from moderna.sequence.RNAAlignment import read_alignment
 from moderna.sequence.ModernaSequence import Sequence
 from moderna import load_model, find_fragment, copy_some_residues, \
     insert_fragment, match_template_with_alignment, clean_structure, \
@@ -31,7 +31,7 @@ from test_data import *
 class RnaModelTests(TestCase):
 
     def setUp(self):
-        self.a = Alignment(MINI_ALIGNMENT)
+        self.a = read_alignment(MINI_ALIGNMENT)
         self.t = Template(MINI_TEMPLATE, seq=Sequence("GCGGAUUUALCUCAG"))
         self.m = RnaModel(self.t, self.a)
         self.seq_before = self.t.get_sequence()
@@ -55,7 +55,7 @@ class BasicRnaModelTests(RnaModelTests):
         self.assertEqual(self.m.get_sequence(),Sequence('ACUGUGAYUA[UACCU#PG'))
         
     def test_3p_extension(self):
-        a = Alignment("""> target
+        a = read_alignment("""> target
 GCGGAUUUALCUCAGAAAAAAAAAA
 > template
 GCGGAUUUALCUCAG----------
@@ -65,7 +65,7 @@ GCGGAUUUALCUCAG----------
         self.assertEqual(m.get_sequence(), a.target_seq)
 
     def test_long_3p_extension(self):
-        a = Alignment("""> target
+        a = read_alignment("""> target
 GCGGAUUUALCUCAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 > template
 GCGGAUUUALCUCAG----------------------------------------
@@ -76,7 +76,7 @@ GCGGAUUUALCUCAG----------------------------------------
 
 
     def test_5p_extension(self):
-        a = Alignment("""> target
+        a = read_alignment("""> target
 AAAAAAAAAAGCGGAUUUALCUCAG
 > template
 ----------GCGGAUUUALCUCAG
@@ -86,7 +86,7 @@ AAAAAAAAAAGCGGAUUUALCUCAG
         self.assertEqual(m.get_sequence(), a.target_seq)
 
     def test_long_5p_extension(self):
-        a = Alignment("""> target
+        a = read_alignment("""> target
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGCGGAUUUALCUCAG
 > template
 ----------------------------------------GCGGAUUUALCUCAG
@@ -103,7 +103,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGCGGAUUUALCUCAG
 
     def test_create_model_with_gaps(self):
         """Should create the model automatically."""
-        a = Alignment(ALIGN_1B23_1QF6)
+        a = read_alignment(ALIGN_1B23_1QF6)
         t = Template(RNA_1B23,'file','R')
         m = RnaModel(t, a)
         m.apply_alignment()
@@ -112,7 +112,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGCGGAUUUALCUCAG
 
     def test_gaps_in_target(self):
         """Moderna should model gaps in the target, too."""
-        a = Alignment(ALIGN_TARGET_GAP)
+        a = read_alignment(ALIGN_TARGET_GAP)
         m = RnaModel(self.t, a)
         m.apply_alignment()
         m.insert_all_fragments()
@@ -121,14 +121,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGCGGAUUUALCUCAG
 
     def test_create_model_with_unknown(self):
         """Alignment that contains unknown bases in the target."""
-        a = Alignment(MINI_ALIGNMENT_WITH_UNK)        
+        a = read_alignment(MINI_ALIGNMENT_WITH_UNK)        
         m = RnaModel(self.t,a)
         m.create_model()
         self.assertEqual(m.get_sequence(),Sequence('..CUGUQQUACCU#P'))
         
     def test_doublegap_model(self):
         """Should create a model filling two gaps"""
-        a = Alignment('''> target
+        a = read_alignment('''> target
 GGGAUAGUUCCAGABU#A
 > template
 GGGA-AG--CCAGABU#A
@@ -178,7 +178,7 @@ GGGA-AG--CCAGABU#A
 
     def test_oppositegap_model(self):
         """Should create a model with close gaps in the other respective sequence"""
-        a = Alignment('''> target
+        a = read_alignment('''> target
 GGGAGAGCRUUAG-BU#A
 > template
 GGGAGAGCR--AGABU#A
@@ -192,7 +192,7 @@ GGGAGAGCR--AGABU#A
     def test_model_with_hydro_template(self):
         """If the template contains hydrogens, modifications should be added."""
         t = Template(RNA_HYDRO, 'file','B')
-        a = Alignment("""> 3tra_A.pdb Z73314.1/2358-2429
+        a = read_alignment("""> 3tra_A.pdb Z73314.1/2358-2429
 UPA
 > 1qru_B.pdb X55374.1/1-72
 CAA
@@ -202,7 +202,7 @@ CAA
         self.assertEqual(m.get_sequence(), Sequence('UPA'))
 
     def test_model_with_5p3p_ends(self):
-        a = Alignment('''> target
+        a = read_alignment('''> target
 CAUGCGGAYYYALCUCAGGUA
 > mini_template
 ---GCGGAUUUALCUCAG---
@@ -213,7 +213,7 @@ CAUGCGGAYYYALCUCAGGUA
         
     def test_model_with_close_gaps(self):
         t = Template('test_data/rna_structures/2du3_excerpt.ent','file','D')
-        a = Alignment('''> 1qru_B.pdb X55374.1/1-72
+        a = read_alignment('''> 1qru_B.pdb X55374.1/1-72
 GCA-UUCCG
 > 2du3_D.pdb
 CUUUA-CCC
@@ -231,7 +231,7 @@ CUUUA-CCC
         
     def test_model_with_alignment_adjustment(self):
         """Introduces small corrections on alignment."""
-        a = Alignment("""> target
+        a = read_alignment("""> target
 ACUGUGAYUA[UACCU#P-G
 > template with small errors.
 GCG7A----U.UAGCUCA_G
@@ -244,7 +244,7 @@ GCG7A----U.UAGCUCA_G
                                                                 
     def test_number_gap(self):
         """Builds model with numbering gap in the template."""
-        a = Alignment("""> target
+        a = read_alignment("""> target
 CCGACCUUCGGCCACCUGACAGUCCUGUGCGGGAAACCGCACAGGACUGUCAACCAGGUAAUAUAACCACCGGGAAACGGUGGUUAUAUUACCUGGUACGCCUUGACGUGGGGGAAACCCCACGUCAAGGCGUGGUGGCCGAAGGUCGG
 > template
 CCGACCUUCGGCCACCUGACAGUCCUGUGCGG----CCGCACAGGACUGUCAACCAGGUAAUAUAACCACCGG----CGGUGGUUAUAUUACCUGGUACGCCUUGACGUGGGG----CCCCACGUCAAGGCGUGGUGGCCGAAGGUCGG
@@ -261,7 +261,7 @@ class IndelQualityTests(RnaModelTests):
     def test_insert_indel_quality_1(self):
         """Insert a fragment without strand break"""
         t = Template('test_data/gaps/mini_1h4s_T_gap2.pdb', 'file','T')
-        a = Alignment('test_data/gaps/ali_gap2.fasta')
+        a = read_alignment('test_data/gaps/ali_gap2.fasta')
         m = RnaModel(t, a)
         self.assertEqual(m.get_sequence().seq_with_modifications.find('_'), -1)
 
@@ -284,13 +284,13 @@ class IndelQualityTests(RnaModelTests):
 
     def test_gap_optimization_example_1(self):
         t = Template('test_data/gaps/mini_1h4s_T_gap2.pdb', 'file','T')
-        a = Alignment('test_data/gaps/ali_gap1.fasta')
+        a = read_alignment('test_data/gaps/ali_gap1.fasta')
         m = RnaModel(t, a)
         m.create_model()
             
     def test_gap_optimization_example_2(self):
         t = Template('test_data/gaps/mini_1h4s_T_gap2.pdb', 'file','T')
-        a = Alignment('test_data/gaps/ali_gap2.fasta')
+        a = read_alignment('test_data/gaps/ali_gap2.fasta')
         m = RnaModel(t, a)
         m.create_model()
             

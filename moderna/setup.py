@@ -72,7 +72,7 @@ setup(
          'IsostericityMatrices','Isostericity', #'IsostericModelling',
          'LIRdb','LogFile','LIR',
          #'model_to_adun','madun',
-         'ModernaAlignment','ModernaResidue','ModernaSequence',
+         'ModelingRecipe','ModernaResidue','ModernaSequence',
          'ModernaAlphabet','ModernaFragment','ModernaStructure',
          'ModernaSuperimposer','ModernaToAdun',
          'ProcessPDB','PhosphateBuilder','RNAModel', 'PuckerCalculator', 

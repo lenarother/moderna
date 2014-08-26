@@ -37,7 +37,8 @@ from RNAModel import RnaModel
 from Template import Template
 from sequence.ModernaAlphabet import Alphabet
 from sequence.ModernaSequence import Sequence
-from sequence.ModernaAlignment import Alignment
+from sequence.RNAAlignment import read_alignment
+from ModelingRecipe import RecipeMaker
 from ModernaStructure import ModernaStructure
 from ModernaFragment import ModernaFragment53, ModernaFragment5, ModernaFragment3
 from SecstrucFragment import ModernaFragmentStrand, ModernaFragment2D
@@ -82,7 +83,9 @@ not present in the template.
     model = validate_model(model)
     
     if template: model.template = template
-    if alignment: model.alignment = alignment
+    if alignment:
+        model.alignment = alignment
+        model.recipe = RecipeMaker(alignment).recipe
     model.add_all_modifications_copy()    
 
 
@@ -177,6 +180,7 @@ For gaps in the alignment, nothing is done.
     model = validate_model(model)
     
     model.alignment = alignment
+    model.recipe = RecipeMaker(alignment).recipe
     model.template = template
     model.apply_alignment()
 
@@ -202,7 +206,9 @@ It depends, however on
     alignment = validate_alignment(alignment)
     model = validate_model(model)
     
-    if alignment: model.alignment = alignment
+    if alignment:
+        model.alignment = alignment
+        model.recipe = RecipeMaker(alignment).recipe
     model.insert_all_fragments()
 
 
@@ -243,7 +249,9 @@ part in the template.
     alignment = validate_alignment(alignment)
     model = validate_model(model)
     
-    if alignment: model.alignment = alignment
+    if alignment:
+        model.alignment = alignment
+        model.recipe = RecipeMaker(alignment).recipe
     model.add_missing_5p()
     model.add_missing_3p()
 
@@ -310,7 +318,9 @@ do not change.
     model = validate_model(model)
     
     if template: model.template = template
-    if alignment: model.alignment = alignment
+    if alignment:
+        model.alignment = alignment
+        model.recipe = RecipeMaker(alignment).recipe
     model.copy_all_residues(strict=strict, modifications=modifications)
    
   
@@ -491,7 +501,9 @@ Modified bases are not changed (use the apply_alignment command for that).
     model = validate_model(model)
     
     if template: model.template = template
-    if alignment: model.alignment = alignment
+    if alignment:
+        model.alignment = alignment
+        model.recipe = RecipeMaker(alignment).recipe
     model.exchange_all_bases()
 
 
@@ -839,7 +851,7 @@ For modified bases, see the 'concepts' section of the manual.
     * path+filename of a FASTA file
     """
     file_path = validate_filename(file_path)
-    return Alignment(file_path) 
+    return read_alignment(file_path) 
 
 
 @toplevel_function
@@ -992,6 +1004,7 @@ The nucleotides are transformed into standard bases from which the modifications
     
     model.template = template
     model.alignment = alignment
+    model.recipe = RecipeMaker(alignment).recipe
     model.remove_all_modifications_copy()
 
 

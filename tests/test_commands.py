@@ -18,7 +18,7 @@ from unittest import main, TestCase
 from moderna import *
 from moderna.util.LogFile import log
 from moderna.sequence.ModernaSequence import Sequence
-from moderna.sequence.ModernaAlignment import Alignment
+from moderna.sequence.RNAAlignment import read_alignment, RNAAlignment
 from moderna.ModernaFragment import ModernaFragment
 from moderna.Template import Template
 from moderna.RNAModel import RnaModel
@@ -44,8 +44,8 @@ class CommandTests(TestCase):
         the third to the model.
     """
     def setUp(self):
-        self.a = Alignment(MINI_ALIGNMENT)
-        self.a2 = Alignment(MINI_ALIGNMENT_WITH_UNK)
+        self.a = read_alignment(MINI_ALIGNMENT)
+        self.a2 = read_alignment(MINI_ALIGNMENT_WITH_UNK)
         self.t = Template(MINI_TEMPLATE, seq=Sequence("GCGGAUUUALCUCAG"))
         self.m = RnaModel()
 
@@ -193,14 +193,14 @@ class CommandTests(TestCase):
 
     def test_create_model_ali_improve(self):
         """Correct small errors in the alignment automatically."""
-        ali = Alignment(MINI_ALIGNMENT_INACCURATE)
+        ali = read_alignment(MINI_ALIGNMENT_INACCURATE)
         m = create_model(self.t, ali)
         self.assertEqual(m.get_sequence(),Sequence('ACUGUA7UACCUAPG'))
 
     def test_create_model_incorrect(self):
         """Giving an improper template seq should raise an exception."""
         # should also create log message.
-        a = Alignment(DNA_ALIGNMENT)
+        a = read_alignment(DNA_ALIGNMENT)
         self.assertRaises(ModernaError, create_model, self.t,a)
     #----------------------------------------------------------
     def test_clean_structure(self):
@@ -425,7 +425,7 @@ class CommandTests(TestCase):
     def test_load_alignment(self):
         """Return alignment loaded from fasta file."""
         a = load_alignment(MINI_ALIGNMENT)
-        self.assertTrue(isinstance(a, Alignment))
+        self.assertTrue(isinstance(a, RNAAlignment))
         self.assertEqual(a.aligned_template_seq,Sequence('GCGGA----UUUALCUCAG'))
         self.assertEqual(a.aligned_target_seq,Sequence('ACUGUGAYUA[UACCU#PG'))
     #----------------------------------------------------------
@@ -626,7 +626,7 @@ class CommandTests(TestCase):
 GC-C--C--G---G--A-------U----A---G---C---U-C--AGU--------CGGU----------A-GA-G--C-------A----G---G-G----G-A--------U----------U-----G--------A-----------A----------A------------A-------------U---C--C--C-CGU--------------------------------------------------G--UC-C-U--U---G-G--U---U-C-G-----AU-----------U-----C---C--G---A---G--------U--C---C--G--G-GCA-CCA
 > 2bte_B.pdb 
 GC-C--G--G---G--G-------U----G---G---C---G-G--A-AU-------GGGU----------A-GACG--C-------G----C---A-U----G-A--------C_---------A-----U--------C-----------A----------U------------G-------------U---G--C--G-CAA--------------------------------------------------G-CGU-G-C--G---G-G--U---U-C-A-----AG-----------U-----C---C--C---G---C--------C--C---C--C--G-GCA-CCA"""
-        ali = Alignment(ali_string)
+        ali = read_alignment(ali_string)
         t = load_template(RNA_2BTE,'B')
         m = create_model(t,ali,'B')
        
@@ -636,7 +636,7 @@ GC-C--G--G---G--G-------U----G---G---C---G-G--A-AU-------GGGU----------A-GACG--C
 UC-C--G--U---G--A-------U----A---G---U---U-P--AAD---------GGD---------CA-GA-A--U-------G----G---G-C----G-C--------P----------U-----G--------U-----------C----------K------------C-------------G---U--G--C-CAG--------------------------------------------------A---U-?-G--G---G-G--T   ---P-C-A-----AU-----------U-----C---C--C---C---G--------U--C---G--C--G-GAG-C--
 > 1ehd_B.pdb 
 -G-G--G--G---U--A-------U----C---G---C---C-A--AGC---------GGU----------A-AG-G--C-------A----C---C-G----G-A--------U----------U-----C--------U-----------G----------A------------U-------------U---C--C--G-G-A--------------------------------------------------G--GU-C-G--A---G-G--U   ---U-C-G-----AA-----------U-----C---C--U---C---G--------U--A---C--C--C-CAG-CCA"""
-        ali = Alignment(ali_string)
+        ali = read_alignment(ali_string)
         t = load_template(RNA_1EXD,'B')
         m = create_model(t,ali,'B')
 
@@ -646,7 +646,7 @@ UC-C--G--U---G--A-------U----A---G---U---U-P--AAD---------GGD---------CA-GA-A--U
 GC-G--G--A---U--U-------U----A---L---C---U-C--AGD--------DGGG----------A-GA-G--C-------R----C---C-A----G-A--------B----------U-----#--------A-----------A----------Y------------A-------------P---?--U--G-GAG--------------------------------------------------7--UC-?-U--G---U-G--T   ---P-C-G-----"U-----------C-----C---A--C---A---G--------A--A---U--U--C-GCA-CCA
 > 1efw_D.pdb
 GG-A--G--C---G--G-------4----A---G---U---U-C--AGD--------CGGD---------DA-GA-A--U-------A----C---C-U----G-C--------C----------U-----Q--------U-----------C----------/------------C-------------G---C--A--G-GGG--------------------------------------------------7--UC-G-C--G---G-G--018U---P-C-G-----AG-----------U-----C---C--C---G---P--------C--C---G--U--U-CC-----"""
-        ali = Alignment(ali_string)
+        ali = read_alignment(ali_string)
         t = load_template(RNA_1EFW,'D')
         m = create_model(t,ali,'D') 
         if os.access(OUTPUT,os.F_OK): os.remove(OUTPUT)

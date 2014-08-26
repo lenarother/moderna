@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 #
-# ModernaAlignment
+# ModelingRecipe
 #
-# Class Alignment - parses alignment from fasta file and returns list of AlignmentPosition instances.
+# ModelingRecipe sorts alignment positions into different boxes (1 box == 1 operation, e.g. copying residues)
 # 
 # http://iimcb.genesilico.pl/moderna/
 #
@@ -15,25 +15,37 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 import os
-from moderna.Constants import STANDARD_BASES
-from moderna.util.Errors import AlignmentError
-from RNAAlignment import RNAAlignmentParser, DEFAULT_SHRINK
-from moderna.util.LogFile import log
+
+from sequence.RNAAlignment import RNAAlignmentParser, DEFAULT_SHRINK
+from Constants import STANDARD_BASES
+from util.Errors import AlignmentError
+from util.LogFile import log
+
 
 MODES = ['has_gap', 'is_mismatch', 'has_template_gap', \
     'has_target_gap', 'is_unidentified']
 
-class AlignmentBox:
-    pass
-    #TODO: use this or not?
 
-class Alignment(object):
-    #TODO: get rid of the Decorator pattern
+class ModelingRecipe(object):
     """
-    Deals with alignment in fasta format.
-    
-    Implements the Decorator pattern (decorates RNAAlignment).
-    
+    """
+    def __init__(self):
+        self.copy = []
+        self.copy_backbone = []
+        self.exchange = []
+        self.remove_modifications = [] 
+        self.add_modifications = []
+        self.add_fragment = []
+        self.difficult = [] # ??? report that an user should see this
+        self.add_fragment_5p = []
+        self.add_fragment_3p = []
+
+        # MR: PROPOSAL: make orer of modeling_tasks flexible.
+        #self.order = {'copy_backbone': 1, ...}
+        # def set_order
+
+class RecipeMaker(object):
+    """
     All AlignmentPosition instances from an alignment are packed into boxes 
     which represent tasks for modeling.
     There are fallowing boxes:
@@ -46,30 +58,10 @@ class Alignment(object):
     gap that doesn't have any other gap in target or template in distance less than 2
     - difficult ---> gaps different than above  
     """
-    def __init__(self, data, shrink=DEFAULT_SHRINK):
-        self.alignment = None
-        parser = RNAAlignmentParser()
-        if os.access(data, os.F_OK):
-            self.alignment = parser.get_alignment_from_file(data, shrink)
-        elif data.startswith('>'):
-            self.alignment = parser.get_alignment(data, shrink)
-        else:
-            raise AlignmentError('Alignment not in FASTA format or file does not exist: %s'%data)
-        log.write_message('Alignment loaded from %s:%s'%(data, str(self)))
-
-        # BOXES
-        self.copy = []
-        self.copy_backbone = []
-        self.exchange = []
-        self.remove_modifications = [] 
-        self.add_modifications = []
-        self.add_fragment = []
-        self.difficult = [] # ??? report that an user should see this
-        self.add_fragment_5p = []
-        self.add_fragment_3p = []
+    def __init__(self, alignment):
+        self.recipe = ModelingRecipe()
+        self.alignment = alignment
         self.set_alignment_properties()
-        #TODO: use subclasses for modeling tasks?
-
 
     def get_differences (self, mode='is_different'):
         """
@@ -96,33 +88,29 @@ class Alignment(object):
             return differences
         raise AlignmentError("Bad mode type. Should be one of %s."%str(MODES))
         
-    def remove_ap_from_box(self, apos, copy_box=True, copy_bb_box=True, \
-                           exchange_box=True, add_m_box=True, rm_m_box=True, \
-                           add_box=False, add5_box=False, add3_box=False, \
-                           difficult_box=True):
-        #TODO: change definition
+    def remove_ap_from_box(self, apos):
         """
         Removes given AlignmentPosition from given boxes.
         By defult removes apos from all boxes besides add_fragment ons.
         """
-        if copy_box and apos in self.copy: 
-            self.copy.remove(apos)
-        if copy_bb_box and apos in self.copy_backbone: 
-            self.copy_backbone.remove(apos)
-        if exchange_box and apos in self.exchange: 
-            self.exchange.remove(apos)
-        if add_m_box and apos in self.add_modifications: 
-            self.add_modifications.remove(apos)
-        if rm_m_box and apos in self.remove_modifications: 
-            self.remove_modifications.remove(apos)
-        if add_box and apos in self.add_fragment: 
-            self.add_fragment.remove(apos)
-        if add5_box and apos in self.add_fragment_5p: 
-            self.add_fragment_5p.remove(apos)
-        if add3_box and apos in self.add_fragment_3p: 
-            self.add_fragment_3p.remove(apos)
-        if difficult_box and apos in self.difficult: 
-            self.difficult.remove(apos)
+        if apos in self.recipe.copy:
+            self.recipe.copy.remove(apos)
+        if apos in self.recipe.copy_backbone:
+            self.recipe.copy_backbone.remove(apos)
+        if apos in self.recipe.exchange:
+            self.recipe.exchange.remove(apos)
+        if apos in self.recipe.add_modifications:
+            self.recipe.add_modifications.remove(apos)
+        if apos in self.recipe.remove_modifications:
+            self.recipe.remove_modifications.remove(apos)
+        if apos in self.recipe.add_fragment:
+            self.recipe.add_fragment.remove(apos)
+        if apos in self.recipe.add_fragment_5p:
+            self.recipe.add_fragment_5p.remove(apos)
+        if apos in self.recipe.add_fragment_3p:
+            self.recipe.add_fragment_3p.remove(apos)
+        if apos in self.recipe.difficult:
+            self.recipe.difficult.remove(apos)
         #TODO is this used?
 
     def segregate_gaps(self, gaps_devided):
@@ -135,55 +123,55 @@ class Alignment(object):
             if gap[0].alignment_position == 1:
                 # gap at beginning of alignment
                 if gap[0].target_letter: 
-                    self.add_fragment_5p.append(gap)
+                    self.recipe.add_fragment_5p.append(gap)
 
             elif gap[0].alignment_position == 2:
                 # gap at the second position in the alignment
-                ap_1before = self[gap[0].alignment_position -1]
+                ap_1before = self.alignment[gap[0].alignment_position -1]
 
                 if gap[0].target_letter and ap_1before.target_letter: 
                 # AA
                 # A-
                     self.remove_ap_from_box(ap_1before)
-                    self.add_fragment_5p.append([ap_1before]+ gap)   
+                    self.recipe.add_fragment_5p.append([ap_1before]+ gap)
 
                 elif gap[0].target_letter and ap_1before.template_letter:                       
                 # -A
                 # A-
-                    self.add_fragment_5p.append(gap)   
+                    self.recipe.add_fragment_5p.append(gap)
 
                 elif ap_1before.target_letter and ap_1before.template_letter:
                 # A-
                 # AA
                     self.remove_ap_from_box(ap_1before)
-                    self.add_fragment_5p.append([ap_1before])   
+                    self.recipe.add_fragment_5p.append([ap_1before])
 
 
             elif gap[-1].alignment_position == len(self.alignment):
                 # gap at end of alignment
                 if gap[0].target_letter: 
-                    self.add_fragment_3p.append(gap)
+                    self.recipe.add_fragment_3p.append(gap)
 
             elif gap[-1].alignment_position == len(self.alignment)-1:           
                 # gap at the second position before the end of the alignment
-                ap_1after = self.alignment[len(self)]
+                ap_1after = self.alignment[len(self.alignment)]
     
                 if gap[-1].target_letter and ap_1after.target_letter:
                 # AA
                 # -A
                     self.remove_ap_from_box(ap_1after)
-                    self.add_fragment_3p.append(gap+[ap_1after])                       
+                    self.recipe.add_fragment_3p.append(gap+[ap_1after])
 
                 elif gap[-1].target_letter and ap_1after.template_letter:
                 # A-
                 # -A
-                    self.add_fragment_3p.append(gap)    
+                    self.recipe.add_fragment_3p.append(gap)
 
                 elif ap_1after.target_letter and ap_1after.template_letter:
                 # AA
                 # -A
                     self.remove_ap_from_box(ap_1after)
-                    self.add_fragment_3p.append([ap_1after])                       
+                    self.recipe.add_fragment_3p.append([ap_1after])
 
             # REGULAR GAPS IN THE MIDDLE OF THE ALIGNMENT
             else:
@@ -195,16 +183,16 @@ class Alignment(object):
                 #if ap_1before.is_different('gap') or ap_2before.is_different('gap') \
                 #or ap_1after.is_different('gap') or ap_2after.is_different('gap'):
                 if ap_1before.has_gap() or ap_1after.has_gap():
-                    self.difficult.append(gap)
+                    self.recipe.difficult.append(gap)
                     #self.difficult.append(gap)
                     # MM CHANGES:
                 elif  ap_2before.has_gap() or ap_2after.has_gap():
-                    self.add_fragment.append([ap_1before] + gap + [ap_1after])
+                    self.recipe.add_fragment.append([ap_1before] + gap + [ap_1after])
                     #TODO: too long gaps should remain difficult
                     #TODO: gaps close to each other should be inserted,
                     #      but with one base less cut on each side.
                     #      --> also 
-                else: self.add_fragment.append([ap_2before, ap_1before] + gap + [ap_1after, ap_2after])
+                else: self.recipe.add_fragment.append([ap_2before, ap_1before] + gap + [ap_1after, ap_2after])
       
 
     def set_add_fragment_property(self, mode='has_template_gap'):
@@ -240,54 +228,13 @@ class Alignment(object):
         Fill in alignment 'boxes'.
         See class description.
         """
-        self.copy = self.alignment.get_identical_positions()
-        self.copy_backbone = self.get_differences('is_unidentified')
+        self.recipe.copy = self.alignment.get_identical_positions()
+        self.recipe.copy_backbone = self.get_differences('is_unidentified')
         
         differences = self.get_differences('is_mismatch')
-        self.exchange = [ap for ap in differences if ap.target_letter.long_abbrev in STANDARD_BASES and ap.template_letter.long_abbrev in STANDARD_BASES]
-        self.add_modifications = [ap for ap in differences if ap.target_letter.long_abbrev not in STANDARD_BASES]
-        self.remove_modifications = [ap for ap in differences if ap.target_letter.long_abbrev in STANDARD_BASES and ap.template_letter.long_abbrev not in STANDARD_BASES]
+        self.recipe.exchange = [ap for ap in differences if ap.target_letter.long_abbrev in STANDARD_BASES and ap.template_letter.long_abbrev in STANDARD_BASES]
+        self.recipe.add_modifications = [ap for ap in differences if ap.target_letter.long_abbrev not in STANDARD_BASES]
+        self.recipe.remove_modifications = [ap for ap in differences if ap.target_letter.long_abbrev in STANDARD_BASES and ap.template_letter.long_abbrev not in STANDARD_BASES]
 
         self.set_add_fragment_property('has_template_gap')
         self.set_add_fragment_property('has_target_gap')
-
-    #
-    # Implementing the Decorator Pattern
-    #
-    # compatibility functions exposing self.alignment to the rest of ModeRNA
-    #
-    #TODO: get rid of these and use some compositional pattern.
-
-    def __getattribute__(self, attr):
-        try:
-            return object.__getattribute__(self, attr)
-        except TypeError:
-            return self.alignment.__getattribute__(attr)
-        except AttributeError:
-            return self.alignment.__getattribute__(attr)
-
-    def _get_aligned_sequences(self):
-        return self.alignment.aligned_sequences
-        #KR: properties + decorator class sucks
-        #TODO: improve this
-        
-    def set_aligned_sequences(self, seq1, seq2):
-        self.alignment.set_aligned_sequences(seq1, seq2)
-        self.set_alignment_properties()
-            
-    aligned_sequences = property(_get_aligned_sequences)
-
-    def __len__(self):
-        return len(self.alignment)
-    
-    def __iter__(self):
-        return self.alignment.__iter__()
-        
-    def __getitem__(self, args):
-        return self.alignment.__getitem__(args)
-        
-    def __str__(self):
-        return str(self.alignment)
-
-    def __repr__(self):
-        return str(self.alignment)

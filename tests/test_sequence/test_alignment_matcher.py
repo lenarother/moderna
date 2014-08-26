@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from moderna.sequence.AlignmentMatcher import AlignmentMatcher
-from moderna.sequence.ModernaAlignment import Alignment
+from moderna.sequence.RNAAlignment import read_alignment
 from moderna.sequence.ModernaSequence import Sequence
 from tests.test_data import *
 from unittest import TestCase, main
@@ -9,7 +9,7 @@ from unittest import TestCase, main
 class AlignmentMatcherTests(TestCase):
     
     def setUp(self):
-        self.ali = Alignment(MINI_ALIGNMENT)
+        self.ali = read_alignment(MINI_ALIGNMENT)
         self.template_seq = Sequence("GCGGAUUUALCUCAG")
         self.target_seq = Sequence("ACUGUGAYUA[UACCU#PG")
     
@@ -60,7 +60,7 @@ class AlignmentMatcherTests(TestCase):
                                                                             
     def test_fix_example(self):
         """Real-world example from Irina"""
-        ali = Alignment(""">1EIY:C|PDBID|CHAIN|SEQUENCE
+        ali = read_alignment(""">1EIY:C|PDBID|CHAIN|SEQUENCE
 GCCGAGGUAGCUCAGUUGGUAGAGCAUGCGACUGAAAAUCGCAGUGUCCGCGGUUCGAUUCCGCGCCUCGGCACCA
 >1EHZ:A|PDBID|CHAIN|SEQUENCE
 GCGGAUUUAGCUCAGUUGGGAGAGCGCCAGACUGAAGAUCUGGAGGUCCUGUGUUCGAUCCACAGAAUUCGCACCA""")
@@ -72,7 +72,7 @@ GCGGAUUUAGCUCAGUUGGGAGAGCGCCAGACUGAAGAUCUGGAGGUCCUGUGUUCGAUCCACAGAAUUCGCACCA""")
 
     def test_fix_alignment_with_gap(self):
         """Real-world exaple from nettab - 1qf6 modeling on 1c0a"""
-        ali = Alignment(""">1QF6
+        ali = read_alignment(""">1QF6
 DDGGD-AGAGAAA
 >1C0A
 UCGGUUAGAA---""")
