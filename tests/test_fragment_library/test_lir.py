@@ -15,7 +15,7 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
-from moderna.LIR import LirRecord,Lir
+from moderna.fragment_library.LIR import LirRecord,Lir
 from moderna.ModernaStructure import ModernaStructure
 from moderna.sequence.ModernaSequence import Sequence
 from test_data import *

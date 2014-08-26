@@ -15,22 +15,22 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
-from moderna.LIR import LirRecord
+from moderna.fragment_library.LIR import LirRecord
 from moderna.ModernaStructure import ModernaStructure
 from moderna.ModernaFragment import ModernaFragment
 from moderna.sequence.ModernaSequence import Sequence
-from moderna.SearchLIR import FragmentFinder, FragmentCandidates, LirQuery, LirHit, LirScoringOption
+from moderna.fragment_library.SearchLIR import FragmentFinder, FragmentCandidates, LirQuery, LirHit, LirScoringOption
 from moderna import load_model, fix_backbone, find_fragment
 from test_data import *
 import os
 from math import pi,radians
 
-FRAGMENT_DB = 'test_data/other/LIR_test_db'
-TEST_LIR_PATH = 'test_data/lir_test_files/'
+FRAGMENT_DB = TEST_DATA_PATH + 'other/LIR_test_db'
+TEST_LIR_PATH = TEST_DATA_PATH + 'lir_test_files/'
 
 class FragmentFinderTests(TestCase):
     def setUp(self):
-        self.struc = ModernaStructure('file',MINI_TEMPLATE)
+        self.struc = ModernaStructure('file', MINI_TEMPLATE)
         
     def tearDown(self):
         self.struc = None
@@ -127,15 +127,15 @@ class FragmentCandidatesTests(TestCase):
         
 class WriteFragmentCandidatesTests(TestCase):
     #KR: load model and candidates only once --> saves lots of time
-    m = load_model('test_data/gaps/gap7_template.pdb','D')
+    m = load_model(TEST_DATA_PATH + 'gaps/gap7_template.pdb','D')
     candidates = m.find_fragment_candidates(m['515'], m['519'],Sequence('DDG'), 10)#, lir_path='test_data/')     
     #TODO: solve path problem: RNAModel needs to know LIR db file as optional parameter
     
     def setUp(self):
         self.remove_dir()
         
-    def remove_dir(self,dirname='test_data/loop_candidates'):
-        if os.access('test_data/loop_candidates', os.F_OK):
+    def remove_dir(self,dirname=TEST_DATA_PATH + 'loop_candidates'):
+        if os.access(TEST_DATA_PATH + 'loop_candidates', os.F_OK):
             for fn in os.listdir(dirname):
                 os.remove(dirname+os.sep+fn)
             os.rmdir(dirname)
@@ -145,40 +145,40 @@ class WriteFragmentCandidatesTests(TestCase):
         
     def test_write_candidates_options_without_stems(self):
         """ Options for writing candidates should work 1. without stem residues"""
-        self.candidates.write_fragment_candidates('test_data/loop_candidates', False, False, False, True)
-        files = [fn for fn in os.listdir('test_data/loop_candidates')]
+        self.candidates.write_fragment_candidates(TEST_DATA_PATH + 'loop_candidates', False, False, False, True)
+        files = [fn for fn in os.listdir(TEST_DATA_PATH + 'loop_candidates')]
         self.assertEqual(len(files), 11)
         # check a sample for the right number of residues (3)
-        m = ModernaStructure('file', 'test_data/loop_candidates/'+files[1])
+        m = ModernaStructure('file', TEST_DATA_PATH + 'loop_candidates/'+files[1])
         self.assertEqual(len(m), 3)
         
     def test_write_candidates_options_with_stems(self):
         """ Options for writing candidates should work 2. with stem residues"""
-        self.candidates.write_fragment_candidates('test_data/loop_candidates', True, False, False, True)
-        files = [fn for fn in os.listdir('test_data/loop_candidates')]
+        self.candidates.write_fragment_candidates(TEST_DATA_PATH + 'loop_candidates', True, False, False, True)
+        files = [fn for fn in os.listdir(TEST_DATA_PATH + 'loop_candidates')]
         self.assertEqual(len(files), 11)
         # check a sample for the right number of residues (5)
-        m = ModernaStructure('file', 'test_data/loop_candidates/'+files[1])
+        m = ModernaStructure('file', TEST_DATA_PATH + 'loop_candidates/'+files[1])
         self.assertEqual(len(m), 5)
         
     def test_write_candidates_options_with_model(self):
         """ Options for writing candidates should work 3. without model"""
-        self.candidates.write_fragment_candidates('test_data/loop_candidates', False, True, False, True)
-        files = [fn for fn in os.listdir('test_data/loop_candidates')]
+        self.candidates.write_fragment_candidates(TEST_DATA_PATH + 'loop_candidates', False, True, False, True)
+        files = [fn for fn in os.listdir(TEST_DATA_PATH + 'loop_candidates')]
         self.assertEqual(len(files), 11)
-        m = ModernaStructure('file', 'test_data/loop_candidates/'+files[1])
+        m = ModernaStructure('file', TEST_DATA_PATH + 'loop_candidates/'+files[1])
         self.assertEqual(len(m), 10)
         
     def _test_write_candidates_with_right_seq(self):
         """All written candidates should have the right sequence."""
         #TODO: reactivate tet for BBBuilder improvement
-        self.candidates.write_fragment_candidates('test_data/loop_candidates', True, True, False,  False)
+        self.candidates.write_fragment_candidates(TEST_DATA_PATH + 'loop_candidates', True, True, False,  False)
         i = 0 
-        for fn in os.listdir('test_data/loop_candidates'):
+        for fn in os.listdir(TEST_DATA_PATH + 'loop_candidates'):
             if fn.endswith('.log'): continue
             i += 1
             #if i>3: continue
-            m = load_model('test_data/loop_candidates/'+fn)
+            m = load_model(TEST_DATA_PATH + 'loop_candidates/'+fn)
             self.assertEqual(m.get_sequence(), Sequence('AGDDGGUUAG') )
 
 

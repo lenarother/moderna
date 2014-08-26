@@ -15,18 +15,18 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import TestCase, main
-from moderna.LIRdb import MakeLirFile
-from moderna.LIR import LirRecord
-from moderna.SearchLIR import FragmentCandidates, LirQuery, FragmentFinder
+from moderna.fragment_library.LIRdb import MakeLirFile
+from moderna.fragment_library.LIR import LirRecord
+from moderna.fragment_library.SearchLIR import FragmentCandidates, LirQuery, FragmentFinder
 from moderna.ModernaStructure import ModernaStructure
 from moderna.sequence.ModernaSequence import Sequence
 from test_data import *
 import os
 
-LIR_TEST_FILE = 'test_data/lir_test_db.out'
-LIR_STRUCTURES_DIR='test_data/lir_test_files/'
+LIR_TEST_FILE = TEST_DATA_PATH + 'lir_test_db.out'
+LIR_STRUCTURES_DIR= TEST_DATA_PATH + 'lir_test_files/'
 STRUC = 'pr0047Hc_with_gap_and_N.pdb'
-CHAIN_LIST = 'test_data/lir_chains.txt'
+CHAIN_LIST = TEST_DATA_PATH + 'lir_chains.txt'
 # has a gap between resi 17 and 19
 # has a N residue at resi 24
 

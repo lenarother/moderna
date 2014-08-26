@@ -17,7 +17,7 @@ __status__ = "Production"
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure, ModernaResidue
 from moderna.sequence.ModernaSequence import Sequence
-from moderna.StructureLibrary import StructureLibrary
+from moderna.fragment_library.StructureLibrary import StructureLibrary
 from moderna.Constants import LIR_DIRECTORY_PATH
 from test_data import *
 

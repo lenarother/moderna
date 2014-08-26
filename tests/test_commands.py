@@ -26,6 +26,7 @@ from Bio.PDB import PDBParser
 from moderna.analyze.GeometryAnalyzer import GeometryAnalyzer
 from moderna.Constants import HELIX
 from test_data import *
+import re
 
 OUTPUT = 'test_data/test_model_result.ent'
 

@@ -43,8 +43,8 @@ from ModernaStructure import ModernaStructure
 from ModernaFragment import ModernaFragment53, ModernaFragment5, ModernaFragment3
 from SecstrucFragment import ModernaFragmentStrand, ModernaFragment2D
 from Helix import HelixBuilder, HelixFragmentBuilder
-from LIR import Lir
-from SearchLIR import *
+from fragment_library.LIR import Lir
+from fragment_library.SearchLIR import *
 from analyze.ClashRecognizer import ClashRecognizer
 from analyze.GeometryAnalyzer import GeometryAnalyzer
 from analyze.StackingCalculator import StackingCalculator
@@ -148,7 +148,7 @@ Writes the result of the analysis to log file or to an output file when specifie
     * Name of an output file
     """
     struc = validate_structure(struc)
-    if file_name: file_name = validate_file_name(file_name)
+    if file_name: file_name = validate_filename(file_name)
     
     analyzer = GeometryAnalyzer(struc)
     analyzer.analyze()

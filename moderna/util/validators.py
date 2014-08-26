@@ -20,7 +20,7 @@ from moderna.ModernaStructure import ModernaStructure
 from moderna.Template import Template
 from moderna.RNAModel import RnaModel
 from moderna.ModernaFragment import ModernaFragment
-from moderna.SearchLIR import LirHit, FragmentCandidates
+from moderna.fragment_library.SearchLIR import LirHit, FragmentCandidates
 from moderna.ModernaResidue import ModernaResidue
 from moderna.sequence.ModernaAlignment import Alignment
 from moderna.sequence.ModernaSequence import Sequence

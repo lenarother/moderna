@@ -19,17 +19,17 @@ __status__ = "Production"
 
 from moderna.Constants import DATA_PATH
 from moderna.ModernaStructure import *
-from moderna.LIR import LIR
-from moderna.SearchLIR import *
+from moderna.fragment_library.LIR import LIR
+from moderna.fragment_library.SearchLIR import *
 from moderna.RNAModel import RNAModel 
-
+from test_data import TEST_DATA_PATH
 import cProfile
 
 NUMBER_OF_LOOP_CANDIDATES = 20
 
 def check_lir():
     """Searches for fragments fitting into 1ehz."""
-    st=ModernaStructure('file','test_data/pdb1ehz.ent')
+    st=ModernaStructure('file',TEST_DATA_PATH + 'pdb1ehz.ent')
 
     l=LIR()
     l.set_residues(st[15], st[20])
@@ -38,7 +38,7 @@ def check_lir():
 
     record=LIR_Record(
         loop_length = 4,
-        structure = 'test_data/pdb1ehz.ent',
+        structure = TEST_DATA_PATH + 'pdb1ehz.ent',
         chain = 'A',
         preceding_resi = 15,
         sequence = ['G','A','U','U'],
@@ -49,7 +49,7 @@ def check_lir():
         dihedral = l.get_dihedral()
         )
                         
-    s=LoopSearch(record,'/home/lenam/repos/moderna/test/test_data/LIR_test')
+    s=LoopSearch(record,TEST_DATA_PATH + 'LIR_test')
     # loops = s.get_loop_candidates(NUMBER_OF_LOOP_CANDIDATES)
     loops = s.get_loop_candidates(NUMBER_OF_LOOP_CANDIDATES)
 
@@ -58,7 +58,7 @@ def check_lir():
 
 
 def check_insert_loop():
-    m = RNAModel(model_chain_name='A', data_type='file', data='test_data/pdb1ehz.ent')
+    m = RNAModel(model_chain_name='A', data_type='file', data=TEST_DATA_PATH + 'pdb1ehz.ent')
     m.sarch_loop_fragment(m[3], m[8], sequence=['A','A','A','A'], number_of_candidates=5)
 
 
