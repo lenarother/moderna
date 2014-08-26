@@ -34,25 +34,10 @@ from util.LogFile import log
 
 class ModernaStructure(RNAChain):
     """RNAChain extended by some editing functionality"""
-    
-    def remove_residues_from_range(self, start_identifier=None, stop_identifier=None):
-        """
-        Removes residues in the given range.
 
-        Arguments:
-        * start identifier - residue with this identifier is retained
-        * stop identifier - residue with this identifier is retained
-        """
-        removed_residues_identifiers = self.find_residues_in_range(start_identifier,  stop_identifier)
-        for identifier in removed_residues_identifiers:
-            self.remove_residue(identifier)
-        return removed_residues_identifiers
-
-    def find_residues_in_range(self,  start_id=None,  stop_id=None):
+    def find_residues_in_range(self, start_id=None, stop_id=None):
         """Returns identifiers of residues in the given range"""
-        #residues = self._get_residues_in_region(start_id, stop_id)
-        #return [resi.identifier for resi in residues[1:-1]]
-        #KR: doesnt work because needs to be permissive about nonexisting residues.
+        #KR: doesnt work because needs to be permissive about non-existing residues.
         residues_in_range = []
         if not start_id and not stop_id:
             raise ModernaStructureError('Could not find residues in range. No range given')
@@ -70,7 +55,7 @@ class ModernaStructure(RNAChain):
                 in_range = True
         return residues_in_range
     
-    def find_residues_not_in_range(self,  start_identifier=None,  stop_identifier=None):
+    def find_residues_not_in_range(self, start_identifier=None, stop_identifier=None):
         """Returns list of residues except these in given range"""
         residues = []
         residues_in_range = self.find_residues_in_range(start_identifier, stop_identifier)
@@ -304,44 +289,3 @@ Arguments:
                     self.fix_backbone_between_resis(last, resi)
                 last = resi
         log.write_message('Checking and repairing backbones finished.')
-
-#
-# EXPERIMENTAL CODE TO IDENTIFY RNA CHAINS
-# 
-
-#TODO: test
-def remove_unknown_resi(struct):
-    """
-Removes residues identified as Unknown (UNK), e.g. water, ions, etc.
-struct: ModernaStructure object
-    """
-    for resi in struct:
-        # 'd' stands for deoxyribonuncleotide
-        if resi.id[0] == 'H_UNK'\
-            or resi.long_abbrev.find('d') == 0 \
-            or resi.long_abbrev == 'HOH':
-            # resi.id[1] contains residue number (int) and...
-            # ...resi.id[2] contains insertion code e.g. 'A'...
-            # ...but in most cases there's just one space...
-            # ...so this is why use .strip()
-            struct.remove_residue(resi.identifier)
-    return struct
-    
-def find_rna(struct):
-    """
-Returns a list of chain objects that contain RNA from a 
-Bio.PDB.Structure object
-    """
-    #TODO: write tests
-    result = []
-    model = struct.child_list[0]
-    for chain in model.child_list:
-        struc = ModernaStructure('chain', chain, chain.id)
-        rna = False
-        for resi in struc:
-            if resi.short_abbrev != '.' and not resi.modified:
-                rna = True
-                break
-        if rna:
-            result.append(struc)
-    return result

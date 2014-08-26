@@ -95,6 +95,7 @@ RNA_TWO_PIECES = TEST_DATA_PATH+'rna_structures/rna_2pieces.ent'
 
 # RNA with a different kind of backbone break in each residue.
 BROKEN_BACKBONE = TEST_DATA_PATH+'rna_structures/broken_backbones.ent'
+BB_MESSED_UP = TEST_DATA_PATH+'rna_structures/bb_messed_up.pdb'
 
 # RNA with a clash
 CLASHING_STRUCTURE = TEST_DATA_PATH+'clash/clash.ent'

@@ -25,6 +25,7 @@ __status__ = "alpha"
 
 
 from HBondCalculator import HBondCalculator
+from ChainConnectivity import is_ribose_complete
 from numpy import array
 from Bio.PDB.Atom import Vector
 
@@ -102,8 +103,8 @@ def validate_pair(resi1, resi2):
     """Checks if the two pairs are possibly paired."""
     if resi1.short_abbrev =='.' \
         or resi2.short_abbrev =='.'\
-        or not resi1.is_ribose_complete() \
-        or not resi2.is_ribose_complete():
+        or not is_ribose_complete(resi1) \
+        or not is_ribose_complete(resi2):
             return False
     # skip residue pairs far away from each other
     nn_dist = resi1['N*'] - resi2['N*']

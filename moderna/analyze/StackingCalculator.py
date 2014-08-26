@@ -221,12 +221,3 @@ class StackingCalculator:
                 if stacking:
                     yield stacking
 
-
-if __name__ == '__main__':
-    print 'usage: python StackingCalculator.py <pdbfile> <chain>'
-    scalc = StackingCalculator()
-    if len(sys.argv)>2:
-        struc = load_model(sys.argv[1], sys.argv[2])
-        for stacking in scalc.get_stacking(struc):
-            print stacking.resi1.identifier, stacking.resi2.identifier, stacking.type
-            
