@@ -14,19 +14,17 @@ __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
-from Bio.PDB import PDBParser
-from sequence.ModernaAlphabet import alphabet
-from sequence.ModernaSequence import Sequence
 from ModernaStructure import ModernaStructure
+from ModernaResidue import ModernaResidue
 from ModelingRecipe import RecipeMaker
 from Template import Template
-from ModernaFragment import ModernaFragment53, ModernaFragment5, \
-    ModernaFragment3, keep_first, keep_last
+from ModernaFragment import ModernaFragment5, ModernaFragment3, keep_first, keep_last
 from FragmentInsertion import FragmentInserter
-from ModernaResidue import ModernaResidue
+from util.Errors import RnaModelError
 from ModernaSuperimposer import ModernaSuperimposer
-from LIR import *
-from SearchLIR import FragmentFinder,  FragmentCandidates,  LirScoringOption, LirQuery,  LirHit
+from sequence.ModernaSequence import Sequence
+from fragment_library.LIR import *
+from fragment_library.SearchLIR import FragmentFinder
 from Constants import PATH_TO_LIR_STRUCTURES, B_FACTOR_COPY, SINGLE_STRAND,  NUMBER_OF_FRAGMENT_CANDIDATES,  BACKBONE_ATOMS
 from util.LogFile import log
 

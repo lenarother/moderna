@@ -17,13 +17,13 @@ __status__ = "Production"
 
 import sys, re, os, os.path
 
-from ModernaStructure import ModernaStructure
-from sequence.ModernaSequence import Sequence
+from moderna.ModernaStructure import ModernaStructure
+from moderna.sequence.ModernaSequence import Sequence
 
 from LIR import Lir, LirRecord
-from Constants import PATH_TO_LIR_STRUCTURES, PATH_TO_LIR_LIST, ANY_RESIDUE,  \
+from moderna.Constants import PATH_TO_LIR_STRUCTURES, PATH_TO_LIR_LIST, ANY_RESIDUE,  \
     UNKNOWN_RESIDUE_SHORT, MAX_FRAGMENT_LENGTH
-from util.LogFile import log
+from moderna.util.LogFile import log
 
 # constants to create LIR test DB.
 #PATH_TO_LIR_STRUCTURES = '../test/test_data/lir_test_files/'

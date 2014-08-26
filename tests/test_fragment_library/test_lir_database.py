@@ -10,16 +10,14 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import TestCase, main
-from moderna.ModernaStructure import ModernaStructure
 from moderna.ModernaFragment import ModernaFragment53
-from moderna.StructureLibrary import StructureLibrary
-from moderna.ModernaSequence import Sequence
+from moderna.fragment_library.StructureLibrary import StructureLibrary
+from moderna.sequence.ModernaSequence import Sequence
 from moderna.Constants import LIR_DATABASE_PATH, PATH_TO_LIR_STRUCTURES
 from test_data import *
 

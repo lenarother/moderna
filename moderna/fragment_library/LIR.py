@@ -10,20 +10,15 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 
-import os, re
 import math
 from math import pi
 from numpy import array
-
-from Bio.PDB import PDBParser
-from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
-from ModernaStructure import *
+from Bio.PDB.Vector import calc_dihedral
 
 # In the production version, the code needs to operate
 # on objects rather than files. We need to keep this
@@ -86,7 +81,7 @@ sequence       -  Structure object
     def __init__(self, fr_length=None, structure=None, chain=None, preceding_resi=None, following_resi=None, \
                  sequence=None, sequence_anchor=None, secstruc=None, x=None, y=None, dist_anchor=None, beta=None, gamma=None, omega5=None, omega3=None, \
                  P_dist=None, O5p_dist=None, C5p_dist=None, C4p_dist=None, C3p_dist=None, O3p_dist=None, O2p_dist=None, C1p_dist=None, N_dist=None):
-        #TODO: are the None values necessary?
+        #TODO: dictionary
         self.fr_length = fr_length
         self.structure = structure
         self.chain = chain

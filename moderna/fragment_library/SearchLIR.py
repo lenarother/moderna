@@ -14,26 +14,26 @@ __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
-import re, os, math, pdb
+import os
 from math import pi
 import csv
 from numpy import array
 from LIR import Lir, LirRecord
-from sequence.ModernaAlphabet import alphabet
-from ModernaStructure import ModernaStructure
-from ModernaFragment import ModernaFragment53, keep_first_last
-from FragmentInsertion import FragmentInserter
-from ModernaResidue import ModernaResidue
-from sequence.ModernaSequence import Sequence
-from analyze.HBondCalculator import HBondCalculator
+from moderna.sequence.ModernaAlphabet import alphabet
+from moderna.ModernaStructure import ModernaStructure
+from moderna.ModernaFragment import ModernaFragment53, keep_first_last
+from moderna.FragmentInsertion import FragmentInserter
+from moderna.ModernaResidue import ModernaResidue
+from moderna.sequence.ModernaSequence import Sequence
+from moderna.analyze.HBondCalculator import HBondCalculator
 from StructureLibrary import library 
-from util.Errors import LirError, SearchLirError,  LirCandidatesError
+from moderna.util.Errors import LirError, SearchLirError,  LirCandidatesError
 
-from Constants import DATA_PATH, MODULE_PATH, PATH_TO_LIR_STRUCTURES, \
+from moderna.Constants import DATA_PATH, MODULE_PATH, PATH_TO_LIR_STRUCTURES, \
                 LIR_DATABASE_PATH, LIR_DIRECTORY_PATH, MAX_DIST_STEM, \
                 NUMBER_OF_FRAGMENT_CANDIDATES, PI2
 
-from util.LogFile import log
+from moderna.util.LogFile import log
 
 struc_cache = {}
 

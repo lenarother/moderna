@@ -21,7 +21,7 @@ __status__ = "Production"
 
 from unittest import TestCase, main
 from moderna.ModernaStructure import ModernaStructure
-from moderna.SearchLIR import FragmentFinder
+from moderna.fragment_library.SearchLIR import FragmentFinder
 from moderna.sequence.ModernaSequence import Sequence
 from random import random
 from moderna.Constants import DATA_PATH, PATH_TO_LIR_STRUCTURES, SINGLE_STRAND
