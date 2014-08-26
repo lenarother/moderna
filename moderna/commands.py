@@ -32,7 +32,7 @@ __status__ = "Production"
 
 """
 
-from LogFile import log
+from util.LogFile import log
 from RNAModel import RnaModel
 from Template import Template
 from sequence.ModernaAlphabet import Alphabet
@@ -52,15 +52,12 @@ from builder.BackboneBuilder import BackboneBuilder
 from CheckPdb import PdbController
 from sequence.AlignmentMatcher import AlignmentMatcher
 
-from Errors import ModernaStructureError, ModernaSuperimposerError, \
-            ModernaResidueError, ExchangeBaseError, \
-            RemoveModificationError, AddModificationError,\
-            ModernaError
+from util.Errors import ModernaError
 
-from Constants import DATA_PATH,  NUMBER_OF_FRAGMENT_CANDIDATES
+from Constants import NUMBER_OF_FRAGMENT_CANDIDATES
 
-from decorators import toplevel_function
-from validators import validate_structure, validate_template, validate_model, \
+from util.decorators import toplevel_function
+from util.validators import validate_structure, validate_template, validate_model, \
     validate_alignment, validate_seq, validate_resnum, validate_resnum_list, \
     validate_resi, validate_fragment, validate_frag_candidate_list,  \
     validate_resi_list, validate_filename, validate_path, \

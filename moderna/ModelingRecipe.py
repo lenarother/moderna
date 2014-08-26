@@ -15,10 +15,12 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 import os
-from Constants import STANDARD_BASES
-from Errors import AlignmentError
+
 from sequence.RNAAlignment import RNAAlignmentParser, DEFAULT_SHRINK
-from LogFile import log
+from Constants import STANDARD_BASES
+from util.Errors import AlignmentError
+from util.LogFile import log
+
 
 MODES = ['has_gap', 'is_mismatch', 'has_template_gap', \
     'has_target_gap', 'is_unidentified']

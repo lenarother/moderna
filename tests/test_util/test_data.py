@@ -95,7 +95,6 @@ RNA_TWO_PIECES = TEST_DATA_PATH+'rna_structures/rna_2pieces.ent'
 
 # RNA with a different kind of backbone break in each residue.
 BROKEN_BACKBONE = TEST_DATA_PATH+'rna_structures/broken_backbones.ent'
-BB_MESSED_UP = TEST_DATA_PATH+'rna_structures/bb_messed_up.pdb'
 
 # RNA with a clash
 CLASHING_STRUCTURE = TEST_DATA_PATH+'clash/clash.ent'
@@ -146,9 +145,16 @@ PDB_UNK = TEST_DATA_PATH+ 'rna_structures/unk.pdb'
 
 
 #
-# strange PDBs for testing PdbConverter (*,HETATM itd.)
+# alignments
 #
-# example from JMB
-PDB_STRANGE = TEST_DATA_PATH+'rna_structures/hybrid2.pdb'
 
-BAD_TEMPLATE = TEST_DATA_PATH+'geometry/mini_bad_geometry.pdb'
+# 14-residue alignment with a small gap
+MINI_ALIGNMENT = """> model sequence for testing
+ACUGUGAYUA[UACCU#PG
+> excerpt of first 15 bases from 1ehz as a fictive template.
+GCGGA----UUUALCUCAG
+"""
+
+# create file for command line tests
+MINI_ALIGNMENT_FILE = TEST_DATA_PATH+'other/mini_alignment.fasta'
+open(MINI_ALIGNMENT_FILE,'w').writelines(MINI_ALIGNMENT)

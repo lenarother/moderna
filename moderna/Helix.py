@@ -22,7 +22,9 @@ from FragmentInsertion import FragmentInserter
 from sequence.ModernaSequence import Sequence
 from Renumerator import renumber_section
 from Constants import HELIX, HELIX_SUPERPOSITION, WC_BASE_PAIRS
-from Errors import ModernaFragmentError
+from util.Errors import ModernaFragmentError
+from analyze.ChainConnectivity import are_residues_connected
+
 
 class Helix(ModernaStructure):
     """
@@ -115,9 +117,9 @@ class HelixFragmentBuilder(object):
         if model:
             upper = model.find_residues_in_range(anchor5.identifier, anchor3.identifier)
             if len(upper)>0:
-                if model.are_residues_connected(anchor5, model[upper[0]]): 
+                if are_residues_connected(anchor5, model[upper[0]]):
                     upper5 = model[upper[0]]
-                if model.are_residues_connected(model[upper[-1]], anchor3): 
+                if are_residues_connected(model[upper[-1]], anchor3):
                     upper3 = model[upper[-1]]
         return upper5, upper3
 

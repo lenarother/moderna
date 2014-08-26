@@ -18,7 +18,6 @@ from moderna.RNAModel import RnaModel
 from moderna.ModernaStructure import ModernaStructure
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.FragmentInsertion import FragmentInserter
-from moderna.Errors import ModernaFragmentError
 from moderna.Constants import HELIX
 from moderna import fix_backbone
 from moderna import load_template, create_model, copy_some_residues, create_fragment, load_model
@@ -185,7 +184,6 @@ class ModernaFragmentStrandTests(TestCase):
             mf  = ModernaFragmentStrand(anchor=self.rna[num], identifier=ident, new_sequence=Sequence(seq))
             self.rna.insert_fragment(mf)
         self.rna.fix_backbone()
-        self.rna.write_pdb_file('frag.pdb')
         self.assertEqual(self.rna.get_secstruc(), '.(((((.........)))))')
         self.assertEqual(self.rna.get_sequence(), Sequence('GCGGAUUUALCUCAG_AU_CCG'))
 

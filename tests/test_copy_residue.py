@@ -18,7 +18,7 @@ from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
 from moderna.ModernaResidue import ModernaResidue
 from moderna.analyze.BaseRecognizer import BaseRecognizer
-from moderna.Errors import ModernaStructureError
+from moderna.util.Errors import ModernaStructureError
 
 from test_data import *
 

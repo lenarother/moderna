@@ -24,13 +24,6 @@ class Bond:
         self.atom1 = atom1
         self.atom2 = atom2
         self.valence = valence
-        
-    def __str__(self):
-        """Returns the valence as a symbol."""
-        if self.valence==1: 
-            return'-'
-        else:
-            return'='
 
 class Atom(dict):
     """Atom that has several default and lots of optional properties."""
@@ -123,19 +116,6 @@ class Atom(dict):
             s += "("+','.join(neighbors)+')'
         return s
 
-    def has_same_molstring(self,atom2,depth=-1):
-        """
-        Compares two atoms in whether they have the same bonding
-        scheme. The procedure compares neighbors recursively.
-        detect_bonding_schema() must have run already.
-        depth <0 means infinite depth.
-        """
-        taboo_list = [atom1,atom2]
-        m1 = self.get_molstring(taboo_list,depth)
-        m2 = atom2.get_molstring(taboo_list,depth)
-        if m1 == m2: 
-            return True
-
 
 class Molecule(list):
     """
@@ -146,18 +126,7 @@ class Molecule(list):
 
     def __init__(self):
         list.__init__(self)
-
         self.conjugated_systems = []
-
-    def __str__(self):
-        result = ""
-        for atom in self:
-            atom.detect_bonding_schema()
-            result += str(atom)+'\t'
-            for bond in atom.bonds:
-                result += str(bond) +str(bond.atom2) +' '
-            result += '\n'
-        return result
 
     def convert_pdb_atom(self, atom):
         """Returns a Atom object from a PDB.Atom object"""

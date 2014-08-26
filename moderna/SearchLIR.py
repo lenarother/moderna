@@ -18,11 +18,6 @@ import re, os, math, pdb
 from math import pi
 import csv
 from numpy import array
-from Bio.PDB import PDBParser, PDBIO 
-from Bio.PDB.Structure import Structure
-from Bio.PDB.Model import Model
-from Bio.PDB.Chain import Chain
-from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 from LIR import Lir, LirRecord
 from sequence.ModernaAlphabet import alphabet
 from ModernaStructure import ModernaStructure
@@ -32,13 +27,14 @@ from ModernaResidue import ModernaResidue
 from sequence.ModernaSequence import Sequence
 from analyze.HBondCalculator import HBondCalculator
 from StructureLibrary import library 
-from Errors import LirError, SearchLirError,  LirCandidatesError
+from util.Errors import LirError, SearchLirError,  LirCandidatesError
 
 from Constants import DATA_PATH, MODULE_PATH, PATH_TO_LIR_STRUCTURES, \
                 LIR_DATABASE_PATH, LIR_DIRECTORY_PATH, MAX_DIST_STEM, \
                 NUMBER_OF_FRAGMENT_CANDIDATES, PI2
 
-from LogFile import log
+from util.LogFile import log
+
 struc_cache = {}
 
 DIST_MASK = array([0, 1, 1, 1, 1, 0, 0, 1, 1])
@@ -54,37 +50,29 @@ class LirScoringOption(object):
         elif scoring_mode == 'advanced': self.set_advanced_scoring()
 
 
-    def set_fast_scoring(self, atom_distance = 10.0,  distance = 0.0,  good=0.0, seq_sim=0.0,  omega=0.0, secstruc=100.0):
+    def set_fast_scoring(self, atom_distance = 10.0, seq_sim=0.0, secstruc=100.0):
         # previously tried: omega 0.0
         """
         Enables to change score for goodness and sequence similarity.
         RMSD, clashes and HBonds are always 0 for fast scoring.
         """    
         self.distance = atom_distance
-        self.anchor_distance = distance
-        self.goodness = good        
         self.seq_similarity = seq_sim
-        self.omega = omega
         self.rmsd = 0
         self.clashes = 0
-        self.hbonds = 0
         self.secstruc = secstruc
     
 
-    def set_advanced_scoring(self, atom_distance = 0.0000,  distance = 0.0,  good=0.0, seq_sim=1.0, omega=0.0,  rmsd=10.0, clash=2.00, hb=0.0, secstruc=100.0):
+    def set_advanced_scoring(self, atom_distance = 0.0000, seq_sim=1.0, rmsd=10.0, clash=2.00, secstruc=100.0):
         # previously: omega 5.0, good 2.0 rms 10.0
         """
         Enables to change all scoring options
         (goodness, seqence similarity, RMSD, clashes, H bonds).
         """   
         self.distance = atom_distance  
-        self.anchor_distance = distance
-        self.goodness = good       
-        self.seq_similarity = seq_sim      
-        self.omega = omega  
-        self.rmsd = rmsd       
+        self.seq_similarity = seq_sim
+        self.rmsd = rmsd
         self.clashes = clash     
-        self.hbonds = hb
         self.secstruc = secstruc
 
 
@@ -135,13 +123,9 @@ class LirHit(LirRecord):
             P_dist, O5p_dist, C5p_dist, C4p_dist, C3p_dist, O3p_dist, O2p_dist, C1p_dist, N_dist)
         
         self.d_dist_score = 0
-        self.d_dist_anchor = 0
-        self.d_omega = 0
-        self.goodness = 0
         self.rmsd = 0
         self.seq_similarity = 0
         self.clash = 0 #score depends on the number of clashing residues
-        self.hbonds = 0
         self.score = 0
         self.d_secstruc = 0
         self.fragment_instance = None
@@ -165,67 +149,6 @@ class LirHit(LirRecord):
         """calculates square differences of all distances."""
         self.d_dist_score = sum( (self.distances*DIST_MASK - self.query.distances*DIST_MASK)**2)
 
-
-    def calculate_d_anchor_distance(self):
-        """
-        Calculates difference between anchor residues in query and anchor  residues in candidate.
-        Returns absolute value of this difference.
-        """
-        self.d_dist_anchor = abs(self.dist_anchor - self.query.dist_anchor)
-        
-    
-    def calculate_dihedrals_difference(self, dihedral1, dihedral2):
-        """
-        Calculates the difference between two dihedral angles given in radians.
-        The angles should be in the range of 0...2pi
-        """
-        # KR: does not work for negative dihedrals
-        #assert 0 <= dihedral1 <= PI2
-        #assert 0 <= dihedral2 <= PI2        
-        
-        #KR: avoided max(),min(): SPEEDUP 15%
-        max1 = dihedral1 > dihedral2 and dihedral1 or dihedral2
-        min1 = dihedral1 < dihedral2 and dihedral1 or dihedral2
-        difference_1 = max1 - min1
-        # difference_1 = (dihedral1, dihedral2) - min(dihedral1, dihedral2)
-        if dihedral1 >= pi: dihedral1 -= pi
-        else: dihedral1 += pi
-        if dihedral2 >= pi: dihedral2 -= pi
-        else: dihedral2 += pi
-        max2 = dihedral1 > dihedral2 and dihedral1 or dihedral2
-        min2 = dihedral1 < dihedral2 and dihedral1 or dihedral2
-        difference_2 = max2 - min2
-        #difference_2 = max(dihedral1, dihedral2) - min(dihedral1, dihedral2)
-        result = difference_1 < difference_2 and difference_1 or difference_2
-        return result
-        
-
-    def calculate_d_omega(self):
-        """
-        Calculates difference between torsion angles omega5 and omega3 for candidate and query.
-        omega5: O3 ---C3 --- C5 --- N1
-        omega3: P5 --- C5 --- C3 --- N1
-        """
-        self.d_omega = self.calculate_dihedrals_difference(self.omega5,  self.query.omega5) + self.calculate_dihedrals_difference(self.omega3,  self.query.omega3) 
-        #self.d_omega = abs(self.omega5 - self.query.omega5) + abs(self.omega3 - self.query.omega3)
-        #d_omega_5_1 = max(self.omega5, self.query.omega5) - min(self.omega5, self.query.omega5)
-        #f 
-        #TODO: omega is counted twice (see goodness)
-        # but the results look so good for now that we dont want to play with it.
-
-    def calculate_goodness(self):
-        """
-        query is an attribute of the fragment_search class.
-        """
-        dx = self.x-self.query.x
-        dy = self.y-self.query.y
-        dbeta = self.beta - self.query.beta
-        dgamma = self.calculate_dihedrals_difference(self.gamma, self.query.gamma)
-        domega5 = self.calculate_dihedrals_difference(self.omega5, self.query.omega5)
-        domega3 = self.calculate_dihedrals_difference(self.omega3, self.query.omega3)
-        self.goodness= dx**2 + dy**2 + 2*dbeta**2 + dgamma**2 + domega5**2 + domega3**2
-        # the higher the goodness, the worse the fit!!
-    
 
     def calculate_seq_similarity(self):
         """
@@ -284,7 +207,6 @@ class LirHit(LirRecord):
             self.fragment_instance = frag
         return self.fragment_instance
 
-
     def calculate_rmsd(self, res5=None, res3=None, seq=None):
         """
         Fragnet is superimposed acording coordinates of given anchor residues (taken from query) and RMSD is calculated.
@@ -293,7 +215,6 @@ class LirHit(LirRecord):
         self.get_fragment() 
         self.rmsd = self.fragment_instance.rmsd
         return self.rmsd
-    
 
     def find_clash(self):
         """
@@ -312,7 +233,6 @@ class LirHit(LirRecord):
         self.clash = clashes
         return clashes
     
-    
     def score_clash(self):
         """
         Finds clashes and gives score acording to number of clashes.
@@ -321,19 +241,6 @@ class LirHit(LirRecord):
         clashes = self.find_clash()
         self.clash = len(clashes)
         return self.clash
-    
-    
-    def calculate_HBonds(self):
-        """Calculates HBonds"""
-        if not self.fragment_instance:
-            self.get_fragment()
-        all_model_resi = self.query.model_instance.find_residues_not_in_range(self.query.anchor5.identifier,  self.query.anchor3.identifier)
-        HBrecognizer=HBondCalculator()
-        for fr_res in self.fragment_instance:
-            for m_res in all_model_resi:
-                HBnumber = len(HBrecognizer.calc_hbond_list(fr_res,  m_res))
-        self.HBonds = 1.0/(HBnumber+1.0)
-        return self.HBonds
     
     def check_backbone_continouity(self): 
         pass
@@ -348,37 +255,18 @@ class LirHit(LirRecord):
         - LirScoringOption instance
         """
         if scoring.distance: self.calculate_dist_score()
-        if scoring.anchor_distance:self.calculate_d_anchor_distance()
-        if scoring.omega: self.calculate_d_omega()
-        if scoring.goodness: self.calculate_goodness()
         if scoring.seq_similarity:  self.calculate_seq_similarity()
         if scoring.rmsd: self.calculate_rmsd()
         if scoring.clashes:  self.score_clash()
-        if scoring.hbonds: self.calculate_HBonds()
         if scoring.secstruc: self.match_secstruc()
         
-        self.score = scoring.distance * self.d_dist_score + scoring.anchor_distance * self.d_dist_anchor + scoring.goodness * self.goodness + scoring.seq_similarity * self.seq_similarity + \
-                            scoring.omega * self.d_omega + scoring.rmsd * self.rmsd + scoring.clashes * self.clash + scoring.hbonds * self.hbonds + \
-                            scoring.secstruc * self.d_secstruc
+        self.score = scoring.distance * self.d_dist_score + \
+                     scoring.seq_similarity * self.seq_similarity + \
+                     scoring.rmsd * self.rmsd + \
+                     scoring.clashes * self.clash + \
+                     scoring.secstruc * self.d_secstruc
     
-    
-    def write_anchors_to_separate_file(self,  file_name='LirHit'):
-        """"""
-        if not self.fragment_instance: 
-            self.get_fragment()
-        if not self.rmsd: 
-            self.fragment_instance.superimpose()   
-        
-        original_anchors = self.fragment_instance.get_original_anchor()
-        anchor_st = ModernaStructure('residues',  original_anchors,  'A')
-        anchor_st.sort_residues()
-        anchor_st.write_pdb_file(file_name.replace('.pdb', '')+'_anchor_fr.pdb')       
-        model_anchors = [self.fragment_instance.anchor5,  self.fragment_instance.anchor3]
-        anchor_m = ModernaStructure('residues',  model_anchors,  'A')
-        anchor_m.sort_residues()
-        anchor_m.write_pdb_file(file_name.replace('.pdb', '')+'_anchor_m.pdb')       
-    
-    
+
     def write_hit_structure(self,  file_name='LirHit.pdb', with_anchor_residues=False, with_model=False,  write_anchors_to_file=True):
         """
         Writes structure of hit to a pdb file.
@@ -430,21 +318,7 @@ class FragmentCandidates(object):
 
 
     def __getitem__(self, args):
-       # return self.accepted_fragment.__getitem__(args)
-        if type(args)==int:
-            if args in range(len(self.accepted_fragments)): return self.accepted_fragments[args]
-            else: raise LirCandidatesError("There is no such hit candidate: %i"%args) 
-        elif type(args)==slice:
-            counter = args.start
-            returned_hits=[]
-            while counter < args.stop:
-                if counter < len(self.accepted_fragments):
-                    returned_hits.append(self.accepted_fragments[counter])
-                    counter += 1 
-                else: raise LirCandidatesError("The number of candidates is smaller than %i"%counter) 
-            return returned_hits
-        else:
-            raise LirCandidatesError('Bad argument type.')           
+        return self.accepted_fragments[args]
 
     
     def __len__(self):
@@ -453,17 +327,9 @@ class FragmentCandidates(object):
     
     def __iter__(self):
         return self.accepted_fragments.__iter__()
-    
  
     def __str__(self):
         return "Present number of accepted fragment candidates: %s" %str(len(self.accepted_fragments))
-    
-
-    def next(self):
-        if self.index >= len(self.accepted_fragments): raise StopIteration
-        self.index=self.index+1	
-        return self.accepted_fragments[self.index-1]
-
 
     def parse_lir_database(self, separator='\t'): # WAS: ' - '
         """

@@ -17,14 +17,12 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaResidue import ModernaResidue
-from moderna.Errors import ModernaStructureError,ModernaResidueError
 from moderna.builder.PhosphateBuilder import PhosphateBuilder
 from moderna.analyze.GeometryParameters import GeometryStandards
+from moderna.analyze.ChainConnectivity import are_residues_connected, is_backbone_intact
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 import math
 from test_data import *
-from moderna.Constants import BIO153
 
 
 class PhosphateBuilderTests(TestCase):
@@ -39,8 +37,8 @@ class PhosphateBuilderTests(TestCase):
         
     def test_validation(self):
         """Makes sure test data is set up properly."""
-        self.assertFalse(self.resi2.is_backbone_intact())
-        self.assertFalse(self.struc.are_residues_connected(self.resi1,self.resi2))
+        self.assertFalse(is_backbone_intact(self.resi2))
+        self.assertFalse(are_residues_connected(self.resi1,self.resi2))
                          
     def test_build_backbone(self):
         """Checks whether the P+O5' atoms are constructed."""
@@ -57,9 +55,8 @@ class PhosphateBuilderTests(TestCase):
         self.assertTrue(self.resi2["O5'"])
         self.assertEqual(self.resi2["P"].fullname, ' P')
         self.assertEqual(self.resi2["O5'"].fullname, " O5'")
-        if BIO153:
-            self.assertEqual(self.resi2["P"].element, 'P')
-            self.assertEqual(self.resi2["O5'"].element, "O")
+        self.assertEqual(self.resi2["P"].element, 'P')
+        self.assertEqual(self.resi2["O5'"].element, "O")
         
 
     def test_build_op1op2(self):
@@ -126,7 +123,7 @@ class PhosphateBuilderTests(TestCase):
         """Checks whether two residues are properly connected."""
         bb = PhosphateBuilder(self.resi1,self.resi2)    
         bb.build()
-        self.assertTrue(self.struc.are_residues_connected(self.resi1,self.resi2))
+        self.assertTrue(are_residues_connected(self.resi1,self.resi2))
         
     def test_op1op2_geometry(self):
         """Checks whether the OP1 and OP2 geometry is OK."""

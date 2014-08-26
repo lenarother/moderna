@@ -21,7 +21,6 @@ from moderna.FragmentInsertion import FragmentInserter
 from moderna.RNAModel import RnaModel
 from moderna.ModernaStructure import ModernaStructure
 from moderna.sequence.ModernaSequence import Sequence
-from moderna.Errors import ModernaFragmentError
 from test_data import *
 
 class FragmentInserterTests(TestCase):

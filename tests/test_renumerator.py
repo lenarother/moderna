@@ -1,7 +1,7 @@
 
 from moderna.Renumerator import Renumerator
 from unittest import TestCase, main
-from moderna.Errors import RenumeratorError
+from moderna.util.Errors import RenumeratorError
 
 class RenumeratorTests(TestCase):
     """

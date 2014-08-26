@@ -16,16 +16,11 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
+from moderna.analyze.ChainConnectivity import are_residues_connected, is_chain_continuous, is_backbone_intact
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaResidue import ModernaResidue
-from moderna.Errors import ModernaStructureError,ModernaResidueError
 from moderna.builder.BackboneBuilder import BackboneBuilder
 from moderna.analyze.GeometryParameters import GeometryStandards
-from moderna.analyze.GeometryAnalyzer import GeometryAnalyzer
-from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
-import math
 from test_data import *
-from moderna.Constants import BIO153
 
 DISCONNECTED = TEST_DATA_PATH + 'rna_structures/disconnected.pdb'
 BB_MESSED_UP = TEST_DATA_PATH + 'rna_structures/bb_messed_up.pdb'
@@ -47,8 +42,8 @@ class BackboneBuilderTests(TestCase):
         
     def test_validation(self):
         """Makes sure test data is set up properly."""
-        self.assertFalse(self.resi2.is_backbone_intact())
-        self.assertFalse(self.struc.are_residues_connected(self.resi1,self.resi2))
+        self.assertFalse(is_backbone_intact(self.resi2))
+        self.assertFalse(are_residues_connected(self.resi1,self.resi2))
                          
     def test_build_backbone(self):
         """Checks whether the P+O5' atoms are constructed."""
@@ -63,10 +58,8 @@ class BackboneBuilderTests(TestCase):
         self.assertTrue(self.resi2["O5'"])
         self.assertEqual(self.resi2["P"].fullname, ' P')
         self.assertEqual(self.resi2["O5'"].fullname, " O5'")
-        if BIO153:
-            self.assertEqual(self.resi2["P"].element, 'P')
-            self.assertEqual(self.resi2["O5'"].element, "O")
-        
+        self.assertEqual(self.resi2["P"].element, 'P')
+        self.assertEqual(self.resi2["O5'"].element, "O")
 
     def test_build_op1op2(self):
         """Checks whether the OP1 and OP2 atoms are constructed."""
@@ -96,9 +89,9 @@ class BackboneBuilderTests(TestCase):
         """Structure example should not be OK"""
         # trna Leu by Marcin Skorupskiego
         struc = ModernaStructure('file',DISCONNECTED)
-        self.assertFalse(struc.is_chain_continuous())
+        self.assertFalse(is_chain_continuous(struc))
         bb = BackboneBuilder(struc['16'], struc['17'], struc)
-        self.assertTrue(struc.is_chain_continuous())
+        self.assertTrue(is_chain_continuous(struc))
         
     def _test_repair_congested(self):
         """Should avoid clashes between atoms."""
@@ -114,7 +107,6 @@ class BackboneBuilderTests(TestCase):
         self.assertTrue(struc['33'].is_phosphate_intact())
         self.assertFalse(struc['33'].is_backbone_congested())
         self.assertFalse(struc['32'].is_backbone_congested())
-        
 
     def test_build_conserve_c2c3(self):
         """downstream C2' and C3' positions should not change"""

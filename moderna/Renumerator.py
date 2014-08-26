@@ -15,7 +15,7 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 
-from Errors import RenumeratorError
+from util.Errors import RenumeratorError
 
 class Renumerator:
     """

@@ -54,7 +54,6 @@ class CheckPdbTests(TestCase):
     def test_clean_structure_in_struc(self):
         self.assertEqual(self.st.get_sequence(), Sequence('G_C_GGAU.UALCUCAGDDGGGAGAGCRCCAGABU#AAYAP?UGGAG7UC?UGUGTPCG"UCCACAGAAUUCGCACCA_._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._._.'))
         self.pc.clean_structure()
-        self.st.write_pdb_file('out.pdb')
         self.assertEqual(self.st.get_sequence(), Sequence('GCGGAU.UALCUCAGDDGGGAGAGCRCCAGABU#AAYAP?UGGAG7UC?UGUGTPCG"UCCACAGAAUUCGCACCA'))
         
     def test_add_missing_p(self):

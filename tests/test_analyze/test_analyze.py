@@ -15,7 +15,7 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 
 from test_hbond_calculator import HBondCalculatorTests
 from test_geometry_analyzer import GeometryAnalyzerTests
@@ -26,6 +26,7 @@ from test_stacking_calculator import StackingCalculatorTests
 from test_clash_recognizer import FindClashesTests
 from test_base_recognizer import BaseRecognizerTests
 from test_topology_matcher import MolParserTests, AnnotatedMoleculeTests
+from test_chain_connectivity import ChainConnectivityTests, ResidueIntegrityTests
 
 if __name__ == '__main__':
     log.write_to_stderr = False

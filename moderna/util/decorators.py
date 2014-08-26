@@ -10,7 +10,6 @@ __author__ = "Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Kristian Rother"
 __email__ = "krother@genesilico.pl"
 __status__ = "Production"
@@ -18,7 +17,7 @@ __status__ = "Production"
 
 from Errors import ModernaError, ParameterError
 from LogFile import log
-from examples.usage_examples import COMMAND_EXAMPLES
+from moderna.examples.usage_examples import COMMAND_EXAMPLES
 
 
 def simple_decorator(decorator):

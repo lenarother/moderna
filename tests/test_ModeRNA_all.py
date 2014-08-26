@@ -16,7 +16,7 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 import sys
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 
 # RNA sequences and alignments
 from test_sequence import *
@@ -31,9 +31,6 @@ from test_check_pdb import CheckPdbTests
 from test_write_pdb import WritePDBTests
 from test_moderna_superimposer import SuperimposerTests
 
-# RNA analysis
-from test_chain_discontinuity import ChainDiscontinuityTests
-from test_analyze import *
 
 # RNA modeling
 from test_modeling_recipe import RecipeMakerTests
@@ -51,6 +48,7 @@ from test_lir_insertions import LIRInsertionTests
 from test_lirdb import LirDbTests
 from test_renumerator import RenumeratorTests
 from test_fragment_insertion import FragmentInserterTests
+from test_analyze import *
 from test_builder import *
 from test_isosteric import *
 
@@ -58,7 +56,7 @@ from test_rnamodel import BasicRnaModelTests, RetainTemplateTests, IndelQualityT
 
 # toplevel functions
 from test_commands import CommandTests
-from test_validators import ValidatorTests, StrucValidatorTests
+from test_util import ValidatorTests, StrucValidatorTests
 from test_commandline import CommandlineTests
 
 if __name__ == '__main__':

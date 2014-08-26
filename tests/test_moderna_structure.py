@@ -16,11 +16,9 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure, ModernaResidue
-import os, tempfile
-from Bio.PDB.Model import Model
-from moderna.Errors import ModernaStructureError, ModernaResidueError, RNAChainError
+from moderna.util.Errors import ModernaStructureError, ModernaResidueError, RNAChainError
 from moderna.sequence.ModernaSequence import Sequence
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 from moderna import load_model
 
 from test_data import *
@@ -155,6 +153,11 @@ class ModernaStructureTests(TestCase):
         seq = str(struc.get_sequence())
         self.assertEqual(seq, 'x_GAA')
         self.assertEqual(struc['900'].long_abbrev, 'm7Gpp_cap')
+
+    def test_is_connected_strict(self):
+        """All backbones need to be connected between two bases."""
+        s = ModernaStructure('file', BROKEN_BACKBONE)
+        self.assertEqual(s.get_sequence(), Sequence('G_C_GG_A_U_UUALCUCAG'))
 
 if __name__ == '__main__':
     main()

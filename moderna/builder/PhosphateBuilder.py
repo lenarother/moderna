@@ -35,7 +35,7 @@ from moderna.analyze.GeometryParameters import GeometryStandards
 from moderna.RNAChain import RNAChain
 from moderna.ModernaSuperimposer import ModernaSuperimposer
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
-from moderna.Constants import DATA_PATH, BIO153
+from moderna.Constants import DATA_PATH
 from CoordBuilder import build_coord, get_ref_matrix
 from moderna.analyze.RNASuites import BETA, DEFAULT_TORSIONS
 from Bio.PDB import NeighborSearch
@@ -110,12 +110,8 @@ class PhosphateBuilder(object):
         vec = self.c5.coord - self.o3.coord
         coord_p = self.o3.coord + vec*0.333333
         coord_o5 = self.o3.coord + vec*0.666666
-        if BIO153:
-            self.p = Atom.Atom("P", coord_p, 0.0,1.0,' '," P",1, element="P")
-            self.o5 = Atom.Atom("O5'", coord_o5, 0.0,1.0,' '," O5'",1, element="O")
-        else:
-            self.p = Atom.Atom("P", coord_p, 0.0,1.0,' '," P",1)
-            self.o5 = Atom.Atom("O5'", coord_o5, 0.0,1.0,' '," O5'",1)
+        self.p = Atom.Atom("P", coord_p, 0.0,1.0,' '," P",1, element="P")
+        self.o5 = Atom.Atom("O5'", coord_o5, 0.0,1.0,' '," O5'",1, element="O")
         self.r2.add(self.p)
         self.r2.add(self.o5)
         
@@ -301,10 +297,7 @@ class TerminalPhosphateBuilder(object):
 
     def create_atom(self, name, elem, coord):
         """Finds positions in between the O3' and C5'"""
-        if BIO153:
-            atom = Atom.Atom(name, coord, 0.0,1.0,' '," "+name,1, element=elem)
-        else:
-            atom = Atom.Atom(name, coord, 0.0,1.0,' '," "+name,1)
+        atom = Atom.Atom(name, coord, 0.0,1.0,' '," "+name,1, element=elem)
         return atom
         
 

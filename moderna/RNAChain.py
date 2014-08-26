@@ -19,12 +19,12 @@ from Bio.PDB import PDBParser, PDBIO
 from Bio.PDB.Structure import Structure
 from Bio.PDB.Model import Model
 from Bio.PDB.Chain import Chain
-from RNAResidue import BACKBONE_DIST_MATRIX, DIST_TOLERANCE, O3_P_DIST_HI
 from ModernaResidue import ModernaResidue
 from sequence.ModernaAlphabet import alphabet
 from sequence.ModernaSequence import Sequence
 from Constants import MISSING_RESIDUE
-from Errors import RNAChainError, ModernaStructureError
+from util.Errors import RNAChainError, ModernaStructureError
+from analyze.ChainConnectivity import are_residues_connected
 import os
 
 class RNAChain:
@@ -236,7 +236,7 @@ class RNAChain:
 
         for res in self:
             if previous_resi:
-                if not self.are_residues_connected(previous_resi, res): 
+                if not are_residues_connected(previous_resi, res):
                     seq.append(alphabet[MISSING_RESIDUE])
             seq.append(alphabet[res.long_abbrev])
             previous_resi = res
@@ -251,44 +251,3 @@ class RNAChain:
     def last_resi(self):
         """Returns the last residue."""
         return list(self)[-1]
-        
-    def are_residues_connected(self, res1, res2):
-        """
-        Checks whether two residues are connected.
-        (Distances on the backbone are within norm+tolerance.)
-
-        Arguments:
-        * residue I (upstream)
-        * residue II (downstream)
-        """
-        try:
-            if res1["O3'"] - res2["P"] > O3_P_DIST_HI*DIST_TOLERANCE: return False
-            for tup in [("C3'", "O3'"), ("C4'", "C3'")]:
-                a1, a2 = tup
-                low, hi = BACKBONE_DIST_MATRIX[tup]
-                if res1[a1] - res1[a2] > hi * DIST_TOLERANCE: 
-                    return False
-            for tup in [   ("P", "O5'"), ("O5'", "C5'"), ("C5'", "C4'")]:
-                a1, a2 = tup
-                low, hi = BACKBONE_DIST_MATRIX[tup]
-                if res2[a1] - res2[a2] > hi * DIST_TOLERANCE: 
-                    return False
-            return True
-        except KeyError: # for missing atoms
-            return False
-            
-    def is_chain_continuous(self):
-        """
-        Checks whether chain is continous.
-        (Check whether all alternate pairs of residues are connected.)
-        """
-        keys_sorted = []
-        for resi in self:
-            keys_sorted.append(resi.identifier)
-
-        pairs_to_check = [(keys_sorted[x], keys_sorted[x+1]) for x in range(len(keys_sorted)-1)]
-
-        for pair in pairs_to_check:
-            if not self.are_residues_connected(self[pair[0]], self[pair[1]]): 
-                return False
-        return True

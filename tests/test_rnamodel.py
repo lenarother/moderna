@@ -18,7 +18,7 @@ from unittest import main, TestCase
 from moderna.Template import Template
 from moderna.RNAModel import RnaModel
 from moderna.ModernaStructure import ModernaStructure
-from moderna.Errors import ModernaStructureError, RenumeratorError
+from moderna.util.Errors import ModernaStructureError, RenumeratorError
 from moderna.analyze.BaseRecognizer import BaseRecognizer
 from moderna.ModernaFragment import ModernaFragment53, keep_first_last
 from moderna.sequence.RNAAlignment import read_alignment

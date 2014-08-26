@@ -18,15 +18,13 @@ __status__ = "Production"
 import re,os
 
 from Bio.PDB.Atom import Atom
-from Bio.PDB import PDBParser
-from Bio.PDB import NeighborSearch
 from ModernaStructure import ModernaStructure
-from analyze.BasePairCalculator import base_pair_calc
-from ModernaSuperimposer import ModernaSuperimposer
 from builder.PhosphateBuilder import TerminalPhosphateBuilder
+from analyze.ChainConnectivity import are_residues_connected, is_chain_continuous
 
-from Constants import MISSING_RESIDUE, UNKNOWN_RESIDUE_SHORT, PHOSPHATE_GROUP, RIBOSE, BACKBONE_ATOMS, AA_ATOMS,  BIO153,  BASE_PATH, BACKBONE_RIBOSE_ATOMS,  PHOSPHORYLATED_NUCLEOTIDES
-from LogFile import log
+from Constants import MISSING_RESIDUE, UNKNOWN_RESIDUE_SHORT, PHOSPHATE_GROUP, RIBOSE, BACKBONE_ATOMS, AA_ATOMS, \
+    BACKBONE_RIBOSE_ATOMS,  PHOSPHORYLATED_NUCLEOTIDES
+from util.LogFile import log
 
 
 # what about aa
@@ -306,8 +304,8 @@ class PdbController:
         Takes only regular residues into account
         (water, ions and unidentified residues are excluded.) 
         """
-        st = ModernaStructure('residues', self.standard+self.unidentified_rna)
-        return st.is_chain_continuous()
+        st = ModernaStructure('residues', self.standard + self.unidentified_rna)
+        return is_chain_continuous(st)
 
 
     def is_typical_category_residue(self,  res):
@@ -330,10 +328,10 @@ class PdbController:
         if len(all_resi) == 1: temp.append(all_resi[0].identifier)
         elif not self.continuous:
             for x in range(len(all_resi)-1):
-                if not st.are_residues_connected(all_resi[x],  all_resi[x+1]):
+                if not are_residues_connected(all_resi[x],  all_resi[x+1]):
                     if len(all_resi) == 2: temp += [y.identifier for y in all_resi]
                     elif x+1==len(all_resi)-1: temp.append(all_resi[x+1].identifier)
-                    elif not st.are_residues_connected(all_resi[x+1],  all_resi[x+2]): temp.append(all_resi[x+1].identifier)
+                    elif not are_residues_connected(all_resi[x+1],  all_resi[x+2]): temp.append(all_resi[x+1].identifier)
 
         # checking whether disconnected residues are not sandard or modified ones
         for resi in temp:
@@ -416,17 +414,15 @@ class PdbController:
         self.P_missing = new_P_missing
                 
 
-    def change_at_name(self,resi,old_name,new_name):
+    def change_at_name(self, resi, old_name, new_name):
         """
         Changes single atom name.
         """
         at = resi[old_name]
-        if BIO153:
-            element = new_name[0]
-            if element not in "CHONSP": element = 'C'
-            new_at = Atom(new_name, at.coord, at.bfactor, at.occupancy, at.altloc, ' '+new_name, at.serial_number,  element=element)
-        else:
-            new_at = Atom(new_name, at.coord, at.bfactor, at.occupancy, at.altloc, ' '+new_name, at.serial_number) 
+        element = new_name[0]
+        if element not in "CHONSP":
+            element = 'C'
+        new_at = Atom(new_name, at.coord, at.bfactor, at.occupancy, at.altloc, ' '+new_name, at.serial_number,  element=element)
         resi.detach_child(old_name)
         resi.add(new_at)
         #print new_at.coord, new_at.bfactor, new_at.occupancy, new_at.altloc, new_name, new_at.serial_number

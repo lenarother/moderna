@@ -10,23 +10,23 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.1"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 """Checking of toplevel command parameters."""
 
-from ModernaStructure import ModernaStructure
-from Template import Template
-from RNAModel import RnaModel
-from ModernaFragment import ModernaFragment
-from SearchLIR import LirHit, FragmentCandidates
-from ModernaResidue import ModernaResidue
-from sequence.RNAAlignment import RNAAlignment, read_alignment
-from sequence.ModernaSequence import Sequence
-from sequence.ModernaAlphabet import alphabet
+from moderna.ModernaStructure import ModernaStructure
+from moderna.Template import Template
+from moderna.RNAModel import RnaModel
+from moderna.ModernaFragment import ModernaFragment
+from moderna.SearchLIR import LirHit, FragmentCandidates
+from moderna.ModernaResidue import ModernaResidue
+from moderna.sequence.ModernaAlignment import Alignment
+from moderna.sequence.ModernaSequence import Sequence
+from moderna.sequence.ModernaAlphabet import alphabet
 from Errors import ParameterError, AlphabetError
+from moderna.sequence.RNAAlignment import RNAAlignment, read_alignment
 import os, re
 
 def validate_structure(struc):

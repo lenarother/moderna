@@ -15,17 +15,15 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
 from moderna.sequence.ModernaAlphabet import Alphabet, AlphabetEntry
-from moderna.Constants import ANY_RESIDUE, UNKNOWN_RESIDUE_SHORT, \
+from moderna.Constants import UNKNOWN_RESIDUE_SHORT, \
     UNKNOWN_RESIDUE_ONELETTER,  RESIDUE_WITHOUT_ONE_LETTER_ABBREV, \
     MODIFICATION_NAMES_TABLE_PATH
-from moderna.Errors import AlphabetError
 from tests.test_data import *
 
 class AlphabetTests(TestCase):

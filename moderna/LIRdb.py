@@ -21,10 +21,9 @@ from ModernaStructure import ModernaStructure
 from sequence.ModernaSequence import Sequence
 
 from LIR import Lir, LirRecord
-from Errors import LirError, LirRecordError
 from Constants import PATH_TO_LIR_STRUCTURES, PATH_TO_LIR_LIST, ANY_RESIDUE,  \
     UNKNOWN_RESIDUE_SHORT, MAX_FRAGMENT_LENGTH
-from LogFile import log
+from util.LogFile import log
 
 # constants to create LIR test DB.
 #PATH_TO_LIR_STRUCTURES = '../test/test_data/lir_test_files/'

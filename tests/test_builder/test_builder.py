@@ -15,7 +15,7 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main
-from moderna.LogFile import log
+from moderna.util.LogFile import log
 
 from test_backbone_builder import BackboneBuilderTests
 from test_phosphate_builder import PhosphateBuilderTests

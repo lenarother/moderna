@@ -89,11 +89,10 @@ class LIRInsertionTests(TestCase):
             insert_fragment(m, cand)
             fixed = self.get_atoms(helix)
             moved = self.get_atoms(m)
-            m.write_pdb_file('out_%i.pdb'%i)
             s = ModernaSuperimposer(fixed, moved, m.get_all_atoms())
             result.append(s.rmsd)
-            
             i+=1
+
         self.assertAlmostEqual(result[0], 0.000, 3)
         avg_rms = sum(result)/(1.0*len(result))
         self.assertTrue(avg_rms < 3.25)

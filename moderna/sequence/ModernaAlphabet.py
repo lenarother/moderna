@@ -17,7 +17,7 @@ __status__ = "Production"
 
 from moderna.Constants import MODIFICATION_NAMES_TABLE_PATH, ANY_RESIDUE, \
     RESIDUE_WITHOUT_ONE_LETTER_ABBREV 
-from moderna.Errors import AlphabetError
+from moderna.util.Errors import AlphabetError
 
 
 class AlphabetEntry(object):
