@@ -17,55 +17,37 @@ Technical Support:
 Installation Instructions
 =========================
 
-0. Quick guide
+1. Quick guide
 --------------
  
    python setup.py install
 
-1. Requirements
+2. Requirements
 ---------------
 
-ModeRNA runs on any modern Windows or Linux PC. There are two versions available:
-
-- Source code - full functionality, but requires some libraries.
-- Windows Binary - easy to install, but limited functionality.
-
-
-2. Installing the Windows Binary
--------------------------------- 
-All you need to do is:
-
-- Download the latest binary [Moderna Version 1.5.0 (.exe)].
-
-- Unzip the archive.
-
-- Open a command line window and switch to the unzipped directory. Type 
-
-  python moderna.py -h 
-
-  to see available options.
-
+ModeRNA runs on any modern Windows or Linux PC. It requires the Biopython library.
 
 3. Installation on Linux
 ------------------------
 
 To install ModeRNA on Linux, you need to:
 
-- Download the source distribution [Moderna Version 1.5.2 (source)].
+- Download the source distribution [Moderna Version 1.7.1 (source)].
 
 - Unzip the archive. A catalog with the main program moderna.py is created.
 
-- Make sure Python 2.5 or a higher version is installed. (on Ubuntu Linux, use sudo apt-get install python.
+- Make sure Python 2.6 or a higher version is installed. (on Ubuntu Linux, use sudo apt-get install python.
 
 - Make sure Numpy is installed (sudo apt-get install python-numpy).
 
 - Make sure BioPython is installed (sudo apt-get install python-biopython).
-   (tested with BioPython 1.51-1.53)
+   (tested with BioPython 1.53-1.58)
 
 - Make sure the moderna/moderna.py file is executable:
   chmod a+x moderna/moderna.py
 
-- Add the path to the moderna directory to your PYTHONPATH variable,e.g. 
+- Add the path to the moderna directory to your PYTHONPATH variable,e.g.:
+  export PYTHONPATH=$PYTHONPATH:/home/lena/moderna/
 
 - run:
   python setup.py install
@@ -81,26 +63,26 @@ python
 
 To install ModeRNA on Windows, you need to:
 
-- Download the source distribution [Moderna Version 1.5.2 (source)].
+- Download the source distribution [Moderna Version 1.7.1 (source)].
 
 - Unzip the archive. A catalog with the main program moderna.py is created.
 
 - Make sure that these libraries are installed:
     (all available from iimcb.genesilico.pl/moderna)
-    Python 2.5 or a higher
+    Python 2.6 or a higher
     Numpy
-    BioPython (tested with BioPython 1.51-1.53)
+    BioPython (tested with BioPython 1.53 - 1.58)
 
 - Run from the terminal:
-  C:/Python25/python.exe setup.py install
+  C:/Python26/python.exe setup.py install
 
 - After this, you can write in the Python shell:
 
 >>> from moderna.moderna import *
 
 
-Legal Disclaimer
-----------------
+5. Legal Disclaimer
+-------------------
 
 ModeRNA is released under the GPL license, a copy of which is included in 
 the distribution (See LICENSE_GPL.TXT for details). For the files in the 
@@ -121,8 +103,8 @@ The authors take no responsibility for damage caused by this program
 or its components. 
 
 
-Contributors
-------------
+6. Contributors
+---------------
 
 - Magdalena Rother   - implementation
 - Pawel Piatkowski   - implementation
@@ -131,8 +113,8 @@ Contributors
 - Janusz Bujnicki    - concept and supervision
 
 
-Acknowledgements
-----------------
+7. Acknowledgements
+-------------------
 
 Credit goes to our lab colleagues Pawel Skiba, Piotr Byzia, Irina Tuszynska, 
 Joanna Kasprzak, Jurek Orlowski, Pawel Lukasz, Tomasz Osinski, Marcin 
@@ -149,8 +131,8 @@ Special thanks go to the group of Russ Altman, who provided us with
 their modeling example to test ModeRNA.
 
 
-References
-----------
+8. References
+-------------
 
 Components of ModeRNA are based upon the following pieces of scientific literature:
 
