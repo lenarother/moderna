@@ -12,23 +12,27 @@ Homepage:
 Technical Support:
    rother.magdalena@gmail.com
 
-------------------------------------------------------------------------
 
-INSTALLATION INSTRUCTIONS
 
-0. Quick guide:
+Installation Instructions
+=========================
+
+0. Quick guide
+--------------
  
    python setup.py install
 
-1. Requirements:
+1. Requirements
+---------------
 
 ModeRNA runs on any modern Windows or Linux PC. There are two versions available:
-    Source code - full functionality, but requires some libraries.
-    Windows Binary - easy to install, but limited functionality.
+
+- Source code - full functionality, but requires some libraries.
+- Windows Binary - easy to install, but limited functionality.
 
 
 2. Installing the Windows Binary
- 
+-------------------------------- 
 All you need to do is:
 
 - Download the latest binary [Moderna Version 1.5.0 (.exe)].
@@ -43,6 +47,7 @@ All you need to do is:
 
 
 3. Installation on Linux
+------------------------
 
 To install ModeRNA on Linux, you need to:
 
@@ -72,6 +77,7 @@ python
 
 
 4. Installing ModeRNA on Windows
+--------------------------------
 
 To install ModeRNA on Windows, you need to:
 
@@ -92,9 +98,9 @@ To install ModeRNA on Windows, you need to:
 
 >>> from moderna.moderna import *
 
-------------------------------------------------------------------------
 
-LEGAL DISCLAIMER
+Legal Disclaimer
+----------------
 
 ModeRNA is released under the GPL license, a copy of which is included in 
 the distribution (See LICENSE_GPL.TXT for details). For the files in the 
@@ -114,24 +120,26 @@ of this software, even if advised of the possibility of such damage.
 The authors take no responsibility for damage caused by this program 
 or its components. 
 
-------------------------------------------------------------------------
 
-CREDITS
+Contributors
+------------
 
-Magdalena Rother   - implementation
-Kristian Rother    - architecture and unit tests
-Tomasz Puton       - model validation and testing
-Janusz Bujnicki    - concept and supervision
+- Magdalena Rother   - implementation
+- Pawel Piatkowski   - implementation
+- Kristian Rother    - architecture and unit tests
+- Tomasz Puton       - model validation and testing
+- Janusz Bujnicki    - concept and supervision
 
------------------------------------------------------------------------
 
-ACKNOWLEDGEMENTS
+Acknowledgements
+----------------
 
 Credit goes to our lab colleagues Pawel Skiba, Piotr Byzia, Irina Tuszynska, 
 Joanna Kasprzak, Jurek Orlowski, Pawel Lukasz, Tomasz Osinski, Marcin 
 Domagalski, Anna Czerwoniec, Stanislaw Dunin-Horkavic, Marcin Skorupski, 
 and Marcin Feder for their comments and constructive criticism during 
 development. 
+
 The PDB parser ued by Moderna uses BioPython with kind support by 
 Thomas Hamelryck. The unit test framework was brought near to us by 
 Sandra Smit, Rob Knight, and Gavin Huttley. We also would like to thank 
@@ -140,17 +148,17 @@ provided helpful advice on various occasions.
 Special thanks go to the group of Russ Altman, who provided us with 
 their modeling example to test ModeRNA.
 
--------------------------------------------------------------------------
 
-REFERENCES
+References
+----------
 
 Components of ModeRNA are based upon the following pieces of scientific literature:
 
-[1] Czerwoniec A, Dunin-Horkawicz S, Purta E, Kaminska KH, Kasprzak JM, Bujnicki JM, Grosjean H, Rother K. MODOMICS: a database of RNA modification pathways. 2008 update. Nucleic Acids Res. 2008 Oct 14.
-[2] Yang H, Jossinet F, Leontis N, Chen L, Westbrook J, Berman H, Westhof E. Tools for the automatic identification and classification of RNA base pairs. Nucleic Acids Res. 2003 Jul 1;31(13):3450-60.
-[3] Gendron P, Lemieux S, Major F. Quantitative analysis of nucleic acid three-dimensional structures. J Mol Biol. 2001 May 18;308(5):919-36.
-[4] Michalsky E, Goede A, Preissner R. Loops In Proteins (LIP)–a comprehensive loop database for homology modelling. Protein Eng. 2003 Dec;16(12):979-85.
-[5] Cock PJ, Antao T, Chang JT, Chapman BA, Cox CJ, Dalke A, Friedberg I, Hamelryck T, Kauff F, Wilczynski B, de Hoon MJ. Biopython: freely available Python tools for computational molecular biology and bioinformatics. Bioinformatics. 2009 Jun 1;25(11):1422-3. Epub 2009 Mar 20.
+- [1] Czerwoniec A, Dunin-Horkawicz S, Purta E, Kaminska KH, Kasprzak JM, Bujnicki JM, Grosjean H, Rother K. MODOMICS: a database of RNA modification pathways. 2008 update. Nucleic Acids Res. 2008 Oct 14.
+- [2] Yang H, Jossinet F, Leontis N, Chen L, Westbrook J, Berman H, Westhof E. Tools for the automatic identification and classification of RNA base pairs. Nucleic Acids Res. 2003 Jul 1;31(13):3450-60.
+- [3] Gendron P, Lemieux S, Major F. Quantitative analysis of nucleic acid three-dimensional structures. J Mol Biol. 2001 May 18;308(5):919-36.
+- [4] Michalsky E, Goede A, Preissner R. Loops In Proteins (LIP)–a comprehensive loop database for homology modelling. Protein Eng. 2003 Dec;16(12):979-85.
+- [5] Cock PJ, Antao T, Chang JT, Chapman BA, Cox CJ, Dalke A, Friedberg I, Hamelryck T, Kauff F, Wilczynski B, de Hoon MJ. Biopython: freely available Python tools for computational molecular biology and bioinformatics. Bioinformatics. 2009 Jun 1;25(11):1422-3. Epub 2009 Mar 20.
 
 -------------------------------------------------------------------------
 
