@@ -116,6 +116,26 @@ class ExchangeBaseTests(TestCase):
         self.assertTrue(self.cytosine['N*'])
         
 
+    def test_mutate(self):
+        """Should allow all kinds of residue exchanges."""
+        br = BaseRecognizer()
+        resi = ModernaResidue(self.chain.child_list[2])
+        abbrevs = ['A', 'Am', 'C', 'dC', 'dT', 'C','A', 'ac6A', 'm5U', 'Y', 'dA', 'Am', 'A']
+        for name in abbrevs:
+            resi.mutate(name)
+            self.assertEqual(br.identify_resi(resi), name)
+
+    def test_mutate_unknown(self):
+        """Should allow all kinds of residue exchanges."""
+        br = BaseRecognizer()
+        resi = ModernaResidue(self.chain.child_list[2])
+        resi.mutate('X')
+        self.assertRaises(BaseRecognitionError, br.identify_resi, resi)
+        self.unk['39'].mutate('A')
+        self.assertEqual(self.unk['39'].short_abbrev, 'A')
+        self.unk['40'].mutate('Y')
+        self.assertEqual(self.unk['40'].short_abbrev, 'P')
+
 if __name__ == '__main__':
     main()
   

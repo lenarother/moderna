@@ -18,9 +18,6 @@ from unittest import main, TestCase
 import sys
 from moderna.util.LogFile import log
 
-# RNA sequences and alignments
-from test_sequence import *
-
 # data infrastructure
 from test_rna_residue import RNAResidueTests
 from test_rna_chain import RNAChainTests
@@ -33,10 +30,7 @@ from test_moderna_superimposer import SuperimposerTests
 
 # RNA modeling
 from test_modeling_recipe import RecipeMakerTests
-from test_add_remove_modification import RemoveModificationTests, AddModificationTests, ExchangeModificationTests
 from test_copy_residue import CopyResidueTests
-from test_exchange_bases import ExchangeBaseTests
-from test_chi_rotation import ChiRotationTests
 from test_moderna_fragment import ModernaFragmentTests, \
     ModernaFragment5Tests, ModernaFragment3Tests, ModernaFragment53Tests, AnchorResidueTests
 from test_secstruc_fragment import ModernaFragment2DTests, ModernaFragmentStrandTests
@@ -44,10 +38,13 @@ from test_helix import HelixTests, HelixFragmentBuilderTests
 from test_renumerator import RenumeratorTests
 from test_fragment_insertion import FragmentInserterTests
 
+# sub-packages
+from test_sequence import *
 from test_analyze import *
 from test_builder import *
 from test_isosteric import *
 from test_fragment_library import *
+from test_modifications import *
 
 from test_rnamodel import BasicRnaModelTests, RetainTemplateTests, IndelQualityTests
 
