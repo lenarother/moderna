@@ -15,23 +15,18 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 import os
-from math import pi
-import csv
 from numpy import array
 from LIR import Lir, LirRecord
-from moderna.sequence.ModernaAlphabet import alphabet
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaFragment import ModernaFragment53, keep_first_last
+from moderna.ModernaFragment import keep_first_last
 from moderna.FragmentInsertion import FragmentInserter
-from moderna.ModernaResidue import ModernaResidue
 from moderna.sequence.ModernaSequence import Sequence
-from moderna.analyze.HBondCalculator import HBondCalculator
-from StructureLibrary import library 
-from moderna.util.Errors import LirError, SearchLirError,  LirCandidatesError
+from StructureLibrary import library
+from moderna.util.Errors import LirError, SearchLirError
 
-from moderna.Constants import DATA_PATH, MODULE_PATH, PATH_TO_LIR_STRUCTURES, \
-                LIR_DATABASE_PATH, LIR_DIRECTORY_PATH, MAX_DIST_STEM, \
-                NUMBER_OF_FRAGMENT_CANDIDATES, PI2
+from moderna.Constants import PATH_TO_LIR_STRUCTURES, \
+                LIR_DATABASE_PATH, MAX_DIST_STEM, \
+                NUMBER_OF_FRAGMENT_CANDIDATES
 
 from moderna.util.LogFile import log
 

@@ -19,13 +19,14 @@ from Bio.PDB import PDBParser, PDBIO
 from Bio.PDB.Structure import Structure
 from Bio.PDB.Model import Model
 from Bio.PDB.Chain import Chain
-from ModernaResidue import ModernaResidue
+from RNAResidue import RNAResidue
 from sequence.ModernaAlphabet import alphabet
 from sequence.ModernaSequence import Sequence
 from Constants import MISSING_RESIDUE
 from util.Errors import RNAChainError, ModernaStructureError
 from analyze.ChainConnectivity import are_residues_connected
 import os
+
 
 class RNAChain:
     """
@@ -83,11 +84,11 @@ class RNAChain:
         """Creates dictionary of RNA residues from iterable of Bio.PDB.Residues."""
         if seq:
             for resi, aentry in zip(data, seq):
-                temp = ModernaResidue(resi, aentry, new_atoms=new_atoms)
+                temp = RNAResidue(resi, aentry, new_atoms=new_atoms)
                 self.moderna_residues[temp.identifier] = temp
         else:
             for resi in data:
-                temp = ModernaResidue(resi, new_atoms=new_atoms)
+                temp = RNAResidue(resi, new_atoms=new_atoms)
                 self.moderna_residues[temp.identifier] = temp
     # 
     # data management

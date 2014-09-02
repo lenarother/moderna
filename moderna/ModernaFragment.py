@@ -16,7 +16,7 @@ __status__ = "Production"
 
 
 from ModernaSuperimposer import ModernaSuperimposer
-from ModernaResidue import ModernaResidue
+from RNAResidue import RNAResidue
 from analyze.ClashRecognizer import ClashRecognizer
 from analyze.ChainConnectivity import is_chain_continuous
 from Renumerator import Renumerator
@@ -87,7 +87,7 @@ class AnchorResidue(object):
 
     def _build_residue_from_two(self, resi, second_resi, atom_names):
         """Combines atoms from two residues into one."""
-        prep = ModernaResidue(resi, alphabet_entry=resi.alphabet_entry)
+        prep = RNAResidue(resi, alphabet_entry=resi.alphabet_entry)
         for atom in atom_names:
             if prep.has_id(atom):
                 prep.detach_child(atom)
