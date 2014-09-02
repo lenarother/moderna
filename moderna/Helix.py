@@ -15,9 +15,8 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from ModernaStructure import ModernaStructure
-from ModernaFragment import ModernaFragment53
-from SecstrucFragment import ModernaFragment2D, ModernaFragment553, \
-        ModernaFragment533, ModernaFragment53Strands
+from ModernaFragment import ModernaFragment53, ModernaFragment2D, \
+    ModernaFragment553, ModernaFragment533
 from FragmentInsertion import FragmentInserter
 from sequence.ModernaSequence import Sequence
 from Renumerator import renumber_section
