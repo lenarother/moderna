@@ -92,7 +92,7 @@ class RnaModel(ModernaStructure):
 
     def copy_all_residues(self, strict=True, modifications=True):
         """
-        Copies all residues identical (acording alignment) in both: a template and ia  
+        Copies all residues identical (according alignment) in both: a template and ia
         """
         if self.alignment and self.template:
             for ap in self.recipe.copy:
@@ -128,12 +128,143 @@ class RnaModel(ModernaStructure):
         else: raise RnaModelError('There is no template or/and alignmnt')
 
 
+################################### MODIFICATIONS (what is left) ###############
+
+    def get_modified_residues(self):
+        """
+        Returns a dict with all modified residues in the structure.
+
+        key - residue identifier
+        value - ModernaResidue instance
+        """
+        log.write_message('Looking for modifications.')
+        modified_residues = {}
+        for resi in self:
+            if resi.modified:
+                modified_residues[resi.identifier] = resi
+                log.write_message('Residue %s: is modified (%s)'%(resi.identifier, resi.long_abbrev))
+        if not modified_residues:
+            log.write_message('There are no modifications in the structure.')
+        return modified_residues
+
+
+    #TODO: add docstrings to these methods
+    def remove_one_modification_copy(self, residue, number_in_model):
+        """
+        """
+        temp_resi = ModernaResidue(residue)
+        num = number_in_model or temp_resi.number
+        temp_resi.remove_modification()
+        self.add_residue(temp_resi, str(num))
+        log.write_message('Residue %s: modification removed (%s ---> %s).' %(num, residue.long_abbrev, temp_resi.long_abbrev))
+
+
+    def remove_all_modifications_copy(self):
+        """
+        Removes all unnecessary modifications from model acordong given alignment.
+        Copies all this residues without modification into model.
+        """
+        if self.alignment and self.template:
+            for ap in self.recipe.remove_modifications:
+                res = self.template.template_residues[str(ap.template_position)]
+                temp_resi = ModernaResidue(res)
+                temp_resi.remove_modification()
+
+                if temp_resi != ap.target_letter:
+                    temp_resi.exchange_base(ap.target_letter.original_base)
+                self.add_residue(temp_resi)
+                log.write_message('Residue %s: modification removed (%s ---> %s).' %(temp_resi.identifier, res.long_abbrev, temp_resi.long_abbrev))
+        else: raise RnaModelError('There is no template or/and alignmnt')
+
+    def add_one_modification_copy(self, residue, modification_long_abbrev, number_in_model):
+        """
+        """
+        temp_res = ModernaResidue(residue)
+        num = number_in_model or temp_res.identifier
+        temp_res.add_modification(modification_long_abbrev)
+        self.add_residue(temp_res, num, False)
+        log.write_message('Residue %s: modification added (%s ---> %s).' %(num, residue.long_abbrev, modification_long_abbrev))
+
+    def add_all_modifications_copy(self):
+        """
+        """
+        if self.alignment and self.template:
+            for ap in self.recipe.add_modifications:
+                temp_resi = ModernaResidue(self.template.template_residues[str(ap.template_position)])
+                old_name = temp_resi.long_abbrev
+                temp_resi.add_modification(ap.target_letter.long_abbrev)
+                self.add_residue(temp_resi)
+                log.write_message('Residue %s: modification added (%s ---> %s).' %(temp_resi.identifier, old_name, temp_resi.long_abbrev))
+        else: raise RnaModelError('There is no template or/and alignmnt')
+
+
+    def ex_base(self):
+        """
+        Exchanges base into given residue and copies it into a model on give position.
+        """
+        num = number_in_model or temp_resi.identifier
+        self.add_residue(temp_resi, num)
+
+    def exchange_list_of_bases(self, list_of_moderna_residues, list_of_new_names, list_of_numbers_in_model=None):
+        """
+        Exchanges bases in given residues list.
+
+        Arguments:
+        - list of residues
+        - list with new names for residues
+        - list with numbers that indicates new positions for residues in a model (by default old residues positions)
+        """
+        if not list_of_numbers_in_model:
+            list_of_numbers_in_model = []
+            for resi in list_of_moderna_residues:
+                list_of_numbers_in_model.append(resi.identifier)
+
+        if len(list_of_moderna_residues) != len(list_of_new_names) or len(list_of_new_names) != len(list_of_numbers_in_model):
+            raise RnaModelError('Number of given residues is different than number of given positions.')
+
+        for resi_num in range(len(list_of_moderna_residues)):
+            self.exchange_one_base(list_of_moderna_residues[resi_num], list_of_new_names[resi_num], list_of_numbers_in_model[resi_num])
+
+
+    def exchange_all_bases(self):
+        """
+        Exchanges all bases according to given alignment.
+        """
+        if self.alignment and self.template:
+            for ap in self.recipe.exchange:
+                res = self.template.template_residues[str(ap.template_position)]
+                name = ap.target_letter.original_base
+                self.exchange_one_base(res, name)
+        else: raise RnaModelError('There is no template or/and alignmnt')
+
+
+def change_sequence(self, new_seq,  start_id=None,  stop_id=None):
+    """
+    Changes whole sequence (or indicated fragment) into a given one.
+
+    Arguments:
+    * new sequence
+    * start residue identifier
+    * stop residue identifier
+    (by default all sequence is changed)
+    """
+    if type(new_seq) != Sequence:
+        new_seq = Sequence(new_seq)
+    if not start_id:
+        start_id = self.first_resi.identifier
+    if not stop_id:
+        stop_id = self.last_resi.identifier
+    if len(self[start_id:stop_id]) != len(new_seq):
+        raise ModernaStructureError('Bad sequence length. Sequence should have %s characters.' %len(self[start_id:stop_id]))
+    for res, seq_letter in zip(self[start_id:stop_id], new_seq):
+        res.mutate(seq_letter.long_abbrev)
+
 ################################### INSERTING ##################################
 
     def find_fragment_candidates(self, res5, res3, sequence, candidates_number=NUMBER_OF_FRAGMENT_CANDIDATES, lir_path=PATH_TO_LIR_STRUCTURES, secstruc=None):
         # en: candidate_number
         """
-        Looks for lfragment candidates for missing fragment in a structure.
+        Looks for fragment candidates for missing fragment in a structure.
         Returns list of fragment candidates.
 
         Arguments:
@@ -301,4 +432,4 @@ class RnaModel(ModernaStructure):
             self.add_missing_3p()
             self.fix_backbone()
         else: raise RnaModelError('There is no template or/and alignment')
-        
+
