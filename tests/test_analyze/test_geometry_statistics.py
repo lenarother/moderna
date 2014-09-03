@@ -17,7 +17,7 @@ __status__ = "alpha"
 from unittest import main, TestCase
 from moderna.analyze.GeometryStatistics import GeometryStatistics, PDBSetGeometryStatistics, GeometryResult, GeometryExpression, AtomDefinition
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaResidue import ModernaResidue
+from moderna.RNAResidue import RNAResidue
 from test_data import *
 import os
 
@@ -121,7 +121,7 @@ class GeometryExpressionTests(TestCase):
         residues = self.ge.get_residues_by_codes(model)
         self.assertEqual(len(residues),2)
         for r in residues[0]+residues[1]:
-            self.assertTrue(isinstance(r,ModernaResidue))
+            self.assertTrue(isinstance(r, RNAResidue))
         
     def test_has_distinct_residues(self):
         """Checks for non-duplicate indices in the list."""

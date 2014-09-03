@@ -237,25 +237,25 @@ class CommandTests(TestCase):
     #----------------------------------------------------------
     def test_exchange_some_bases_default(self):
         """Exchange some bases already in the model."""
-        copy_some_residues(self.t['6':'11'],self.m)
-        exchange_some_bases([self.m['7'],self.m['10']],'CA')
-        self.assertEqual(self.m.get_sequence(),Sequence('UCUAAC'))
+        copy_some_residues(self.t['6':'11'], self.m)
+        exchange_some_bases([self.m['7'], self.m['10']], 'CA')
+        self.assertEqual(self.m.get_sequence(), Sequence('UCUAAC'))
 
     def test_exchange_some_bases_range(self):
         """Exchange some bases, apply range."""
-        copy_some_residues(self.t['6':'11'],self.m)
-        exchange_some_bases(self.m['7':'9'],'CAG')
-        self.assertEqual(self.m.get_sequence(),Sequence('UCAGLC'))
+        copy_some_residues(self.t['6':'11'], self.m)
+        exchange_some_bases(self.m['7':'9'], 'CAG')
+        self.assertEqual(self.m.get_sequence(), Sequence('UCAGLC'))
         
     def test_exchange_some_bases_and_copy(self):
         """Exchange some bases and copy from template."""
-        exchange_some_bases(self.t['7':'9'],'CGA',self.m)
-        self.assertEqual(self.m.get_sequence(),Sequence('CGA'))
+        exchange_some_bases(self.t['7':'9'], 'CGA', self.m)
+        self.assertEqual(self.m.get_sequence(), Sequence('CGA'))
 
     def test_exchange_some_bases_and_copy_list(self):
         """Exchange some bases and copy from template."""
-        exchange_some_bases([self.t['7'],self.t['9']],'CA',self.m)
-        self.assertEqual(self.m.get_sequence(),Sequence('C_A'))
+        exchange_some_bases([self.t['7'], self.t['9']], 'CA',self.m)
+        self.assertEqual(self.m.get_sequence(), Sequence('C_A'))
     #----------------------------------------------------------
     def test_exchange_mismatches(self):
         """Exchanges all standard base mismatches and copies."""

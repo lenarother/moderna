@@ -43,12 +43,13 @@ from ModernaStructure import ModernaStructure
 from ModernaFragment import ModernaFragment53, ModernaFragment5, ModernaFragment3
 from SecstrucFragment import ModernaFragmentStrand, ModernaFragment2D
 from Helix import HelixBuilder, HelixFragmentBuilder
-from fragment_library.LIR import Lir
 from fragment_library.SearchLIR import *
 from analyze.ClashRecognizer import ClashRecognizer
 from analyze.GeometryAnalyzer import GeometryAnalyzer
 from analyze.StackingCalculator import StackingCalculator
 from builder.BackboneBuilder import BackboneBuilder
+from builder.ChiRotator import rotate_chi as rc
+import modifications
 from CheckPdb import PdbController
 from sequence.AlignmentMatcher import AlignmentMatcher
 
@@ -111,7 +112,7 @@ Note that deoxynucleotides count as modified bases as well.
     if model != None:
         model.add_one_modification_copy(residue, modification_name, residue_number)
     else:
-        residue.add_modification(modification_name)
+        modifications.add_modification(residue, modification_name)
 
 
 @toplevel_function
@@ -345,7 +346,7 @@ By default, the number of the residue is kept, but it can be given optionally.
     model = validate_model(model)
     if new_number: new_number = validate_resnum(new_number)
     
-    model.copy_one_residue(residue, new_number, strict=strict)
+    model.copy_residue(residue, new_number, strict=strict)
 
 
 @toplevel_function
@@ -529,11 +530,12 @@ The residue number does not change by default, but a new one can be given.
     if model: model = validate_model(model)
     if new_number: new_number = validate_resnum(new_number)
 
-    if model: model.exchange_one_base(residue, new_name, new_number)
-    else: residue.exchange_base(new_name)
-
-#KR: how about this name?
-mutate = exchange_single_base
+    if model:
+        model.copy_residue(residue, new_number)
+        number = new_number or residue.identifier
+        modifications.exchange_base(model[number], new_name)
+    else:
+        modifications.exchange_base(residue, new_name)
 
 @toplevel_function
 def exchange_some_bases(residue_list, new_names, model=None, new_numbers=None):
@@ -562,7 +564,7 @@ new one can be given.
         model.exchange_list_of_bases(residue_list, new_names, new_numbers)
     else:
         for resi, newname in zip(residue_list, new_names):
-            resi.exchange_base(newname)
+            modifications.exchange_base(resi, newname)
 
 
 @toplevel_function
@@ -1031,7 +1033,7 @@ Note that desoxynucleotides count as modified bases as well.
     if model: 
         model.remove_one_modification_copy(residue, new_number)
     else:
-        residue.remove_modification()
+        modifications.remove_modification(residue)
 
 
 @toplevel_function
@@ -1062,7 +1064,7 @@ Rotates a base in a given nucleotide around the glycosidic bond
     * angle in degrees
     """
     residue = validate_resi(residue)
-    residue.rotate_chi(angle)
+    rc(residue, angle)
     
     
 @toplevel_function

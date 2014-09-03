@@ -10,13 +10,13 @@ __author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
 __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
-__version__ = "1.5.0"
 __maintainer__ = "Magdalena Rother"
 __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main,TestCase
 from moderna.ModernaStructure import ModernaStructure
+from moderna.modifications import exchange_base
 from test_data import *
 
 class SecStrucCalculatorTests(TestCase):
@@ -43,7 +43,7 @@ class SecStrucCalculatorTests(TestCase):
         ms = ModernaStructure('file', RNA_HAIRPIN, 'D')
         ss = ms.get_secstruc()
         self.assertEqual(ss, '..((.......))')
-        ms['39'].exchange_base('G')
+        exchange_base(ms['39'], 'G')
         ss = ms.get_secstruc()
         self.assertEqual(ss, '..((.......))')
         

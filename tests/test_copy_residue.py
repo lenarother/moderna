@@ -16,8 +16,6 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaResidue import ModernaResidue
-from moderna.analyze.BaseRecognizer import BaseRecognizer
 from moderna.util.Errors import ModernaStructureError
 
 from test_data import *
@@ -25,7 +23,7 @@ from test_data import *
 
 class CopyResidueTests(TestCase):
     """
-    Makes sure a ModernaResidue can be copied from
+    Makes sure a RNAResidue can be copied from
     one ModernaStructure to another (or itself),
     and that the resulting residue is really different.
     """

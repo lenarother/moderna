@@ -18,8 +18,10 @@ __status__ = "Production"
 import re
 from RNAResidue import RNAResidue
 from RNAChain import RNAChain
+from sequence.ModernaSequence import Sequence
 from analyze.BasePairCalculator import base_pair_calc
 from builder.BackboneBuilder import BackboneBuilder
+from modifications import modify_residue
 from util.Errors import ModernaStructureError
 from util.LogFile import log
 
@@ -128,6 +130,26 @@ class ModernaStructure(RNAChain):
         
         log.write_message('Chain was renumbered. The first residue is now %s.' % str(start_residue))
         
+    def change_sequence(self, new_seq,  start_id=None,  stop_id=None):
+        """
+        Changes whole sequence (or indicated fragment) into a given one.
+
+        Arguments:
+        * new sequence
+        * start residue identifier
+        * stop residue identifier
+        (by default all sequence is changed)
+        """
+        if type(new_seq) != Sequence:
+            new_seq = Sequence(new_seq)
+        if not start_id:
+            start_id = self.first_resi.identifier
+        if not stop_id:
+            stop_id = self.last_resi.identifier
+        if len(self[start_id:stop_id]) != len(new_seq):
+            raise ModernaStructureError('Bad sequence length. Sequence should have %s characters.' %len(self[start_id:stop_id]))
+        for res, seq_letter in zip(self[start_id:stop_id], new_seq):
+            modify_residue(res, seq_letter.long_abbrev)
 
     def check_letters_in_residue_numeration(self):
         """Checks whether identifiers of residues contain any letters."""
@@ -135,7 +157,24 @@ class ModernaStructure(RNAChain):
             if re.findall('[a-z,A-Z]', resi.identifier):
                 log.write_message('Structure contains residues with letters in numeration eg.: %s.' %resi.identifier)
                 return True
-        return False 
+        return False
+
+    def get_modified_residues(self):
+        """
+        Returns a dict with all modified residues in the structure.
+
+        key - residue identifier
+        value - ModernaResidue instance
+        """
+        log.write_message('Looking for modifications.')
+        modified_residues = {}
+        for resi in self:
+            if resi.modified:
+                modified_residues[resi.identifier] = resi
+                log.write_message('Residue %s: is modified (%s)'%(resi.identifier, resi.long_abbrev))
+        if not modified_residues:
+            log.write_message('There are no modifications in the structure.')
+        return modified_residues
 
     def get_base_pairs(self, mode='dictionary'):
         """

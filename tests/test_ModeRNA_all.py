@@ -21,7 +21,6 @@ from moderna.util.LogFile import log
 # data infrastructure
 from test_rna_residue import RNAResidueTests
 from test_rna_chain import RNAChainTests
-from test_moderna_residue import ModernaResidueTests
 from test_moderna_structure import ModernaStructureTests
 from test_check_pdb import CheckPdbTests
 from test_write_pdb import WritePDBTests

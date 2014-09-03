@@ -17,6 +17,7 @@ __status__ = "Production"
 from ModernaStructure import ModernaStructure
 from sequence.ModernaSequence import Sequence
 from FragmentInsertion import FragmentInserter
+from modifications import modify_residue
 from ModernaFragment import ModernaFragment, AnchorResidue, \
     ModernaFragment53, ModernaFragment5, ModernaFragment3, \
     keep_nothing, ALL_FROM_MODEL, ALL_FROM_FRAGMENT
@@ -236,7 +237,7 @@ class ModernaFragmentStrand(ModernaFragment):
         struc = ModernaStructure('file', data_file)
         if new_sequence:
             base = WC_BASE_PAIRS[new_sequence[0].short_abbrev]
-            list(struc)[0].mutate(base)
+            modify_residue(list(struc)[0], base)
         ModernaFragment.__init__(self, struc, new_sequence=new_sequence, keep=keep_nothing, strict=strict)
         
         sup_atoms = self.__choose_superposition_atoms(anchor)
@@ -271,7 +272,7 @@ class ModernaFragmentStrand(ModernaFragment):
     def apply_sequence(self):
         """Changes sequence of the added nucleotide."""
         if self.new_sequence:
-            list(self.struc)[-1].mutate(self.new_sequence.long_abbrev)
+            modify_residue(list(self.struc)[-1], self.new_sequence.long_abbrev)
     
     def get_resi_to_remove(self, struc):
         """Returns residue ids to be removed from the model."""

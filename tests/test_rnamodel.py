@@ -23,6 +23,7 @@ from moderna.analyze.BaseRecognizer import BaseRecognizer
 from moderna.ModernaFragment import ModernaFragment53, keep_first_last
 from moderna.sequence.RNAAlignment import read_alignment
 from moderna.sequence.ModernaSequence import Sequence
+from moderna.modifications import exchange_base
 from moderna import load_model, find_fragment, copy_some_residues, \
     insert_fragment, match_template_with_alignment, clean_structure, \
     renumber_chain, match_alignment_with_model
@@ -145,7 +146,7 @@ GGGA-AG--CCAGABU#A
         # prepare model
         t = Template(DOUBLEGAP,'file','A')
         m = RnaModel()
-        for r in t: m.copy_one_residue(r)
+        for r in t: m.copy_residue(r)
         # insert first fragment
         struc = ModernaStructure('file',FRAGMENT1)
         f1 = ModernaFragment53(struc, anchor5=m['20'], anchor3=m['24'], \
@@ -167,7 +168,7 @@ GGGA-AG--CCAGABU#A
         """Should insert fragment with correct numbering."""
         t = Template(DOUBLEGAP,'file','A')
         m = RnaModel()
-        for r in t: m.copy_one_residue(r)
+        for r in t: m.copy_residue(r)
         struc = ModernaStructure('file',FRAGMENT1)
         f1 = ModernaFragment53(struc, anchor5=m['20'], anchor3=m['24'], new_sequence=Sequence('AUA'))
         m.insert_fragment(f1)
@@ -324,7 +325,8 @@ class RetainTemplateTests(RnaModelTests):
     
     def test_exchange_single_base_retain_template(self):
         """Exchanging standard base should not change the template"""
-        self.m.exchange_one_base(self.t['1'], 'U')
+        self.m.copy_residue(self.t['1'], '1')
+        exchange_base(self.m['1'], 'U')
         self.assertEqual(self.t.get_sequence(),self.seq_before)
         self.assertEqual(self.br.identify_resi(self.t['1']), 'G')
         

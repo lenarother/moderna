@@ -20,6 +20,7 @@ from RNAResidue import RNAResidue
 from analyze.ClashRecognizer import ClashRecognizer
 from analyze.ChainConnectivity import is_chain_continuous
 from Renumerator import Renumerator
+from modifications import modify_residue
 from util.Errors import ModernaFragmentError
 from Constants import LIR_SUPERPOSITION5, LIR_SUPERPOSITION3
 
@@ -99,7 +100,7 @@ class AnchorResidue(object):
         if self.build_rule.base == 'model': # fixed
             prep = self._build_residue_from_two(self.fixed_resi, \
                             self.mobile_resi, self.build_rule.mobile_at)
-            prep.mutate(self.fixed_resi.long_abbrev) 
+            modify_residue(prep, self.fixed_resi.long_abbrev)
         elif self.build_rule.base == 'fragment': # mobile
             prep = self._build_residue_from_two(self.mobile_resi, \
                             self.fixed_resi, self.build_rule.fixed_at)
@@ -215,7 +216,7 @@ Unknown residue is present in the chain.')
 match number of fragment residues to change (%i).'\
                 %(len(self.new_sequence), len(resis))) 
             for resi, letter in zip(resis, self.new_sequence):
-                resi.mutate(letter.long_abbrev)
+                modify_residue(resi, letter.long_abbrev)
 
     def get_resi_to_remove(self, struc):
         """
