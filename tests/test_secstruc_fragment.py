@@ -13,16 +13,14 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Prototype"
 
 from unittest import main, TestCase
-from moderna.SecstrucFragment import ModernaFragment2D, ModernaFragmentStrand
+from moderna.ModernaFragment import ModernaFragment2D, ModernaFragmentStrand
 from moderna.RNAModel import RnaModel
 from moderna.ModernaStructure import ModernaStructure
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.FragmentInsertion import FragmentInserter
 from moderna.Constants import HELIX
-from moderna import fix_backbone
-from moderna import load_template, create_model, copy_some_residues, create_fragment, load_model
+from moderna import load_model
 from test_data import *
-import re
 
 
 class ModernaFragment2DTests(TestCase):
