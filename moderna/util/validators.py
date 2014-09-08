@@ -22,7 +22,6 @@ from moderna.RNAModel import RnaModel
 from moderna.ModernaFragment import ModernaFragment
 from moderna.fragment_library.SearchLIR import LirHit, FragmentCandidates
 from moderna.ModernaResidue import ModernaResidue
-#from moderna.sequence.ModernaAlignment import Alignment
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.sequence.ModernaAlphabet import alphabet
 from Errors import ParameterError, AlphabetError
