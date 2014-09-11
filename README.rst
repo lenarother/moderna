@@ -143,3 +143,4 @@ Components of ModeRNA are based upon the following pieces of scientific literatu
 - [5] Cock PJ, Antao T, Chang JT, Chapman BA, Cox CJ, Dalke A, Friedberg I, Hamelryck T, Kauff F, Wilczynski B, de Hoon MJ. Biopython: freely available Python tools for computational molecular biology and bioinformatics. Bioinformatics. 2009 Jun 1;25(11):1422-3. Epub 2009 Mar 20.
 
 
+[![Build Status](https://travis-ci.org/lenarother/moderna.svg?branch=master)](https://travis-ci.org/lenarother/moderna)
