@@ -40,8 +40,8 @@ from sequence.ModernaSequence import Sequence
 from sequence.RNAAlignment import read_alignment
 from ModelingRecipe import RecipeMaker
 from ModernaStructure import ModernaStructure
-from ModernaFragment import ModernaFragment53, ModernaFragment5, ModernaFragment3
-from SecstrucFragment import ModernaFragmentStrand, ModernaFragment2D
+from ModernaFragment import ModernaFragment53, ModernaFragment5, \
+    ModernaFragment3, ModernaFragmentStrand, ModernaFragment2D
 from Helix import HelixBuilder, HelixFragmentBuilder
 from fragment_library.SearchLIR import *
 from analyze.ClashRecognizer import ClashRecognizer

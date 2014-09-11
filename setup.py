@@ -23,11 +23,11 @@ __location__ = os.path.join(os.getcwd(), os.path.dirname(
 
 # Change these settings according to your needs
 MAIN_PACKAGE = "moderna"
-DESCRIPTION = "None"
+DESCRIPTION = "ModeRNA - A program for comparative RNA modeling"
 LICENSE = "new BSD"
-URL = "None"
-AUTHOR = "lena"
-EMAIL = "lena@lena-think"
+URL = "http://iimcb.genesilico.pl/moderna"
+AUTHOR = "Magdalena Musielak, Pawel Piatkowski, Kristian Rother, Tomasz Puton, Janusz M. Bujnicki"
+EMAIL = "rother.magdalena@gmail.com"
 
 COVERAGE_XML = False
 COVERAGE_HTML = False
@@ -151,6 +151,37 @@ def read(fname):
     return open(os.path.join(__location__, fname)).read()
 
 
+def all_from_dir(path):
+    """Returns a path, list of files from the given path."""
+    if path[-1] != os.sep:
+        path += os.sep
+    files = [path+f for f in os.listdir(path) if not f=='.git']
+    return path, files
+
+PATH = 'moderna' + os.sep + 'data' + os.sep
+
+file_list = [
+              ('.',['COPYING','README.rst','RELEASE_NOTES.TXT']),
+              (PATH,[
+                  #PATH + 'LIR_fragments.lib',
+                  PATH + 'rnaDB05_list.txt',
+                  PATH + 'modification_names_table',
+                  PATH + 'modification_topologies.txt',
+                  PATH + 'modifications',
+                  PATH + 'helix.pdb',
+                  PATH + 'suite_clusters.txt',
+                  PATH + 'pair_fragment.pdb',
+                  PATH + 'single_strand.pdb',
+                  PATH + 'phosphate_group.pdb',
+                  PATH + 'IsostericityMatrices.txt',
+              ]),
+               all_from_dir(PATH + 'modification_fragments'),
+               #all_from_dir(PATH + 'rnaDB05'),
+               all_from_dir(PATH + 'standard_bases'),
+               all_from_dir(PATH + 'base_pairs'),
+    ]
+
+
 def setup_package():
     # Assemble additional setup commands
     cmdclass = versioneer.get_cmdclass()
@@ -203,7 +234,8 @@ def setup_package():
           cmdclass=cmdclass,
           tests_require=['pytest-cov', 'pytest'],
           command_options=command_options,
-          entry_points={'console_scripts': CONSOLE_SCRIPTS})
+          entry_points={'console_scripts': CONSOLE_SCRIPTS},
+          data_files=file_list)
 
 if __name__ == "__main__":
     setup_package()
