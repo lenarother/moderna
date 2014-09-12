@@ -1,0 +1,863 @@
+USER  MOD reduceV2.21 H: found=0, std=0, add=2994, rem=0, adj=146
+HEADER    COMPLEX (RIBONUCLEOPROTEIN/RNA)         09-MAR-95   1URN      1URN
+TITLE     U1A/RNA COMPLEX                                               1URN   3
+COMPND    MOL_ID: 1;                                                    1URN
+COMPND   2 MOLECULE: U1A SPLICEOSOMAL PROTEIN;                          1URN
+COMPND   3 CHAIN: A, B, C;                                              1URN
+COMPND   4 FRAGMENT: RESIDUES 2 - 98;                                   1URN
+COMPND   5 ENGINEERED: YES;                                             1URN
+COMPND   6 MUTATION: Y31H, Q36R;                                        1URN
+COMPND   7 MOL_ID: 2;                                                   1URN  1
+COMPND   8 MOLECULE: RNA 21MER HAIRPIN (5'-(AP*AP*UP*CP*CP*AP*UP*UP*    1URN  1
+COMPND   9 GP*CP*AP*CP*UP*CP*CP*GP*GP*AP*UP*UP*U)-3');                  1URN  1
+COMPND   0 CHAIN: P, Q, R                                               1URN  1
+COMPND   1 OTHER_DETAILS: U1A IS A PROTEIN FROM U1 SMALL                1URN  1
+COMPND   2 RIBONUCLEOPROTEIN (U1SNRNP), PDB FILE 1NRC                   1URN  1
+SOURCE    MOL_ID: 1;                                                    1URN  1
+SOURCE   2 ORGANISM_SCIENTIFIC: HOMO SAPIENS;                           1URN  1
+SOURCE   3 ORGANISM_COMMON: HUMAN;                                      1URN  1
+SOURCE   4 CELL_LINE: FETAL BRAIN CDNA LIBRARY;                         1URN  1
+SOURCE   5 EXPRESSION_SYSTEM: ESCHERICHIA COLI;                         1URN  2
+SOURCE   6 EXPRESSION_SYSTEM_STRAIN: BL21 (DE3]);                       1URN  2
+SOURCE   7 EXPRESSION_SYSTEM_PLASMID: PKN172;                           1URN  2
+SOURCE   8 EXPRESSION_SYSTEM_GENE: U1A (2-98, Y31H, Q36R);              1URN  2
+SOURCE   9 OTHER_DETAILS: INDUCTION BY T7 PHI10 PROMOTER;               1URN  2
+SOURCE   0 MOL_ID: 2;                                                   1URN  2
+SOURCE   1 SYNTHETIC: YES;                                              1URN  2
+SOURCE   2 OTHER_DETAILS: SEQUENCE BASED ON HAIRPIN II OF U1 RNA        1URN  2
+EXPDTA    X-RAY DIFFRACTION                                             1URN  2
+AUTHOR    C.OUBRIDGE,N.ITO,P.R.EVANS,C.-H.TEO,K.NAGAI                   1URN  2
+REVDAT   1   08-MAR-96 1URN    0                                        1URN  3
+JRNL        AUTH   C.OUBRIDGE,N.ITO,P.R.EVANS,C.-H.TEO,K.NAGAI          1URN  3
+JRNL        TITL   CRYSTAL STRUCTURE AT 1.92 ANGSTROMS RESOLUTION OF    1URN  3
+JRNL        TITL 2 THE RNA-BINDING DOMAIN OF THE U1A SPLICEOSOMAL       1URN  3
+JRNL        TITL 3 PROTEIN COMPLEXED WITH AN RNA HAIRPIN                1URN  3
+JRNL        REF    NATURE                        V. 372   432 1994      1URN  3
+JRNL        REFN   ASTM NATUAS  UK ISSN 0028-0836                 0006  1URN  3
+REMARK   1                                                              1URN  3
+REMARK   2                                                              1URN  3
+REMARK   2 RESOLUTION. 1.92 ANGSTROMS.                                  1URN  3
+REMARK   3                                                              1URN  4
+REMARK   3 REFINEMENT.                                                  1URN  4
+REMARK   3   PROGRAM                    PROTIN/PROLSQ                   1URN  4
+REMARK   3   AUTHORS                    KONNERT,HENDRICKSON             1URN  4
+REMARK   3   R VALUE                    0.207                           1URN  4
+REMARK   3   FREE R VALUE               0.242                           1URN  4
+REMARK   3   MEAN B VALUE               29.3   ANGSTROMS**2             1URN  4
+REMARK   3   ESTIMATED COORD. ERROR     0.2    ANGSTROMS                1URN  4
+REMARK   3   FINAL RMS COORD. SHIFT     0.003  ANGSTROMS                1URN  4
+REMARK   3                                                              1URN  4
+REMARK   3   NUMBER OF REFLECTIONS      54007                           1URN  5
+REMARK   3   RESOLUTION RANGE       10. - 1.92 ANGSTROMS                1URN  5
+REMARK   3   DATA CUTOFF                0.0    SIGMA(F)                 1URN  5
+REMARK   3   COMPLETENESS FOR RANGE     100.0  %                        1URN  5
+REMARK   3                                                              1URN  5
+REMARK   3  DATA COLLECTION.                                            1URN  5
+REMARK   3   NUMBER OF UNIQUE REFLECTIONS      54400                    1URN  5
+REMARK   3   COMPLETENESS OF DATA              99.7   %                 1URN  5
+REMARK   3   REJECTION CRITERIA                0.0    SIGMA(I)          1URN  5
+REMARK   3                                                              1URN  5
+REMARK   3  NUMBER OF ATOMS USED IN REFINEMENT.                         1URN  6
+REMARK   3   NUMBER OF PROTEIN ATOMS                       2331         1URN  6
+REMARK   3   NUMBER OF NUCLEIC ACID ATOMS                  1268         1URN  6
+REMARK   3   NUMBER OF HETEROGEN ATOMS                       25         1URN  6
+REMARK   3   NUMBER OF SOLVENT ATOMS                        419         1URN  6
+REMARK   3                                                              1URN  6
+REMARK   3  RMS DEVIATIONS FROM IDEAL VALUES (THE VALUES OF             1URN  6
+REMARK   3      SIGMA, IN PARENTHESES, ARE THE INPUT ESTIMATED          1URN  6
+REMARK   3      STANDARD DEVIATIONS THAT DETERMINE THE RELATIVE         1URN  6
+REMARK   3      WEIGHTS OF THE CORRESPONDING RESTRAINTS).               1URN  6
+REMARK   3    DISTANCE RESTRAINTS (ANGSTROMS).                          1URN  7
+REMARK   3      BOND DISTANCE                            0.010(0.020)   1URN  7
+REMARK   3      ANGLE DISTANCE                           0.035(0.040)   1URN  7
+REMARK   3      PLANAR 1-4 DISTANCE                      0.033(0.050)   1URN  7
+REMARK   3    PLANE RESTRAINT (ANGSTROMS)                0.009(0.020)   1URN  7
+REMARK   3    CHIRAL-CENTER RESTRAINT (ANGSTROMS**3)     0.119(0.150)   1URN  7
+REMARK   3    NON-BONDED CONTACT RESTRAINTS (ANGSTROMS).                1URN  7
+REMARK   3      SINGLE TORSION CONTACT                   0.185(0.300)   1URN  7
+REMARK   3      MULTIPLE TORSION CONTACT                 0.233(0.300)   1URN  7
+REMARK   3      POSSIBLE HYDROGEN BOND                   0.170(0.300)   1URN  7
+REMARK   3    ISOTROPIC THERMAL FACTOR RESTRAINTS (ANGSTROMS**2).       1URN  8
+REMARK   3      MAIN-CHAIN BOND                            1.6(3.0)     1URN  8
+REMARK   3      MAIN-CHAIN ANGLE                           2.9(5.0)     1URN  8
+REMARK   3      SIDE-CHAIN BOND                            3.3(5.0)     1URN  8
+REMARK   3      SIDE-CHAIN ANGLE                           5.2(7.0)     1URN  8
+REMARK   3                                                              1URN  8
+REMARK   3   PROTEIN:- DICTIONARY FOR PROLSQ DERIVED BY VICTOR LAMZIN   1URN  8
+REMARK   3   FROM ENGH & HUBER PARAMETERS. RNA: PARAMETERS FOR PROLSQ   1URN  8
+REMARK   3   (NUCLSQ) FROM HELEN BERMAN                                 1URN  8
+REMARK   4                                                              1URN  8
+REMARK   4 THE ASYMMETRIC UNIT CONTAINS THREE COMPLEXES RELATED BY      1URN  9
+REMARK   4 AN APPROXIMATE THREE-FOLD AXIS.  PROTEIN CHAINS A, B, AND C  1URN  9
+REMARK   4 PAIR WITH RNA CHAINS P, Q, AND R AS A/P, B/Q, C/R.  WATERS   1URN  9
+REMARK   4 ARE IN CORRESPONDING CHAINS U, V, W.                         1URN  9
+REMARK   5                                                              1URN  9
+REMARK   5 THE B/Q COMPLEX HAS THE BEST-ORDERED RNA CHAIN, SO IS        1URN  9
+REMARK   5 PROBABLY THE MOST USEFUL TO LOOK AT.                         1URN  9
+REMARK   6                                                              1URN  9
+REMARK   6 THE C-TERMINUS IS POORLY ORDERED BEYOND RESIDUE 96 IN ALL 3  1URN  9
+REMARK   6 PROTEIN CHAINS (A, B AND C).  LYS 96 SIDE-CHAIN IS POORLY    1URN  9
+REMARK   6 ORDERED.  MET 97 SIDE CHAIN HAS BEEN BUILT INTO DENSITY      1URN 10
+REMARK   6 THAT COULD POSSIBLY BE THE MAIN CHAIN FOR LYS 98.  LYS 98    1URN 10
+REMARK   6 IS OMITTED.                                                  1URN 10
+REMARK   7                                                              1URN 10
+REMARK   7 BASES U 13, C 14, AND C 15 ARE POORLY ORDERED IN ALL THREE   1URN 10
+REMARK   7 RNA CHAINS (P, Q, AND R).  THEY ARE ALL BUILT IN CHAIN Q,    1URN 10
+REMARK   7 BUT IN CHAINS P AND R ALL OF 14 AND MOST OF 13 AND           1URN 10
+REMARK   7 15 ARE OMITTED, SINCE THERE IS NO DENSITY IN THE MAPS.       1URN 10
+REMARK   8                                                              1URN 10
+REMARK   8 THE 3' END OF ALL THREE RNA CHAINS IS POORLY ORDERED.  MOST  1URN 10
+REMARK   8 OF U 21 IS OMITTED, BUT RESIDUE U 21 IS ALSO UNCERTAIN IN    1URN 11
+REMARK   8 CHAINS P AND Q.                                              1URN 11
+REMARK   9                                                              1URN 11
+REMARK   9 CHAIN X CONTAINS A CL- ION (PLAUSIBLY IDENTIFIED BY PEAK     1URN 11
+REMARK   9 HEIGHT AND DISTANCES OF ~3.1 ANGSTROMS TO N ATOMS OF 2 ARG   1URN 11
+REMARK   9 RESIDUES AND THE OE OF A TYR).  IT ALSO CONTAINS 4 PUTATIVE  1URN 11
+REMARK   9 GLYCEROL MOLECULES:  X2 IS GOOD, X3, X4, X5 ARE PLAUSIBLE    1URN 11
+REMARK   9 BUT LESS CERTAIN.                                            1URN 11
+REMARK  10                                                              1URN 11
+REMARK  10 CRYSTALLIZATION CONDITIONS:  1.8M (NH4)2 SO4, 40MM TRIS-HCL  1URN 11
+REMARK  10 PH 7.0, 5MM SPERMINE TRANSFERRED TO 1.9M (NH4)2 SO4, 40MM    1URN 12
+REMARK  10 TRIS-HCL PH 7.0, 5MM SPERMINE, 25% GLYCEROL FOR 15 MINUTES   1URN 12
+REMARK  10 BEFORE FREEZING.                                             1URN 12
+REMARK  11                                                              1URN 12
+REMARK  11 THE FOLLOWING SIDE-CHAINS SHOW EVIDENCE OF MULTIPLE          1URN 12
+REMARK  11 CONFORMATIONS, THOUGH NO ATTEMPT HAS BEEN MADE TO MODEL      1URN 12
+REMARK  11 THIS:  GLN A 39, GLN C 39, THR A 66, THR B 66, THR C 66,     1URN 12
+REMARK  11 SER B 71.  THIS IS NOT AN EXHAUSTIVE LIST.                   1URN 12
+REMARK  12                                                              1URN 12
+REMARK  12 COMPND                                                       1URN 12
+REMARK  12   MOLECULE_NAME: U1A. A PROTEIN FROM U1 SMALL                1URN 13
+REMARK  12   RIBONUCLEOPROTEIN (U1SNRNP) THE PROTEIN IS IN THE PDB AS   1URN 13
+REMARK  12   1NRC (CURRENTLY CA ONLY).                                  1URN 13
+REMARK  12   MOLECULE_NAME: RNA 21MER. SEQUENCE BASED ON HAIRPIN II     1URN 13
+REMARK  12   OF U1 RNA.                                                 1URN 13
+REMARK  13                                                              1URN 13
+REMARK  13 MTRIX                                                        1URN 13
+REMARK  13  THE TRANSFORMATIONS PRESENTED ON MTRIX RECORDS BELOW        1URN 13
+REMARK  13  DESCRIBE NON-CRYSTALLOGRAPHIC RELATIONSHIPS AMONG THE       1URN 13
+REMARK  13  VARIOUS DOMAINS IN THIS ENTRY.  APPLYING THE APPROPRIATE    1URN 13
+REMARK  13  MTRIX TRANSFORMATION TO THE RESIDUES LISTED FIRST WILL      1URN 14
+REMARK  13  YIELD APPROXIMATE COORDINATES FOR THE RESIDUES LISTED       1URN 14
+REMARK  13  SECOND.                                                     1URN 14
+REMARK  13                                                              1URN 14
+REMARK  13            APPLIED TO           TRANSFORMED TO               1URN 14
+REMARK  13  MTRIX      RESIDUES               RESIDUES         RMSD     1URN 14
+REMARK  13    M1   A    6  ..  A   96     B    6  ..  B   96   0.273    1URN 14
+REMARK  13    M2   A    6  ..  A   96     C    6  ..  C   96   0.341    1URN 14
+REMARK  13    M3   C    3  ..  C   96     B    3  ..  B   96   0.296    1URN 14
+REMARK  13    M4   P    1  ..  P   12     Q    1  ..  Q   12   0.429    1URN 14
+REMARK  13    M4   P   16  ..  P   19     Q   16  ..  Q   19   0.633    1URN 15
+REMARK  13    M5   P    1  ..  P   12     R    1  ..  R   12   0.597    1URN 15
+REMARK  13    M5   P   16  ..  P   19     R   16  ..  R   19   0.697    1URN 15
+REMARK  13    M6   R    3  ..  R   12     Q    3  ..  Q   12   0.347    1URN 15
+REMARK  13    M6   R   16  ..  R   19     Q   16  ..  Q   19   0.896    1URN 15
+REMARK  14                                                              1URN 15
+REMARK  14 ORIGINAL DEPOSITION REVISED PRIOR TO RELEASE                 1URN 15
+REMARK  14    TRACKING NUMBER: T6090, DATE REVISED: 15-MAY-95           1URN 15
+REMARK  14                                                              1URN 15
+REMARK  14 ORIGINAL DEPOSITION REVISED PRIOR TO RELEASE                 1URN 15
+REMARK  14    TRACKING NUMBER: T6428, DATE REVISED: 21-AUG-95           1URN 16
+REMARK  18                                                              1URN 16
+REMARK  18 EXPERIMENTAL DETAILS.                                        1URN 16
+REMARK  18  SOURCE                         : SRS                        1URN 16
+REMARK  18  BEAMLINE                       : 9.6                        1URN 16
+REMARK  18  PH                             : 7.0                        1URN 16
+REMARK  18  MONOCHROMATIC (Y/N)            : Y                          1URN 16
+REMARK  18  LAUE (Y/N)                     : N                          1URN 16
+REMARK  18  WAVELENGTH OR RANGE (A)        : 0.882                      1URN 16
+REMARK  18  DETECTOR TYPE                  : 30 CM IMAGE PLATE          1URN 16
+REMARK  18  DETECTOR MANUFACTURER          : MARRESEARCH                1URN 17
+REMARK  18  INTENSITY-INTEGRATION SOFTWARE : MOSFLM                     1URN 17
+REMARK  18  DATA REDUNDANCY                : 7.7                        1URN 17
+REMARK  18  MERGING R VALUE (INTENSITY)    : 0.038                      1URN 17
+REMARK  19                                                              1URN 17
+REMARK  19 SOLVENT CONTENT (VS)      : 61.  %                           1URN 17
+REMARK 999                                                              1URN 17
+REMARK 999 FOR CHAIN "A" -   1 C-TERMINAL RESIDUES NOT IN ATOMS LIST    1URN 17
+REMARK 999                                                              1URN 17
+REMARK 999 FOR CHAIN "B" -   1 C-TERMINAL RESIDUES NOT IN ATOMS LIST    1URN 17
+REMARK 999                                                              1URN 18
+REMARK 999 FOR CHAIN "C" -   1 C-TERMINAL RESIDUES NOT IN ATOMS LIST    1URN 18
+REMARK 999                                                              1URN 18
+REMARK 999  REFERENCE                                                   1URN 18
+REMARK 999   REFERENCE: C.OUBRIDGE ET AL., NATURE (1994) 372, 432-438   1URN 18
+DBREF  1URN A    2    97  SWS    P09012   RU1A_HUMAN       2     97     1URN 185
+DBREF  1URN P    1    21  PDB             1URN             1     21     1URN 186
+DBREF  1URN B    2    97  SWS    P09012   RU1A_HUMAN       2     97     1URN 187
+DBREF  1URN Q    1    21  PDB             1URN             1     21     1URN 188
+DBREF  1URN C    2    97  SWS    P09012   RU1A_HUMAN       2     97     1URN 189
+DBREF  1URN R    1    21  PDB             1URN             1     21     1URN 190
+SEQADV 1URN HIS A   31  SWS  P09012    TYR    31 ENGINEERED             1URN 191
+SEQADV 1URN ARG A   36  SWS  P09012    GLN    36 ENGINEERED             1URN 192
+SEQADV 1URN HIS B   31  SWS  P09012    TYR    31 ENGINEERED             1URN 193
+SEQADV 1URN ARG B   36  SWS  P09012    GLN    36 ENGINEERED             1URN 194
+SEQADV 1URN HIS C   31  SWS  P09012    TYR    31 ENGINEERED             1URN 195
+SEQADV 1URN ARG C   36  SWS  P09012    GLN    36 ENGINEERED             1URN 196
+SEQRES   1 A   97  ALA VAL PRO GLU THR ARG PRO ASN HIS THR ILE TYR ILE  1URN 197
+SEQRES   2 A   97  ASN ASN LEU ASN GLU LYS ILE LYS LYS ASP GLU LEU LYS  1URN 198
+SEQRES   3 A   97  LYS SER LEU HIS ALA ILE PHE SER ARG PHE GLY GLN ILE  1URN 199
+SEQRES   4 A   97  LEU ASP ILE LEU VAL SER ARG SER LEU LYS MET ARG GLY  1URN 200
+SEQRES   5 A   97  GLN ALA PHE VAL ILE PHE LYS GLU VAL SER SER ALA THR  1URN 201
+SEQRES   6 A   97  ASN ALA LEU ARG SER MET GLN GLY PHE PRO PHE TYR ASP  1URN 202
+SEQRES   7 A   97  LYS PRO MET ARG ILE GLN TYR ALA LYS THR ASP SER ASP  1URN 203
+SEQRES   8 A   97  ILE ILE ALA LYS MET LYS                              1URN 204
+SEQRES   1 P   21    A   A   U   C   C   A   U   U   G   C   A   C   U  1URN 205
+SEQRES   2 P   21    C   C   G   G   A   U   U   U                      1URN 206
+SEQRES   1 B   97  ALA VAL PRO GLU THR ARG PRO ASN HIS THR ILE TYR ILE  1URN 207
+SEQRES   2 B   97  ASN ASN LEU ASN GLU LYS ILE LYS LYS ASP GLU LEU LYS  1URN 208
+SEQRES   3 B   97  LYS SER LEU HIS ALA ILE PHE SER ARG PHE GLY GLN ILE  1URN 209
+SEQRES   4 B   97  LEU ASP ILE LEU VAL SER ARG SER LEU LYS MET ARG GLY  1URN 210
+SEQRES   5 B   97  GLN ALA PHE VAL ILE PHE LYS GLU VAL SER SER ALA THR  1URN 211
+SEQRES   6 B   97  ASN ALA LEU ARG SER MET GLN GLY PHE PRO PHE TYR ASP  1URN 212
+SEQRES   7 B   97  LYS PRO MET ARG ILE GLN TYR ALA LYS THR ASP SER ASP  1URN 213
+SEQRES   8 B   97  ILE ILE ALA LYS MET LYS                              1URN 214
+SEQRES   1 Q   21    A   A   U   C   C   A   U   U   G   C   A   C   U  1URN 215
+SEQRES   2 Q   21    C   C   G   G   A   U   U   U                      1URN 216
+SEQRES   1 C   97  ALA VAL PRO GLU THR ARG PRO ASN HIS THR ILE TYR ILE  1URN 217
+SEQRES   2 C   97  ASN ASN LEU ASN GLU LYS ILE LYS LYS ASP GLU LEU LYS  1URN 218
+SEQRES   3 C   97  LYS SER LEU HIS ALA ILE PHE SER ARG PHE GLY GLN ILE  1URN 219
+SEQRES   4 C   97  LEU ASP ILE LEU VAL SER ARG SER LEU LYS MET ARG GLY  1URN 220
+SEQRES   5 C   97  GLN ALA PHE VAL ILE PHE LYS GLU VAL SER SER ALA THR  1URN 221
+SEQRES   6 C   97  ASN ALA LEU ARG SER MET GLN GLY PHE PRO PHE TYR ASP  1URN 222
+SEQRES   7 C   97  LYS PRO MET ARG ILE GLN TYR ALA LYS THR ASP SER ASP  1URN 223
+SEQRES   8 C   97  ILE ILE ALA LYS MET LYS                              1URN 224
+SEQRES   1 R   21    A   A   U   C   C   A   U   U   G   C   A   C   U  1URN 225
+SEQRES   2 R   21    C   C   G   G   A   U   U   U                      1URN 226
+HET     CL  X   1       1     CHLORIDE ION                              1URN 22
+HET    GOL  X   2       6     GLYCEROL                                  1URN 22
+HET    GOL  X   3       6     GLYCEROL                                  1URN 22
+HET    GOL  X   4       6     GLYCEROL                                  1URN 23
+HET    GOL  X   5       6     GLYCEROL                                  1URN 23
+FORMUL   7   CL    CL1 1-                                               1URN 23
+FORMUL   8  GOL    4(C3 H8 O3)                                          1URN 23
+FORMUL   9  HOH   *419(H2 O1)                                           1URN 23
+HELIX    1   1 LYS A   23  PHE A   37  1                                1URN 23
+HELIX    2   2 VAL A   62  MET A   72  1                                1URN 23
+HELIX    3   3 ASP A   92  LYS A   96  1                                1URN 23
+HELIX    4   4 LYS B   23  PHE B   37  1                                1URN 23
+HELIX    5   5 VAL B   62  MET B   72  1                                1URN 23
+HELIX    6   6 ASP B   92  ALA B   95  1                                1URN 24
+HELIX    7   7 LYS C   23  PHE C   37  1                                1URN 24
+HELIX    8   8 VAL C   62  MET C   72  1                                1URN 24
+HELIX    9   9 ASP C   92  LYS C   96  1                                1URN 24
+SHEET    1   A 4 ARG A  83  TYR A  86  0                                1URN 24
+SHEET    2   A 4 THR A  11  ASN A  15 -1  N  ASN A  15   O  ARG A  83   1URN 24
+SHEET    3   A 4 ALA A  55  PHE A  59 -1  N  VAL A  57   O  ILE A  12   1URN 24
+SHEET    4   A 4 ILE A  40  VAL A  45 -1  N  LEU A  44   O  PHE A  56   1URN 24
+SHEET    1   B 4 ARG B  83  TYR B  86  0                                1URN 24
+SHEET    2   B 4 THR B  11  ASN B  15 -1  N  ASN B  15   O  ARG B  83   1URN 24
+SHEET    3   B 4 ALA B  55  PHE B  59 -1  N  VAL B  57   O  ILE B  12   1URN 25
+SHEET    4   B 4 ILE B  40  VAL B  45 -1  N  LEU B  44   O  PHE B  56   1URN 25
+SHEET    1   C 4 ARG C  83  TYR C  86  0                                1URN 25
+SHEET    2   C 4 THR C  11  ASN C  15 -1  N  ASN C  15   O  ARG C  83   1URN 25
+SHEET    3   C 4 ALA C  55  PHE C  59 -1  N  VAL C  57   O  ILE C  12   1URN 25
+SHEET    4   C 4 ILE C  40  VAL C  45 -1  N  LEU C  44   O  PHE C  56   1URN 25
+CRYST1   97.000   97.000  255.300  90.00  90.00 120.00 P 65 2 2     36  1URN 25
+ORIGX1      1.000000  0.000000  0.000000        0.00000                 1URN 25
+ORIGX2      0.000000  1.000000  0.000000        0.00000                 1URN 25
+ORIGX3      0.000000  0.000000  1.000000        0.00000                 1URN 25
+SCALE1      0.010309  0.005952  0.000000        0.00000                 1URN 26
+SCALE2      0.000000  0.011904  0.000000        0.00000                 1URN 26
+SCALE3      0.000000  0.000000  0.003917        0.00000                 1URN 26
+MTRIX1   1 -0.492885  0.869954 -0.015643       45.23000    1            1URN 26
+MTRIX2   1 -0.867553 -0.492739 -0.067533       88.18400    1            1URN 26
+MTRIX3   1 -0.066459 -0.019715  0.997594        4.30200    1            1URN 26
+MTRIX1   2 -0.507575 -0.842921  0.178472       89.67500    1            1URN 26
+MTRIX2   2  0.859541 -0.509712  0.037173        3.24300    1            1URN 26
+MTRIX3   2  0.059636  0.172272  0.983243       -4.92700    1            1URN 26
+MTRIX1   3 -0.483250 -0.868616  0.109436       91.84900    1            1URN 26
+MTRIX2   3  0.844944 -0.495462 -0.201463       13.00800    1            1URN 27
+MTRIX3   3  0.229216 -0.004889  0.973363      -11.46900    1            1URN 27
+MTRIX1   4 -0.422551  0.906153 -0.018369       42.39400    1            1URN 27
+MTRIX2   4 -0.903827 -0.422801 -0.065844       87.40100    1            1URN 27
+MTRIX3   4 -0.067432 -0.011220  0.997661        4.18500    1            1URN 27
+MTRIX1   5 -0.513981 -0.841087  0.168511       90.31000    1            1URN 27
+MTRIX2   5  0.856339 -0.514571  0.043578        3.15100    1            1URN 27
+MTRIX3   5  0.050058  0.166701  0.984736       -4.65500    1            1URN 27
+MTRIX1   6 -0.534356 -0.837798  0.112059       94.47100    1            1URN 27
+MTRIX2   6  0.818556 -0.545967 -0.178567       14.31800    1            1URN 27
+MTRIX3   6  0.210784 -0.003692  0.977526      -10.39600    1            1URN 28
+USER  MOD -----------------------------------------------------------------
+USER  MOD scores for adjustable sidechains, with "set" totals for H,N and Q
+USER  MOD "o" means original, "f" means flipped, "180deg" is methyl default
+USER  MOD "!" flags a clash with an overlap of 0.40A or greater
+USER  MOD flip categories: "K"=keep, "C"=clashes, "X"=uncertain, "F"=flip
+USER  MOD Set 1.1:A  16 ASN     :      amide:sc=    1.54  K(o=1.8,f=-5.3!)
+USER  MOD Set 1.2:A  80 LYS NZ  :NH3+    153:sc=   0.227   (180deg=-0.791)
+USER  MOD Set 2.1:B  29 SER OG  :   rot  173:sc=    2.27
+USER  MOD Set 2.2:B  78 TYR OH  :   rot  -20:sc=     2.1
+USER  MOD Set 3.1:C  15 ASN     :      amide:sc=   -1.25! C(o=-0.51!,f=-6.8!)
+USER  MOD Set 3.2:X   4 GOL O2  :   rot  145:sc=    0.74!
+USER  MOD Set 4.1:B  13 TYR OH  :   rot   11:sc=    2.25
+USER  MOD Set 4.2:B  54 GLN     :      amide:sc=   0.503  K(o=2.8,f=-4.5!)
+USER  MOD Set 5.1:B  46 SER OG  :   rot   82:sc=  0.0914
+USER  MOD Set 5.2:B  48 SER OG  :   rot  180:sc=   0.196
+USER  MOD Set 6.1:C  29 SER OG  :   rot  159:sc=    1.16
+USER  MOD Set 6.2:C  78 TYR OH  :   rot  -17:sc=    1.92
+USER  MOD Set 6.3:X   2 GOL O3  :   rot   44:sc=  0.0399
+USER  MOD Set 7.1:C  13 TYR OH  :   rot    7:sc=     2.3
+USER  MOD Set 7.2:C  54 GLN     :      amide:sc=    1.68  K(o=4,f=-1.8!)
+USER  MOD Set 8.1:A  11 THR OG1 :   rot -151:sc=     2.2
+USER  MOD Set 8.2:A  91 SER OG  :   rot  -43:sc=    2.38
+USER  MOD Set 9.1:C  46 SER OG  :   rot  180:sc=  0.0668
+USER  MOD Set 9.2:C  48 SER OG  :   rot  180:sc=  0.0939
+USER  MOD Set10.1:A  88 LYS NZ  :NH3+   -128:sc=    1.05   (180deg=-0.436)
+USER  MOD Set10.2:P  10   C O2' :   rot   23:sc=   0.035
+USER  MOD Set11.1:B  16 ASN     :      amide:sc=    1.84  K(o=2.8,f=-4.8!)
+USER  MOD Set11.2:B  80 LYS NZ  :NH3+    155:sc=   0.973   (180deg=0.34)
+USER  MOD Set12.1:B  39 GLN     :      amide:sc=  -0.126  X(o=-0.13,f=-0.11)
+USER  MOD Set12.2:B  60 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Set13.1:B  66 THR OG1 :   rot  -54:sc=   0.585
+USER  MOD Set13.2:B  86 TYR OH  :   rot  176:sc=    1.24
+USER  MOD Set14.1:C  16 ASN     :      amide:sc=    1.67  K(o=2.9,f=-5.5!)
+USER  MOD Set14.2:C  80 LYS NZ  :NH3+    151:sc=    1.25   (180deg=0.748)
+USER  MOD Set15.1:C  39 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Set15.2:C  60 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Set16.1:A  13 TYR OH  :   rot   12:sc=    2.25
+USER  MOD Set16.2:A  54 GLN     :      amide:sc=   0.982  K(o=3.2,f=-4!)
+USER  MOD Set17.1:B  72 MET CE  :methyl -161:sc=   -2.62   (180deg=-3.41!)
+USER  MOD Set17.2:B  82 MET CE  :methyl  175:sc=   -3.18!  (180deg=-3.94!)
+USER  MOD Set18.1:B  11 THR OG1 :   rot -156:sc=    2.16
+USER  MOD Set18.2:B  91 SER OG  :   rot  -60:sc=    2.53
+USER  MOD Set19.1:A  29 SER OG  :   rot  176:sc=    1.25
+USER  MOD Set19.2:A  78 TYR OH  :   rot  -31:sc=    2.19
+USER  MOD Set20.1:B  88 LYS NZ  :NH3+   -134:sc=    1.22   (180deg=-0.0436)
+USER  MOD Set20.2:Q  10   C O2' :   rot   51:sc=  -0.586
+USER  MOD Set21.1:C  11 THR OG1 :   rot -171:sc=    1.71
+USER  MOD Set21.2:C  91 SER OG  :   rot  -37:sc=    2.09
+USER  MOD Set22.1:A  66 THR OG1 :   rot  -37:sc=    1.91
+USER  MOD Set22.2:A  86 TYR OH  :   rot -149:sc=    1.95
+USER  MOD Set23.1:C  88 LYS NZ  :NH3+   -146:sc=    1.52   (180deg=-0.285)
+USER  MOD Set23.2:R  10   C O2' :   rot  120:sc=    1.08
+USER  MOD Set24.1:A  72 MET CE  :methyl -169:sc=   -4.43!  (180deg=-5.27!)
+USER  MOD Set24.2:A  82 MET CE  :methyl  158:sc=  -0.342   (180deg=-1.31)
+USER  MOD Set25.1:A  46 SER OG  :   rot  180:sc=  0.0926
+USER  MOD Set25.2:A  48 SER OG  :   rot  180:sc=   0.114
+USER  MOD Single :A   6 THR OG1 :   rot -161:sc=    1.61
+USER  MOD Single :A   9 ASN     :      amide:sc=    2.19  K(o=2.2,f=-3.4!)
+USER  MOD Single :A  10 HIS     :     no HE2:sc=     1.7  K(o=1.7,f=-4.1!)
+USER  MOD Single :A  15 ASN     :      amide:sc=    2.95  K(o=3,f=-0.14)
+USER  MOD Single :A  18 ASN     :      amide:sc=   0.696  K(o=0.7,f=-8.1!)
+USER  MOD Single :A  22 LYS NZ  :NH3+    171:sc=   0.293   (180deg=0.199)
+USER  MOD Single :A  23 LYS NZ  :NH3+   -132:sc=   0.137   (180deg=0.00186)
+USER  MOD Single :A  27 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :A  28 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :A  31 HIS     :     no HD1:sc= -0.0678  K(o=-0.068,f=-0.75)
+USER  MOD Single :A  35 SER OG  :   rot -100:sc= 0.00714
+USER  MOD Single :A  39 GLN     :      amide:sc=   0.936  K(o=0.94,f=0.23)
+USER  MOD Single :A  50 LYS NZ  :NH3+    169:sc=   0.291   (180deg=0.224)
+USER  MOD Single :A  51 MET CE  :methyl -168:sc=  -0.631   (180deg=-0.986)
+USER  MOD Single :A  60 LYS NZ  :NH3+    161:sc= -0.0592   (180deg=-0.798)
+USER  MOD Single :A  63 SER OG  :   rot -128:sc=    2.25
+USER  MOD Single :A  64 SER OG  :   rot  137:sc=   0.589
+USER  MOD Single :A  67 ASN     :      amide:sc=    1.62  K(o=1.6,f=-0.54!)
+USER  MOD Single :A  71 SER OG  :   rot   84:sc=    1.65
+USER  MOD Single :A  73 GLN     :      amide:sc=    2.58  K(o=2.6,f=-5.7!)
+USER  MOD Single :A  85 GLN     :      amide:sc=    2.69  K(o=2.7,f=-5.9!)
+USER  MOD Single :A  89 THR OG1 :   rot  -56:sc=    1.11
+USER  MOD Single :A  96 LYS NZ  :NH3+   -165:sc=  -0.331   (180deg=-0.363)
+USER  MOD Single :A  97 MET CE  :methyl -155:sc= -0.0548   (180deg=-1.15)
+USER  MOD Single :B   6 THR OG1 :   rot  -35:sc=   0.957
+USER  MOD Single :B   9 ASN     :      amide:sc=    2.39  K(o=2.4,f=-4.1!)
+USER  MOD Single :B  10 HIS     :FLIP no HE2:sc=   -1.16  F(o=-1.8!,f=-1.2)
+USER  MOD Single :B  15 ASN     :      amide:sc=     1.5  K(o=1.5,f=-2.6!)
+USER  MOD Single :B  18 ASN     :      amide:sc=    1.04  K(o=1,f=-5.9!)
+USER  MOD Single :B  22 LYS NZ  :NH3+   -171:sc=   0.391   (180deg=0.352)
+USER  MOD Single :B  23 LYS NZ  :NH3+   -124:sc=  0.0334   (180deg=0)
+USER  MOD Single :B  27 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B  28 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B  31 HIS     :     no HD1:sc=       0  X(o=0,f=-0.021)
+USER  MOD Single :B  35 SER OG  :   rot  -90:sc=   0.711
+USER  MOD Single :B  50 LYS NZ  :NH3+    142:sc=   0.712   (180deg=-0.609!)
+USER  MOD Single :B  51 MET CE  :methyl -179:sc=   -0.94   (180deg=-0.942)
+USER  MOD Single :B  63 SER OG  :   rot  180:sc=       0
+USER  MOD Single :B  64 SER OG  :   rot  -62:sc=   0.396
+USER  MOD Single :B  67 ASN     :      amide:sc=    1.41  K(o=1.4,f=-0.37)
+USER  MOD Single :B  71 SER OG  :   rot   88:sc=   0.591
+USER  MOD Single :B  73 GLN     :      amide:sc=    2.97  K(o=3,f=-4.8!)
+USER  MOD Single :B  85 GLN     :      amide:sc=  0.0419  X(o=0.042,f=0.18)
+USER  MOD Single :B  89 THR OG1 :   rot  -51:sc=    1.24
+USER  MOD Single :B  97 MET CE  :methyl -149:sc=  -0.145   (180deg=-1.29)
+USER  MOD Single :C   6 THR OG1 :   rot  -44:sc=    2.08
+USER  MOD Single :C   9 ASN     :      amide:sc=    2.38  K(o=2.4,f=-3.5!)
+USER  MOD Single :C  10 HIS     :     no HE2:sc=  -0.677  K(o=-0.68,f=-2.9!)
+USER  MOD Single :C  18 ASN     :      amide:sc=   0.275  K(o=0.28,f=-6.7!)
+USER  MOD Single :C  22 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :C  23 LYS NZ  :NH3+   -166:sc=  0.0396   (180deg=0.0176)
+USER  MOD Single :C  27 LYS NZ  :NH3+   -151:sc=  0.0559   (180deg=0)
+USER  MOD Single :C  28 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :C  31 HIS     :     no HD1:sc=    0.35  K(o=0.35,f=-7.5!)
+USER  MOD Single :C  35 SER OG  :   rot  -82:sc=    1.13
+USER  MOD Single :C  51 MET CE  :methyl -175:sc=  -0.845   (180deg=-0.901)
+USER  MOD Single :C  63 SER OG  :   rot -109:sc=    1.73
+USER  MOD Single :C  64 SER OG  :   rot  141:sc=   0.906
+USER  MOD Single :C  66 THR OG1 :   rot  -31:sc=   0.862
+USER  MOD Single :C  67 ASN     :      amide:sc=   0.614  K(o=0.61,f=-4.2!)
+USER  MOD Single :C  71 SER OG  :   rot  109:sc=    2.03
+USER  MOD Single :C  72 MET CE  :methyl  150:sc= -0.0441   (180deg=-1.94)
+USER  MOD Single :C  73 GLN     :      amide:sc=    3.35  K(o=3.3,f=-5.1!)
+USER  MOD Single :C  82 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :C  85 GLN     :      amide:sc=     1.1  K(o=1.1,f=-4.9!)
+USER  MOD Single :C  86 TYR OH  :   rot -164:sc=  -0.703
+USER  MOD Single :C  89 THR OG1 :   rot  175:sc=  0.0369
+USER  MOD Single :C  97 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :P   1   A O2' :   rot  -19:sc=  0.0132
+USER  MOD Single :P   1   A O5' :   rot    1:sc=   0.406
+USER  MOD Single :P   2   A O2' :   rot  -23:sc= -0.0269
+USER  MOD Single :P   3   U O2' :   rot  180:sc=       0
+USER  MOD Single :P   4   C O2' :   rot  -12:sc= -0.0931
+USER  MOD Single :P   5   C O2' :   rot  -21:sc=   0.111
+USER  MOD Single :P   6   A O2' :   rot  152:sc=    1.45
+USER  MOD Single :P   7   U O2' :   rot -136:sc=    1.27
+USER  MOD Single :P   8   U O2' :   rot   19:sc=    0.17
+USER  MOD Single :P   9   G O2' :   rot  157:sc=    1.64
+USER  MOD Single :P  11   A O2' :   rot -160:sc=    1.96
+USER  MOD Single :P  12   C O2' :   rot  -16:sc= 0.00996
+USER  MOD Single :P  16   G O2' :   rot  -16:sc=  -0.108
+USER  MOD Single :P  17   G O2' :   rot  180:sc=  -0.805
+USER  MOD Single :P  18   A O2' :   rot  -27:sc=   0.109
+USER  MOD Single :P  19   U O2' :   rot  139:sc=    1.48
+USER  MOD Single :P  20   U O2' :   rot  -21:sc=   0.296
+USER  MOD Single :Q   1   A O2' :   rot  -13:sc=   0.103
+USER  MOD Single :Q   1   A O5' :   rot  180:sc=       0
+USER  MOD Single :Q   2   A O2' :   rot  -24:sc=  0.0803
+USER  MOD Single :Q   3   U O2' :   rot  -30:sc=  0.0389
+USER  MOD Single :Q   4   C O2' :   rot  154:sc=    1.22
+USER  MOD Single :Q   5   C O2' :   rot  -20:sc=  0.0515
+USER  MOD Single :Q   6   A O2' :   rot  171:sc=    1.25
+USER  MOD Single :Q   7   U O2' :   rot -142:sc=    1.26
+USER  MOD Single :Q   8   U O2' :   rot   27:sc=    0.26
+USER  MOD Single :Q   9   G O2' :   rot  171:sc=    2.17
+USER  MOD Single :Q  11   A O2' :   rot  169:sc=    1.15
+USER  MOD Single :Q  12   C O2' :   rot  -24:sc=   0.118
+USER  MOD Single :Q  13   U O2' :   rot  132:sc= -0.0809!
+USER  MOD Single :Q  14   C O2' :   rot  180:sc=       0
+USER  MOD Single :Q  15   C O2' :   rot   77:sc=  0.0618
+USER  MOD Single :Q  16   G O2' :   rot  -23:sc= -0.0206
+USER  MOD Single :Q  17   G O2' :   rot  180:sc= -0.0292
+USER  MOD Single :Q  18   A O2' :   rot   76:sc=   0.317
+USER  MOD Single :Q  19   U O2' :   rot -104:sc=   0.257
+USER  MOD Single :Q  20   U O2' :   rot  -26:sc=   0.299
+USER  MOD Single :Q  21   U O2' :   rot  -24:sc=  0.0967
+USER  MOD Single :Q  21   U O3' :   rot  180:sc=   0.136
+USER  MOD Single :R   1   A O2' :   rot  180:sc=       0
+USER  MOD Single :R   1   A O5' :   rot   -6:sc=  -0.249
+USER  MOD Single :R   2   A O2' :   rot  180:sc=  -0.628
+USER  MOD Single :R   3   U O2' :   rot  173:sc=   -0.93
+USER  MOD Single :R   4   C O2' :   rot  -15:sc=  0.0334
+USER  MOD Single :R   5   C O2' :   rot  180:sc=   -1.25!
+USER  MOD Single :R   6   A O2' :   rot  161:sc=    0.38
+USER  MOD Single :R   7   U O2' :   rot -151:sc=    1.21
+USER  MOD Single :R   8   U O2' :   rot   42:sc=    1.49
+USER  MOD Single :R   9   G O2' :   rot  162:sc=    1.87
+USER  MOD Single :R  11   A O2' :   rot  150:sc=    1.09
+USER  MOD Single :R  12   C O2' :   rot  -20:sc= 0.00919
+USER  MOD Single :R  15   C O2' :   rot  180:sc=       0
+USER  MOD Single :R  16   G O2' :   rot  -24:sc=  -0.026
+USER  MOD Single :R  17   G O2' :   rot  -21:sc= 0.00338
+USER  MOD Single :R  18   A O2' :   rot  -28:sc=  0.0286
+USER  MOD Single :R  19   U O2' :   rot  -20:sc=     0.1
+USER  MOD Single :R  20   U O2' :   rot  180:sc=    -0.1
+USER  MOD Single :X   2 GOL O1  :   rot -130:sc=    1.94
+USER  MOD Single :X   2 GOL O2  :   rot  -17:sc=  0.0846
+USER  MOD Single :X   3 GOL O1  :   rot  -19:sc=    0.13
+USER  MOD Single :X   3 GOL O2  :   rot  134:sc=   0.299
+USER  MOD Single :X   3 GOL O3  :   rot  160:sc=   0.826
+USER  MOD Single :X   4 GOL O1  :   rot  -78:sc=    2.16
+USER  MOD Single :X   4 GOL O3  :   rot  173:sc=  -0.601!
+USER  MOD Single :X   5 GOL O1  :   rot  -37:sc=    1.43
+USER  MOD Single :X   5 GOL O2  :   rot  131:sc=   0.529
+USER  MOD Single :X   5 GOL O3  :   rot  180:sc=   0.284
+USER  MOD -----------------------------------------------------------------                            1URN105
+ATOM    772  O5'   A P   1      19.150  44.193  49.797  1.00 45.42      1URN1052
+ATOM    773  C5'   A P   1      20.523  44.432  49.478  1.00 41.44      1URN1053
+ATOM    774  C4'   A P   1      21.043  45.769  49.950  1.00 41.15      1URN1054
+ATOM    775  O4'   A P   1      20.024  46.382  50.813  1.00 39.32      1URN1055
+ATOM    776  C3'   A P   1      22.287  45.778  50.822  1.00 40.74      1URN1056
+ATOM    777  O3'   A P   1      23.548  45.751  50.195  1.00 41.26      1URN1057
+ATOM    778  C2'   A P   1      22.134  47.039  51.673  1.00 39.86      1URN1058
+ATOM    779  O2'   A P   1      22.665  48.250  51.197  1.00 38.81      1URN1059
+ATOM    780  C1'   A P   1      20.653  46.932  51.967  1.00 36.79      1URN1060
+ATOM    781  N9    A P   1      20.248  46.134  53.125  1.00 31.03      1URN1061
+ATOM    782  C8    A P   1      19.440  45.011  53.110  1.00 30.60      1URN1062
+ATOM    783  N7    A P   1      19.205  44.494  54.302  1.00 30.02      1URN1063
+ATOM    784  C5    A P   1      19.903  45.354  55.160  1.00 28.94      1URN1064
+ATOM    785  C6    A P   1      20.031  45.353  56.564  1.00 28.53      1URN1065
+ATOM    786  N6    A P   1      19.456  44.437  57.372  1.00 30.59      1URN1066
+ATOM    787  N1    A P   1      20.790  46.343  57.081  1.00 31.11      1URN1067
+ATOM    788  C2    A P   1      21.362  47.281  56.299  1.00 31.28      1URN1068
+ATOM    789  N3    A P   1      21.306  47.382  54.965  1.00 32.04      1URN1069
+ATOM    790  C4    A P   1      20.549  46.363  54.456  1.00 31.16      1URN1070
+ATOM    791  P     A P   2      24.689  44.766  50.804  1.00 39.68      1URN1071
+ATOM    792  OP1   A P   2      24.097  43.410  51.016  1.00 36.45      1URN1072
+ATOM    793  OP2   A P   2      25.891  44.907  49.926  1.00 42.84      1URN1073
+ATOM    794  O5'   A P   2      25.056  45.447  52.200  1.00 37.15      1URN1074
+ATOM    795  C5'   A P   2      25.706  46.696  52.452  1.00 34.34      1URN1075
+ATOM    796  C4'   A P   2      25.892  46.850  53.951  1.00 34.79      1URN1076
+ATOM    797  O4'   A P   2      24.622  46.883  54.680  1.00 31.16      1URN1077
+ATOM    798  C3'   A P   2      26.596  45.693  54.698  1.00 32.77      1URN1078
+ATOM    799  O3'   A P   2      27.966  45.734  54.384  1.00 34.64      1URN1079
+ATOM    800  C2'   A P   2      26.355  46.148  56.147  1.00 30.10      1URN1080
+ATOM    801  O2'   A P   2      27.061  47.357  56.462  1.00 28.08      1URN1081
+ATOM    802  C1'   A P   2      24.867  46.374  55.995  1.00 27.46      1URN1082
+ATOM    803  N9    A P   2      24.033  45.196  55.889  1.00 22.91      1URN1083
+ATOM    804  C8    A P   2      23.536  44.595  54.775  1.00 21.16      1URN1084
+ATOM    805  N7    A P   2      22.781  43.542  55.068  1.00 20.38      1URN1085
+ATOM    806  C5    A P   2      22.805  43.521  56.454  1.00 19.46      1URN1086
+ATOM    807  C6    A P   2      22.181  42.665  57.383  1.00 21.83      1URN1087
+ATOM    808  N6    A P   2      21.405  41.630  57.042  1.00 18.57      1URN1088
+ATOM    809  N1    A P   2      22.444  42.942  58.687  1.00 20.19      1URN1089
+ATOM    810  C2    A P   2      23.235  43.974  59.008  1.00 21.79      1URN1090
+ATOM    811  N3    A P   2      23.872  44.886  58.262  1.00 24.17      1URN1091
+ATOM    812  C4    A P   2      23.568  44.528  56.981  1.00 22.40      1URN1092
+ATOM    813  P     U P   3      28.846  44.372  54.400  1.00 35.25      1URN1093
+ATOM    814  OP1   U P   3      28.144  43.199  53.823  1.00 34.40      1URN1094
+ATOM    815  OP2   U P   3      30.191  44.844  53.943  1.00 35.93      1URN1095
+ATOM    816  O5'   U P   3      28.996  44.103  55.995  1.00 37.05      1URN1096
+ATOM    817  C5'   U P   3      29.564  45.007  56.962  1.00 31.49      1URN1097
+ATOM    818  C4'   U P   3      29.300  44.439  58.340  1.00 31.27      1URN1098
+ATOM    819  O4'   U P   3      27.870  44.478  58.623  1.00 29.59      1URN1099
+ATOM    820  C3'   U P   3      29.607  42.946  58.585  1.00 31.29      1URN1100
+ATOM    821  O3'   U P   3      31.000  42.797  58.736  1.00 33.36      1URN1101
+ATOM    822  C2'   U P   3      28.844  42.729  59.891  1.00 32.15      1URN1102
+ATOM    823  O2'   U P   3      29.365  43.489  60.989  1.00 32.26      1URN1103
+ATOM    824  C1'   U P   3      27.533  43.372  59.445  1.00 30.58      1URN1104
+ATOM    825  N1    U P   3      26.688  42.556  58.603  1.00 29.05      1URN1105
+ATOM    826  C2    U P   3      25.908  41.675  59.325  1.00 30.63      1URN1106
+ATOM    827  O2    U P   3      25.973  41.609  60.545  1.00 32.67      1URN1107
+ATOM    828  N3    U P   3      25.082  40.911  58.549  1.00 27.98      1URN1108
+ATOM    829  C4    U P   3      25.018  40.996  57.158  1.00 28.06      1URN1109
+ATOM    830  O4    U P   3      24.213  40.204  56.623  1.00 28.33      1URN1110
+ATOM    831  C5    U P   3      25.852  41.939  56.494  1.00 24.56      1URN1111
+ATOM    832  C6    U P   3      26.676  42.703  57.235  1.00 29.28      1URN1112
+ATOM    833  P     C P   4      31.734  41.388  58.440  1.00 34.08      1URN1113
+ATOM    834  OP1   C P   4      31.368  40.826  57.093  1.00 37.85      1URN1114
+ATOM    835  OP2   C P   4      33.157  41.717  58.769  1.00 34.11      1URN1115
+ATOM    836  O5'   C P   4      31.141  40.273  59.428  1.00 32.56      1URN1116
+ATOM    837  C5'   C P   4      31.321  40.332  60.845  1.00 28.52      1URN1117
+ATOM    838  C4'   C P   4      30.431  39.332  61.516  1.00 27.83      1URN1118
+ATOM    839  O4'   C P   4      29.016  39.631  61.333  1.00 26.66      1URN1119
+ATOM    840  C3'   C P   4      30.527  37.872  61.048  1.00 28.43      1URN1120
+ATOM    841  O3'   C P   4      31.757  37.326  61.464  1.00 28.71      1URN1121
+ATOM    842  C2'   C P   4      29.322  37.324  61.822  1.00 27.82      1URN1122
+ATOM    843  O2'   C P   4      29.534  37.280  63.216  1.00 30.10      1URN1123
+ATOM    844  C1'   C P   4      28.302  38.403  61.474  1.00 26.32      1URN1124
+ATOM    845  N1    C P   4      27.712  38.205  60.134  1.00 25.31      1URN1125
+ATOM    846  C2    C P   4      26.745  37.218  60.071  1.00 25.79      1URN1126
+ATOM    847  O2    C P   4      26.469  36.600  61.104  1.00 27.89      1URN1127
+ATOM    848  N3    C P   4      26.160  36.975  58.872  1.00 27.43      1URN1128
+ATOM    849  C4    C P   4      26.568  37.738  57.833  1.00 24.86      1URN1129
+ATOM    850  N4    C P   4      25.924  37.424  56.694  1.00 24.91      1URN1130
+ATOM    851  C5    C P   4      27.573  38.747  57.879  1.00 23.24      1URN1131
+ATOM    852  C6    C P   4      28.150  38.974  59.075  1.00 21.98      1URN1132
+ATOM    853  P     C P   5      32.415  36.003  60.841  1.00 28.41      1URN1133
+ATOM    854  OP1   C P   5      32.344  36.051  59.343  1.00 30.35      1URN1134
+ATOM    855  OP2   C P   5      33.779  35.912  61.460  1.00 30.49      1URN1135
+ATOM    856  O5'   C P   5      31.515  34.797  61.306  1.00 27.18      1URN1136
+ATOM    857  C5'   C P   5      31.200  34.539  62.679  1.00 25.72      1URN1137
+ATOM    858  C4'   C P   5      30.240  33.383  62.661  1.00 25.86      1URN1138
+ATOM    859  O4'   C P   5      28.948  33.840  62.170  1.00 26.15      1URN1139
+ATOM    860  C3'   C P   5      30.597  32.272  61.680  1.00 28.68      1URN1140
+ATOM    861  O3'   C P   5      31.587  31.400  62.194  1.00 30.03      1URN1141
+ATOM    862  C2'   C P   5      29.243  31.562  61.602  1.00 27.77      1URN1142
+ATOM    863  O2'   C P   5      29.001  30.780  62.750  1.00 30.98      1URN1143
+ATOM    864  C1'   C P   5      28.308  32.751  61.517  1.00 25.68      1URN1144
+ATOM    865  N1    C P   5      28.045  33.203  60.139  1.00 22.76      1URN1145
+ATOM    866  C2    C P   5      27.165  32.396  59.409  1.00 25.25      1URN1146
+ATOM    867  O2    C P   5      26.692  31.385  59.955  1.00 22.98      1URN1147
+ATOM    868  N3    C P   5      26.861  32.772  58.132  1.00 23.10      1URN1148
+ATOM    869  C4    C P   5      27.441  33.886  57.660  1.00 20.90      1URN1149
+ATOM    870  N4    C P   5      27.137  34.230  56.398  1.00 22.59      1URN1150
+ATOM    871  C5    C P   5      28.352  34.723  58.376  1.00 20.74      1URN1151
+ATOM    872  C6    C P   5      28.631  34.337  59.640  1.00 22.52      1URN1152
+ATOM    873  P     A P   6      32.656  30.694  61.202  1.00 31.30      1URN1153
+ATOM    874  OP1   A P   6      33.239  31.745  60.301  1.00 29.86      1URN1154
+ATOM    875  OP2   A P   6      33.616  29.940  62.060  1.00 32.10      1URN1155
+ATOM    876  O5'   A P   6      31.809  29.585  60.419  1.00 28.78      1URN1156
+ATOM    877  C5'   A P   6      31.253  28.419  61.046  1.00 25.88      1URN1157
+ATOM    878  C4'   A P   6      30.253  27.787  60.111  1.00 25.56      1URN1158
+ATOM    879  O4'   A P   6      29.213  28.764  59.814  1.00 24.85      1URN1159
+ATOM    880  C3'   A P   6      30.805  27.458  58.730  1.00 24.92      1URN1160
+ATOM    881  O3'   A P   6      31.517  26.223  58.775  1.00 27.69      1URN1161
+ATOM    882  C2'   A P   6      29.523  27.400  57.926  1.00 25.53      1URN1162
+ATOM    883  O2'   A P   6      28.701  26.269  58.158  1.00 25.47      1URN1163
+ATOM    884  C1'   A P   6      28.826  28.651  58.464  1.00 23.99      1URN1164
+ATOM    885  N9    A P   6      29.229  29.853  57.738  1.00 22.19      1URN1165
+ATOM    886  C8    A P   6      30.064  30.911  58.003  1.00 19.40      1URN1166
+ATOM    887  N7    A P   6      30.119  31.796  57.042  1.00 20.06      1URN1167
+ATOM    888  C5    A P   6      29.259  31.251  56.078  1.00 20.19      1URN1168
+ATOM    889  C6    A P   6      28.848  31.657  54.789  1.00 18.62      1URN1169
+ATOM    890  N6    A P   6      29.336  32.809  54.312  1.00 17.70      1URN1170
+ATOM    891  N1    A P   6      27.981  30.901  54.091  1.00 16.07      1URN1171
+ATOM    892  C2    A P   6      27.516  29.748  54.602  1.00 16.94      1URN1172
+ATOM    893  N3    A P   6      27.849  29.258  55.797  1.00 21.14      1URN1173
+ATOM    894  C4    A P   6      28.700  30.062  56.470  1.00 20.41      1URN1174
+ATOM    895  P     U P   7      32.838  26.167  57.830  1.00 29.14      1URN1175
+ATOM    896  OP1   U P   7      33.667  27.404  57.865  1.00 29.64      1URN1176
+ATOM    897  OP2   U P   7      33.537  24.885  58.109  1.00 31.29      1URN1177
+ATOM    898  O5'   U P   7      32.212  26.048  56.349  1.00 26.97      1URN1178
+ATOM    899  C5'   U P   7      31.296  25.016  56.003  1.00 24.02      1URN1179
+ATOM    900  C4'   U P   7      30.650  25.238  54.668  1.00 22.98      1URN1180
+ATOM    901  O4'   U P   7      29.851  26.450  54.683  1.00 24.43      1URN1181
+ATOM    902  C3'   U P   7      31.612  25.477  53.488  1.00 24.57      1URN1182
+ATOM    903  O3'   U P   7      32.161  24.219  53.109  1.00 26.14      1URN1183
+ATOM    904  C2'   U P   7      30.641  26.068  52.475  1.00 23.62      1URN1184
+ATOM    905  O2'   U P   7      29.756  25.137  51.888  1.00 23.96      1URN1185
+ATOM    906  C1'   U P   7      29.865  27.024  53.400  1.00 23.33      1URN1186
+ATOM    907  N1    U P   7      30.592  28.299  53.517  1.00 21.99      1URN1187
+ATOM    908  C2    U P   7      30.343  29.182  52.477  1.00 20.73      1URN1188
+ATOM    909  O2    U P   7      29.556  28.907  51.588  1.00 22.17      1URN1189
+ATOM    910  N3    U P   7      31.040  30.349  52.584  1.00 19.90      1URN1190
+ATOM    911  C4    U P   7      31.917  30.693  53.602  1.00 19.90      1URN1191
+ATOM    912  O4    U P   7      32.445  31.799  53.527  1.00 22.07      1URN1192
+ATOM    913  C5    U P   7      32.134  29.730  54.637  1.00 18.45      1URN1193
+ATOM    914  C6    U P   7      31.458  28.566  54.545  1.00 20.59      1URN1194
+ATOM    915  P     U P   8      33.673  24.064  52.541  1.00 26.16      1URN1195
+ATOM    916  OP1   U P   8      34.667  24.897  53.261  1.00 27.39      1URN1196
+ATOM    917  OP2   U P   8      33.872  22.597  52.308  1.00 27.43      1URN1197
+ATOM    918  O5'   U P   8      33.532  24.800  51.085  1.00 23.88      1URN1198
+ATOM    919  C5'   U P   8      32.781  24.136  50.045  1.00 20.94      1URN1199
+ATOM    920  C4'   U P   8      33.647  24.137  48.796  1.00 21.70      1URN1200
+ATOM    921  O4'   U P   8      34.021  25.502  48.483  1.00 20.78      1URN1201
+ATOM    922  C3'   U P   8      34.971  23.382  48.908  1.00 23.29      1URN1202
+ATOM    923  O3'   U P   8      35.223  22.688  47.700  1.00 24.65      1URN1203
+ATOM    924  C2'   U P   8      36.041  24.462  49.019  1.00 21.05      1URN1204
+ATOM    925  O2'   U P   8      37.316  24.056  48.559  1.00 20.97      1URN1205
+ATOM    926  C1'   U P   8      35.393  25.523  48.113  1.00 21.65      1URN1206
+ATOM    927  N1    U P   8      35.950  26.841  48.415  1.00 21.82      1URN1207
+ATOM    928  C2    U P   8      36.738  27.484  47.483  1.00 20.26      1URN1208
+ATOM    929  O2    U P   8      36.981  27.010  46.392  1.00 20.36      1URN1209
+ATOM    930  N3    U P   8      37.243  28.717  47.843  1.00 19.48      1URN1210
+ATOM    931  C4    U P   8      37.020  29.327  49.066  1.00 23.32      1URN1211
+ATOM    932  O4    U P   8      37.540  30.434  49.243  1.00 21.22      1URN1212
+ATOM    933  C5    U P   8      36.186  28.583  49.971  1.00 22.58      1URN1213
+ATOM    934  C6    U P   8      35.673  27.394  49.655  1.00 21.76      1URN1214
+ATOM    935  P     G P   9      34.661  21.194  47.430  1.00 25.47      1URN1215
+ATOM    936  OP1   G P   9      35.449  20.720  46.233  1.00 28.84      1URN1216
+ATOM    937  OP2   G P   9      34.637  20.409  48.684  1.00 27.30      1URN1217
+ATOM    938  O5'   G P   9      33.162  21.383  46.926  1.00 25.06      1URN1218
+ATOM    939  C5'   G P   9      32.017  20.837  47.563  1.00 21.53      1URN1219
+ATOM    940  C4'   G P   9      30.807  21.663  47.189  1.00 17.50      1URN1220
+ATOM    941  O4'   G P   9      30.964  23.007  47.706  1.00 18.86      1URN1221
+ATOM    942  C3'   G P   9      30.518  21.846  45.706  1.00 19.13      1URN1222
+ATOM    943  O3'   G P   9      29.770  20.748  45.201  1.00 19.81      1URN1223
+ATOM    944  C2'   G P   9      29.692  23.134  45.719  1.00 17.43      1URN1224
+ATOM    945  O2'   G P   9      28.318  22.945  45.971  1.00 18.07      1URN1225
+ATOM    946  C1'   G P   9      30.346  23.932  46.839  1.00 18.07      1URN1226
+ATOM    947  N9    G P   9      31.387  24.841  46.347  1.00 19.49      1URN1227
+ATOM    948  C8    G P   9      32.284  24.635  45.324  1.00 18.36      1URN1228
+ATOM    949  N7    G P   9      33.082  25.669  45.156  1.00 17.56      1URN1229
+ATOM    950  C5    G P   9      32.701  26.602  46.106  1.00 17.77      1URN1230
+ATOM    951  C6    G P   9      33.203  27.903  46.415  1.00 18.55      1URN1231
+ATOM    952  O6    G P   9      34.125  28.531  45.870  1.00 18.27      1URN1232
+ATOM    953  N1    G P   9      32.514  28.481  47.499  1.00 17.67      1URN1233
+ATOM    954  C2    G P   9      31.482  27.851  48.168  1.00 19.35      1URN1234
+ATOM    955  N2    G P   9      30.918  28.511  49.191  1.00 20.21      1URN1235
+ATOM    956  N3    G P   9      31.004  26.657  47.897  1.00 19.63      1URN1236
+ATOM    957  C4    G P   9      31.659  26.091  46.858  1.00 18.73      1URN1237
+ATOM    958  P     C P  10      29.966  20.113  43.721  1.00 19.33      1URN1238
+ATOM    959  OP1   C P  10      31.432  19.809  43.597  1.00 19.14      1URN1239
+ATOM    960  OP2   C P  10      28.982  19.010  43.514  1.00 19.28      1URN1240
+ATOM    961  O5'   C P  10      29.608  21.312  42.734  1.00 16.74      1URN1241
+ATOM    962  C5'   C P  10      28.410  22.056  42.566  1.00 16.40      1URN1242
+ATOM    963  C4'   C P  10      27.798  21.717  41.223  1.00 20.74      1URN1243
+ATOM    964  O4'   C P  10      28.705  22.137  40.157  1.00 22.73      1URN1244
+ATOM    965  C3'   C P  10      27.504  20.241  40.932  1.00 21.29      1URN1245
+ATOM    966  O3'   C P  10      26.372  20.103  40.085  1.00 25.48      1URN1246
+ATOM    967  C2'   C P  10      28.757  19.806  40.173  1.00 21.39      1URN1247
+ATOM    968  O2'   C P  10      28.634  18.611  39.419  1.00 20.00      1URN1248
+ATOM    969  C1'   C P  10      28.930  21.055  39.279  1.00 19.47      1URN1249
+ATOM    970  N1    C P  10      30.285  21.073  38.697  1.00 19.13      1URN1250
+ATOM    971  C2    C P  10      30.404  21.021  37.298  1.00 17.87      1URN1251
+ATOM    972  O2    C P  10      29.377  21.023  36.594  1.00 16.35      1URN1252
+ATOM    973  N3    C P  10      31.651  20.983  36.763  1.00 16.42      1URN1253
+ATOM    974  C4    C P  10      32.740  20.996  37.539  1.00 15.32      1URN1254
+ATOM    975  N4    C P  10      33.941  20.937  36.942  1.00 13.31      1URN1255
+ATOM    976  C5    C P  10      32.638  21.012  38.971  1.00 14.89      1URN1256
+ATOM    977  C6    C P  10      31.398  21.055  39.503  1.00 14.87      1URN1257
+ATOM    978  P     A P  11      25.024  19.233  40.359  1.00 24.85      1URN1258
+ATOM    979  OP1   A P  11      24.754  18.296  39.217  1.00 27.71      1URN1259
+ATOM    980  OP2   A P  11      25.103  18.707  41.752  1.00 27.46      1URN1260
+ATOM    981  O5'   A P  11      23.895  20.363  40.239  1.00 23.19      1URN1261
+ATOM    982  C5'   A P  11      23.762  21.460  41.131  1.00 19.80      1URN1262
+ATOM    983  C4'   A P  11      23.548  22.732  40.378  1.00 22.30      1URN1263
+ATOM    984  O4'   A P  11      24.704  23.122  39.580  1.00 23.52      1URN1264
+ATOM    985  C3'   A P  11      22.437  22.663  39.332  1.00 23.73      1URN1265
+ATOM    986  O3'   A P  11      21.182  22.730  39.983  1.00 27.60      1URN1266
+ATOM    987  C2'   A P  11      22.733  23.883  38.483  1.00 22.78      1URN1267
+ATOM    988  O2'   A P  11      22.459  25.108  39.154  1.00 22.27      1URN1268
+ATOM    989  C1'   A P  11      24.233  23.723  38.366  1.00 20.86      1URN1269
+ATOM    990  N9    A P  11      24.772  22.932  37.263  1.00 16.66      1URN1270
+ATOM    991  C8    A P  11      25.301  21.669  37.188  1.00 15.95      1URN1271
+ATOM    992  N7    A P  11      25.756  21.381  35.981  1.00 16.31      1URN1272
+ATOM    993  C5    A P  11      25.539  22.535  35.237  1.00 15.88      1URN1273
+ATOM    994  C6    A P  11      25.790  22.928  33.896  1.00 15.95      1URN1274
+ATOM    995  N6    A P  11      26.373  22.112  33.008  1.00 15.41      1URN1275
+ATOM    996  N1    A P  11      25.415  24.156  33.476  1.00 13.69      1URN1276
+ATOM    997  C2    A P  11      24.840  24.998  34.369  1.00 15.23      1URN1277
+ATOM    998  N3    A P  11      24.555  24.750  35.646  1.00 15.79      1URN1278
+ATOM    999  C4    A P  11      24.930  23.505  36.019  1.00 14.80      1URN1279
+ATOM   1000  P     C P  12      19.964  21.827  39.364  1.00 27.69      1URN1280
+ATOM   1001  OP1   C P  12      20.491  20.524  38.858  1.00 27.65      1URN1281
+ATOM   1002  OP2   C P  12      18.896  21.807  40.410  1.00 32.82      1URN1282
+ATOM   1003  O5'   C P  12      19.479  22.735  38.161  1.00 25.12      1URN1283
+ATOM   1004  C5'   C P  12      19.261  24.126  38.232  1.00 27.59      1URN1284
+ATOM   1005  C4'   C P  12      19.246  24.758  36.866  1.00 34.20      1URN1285
+ATOM   1006  O4'   C P  12      20.576  24.760  36.290  1.00 34.14      1URN1286
+ATOM   1007  C3'   C P  12      18.413  24.054  35.789  1.00 40.48      1URN1287
+ATOM   1008  O3'   C P  12      17.041  24.379  35.942  1.00 51.37      1URN1288
+ATOM   1009  C2'   C P  12      19.011  24.668  34.526  1.00 38.21      1URN1289
+ATOM   1010  O2'   C P  12      18.657  26.037  34.307  1.00 42.10      1URN1290
+ATOM   1011  C1'   C P  12      20.486  24.574  34.883  1.00 32.55      1URN1291
+ATOM   1012  N1    C P  12      21.221  23.341  34.558  1.00 25.81      1URN1292
+ATOM   1013  C2    C P  12      21.767  23.366  33.249  1.00 22.90      1URN1293
+ATOM   1014  O2    C P  12      21.513  24.354  32.536  1.00 21.27      1URN1294
+ATOM   1015  N3    C P  12      22.489  22.298  32.852  1.00 18.61      1URN1295
+ATOM   1016  C4    C P  12      22.689  21.291  33.700  1.00 17.93      1URN1296
+ATOM   1017  N4    C P  12      23.439  20.293  33.233  1.00 19.62      1URN1297
+ATOM   1018  C5    C P  12      22.171  21.242  35.031  1.00 18.62      1URN1298
+ATOM   1019  C6    C P  12      21.436  22.299  35.406  1.00 19.34      1URN1299
+ATOM   1020  P     U P  13      15.891  23.236  36.055  1.00 53.38      1URN1300
+ATOM   1021  OP1   U P  13      14.857  23.711  35.080  1.00 55.51      1URN1301
+ATOM   1022  OP2   U P  13      16.461  21.854  36.039  1.00 53.36      1URN1302
+ATOM   1023  O5'   U P  13      15.285  23.421  37.541  1.00 58.60      1URN1303
+ATOM   1024  O3'   C P  15      18.465  28.227  49.526  1.00 39.72      1URN1304
+ATOM   1025  P     G P  16      19.728  27.916  50.483  1.00 38.36      1URN1305
+ATOM   1026  OP1   G P  16      20.263  26.543  50.216  1.00 38.60      1URN1306
+ATOM   1027  OP2   G P  16      20.684  29.035  50.646  1.00 37.21      1URN1307
+ATOM   1028  O5'   G P  16      18.969  27.744  51.897  1.00 43.06      1URN1308
+ATOM   1029  C5'   G P  16      19.250  28.589  52.999  1.00 41.54      1URN1309
+ATOM   1030  C4'   G P  16      19.610  27.710  54.175  1.00 40.69      1URN1310
+ATOM   1031  O4'   G P  16      20.946  27.148  54.057  1.00 37.73      1URN1311
+ATOM   1032  C3'   G P  16      19.609  28.546  55.463  1.00 42.92      1URN1312
+ATOM   1033  O3'   G P  16      18.297  28.577  56.003  1.00 47.36      1URN1313
+ATOM   1034  C2'   G P  16      20.655  27.794  56.273  1.00 40.77      1URN1314
+ATOM   1035  O2'   G P  16      20.203  26.577  56.821  1.00 42.36      1URN1315
+ATOM   1036  C1'   G P  16      21.719  27.615  55.160  1.00 37.45      1URN1316
+ATOM   1037  N9    G P  16      22.408  28.863  54.846  1.00 30.94      1URN1317
+ATOM   1038  C8    G P  16      22.259  29.638  53.712  1.00 28.83      1URN1318
+ATOM   1039  N7    G P  16      23.005  30.698  53.746  1.00 26.48      1URN1319
+ATOM   1040  C5    G P  16      23.681  30.637  54.962  1.00 25.76      1URN1320
+ATOM   1041  C6    G P  16      24.635  31.495  55.572  1.00 24.84      1URN1321
+ATOM   1042  O6    G P  16      25.091  32.564  55.107  1.00 23.88      1URN1322
+ATOM   1043  N1    G P  16      25.079  31.060  56.826  1.00 22.22      1URN1323
+ATOM   1044  C2    G P  16      24.647  29.916  57.432  1.00 23.22      1URN1324
+ATOM   1045  N2    G P  16      25.157  29.612  58.634  1.00 23.81      1URN1325
+ATOM   1046  N3    G P  16      23.774  29.107  56.865  1.00 26.25      1URN1326
+ATOM   1047  C4    G P  16      23.325  29.502  55.655  1.00 27.84      1URN1327
+ATOM   1048  P     G P  17      17.688  29.970  56.544  1.00 48.28      1URN1328
+ATOM   1049  OP1   G P  17      17.957  31.174  55.702  1.00 49.11      1URN1329
+ATOM   1050  OP2   G P  17      16.256  29.759  56.917  1.00 53.04      1URN1330
+ATOM   1051  O5'   G P  17      18.471  30.186  57.923  1.00 49.43      1URN1331
+ATOM   1052  C5'   G P  17      18.817  29.112  58.803  1.00 44.43      1URN1332
+ATOM   1053  C4'   G P  17      19.802  29.673  59.796  1.00 46.77      1URN1333
+ATOM   1054  O4'   G P  17      21.153  29.630  59.230  1.00 41.34      1URN1334
+ATOM   1055  C3'   G P  17      19.652  31.140  60.243  1.00 45.81      1URN1335
+ATOM   1056  O3'   G P  17      18.587  31.278  61.152  1.00 52.23      1URN1336
+ATOM   1057  C2'   G P  17      21.006  31.289  60.954  1.00 41.80      1URN1337
+ATOM   1058  O2'   G P  17      21.139  30.543  62.138  1.00 39.10      1URN1338
+ATOM   1059  C1'   G P  17      21.860  30.700  59.824  1.00 38.67      1URN1339
+ATOM   1060  N9    G P  17      21.999  31.693  58.776  1.00 31.82      1URN1340
+ATOM   1061  C8    G P  17      21.377  31.845  57.573  1.00 28.68      1URN1341
+ATOM   1062  N7    G P  17      21.814  32.909  56.958  1.00 28.77      1URN1342
+ATOM   1063  C5    G P  17      22.753  33.468  57.826  1.00 26.47      1URN1343
+ATOM   1064  C6    G P  17      23.603  34.584  57.781  1.00 25.67      1URN1344
+ATOM   1065  O6    G P  17      23.656  35.388  56.848  1.00 29.79      1URN1345
+ATOM   1066  N1    G P  17      24.398  34.766  58.912  1.00 25.65      1URN1346
+ATOM   1067  C2    G P  17      24.404  33.954  60.013  1.00 24.45      1URN1347
+ATOM   1068  N2    G P  17      25.229  34.240  61.019  1.00 26.27      1URN1348
+ATOM   1069  N3    G P  17      23.644  32.885  60.076  1.00 26.69      1URN1349
+ATOM   1070  C4    G P  17      22.878  32.734  58.975  1.00 28.73      1URN1350
+ATOM   1071  P     A P  18      17.891  32.650  61.612  1.00 53.11      1URN1351
+ATOM   1072  OP1   A P  18      17.524  33.557  60.478  1.00 56.47      1URN1352
+ATOM   1073  OP2   A P  18      16.807  32.168  62.533  1.00 55.68      1URN1353
+ATOM   1074  O5'   A P  18      18.988  33.521  62.399  1.00 52.19      1URN1354
+ATOM   1075  C5'   A P  18      19.586  33.052  63.602  1.00 49.70      1URN1355
+ATOM   1076  C4'   A P  18      20.597  33.978  64.206  1.00 48.15      1URN1356
+ATOM   1077  O4'   A P  18      21.764  33.948  63.329  1.00 44.88      1URN1357
+ATOM   1078  C3'   A P  18      20.209  35.446  64.316  1.00 50.90      1URN1358
+ATOM   1079  O3'   A P  18      19.548  35.766  65.534  1.00 58.18      1URN1359
+ATOM   1080  C2'   A P  18      21.560  36.157  64.229  1.00 46.46      1URN1360
+ATOM   1081  O2'   A P  18      22.223  36.220  65.474  1.00 46.53      1URN1361
+ATOM   1082  C1'   A P  18      22.236  35.274  63.182  1.00 42.35      1URN1362
+ATOM   1083  N9    A P  18      21.976  35.700  61.802  1.00 36.31      1URN1363
+ATOM   1084  C8    A P  18      21.180  35.197  60.801  1.00 30.93      1URN1364
+ATOM   1085  N7    A P  18      21.276  35.913  59.698  1.00 29.78      1URN1365
+ATOM   1086  C5    A P  18      22.182  36.930  59.993  1.00 29.17      1URN1366
+ATOM   1087  C6    A P  18      22.752  38.023  59.311  1.00 30.09      1URN1367
+ATOM   1088  N6    A P  18      22.475  38.336  58.041  1.00 31.34      1URN1368
+ATOM   1089  N1    A P  18      23.633  38.864  59.919  1.00 29.93      1URN1369
+ATOM   1090  C2    A P  18      23.949  38.602  61.200  1.00 30.23      1URN1370
+ATOM   1091  N3    A P  18      23.502  37.603  61.953  1.00 29.20      1URN1371
+ATOM   1092  C4    A P  18      22.624  36.817  61.298  1.00 31.58      1URN1372
+ATOM   1093  P     U P  19      18.435  36.955  65.531  1.00 59.28      1URN1373
+ATOM   1094  OP1   U P  19      17.492  36.764  64.383  1.00 58.89      1URN1374
+ATOM   1095  OP2   U P  19      17.807  36.895  66.893  1.00 65.20      1URN1375
+ATOM   1096  O5'   U P  19      19.253  38.317  65.403  1.00 59.00      1URN1376
+ATOM   1097  C5'   U P  19      19.739  39.060  66.515  1.00 60.33      1URN1377
+ATOM   1098  C4'   U P  19      20.649  40.203  66.179  1.00 62.33      1URN1378
+ATOM   1099  O4'   U P  19      21.578  39.771  65.130  1.00 59.36      1URN1379
+ATOM   1100  C3'   U P  19      20.032  41.481  65.610  1.00 65.71      1URN1380
+ATOM   1101  O3'   U P  19      19.388  42.290  66.587  1.00 74.98      1URN1381
+ATOM   1102  C2'   U P  19      21.284  42.119  65.007  1.00 60.75      1URN1382
+ATOM   1103  O2'   U P  19      22.104  42.725  65.985  1.00 59.32      1URN1383
+ATOM   1104  C1'   U P  19      21.887  40.890  64.306  1.00 56.55      1URN1384
+ATOM   1105  N1    U P  19      21.330  40.595  62.969  1.00 48.53      1URN1385
+ATOM   1106  C2    U P  19      21.757  41.394  61.920  1.00 43.90      1URN1386
+ATOM   1107  O2    U P  19      22.562  42.309  62.048  1.00 42.14      1URN1387
+ATOM   1108  N3    U P  19      21.182  41.070  60.713  1.00 41.48      1URN1388
+ATOM   1109  C4    U P  19      20.263  40.057  60.456  1.00 42.77      1URN1389
+ATOM   1110  O4    U P  19      19.875  39.927  59.283  1.00 40.88      1URN1390
+ATOM   1111  C5    U P  19      19.870  39.255  61.585  1.00 41.48      1URN1391
+ATOM   1112  C6    U P  19      20.419  39.571  62.772  1.00 43.90      1URN1392
+ATOM   1113  P     U P  20      17.758  42.285  66.599  1.00 77.02      1URN1393
+ATOM   1114  OP1   U P  20      17.373  43.581  65.949  1.00 78.59      1URN1394
+ATOM   1115  OP2   U P  20      17.119  41.023  66.124  1.00 76.31      1URN1395
+ATOM   1116  O5'   U P  20      17.406  42.329  68.157  1.00 82.66      1URN1396
+ATOM   1117  C5'   U P  20      17.341  41.218  69.053  1.00 87.50      1URN1397
+ATOM   1118  C4'   U P  20      16.900  41.614  70.450  1.00 90.91      1URN1398
+ATOM   1119  O4'   U P  20      17.929  42.391  71.132  1.00 90.36      1URN1399
+ATOM   1120  C3'   U P  20      15.625  42.448  70.528  1.00 93.83      1URN1400
+ATOM   1121  O3'   U P  20      14.485  41.643  70.816  1.00 98.91      1URN1401
+ATOM   1122  C2'   U P  20      15.866  43.429  71.675  1.00 90.63      1URN1402
+ATOM   1123  O2'   U P  20      15.334  42.946  72.899  1.00 89.27      1URN1403
+ATOM   1124  C1'   U P  20      17.378  43.574  71.704  1.00 88.68      1URN1404
+ATOM   1125  N1    U P  20      17.954  44.680  70.934  1.00 84.70      1URN1405
+ATOM   1126  C2    U P  20      18.722  45.616  71.593  1.00 81.77      1URN1406
+ATOM   1127  O2    U P  20      18.939  45.611  72.783  1.00 77.54      1URN1407
+ATOM   1128  N3    U P  20      19.211  46.561  70.736  1.00 82.70      1URN1408
+ATOM   1129  C4    U P  20      19.076  46.734  69.372  1.00 83.85      1URN1409
+ATOM   1130  O4    U P  20      19.604  47.684  68.782  1.00 81.72      1URN1410
+ATOM   1131  C5    U P  20      18.271  45.718  68.764  1.00 84.36      1URN1411
+ATOM   1132  C6    U P  20      17.776  44.774  69.573  1.00 85.09      1URN1412
+ATOM   1133  P     U P  21      12.993  42.135  70.418  1.00 99.65      1URN1413
+ATOM   1134  OP1   U P  21      12.056  41.697  71.508  1.00 99.65      1URN1414
+ATOM   1135  OP2   U P  21      12.986  43.594  70.090  1.00 99.65      1URN1415
+ATOM   1136  O5'   U P  21      12.702  41.256  69.111  1.00 99.26      1URN1416
+TER    1137        U P  21                                              1URN141
+CONECT 3912 3913 3914                                                   1URN421
+CONECT 3913 3912                                                        1URN421
+CONECT 3914 3912 3915 3916                                              1URN421
+CONECT 3915 3914                                                        1URN421
+CONECT 3916 3914 3917                                                   1URN422
+CONECT 3917 3916                                                        1URN422
+CONECT 3918 3919 3920                                                   1URN422
+CONECT 3919 3918                                                        1URN422
+CONECT 3920 3918 3921 3922                                              1URN422
+CONECT 3921 3920                                                        1URN422
+CONECT 3922 3920 3923                                                   1URN422
+CONECT 3923 3922                                                        1URN422
+CONECT 3924 3925 3926                                                   1URN422
+CONECT 3925 3924                                                        1URN422
+CONECT 3926 3924 3927 3928                                              1URN423
+CONECT 3927 3926                                                        1URN423
+CONECT 3928 3926 3929                                                   1URN423
+CONECT 3929 3928                                                        1URN423
+CONECT 3930 3931 3932                                                   1URN423
+CONECT 3931 3930                                                        1URN423
+CONECT 3932 3930 3933 3934                                              1URN423
+CONECT 3933 3932                                                        1URN423
+CONECT 3934 3932 3935                                                   1URN423
+CONECT 3935 3934                                                        1URN423
+END                                                                     1URN424
