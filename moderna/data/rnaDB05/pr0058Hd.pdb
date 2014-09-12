@@ -1,0 +1,224 @@
+USER  MOD reduceV2.21 H: found=0, std=0, add=2112, rem=0, adj=64
+HEADER    GLYCOSIDASE                             16-JUN-92   1APG      1APG
+COMPND    RICIN (A CHAIN) COMPLEX WITH ADENYL(3'-->5')GUANOSINE (APG)   1APG
+SOURCE    CASTOR (RICINUS COMMUNIS) BEAN                                1APG
+AUTHOR    A.F.MONZINGO,J.D.ROBERTUS                                     1APG
+REVDAT   1   31-JAN-94 1APG    0                                        1APG
+JRNL        AUTH   A.F.MONZINGO,J.D.ROBERTUS                            1APG
+JRNL        TITL   X-RAY ANALYSIS OF SUBSTRATE ANALOGS IN THE RICIN     1APG
+JRNL        TITL 2 A-CHAIN ACTIVE SITE                                  1APG
+JRNL        REF    J.MOL.BIOL.                   V. 227  1136 1992      1APG  1
+JRNL        REFN   ASTM JMOBAK  UK ISSN 0022-2836                  070  1APG  1
+REMARK   1                                                              1APG  1
+REMARK   1 REFERENCE 1                                                  1APG  1
+REMARK   1  AUTH   B.J.KATZIN,E.J.COLLINS,J.D.ROBERTUS                  1APG  1
+REMARK   1  TITL   STRUCTURE OF RICIN A-CHAIN AT 2.5 ANGSTROMS          1APG  1
+REMARK   1  REF    PROTEINS.STRUCT.,FUNCT.,      V.  10   251 1991      1APG  1
+REMARK   1  REF  2 GENET.                                               1APG  1
+REMARK   1  REFN   ASTM PSFGEY  US ISSN 0887-3585                  867  1APG  1
+REMARK   2                                                              1APG  1
+REMARK   2 RESOLUTION. 3.0  ANGSTROMS.                                  1APG  2
+REMARK   3                                                              1APG  2
+REMARK   3 REFINEMENT.                                                  1APG  2
+REMARK   3   PROGRAM                    X-PLOR                          1APG  2
+REMARK   3   AUTHORS                    BRUNGER                         1APG  2
+REMARK   3   R VALUE                    0.198                           1APG  2
+REMARK   3   RMSD BOND DISTANCES        0.014  ANGSTROMS                1APG  2
+REMARK   3   RMSD BOND ANGLES           4.0    DEGREES                  1APG  2
+REMARK   4                                                              1APG  2
+REMARK   4 THE COORDINATES OF THE B CHAIN ARE NOT INCLUDED SINCE NO     1APG  2
+REMARK   4 CONFORMATIONAL CHANGE FROM NATIVE STRUCTURE OF B CHAIN WAS   1APG  3
+REMARK   4 OBSERVED IN THE RICIN-APG COMPLEX.                           1APG  3
+SEQRES   1 A  267  ILE PHE PRO LYS GLN TYR PRO ILE ILE ASN PHE THR THR  1APG  32
+SEQRES   2 A  267  ALA GLY ALA THR VAL GLN SER TYR THR ASN PHE ILE ARG  1APG  33
+SEQRES   3 A  267  ALA VAL ARG GLY ARG LEU THR THR GLY ALA ASP VAL ARG  1APG  34
+SEQRES   4 A  267  HIS GLU ILE PRO VAL LEU PRO ASN ARG VAL GLY LEU PRO  1APG  35
+SEQRES   5 A  267  ILE ASN GLN ARG PHE ILE LEU VAL GLU LEU SER ASN HIS  1APG  36
+SEQRES   6 A  267  ALA GLU LEU SER VAL THR LEU ALA LEU ASP VAL THR ASN  1APG  37
+SEQRES   7 A  267  ALA TYR VAL VAL GLY TYR ARG ALA GLY ASN SER ALA TYR  1APG  38
+SEQRES   8 A  267  PHE PHE HIS PRO ASP ASN GLN GLU ASP ALA GLU ALA ILE  1APG  39
+SEQRES   9 A  267  THR HIS LEU PHE THR ASP VAL GLN ASN ARG TYR THR PHE  1APG  40
+SEQRES  10 A  267  ALA PHE GLY GLY ASN TYR ASP ARG LEU GLU GLN LEU ALA  1APG  41
+SEQRES  11 A  267  GLY ASN LEU ARG GLU ASN ILE GLU LEU GLY ASN GLY PRO  1APG  42
+SEQRES  12 A  267  LEU GLU GLU ALA ILE SER ALA LEU TYR TYR TYR SER THR  1APG  43
+SEQRES  13 A  267  GLY GLY THR GLN LEU PRO THR LEU ALA ARG SER PHE ILE  1APG  44
+SEQRES  14 A  267  ILE CYS ILE GLN MET ILE SER GLU ALA ALA ARG PHE GLN  1APG  45
+SEQRES  15 A  267  TYR ILE GLU GLY GLU MET ARG THR ARG ILE ARG TYR ASN  1APG  46
+SEQRES  16 A  267  ARG ARG SER ALA PRO ASP PRO SER VAL ILE THR LEU GLU  1APG  47
+SEQRES  17 A  267  ASN SER TRP GLY ARG LEU SER THR ALA ILE GLN GLU SER  1APG  48
+SEQRES  18 A  267  ASN GLN GLY ALA PHE ALA SER PRO ILE GLN LEU GLN ARG  1APG  49
+SEQRES  19 A  267  ARG ASN GLY SER LYS PHE SER VAL TYR ASP VAL SER ILE  1APG  50
+SEQRES  20 A  267  LEU ILE PRO ILE ILE ALA LEU MET VAL TYR ARG CYS ALA  1APG  51
+SEQRES  21 A  267  PRO PRO PRO SER SER GLN PHE                          1APG  52
+SEQRES   1 D    2    A   G                                              1APG  53
+FTNOTE   1                                                              1APG  5
+FTNOTE   1     PRO A   262  - PRO A   263     OMEGA ANGLE =   250.138   1APG  5
+FTNOTE   1 PEPTIDE BOND DEVIATES SIGNIFICANTLY FROM TRANS CONFORMATION  1APG  5
+HELIX    1   A VAL A   18  LEU A   32  1                                1APG  5
+HELIX    2   B GLU A   99  ILE A  104  1                                1APG  5
+HELIX    3   C ASN A  122  GLU A  127  1                                1APG  5
+HELIX    4   D ASN A  141  TYR A  152  1                                1APG  6
+HELIX    5   E LEU A  161  ARG A  180  1                                1APG  6
+HELIX    6   F ILE A  184  ILE A  192  1                                1APG  6
+HELIX    7   G PRO A  202  SER A  210  1                                1APG  6
+HELIX    8   H TRP A  211  GLN A  219  1                                1APG  6
+SHEET    1   1 6 PRO A   7  THR A  13  0                                1APG  6
+SHEET    2   1 6 LEU A  59  ASN A  64  1  N  LEU A  59   O  PRO A   7   1APG  6
+SHEET    3   1 6 LEU A  68  ALA A  73 -1  O  LEU A  68   N  ASN A  64   1APG  6
+SHEET    4   1 6 VAL A  82  ALA A  86 -1  O  GLY A  83   N  ALA A  73   1APG  6
+SHEET    5   1 6 SER A  89  PHE A  93 -1  N  SER A  89   O  ALA A  86   1APG  6
+SHEET    6   1 6 TYR A 115  PHE A 117  1  N  TYR A 115   O  ALA A  90   1APG  7
+CRYST1   72.740   78.490  114.340  90.00  90.00  90.00 P 21 21 21    4  1APG  7
+ORIGX1      1.000000  0.000000  0.000000        0.00000                 1APG  7
+ORIGX2      0.000000  1.000000  0.000000        0.00000                 1APG  7
+ORIGX3      0.000000  0.000000  1.000000        0.00000                 1APG  7
+SCALE1      0.013748  0.000000  0.000000        0.00000                 1APG  7
+SCALE2      0.000000  0.012740  0.000000        0.00000                 1APG  7
+SCALE3      0.000000  0.000000  0.008746        0.00000                 1APG  7
+USER  MOD -----------------------------------------------------------------
+USER  MOD scores for adjustable sidechains, with "set" totals for H,N and Q
+USER  MOD "o" means original, "f" means flipped, "180deg" is methyl default
+USER  MOD "!" flags a clash with an overlap of 0.40A or greater
+USER  MOD flip categories: "K"=keep, "C"=clashes, "X"=uncertain, "F"=flip
+USER  MOD Set 1.1:A  80 TYR OH  :   rot  -79:sc=    1.41
+USER  MOD Set 1.2:D 701   A O5' :   rot  -73:sc=   0.563!
+USER  MOD Set 2.1:A 236 ASN     :FLIP  amide:sc=       0  F(o=-0.62,f=-0.0026)
+USER  MOD Set 2.2:A 238 SER OG  :   rot  180:sc=-0.00256
+USER  MOD Set 3.1:A 206 THR OG1 :   rot   88:sc=   0.584
+USER  MOD Set 3.2:A 233 GLN     :      amide:sc=    0.38  X(o=0.96,f=0.66)
+USER  MOD Set 4.1:A   4 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Set 4.2:A  54 ASN     :      amide:sc=  -0.861  K(o=-2,f=-5.9!)
+USER  MOD Set 4.3:A  55 GLN     :      amide:sc=   -1.14  K(o=-2,f=-6.3)
+USER  MOD Set 5.1:A  13 THR OG1 :   rot -170:sc=  0.0149
+USER  MOD Set 5.2:A  64 ASN     :      amide:sc=  -0.289  K(o=0.037,f=-2!)
+USER  MOD Set 5.3:A 149 SER OG  :   rot   82:sc=   0.311
+USER  MOD Set 6.1:A  12 THR OG1 :   rot  180:sc=   0.182
+USER  MOD Set 6.2:A  63 SER OG  :   rot   61:sc=   0.199
+USER  MOD Set 7.1:A 122 ASN     :      amide:sc=   -1.32  X(o=-0.66,f=-0.33)
+USER  MOD Set 7.2:D 702   G O2' :   rot  -23:sc=    0.66
+USER  MOD Set 8.1:A  88 ASN     :      amide:sc=  0.0827  K(o=0.17,f=-0.58)
+USER  MOD Set 8.2:A  89 SER OG  :   rot   76:sc=  0.0878
+USER  MOD Set 9.1:A  40 HIS     :     no HD1:sc=  -0.897  K(o=0.16,f=-2.9!)
+USER  MOD Set 9.2:A 221 SER OG  :   rot  -98:sc=    1.05
+USER  MOD Set10.1:A 183 TYR OH  :   rot   30:sc= -0.0104
+USER  MOD Set10.2:A 203 SER OG  :   rot  114:sc=   -2.52!
+USER  MOD Set11.1:A 132 ASN     :      amide:sc= -0.0529  K(o=-0.1,f=-0.89)
+USER  MOD Set11.2:A 136 ASN     :      amide:sc= -0.0504  K(o=-0.1,f=-0.63)
+USER  MOD Single :A   1 ILE N   :NH3+    173:sc=       0   (180deg=-0.0821)
+USER  MOD Single :A   5 GLN     :      amide:sc=  -0.109  K(o=-0.11,f=-0.92)
+USER  MOD Single :A   6 TYR OH  :   rot  -19:sc=   0.778
+USER  MOD Single :A  10 ASN     :      amide:sc=       0  X(o=0,f=-0.082)
+USER  MOD Single :A  17 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A  19 GLN     :      amide:sc=  -0.258  X(o=-0.26,f=0)
+USER  MOD Single :A  20 SER OG  :   rot  180:sc=  0.0478
+USER  MOD Single :A  21 TYR OH  :   rot  -20:sc=   0.681
+USER  MOD Single :A  22 THR OG1 :   rot   90:sc=    0.11
+USER  MOD Single :A  23 ASN     :      amide:sc=       0  X(o=0,f=-0.31)
+USER  MOD Single :A  33 THR OG1 :   rot  180:sc=  0.0508
+USER  MOD Single :A  34 THR OG1 :   rot  180:sc=  0.0247
+USER  MOD Single :A  47 ASN     :      amide:sc=  -0.429  K(o=-0.43,f=-2.5!)
+USER  MOD Single :A  65 HIS     :     no HD1:sc=  -0.121  X(o=-0.12,f=-0.36)
+USER  MOD Single :A  69 SER OG  :   rot  180:sc=       0
+USER  MOD Single :A  71 THR OG1 :   rot  180:sc=  -0.189
+USER  MOD Single :A  77 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A  78 ASN     :      amide:sc=   -1.17  K(o=-1.2,f=-5.1!)
+USER  MOD Single :A  84 TYR OH  :   rot -167:sc=   0.697
+USER  MOD Single :A  91 TYR OH  :   rot  -92:sc=   -3.12!
+USER  MOD Single :A  94 HIS     :     no HE2:sc= 0.00551  X(o=0.0055,f=-0.16)
+USER  MOD Single :A  97 ASN     :      amide:sc=   0.259  K(o=0.26,f=-5.2!)
+USER  MOD Single :A  98 GLN     :FLIP  amide:sc= -0.0172  F(o=-0.73,f=-0.017)
+USER  MOD Single :A 105 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A 106 HIS     :     no HE2:sc=    -1.3  X(o=-1.3,f=-1.2)
+USER  MOD Single :A 109 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A 112 GLN     :      amide:sc=      -2! C(o=-2!,f=-4.2!)
+USER  MOD Single :A 113 ASN     :      amide:sc=   0.374  K(o=0.37,f=-0.37)
+USER  MOD Single :A 115 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :A 116 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A 123 TYR OH  :   rot  180:sc=   -1.75!
+USER  MOD Single :A 128 GLN     :      amide:sc= -0.0792  X(o=-0.079,f=0)
+USER  MOD Single :A 141 ASN     :      amide:sc=   -0.53  K(o=-0.53,f=-1.8)
+USER  MOD Single :A 152 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :A 153 TYR OH  :   rot  180:sc= -0.0601
+USER  MOD Single :A 154 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :A 155 SER OG  :   rot  -83:sc=    1.15
+USER  MOD Single :A 156 THR OG1 :   rot  160:sc=  -0.165
+USER  MOD Single :A 159 THR OG1 :   rot  100:sc=   0.875
+USER  MOD Single :A 160 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :A 163 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A 167 SER OG  :   rot   82:sc=   0.429
+USER  MOD Single :A 171 CYS SG  :   rot   80:sc=   -1.15
+USER  MOD Single :A 173 GLN     :FLIP  amide:sc=   -1.01  F(o=-2.9!,f=-1)
+USER  MOD Single :A 174 MET CE  :methyl  180:sc= -0.0135   (180deg=-0.0135)
+USER  MOD Single :A 176 SER OG  :   rot -120:sc=    1.25
+USER  MOD Single :A 182 GLN     :      amide:sc=   0.639  K(o=0.64,f=-8.6!)
+USER  MOD Single :A 188 MET CE  :methyl  140:sc=  -0.399   (180deg=-1.38)
+USER  MOD Single :A 190 THR OG1 :   rot   85:sc=  0.0069
+USER  MOD Single :A 194 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :A 195 ASN     :      amide:sc= -0.0134  X(o=-0.013,f=-0.019)
+USER  MOD Single :A 198 SER OG  :   rot   22:sc=    0.21
+USER  MOD Single :A 209 ASN     :      amide:sc=   0.309  K(o=0.31,f=-1.6)
+USER  MOD Single :A 210 SER OG  :   rot   84:sc=    1.08
+USER  MOD Single :A 215 SER OG  :   rot   77:sc= 0.00292
+USER  MOD Single :A 216 THR OG1 :   rot  180:sc=   0.006
+USER  MOD Single :A 219 GLN     :      amide:sc=    2.05  K(o=2,f=-5.7!)
+USER  MOD Single :A 222 ASN     :      amide:sc=  -0.112  X(o=-0.11,f=0)
+USER  MOD Single :A 223 GLN     :      amide:sc=       0  X(o=0,f=-0.0094)
+USER  MOD Single :A 228 SER OG  :   rot  180:sc=       0
+USER  MOD Single :A 231 GLN     :      amide:sc=       0  K(o=0,f=-0.55)
+USER  MOD Single :A 239 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :A 241 SER OG  :   rot  180:sc=       0
+USER  MOD Single :A 243 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :A 246 SER OG  :   rot  180:sc=  0.0324
+USER  MOD Single :A 255 MET CE  :methyl -112:sc=  -0.112   (180deg=-1.16)
+USER  MOD Single :A 257 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :A 259 CYS SG  :   rot  180:sc=  -0.238
+USER  MOD Single :A 264 SER OG  :   rot  105:sc=  0.0501
+USER  MOD Single :A 265 SER OG  :   rot  180:sc=       0
+USER  MOD Single :A 266 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :D 701   A O2' :   rot  148:sc=  -0.994!
+USER  MOD Single :D 702   G O3' :   rot   19:sc=   0.824
+USER  MOD -----------------------------------------------------------------                                  1APG219
+ATOM   2116  O5'   A D 701      23.492  66.378  51.734  1.00 20.00      1APG2193
+ATOM   2117  C5'   A D 701      23.658  65.002  52.119  1.00 20.00      1APG2194
+ATOM   2118  C4'   A D 701      25.129  64.633  52.207  1.00 20.00      1APG2195
+ATOM   2119  O4'   A D 701      25.861  65.171  53.320  1.00 20.00      1APG2196
+ATOM   2120  C3'   A D 701      25.231  63.142  52.399  1.00 20.00      1APG2197
+ATOM   2121  O3'   A D 701      26.539  62.577  52.079  1.00 20.00      1APG2198
+ATOM   2122  C2'   A D 701      24.923  63.054  53.854  1.00 20.00      1APG2199
+ATOM   2123  O2'   A D 701      25.438  61.772  54.194  1.00 20.00      1APG2200
+ATOM   2124  C1'   A D 701      25.687  64.249  54.426  1.00 20.00      1APG2201
+ATOM   2125  N9    A D 701      25.197  64.942  55.646  1.00 20.00      1APG2202
+ATOM   2126  C8    A D 701      25.909  65.911  56.317  1.00 20.00      1APG2203
+ATOM   2127  N7    A D 701      25.269  66.469  57.311  1.00 20.00      1APG2204
+ATOM   2128  C5    A D 701      24.049  65.819  57.309  1.00 20.00      1APG2205
+ATOM   2129  C6    A D 701      22.945  65.980  58.124  1.00 20.00      1APG2206
+ATOM   2130  N6    A D 701      23.046  66.663  59.266  1.00 20.00      1APG2207
+ATOM   2131  N1    A D 701      21.808  65.412  57.709  1.00 20.00      1APG2208
+ATOM   2132  C2    A D 701      21.879  64.470  56.774  1.00 20.00      1APG2209
+ATOM   2133  N3    A D 701      22.923  64.070  56.062  1.00 20.00      1APG2210
+ATOM   2134  C4    A D 701      23.977  64.877  56.313  1.00 20.00      1APG2211
+ATOM   2135  P     G D 702      28.060  63.179  52.276  1.00 20.00      1APG2212
+ATOM   2136  OP1   G D 702      28.355  63.431  53.712  1.00 20.00      1APG2213
+ATOM   2137  OP2   G D 702      28.971  62.206  51.599  1.00 20.00      1APG2214
+ATOM   2138  O5'   G D 702      28.024  64.604  51.361  1.00 20.00      1APG2215
+ATOM   2139  C5'   G D 702      29.117  65.486  50.888  1.00 20.00      1APG2216
+ATOM   2140  C4'   G D 702      30.056  65.985  52.055  1.00 20.00      1APG2217
+ATOM   2141  O4'   G D 702      31.062  67.019  51.684  1.00 20.00      1APG2218
+ATOM   2142  C3'   G D 702      29.277  66.648  53.258  1.00 20.00      1APG2219
+ATOM   2143  O3'   G D 702      28.581  65.763  54.147  1.00 20.00      1APG2220
+ATOM   2144  C2'   G D 702      30.483  67.242  53.973  1.00 20.00      1APG2221
+ATOM   2145  O2'   G D 702      31.266  66.300  54.754  1.00 20.00      1APG2222
+ATOM   2146  C1'   G D 702      31.279  67.884  52.854  1.00 20.00      1APG2223
+ATOM   2147  N9    G D 702      30.970  69.345  52.783  1.00 20.00      1APG2224
+ATOM   2148  C8    G D 702      31.613  70.386  53.424  1.00 20.00      1APG2225
+ATOM   2149  N7    G D 702      31.161  71.583  53.153  1.00 20.00      1APG2226
+ATOM   2150  C5    G D 702      30.120  71.326  52.256  1.00 20.00      1APG2227
+ATOM   2151  C6    G D 702      29.224  72.242  51.588  1.00 20.00      1APG2228
+ATOM   2152  O6    G D 702      29.143  73.477  51.642  1.00 20.00      1APG2229
+ATOM   2153  N1    G D 702      28.367  71.594  50.744  1.00 20.00      1APG2230
+ATOM   2154  C2    G D 702      28.320  70.210  50.581  1.00 20.00      1APG2231
+ATOM   2155  N2    G D 702      27.427  69.735  49.694  1.00 20.00      1APG2232
+ATOM   2156  N3    G D 702      29.117  69.339  51.236  1.00 20.00      1APG2233
+ATOM   2157  C4    G D 702      30.005  69.975  52.030  1.00 20.00      1APG2234
+TER    2158        G D 702                                              1APG223
+END                                                                     1APG223

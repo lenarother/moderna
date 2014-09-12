@@ -1,0 +1,708 @@
+USER  MOD reduceV2.21 H: found=0, std=0, add=4422, rem=0, adj=177
+HEADER    VIRUS                                   09-OCT-89   1BMV      1BMV
+COMPND    BEAN POD MOTTLE VIRUS (MIDDLE COMPONENT)                      1BMV
+SOURCE    BOUNTIFUL BEAN                                                1BMV
+AUTHOR    J.E.JOHNSON                                                   1BMV
+REVDAT   2   15-OCT-91 1BMVA   1       REMARK                           1BMVA
+REVDAT   1   15-JUL-90 1BMV    0                                        1BMV
+REMARK   1                                                              1BMV
+REMARK   1 REFERENCE 1                                                  1BMV
+REMARK   1  AUTH   Z.CHEN,C.STAUFFACHER,Y.LI,T.SCHMIDT,W.BOMU,G.KAMER,  1BMV
+REMARK   1  AUTH 2 M.SHANKS,G.LOMONOSSOFF,J.E.JOHNSON                   1BMVA
+REMARK   1  TITL   PROTEIN-/RNA$ INTERACTIONS IN AN ICOSAHEDRAL VIRUS   1BMV  1
+REMARK   1  TITL 2 AT 3.0 ANGSTROMS RESOLUTION                          1BMV  1
+REMARK   1  REF    SCIENCE                       V. 245   154 1989      1BMV  1
+REMARK   1  REFN   ASTM SCIEAS  US ISSN 0036-8075                  038  1BMV  1
+REMARK   2                                                              1BMV  1
+REMARK   2 RESOLUTION. 3.0 ANGSTROMS.                                   1BMV  1
+REMARK   3                                                              1BMV  1
+REMARK   3 REFINEMENT. NONE.  THE DEPOSITED COORDINATES WERE BUILT TO   1BMV  1
+REMARK   3  THE ELECTRON DENSITY.  THE R VALUE IS 0.33 FOR DATA IN THE  1BMV  1
+REMARK   3  RESOLUTION RANGE 7.0 TO 3.0 ANGSTROMS WITH                  1BMV  2
+REMARK   3  FOBS .GT. 3.0*SIGMA(FOBS).  RESTRAINED LEAST-SQUARES        1BMV  2
+REMARK   3  REFINEMENT IS IN PROGRESS.                                  1BMV  2
+REMARK   4                                                              1BMV  2
+REMARK   4 THE CELL DIMENSIONS GIVEN ARE THOSE FOR THE ORTHORHOMBIC M   1BMV  2
+REMARK   4 CELL.  THE COORDINATES ARE IN THE P,Q,R FRAME IN ANGSTROM    1BMV  2
+REMARK   4 UNITS AND CORRESPOND TO ICOSAHEDRAL SYMMETRY AXES.  THE      1BMV  2
+REMARK   4 ORIGIN IS CHOSEN AT THE CENTER OF THE VIRUS WITH P, Q, AND   1BMV  2
+REMARK   4 R ALONG MUTUALLY PERPENDICULAR TWOFOLD AXES OF THE           1BMV  2
+REMARK   4 ICOSAHEDRON.  THE ICOSAHEDRAL THREEFOLD AXIS MAKES AN ANGLE  1BMV  2
+REMARK   4 OF 20.905 DEGREES WITH R IN THE Q0R PLANE, WHILE THE         1BMV  3
+REMARK   4 NEAREST FIVEFOLD AXIS MAKES AN ANGLE OF 31.717 DEGREES WITH  1BMV  3
+REMARK   4 R IN THE P0R PLANE.                                          1BMV  3
+REMARK   5                                                              1BMV  3
+REMARK   5 THE WHOLE VIRUS CAPSID IS COMPOSED OF 60 ICOSAHEDRAL UNITS.  1BMV  3
+REMARK   5 EACH UNIT IS COMPOSED OF TWO PROTEIN CHAINS.  ONE CHAIN      1BMV  3
+REMARK   5 CONTAINS 198 AMINO ACIDS AND COMPRISES THE *A* DOMAIN.  THE  1BMV  3
+REMARK   5 OTHER CHAIN CONTAINS 374 AMINO ACIDS AND COMPRISES TWO       1BMV  3
+REMARK   5 DOMAINS - THE *C* DOMAIN, CONTAINING 182 AMINO ACIDS, IS AT  1BMV  3
+REMARK   5 THE AMINO TERMINAL END OF THE LARGE CHAIN AND THE *B*        1BMV  3
+REMARK   5 DOMAIN, CONTAINING 192 AMINO ACIDS, IS AT THE CARBOXY        1BMV  4
+REMARK   5 TERMINAL END OF THE LARGE CHAIN.  EACH DOMAIN CONTAINS ONE   1BMV  4
+REMARK   5 BETA BARREL.  THE SMALL CHAIN HAS BEEN ASSIGNED CHAIN        1BMV  4
+REMARK   5 IDENTIFIER *1* AND THE LARGE CHAIN HAS BEEN ASSIGNED CHAIN   1BMV  4
+REMARK   5 IDENTIFIER *2*.  TO CLARIFY THE DOMAIN NATURE OF CHAINS ALL  1BMV  4
+REMARK   5 RESIDUES HAVE BEEN ASSIGNED FOUR-DIGIT RESIDUE NUMBERS.      1BMV  4
+REMARK   5 THE RESIDUES OF CHAIN *1* ARE NUMBERED FROM 1001 TO 1198     1BMV  4
+REMARK   5 AND FORM DOMAIN *A*.  THE FIRST 182 RESIDUES OF CHAIN *2*    1BMV  4
+REMARK   5 ARE NUMBERED FROM 3001 TO 3182 AND FORM DOMAIN *C*.  THE     1BMV  4
+REMARK   5 REMAINING 192 RESIDUES OF CHAIN *2* ARE NUMBERED FROM 2001   1BMV  4
+REMARK   5 TO 2192 AND FORM DOMAIN *B*.                                 1BMV  5
+REMARK   5                                                              1BMV  5
+REMARK   5 THE 532 POINT GROUP SYMMETRY NEEDS TO BE APPLIED TO THE      1BMV  5
+REMARK   5 GIVEN COORDINATES, IN ORDER TO GENERATE THE ICOSAHEDRAL      1BMV  5
+REMARK   5 VIRUS PARTICLE.  THE FOLLOWING SYMMETRY OPERATORS OF         1BMV  5
+REMARK   5 ( 3 X 2 X 5 X 2 ) ABOUT SPECIFIC AXES ARE TO BE APPLIED IN   1BMV  5
+REMARK   5 SPECIFIC ORDER.                                              1BMV  5
+REMARK   5                                                              1BMV  5
+REMARK   5 LET P1(I) = COORDINATES OF THE ICOSAHEDRAL ASYMMETRIC UNIT   1BMV  5
+REMARK   5                                                              1BMV  5
+REMARK   5    1.                                                        1BMV  6
+REMARK   5       TRNSF1   1  -.309     -.809     -.500                  1BMV  6
+REMARK   5       TRNSF2   1  0.809     -.500     0.309                  1BMV  6
+REMARK   5       TRNSF3   1  -.500     -.309     0.809                  1BMV  6
+REMARK   5                                                              1BMV  6
+REMARK   5       APPLY THE THREE-FOLD GIVEN BY TRNSF  1                 1BMV  6
+REMARK   5                                                              1BMV  6
+REMARK   5           TRNSF 1*(P1(I)) = P2(I)                            1BMV  6
+REMARK   5           TRNSF 1*(P2(I)) = P3(I)                            1BMV  6
+REMARK   5                                                              1BMV  6
+REMARK   5    2.                                                        1BMV  7
+REMARK   5       TRNSF1   2  1.000     0.000     0.000                  1BMV  7
+REMARK   5       TRNSF2   2  0.000     -1.00     0.000                  1BMV  7
+REMARK   5       TRNSF3   2  0.000     0.000     -1.00                  1BMV  7
+REMARK   5                                                              1BMV  7
+REMARK   5       APPLY THE TWO-FOLD GIVEN BY TRNSF 2 TO P1(I),          1BMV  7
+REMARK   5       P2(I), AND P3(I)                                       1BMV  7
+REMARK   5                                                              1BMV  7
+REMARK   5           TRNSF 2*(P1(I)) = P4(I)                            1BMV  7
+REMARK   5           TRNSF 2*(P2(I)) = P5(I)                            1BMV  7
+REMARK   5           TRNSF 2*(P3(I)) = P6(I)                            1BMV  8
+REMARK   5                                                              1BMV  8
+REMARK   5    3.                                                        1BMV  8
+REMARK   5       TRNSF1   3  0.309     -.809     0.500                  1BMV  8
+REMARK   5       TRNSF2   3  0.809     0.500     0.309                  1BMV  8
+REMARK   5       TRNSF3   3  -.500     0.309     0.809                  1BMV  8
+REMARK   5                                                              1BMV  8
+REMARK   5       APPLY THE FIVE-FOLD GIVEN BY TRNSF 3 TO EACH OF        1BMV  8
+REMARK   5       THESE SIX UNITS.                                       1BMV  8
+REMARK   5                                                              1BMV  8
+REMARK   5       FOR EXAMPLE, FOR P1(I)                                 1BMV  9
+REMARK   5                                                              1BMV  9
+REMARK   5           TRNSF 3*(P1(I)) = P7(I)                            1BMV  9
+REMARK   5           TRNSF 3*(P7(I)) = P8(I)                            1BMV  9
+REMARK   5           TRNSF 3*(P8(I)) = P9(I)                            1BMV  9
+REMARK   5           TRNSF 3*(P9(I)) = P10(I)                           1BMV  9
+REMARK   5                                                              1BMV  9
+REMARK   5       BY DOING THE SAME OPERATIONS WITH P2(I), P3(I),        1BMV  9
+REMARK   5       P4(I), P5(I), AND P6(I), ONE GENERATES A TOTAL OF 30   1BMV  9
+REMARK   5       UNITS.                                                 1BMV  9
+REMARK   5                                                              1BMV 10
+REMARK   5    4.                                                        1BMV 10
+REMARK   5       TRNSF1   4  -1.00     0.000     0.000                  1BMV 10
+REMARK   5       TRNSF2   4  0.000     -1.00     0.000                  1BMV 10
+REMARK   5       TRNSF3   4  0.000     0.000     1.000                  1BMV 10
+REMARK   5                                                              1BMV 10
+REMARK   5       APPLY THE TWO-FOLD GIVEN BY TRNSF 4 TO EACH OF THE     1BMV 10
+REMARK   5       30 UNITS GENERATED IN STEPS 1-3.  THIS YIELDS 60       1BMV 10
+REMARK   5       UNITS.                                                 1BMV 10
+REMARK   6                                                              1BMV 10
+REMARK   6 DOMAIN *1* CONTAINS A TEN-STRANDED BETA BARREL DESIGNATED    1BMV 11
+REMARK   6 * S1* ON THE SHEET RECORDS BELOW.  DOMAIN *2* AND DOMAIN     1BMV 11
+REMARK   6 *3* EACH CONTAIN AN EIGHT-STRANDED BETA BARREL DESIGNATED    1BMV 11
+REMARK   6 *S21* AND * S3* RESPECTIVELY.  A BETA BARREL IS REPRESENTED  1BMV 11
+REMARK   6 BY A SET OF SHEET RECORDS IN WHICH THE FIRST AND LAST        1BMV 11
+REMARK   6 STRANDS ARE IDENTICAL.  THUS THESE THREE BETA BARRELS ARE    1BMV 11
+REMARK   6 REPRESENTED BY SETS OF SHEET RECORDS WITH NINE OR ELEVEN     1BMV 11
+REMARK   6 STRANDS.                                                     1BMV 11
+REMARK   7                                                              1BMV 11
+REMARK   7 THERE ARE TWO POSSIBLE CONFORMERS FOR THE LAST FIVE          1BMV 11
+REMARK   7 RESIDUES OF THE B DOMAIN.                                    1BMV 12
+REMARK   8                                                              1BMV 12
+REMARK   8 ELEVEN RIBONUCLEOTIDES ARE LOCATED INSIDE THE CAPSID         1BMV 12
+REMARK   8 PROTEIN.  THEIR BASE TYPES ARE QUITE ARBITRARY.  ONLY THE    1BMV 12
+REMARK   8 CONFORMATION OF THE FIRST SEVEN RIBONUCLEOTIDES ARE DEFINED  1BMV 12
+REMARK   8 WITH CONFIDENCE.                                             1BMV 12
+REMARK   9                                                              1BMV 12
+REMARK   9 THE THIRTEEN RESIDUES AT THE CARBOXY TERMINUS OF DOMAIN *1*  1BMV 12
+REMARK   9 ARE NOT VISIBLE IN THE ELECTRON DENSITY MAP.                 1BMV 12
+REMARK  10                                                              1BMVA
+REMARK  10 CORRECTION. ADD MISSING COMMA IN AUTHOR LIST OF REFERENCE    1BMVA
+REMARK  10  1.  15-OCT-91.                                              1BMVA
+SEQRES   1 1  198  SER ILE SER GLN GLN THR VAL TRP ASN GLN MET ALA THR  1BMV 129
+SEQRES   2 1  198  VAL ARG THR PRO LEU ASN PHE ASP SER SER LYS GLN SER  1BMV 130
+SEQRES   3 1  198  PHE CYS GLN PHE SER VAL ASP LEU LEU GLY GLY GLY ILE  1BMV 131
+SEQRES   4 1  198  SER VAL ASP LYS THR GLY ASP TRP ILE THR LEU VAL GLN  1BMV 132
+SEQRES   5 1  198  ASN SER PRO ILE SER ASN LEU LEU ARG VAL ALA ALA TRP  1BMV 133
+SEQRES   6 1  198  LYS LYS GLY CYS LEU MET VAL LYS VAL VAL MET SER GLY  1BMV 134
+SEQRES   7 1  198  ASN ALA ALA VAL LYS ARG SER ASP TRP ALA SER LEU VAL  1BMV 135
+SEQRES   8 1  198  GLN VAL PHE LEU THR ASN SER ASN SER THR GLU HIS PHE  1BMV 136
+SEQRES   9 1  198  ASP ALA CYS ARG TRP THR LYS SER GLU PRO HIS SER TRP  1BMV 137
+SEQRES  10 1  198  GLU LEU ILE PHE PRO ILE GLU VAL CYS GLY PRO ASN ASN  1BMV 138
+SEQRES  11 1  198  GLY PHE GLU MET TRP SER SER GLU TRP ALA ASN GLN THR  1BMV 139
+SEQRES  12 1  198  SER TRP HIS LEU SER PHE LEU VAL ASP ASN PRO LYS GLN  1BMV 140
+SEQRES  13 1  198  SER THR THR PHE ASP VAL LEU LEU GLY ILE SER GLN ASN  1BMV 141
+SEQRES  14 1  198  PHE GLU ILE ALA GLY ASN THR LEU MET PRO ALA PHE SER  1BMV 142
+SEQRES  15 1  198  VAL PRO GLN ALA ASN ALA ARG SER SER GLU ASN ALA GLU  1BMV 143
+SEQRES  16 1  198  SER SER ALA M                                        1BMV 144
+SEQRES   1 2  374  MET GLU THR ASN LEU PHE LYS LEU SER LEU ASP ASP VAL  1BMV 145
+SEQRES   2 2  374  GLU THR PRO LYS GLY SER MET LEU ASP LEU LYS ILE SER  1BMV 146
+SEQRES   3 2  374  GLN SER LYS ILE ALA LEU PRO LYS ASN THR VAL GLY GLY  1BMV 147
+SEQRES   4 2  374  THR ILE LEU ARG SER ASP LEU LEU ALA ASN PHE LEU THR  1BMV 148
+SEQRES   5 2  374  GLU GLY ASN PHE ARG ALA SER VAL ASP LEU GLN ARG THR  1BMV 149
+SEQRES   6 2  374  HIS ARG ILE LYS GLY MET ILE LYS MET VAL ALA THR VAL  1BMV 150
+SEQRES   7 2  374  GLY ILE PRO GLU ASN THR GLY ILE ALA LEU ALA CYS ALA  1BMV 151
+SEQRES   8 2  374  MET ASN SER SER ILE ARG GLY ARG ALA SER SER ASP ILE  1BMV 152
+SEQRES   9 2  374  TYR THR ILE CYS SER GLN ASP CYS GLU LEU TRP ASN PRO  1BMV 153
+SEQRES  10 2  374  ALA CYS THR LYS ALA MET THR MET SER PHE ASN PRO ASN  1BMV 154
+SEQRES  11 2  374  PRO CYS SER ASP ALA TRP SER LEU GLU PHE LEU LYS ARG  1BMV 155
+SEQRES  12 2  374  THR GLY PHE HIS CYS ASP ILE ILE CYS VAL THR GLY TRP  1BMV 156
+SEQRES  13 2  374  THR ALA THR PRO MET GLN ASP VAL GLN VAL THR ILE ASP  1BMV 157
+SEQRES  14 2  374  TRP PHE ILE SER SER GLN GLU CYS VAL PRO ARG THR TYR  1BMV 158
+SEQRES  15 2  374  CYS VAL LEU ASN PRO GLN ASN PRO PHE VAL LEU ASN ARG  1BMV 159
+SEQRES  16 2  374  TRP MET GLY LYS LEU THR PHE PRO GLN GLY THR SER ARG  1BMV 160
+SEQRES  17 2  374  SER VAL LYS ARG MET PRO LEU SER ILE GLY GLY GLY ALA  1BMV 161
+SEQRES  18 2  374  GLY ALA LYS SER ALA ILE LEU MET ASN MET PRO ASN ALA  1BMV 162
+SEQRES  19 2  374  VAL LEU SER MET TRP ARG TYR PHE VAL GLY ASP LEU VAL  1BMV 163
+SEQRES  20 2  374  PHE GLU VAL SER LYS MET THR SER PRO TYR ILE LYS CYS  1BMV 164
+SEQRES  21 2  374  THR VAL SER PHE PHE ILE ALA PHE GLY ASN LEU ALA ASP  1BMV 165
+SEQRES  22 2  374  ASP THR ILE ASN PHE GLU ALA PHE PRO HIS LYS LEU VAL  1BMV 166
+SEQRES  23 2  374  GLN PHE GLY GLU ILE GLN GLU LYS VAL VAL LEU LYS PHE  1BMV 167
+SEQRES  24 2  374  SER GLN GLU GLU PHE LEU THR ALA TRP SER THR GLN VAL  1BMV 168
+SEQRES  25 2  374  ARG PRO ALA THR THR LEU LEU ALA ASP GLY CYS PRO TYR  1BMV 169
+SEQRES  26 2  374  LEU TYR ALA MET VAL HIS ASP SER SER VAL SER THR ILE  1BMV 170
+SEQRES  27 2  374  PRO GLY ASP PHE VAL ILE GLY VAL LYS LEU THR ILE ILE  1BMV 171
+SEQRES  28 2  374  GLU ASN MET CYS ALA TYR GLY LEU ASN PRO GLY ILE SER  1BMV 172
+SEQRES  29 2  374  GLY SER ARG LEU LEU GLY THR ILE PRO GLN              1BMV 173
+SEQRES   1     11    G   G   U   C   A   A   A   A   U   G   C M        1BMV 174
+FTNOTE   1                                                              1BMV 17
+FTNOTE   1 RESIDUE PRO 2 2008 IS A CIS PROLINE.                         1BMV 17
+HELIX    1  A1 SER 1 1054  ALA 1 1063  1                                1BMV 17
+HELIX    2  C1 LEU 2 3046  LEU 2 3051  1                                1BMV 17
+HELIX    3  C2 ALA 2 3058  ARG 2 3064  1                                1BMV 17
+HELIX    4  C3 ILE 2 3104  CYS 2 3108  1                                1BMV 18
+HELIX    5  C4 THR 2 3144  THR 2 3157  1                                1BMV 18
+HELIX    6  B1 MET 2 2049  TRP 2 2057  1                                1BMV 18
+SHEET    1  S111 ALA 11012  THR 11016  0                                1BMV 18
+SHEET    2  S111 GLN 11156  ALA 11173 -1                                1BMV 18
+SHEET    3  S111 TRP 11065  ASN 11079 -1                                1BMV 18
+SHEET    4  S111 HIS 11115  VAL 11125 -1                                1BMV 18
+SHEET    5  S111 ALA 11106  LYS 11111 -1                                1BMV 18
+SHEET    6  S111 LEU 11090  THR 11096 -1                                1BMV 18
+SHEET    7  S111 TRP 11145  ASP 11152 -1                                1BMV 18
+SHEET    8  S111 CYS 11028  LEU 11034 -1                                1BMV 19
+SHEET    9  S111 GLY 11038  ASP 11042 -1                                1BMV 19
+SHEET   10  S111 ILE 11048  LEU 11050 -1                                1BMV 19
+SHEET   11  S111 ALA 11012  THR 11016 -1                                1BMV 19
+SHEET    1  S3 9 LEU 23023  LEU 23032  0                                1BMV 19
+SHEET    2  S3 9 VAL 23164  ILE 23172 -1                                1BMV 19
+SHEET    3  S3 9 ILE 23072  VAL 23078 -1                                1BMV 19
+SHEET    4  S3 9 LYS 23121  PHE 23127 -1                                1BMV 19
+SHEET    5  S3 9 ASP 23111  TRP 23115 -1                                1BMV 19
+SHEET    6  S3 9 ALA 23087  ASN 23093 -1                                1BMV 19
+SHEET    7  S3 9 HIS 23147  VAL 23153 -1                                1BMV 20
+SHEET    8  S3 9 GLY 23039  ASP 23045 -1                                1BMV 20
+SHEET    9  S3 9 LEU 23023  LEU 23032 -1                                1BMV 20
+SHEET    1 S21 9 LEU 22011  PHE 22020  0                                1BMV 20
+SHEET    2 S21 9 PHE 22160  CYS 22173 -1                                1BMV 20
+SHEET    3 S21 9 PHE 22060  MET 22071 -1                                1BMV 20
+SHEET    4 S21 9 GLU 22111  PHE 22117 -1                                1BMV 20
+SHEET    5 S21 9 LYS 22102  VAL 22104 -1                                1BMV 20
+SHEET    6 S21 9 LYS 22077  ALA 22085 -1                                1BMV 20
+SHEET    7 S21 9 LEU 22144  SER 22152 -1                                1BMV 20
+SHEET    8 S21 9 GLY 22023  MET 22031 -1                                1BMV 21
+SHEET    9 S21 9 LEU 22011  PHE 22020 -1                                1BMV 21
+SHEET    1 S22 2 ALA 22039  ALA 22041  0                                1BMV 21
+SHEET    2 S22 2 ALA 22044  LEU 22046 -1                                1BMV 21
+CRYST1  311.200  284.200  350.500  90.00  90.00  90.00 P 2 21 21     2  1BMV 21
+ORIGX1      1.000000  0.000000  0.000000        0.00000                 1BMV 21
+ORIGX2      0.000000  1.000000  0.000000        0.00000                 1BMV 21
+ORIGX3      0.000000  0.000000  1.000000        0.00000                 1BMV 21
+SCALE1      0.003213  0.000000  0.000000        0.24950                 1BMV 21
+SCALE2      0.000000  0.003481 -0.000514        0.00000                 1BMV 21
+SCALE3      0.000000  0.000417  0.002822        0.00000                 1BMV 22
+USER  MOD -----------------------------------------------------------------
+USER  MOD scores for adjustable sidechains, with "set" totals for H,N and Q
+USER  MOD "o" means original, "f" means flipped, "180deg" is methyl default
+USER  MOD "!" flags a clash with an overlap of 0.40A or greater
+USER  MOD flip categories: "K"=keep, "C"=clashes, "X"=uncertain, "F"=flip
+USER  MOD Set 1.1:23090 CYS SG  :   rot  168:sc=   0.645
+USER  MOD Set 1.2:23092 MET CE  :methyl  154:sc=   -23.8!  (180deg=-27.2!)
+USER  MOD Set 1.3:23148 CYS SG  :   rot   65:sc=   -4.43!
+USER  MOD Set 2.1:11175 ASN     :      amide:sc=  -0.327! C(o=-5.1!,f=-13!)
+USER  MOD Set 2.2:23093 ASN     :      amide:sc=   -4.77! C(o=-5.1!,f=-18!)
+USER  MOD Set 3.1:11010 GLN     :FLIP  amide:sc=-0.000941  F(o=-1.9,f=-1.1)
+USER  MOD Set 3.2:11013 THR OG1 :   rot   22:sc=  -0.358!
+USER  MOD Set 3.3:11052 GLN     :      amide:sc=  -0.787  K(o=-1.1,f=-3.8)
+USER  MOD Set 4.1:22173 CYS SG  :   rot -117:sc=    1.61
+USER  MOD Set 4.2:22175 TYR OH  :   rot    2:sc=       0
+USER  MOD Set 5.1:23128 ASN     :      amide:sc=   -7.13! C(o=-9.4!,f=-9.6!)
+USER  MOD Set 5.2:23177 CYS SG  :   rot  111:sc=   -2.24
+USER  MOD Set 6.1:11076 MET CE  :methyl  179:sc=-0.00335   (180deg=-0.0115)
+USER  MOD Set 6.2:11089 SER OG  :   rot   84:sc=    1.78
+USER  MOD Set 6.3:11157 SER OG  :   rot  122:sc=    1.18
+USER  MOD Set 7.1:22025 SER OG  :   rot  180:sc=       0
+USER  MOD Set 7.2:22027 SER OG  :   rot  -90:sc=   -0.22
+USER  MOD Set 8.1:11129 ASN     :      amide:sc=   -10.7! C(o=-17!,f=-24!)
+USER  MOD Set 8.2:23130 ASN     :      amide:sc=   -5.65! C(o=-17!,f=-24!)
+USER  MOD Set 8.3:23132 CYS SG  :   rot  180:sc=  -0.253
+USER  MOD Set 9.1:23074 MET CE  :methyl -126:sc=   -15.4!  (180deg=-26.8!)
+USER  MOD Set 9.2:23123 MET CE  :methyl -128:sc=   -17.7!  (180deg=-23.7!)
+USER  MOD Set 9.3:23125 MET CE  :methyl -172:sc=-0.00879   (180deg=0)
+USER  MOD Set10.1:11097 ASN     :FLIP  amide:sc=   0.522  F(o=-2!,f=0.67)
+USER  MOD Set10.2:11103 HIS     :FLIP no HE2:sc=    0.15  F(o=-1,f=0.67)
+USER  MOD Set11.1:22129 GLN     :      amide:sc=   -1.46! K(o=-4.7!,f=-6)
+USER  MOD Set11.2:22178 ASN     :      amide:sc=   -3.28! C(o=-4.7!,f=-8!)
+USER  MOD Set12.1:11158 THR OG1 :   rot  180:sc=  -0.772
+USER  MOD Set12.2:11159 THR OG1 :   rot  180:sc=       0
+USER  MOD Set13.1:11031 SER OG  :   rot  160:sc=   0.849
+USER  MOD Set13.2:11099 ASN     :      amide:sc=  -0.921  K(o=0.87,f=-0.15)
+USER  MOD Set13.3:11146 HIS     :     no HD1:sc= -0.0161  K(o=0.87,f=-0.82)
+USER  MOD Set13.4:11148 SER OG  :   rot  -59:sc=   0.958
+USER  MOD Set14.1:23020 MET CE  :methyl  133:sc=   -8.52!  (180deg=-9.96!)
+USER  MOD Set14.2:23073 LYS NZ  :NH3+    160:sc=   -7.44!  (180deg=-10.3!)
+USER  MOD Set15.1:11167 SER OG  :   rot -129:sc=   0.688
+USER  MOD Set15.2:11169 ASN     :      amide:sc=   -1.69! C(o=-1!,f=-6.9!)
+USER  MOD Set16.1:11134 MET CE  :methyl -111:sc=   -13.7!  (180deg=-18.5!)
+USER  MOD Set16.2:11137 SER OG  :   rot   60:sc=-0.00564
+USER  MOD Set16.3:23095 SER OG  :   rot   82:sc=   0.264
+USER  MOD Set17.1:22051 ASN     :      amide:sc=  -0.698! C(o=-2.7!,f=-5.2!)
+USER  MOD Set17.2:23105 TYR OH  :   rot -167:sc=   -2.03!
+USER  MOD Set18.1:23101 SER OG  :   rot -131:sc=   0.609
+USER  MOD Set18.2:23106 THR OG1 :   rot  -70:sc=   0.671
+USER  MOD Set19.1:22017 LYS NZ  :NH3+   -153:sc=   -6.36!  (180deg=-8.59!)
+USER  MOD Set19.2:23154 THR OG1 :   rot  -95:sc=   -2.17
+USER  MOD Set20.1:23044 SER OG  :   rot  128:sc=   -1.06
+USER  MOD Set20.2:23147 HIS     :     no HE2:sc=    -3.4! C(o=-4.5!,f=-9.4!)
+USER  MOD Single :    1   G O2' :   rot  -15:sc=   0.112
+USER  MOD Single :    2   G O2' :   rot  -15:sc=    -1.5!
+USER  MOD Single :    3   U O2' :   rot -154:sc=   -2.49!
+USER  MOD Single :    4   C O2' :   rot  180:sc=    -1.5
+USER  MOD Single :    5   A O2' :   rot  180:sc=    -3.1!
+USER  MOD Single :    6   A O2' :   rot  -74:sc=   0.198
+USER  MOD Single :    7   A O2' :   rot  -14:sc=   0.109
+USER  MOD Single :    8   A O2' :   rot  -19:sc=   0.116
+USER  MOD Single :    9   U O2' :   rot  -22:sc=  0.0992
+USER  MOD Single :   10   G O2' :   rot  -17:sc=   0.101
+USER  MOD Single :   11   C O2' :   rot  -16:sc=  0.0893
+USER  MOD Single :   11   C O3' :   rot  180:sc=   0.111
+USER  MOD Single :11001 SER OG  :   rot    4:sc= -0.0985!
+USER  MOD Single :11003 SER OG  :   rot  180:sc=       0
+USER  MOD Single :11004 GLN     :      amide:sc= -0.0156  K(o=-0.016,f=-3.4!)
+USER  MOD Single :11005 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :11006 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :11009 ASN     :      amide:sc=   -3.89! C(o=-3.9!,f=-9.8!)
+USER  MOD Single :11011 MET CE  :methyl -115:sc=   -6.11!  (180deg=-10.1!)
+USER  MOD Single :11016 THR OG1 :   rot  126:sc=   0.905
+USER  MOD Single :11019 ASN     :      amide:sc=   -1.94! C(o=-1.9!,f=-5.6!)
+USER  MOD Single :11022 SER OG  :   rot  -50:sc=    0.67
+USER  MOD Single :11023 SER OG  :   rot  180:sc=       0
+USER  MOD Single :11024 LYS NZ  :NH3+   -171:sc=  -0.202   (180deg=-0.221)
+USER  MOD Single :11025 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :11026 SER OG  :   rot  110:sc=  -0.562!
+USER  MOD Single :11028 CYS SG  :   rot  117:sc=   -2.04!
+USER  MOD Single :11029 GLN     :FLIP  amide:sc=    -1.6  F(o=-2.1!,f=-1.6)
+USER  MOD Single :11040 SER OG  :   rot  180:sc=       0
+USER  MOD Single :11043 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :11044 THR OG1 :   rot  169:sc=    -3.4!
+USER  MOD Single :11049 THR OG1 :   rot  180:sc=-0.000366
+USER  MOD Single :11053 ASN     :      amide:sc=      -5! C(o=-5!,f=-16!)
+USER  MOD Single :11054 SER OG  :   rot  160:sc=    1.25
+USER  MOD Single :11057 SER OG  :   rot -153:sc=    1.23
+USER  MOD Single :11058 ASN     :FLIP  amide:sc=   -0.95  F(o=-3.2!,f=-0.95)
+USER  MOD Single :11066 LYS NZ  :NH3+   -141:sc=     0.6   (180deg=-1.76!)
+USER  MOD Single :11067 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :11069 CYS SG  :   rot  180:sc=   -2.38!
+USER  MOD Single :11071 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :11073 LYS NZ  :NH3+   -170:sc=       0   (180deg=-0.0681)
+USER  MOD Single :11077 SER OG  :   rot  180:sc=       0
+USER  MOD Single :11079 ASN     :      amide:sc=  0.0108  K(o=0.011,f=-7.3!)
+USER  MOD Single :11083 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :11085 SER OG  :   rot  180:sc=  0.0684
+USER  MOD Single :11092 GLN     :      amide:sc= -0.0327  K(o=-0.033,f=-1.5)
+USER  MOD Single :11096 THR OG1 :   rot -112:sc=  0.0649
+USER  MOD Single :11098 SER OG  :   rot  180:sc= -0.0554
+USER  MOD Single :11100 SER OG  :   rot  180:sc=       0
+USER  MOD Single :11101 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :11107 CYS SG  :   rot  180:sc=       0
+USER  MOD Single :11110 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :11111 LYS NZ  :NH3+    168:sc=  0.0264   (180deg=0.014)
+USER  MOD Single :11112 SER OG  :   rot  180:sc=       0
+USER  MOD Single :11115 HIS     :FLIP no HE2:sc=   -0.11  F(o=-0.8,f=-0.11)
+USER  MOD Single :11116 SER OG  :   rot  180:sc=       0
+USER  MOD Single :11126 CYS SG  :   rot  180:sc=       0
+USER  MOD Single :11130 ASN     :      amide:sc= -0.0673  X(o=-0.067,f=0)
+USER  MOD Single :11136 SER OG  :   rot  106:sc=   0.344
+USER  MOD Single :11141 ASN     :FLIP  amide:sc= -0.0921  F(o=-1.6!,f=-0.092)
+USER  MOD Single :11142 GLN     :      amide:sc=    -3.9! C(o=-3.9!,f=-6.4!)
+USER  MOD Single :11143 THR OG1 :   rot  -52:sc=   -2.32!
+USER  MOD Single :11144 SER OG  :   rot  129:sc=   0.781
+USER  MOD Single :11153 ASN     :      amide:sc= -0.0767  K(o=-0.077,f=-2!)
+USER  MOD Single :11155 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :11156 GLN     :      amide:sc=   -1.91! C(o=-1.9!,f=-6.7!)
+USER  MOD Single :11168 GLN     :      amide:sc=   -1.93! C(o=-1.9!,f=-4.5!)
+USER  MOD Single :11176 THR OG1 :   rot  180:sc=   -1.32
+USER  MOD Single :11178 MET CE  :methyl -132:sc=   -1.64   (180deg=-3.23!)
+USER  MOD Single :11182 SER OG  :   rot  180:sc=       0
+USER  MOD Single :11185 GLN     :      amide:sc=  -0.044  X(o=-0.044,f=0)
+USER  MOD Single :22001 CYS SG  :   rot  180:sc=       0
+USER  MOD Single :22004 ASN     :FLIP  amide:sc= -0.0715  F(o=-1.8!,f=-0.072)
+USER  MOD Single :22006 GLN     :FLIP  amide:sc=  -0.164  F(o=-2.4!,f=-0.16)
+USER  MOD Single :22007 ASN     :      amide:sc=  -0.227  K(o=-0.23,f=-5.5!)
+USER  MOD Single :22012 ASN     :FLIP  amide:sc=   -2.53  F(o=-4!,f=-2.5)
+USER  MOD Single :22015 MET CE  :methyl -159:sc=   -4.32!  (180deg=-8.29!)
+USER  MOD Single :22019 THR OG1 :   rot   72:sc=   0.138
+USER  MOD Single :22022 GLN     :      amide:sc=   0.456  K(o=0.46,f=-0.7)
+USER  MOD Single :22024 THR OG1 :   rot  -47:sc=   -1.19!
+USER  MOD Single :22029 LYS NZ  :NH3+    138:sc=    0.33   (180deg=-0.341)
+USER  MOD Single :22031 MET CE  :methyl -132:sc=   -6.48!  (180deg=-15.5!)
+USER  MOD Single :22034 SER OG  :   rot  180:sc=  0.0901
+USER  MOD Single :22042 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :22043 SER OG  :   rot  180:sc=       0
+USER  MOD Single :22047 MET CE  :methyl -165:sc=   -12.5!  (180deg=-12.8!)
+USER  MOD Single :22048 ASN     :FLIP  amide:sc=   -14.8! C(o=-25!,f=-15!)
+USER  MOD Single :22049 MET CE  :methyl -114:sc=     -23!  (180deg=-27.7!)
+USER  MOD Single :22055 SER OG  :   rot  117:sc=   -3.14!
+USER  MOD Single :22056 MET CE  :methyl  173:sc=   -1.98   (180deg=-2.45!)
+USER  MOD Single :22059 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :22069 SER OG  :   rot  180:sc=       0
+USER  MOD Single :22070 LYS NZ  :NH3+    178:sc=    1.02   (180deg=1.01)
+USER  MOD Single :22071 MET CE  :methyl -179:sc=   -9.38!  (180deg=-9.45!)
+USER  MOD Single :22072 THR OG1 :   rot -137:sc=   0.192
+USER  MOD Single :22073 SER OG  :   rot -122:sc=   -3.53!
+USER  MOD Single :22075 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :22077 LYS NZ  :NH3+    158:sc=    1.01   (180deg=-0.0164!)
+USER  MOD Single :22078 CYS SG  :   rot  180:sc=   -5.46!
+USER  MOD Single :22079 THR OG1 :   rot  145:sc=   0.982
+USER  MOD Single :22081 SER OG  :   rot  162:sc=  0.0054
+USER  MOD Single :22088 ASN     :      amide:sc=  -0.265! C(o=-0.26!,f=-6.7!)
+USER  MOD Single :22093 THR OG1 :   rot   98:sc=    1.11
+USER  MOD Single :22095 ASN     :      amide:sc=   -3.18! C(o=-3.2!,f=-4.8!)
+USER  MOD Single :22101 HIS     :FLIP no HD1:sc=   -2.19  F(o=-2.7!,f=-2.2)
+USER  MOD Single :22102 LYS NZ  :NH3+   -120:sc=   0.922   (180deg=-0.0864)
+USER  MOD Single :22105 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :22110 GLN     :      amide:sc=   0.753  K(o=0.75,f=-7.6!)
+USER  MOD Single :22112 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :22116 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :22118 SER OG  :   rot  180:sc=  -0.601
+USER  MOD Single :22119 GLN     :FLIP  amide:sc= -0.0229  F(o=-1.3!,f=-0.023)
+USER  MOD Single :22124 THR OG1 :   rot  180:sc=   -1.63!
+USER  MOD Single :22127 SER OG  :   rot   15:sc=    1.51
+USER  MOD Single :22128 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :22134 THR OG1 :   rot  180:sc=  -0.254
+USER  MOD Single :22135 THR OG1 :   rot   53:sc=   0.368
+USER  MOD Single :22141 CYS SG  :   rot  100:sc=   -1.31
+USER  MOD Single :22143 TYR OH  :   rot  159:sc=  -0.537
+USER  MOD Single :22145 TYR OH  :   rot -140:sc=   0.559
+USER  MOD Single :22147 MET CE  :methyl -172:sc=   -6.49!  (180deg=-6.87!)
+USER  MOD Single :22149 HIS     :     no HE2:sc=   -1.22  K(o=-1.2,f=-7.3!)
+USER  MOD Single :22151 SER OG  :   rot  180:sc=  -0.816
+USER  MOD Single :22152 SER OG  :   rot  180:sc=       0
+USER  MOD Single :22154 SER OG  :   rot   23:sc=   0.336
+USER  MOD Single :22155 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :22165 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :22167 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :22171 ASN     :      amide:sc= -0.0618  X(o=-0.062,f=0)
+USER  MOD Single :22172 MET CE  :methyl  154:sc=   -17.8!  (180deg=-19.6!)
+USER  MOD Single :22182 SER OG  :   rot  180:sc=       0
+USER  MOD Single :22184 SER OG  :   rot  157:sc=    1.08
+USER  MOD Single :22189 THR OG1A:   rot  180:sc=  -0.206
+USER  MOD Single :22192 GLN    A:FLIP  amide:sc=  -0.097  F(o=-0.64,f=-0.097)
+USER  MOD Single :23001 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :23003 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :23004 ASN     :      amide:sc=    -2.7! C(o=-2.7!,f=-6.6!)
+USER  MOD Single :23007 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :23009 SER OG  :   rot  180:sc=       0
+USER  MOD Single :23015 THR OG1 :   rot  180:sc=  -0.297
+USER  MOD Single :23017 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :23019 SER OG  :   rot  180:sc=    0.27
+USER  MOD Single :23024 LYS NZ  :NH3+    157:sc=   0.152   (180deg=0.0684)
+USER  MOD Single :23026 SER OG  :   rot  130:sc=   -5.95!
+USER  MOD Single :23027 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :23028 SER OG  :   rot   78:sc=    1.25!
+USER  MOD Single :23029 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :23034 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :23035 ASN     :FLIP  amide:sc=       0  F(o=-1.6!,f=0)
+USER  MOD Single :23036 THR OG1 :   rot   84:sc=   0.731
+USER  MOD Single :23040 THR OG1 :   rot -150:sc=   0.291
+USER  MOD Single :23049 ASN     :FLIP  amide:sc=   0.024  F(o=-0.64,f=0.024)
+USER  MOD Single :23052 THR OG1 :   rot  101:sc= 0.00223
+USER  MOD Single :23055 ASN     :      amide:sc=       0  X(o=0,f=-0.019)
+USER  MOD Single :23059 SER OG  :   rot   44:sc=    1.67
+USER  MOD Single :23063 GLN     :      amide:sc= -0.0953  X(o=-0.095,f=0)
+USER  MOD Single :23065 THR OG1 :   rot   35:sc=   0.626
+USER  MOD Single :23066 HIS     :     no HD1:sc=       0  X(o=0,f=-0.0019)
+USER  MOD Single :23069 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :23071 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :23077 THR OG1 :   rot   16:sc=    1.14
+USER  MOD Single :23083 ASN     :FLIP  amide:sc=  0.0983  F(o=-6.6!,f=0.098)
+USER  MOD Single :23084 THR OG1 :   rot -178:sc=    1.64
+USER  MOD Single :23094 SER OG  :   rot   25:sc=   0.103
+USER  MOD Single :23102 SER OG  :   rot -150:sc=       0
+USER  MOD Single :23108 CYS SG  :   rot  -83:sc=   -1.06!
+USER  MOD Single :23109 SER OG  :   rot  150:sc=   -1.15
+USER  MOD Single :23110 GLN     :      amide:sc=   -2.37  K(o=-2.4,f=-8.8!)
+USER  MOD Single :23112 CYS SG  :   rot  170:sc=-0.00417
+USER  MOD Single :23116 ASN     :      amide:sc=  -0.288  K(o=-0.29,f=-9.4!)
+USER  MOD Single :23119 CYS SG  :   rot  150:sc= -0.0688
+USER  MOD Single :23120 THR OG1 :   rot  110:sc=   0.547
+USER  MOD Single :23121 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :23124 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :23126 SER OG  :   rot  159:sc=    1.09
+USER  MOD Single :23133 SER OG  :   rot  180:sc=   -1.39!
+USER  MOD Single :23137 SER OG  :   rot   92:sc=   0.994
+USER  MOD Single :23142 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :23144 THR OG1 :   rot  101:sc=   0.222
+USER  MOD Single :23152 CYS SG  :   rot   80:sc=   -4.74!
+USER  MOD Single :23157 THR OG1 :   rot  170:sc=       0
+USER  MOD Single :23159 THR OG1 :   rot   86:sc=   0.012
+USER  MOD Single :23161 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :23162 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :23165 GLN     :      amide:sc=   -5.66! C(o=-5.7!,f=-9.4!)
+USER  MOD Single :23167 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :23173 SER OG  :   rot  180:sc=  -0.735!
+USER  MOD Single :23174 SER OG  :   rot  180:sc=       0
+USER  MOD Single :23175 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :23181 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :23182 TYR OH  :   rot -174:sc=     1.2
+USER  MOD -----------------------------------------------------------------                                        1BMV459
+ATOM   4468  O3P   G M   1     -23.092  23.091  94.901  1.00 15.00      1BMV4597
+ATOM   4469  P     G M   1     -22.892  21.747  95.728  1.00 15.00      1BMV4598
+ATOM   4470  OP1   G M   1     -24.129  21.421  96.471  1.00 15.00      1BMV4599
+ATOM   4471  OP2   G M   1     -22.411  20.670  94.834  1.00 15.00      1BMV4600
+ATOM   4472  O5'   G M   1     -21.744  22.162  96.763  1.00 15.00      1BMV4601
+ATOM   4473  C5'   G M   1     -20.477  22.593  96.231  1.00 15.00      1BMV4602
+ATOM   4474  C4'   G M   1     -19.522  22.943  97.374  1.00 15.00      1BMV4603
+ATOM   4475  O4'   G M   1     -20.158  23.968  98.196  1.00 15.00      1BMV4604
+ATOM   4476  C3'   G M   1     -19.202  21.816  98.343  1.00 15.00      1BMV4605
+ATOM   4477  O3'   G M   1     -18.169  20.973  97.857  1.00 15.00      1BMV4606
+ATOM   4478  C2'   G M   1     -18.826  22.580  99.603  1.00 15.00      1BMV4607
+ATOM   4479  O2'   G M   1     -17.464  22.978  99.569  1.00 15.00      1BMV4608
+ATOM   4480  C1'   G M   1     -19.832  23.762  99.573  1.00 15.00      1BMV4609
+ATOM   4481  N9    G M   1     -21.094  23.548 100.315  1.00 15.00      1BMV4610
+ATOM   4482  C8    G M   1     -22.390  23.534  99.839  1.00 15.00      1BMV4611
+ATOM   4483  N7    G M   1     -23.294  23.316 100.762  1.00 15.00      1BMV4612
+ATOM   4484  C5    G M   1     -22.555  23.175 101.930  1.00 15.00      1BMV4613
+ATOM   4485  C6    G M   1     -22.987  22.923 103.259  1.00 15.00      1BMV4614
+ATOM   4486  O6    G M   1     -24.131  22.770 103.685  1.00 15.00      1BMV4615
+ATOM   4487  N1    G M   1     -21.899  22.854 104.137  1.00 15.00      1BMV4616
+ATOM   4488  C2    G M   1     -20.568  23.011 103.769  1.00 15.00      1BMV4617
+ATOM   4489  N2    G M   1     -19.693  22.908 104.767  1.00 15.00      1BMV4618
+ATOM   4490  N3    G M   1     -20.165  23.245 102.534  1.00 15.00      1BMV4619
+ATOM   4491  C4    G M   1     -21.208  23.316 101.664  1.00 15.00      1BMV4620
+ATOM   4492  P     G M   2     -18.242  19.413  98.156  1.00 15.00      1BMV4621
+ATOM   4493  OP1   G M   2     -19.618  18.918  97.928  1.00 15.00      1BMV4622
+ATOM   4494  OP2   G M   2     -17.198  18.700  97.386  1.00 15.00      1BMV4623
+ATOM   4495  O5'   G M   2     -17.910  19.358  99.720  1.00 15.00      1BMV4624
+ATOM   4496  C5'   G M   2     -16.530  19.253 100.115  1.00 15.00      1BMV4625
+ATOM   4497  C4'   G M   2     -16.425  19.186 101.640  1.00 15.00      1BMV4626
+ATOM   4498  O4'   G M   2     -17.357  20.161 102.199  1.00 15.00      1BMV4627
+ATOM   4499  C3'   G M   2     -16.824  17.865 102.278  1.00 15.00      1BMV4628
+ATOM   4500  O3'   G M   2     -15.763  16.921 102.253  1.00 15.00      1BMV4629
+ATOM   4501  C2'   G M   2     -17.225  18.298 103.679  1.00 15.00      1BMV4630
+ATOM   4502  O2'   G M   2     -16.089  18.399 104.525  1.00 15.00      1BMV4631
+ATOM   4503  C1'   G M   2     -17.933  19.652 103.405  1.00 15.00      1BMV4632
+ATOM   4504  N9    G M   2     -19.399  19.582 103.218  1.00 15.00      1BMV4633
+ATOM   4505  C8    G M   2     -20.151  19.927 102.114  1.00 15.00      1BMV4634
+ATOM   4506  N7    G M   2     -21.439  19.746 102.269  1.00 15.00      1BMV4635
+ATOM   4507  C5    G M   2     -21.556  19.248 103.561  1.00 15.00      1BMV4636
+ATOM   4508  C6    G M   2     -22.712  18.863 104.290  1.00 15.00      1BMV4637
+ATOM   4509  O6    G M   2     -23.891  18.883 103.939  1.00 15.00      1BMV4638
+ATOM   4510  N1    G M   2     -22.371  18.413 105.571  1.00 15.00      1BMV4639
+ATOM   4511  C2    G M   2     -21.077  18.347 106.074  1.00 15.00      1BMV4640
+ATOM   4512  N2    G M   2     -20.981  17.887 107.319  1.00 15.00      1BMV4641
+ATOM   4513  N3    G M   2     -20.002  18.705 105.397  1.00 15.00      1BMV4642
+ATOM   4514  C4    G M   2     -20.311  19.146 104.148  1.00 15.00      1BMV4643
+ATOM   4515  P     U M   3     -16.094  15.398 101.936  1.00 15.00      1BMV4644
+ATOM   4516  OP1   U M   3     -16.858  15.299 100.672  1.00 15.00      1BMV4645
+ATOM   4517  OP2   U M   3     -14.852  14.594 101.966  1.00 15.00      1BMV4646
+ATOM   4518  O5'   U M   3     -17.041  15.001 103.162  1.00 15.00      1BMV4647
+ATOM   4519  C5'   U M   3     -16.627  15.382 104.488  1.00 15.00      1BMV4648
+ATOM   4520  C4'   U M   3     -17.693  14.973 105.507  1.00 15.00      1BMV4649
+ATOM   4521  O4'   U M   3     -18.752  15.977 105.479  1.00 15.00      1BMV4650
+ATOM   4522  C3'   U M   3     -18.404  13.657 105.235  1.00 15.00      1BMV4651
+ATOM   4523  O3'   U M   3     -17.657  12.543 105.702  1.00 15.00      1BMV4652
+ATOM   4524  C2'   U M   3     -19.725  13.857 105.961  1.00 15.00      1BMV4653
+ATOM   4525  O2'   U M   3     -19.601  13.540 107.339  1.00 15.00      1BMV4654
+ATOM   4526  C1'   U M   3     -20.023  15.353 105.679  1.00 15.00      1BMV4655
+ATOM   4527  N1    U M   3     -20.859  15.627 104.489  1.00 15.00      1BMV4656
+ATOM   4528  C2    U M   3     -22.207  15.524 104.648  1.00 15.00      1BMV4657
+ATOM   4529  O2    U M   3     -22.733  15.222 105.706  1.00 15.00      1BMV4658
+ATOM   4530  N3    U M   3     -22.967  15.784 103.526  1.00 15.00      1BMV4659
+ATOM   4531  C4    U M   3     -22.480  16.136 102.272  1.00 15.00      1BMV4660
+ATOM   4532  O4    U M   3     -23.261  16.344 101.345  1.00 15.00      1BMV4661
+ATOM   4533  C5    U M   3     -21.044  16.220 102.205  1.00 15.00      1BMV4662
+ATOM   4534  C6    U M   3     -20.287  15.971 103.282  1.00 15.00      1BMV4663
+ATOM   4535  P     C M   4     -17.724  11.177 104.892  1.00 15.00      1BMV4664
+ATOM   4536  OP1   C M   4     -17.436  11.422 103.461  1.00 15.00      1BMV4665
+ATOM   4537  OP2   C M   4     -16.849  10.167 105.529  1.00 15.00      1BMV4666
+ATOM   4538  O5'   C M   4     -19.260  10.764 105.061  1.00 15.00      1BMV4667
+ATOM   4539  C5'   C M   4     -19.916  11.091 106.301  1.00 15.00      1BMV4668
+ATOM   4540  C4'   C M   4     -21.414  10.801 106.193  1.00 15.00      1BMV4669
+ATOM   4541  O4'   C M   4     -22.064  11.987 105.641  1.00 15.00      1BMV4670
+ATOM   4542  C3'   C M   4     -21.809   9.674 105.252  1.00 15.00      1BMV4671
+ATOM   4543  O3'   C M   4     -21.699   8.401 105.872  1.00 15.00      1BMV4672
+ATOM   4544  C2'   C M   4     -23.234  10.054 104.885  1.00 15.00      1BMV4673
+ATOM   4545  O2'   C M   4     -24.152   9.597 105.866  1.00 15.00      1BMV4674
+ATOM   4546  C1'   C M   4     -23.137  11.599 104.779  1.00 15.00      1BMV4675
+ATOM   4547  N1    C M   4     -22.854  12.134 103.428  1.00 15.00      1BMV4676
+ATOM   4548  C2    C M   4     -23.937  12.402 102.585  1.00 15.00      1BMV4677
+ATOM   4549  O2    C M   4     -25.086  12.184 102.998  1.00 15.00      1BMV4678
+ATOM   4550  N3    C M   4     -23.700  12.894 101.339  1.00 15.00      1BMV4679
+ATOM   4551  C4    C M   4     -22.442  13.114 100.934  1.00 15.00      1BMV4680
+ATOM   4552  N4    C M   4     -22.258  13.592  99.717  1.00 15.00      1BMV4681
+ATOM   4553  C5    C M   4     -21.309  12.846 101.782  1.00 15.00      1BMV4682
+ATOM   4554  C6    C M   4     -21.568  12.359 103.014  1.00 15.00      1BMV4683
+ATOM   4555  P     A M   5     -21.833   7.094 104.976  1.00 15.00      1BMV4684
+ATOM   4556  OP1   A M   5     -20.751   7.059 103.967  1.00 15.00      1BMV4685
+ATOM   4557  OP2   A M   5     -21.905   5.894 105.840  1.00 15.00      1BMV4686
+ATOM   4558  O5'   A M   5     -23.235   7.335 104.244  1.00 15.00      1BMV4687
+ATOM   4559  C5'   A M   5     -24.429   6.869 104.900  1.00 15.00      1BMV4688
+ATOM   4560  C4'   A M   5     -25.630   7.008 103.962  1.00 15.00      1BMV4689
+ATOM   4561  O4'   A M   5     -25.523   8.375 103.461  1.00 15.00      1BMV4690
+ATOM   4562  C3'   A M   5     -25.606   6.139 102.716  1.00 15.00      1BMV4691
+ATOM   4563  O3'   A M   5     -26.183   4.862 102.946  1.00 15.00      1BMV4692
+ATOM   4564  C2'   A M   5     -26.372   6.952 101.685  1.00 15.00      1BMV4693
+ATOM   4565  O2'   A M   5     -27.772   6.748 101.815  1.00 15.00      1BMV4694
+ATOM   4566  C1'   A M   5     -25.914   8.322 102.086  1.00 15.00      1BMV4695
+ATOM   4567  N9    A M   5     -24.773   8.790 101.268  1.00 15.00      1BMV4696
+ATOM   4568  C8    A M   5     -23.454   8.802 101.599  1.00 15.00      1BMV4697
+ATOM   4569  N7    A M   5     -22.680   9.275 100.668  1.00 15.00      1BMV4698
+ATOM   4570  C5    A M   5     -23.547   9.601  99.646  1.00 15.00      1BMV4699
+ATOM   4571  C6    A M   5     -23.357  10.154  98.363  1.00 15.00      1BMV4700
+ATOM   4572  N6    A M   5     -22.142  10.491  97.881  1.00 15.00      1BMV4701
+ATOM   4573  N1    A M   5     -24.438  10.350  97.596  1.00 15.00      1BMV4702
+ATOM   4574  C2    A M   5     -25.644  10.016  98.074  1.00 15.00      1BMV4703
+ATOM   4575  N3    A M   5     -25.957   9.495  99.246  1.00 15.00      1BMV4704
+ATOM   4576  C4    A M   5     -24.849   9.316  99.979  1.00 15.00      1BMV4705
+ATOM   4577  P     A M   6     -25.561   3.592 102.220  1.00 15.00      1BMV4706
+ATOM   4578  OP1   A M   6     -24.091   3.582 102.389  1.00 15.00      1BMV4707
+ATOM   4579  OP2   A M   6     -26.241   2.361 102.682  1.00 15.00      1BMV4708
+ATOM   4580  O5'   A M   6     -25.917   3.879 100.686  1.00 15.00      1BMV4709
+ATOM   4581  C5'   A M   6     -27.218   4.417 100.383  1.00 15.00      1BMV4710
+ATOM   4582  C4'   A M   6     -27.324   4.716  98.886  1.00 15.00      1BMV4711
+ATOM   4583  O4'   A M   6     -26.593   5.952  98.621  1.00 15.00      1BMV4712
+ATOM   4584  C3'   A M   6     -26.697   3.691  97.955  1.00 15.00      1BMV4713
+ATOM   4585  O3'   A M   6     -27.567   2.596  97.707  1.00 15.00      1BMV4714
+ATOM   4586  C2'   A M   6     -26.377   4.484  96.698  1.00 15.00      1BMV4715
+ATOM   4587  O2'   A M   6     -27.513   4.575  95.851  1.00 15.00      1BMV4716
+ATOM   4588  C1'   A M   6     -25.985   5.782  97.338  1.00 15.00      1BMV4717
+ATOM   4589  N9    A M   6     -24.519   5.899  97.507  1.00 15.00      1BMV4718
+ATOM   4590  C8    A M   6     -23.760   5.472  98.551  1.00 15.00      1BMV4719
+ATOM   4591  N7    A M   6     -22.490   5.717  98.417  1.00 15.00      1BMV4720
+ATOM   4592  C5    A M   6     -22.400   6.353  97.196  1.00 15.00      1BMV4721
+ATOM   4593  C6    A M   6     -21.316   6.878  96.462  1.00 15.00      1BMV4722
+ATOM   4594  N6    A M   6     -20.041   6.831  96.901  1.00 15.00      1BMV4723
+ATOM   4595  N1    A M   6     -21.575   7.447  95.277  1.00 15.00      1BMV4724
+ATOM   4596  C2    A M   6     -22.842   7.493  94.841  1.00 15.00      1BMV4725
+ATOM   4597  N3    A M   6     -23.938   7.043  95.424  1.00 15.00      1BMV4726
+ATOM   4598  C4    A M   6     -23.633   6.484  96.603  1.00 15.00      1BMV4727
+ATOM   4599  P     A M   7     -26.986   1.297  96.998  1.00 15.00      1BMV4728
+ATOM   4600  OP1   A M   7     -25.800   0.806  97.734  1.00 15.00      1BMV4729
+ATOM   4601  OP2   A M   7     -28.060   0.293  96.824  1.00 15.00      1BMV4730
+ATOM   4602  O5'   A M   7     -26.529   1.870  95.576  1.00 15.00      1BMV4731
+ATOM   4603  C5'   A M   7     -27.047   1.234  94.392  1.00 15.00      1BMV4732
+ATOM   4604  C4'   A M   7     -26.397   1.838  93.146  1.00 15.00      1BMV4733
+ATOM   4605  O4'   A M   7     -25.706   3.061  93.546  1.00 15.00      1BMV4734
+ATOM   4606  C3'   A M   7     -25.325   0.994  92.477  1.00 15.00      1BMV4735
+ATOM   4607  O3'   A M   7     -25.882   0.021  91.605  1.00 15.00      1BMV4736
+ATOM   4608  C2'   A M   7     -24.460   2.008  91.747  1.00 15.00      1BMV4737
+ATOM   4609  O2'   A M   7     -25.012   2.332  90.480  1.00 15.00      1BMV4738
+ATOM   4610  C1'   A M   7     -24.523   3.125  92.746  1.00 15.00      1BMV4739
+ATOM   4611  N9    A M   7     -23.356   3.127  93.655  1.00 15.00      1BMV4740
+ATOM   4612  C8    A M   7     -23.195   2.431  94.813  1.00 15.00      1BMV4741
+ATOM   4613  N7    A M   7     -22.053   2.637  95.399  1.00 15.00      1BMV4742
+ATOM   4614  C5    A M   7     -21.410   3.534  94.571  1.00 15.00      1BMV4743
+ATOM   4615  C6    A M   7     -20.148   4.161  94.628  1.00 15.00      1BMV4744
+ATOM   4616  N6    A M   7     -19.267   3.950  95.629  1.00 15.00      1BMV4745
+ATOM   4617  N1    A M   7     -19.818   5.002  93.639  1.00 15.00      1BMV4746
+ATOM   4618  C2    A M   7     -20.692   5.211  92.645  1.00 15.00      1BMV4747
+ATOM   4619  N3    A M   7     -21.894   4.693  92.474  1.00 15.00      1BMV4748
+ATOM   4620  C4    A M   7     -22.183   3.861  93.483  1.00 15.00      1BMV4749
+ATOM   4621  P     A M   8     -25.329  -1.469  91.658  1.00 15.00      1BMV4750
+ATOM   4622  OP1   A M   8     -26.179  -2.354  90.830  1.00 15.00      1BMV4751
+ATOM   4623  OP2   A M   8     -23.893  -1.489  91.301  1.00 15.00      1BMV4752
+ATOM   4624  O5'   A M   8     -25.522  -1.840  93.202  1.00 15.00      1BMV4753
+ATOM   4625  C5'   A M   8     -24.480  -2.593  93.851  1.00 15.00      1BMV4754
+ATOM   4626  C4'   A M   8     -24.882  -2.906  95.294  1.00 15.00      1BMV4755
+ATOM   4627  O4'   A M   8     -26.278  -2.517  95.468  1.00 15.00      1BMV4756
+ATOM   4628  C3'   A M   8     -24.838  -4.371  95.695  1.00 15.00      1BMV4757
+ATOM   4629  O3'   A M   8     -23.530  -4.784  96.064  1.00 15.00      1BMV4758
+ATOM   4630  C2'   A M   8     -25.830  -4.468  96.843  1.00 15.00      1BMV4759
+ATOM   4631  O2'   A M   8     -25.222  -4.102  98.073  1.00 15.00      1BMV4760
+ATOM   4632  C1'   A M   8     -26.851  -3.487  96.349  1.00 15.00      1BMV4761
+ATOM   4633  N9    A M   8     -27.964  -4.153  95.636  1.00 15.00      1BMV4762
+ATOM   4634  C8    A M   8     -28.404  -3.921  94.370  1.00 15.00      1BMV4763
+ATOM   4635  N7    A M   8     -29.408  -4.666  94.015  1.00 15.00      1BMV4764
+ATOM   4636  C5    A M   8     -29.652  -5.449  95.125  1.00 15.00      1BMV4765
+ATOM   4637  C6    A M   8     -30.597  -6.458  95.401  1.00 15.00      1BMV4766
+ATOM   4638  N6    A M   8     -31.525  -6.862  94.507  1.00 15.00      1BMV4767
+ATOM   4639  N1    A M   8     -30.565  -7.036  96.610  1.00 15.00      1BMV4768
+ATOM   4640  C2    A M   8     -29.644  -6.636  97.497  1.00 15.00      1BMV4769
+ATOM   4641  N3    A M   8     -28.711  -5.711  97.366  1.00 15.00      1BMV4770
+ATOM   4642  C4    A M   8     -28.780  -5.161  96.147  1.00 15.00      1BMV4771
+ATOM   4643  P     U M   9     -23.016  -6.217  95.608  1.00 15.00      1BMV4772
+ATOM   4644  OP1   U M   9     -23.360  -6.450  94.187  1.00 15.00      1BMV4773
+ATOM   4645  OP2   U M   9     -21.577  -6.362  95.922  1.00 15.00      1BMV4774
+ATOM   4646  O5'   U M   9     -23.886  -7.192  96.531  1.00 15.00      1BMV4775
+ATOM   4647  C5'   U M   9     -23.285  -7.694  97.740  1.00 15.00      1BMV4776
+ATOM   4648  C4'   U M   9     -24.271  -8.602  98.477  1.00 15.00      1BMV4777
+ATOM   4649  O4'   U M   9     -25.572  -8.478  97.826  1.00 15.00      1BMV4778
+ATOM   4650  C3'   U M   9     -23.962 -10.090  98.439  1.00 15.00      1BMV4779
+ATOM   4651  O3'   U M   9     -23.016 -10.462  99.430  1.00 15.00      1BMV4780
+ATOM   4652  C2'   U M   9     -25.338 -10.703  98.645  1.00 15.00      1BMV4781
+ATOM   4653  O2'   U M   9     -25.661 -10.775 100.026  1.00 15.00      1BMV4782
+ATOM   4654  C1'   U M   9     -26.243  -9.741  97.832  1.00 15.00      1BMV4783
+ATOM   4655  N1    U M   9     -26.495 -10.131  96.427  1.00 15.00      1BMV4784
+ATOM   4656  C2    U M   9     -27.132 -11.316  96.222  1.00 15.00      1BMV4785
+ATOM   4657  O2    U M   9     -27.492 -12.045  97.131  1.00 15.00      1BMV4786
+ATOM   4658  N3    U M   9     -27.357 -11.660  94.904  1.00 15.00      1BMV4787
+ATOM   4659  C4    U M   9     -26.993 -10.911  93.791  1.00 15.00      1BMV4788
+ATOM   4660  O4    U M   9     -27.248 -11.324  92.661  1.00 15.00      1BMV4789
+ATOM   4661  C5    U M   9     -26.325  -9.675  94.110  1.00 15.00      1BMV4790
+ATOM   4662  C6    U M   9     -26.097  -9.322  95.382  1.00 15.00      1BMV4791
+ATOM   4663  P     G M  10     -21.894 -11.527  99.063  1.00 15.00      1BMV4792
+ATOM   4664  OP1   G M  10     -21.057 -11.019  97.953  1.00 15.00      1BMV4793
+ATOM   4665  OP2   G M  10     -21.138 -11.906 100.278  1.00 15.00      1BMV4794
+ATOM   4666  O5'   G M  10     -22.766 -12.765  98.546  1.00 15.00      1BMV4795
+ATOM   4667  C5'   G M  10     -23.287 -13.682  99.526  1.00 15.00      1BMV4796
+ATOM   4668  C4'   G M  10     -24.087 -14.788  98.836  1.00 15.00      1BMV4797
+ATOM   4669  O4'   G M  10     -24.423 -14.329  97.491  1.00 15.00      1BMV4798
+ATOM   4670  C3'   G M  10     -23.358 -16.104  98.622  1.00 15.00      1BMV4799
+ATOM   4671  O3'   G M  10     -23.392 -16.926  99.779  1.00 15.00      1BMV4800
+ATOM   4672  C2'   G M  10     -24.104 -16.689  97.434  1.00 15.00      1BMV4801
+ATOM   4673  O2'   G M  10     -25.276 -17.372  97.855  1.00 15.00      1BMV4802
+ATOM   4674  C1'   G M  10     -24.382 -15.427  96.575  1.00 15.00      1BMV4803
+ATOM   4675  N9    G M  10     -23.370 -15.121  95.539  1.00 15.00      1BMV4804
+ATOM   4676  C8    G M  10     -22.571 -14.003  95.410  1.00 15.00      1BMV4805
+ATOM   4677  N7    G M  10     -21.771 -14.038  94.373  1.00 15.00      1BMV4806
+ATOM   4678  C5    G M  10     -22.054 -15.258  93.770  1.00 15.00      1BMV4807
+ATOM   4679  C6    G M  10     -21.500 -15.851  92.605  1.00 15.00      1BMV4808
+ATOM   4680  O6    G M  10     -20.631 -15.414  91.852  1.00 15.00      1BMV4809
+ATOM   4681  N1    G M  10     -22.080 -17.100  92.354  1.00 15.00      1BMV4810
+ATOM   4682  C2    G M  10     -23.067 -17.693  93.133  1.00 15.00      1BMV4811
+ATOM   4683  N2    G M  10     -23.476 -18.886  92.711  1.00 15.00      1BMV4812
+ATOM   4684  N3    G M  10     -23.582 -17.141  94.216  1.00 15.00      1BMV4813
+ATOM   4685  C4    G M  10     -23.032 -15.926  94.480  1.00 15.00      1BMV4814
+ATOM   4686  P     C M  11     -22.076 -17.707 100.209  1.00 15.00      1BMV4815
+ATOM   4687  OP1   C M  11     -21.179 -16.808 100.969  1.00 15.00      1BMV4816
+ATOM   4688  OP2   C M  11     -22.437 -18.955 100.918  1.00 15.00      1BMV4817
+ATOM   4689  O5'   C M  11     -21.413 -18.046  98.793  1.00 15.00      1BMV4818
+ATOM   4690  C5'   C M  11     -21.462 -19.409  98.332  1.00 15.00      1BMV4819
+ATOM   4691  C4'   C M  11     -21.150 -19.468  96.836  1.00 15.00      1BMV4820
+ATOM   4692  O4'   C M  11     -20.031 -18.567  96.573  1.00 15.00      1BMV4821
+ATOM   4693  C3'   C M  11     -20.692 -20.815  96.303  1.00 15.00      1BMV4822
+ATOM   4694  O3'   C M  11     -21.786 -21.674  96.017  1.00 15.00      1BMV4823
+ATOM   4695  C2'   C M  11     -19.892 -20.414  95.074  1.00 15.00      1BMV4824
+ATOM   4696  O2'   C M  11     -20.742 -20.226  93.953  1.00 15.00      1BMV4825
+ATOM   4697  C1'   C M  11     -19.187 -19.119  95.559  1.00 15.00      1BMV4826
+ATOM   4698  N1    C M  11     -17.837 -19.302  96.138  1.00 15.00      1BMV4827
+ATOM   4699  C2    C M  11     -16.836 -19.834  95.319  1.00 15.00      1BMV4828
+ATOM   4700  O2    C M  11     -17.114 -20.131  94.148  1.00 15.00      1BMV4829
+ATOM   4701  N3    C M  11     -15.588 -20.011  95.830  1.00 15.00      1BMV4830
+ATOM   4702  C4    C M  11     -15.330 -19.676  97.101  1.00 15.00      1BMV4831
+ATOM   4703  N4    C M  11     -14.106 -19.864  97.556  1.00 15.00      1BMV4832
+ATOM   4704  C5    C M  11     -16.343 -19.126  97.965  1.00 15.00      1BMV4833
+ATOM   4705  C6    C M  11     -17.574 -18.960  97.438  1.00 15.00      1BMV4834
+END                                                                     1BMV483

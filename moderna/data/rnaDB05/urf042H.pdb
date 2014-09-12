@@ -1,0 +1,263 @@
+USER  MOD reduceV2.21 H: found=0, std=0, add=66, rem=0, adj=8
+HEADER    RIBONUCLEIC ACID                        08-NOV-95   1OSU      1OSU
+COMPND    MOL_ID: 1;                                                    1OSU
+COMPND   2 MOLECULE: RNA (5'-R(*UP*UP*CP*GP*CP*G)-3');                  1OSU
+COMPND   3 CHAIN: A                                                     1OSU
+SOURCE    MOL_ID: 1;                                                    1OSU
+SOURCE   2 SYNTHETIC: YES                                               1OSU
+EXPDTA    X-RAY DIFFRACTION                                             1OSU
+AUTHOR    M.C.WAHL,S.T.RAO,M.SUNDARALINGAM                              1OSU
+REVDAT   1   03-APR-96 1OSU    0                                        1OSU  1
+JRNL        AUTH   M.C.WAHL,S.T.RAO,M.SUNDARALINGAM                     1OSU  1
+JRNL        TITL   STRUCTURE OF THE RNA HEXAMER, R(UUCGCG), WITH A      1OSU  1
+JRNL        TITL 2 5'-UU-OVERHANG EXHIBITING HOOGSTEEN-LIKE TRANS U-U   1OSU  1
+JRNL        TITL 3 BASE PAIRS                                           1OSU  1
+JRNL        REF    NAT.STRUCT.BIOL.              V.   3    24 1996      1OSU  1
+JRNL        REFN   ASTM NSBIEW  US ISSN 1072-8368                 2024  1OSU  1
+REMARK   1                                                              1OSU  1
+REMARK   1 REFERENCE 1                                                  1OSU  1
+REMARK   1  AUTH   K.J.BAEYENS,H.L.DEBONDT,S.R.HOLBROOK                 1OSU  1
+REMARK   1  TITL   STRUCTURE OF AN RNA DOUBLE HELIX INCLUDING           1OSU  2
+REMARK   1  TITL 2 URACIL-URACIL BASE PAIRS IN AN INTERNAL LOOP         1OSU  2
+REMARK   1  REF    NAT.STRUCT.BIOL.              V.   2    56 1995      1OSU  2
+REMARK   1  REFN   ASTM NSBIEW  US ISSN 1072-8368                 2024  1OSU  2
+REMARK   2                                                              1OSU  2
+REMARK   2 RESOLUTION. 1.40 ANGSTROMS.                                  1OSU  2
+REMARK   3                                                              1OSU  2
+REMARK   3 REFINEMENT.                                                  1OSU  2
+REMARK   3   PROGRAM                    X-PLOR                          1OSU  2
+REMARK   3   AUTHORS                    BRUNGER                         1OSU  2
+REMARK   3   R VALUE                    0.161                           1OSU  3
+REMARK   3   RMSD BOND DISTANCES        0.012  ANGSTROMS                1OSU  3
+REMARK   3   RMSD BOND ANGLES           1.70   DEGREES                  1OSU  3
+REMARK   3                                                              1OSU  3
+REMARK   3   NUMBER OF REFLECTIONS      2991                            1OSU  3
+REMARK   3   RESOLUTION RANGE      8.0  - 1.40 ANGSTROMS                1OSU  3
+REMARK   3   DATA CUTOFF                2.0    SIGMA(F)                 1OSU  3
+REMARK   3   PERCENT COMPLETION         86.4                            1OSU  3
+REMARK   3                                                              1OSU  3
+REMARK   3   NUMBER OF PROTEIN ATOMS                          0         1OSU  3
+REMARK   3   NUMBER OF NUCLEIC ACID ATOMS                   123         1OSU  4
+REMARK   3   NUMBER OF HETEROGEN ATOMS                        0         1OSU  4
+REMARK   3   NUMBER OF SOLVENT ATOMS                         38         1OSU  4
+REMARK 100                                                              1OSU  4
+REMARK 100 THIS ENTRY CONTAINS THE CRYSTALLOGRAPHIC ASYMMETRIC UNIT     1OSU  4
+REMARK 100 WHICH CONSISTS OF 1  RNA CHAIN.                              1OSU  4
+REMARK 100                                                              1OSU  4
+REMARK 100 TO GENERATE THE WATSON-CRICK BASE-PAIRED CGCG-PART OF THE    1OSU  4
+REMARK 100 STRUCTURE THE FOLLOWING CRYSTALLOGRAPHIC SYMMETRY OPERATION  1OSU  4
+REMARK 100 MUST BE APPLIED TO THE COORDINATES FOR THE ATOMS WITH CHAIN  1OSU  4
+REMARK 100 ID A OF THIS ENTRY:                                          1OSU  5
+REMARK 100                                                              1OSU  5
+REMARK 100   SMTRY1      -1.0     0.0     0.0     -30.60                1OSU  5
+REMARK 100   SMTRY2       0.0    -1.0     0.0       0.00                1OSU  5
+REMARK 100   SMTRY3       0.0     0.0     1.0      14.60                1OSU  5
+REMARK 100                                                              1OSU  5
+REMARK 100 TO GENERATE THE U-U PAIRS OF THE STRUCTURE THE FOLLOWING     1OSU  5
+REMARK 100 CRYSTALLOGRAPHIC SYMMETRY OPERATION MUST BE APPLIED TO THE   1OSU  5
+REMARK 100 COORDINATES FOR THE ATOMS WITH CHAIN ID A OF THIS ENTRY:     1OSU  5
+REMARK 100                                                              1OSU  5
+REMARK 100   SMTRY1       1.0     0.0     0.0       0.00                1OSU  6
+REMARK 100   SMTRY2       0.0    -1.0     0.0       0.00                1OSU  6
+REMARK 100   SMTRY3       0.0     0.0    -1.0      29.20                1OSU  6
+REMARK 102                                                              1OSU  6
+REMARK 102 BASES   U A   1 AND   U B   2 ARE MISPAIRED.                 1OSU  6
+REMARK 102 BASES   U A   2 AND   U B   1 ARE MISPAIRED.                 1OSU  6
+REMARK 102 ALL THE OTHER HYDROGEN BONDS BETWEEN BASE PAIRS IN THIS      1OSU  6
+REMARK 102 ENTRY FOLLOW THE CONVENTIONAL WATSON-CRICK HYDROGEN BONDING  1OSU  6
+REMARK 102 PATTERN AND THEY HAVE NOT BEEN PRESENTED ON *CONECT*         1OSU  6
+REMARK 102 RECORDS IN THIS ENTRY.                                       1OSU  6
+REMARK 105                                                              1OSU  7
+REMARK 105 THE PROTEIN DATA BANK HAS ADOPTED THE SACCHARIDE CHEMISTS    1OSU  7
+REMARK 105 NOMENCLATURE FOR ATOMS OF THE DEOXYRIBOSE/RIBOSE MOIETY      1OSU  7
+REMARK 105 RATHER THAN THAT OF THE NUCLEOSIDE CHEMISTS.  THE RING       1OSU  7
+REMARK 105 OXYGEN ATOM IS LABELLED O4' INSTEAD OF O1*.                  1OSU  7
+REMARK 201                                                              1OSU  7
+REMARK 201 WATERS HOH 41, HOH 42, HOH 43, HOH 44 ARE IN SPECIAL         1OSU  7
+REMARK 201 POSITIONS.                                                   1OSU  7
+SEQRES   1 A    6    U   U   C   G   C   G                              1OSU  78
+FORMUL   2  HOH   *38(H2 O1)                                            1OSU  7
+CRYST1   30.600   34.000   29.200  90.00  90.00  90.00 C 2 2 21      8  1OSU  8
+ORIGX1      1.000000  0.000000  0.000000        0.00000                 1OSU  8
+ORIGX2      0.000000  1.000000  0.000000        0.00000                 1OSU  8
+ORIGX3      0.000000  0.000000  1.000000        0.00000                 1OSU  8
+SCALE1      0.032680  0.000000  0.000000        0.00000                 1OSU  8
+SCALE2      0.000000  0.029412  0.000000        0.00000                 1OSU  8
+SCALE3      0.000000  0.000000  0.034247        0.00000                 1OSU  8
+USER  MOD -----------------------------------------------------------------
+USER  MOD scores for adjustable sidechains, with "set" totals for H,N and Q
+USER  MOD "o" means original, "f" means flipped, "180deg" is methyl default
+USER  MOD "!" flags a clash with an overlap of 0.40A or greater
+USER  MOD flip categories: "K"=keep, "C"=clashes, "X"=uncertain, "F"=flip
+USER  MOD Single :A   1   U O2' :   rot  -20:sc=    1.16
+USER  MOD Single :A   1   U O5' :   rot  117:sc=   0.559
+USER  MOD Single :A   2   U O2' :   rot  -30:sc=   0.925
+USER  MOD Single :A   3   C O2' :   rot  -31:sc=   0.443
+USER  MOD Single :A   4   G O2' :   rot  -26:sc=  0.0578
+USER  MOD Single :A   5   C O2' :   rot  -27:sc=  0.0743
+USER  MOD Single :A   6   G O2' :   rot -150:sc=    1.17
+USER  MOD Single :A   6   G O3' :   rot   90:sc=  0.0447
+USER  MOD -----------------------------------------------------------------
+ATOM      1  O5'   U A   1     -13.681   4.444  12.971  1.00 12.34      1OSU  87
+ATOM      2  C5'   U A   1     -14.014   5.828  12.835  1.00 10.78      1OSU  88
+ATOM      3  C4'   U A   1     -12.775   6.679  12.945  1.00  9.25      1OSU  89
+ATOM      4  O4'   U A   1     -12.222   6.502  14.246  1.00  9.57      1OSU  90
+ATOM      5  C3'   U A   1     -11.678   6.224  12.027  1.00  8.77      1OSU  91
+ATOM      6  O3'   U A   1     -11.904   6.789  10.758  1.00  9.54      1OSU  92
+ATOM      7  C2'   U A   1     -10.486   6.898  12.654  1.00  8.80      1OSU  93
+ATOM      8  O2'   U A   1     -10.526   8.317  12.481  1.00  9.24      1OSU  94
+ATOM      9  C1'   U A   1     -10.788   6.562  14.153  1.00  9.26      1OSU  95
+ATOM     10  N1    U A   1     -10.158   5.292  14.611  1.00  8.54      1OSU  96
+ATOM     11  C2    U A   1      -8.790   5.306  14.828  1.00  9.84      1OSU  97
+ATOM     12  O2    U A   1      -8.110   6.336  14.775  1.00 11.10      1OSU  98
+ATOM     13  N3    U A   1      -8.233   4.109  15.237  1.00  8.81      1OSU  99
+ATOM     14  C4    U A   1      -8.923   2.940  15.453  1.00  7.98      1OSU 100
+ATOM     15  O4    U A   1      -8.288   1.944  15.797  1.00  8.74      1OSU 101
+ATOM     16  C5    U A   1     -10.352   3.000  15.222  1.00  6.95      1OSU 102
+ATOM     17  C6    U A   1     -10.918   4.140  14.807  1.00  7.77      1OSU 103
+ATOM     18  P     U A   2     -11.868   5.884   9.428  1.00 10.07      1OSU 104
+ATOM     19  OP1   U A   2     -12.827   4.768   9.573  1.00 10.93      1OSU 105
+ATOM     20  OP2   U A   2     -12.074   6.785   8.289  1.00 12.07      1OSU 106
+ATOM     21  O5'   U A   2     -10.408   5.206   9.414  1.00 10.23      1OSU 107
+ATOM     22  C5'   U A   2      -9.219   5.973   9.243  1.00  7.14      1OSU 108
+ATOM     23  C4'   U A   2      -8.045   5.147   9.714  1.00  7.81      1OSU 109
+ATOM     24  O4'   U A   2      -8.208   4.851  11.130  1.00  7.63      1OSU 110
+ATOM     25  C3'   U A   2      -8.017   3.755   9.093  1.00  7.76      1OSU 111
+ATOM     26  O3'   U A   2      -7.407   3.847   7.809  1.00  9.51      1OSU 112
+ATOM     27  C2'   U A   2      -7.060   3.070  10.062  1.00  8.18      1OSU 113
+ATOM     28  O2'   U A   2      -5.706   3.497   9.990  1.00  9.54      1OSU 114
+ATOM     29  C1'   U A   2      -7.687   3.536  11.395  1.00  7.31      1OSU 115
+ATOM     30  N1    U A   2      -8.762   2.595  11.813  1.00  7.23      1OSU 116
+ATOM     31  C2    U A   2      -8.343   1.418  12.413  1.00  7.39      1OSU 117
+ATOM     32  O2    U A   2      -7.170   1.153  12.600  1.00  8.35      1OSU 118
+ATOM     33  N3    U A   2      -9.348   0.530  12.775  1.00  8.30      1OSU 119
+ATOM     34  C4    U A   2     -10.706   0.725  12.581  1.00  8.44      1OSU 120
+ATOM     35  O4    U A   2     -11.514  -0.117  12.957  1.00  9.90      1OSU 121
+ATOM     36  C5    U A   2     -11.058   1.989  11.939  1.00  6.87      1OSU 122
+ATOM     37  C6    U A   2     -10.089   2.858  11.594  1.00  6.69      1OSU 123
+ATOM     38  P     C A   3      -7.845   2.816   6.657  1.00 10.98      1OSU 124
+ATOM     39  OP1   C A   3      -9.319   2.802   6.628  1.00 11.53      1OSU 125
+ATOM     40  OP2   C A   3      -7.065   3.159   5.441  1.00 12.18      1OSU 126
+ATOM     41  O5'   C A   3      -7.356   1.412   7.251  1.00  9.64      1OSU 127
+ATOM     42  C5'   C A   3      -6.010   1.017   7.380  1.00 10.69      1OSU 128
+ATOM     43  C4'   C A   3      -5.919  -0.358   8.011  1.00 11.62      1OSU 129
+ATOM     44  O4'   C A   3      -6.553  -0.373   9.299  1.00 11.39      1OSU 130
+ATOM     45  C3'   C A   3      -6.700  -1.410   7.249  1.00 10.87      1OSU 131
+ATOM     46  O3'   C A   3      -5.875  -1.819   6.175  1.00 11.87      1OSU 132
+ATOM     47  C2'   C A   3      -6.723  -2.509   8.284  1.00 10.39      1OSU 133
+ATOM     48  O2'   C A   3      -5.446  -3.097   8.546  1.00 12.09      1OSU 134
+ATOM     49  C1'   C A   3      -7.113  -1.687   9.511  1.00 10.60      1OSU 135
+ATOM     50  N1    C A   3      -8.577  -1.604   9.643  1.00  9.06      1OSU 136
+ATOM     51  C2    C A   3      -9.203  -2.692  10.251  1.00  8.79      1OSU 137
+ATOM     52  O2    C A   3      -8.575  -3.698  10.563  1.00  9.59      1OSU 138
+ATOM     53  N3    C A   3     -10.546  -2.641  10.422  1.00  8.01      1OSU 139
+ATOM     54  C4    C A   3     -11.261  -1.591  10.013  1.00  7.96      1OSU 140
+ATOM     55  N4    C A   3     -12.580  -1.619  10.197  1.00  6.79      1OSU 141
+ATOM     56  C5    C A   3     -10.631  -0.464   9.376  1.00  7.05      1OSU 142
+ATOM     57  C6    C A   3      -9.290  -0.512   9.218  1.00  7.59      1OSU 143
+ATOM     58  P     G A   4      -6.539  -2.306   4.824  1.00 12.81      1OSU 144
+ATOM     59  OP1   G A   4      -7.760  -1.535   4.536  1.00 12.96      1OSU 145
+ATOM     60  OP2   G A   4      -5.465  -2.425   3.826  1.00 12.73      1OSU 146
+ATOM     61  O5'   G A   4      -6.998  -3.773   5.245  1.00 10.72      1OSU 147
+ATOM     62  C5'   G A   4      -6.039  -4.801   5.443  1.00  9.42      1OSU 148
+ATOM     63  C4'   G A   4      -6.747  -6.075   5.895  1.00  9.28      1OSU 149
+ATOM     64  O4'   G A   4      -7.408  -5.855   7.154  1.00  8.68      1OSU 150
+ATOM     65  C3'   G A   4      -7.880  -6.476   4.971  1.00  8.30      1OSU 151
+ATOM     66  O3'   G A   4      -7.311  -7.159   3.846  1.00  9.11      1OSU 152
+ATOM     67  C2'   G A   4      -8.598  -7.467   5.870  1.00  8.50      1OSU 153
+ATOM     68  O2'   G A   4      -7.895  -8.683   6.083  1.00  8.68      1OSU 154
+ATOM     69  C1'   G A   4      -8.582  -6.674   7.212  1.00  8.06      1OSU 155
+ATOM     70  N9    G A   4      -9.749  -5.790   7.308  1.00  7.18      1OSU 156
+ATOM     71  C8    G A   4      -9.825  -4.447   7.043  1.00  7.42      1OSU 157
+ATOM     72  N7    G A   4     -10.979  -3.949   7.297  1.00  7.72      1OSU 158
+ATOM     73  C5    G A   4     -11.732  -5.027   7.752  1.00  6.99      1OSU 159
+ATOM     74  C6    G A   4     -13.068  -5.076   8.182  1.00  6.88      1OSU 160
+ATOM     75  O6    G A   4     -13.816  -4.121   8.372  1.00  7.31      1OSU 161
+ATOM     76  N1    G A   4     -13.473  -6.358   8.531  1.00  6.03      1OSU 162
+ATOM     77  C2    G A   4     -12.658  -7.472   8.493  1.00  6.21      1OSU 163
+ATOM     78  N2    G A   4     -13.173  -8.640   8.814  1.00  6.77      1OSU 164
+ATOM     79  N3    G A   4     -11.376  -7.412   8.106  1.00  6.26      1OSU 165
+ATOM     80  C4    G A   4     -10.978  -6.171   7.761  1.00  6.65      1OSU 166
+ATOM     81  P     C A   5      -8.005  -7.068   2.424  1.00  9.05      1OSU 167
+ATOM     82  OP1   C A   5      -8.653  -5.755   2.227  1.00  9.01      1OSU 168
+ATOM     83  OP2   C A   5      -7.059  -7.562   1.412  1.00  8.18      1OSU 169
+ATOM     84  O5'   C A   5      -9.220  -8.106   2.505  1.00  8.95      1OSU 170
+ATOM     85  C5'   C A   5      -9.009  -9.521   2.690  1.00  7.87      1OSU 171
+ATOM     86  C4'   C A   5     -10.294 -10.172   3.155  1.00  7.65      1OSU 172
+ATOM     87  O4'   C A   5     -10.697  -9.577   4.401  1.00  8.57      1OSU 173
+ATOM     88  C3'   C A   5     -11.487  -9.903   2.297  1.00  8.98      1OSU 174
+ATOM     89  O3'   C A   5     -11.492 -10.817   1.228  1.00 10.69      1OSU 175
+ATOM     90  C2'   C A   5     -12.603 -10.260   3.250  1.00  8.51      1OSU 176
+ATOM     91  O2'   C A   5     -12.663 -11.655   3.531  1.00  9.94      1OSU 177
+ATOM     92  C1'   C A   5     -12.125  -9.542   4.496  1.00  7.53      1OSU 178
+ATOM     93  N1    C A   5     -12.607  -8.147   4.564  1.00  7.04      1OSU 179
+ATOM     94  C2    C A   5     -13.855  -7.940   5.114  1.00  6.92      1OSU 180
+ATOM     95  O2    C A   5     -14.558  -8.881   5.483  1.00  8.32      1OSU 181
+ATOM     96  N3    C A   5     -14.335  -6.673   5.217  1.00  7.77      1OSU 182
+ATOM     97  C4    C A   5     -13.607  -5.623   4.780  1.00  7.98      1OSU 183
+ATOM     98  N4    C A   5     -14.106  -4.384   4.941  1.00  7.43      1OSU 184
+ATOM     99  C5    C A   5     -12.318  -5.811   4.200  1.00  7.23      1OSU 185
+ATOM    100  C6    C A   5     -11.866  -7.082   4.109  1.00  7.26      1OSU 186
+ATOM    101  P     G A   6     -12.138 -10.382  -0.167  1.00 13.20      1OSU 187
+ATOM    102  OP1   G A   6     -11.670  -9.030  -0.518  1.00 14.10      1OSU 188
+ATOM    103  OP2   G A   6     -11.894 -11.520  -1.037  1.00 14.49      1OSU 189
+ATOM    104  O5'   G A   6     -13.694 -10.341   0.167  1.00 12.61      1OSU 190
+ATOM    105  C5'   G A   6     -14.405 -11.545   0.444  1.00 11.93      1OSU 191
+ATOM    106  C4'   G A   6     -15.884 -11.232   0.775  1.00 13.17      1OSU 192
+ATOM    107  O4'   G A   6     -15.924 -10.479   1.979  1.00 12.98      1OSU 193
+ATOM    108  C3'   G A   6     -16.627 -10.350  -0.231  1.00 14.14      1OSU 194
+ATOM    109  O3'   G A   6     -17.075 -11.084  -1.386  1.00 16.28      1OSU 195
+ATOM    110  C2'   G A   6     -17.788  -9.887   0.611  1.00 13.66      1OSU 196
+ATOM    111  O2'   G A   6     -18.748 -10.911   0.823  1.00 15.04      1OSU 197
+ATOM    112  C1'   G A   6     -17.086  -9.616   1.953  1.00 13.04      1OSU 198
+ATOM    113  N9    G A   6     -16.690  -8.190   2.092  1.00 10.38      1OSU 199
+ATOM    114  C8    G A   6     -15.489  -7.587   1.796  1.00  9.18      1OSU 200
+ATOM    115  N7    G A   6     -15.488  -6.303   2.039  1.00  8.38      1OSU 201
+ATOM    116  C5    G A   6     -16.764  -6.043   2.521  1.00  8.16      1OSU 202
+ATOM    117  C6    G A   6     -17.345  -4.807   2.894  1.00  8.27      1OSU 203
+ATOM    118  O6    G A   6     -16.795  -3.698   2.896  1.00  9.23      1OSU 204
+ATOM    119  N1    G A   6     -18.686  -4.969   3.254  1.00  7.32      1OSU 205
+ATOM    120  C2    G A   6     -19.360  -6.171   3.253  1.00  8.74      1OSU 206
+ATOM    121  N2    G A   6     -20.651  -6.172   3.598  1.00  8.48      1OSU 207
+ATOM    122  N3    G A   6     -18.804  -7.319   2.898  1.00  7.62      1OSU 208
+ATOM    123  C4    G A   6     -17.511  -7.189   2.548  1.00  9.33      1OSU 209
+TER     124        G A   6                                              1OSU 21
+HETATM  125  O   HOH A   7     -13.399  -4.547   0.995  1.03 18.10      1OSU 211
+HETATM  126  O   HOH A   8     -11.068  -6.112   0.483  0.92 19.59      1OSU 212
+HETATM  127  O   HOH A   9      -9.671  -3.363   3.260  1.09 17.46      1OSU 213
+HETATM  128  O   HOH A  10     -11.648  -1.587   6.346  1.19 27.43      1OSU 214
+HETATM  129  O   HOH A  11      -9.631   0.172   5.680  1.00 25.21      1OSU 215
+HETATM  130  O   HOH A  12     -11.737   2.486   8.017  0.93 17.74      1OSU 216
+HETATM  131  O   HOH A  13     -10.913   5.380   5.841  0.56 34.27      1OSU 217
+HETATM  132  O   HOH A  14      -5.339   7.196   6.791  0.86 15.54      1OSU 218
+HETATM  133  O   HOH A  15     -12.370  -2.605   3.003  1.01 35.79      1OSU 219
+HETATM  134  O   HOH A  16     -14.006   0.525   9.186  0.49 22.66      1OSU 220
+HETATM  135  O   HOH A  17      -5.444  -1.220  13.259  0.85 21.62      1OSU 221
+HETATM  136  O   HOH A  18      -4.101   4.813   8.026  0.65 16.38      1OSU 222
+HETATM  137  O   HOH A  19      -3.814   3.171  12.078  0.95 24.01      1OSU 223
+HETATM  138  O   HOH A  20      -5.671  -4.133  12.668  0.56 17.70      1OSU 224
+HETATM  139  O   HOH A  21      -6.653   8.395  16.037  1.07 31.62      1OSU 225
+HETATM  140  O   HOH A  22     -14.393   2.876  10.576  0.34 18.02      1OSU 226
+HETATM  141  O   HOH A  23     -14.633   2.691  15.115  0.90 31.12      1OSU 227
+HETATM  142  O   HOH A  24     -16.269   0.042   1.781  0.86 28.60      1OSU 228
+HETATM  143  O   HOH A  25     -14.551  -1.172   3.724  0.67 38.75      1OSU 229
+HETATM  144  O   HOH A  26     -16.867   7.666  12.908  0.99 35.84      1OSU 230
+HETATM  145  O   HOH A  27     -15.222   9.081  10.951  0.86 35.66      1OSU 231
+HETATM  146  O   HOH A  28      -5.405   3.614  14.506  0.59 19.33      1OSU 232
+HETATM  147  O   HOH A  29      -6.368  -5.548  10.106  0.87 24.60      1OSU 233
+HETATM  148  O   HOH A  30     -21.401 -10.131   1.169  0.88 31.01      1OSU 234
+HETATM  149  O   HOH A  31     -20.311 -11.969  -1.479  0.61 28.15      1OSU 235
+HETATM  150  O   HOH A  32     -20.075  -9.534   3.707  0.80 28.13      1OSU 236
+HETATM  151  O   HOH A  33     -15.241 -11.955   4.617  0.57 22.41      1OSU 237
+HETATM  152  O   HOH A  34     -12.213 -11.204   9.818  0.70 30.71      1OSU 238
+HETATM  153  O   HOH A  35      -7.753  -7.848  10.745  0.63 37.82      1OSU 239
+HETATM  154  O   HOH A  36      -4.040   3.116   5.400  0.64 26.77      1OSU 240
+HETATM  155  O   HOH A  37     -13.528   0.086   5.787  0.64 49.73      1OSU 241
+HETATM  156  O   HOH A  38      -8.589 -11.089   9.666  0.43 24.05      1OSU 242
+HETATM  157  O   HOH A  39     -12.015   9.665  10.566  0.98 29.70      1OSU 243
+HETATM  158  O   HOH A  40      -9.754   8.515   6.672  0.54 23.13      1OSU 244
+HETATM  159  O   HOH A  41     -15.270  -2.424   7.302  0.39 25.35      1OSU 245
+HETATM  160  O   HOH A  42     -15.272 -11.261   7.304  0.48 22.27      1OSU 246
+HETATM  161  O   HOH A  43     -15.275  -0.088   7.307  0.34 37.61      1OSU 247
+HETATM  162  O   HOH A  44     -15.269   2.301   7.303  0.47 26.36      1OSU 248
+END                                                                     1OSU 25

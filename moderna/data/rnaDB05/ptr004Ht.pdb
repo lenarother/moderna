@@ -1,0 +1,1773 @@
+USER  MOD reduceV2.21 H: found=0, std=0, add=7082, rem=0, adj=216
+HEADER    LIGASE(SYNTHETASE)                      21-FEB-94   1SER      1SER
+COMPND    SERYL-TRNA SYNTHETASE (E.C.6.1.1.11) COMPLEXED WITH           1SER
+COMPND   2 TRNA-SER 2 (GGA ANTICODON)                                   1SER
+SOURCE    TRNA AND ENZYME: (THERMUS THERMOPHILUS)                       1SER
+AUTHOR    V.BIOU,A.YAREMCHUK,M.TUKALO,S.CUSACK                          1SER
+REVDAT   2   31-JUL-94 1SERA   1       SEQRES                           1SERA
+REVDAT   1   30-APR-94 1SER    0                                        1SER
+JRNL        AUTH   V.BIOU,A.YAREMCHUK,M.TUKALO,S.CUSACK                 1SER
+JRNL        TITL   THE 2.9 ANGSTROMS CRYSTAL STRUCTURE OF T.            1SER
+JRNL        TITL 2 THERMOPHILUS SERYL-TRNA SYNTHETASE COMPLEXED WITH    1SER  1
+JRNL        TITL 3 TRNA==SER                                            1SER  1
+JRNL        REF    SCIENCE                       V. 263  1404 1994      1SER  1
+JRNL        REFN   ASTM SCIEAS  US ISSN 0036-8075                 0038  1SER  1
+REMARK   1                                                              1SER  1
+REMARK   1 REFERENCE 1                                                  1SER  1
+REMARK   1  AUTH   H.BELRHALI,A.D.YAREMCHUK,M.A.TUKALO,K.LARSEN,        1SER  1
+REMARK   1  AUTH 2 C.BERTHET-COLOMINAS,R.LEBERMAN,B.BEIJER,B.SPROAT,    1SER  1
+REMARK   1  AUTH 3 J.ALS-NIELSEN,G.GRUBEL,J.-F.LEGRAND,M.LEHMANN,       1SER  1
+REMARK   1  AUTH 4 S.CUSACK                                             1SER  1
+REMARK   1  TITL   CRYSTAL STRUCTURES AT 2.5 ANGSTROMS RESOLUTION OF    1SER  2
+REMARK   1  TITL 2 SERYL-TRNA SYNTHETASE COMPLEXED WITH TWO             1SER  2
+REMARK   1  TITL 3 DIFFERENT ANALOGUES OF SERYL-ADENYLATE               1SER  2
+REMARK   1  REF    SCIENCE                       V. 263  1432 1994      1SER  2
+REMARK   1  REFN   ASTM SCIEAS  US ISSN 0036-8075                 0038  1SER  2
+REMARK   1 REFERENCE 2                                                  1SER  2
+REMARK   1  AUTH   M.FUJINAGA,C.BERTHET-COLOMINAS,A.D.YAREMCHUK,        1SER  2
+REMARK   1  AUTH 2 M.A.TUKALO,S.CUSACK                                  1SER  2
+REMARK   1  TITL   REFINED CRYSTAL STRUCTURE OF THE SERYL-TRNA          1SER  2
+REMARK   1  TITL 2 SYNTHETASE FROM THERMUS THERMOPHILUS AT 2.5          1SER  2
+REMARK   1  TITL 3 ANGSTROMS RESOLUTION                                 1SER  3
+REMARK   1  REF    J.MOL.BIOL.                   V. 234   222 1993      1SER  3
+REMARK   1  REFN   ASTM JMOBAK  UK ISSN 0022-2836                  070  1SER  3
+REMARK   1 REFERENCE 3                                                  1SER  3
+REMARK   1  AUTH   S.PRICE,S.CUSACK,F.BOREL,C.BERTHET-COLOMINAS,        1SER  3
+REMARK   1  AUTH 2 R.LEBERMAN                                           1SER  3
+REMARK   1  TITL   CRYSTALLIZATION OF THE SERYL-TRNA SYNTHETASE:        1SER  3
+REMARK   1  TITL 2 TRNASER COMPLEX OF ESCHERICHIA COLI                  1SER  3
+REMARK   1  REF    /FEBS$ LETT.                  V. 324   167 1993      1SER  3
+REMARK   1  REFN   ASTM FEBLAL  NE ISSN 0014-5793                  165  1SER  3
+REMARK   1 REFERENCE 4                                                  1SER  4
+REMARK   1  AUTH   A.D.YAREMCHUK,M.A.TUKALO,I.KRIKLIVIY,N.MALCHENKO,    1SER  4
+REMARK   1  AUTH 2 V.BIOU,C.BERTHET-COLOMINAS,S.CUSACK                  1SER  4
+REMARK   1  TITL   A NEW CRYSTAL FORM OF THE COMPLEX BETWEEN            1SER  4
+REMARK   1  TITL 2 SERYL-TRNA SYNTHETASE AND TRNA==SER FROM THERMUS     1SER  4
+REMARK   1  TITL 3 THERMOPHILUS THAT DIFFRACTS TO 2.8 ANGSTROMS         1SER  4
+REMARK   1  TITL 4 RESOLUTION                                           1SER  4
+REMARK   1  REF    /FEBS$ LETT.                  V. 310   157 1992      1SER  4
+REMARK   1  REFN   ASTM FEBLAL  NE ISSN 0014-5793                  165  1SER  4
+REMARK   1 REFERENCE 5                                                  1SER  4
+REMARK   1  AUTH   A.D.YAREMCHUK,M.A.TUKALO,I.KRIKLIVIY,V.N.MEL'NIK,    1SER  5
+REMARK   1  AUTH 2 C.BERTHET-COLOMINAS,S.CUSACK,R.LEBERMAN              1SER  5
+REMARK   1  TITL   CRYSTALLIZATION OF THE SERYL-TRNA                    1SER  5
+REMARK   1  TITL 2 SYNTHETASE-TRNASER COMPLEX FROM THERMUS              1SER  5
+REMARK   1  TITL 3 THERMOPHILUS                                         1SER  5
+REMARK   1  REF    J.MOL.BIOL.                   V. 224   519 1992      1SER  5
+REMARK   1  REFN   ASTM JMOBAK  UK ISSN 0022-2836                  070  1SER  5
+REMARK   1 REFERENCE 6                                                  1SER  5
+REMARK   1  AUTH   S.CUSACK,M.HARTLEIN,R.LEBERMAN                       1SER  5
+REMARK   1  TITL   SEQUENCE, STRUCTURAL AND EVOLUTIONARY                1SER  5
+REMARK   1  TITL 2 RELATIONSHIPS BETWEEN CLASS 2 AMINOACYL-TRNA         1SER  6
+REMARK   1  TITL 3 SYNTHETASES                                          1SER  6
+REMARK   1  REF    NUCLEIC ACIDS RES.            V.  19  3489 1991      1SER  6
+REMARK   1  REFN   ASTM NARHAD  UK ISSN 0305-1048                  389  1SER  6
+REMARK   1 REFERENCE 7                                                  1SER  6
+REMARK   1  AUTH   S.CUSACK,C.BERTHET-COLOMINAS,M.HARTLEIN,N.NASSAR,    1SER  6
+REMARK   1  AUTH 2 R.LEBERMAN                                           1SER  6
+REMARK   1  TITL   SERYL-TRNA SYNTHETASE FROM ESCHERICHIA COLI AT 2.5   1SER  6
+REMARK   1  TITL 2 ANGSTROMS RESOLUTION: A SECOND CLASS OF SYNTHETASE   1SER  6
+REMARK   1  TITL 3 STRUCTURE                                            1SER  6
+REMARK   1  REF    NATURE                        V. 347   249 1990      1SER  7
+REMARK   1  REFN   ASTM NATUAS  UK ISSN 0028-0836                  006  1SER  7
+REMARK   1 REFERENCE 8                                                  1SER  7
+REMARK   1  AUTH   M.B.GARBER,A.D.YAREMCHUK,M.A.TUKALO,S.P.EGOROVA,     1SER  7
+REMARK   1  AUTH 2 C.BERTHET-COLOMINAS,R.LEBERMAN                       1SER  7
+REMARK   1  TITL   CRYSTALS OF SERYL-TRNA SYNTHETASE FROM THERMUS       1SER  7
+REMARK   1  TITL 2 THERMOPHILUS. PRELIMINARY CRYSTALLOGRAPHIC DATA.     1SER  7
+REMARK   1  REF    J.MOL.BIOL.                   V. 213   631 1990      1SER  7
+REMARK   1  REFN   ASTM JMOBAK  UK ISSN 0022-2836                  070  1SER  7
+REMARK   2                                                              1SER  7
+REMARK   2 RESOLUTION. 2.9  ANGSTROMS.                                  1SER  8
+REMARK   3                                                              1SER  8
+REMARK   3 REFINEMENT.                                                  1SER  8
+REMARK   3   PROGRAM                    X-PLOR                          1SER  8
+REMARK   3   AUTHORS                    BRUNGER                         1SER  8
+REMARK   3   R VALUE                    0.194                           1SER  8
+REMARK   3   RMSD BOND DISTANCES        0.015  ANGSTROMS                1SER  8
+REMARK   3   RMSD BOND ANGLES           3.3    DEGREES                  1SER  8
+REMARK   3                                                              1SER  8
+REMARK   3   NUMBER OF REFLECTIONS      39713                           1SER  8
+REMARK   3   RESOLUTION RANGE      10.0 - 2.9  ANGSTROMS                1SER  9
+REMARK   3   DATA CUTOFF                0.5    SIGMA(F)                 1SER  9
+REMARK   3   PERCENT COMPLETION         92.9                            1SER  9
+REMARK   3                                                              1SER  9
+REMARK   3   NUMBER OF PROTEIN ATOMS                       6357         1SER  9
+REMARK   3   NUMBER OF NUCLEIC ACID ATOMS                  1382         1SER  9
+REMARK   3   NUMBER OF SOLVENT ATOMS                         44         1SER  9
+REMARK   4                                                              1SER  9
+REMARK   4 ORTHOGONAL TRANSFORMATION TO GO FROM MONOMER 1 TO MONOMER    1SER  9
+REMARK   4 2 OF THE SYNTHETASE BASED ON SIMULTANEOUS SUPERPOSITION OF   1SER  9
+REMARK   4 C-ALPHAS OF RESIDUES 100 - 258 ON 600 - 758 AND 270 - 419    1SER 10
+REMARK   4 ON 770 - 919.                                                1SER 10
+REMARK   5                                                              1SER 10
+REMARK   5 SERYL-TRNA SYNTHETASE IS A CLASS 2 AMINOACYL-TRNA            1SER 10
+REMARK   5 SYNTHETASE.  SERYL-TRNA SYNTHETASE FROM T. THERMOPHILUS IS   1SER 10
+REMARK   5 AN HOMO-DIMER WITH 421 RESIDUES PER SUBUNIT.  MONOMER 1      1SER 10
+REMARK   5 (IDENTIFIER SST1) HAS RESIDUES 1 - 421.  RESIDUES 39 - 87    1SER 10
+REMARK   5 ARE ABSENT IN THE ELECTRON DENSITY OF THIS STRUCTURE DUE TO  1SER 10
+REMARK   5 DISORDER.  RESIDUES 261 - 264 ARE ABSENT FROM THE ELECTRON   1SER 10
+REMARK   5 DENSITY BUT ARE INCLUDED IN THE MODEL WITZ ZERO OCCUPANCY    1SER 10
+REMARK   5 MONOMER 2 (IDENTIFIER SST2) HAS RESIDUES 501 - 921.  THE     1SER 11
+REMARK   5 NON-CRYSTALLOGRAPHIC SYMMETRY TRANSFORMATION PRESENTED ON    1SER 11
+REMARK   5 *MTRIX* RECORDS BELOW WILL YIELD APPROXIMATE COORDINATES     1SER 11
+REMARK   5 FOR CHAIN B (MONOMER 2) WHEN APPLIED TO CHAIN A (MONOMER     1SER 11
+REMARK   5 1).  THERE IS ONLY ONE TRNA MOLECULE (IDENTIFIER TRN1)       1SER 11
+REMARK   5 COMPLEXED WITH THE DIMERIC SYNTHETASE IN THIS STRUCTURE.     1SER 11
+REMARK   5 THIS IS DESIGNATED TRNASER2 WITH ANTICODON GGA AND IT        1SER 11
+REMARK   5 CONTAINS 94 NUCLEOTIDES.  NUCLEOTIDES ARE NUMBERED 1 - 16,   1SER 11
+REMARK   5 18 - 20, 20A, 20B, 21 - 47, 47A - 47Q, 48 - 76.              1SER 11
+REMARK   5 NUCLEOTIDES 45 - 47Q CONSTITUTE THE LONG VARIABLE ARM OF     1SER 11
+REMARK   5 THE TRNA.  THE SEQUENCE IS (APART FROM MODIFIED BASES):      1SER 12
+REMARK   5                                                              1SER 12
+REMARK   5 GUA 001 GUA 002 ADE 003 GUA 004 ADE 005 GUA 006 GUA 007      1SER 12
+REMARK   5 URI 008 GUA 009 CYT 010 CYT 011 CYT 012 GUA 013 ADE 014      1SER 12
+REMARK   5 GUA 015 URI 016 GUA 018 GUA 019 CYT 020 DHU 20A GUA 20B      1SER 12
+REMARK   5 ADE 021 ADE 022 GUA 023 GUA 024 GUA 025 ADE 026 CYT 027      1SER 12
+REMARK   5 ADE 028 CYT 029 GUA 030 ADE 031 CYT 032 URI 033 GUA 034      1SER 12
+REMARK   5 GUA 035 ADE 036 ADE 037 ADE 038 URI 039 CYT 040 GUA 041      1SER 12
+REMARK   5 URI 042 GUA 043 URI 044 ADE 045 GUA 046 GUA 047 GUA 47A      1SER 12
+REMARK   5 GUA 47B GUA 47C GUA 47D CYT 47E URI 47F URI 47G ADE 47H      1SER 12
+REMARK   5 ADE 47I ADE 47J CYT 47K CYT 47L URI 47M CYT 47N CYT 47O      1SER 13
+REMARK   5 CYT 47P URI 47Q CYT 048 GUA 049 CYT 050 GUA 051 GUA 052      1SER 13
+REMARK   5 GUA 053 THY 054 PSU 055 CYT 056 GUA 057 ADE 058 ADE 059      1SER 13
+REMARK   5 URI 060 CYT 061 CYT 062 CYT 063 GUA 064 CYT 065 CYT 066      1SER 13
+REMARK   5 CYT 067 URI 068 CYT 069 URI 070 CYT 071 CYT 072 GUA 073      1SER 13
+REMARK   5 CYT 074 CYT 075 ADE 076                                      1SER 13
+REMARK   5                                                              1SER 13
+REMARK   5 IN THE CRYSTAL STRUCTURE SIGNIFICANT PARTS OF THE TRNA ARE   1SER 13
+REMARK   5 MISSING FROM THE ELECTRON DENSITY DUE TO DISORDER.           1SER 13
+REMARK   5 THEREFORE COORDINATES ARE NOT GIVEN FOR NUCLEOTIDES          1SER 13
+REMARK   5 1 - 3, 26 - 41, 47E - 47J, 72 - 76.                          1SER 14
+REMARK   6                                                              1SER 14
+REMARK   6 THE SEQUENCE OF T. THERMOPHILUS SERYL-TRNA SYNTHETASE        1SER 14
+REMARK   6 IS REPORTED IN REFERENCE 2 (SEE ABOVE).                      1SER 14
+REMARK   7                                                              1SER 14
+REMARK   7 THE MATRIX PRESENTED IN *MTRIX* RECORDS BELOW IS THE         1SER 14
+REMARK   7 ORTHOGONAL TRANSFORMATION TO GO FROM MONOMER 1 TO MONOMER 2  1SER 14
+REMARK   7 OF THE SYNTHETASE BASED ON SIMULTANEOUS SUPERPOSITION OF     1SER 14
+REMARK   7 C-ALPHAS OF RESIDUES A 100 - 258 ON B 600 - 758 AND          1SER 14
+REMARK   7 A 270 - 419 ON B 770 - 919.                                  1SER 14
+REMARK   8                                                              1SERA
+REMARK   8 CORRECTION. CORRECT TYPOGRAPHICAL ERROR ON SEQRES RECORD.    1SERA
+REMARK   8  31-JUL-94.                                                  1SERA
+SEQRES   1 A  421  MET VAL ASP LEU LYS ARG LEU ARG GLN GLU PRO GLU VAL  1SER 150
+SEQRES   2 A  421  PHE HIS ARG ALA ILE ARG GLU LYS GLY VAL ALA LEU ASP  1SER 151
+SEQRES   3 A  421  LEU GLU ALA LEU LEU ALA LEU ASP ARG GLU VAL GLN GLU  1SER 152
+SEQRES   4 A  421  LEU LYS LYS ARG LEU GLN GLU VAL GLN THR GLU ARG ASN  1SER 153
+SEQRES   5 A  421  GLN VAL ALA LYS ARG VAL PRO LYS ALA PRO PRO GLU GLU  1SER 154
+SEQRES   6 A  421  LYS GLU ALA LEU ILE ALA ARG GLY LYS ALA LEU GLY GLU  1SER 155
+SEQRES   7 A  421  GLU ALA LYS ARG LEU GLU GLU ALA LEU ARG GLU LYS GLU  1SER 156
+SEQRES   8 A  421  ALA ARG LEU GLU ALA LEU LEU LEU GLN VAL PRO LEU PRO  1SER 157
+SEQRES   9 A  421  PRO TRP PRO GLY ALA PRO VAL GLY GLY GLU GLU ALA ASN  1SER 158
+SEQRES  10 A  421  ARG GLU ILE LYS ARG VAL GLY GLY PRO PRO GLU PHE SER  1SER 159
+SEQRES  11 A  421  PHE PRO PRO LEU ASP HIS VAL ALA LEU MET GLU LYS ASN  1SER 160
+SEQRES  12 A  421  GLY TRP TRP GLU PRO ARG ILE SER GLN VAL SER GLY SER  1SER 161
+SEQRES  13 A  421  ARG SER TYR ALA LEU LYS GLY ASP LEU ALA LEU TYR GLU  1SER 162
+SEQRES  14 A  421  LEU ALA LEU LEU ARG PHE ALA MET ASP PHE MET ALA ARG  1SER 163
+SEQRES  15 A  421  ARG GLY PHE LEU PRO MET THR LEU PRO SER TYR ALA ARG  1SER 164
+SEQRES  16 A  421  GLU LYS ALA PHE LEU GLY THR GLY HIS PHE PRO ALA TYR  1SER 165
+SEQRES  17 A  421  ARG ASP GLN VAL TRP ALA ILE ALA GLU THR ASP LEU TYR  1SER 166
+SEQRES  18 A  421  LEU THR GLY THR ALA GLU VAL VAL LEU ASN ALA LEU HIS  1SER 167
+SEQRES  19 A  421  SER GLY GLU ILE LEU PRO TYR GLU ALA LEU PRO LEU ARG  1SER 168
+SEQRES  20 A  421  TYR ALA GLY TYR ALA PRO ALA PHE ARG SER GLU ALA GLY  1SER 169
+SEQRES  21 A  421  SER PHE GLY LYS ASP VAL ARG GLY LEU MET ARG VAL HIS  1SER 170
+SEQRES  22 A  421  GLN PHE HIS LYS VAL GLU GLN TYR VAL LEU THR GLU ALA  1SER 171
+SEQRES  23 A  421  SER LEU GLU ALA SER ASP ARG ALA PHE GLN GLU LEU LEU  1SER 172
+SEQRES  24 A  421  GLU ASN ALA GLU GLU ILE LEU ARG LEU LEU GLU LEU PRO  1SER 173
+SEQRES  25 A  421  TYR ARG LEU VAL GLU VAL ALA THR GLY ASP MET GLY PRO  1SER 174
+SEQRES  26 A  421  GLY LYS TRP ARG GLN VAL ASP ILE GLU VAL TYR LEU PRO  1SER 175
+SEQRES  27 A  421  SER GLU GLY ARG TYR ARG GLU THR HIS SER CYS SER ALA  1SER 176
+SEQRES  28 A  421  LEU LEU ASP TRP GLN ALA ARG ARG ALA ASN LEU ARG TYR  1SER 177
+SEQRES  29 A  421  ARG ASP PRO GLU GLY ARG VAL ARG TYR ALA TYR THR LEU  1SER 178
+SEQRES  30 A  421  ASN ASN THR ALA LEU ALA THR PRO ARG ILE LEU ALA MET  1SER 179
+SEQRES  31 A  421  LEU LEU GLU ASN HIS GLN LEU GLN ASP GLY ARG VAL ARG  1SER 180
+SEQRES  32 A  421  VAL PRO GLN ALA LEU ILE PRO TYR MET GLY LYS GLU VAL  1SER 181
+SEQRES  33 A  421  LEU GLU PRO CYS GLY                                  1SER 182
+SEQRES   1 B  421  MET VAL ASP LEU LYS ARG LEU ARG GLN GLU PRO GLU VAL  1SER 183
+SEQRES   2 B  421  PHE HIS ARG ALA ILE ARG GLU LYS GLY VAL ALA LEU ASP  1SER 184
+SEQRES   3 B  421  LEU GLU ALA LEU LEU ALA LEU ASP ARG GLU VAL GLN GLU  1SER 185
+SEQRES   4 B  421  LEU LYS LYS ARG LEU GLN GLU VAL GLN THR GLU ARG ASN  1SER 186
+SEQRES   5 B  421  GLN VAL ALA LYS ARG VAL PRO LYS ALA PRO PRO GLU GLU  1SER 187
+SEQRES   6 B  421  LYS GLU ALA LEU ILE ALA ARG GLY LYS ALA LEU GLY GLU  1SER 188
+SEQRES   7 B  421  GLU ALA LYS ARG LEU GLU GLU ALA LEU ARG GLU LYS GLU  1SER 189
+SEQRES   8 B  421  ALA ARG LEU GLU ALA LEU LEU LEU GLN VAL PRO LEU PRO  1SER 190
+SEQRES   9 B  421  PRO TRP PRO GLY ALA PRO VAL GLY GLY GLU GLU ALA ASN  1SER 191
+SEQRES  10 B  421  ARG GLU ILE LYS ARG VAL GLY GLY PRO PRO GLU PHE SER  1SER 192
+SEQRES  11 B  421  PHE PRO PRO LEU ASP HIS VAL ALA LEU MET GLU LYS ASN  1SER 193
+SEQRES  12 B  421  GLY TRP TRP GLU PRO ARG ILE SER GLN VAL SER GLY SER  1SER 194
+SEQRES  13 B  421  ARG SER TYR ALA LEU LYS GLY ASP LEU ALA LEU TYR GLU  1SER 195
+SEQRES  14 B  421  LEU ALA LEU LEU ARG PHE ALA MET ASP PHE MET ALA ARG  1SER 196
+SEQRES  15 B  421  ARG GLY PHE LEU PRO MET THR LEU PRO SER TYR ALA ARG  1SER 197
+SEQRES  16 B  421  GLU LYS ALA PHE LEU GLY THR GLY HIS PHE PRO ALA TYR  1SER 198
+SEQRES  17 B  421  ARG ASP GLN VAL TRP ALA ILE ALA GLU THR ASP LEU TYR  1SER 199
+SEQRES  18 B  421  LEU THR GLY THR ALA GLU VAL VAL LEU ASN ALA LEU HIS  1SER 200
+SEQRES  19 B  421  SER GLY GLU ILE LEU PRO TYR GLU ALA LEU PRO LEU ARG  1SER 201
+SEQRES  20 B  421  TYR ALA GLY TYR ALA PRO ALA PHE ARG SER GLU ALA GLY  1SER 202
+SEQRES  21 B  421  SER PHE GLY LYS ASP VAL ARG GLY LEU MET ARG VAL HIS  1SER 203
+SEQRES  22 B  421  GLN PHE HIS LYS VAL GLU GLN TYR VAL LEU THR GLU ALA  1SER 204
+SEQRES  23 B  421  SER LEU GLU ALA SER ASP ARG ALA PHE GLN GLU LEU LEU  1SER 205
+SEQRES  24 B  421  GLU ASN ALA GLU GLU ILE LEU ARG LEU LEU GLU LEU PRO  1SER 206
+SEQRES  25 B  421  TYR ARG LEU VAL GLU VAL ALA THR GLY ASP MET GLY PRO  1SER 207
+SEQRES  26 B  421  GLY LYS TRP ARG GLN VAL ASP ILE GLU VAL TYR LEU PRO  1SER 208
+SEQRES  27 B  421  SER GLU GLY ARG TYR ARG GLU THR HIS SER CYS SER ALA  1SER 209
+SEQRES  28 B  421  LEU LEU ASP TRP GLN ALA ARG ARG ALA ASN LEU ARG TYR  1SER 210
+SEQRES  29 B  421  ARG ASP PRO GLU GLY ARG VAL ARG TYR ALA TYR THR LEU  1SER 211
+SEQRES  30 B  421  ASN ASN THR ALA LEU ALA THR PRO ARG ILE LEU ALA MET  1SER 212
+SEQRES  31 B  421  LEU LEU GLU ASN HIS GLN LEU GLN ASP GLY ARG VAL ARG  1SER 213
+SEQRES  32 B  421  VAL PRO GLN ALA LEU ILE PRO TYR MET GLY LYS GLU VAL  1SER 214
+SEQRES  33 B  421  LEU GLU PRO CYS GLY                                  1SER 215
+SEQRES   1 T   94    G   G   A   G   A   G   G   U   G   C   C   C   G  1SER 216
+SEQRES   2 T   94    A   G   U   G   G   C DHU   G   A   A   G   G   G  1SER 217
+SEQRES   3 T   94    A   C   A   C   G   A   C   U   G   G   A   A   A  1SER 218
+SEQRES   4 T   94    U   C   G   U   G   U   A   G   G   G   G   G   G  1SER 219
+SEQRES   5 T   94    C   U   U   A   A   A   C   C   U   C   C   C   U  1SER 220
+SEQRES   6 T   94    C   G   C   G   G   G   T PSU   C   G   A   A   U  1SERA  5
+SEQRES   7 T   94    C   C   C   G   C   C   C   U   C   U   C   C   G  1SER 222
+SEQRES   8 T   94    C   C   A                                          1SER 223
+FTNOTE   1                                                              1SER 22
+FTNOTE   1 CIS PROLINE - PRO A   206                                    1SER 22
+FTNOTE   2                                                              1SER 22
+FTNOTE   2 CIS PROLINE - PRO A   245                                    1SER 22
+FTNOTE   3                                                              1SER 22
+FTNOTE   3 CIS PROLINE - PRO A   385                                    1SER 22
+FTNOTE   4                                                              1SER 23
+FTNOTE   4 CIS PROLINE - PRO B   706                                    1SER 23
+FTNOTE   5                                                              1SER 23
+FTNOTE   5 CIS PROLINE - PRO B   745                                    1SER 23
+FTNOTE   6                                                              1SER 23
+FTNOTE   6 CIS PROLINE - PRO B   885                                    1SER 23
+FTNOTE   7                                                              1SER 23
+FTNOTE   7 TRNA RIBOSES G 7, G 9, G 18, G 19, C 20, D 20A, G 20B,       1SER 23
+FTNOTE   7 C 48, A 58 AND U 60 HAVE BEEN CONSTRAINED TO 2'ENDO PUCKER.  1SER 23
+FTNOTE   7 ALL OTHERS ARE 3' ENDO.                                      1SER 23
+HET    DHU  T  20A     20     DIHYDROURIDINE                            1SER 24
+FORMUL   3  DHU    C9 H15 N2 O9 P1                                      1SER 24
+FORMUL   4  HOH   *44(H2 O1)                                            1SER 24
+HELIX    1  A1 LEU A    4  GLN A    9  1 MONOMER #1                     1SER 24
+HELIX    2  A2 GLU A   12  LYS A   21  1                                1SER 24
+HELIX    3  A3 LEU A   27  GLU A   36  1                                1SER 24
+HELIX    4  A4 LYS A   90  LEU A   98  1                                1SER 24
+HELIX    5  G1 GLU A  114  ALA A  116  5                                1SER 24
+HELIX    6  A5 HIS A  136  ASN A  143  1                                1SER 24
+HELIX    7  A6 ILE A  150  VAL A  153  1                                1SER 24
+HELIX    8  A7 GLY A  163  ARG A  182  1                                1SER 25
+HELIX    9  A8 GLU A  196  THR A  202  1                                1SER 25
+HELIX   10  G2 ARG A  209  GLN A  211  5                                1SER 25
+HELIX   11  A9 GLU A  227  ALA A  232  1                                1SER 25
+HELIX   12 A10 LEU A  288  LEU A  309  1                                1SER 25
+HELIX   13 A11 THR A  320  MET A  323  1                                1SER 25
+HELIX   14  G3 GLN A  406  LEU A  408  5                                1SER 25
+HELIX   15 A13 ILE A  409  MET A  412  1 END OF MONOMER #1              1SER 25
+HELIX   16  B1 LEU B  504  GLN B  509  1 MONOMER #2                     1SER 25
+HELIX   17  B2 PRO B  511  GLU B  520  1                                1SER 25
+HELIX   18  B3 LEU B  527  ARG B  557  1                                1SER 26
+HELIX   19  B4 GLU B  565  LEU B  598  1                                1SER 26
+HELIX   20  G1 GLU B  614  ALA B  616  5                                1SER 26
+HELIX   21  B5 HIS B  636  LYS B  642  1                                1SER 26
+HELIX   22  B6 ILE B  650  SER B  654  1                                1SER 26
+HELIX   23  B7 ASP B  664  ARG B  682  1                                1SER 26
+HELIX   24  B8 GLU B  696  THR B  702  1                                1SER 26
+HELIX   25  G2 ARG B  709  GLN B  711  5                                1SER 26
+HELIX   26  B9 GLU B  727  ALA B  732  1                                1SER 26
+HELIX   27 B10 LEU B  788  LEU B  809  1                                1SER 26
+HELIX   28 B11 THR B  820  MET B  823  1                                1SER 27
+HELIX   29  G3 PRO B  838  GLU B  840  5                                1SER 27
+HELIX   30 B12 ALA B  857  ALA B  860  1                                1SER 27
+HELIX   31 B13 ARG B  886  ASN B  894  1                                1SER 27
+HELIX   32  G4 GLN B  906  LEU B  908  5                                1SER 27
+SHEET    1  A1 8 ARG A 118  VAL A 123  0                                1SER 27
+SHEET    2  A1 8 TYR A 313  GLU A 317 -1  N  TYR A 313   O  VAL A 123   1SER 27
+SHEET    3  A1 8 ARG A 329  LEU A 337 -1  O  GLU A 334   N  ARG A 314   1SER 27
+SHEET    4  A1 8 ARG A 342  ALA A 351 -1  O  ARG A 342   N  LEU A 337   1SER 27
+SHEET    5  A1 8 ALA A 374  THR A 384 -1  O  ASN A 378   N  SER A 350   1SER 27
+SHEET    6  A1 8 GLN A 274  THR A 284 -1  O  THR A 284   N  TYR A 375   1SER 28
+SHEET    7  A1 8 LEU A 246  PHE A 255 -1  O  ALA A 252   N  LYS A 277   1SER 28
+SHEET    8  A1 8 LEU A 186  THR A 189  1  N  LEU A 190   O  TYR A 251   1SER 28
+SHEET    1  B1 2 TYR A 193  ARG A 195  0                                1SER 28
+SHEET    2  B1 2 LEU A 220  LEU A 222 -1  O  TYR A 221   N  ALA A 194   1SER 28
+SHEET    1  C1 3 ILE A 238  PRO A 240  0                                1SER 28
+SHEET    2  C1 3 ARG A 363  ARG A 365  1  O  ARG A 363   N  LEU A 239   1SER 28
+SHEET    3  C1 3 VAL A 371  TYR A 373 -1  O  ARG A 372   N  TYR A 364   1SER 28
+SHEET    1  D1 2 VAL A 402  ARG A 403  0                                1SER 28
+SHEET    2  D1 2 VAL A 416  LEU A 417 -1  N  LEU A 417   O  VAL A 402   1SER 28
+SHEET    1  A2 8 ARG B 618  VAL B 623  0                                1SER 29
+SHEET    2  A2 8 TYR B 813  GLU B 817 -1  N  TYR B 813   O  VAL B 623   1SER 29
+SHEET    3  A2 8 ARG B 829  LEU B 837 -1  O  GLU B 834   N  ARG B 814   1SER 29
+SHEET    4  A2 8 ARG B 842  ALA B 851 -1  O  ARG B 842   N  LEU B 837   1SER 29
+SHEET    5  A2 8 ALA B 874  THR B 884 -1  O  ASN B 878   N  SER B 850   1SER 29
+SHEET    6  A2 8 GLN B 774  THR B 784 -1  O  THR B 784   N  TYR B 875   1SER 29
+SHEET    7  A2 8 LEU B 746  PHE B 755 -1  O  ALA B 752   N  LYS B 777   1SER 29
+SHEET    8  A2 8 LEU B 686  THR B 689  1  N  LEU B 690   O  TYR B 751   1SER 29
+SHEET    1  B2 2 TYR B 693  ARG B 695  0                                1SER 29
+SHEET    2  B2 2 LEU B 720  LEU B 722 -1  O  TYR B 721   N  ALA B 694   1SER 29
+SHEET    1  C2 3 ILE B 738  PRO B 740  0                                1SER 30
+SHEET    2  C2 3 ARG B 863  ARG B 865  1  O  ARG B 863   N  LEU B 739   1SER 30
+SHEET    3  C2 3 VAL B 871  TYR B 873 -1  O  ARG B 872   N  TYR B 864   1SER 30
+SHEET    1  D2 2 VAL B 902  ARG B 903  0                                1SER 30
+SHEET    2  D2 2 VAL B 916  LEU B 917 -1  N  LEU B 917   O  VAL B 902   1SER 30
+TURN     1  T1 LEU A  98  VAL A 101     MONOMER #1                      1SER 30
+TURN     2  T2 TRP A 106  ALA A 109                                     1SER 30
+TURN     3  T3 PRO A 206  ARG A 209                                     1SER 30
+TURN     4  T4 ILE A 215  THR A 218                                     1SER 30
+TURN     5  T5 LEU A 233  GLY A 236                                     1SER 30
+TURN     6  T6 PRO A 240  ALA A 243                                     1SER 31
+TURN     7  T7 LEU A 352  TRP A 355                                     1SER 31
+TURN     8  T8 LEU A 397  GLY A 400     END OF MONMER #1                1SER 31
+TURN     9  T9 ARG B 519  GLY B 522     MONOMER #2                      1SER 31
+TURN    10 T10 PRO B 562  GLU B 565                                     1SER 31
+TURN    11 T11 PRO B 607  GLY B 608                                     1SER 31
+TURN    12 T12 PRO B 706  ARG B 709                                     1SER 31
+TURN    13 T13 ALA B 732  SER B 735                                     1SER 31
+TURN    14 T14 GLU B 758  SER B 761                                     1SER 31
+TURN    15 T15 SER B 761  LYS B 764                                     1SER 31
+CRYST1  124.500  128.900  121.200  90.00  90.00  90.00 P 21 21 21    4  1SER 32
+ORIGX1      1.000000  0.000000  0.000000        0.00000                 1SER 32
+ORIGX2      0.000000  1.000000  0.000000        0.00000                 1SER 32
+ORIGX3      0.000000  0.000000  1.000000        0.00000                 1SER 32
+SCALE1      0.008032  0.000000  0.000000        0.00000                 1SER 32
+SCALE2      0.000000  0.007758  0.000000        0.00000                 1SER 32
+SCALE3      0.000000  0.000000  0.008251        0.00000                 1SER 32
+MTRIX1   1 -0.630670 -0.180360 -0.754800      232.72008    1            1SER 32
+MTRIX2   1 -0.171680 -0.916090  0.362350       88.27364    1            1SER 32
+MTRIX3   1 -0.756830  0.358110  0.546790       93.03900    1            1SER 32
+USER  MOD -----------------------------------------------------------------
+USER  MOD scores for adjustable sidechains, with "set" totals for H,N and Q
+USER  MOD "o" means original, "f" means flipped, "180deg" is methyl default
+USER  MOD "!" flags a clash with an overlap of 0.40A or greater
+USER  MOD flip categories: "K"=keep, "C"=clashes, "X"=uncertain, "F"=flip
+USER  MOD Set 1.1:B 545 GLN     :      amide:sc=  -0.048  K(o=0.94,f=-0.83)
+USER  MOD Set 1.2:B 549 THR OG1 :   rot   83:sc=    0.42
+USER  MOD Set 1.3:T  47N  C O2' :   rot  -27:sc=   0.572
+USER  MOD Set 2.1:T  48   C O2' :   rot -151:sc= 0.00569
+USER  MOD Set 2.2:T  59   A O2' :   rot  -26:sc=  0.0906
+USER  MOD Set 3.1:B 505 LYS NZ  :NH3+   -111:sc=  -0.249   (180deg=-1.84!)
+USER  MOD Set 3.2:B 509 GLN     :      amide:sc=  -0.586  K(o=-0.83,f=-3.9)
+USER  MOD Set 4.1:A 234 HIS     :     no HE2:sc=    2.53  K(o=3.5,f=-8.2!)
+USER  MOD Set 4.2:A 248 TYR OH  :   rot  164:sc=    1.02
+USER  MOD Set 5.1:B 827 LYS NZ  :NH3+    172:sc=   0.626   (180deg=0.623)
+USER  MOD Set 5.2:B 830 GLN     :      amide:sc=   0.211  K(o=1.4,f=-0.62)
+USER  MOD Set 5.3:B 850 SER OG  :   rot  130:sc=   0.567
+USER  MOD Set 6.1:B 770 MET CE  :methyl  151:sc=   -1.57   (180deg=-3.37!)
+USER  MOD Set 6.2:B 890 MET CE  :methyl  173:sc=   -2.36   (180deg=-4.88!)
+USER  MOD Set 7.1:A 192 SER OG  :   rot -105:sc=    1.15
+USER  MOD Set 7.2:B 774 GLN     :      amide:sc=   0.599  K(o=1.7,f=-3.8!)
+USER  MOD Set 8.1:A 356 GLN     :      amide:sc= -0.0161  K(o=-0.13,f=-1.7!)
+USER  MOD Set 8.2:A 376 THR OG1 :   rot -110:sc=  -0.113
+USER  MOD Set 9.1:A 346 THR OG1 :   rot   95:sc=    1.29
+USER  MOD Set 9.2:A 347 HIS     :FLIP no HD1:sc=    0.29  F(o=-6.5!,f=1.6)
+USER  MOD Set10.1:A 180 MET CE  :methyl -161:sc=   -0.65   (180deg=-1.12)
+USER  MOD Set10.2:A 280 GLN     :FLIP  amide:sc=   0.784  F(o=-3.3,f=1)
+USER  MOD Set10.3:A 301 ASN     :FLIP  amide:sc=   0.906  F(o=-1.5,f=1)
+USER  MOD Set11.1:A 158 SER OG  :   rot  123:sc=   0.915
+USER  MOD Set11.2:B 693 TYR OH  :   rot  -33:sc=   0.654
+USER  MOD Set12.1:B 731 ASN     :      amide:sc=   0.657  X(o=1.5,f=1.2)
+USER  MOD Set12.2:B 781 TYR OH  :   rot   80:sc=   0.837
+USER  MOD Set13.1:B 846 THR OG1 :   rot  112:sc=    1.34
+USER  MOD Set13.2:B 847 HIS     :     no HD1:sc= -0.0306  K(o=1.3,f=-6.6!)
+USER  MOD Set14.1:A 251 TYR OH  :   rot  -14:sc=    2.47
+USER  MOD Set14.2:A 276 HIS     :FLIP no HD1:sc=   0.932  F(o=1.4!,f=6.5)
+USER  MOD Set14.3:B 751 TYR OH  :   rot   10:sc=    1.94
+USER  MOD Set14.4:B 776 HIS     :FLIP no HD1:sc=    1.11  F(o=4.5,f=6.5)
+USER  MOD Set15.1:B 680 MET CE  :methyl -168:sc=  -0.726   (180deg=-0.962)
+USER  MOD Set15.2:B 780 GLN     :FLIP  amide:sc=    0.76  F(o=-7.1!,f=1.2)
+USER  MOD Set15.3:B 801 ASN     :FLIP  amide:sc=    1.14  F(o=-4,f=1.2)
+USER  MOD Set16.1:A 274 GLN     :      amide:sc=   0.557  K(o=-0.093,f=-5.6!)
+USER  MOD Set16.2:B 692 SER OG  :   rot -110:sc=   -0.65
+USER  MOD Set17.1:B 542 LYS NZ  :NH3+   -131:sc=    1.22   (180deg=-1.28)
+USER  MOD Set17.2:T  47B  G O2' :   rot  180:sc=  -0.286
+USER  MOD Set18.1:A 231 ASN     :FLIP  amide:sc=    1.38  F(o=2,f=2.6)
+USER  MOD Set18.2:A 281 TYR OH  :   rot -151:sc=    1.24
+USER  MOD Set19.1:B 861 ASN     :      amide:sc=  -0.141  X(o=-0.14,f=0.23)
+USER  MOD Set19.2:B 873 TYR OH  :   rot  180:sc=       0
+USER  MOD Set20.1:B 697 LYS NZ  :NH3+   -176:sc=       0   (180deg=-0.00939)
+USER  MOD Set20.2:B 735 SER OG  :   rot   71:sc=  0.0389
+USER  MOD Set21.1:A 277 LYS NZ  :NH3+   -163:sc=   0.695   (180deg=0.316)
+USER  MOD Set21.2:A 380 THR OG1 :   rot  180:sc= 0.00722
+USER  MOD Set22.1:A 202 THR OG1 :   rot  153:sc=    1.33
+USER  MOD Set22.2:A 204 HIS     :     no HD1:sc=    1.65  K(o=3,f=-5.8!)
+USER  MOD Set23.1:A 327 LYS NZ  :NH3+   -140:sc=    0.18   (180deg=-0.434)
+USER  MOD Set23.2:A 330 GLN     :      amide:sc=   0.623  K(o=1.2,f=-1.7)
+USER  MOD Set23.3:A 350 SER OG  :   rot  149:sc=   0.414
+USER  MOD Set24.1:A 197 LYS NZ  :NH3+    164:sc=   0.769   (180deg=0.642)
+USER  MOD Set24.2:B 652 GLN     :      amide:sc=    0.59  K(o=1.4,f=-3)
+USER  MOD Set25.1:B 702 THR OG1 :   rot  107:sc=    1.21
+USER  MOD Set25.2:B 704 HIS     :     no HD1:sc=    1.08  K(o=2.3,f=-6.1!)
+USER  MOD Set26.1:A 193 TYR OH  :   rot  -22:sc=    1.08
+USER  MOD Set26.2:B 658 SER OG  :   rot  125:sc=    1.39
+USER  MOD Set26.3:B 773 HIS     :     no HE2:sc=   0.377  K(o=2.8,f=-0.95!)
+USER  MOD Set27.1:B 734 HIS     :     no HE2:sc=    1.42  K(o=2.8,f=-4.8!)
+USER  MOD Set27.2:B 748 TYR OH  :   rot -148:sc=    1.34
+USER  MOD Set28.1:B 856 GLN     :      amide:sc=  -0.538  X(o=-0.55,f=-0.37)
+USER  MOD Set28.2:B 876 THR OG1 :   rot  -73:sc= -0.0113
+USER  MOD Set29.1:T  16   U O2' :   rot  155:sc=    -0.6
+USER  MOD Set29.2:T  60   U O2' :   rot  -94:sc=    0.87
+USER  MOD Single :A   1 MET CE  :methyl -131:sc=   -1.09   (180deg=-4.65!)
+USER  MOD Single :A   1 MET N   :NH3+    161:sc=  -0.511   (180deg=-0.878!)
+USER  MOD Single :A   5 LYS NZ  :NH3+   -113:sc=   -2.35!  (180deg=-4.44!)
+USER  MOD Single :A   9 GLN     :FLIP  amide:sc= -0.0892  F(o=-1.9!,f=-0.089)
+USER  MOD Single :A  15 HIS     :FLIP no HE2:sc=    -4.4! C(o=-6.1!,f=-4.4!)
+USER  MOD Single :A  21 LYS NZ  :NH3+    155:sc=    2.35   (180deg=1.4)
+USER  MOD Single :A  38 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :A  90 LYS NZ  :NH3+   -118:sc=   0.818   (180deg=0.196)
+USER  MOD Single :A 100 GLN     :      amide:sc=   0.709  K(o=0.71,f=0)
+USER  MOD Single :A 117 ASN     :FLIP  amide:sc=   0.671  F(o=-4.5!,f=0.67)
+USER  MOD Single :A 121 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :A 130 SER OG  :   rot  180:sc=  0.0138
+USER  MOD Single :A 136 HIS     :FLIP no HE2:sc= -0.0962  F(o=-1.1,f=-0.096)
+USER  MOD Single :A 140 MET CE  :methyl -178:sc=   -1.24   (180deg=-1.38)
+USER  MOD Single :A 142 LYS NZ  :NH3+   -147:sc= -0.0443   (180deg=-1.21)
+USER  MOD Single :A 143 ASN     :      amide:sc=   -1.25! C(o=-1.2!,f=-4.8!)
+USER  MOD Single :A 151 SER OG  :   rot  180:sc=  0.0251
+USER  MOD Single :A 152 GLN     :FLIP  amide:sc=  -0.285  F(o=-0.95,f=-0.28)
+USER  MOD Single :A 154 SER OG  :   rot -100:sc=   0.108
+USER  MOD Single :A 156 SER OG  :   rot  180:sc=       0
+USER  MOD Single :A 159 TYR OH  :   rot -154:sc=   0.738
+USER  MOD Single :A 162 LYS NZ  :NH3+    147:sc=   0.833   (180deg=0.462)
+USER  MOD Single :A 168 TYR OH  :   rot  180:sc=  -0.165
+USER  MOD Single :A 177 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :A 188 MET CE  :methyl -152:sc=  -0.863   (180deg=-1.5)
+USER  MOD Single :A 189 THR OG1 :   rot   37:sc=   0.227
+USER  MOD Single :A 208 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :A 211 GLN     :      amide:sc=   0.201  K(o=0.2,f=-1.7)
+USER  MOD Single :A 218 THR OG1 :   rot   43:sc=0.000373
+USER  MOD Single :A 221 TYR OH  :   rot   30:sc= -0.0189
+USER  MOD Single :A 223 THR OG1 :   rot  165:sc=    1.24
+USER  MOD Single :A 225 THR OG1 :   rot   99:sc=   0.135
+USER  MOD Single :A 235 SER OG  :   rot   58:sc=    0.99
+USER  MOD Single :A 241 TYR OH  :   rot    6:sc=   0.651
+USER  MOD Single :A 257 SER OG  :   rot  150:sc=  -0.691
+USER  MOD Single :A 261 SER OG  :   rot  180:sc=       0
+USER  MOD Single :A 264 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :A 270 MET CE  :methyl -165:sc=  -0.389   (180deg=-0.697)
+USER  MOD Single :A 273 HIS     :     no HE2:sc=  -0.107  K(o=-0.11,f=-2.4!)
+USER  MOD Single :A 284 THR OG1 :   rot  180:sc=  -0.112
+USER  MOD Single :A 287 SER OG  :   rot  180:sc=   0.245
+USER  MOD Single :A 291 SER OG  :   rot  115:sc=   0.254
+USER  MOD Single :A 296 GLN     :      amide:sc= -0.0207  X(o=-0.021,f=0)
+USER  MOD Single :A 313 TYR OH  :   rot  168:sc=    1.21
+USER  MOD Single :A 320 THR OG1 :   rot   96:sc=   0.669
+USER  MOD Single :A 323 MET CE  :methyl -173:sc=  -0.145   (180deg=-0.231)
+USER  MOD Single :A 336 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :A 339 SER OG  :   rot -122:sc=   0.271
+USER  MOD Single :A 343 TYR OH  :   rot  170:sc=    1.26
+USER  MOD Single :A 348 SER OG  :   rot  -81:sc=   0.298
+USER  MOD Single :A 349 CYS SG  :   rot  -88:sc=   0.193
+USER  MOD Single :A 361 ASN     :      amide:sc=-0.00463  K(o=-0.0046,f=-1.7!)
+USER  MOD Single :A 364 TYR OH  :   rot  180:sc=   0.536
+USER  MOD Single :A 373 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :A 375 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :A 378 ASN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :A 379 ASN     :      amide:sc=  -0.828  X(o=-0.83,f=-0.45)
+USER  MOD Single :A 384 THR OG1 :   rot  120:sc=  -0.527
+USER  MOD Single :A 390 MET CE  :methyl -145:sc=   -2.32   (180deg=-6.99!)
+USER  MOD Single :A 394 ASN     :      amide:sc=   0.882  K(o=0.88,f=-1.6)
+USER  MOD Single :A 395 HIS     :FLIP no HD1:sc=  -0.153  F(o=-2.4!,f=-0.15)
+USER  MOD Single :A 396 GLN     :      amide:sc=    1.56  K(o=1.6,f=-8.2!)
+USER  MOD Single :A 398 GLN     :      amide:sc= -0.0593  K(o=-0.059,f=-0.97)
+USER  MOD Single :A 406 GLN     :      amide:sc=       0  X(o=0,f=-0.22)
+USER  MOD Single :A 411 TYR OH  :   rot -178:sc=       1
+USER  MOD Single :A 412 MET CE  :methyl -120:sc=       0   (180deg=-0.442)
+USER  MOD Single :A 414 LYS NZ  :NH3+    154:sc=   0.813   (180deg=0.0204)
+USER  MOD Single :A 420 CYS SG  :   rot  160:sc=  0.0488
+USER  MOD Single :B 501 MET CE  :methyl  157:sc= -0.0115   (180deg=-0.288)
+USER  MOD Single :B 515 HIS     :     no HE2:sc=   0.576  K(o=0.58,f=-2.2)
+USER  MOD Single :B 521 LYS NZ  :NH3+    150:sc=    1.51   (180deg=0.223)
+USER  MOD Single :B 538 GLN     :FLIP  amide:sc= -0.0442  F(o=-1.3!,f=-0.044)
+USER  MOD Single :B 541 LYS NZ  :NH3+   -133:sc= 0.00901   (180deg=0)
+USER  MOD Single :B 548 GLN     :      amide:sc= -0.0272  X(o=-0.027,f=-0.11)
+USER  MOD Single :B 552 ASN     :      amide:sc=   0.352  K(o=0.35,f=-0.5)
+USER  MOD Single :B 553 GLN     :      amide:sc=  -0.143  X(o=-0.14,f=-0.22)
+USER  MOD Single :B 556 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B 560 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B 566 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B 574 LYS NZ  :NH3+   -165:sc=   0.474   (180deg=0.375)
+USER  MOD Single :B 581 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B 590 LYS NZ  :NH3+   -178:sc=       0   (180deg=-0.00936)
+USER  MOD Single :B 600 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :B 617 ASN     :FLIP  amide:sc=    0.57  F(o=-4.2!,f=0.57)
+USER  MOD Single :B 621 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B 630 SER OG  :   rot  180:sc=   0.141
+USER  MOD Single :B 636 HIS     :FLIP no HE2:sc= -0.0297  F(o=-1.8!,f=-0.03)
+USER  MOD Single :B 640 MET CE  :methyl  173:sc=   -8.55!  (180deg=-8.66!)
+USER  MOD Single :B 642 LYS NZ  :NH3+   -107:sc=   0.656   (180deg=-0.19)
+USER  MOD Single :B 643 ASN     :FLIP  amide:sc=   0.633  F(o=-1.6,f=0.63)
+USER  MOD Single :B 651 SER OG  :   rot  -43:sc=  0.0661
+USER  MOD Single :B 654 SER OG  :   rot -110:sc=    1.11
+USER  MOD Single :B 656 SER OG  :   rot  180:sc=  0.0821
+USER  MOD Single :B 659 TYR OH  :   rot -167:sc=    1.21
+USER  MOD Single :B 662 LYS NZ  :NH3+   -153:sc=  0.0483   (180deg=-0.214)
+USER  MOD Single :B 668 TYR OH  :   rot  180:sc=  -0.216
+USER  MOD Single :B 677 MET CE  :methyl -172:sc=   -6.15!  (180deg=-6.36!)
+USER  MOD Single :B 688 MET CE  :methyl -123:sc=  -0.778   (180deg=-0.897)
+USER  MOD Single :B 689 THR OG1 :   rot  166:sc=   -1.04
+USER  MOD Single :B 708 TYR OH  :   rot   30:sc=  -0.315
+USER  MOD Single :B 711 GLN     :      amide:sc= -0.0219  X(o=-0.022,f=-0.021)
+USER  MOD Single :B 718 THR OG1 :   rot  -60:sc=    1.18
+USER  MOD Single :B 721 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :B 723 THR OG1 :   rot   81:sc=    2.17
+USER  MOD Single :B 725 THR OG1 :   rot  180:sc= 0.00478
+USER  MOD Single :B 741 TYR OH  :   rot  -32:sc=   0.143
+USER  MOD Single :B 757 SER OG  :   rot -156:sc=     1.2
+USER  MOD Single :B 761 SER OG  :   rot -120:sc=   -2.06!
+USER  MOD Single :B 764 LYS NZ  :NH3+    160:sc= -0.0154   (180deg=-0.279)
+USER  MOD Single :B 777 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B 784 THR OG1 :   rot  170:sc=       0
+USER  MOD Single :B 787 SER OG  :   rot  180:sc=  0.0581
+USER  MOD Single :B 791 SER OG  :   rot  180:sc=       0
+USER  MOD Single :B 796 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :B 813 TYR OH  :   rot  167:sc=    1.27
+USER  MOD Single :B 820 THR OG1 :   rot  111:sc=  -0.625
+USER  MOD Single :B 823 MET CE  :methyl  166:sc=   -0.15   (180deg=-0.425)
+USER  MOD Single :B 836 TYR OH  :   rot  180:sc=  -0.058
+USER  MOD Single :B 839 SER OG  :   rot -116:sc=    1.75
+USER  MOD Single :B 843 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :B 848 SER OG  :   rot  -79:sc=  0.0404
+USER  MOD Single :B 849 CYS SG  :   rot  -93:sc=   0.038
+USER  MOD Single :B 864 TYR OH  :   rot  180:sc= -0.0295
+USER  MOD Single :B 875 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :B 878 ASN     :      amide:sc=-0.00199  X(o=-0.002,f=0)
+USER  MOD Single :B 879 ASN     :      amide:sc=  -0.393  X(o=-0.39,f=-0.0084)
+USER  MOD Single :B 880 THR OG1 :   rot  180:sc=   0.033
+USER  MOD Single :B 884 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B 894 ASN     :      amide:sc=   0.926  K(o=0.93,f=-0.0026)
+USER  MOD Single :B 895 HIS     :     no HE2:sc=  -0.534  K(o=-0.53,f=-1.7!)
+USER  MOD Single :B 896 GLN     :      amide:sc=    1.79  K(o=1.8,f=-6.2!)
+USER  MOD Single :B 898 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :B 906 GLN     :      amide:sc=       0  X(o=0,f=0)
+USER  MOD Single :B 911 TYR OH  :   rot  169:sc=    1.25
+USER  MOD Single :B 912 MET CE  :methyl  174:sc=       0   (180deg=-0.05)
+USER  MOD Single :B 914 LYS NZ  :NH3+   -176:sc=   0.895   (180deg=0.822)
+USER  MOD Single :B 920 CYS SG  :   rot -120:sc=   -1.28
+USER  MOD Single :T   4   G O2' :   rot  -18:sc=  0.0227
+USER  MOD Single :T   5   A O2' :   rot  -27:sc=   0.156
+USER  MOD Single :T   6   G O2' :   rot  -20:sc=  0.0134
+USER  MOD Single :T   7   G O2' :   rot   15:sc=   0.377
+USER  MOD Single :T   8   U O2' :   rot -126:sc=    1.14
+USER  MOD Single :T   9   G O2' :   rot   16:sc=    0.17
+USER  MOD Single :T  10   C O2' :   rot -108:sc=   0.615
+USER  MOD Single :T  11   C O2' :   rot  -25:sc=  0.0109
+USER  MOD Single :T  12   C O2' :   rot  -19:sc= 0.00903
+USER  MOD Single :T  13   G O2' :   rot -112:sc=    1.11
+USER  MOD Single :T  14   A O2' :   rot  -20:sc=  0.0612
+USER  MOD Single :T  15   G O2' :   rot -147:sc=   0.733
+USER  MOD Single :T  18   G O2' :   rot -150:sc=   0.834
+USER  MOD Single :T  19   G O2' :   rot  -96:sc=    1.44
+USER  MOD Single :T  20   C O2' :   rot  167:sc=    1.06
+USER  MOD Single :T  20ADHU O2' :   rot  -73:sc=    1.17
+USER  MOD Single :T  20B  G O2' :   rot   18:sc=  0.0514
+USER  MOD Single :T  21   A O2' :   rot -152:sc=   0.377
+USER  MOD Single :T  22   A O2' :   rot  -24:sc=   0.112
+USER  MOD Single :T  23   G O2' :   rot  -42:sc=   0.159
+USER  MOD Single :T  24   G O2' :   rot -121:sc=   0.538
+USER  MOD Single :T  25   G O2' :   rot  -24:sc=   0.185
+USER  MOD Single :T  42   G O2' :   rot  -20:sc=   0.102
+USER  MOD Single :T  43   G O2' :   rot   -9:sc=  -0.718
+USER  MOD Single :T  44   U O2' :   rot  -24:sc=  0.0777
+USER  MOD Single :T  45   A O2' :   rot   -9:sc=    0.92
+USER  MOD Single :T  46   G O2' :   rot  -20:sc=  0.0523
+USER  MOD Single :T  47   G O2' :   rot  -22:sc=  0.0726
+USER  MOD Single :T  47A  G O2' :   rot  180:sc=       0
+USER  MOD Single :T  47C  G O2' :   rot  180:sc=       0
+USER  MOD Single :T  47D  G O2' :   rot  -22:sc=  0.0296
+USER  MOD Single :T  47D  G O3' :   rot  180:sc=   0.028
+USER  MOD Single :T  47K  C O2' :   rot -120:sc=   0.191
+USER  MOD Single :T  47L  C O2' :   rot  -22:sc=  0.0931
+USER  MOD Single :T  47M  U O2' :   rot -101:sc=    0.13
+USER  MOD Single :T  47O  C O2' :   rot  -31:sc=  0.0293
+USER  MOD Single :T  47P  C O2' :   rot  -34:sc=    0.29
+USER  MOD Single :T  47Q  U O2' :   rot  -19:sc=  0.0612
+USER  MOD Single :T  49   G O2' :   rot  -30:sc=  0.0744
+USER  MOD Single :T  50   C O2' :   rot  180:sc=       0
+USER  MOD Single :T  51   G O2' :   rot  180:sc=       0
+USER  MOD Single :T  52   G O2' :   rot  -27:sc=  0.0159
+USER  MOD Single :T  53   G O2' :   rot  180:sc=       0
+USER  MOD Single :T  54   T O2' :   rot  -21:sc=   0.224
+USER  MOD Single :T  55 PSU O2' :   rot   69:sc=    1.23
+USER  MOD Single :T  56   C O2' :   rot  -57:sc=   0.926
+USER  MOD Single :T  57   G O2' :   rot  -20:sc=  0.0891
+USER  MOD Single :T  58   A O2' :   rot   67:sc=    1.22
+USER  MOD Single :T  61   C O2' :   rot  -19:sc=  0.0301
+USER  MOD Single :T  62   C O2' :   rot  180:sc=       0
+USER  MOD Single :T  63   C O2' :   rot  -25:sc= 0.00782
+USER  MOD Single :T  64   G O2' :   rot  180:sc=       0
+USER  MOD Single :T  65   C O2' :   rot  -18:sc=   0.044
+USER  MOD Single :T  66   C O2' :   rot -110:sc=  0.0711
+USER  MOD Single :T  67   C O2' :   rot  -22:sc= 0.00189
+USER  MOD Single :T  68   U O2' :   rot  -21:sc= 0.00828
+USER  MOD Single :T  69   C O2' :   rot  180:sc=       0
+USER  MOD Single :T  70   U O2' :   rot -100:sc=   0.119
+USER  MOD Single :T  71   C O2' :   rot  -25:sc= 0.00798
+USER  MOD Single :T  71   C O3' :   rot  180:sc=  0.0022
+USER  MOD -----------------------------------------------------------------
+ATOM   6358  P     G T   4      89.083  70.657  49.082  0.50 58.92      1SER6687
+ATOM   6359  OP1   G T   4      89.326  69.669  50.165  0.50 58.54      1SER6688
+ATOM   6360  OP2   G T   4      87.775  71.355  49.000  0.50 60.79      1SER6689
+ATOM   6361  O5'   G T   4      89.369  69.953  47.665  0.50 58.48      1SER6690
+ATOM   6362  C5'   G T   4      88.387  69.822  46.646  0.50 61.54      1SER6691
+ATOM   6363  C4'   G T   4      88.938  70.253  45.304  0.50 63.74      1SER6692
+ATOM   6364  O4'   G T   4      90.358  70.069  45.216  0.50 61.62      1SER6693
+ATOM   6365  C3'   G T   4      88.432  69.229  44.337  0.50 68.22      1SER6694
+ATOM   6366  O3'   G T   4      87.069  69.421  43.973  0.50 75.17      1SER6695
+ATOM   6367  C2'   G T   4      89.428  69.239  43.203  0.50 65.18      1SER6696
+ATOM   6368  O2'   G T   4      89.168  70.329  42.314  0.50 66.13      1SER6697
+ATOM   6369  C1'   G T   4      90.735  69.453  43.963  0.50 60.18      1SER6698
+ATOM   6370  N9    G T   4      91.566  68.219  44.183  0.50 53.35      1SER6699
+ATOM   6371  C8    G T   4      91.912  67.616  45.371  0.50 51.79      1SER6700
+ATOM   6372  N7    G T   4      92.672  66.563  45.242  0.50 50.10      1SER6701
+ATOM   6373  C5    G T   4      92.843  66.441  43.868  0.50 47.04      1SER6702
+ATOM   6374  C6    G T   4      93.575  65.470  43.126  0.50 44.05      1SER6703
+ATOM   6375  O6    G T   4      94.220  64.512  43.544  0.50 42.62      1SER6704
+ATOM   6376  N1    G T   4      93.499  65.700  41.764  0.50 40.39      1SER6705
+ATOM   6377  C2    G T   4      92.800  66.737  41.181  0.50 42.28      1SER6706
+ATOM   6378  N2    G T   4      92.821  66.833  39.852  0.50 40.95      1SER6707
+ATOM   6379  N3    G T   4      92.118  67.651  41.877  0.50 42.72      1SER6708
+ATOM   6380  C4    G T   4      92.180  67.449  43.212  0.50 47.43      1SER6709
+ATOM   6381  P     A T   5      86.181  68.092  43.822  0.70 81.63      1SER6710
+ATOM   6382  OP1   A T   5      86.511  67.171  44.936  0.70 83.26      1SER6711
+ATOM   6383  OP2   A T   5      84.771  68.496  43.603  0.70 85.00      1SER6712
+ATOM   6384  O5'   A T   5      86.731  67.459  42.446  0.70 77.93      1SER6713
+ATOM   6385  C5'   A T   5      86.504  68.184  41.230  0.70 73.94      1SER6714
+ATOM   6386  C4'   A T   5      87.072  67.468  40.036  0.70 69.92      1SER6715
+ATOM   6387  O4'   A T   5      88.465  67.198  40.222  0.70 65.29      1SER6716
+ATOM   6388  C3'   A T   5      86.447  66.110  39.953  0.70 67.67      1SER6717
+ATOM   6389  O3'   A T   5      85.172  66.197  39.314  0.70 72.36      1SER6718
+ATOM   6390  C2'   A T   5      87.460  65.306  39.197  0.70 63.34      1SER6719
+ATOM   6391  O2'   A T   5      87.297  65.586  37.801  0.70 63.18      1SER6720
+ATOM   6392  C1'   A T   5      88.776  65.874  39.730  0.70 59.29      1SER6721
+ATOM   6393  N9    A T   5      89.470  65.107  40.810  0.70 48.68      1SER6722
+ATOM   6394  C8    A T   5      89.444  65.315  42.168  0.70 43.44      1SER6723
+ATOM   6395  N7    A T   5      90.174  64.489  42.858  0.70 40.08      1SER6724
+ATOM   6396  C5    A T   5      90.729  63.669  41.896  0.70 36.92      1SER6725
+ATOM   6397  C6    A T   5      91.608  62.588  41.989  0.70 34.36      1SER6726
+ATOM   6398  N6    A T   5      92.071  62.165  43.162  0.70 34.13      1SER6727
+ATOM   6399  N1    A T   5      91.967  61.979  40.852  0.70 32.63      1SER6728
+ATOM   6400  C2    A T   5      91.483  62.433  39.699  0.70 35.61      1SER6729
+ATOM   6401  N3    A T   5      90.664  63.452  39.470  0.70 39.24      1SER6730
+ATOM   6402  C4    A T   5      90.313  64.033  40.643  0.70 41.49      1SER6731
+ATOM   6403  P     G T   6      84.093  65.068  39.663  1.00 75.23      1SER6732
+ATOM   6404  OP1   G T   6      84.137  64.857  41.137  1.00 72.36      1SER6733
+ATOM   6405  OP2   G T   6      82.816  65.377  38.959  1.00 73.41      1SER6734
+ATOM   6406  O5'   G T   6      84.743  63.823  38.932  1.00 73.30      1SER6735
+ATOM   6407  C5'   G T   6      84.578  62.468  39.317  1.00 67.36      1SER6736
+ATOM   6408  C4'   G T   6      85.653  61.740  38.580  1.00 61.02      1SER6737
+ATOM   6409  O4'   G T   6      86.933  62.048  39.120  1.00 56.19      1SER6738
+ATOM   6410  C3'   G T   6      85.578  60.272  38.698  1.00 59.93      1SER6739
+ATOM   6411  O3'   G T   6      84.572  59.739  37.842  1.00 60.70      1SER6740
+ATOM   6412  C2'   G T   6      86.992  59.801  38.388  1.00 55.74      1SER6741
+ATOM   6413  O2'   G T   6      87.286  59.785  36.972  1.00 54.99      1SER6742
+ATOM   6414  C1'   G T   6      87.780  60.903  39.035  1.00 51.05      1SER6743
+ATOM   6415  N9    G T   6      88.271  60.605  40.387  1.00 45.74      1SER6744
+ATOM   6416  C8    G T   6      88.027  61.276  41.567  1.00 46.69      1SER6745
+ATOM   6417  N7    G T   6      88.656  60.775  42.596  1.00 46.40      1SER6746
+ATOM   6418  C5    G T   6      89.371  59.703  42.058  1.00 39.23      1SER6747
+ATOM   6419  C6    G T   6      90.242  58.794  42.703  1.00 34.70      1SER6748
+ATOM   6420  O6    G T   6      90.526  58.774  43.905  1.00 30.89      1SER6749
+ATOM   6421  N1    G T   6      90.767  57.863  41.791  1.00 29.64      1SER6750
+ATOM   6422  C2    G T   6      90.475  57.820  40.428  1.00 31.62      1SER6751
+ATOM   6423  N2    G T   6      91.033  56.888  39.647  1.00 25.51      1SER6752
+ATOM   6424  N3    G T   6      89.660  58.692  39.837  1.00 34.81      1SER6753
+ATOM   6425  C4    G T   6      89.144  59.594  40.709  1.00 40.44      1SER6754
+ATOM   6426  P     G T   7      83.708  58.553  38.433  1.00 56.85      1SER6755
+ATOM   6427  OP1   G T   7      84.335  58.088  39.687  1.00 63.55      1SER6756
+ATOM   6428  OP2   G T   7      82.309  59.014  38.485  1.00 61.68      1SER6757
+ATOM   6429  O5'   G T   7      83.802  57.388  37.299  1.00 52.63      1SER6758
+ATOM   6430  C5'   G T   7      84.975  56.835  36.694  1.00 39.54      1SER6759
+ATOM   6431  C4'   G T   7      85.770  55.787  37.490  1.00 35.22      1SER6760
+ATOM   6432  O4'   G T   7      86.771  56.154  38.457  1.00 31.65      1SER6761
+ATOM   6433  C3'   G T   7      85.195  54.472  37.922  1.00 34.52      1SER6762
+ATOM   6434  O3'   G T   7      85.821  53.381  37.278  1.00 44.27      1SER6763
+ATOM   6435  C2'   G T   7      85.522  54.484  39.404  1.00 29.98      1SER6764
+ATOM   6436  O2'   G T   7      85.804  53.147  39.823  1.00 33.30      1SER6765
+ATOM   6437  C1'   G T   7      86.864  55.155  39.466  1.00 21.31      1SER6766
+ATOM   6438  N9    G T   7      87.191  55.676  40.797  1.00 12.56      1SER6767
+ATOM   6439  C8    G T   7      86.630  56.734  41.436  1.00 16.58      1SER6768
+ATOM   6440  N7    G T   7      87.109  56.975  42.648  1.00 18.75      1SER6769
+ATOM   6441  C5    G T   7      88.075  55.993  42.827  1.00 10.48      1SER6770
+ATOM   6442  C6    G T   7      88.933  55.771  43.940  1.00  7.95      1SER6771
+ATOM   6443  O6    G T   7      88.986  56.391  45.001  1.00  6.35      1SER6772
+ATOM   6444  N1    G T   7      89.789  54.712  43.719  1.00  6.49      1SER6773
+ATOM   6445  C2    G T   7      89.799  53.946  42.575  1.00  8.57      1SER6774
+ATOM   6446  N2    G T   7      90.692  52.970  42.515  1.00  7.54      1SER6775
+ATOM   6447  N3    G T   7      88.980  54.126  41.533  1.00  6.58      1SER6776
+ATOM   6448  C4    G T   7      88.145  55.180  41.712  1.00 12.16      1SER6777
+ATOM   6449  P     U T   8      85.121  52.818  35.936  1.00 51.58      1SER6778
+ATOM   6450  OP1   U T   8      84.906  53.995  35.057  1.00 55.46      1SER6779
+ATOM   6451  OP2   U T   8      85.874  51.640  35.423  1.00 45.04      1SER6780
+ATOM   6452  O5'   U T   8      83.670  52.308  36.359  1.00 53.94      1SER6781
+ATOM   6453  C5'   U T   8      83.351  51.266  37.273  1.00 54.32      1SER6782
+ATOM   6454  C4'   U T   8      81.865  51.031  37.219  1.00 54.12      1SER6783
+ATOM   6455  O4'   U T   8      81.194  52.298  37.263  1.00 56.15      1SER6784
+ATOM   6456  C3'   U T   8      81.419  50.455  35.907  1.00 54.77      1SER6785
+ATOM   6457  O3'   U T   8      81.644  49.048  35.778  1.00 51.06      1SER6786
+ATOM   6458  C2'   U T   8      79.974  50.892  35.797  1.00 58.98      1SER6787
+ATOM   6459  O2'   U T   8      79.147  50.034  36.619  1.00 59.06      1SER6788
+ATOM   6460  C1'   U T   8      80.027  52.302  36.409  1.00 59.15      1SER6789
+ATOM   6461  N1    U T   8      79.986  53.547  35.518  1.00 63.73      1SER6790
+ATOM   6462  C2    U T   8      78.849  53.850  34.768  1.00 65.75      1SER6791
+ATOM   6463  O2    U T   8      77.834  53.155  34.728  1.00 67.86      1SER6792
+ATOM   6464  N3    U T   8      78.891  55.032  34.010  1.00 66.80      1SER6793
+ATOM   6465  C4    U T   8      79.922  55.948  33.922  1.00 67.12      1SER6794
+ATOM   6466  O4    U T   8      79.818  56.951  33.207  1.00 60.66      1SER6795
+ATOM   6467  C5    U T   8      81.057  55.565  34.732  1.00 64.05      1SER6796
+ATOM   6468  C6    U T   8      81.056  54.426  35.474  1.00 64.95      1SER6797
+ATOM   6469  P     G T   9      82.584  48.495  34.594  1.00 49.70      1SER6798
+ATOM   6470  OP1   G T   9      82.791  49.526  33.540  1.00 46.16      1SER6799
+ATOM   6471  OP2   G T   9      83.751  47.859  35.260  1.00 52.15      1SER6800
+ATOM   6472  O5'   G T   9      81.704  47.313  33.924  1.00 53.12      1SER6801
+ATOM   6473  C5'   G T   9      81.700  45.953  34.379  1.00 52.69      1SER6802
+ATOM   6474  C4'   G T   9      80.646  45.122  33.660  1.00 53.40      1SER6803
+ATOM   6475  O4'   G T   9      79.378  45.808  33.777  1.00 52.88      1SER6804
+ATOM   6476  C3'   G T   9      80.927  44.996  32.172  1.00 54.41      1SER6805
+ATOM   6477  O3'   G T   9      80.432  43.762  31.660  1.00 61.75      1SER6806
+ATOM   6478  C2'   G T   9      80.097  46.121  31.594  1.00 56.92      1SER6807
+ATOM   6479  O2'   G T   9      79.800  45.909  30.206  1.00 55.92      1SER6808
+ATOM   6480  C1'   G T   9      78.856  46.119  32.470  1.00 56.05      1SER6809
+ATOM   6481  N9    G T   9      78.228  47.460  32.449  1.00 56.92      1SER6810
+ATOM   6482  C8    G T   9      78.803  48.680  32.719  1.00 56.30      1SER6811
+ATOM   6483  N7    G T   9      77.976  49.684  32.615  1.00 56.49      1SER6812
+ATOM   6484  C5    G T   9      76.765  49.096  32.241  1.00 57.81      1SER6813
+ATOM   6485  C6    G T   9      75.492  49.689  31.975  1.00 56.51      1SER6814
+ATOM   6486  O6    G T   9      75.174  50.874  32.022  1.00 56.90      1SER6815
+ATOM   6487  N1    G T   9      74.535  48.747  31.628  1.00 54.23      1SER6816
+ATOM   6488  C2    G T   9      74.760  47.392  31.546  1.00 51.64      1SER6817
+ATOM   6489  N2    G T   9      73.739  46.619  31.205  1.00 48.10      1SER6818
+ATOM   6490  N3    G T   9      75.942  46.829  31.801  1.00 55.89      1SER6819
+ATOM   6491  C4    G T   9      76.908  47.734  32.139  1.00 57.23      1SER6820
+ATOM   6492  P     C T  10      81.395  42.489  31.560  1.00 66.96      1SER6821
+ATOM   6493  OP1   C T  10      82.034  42.227  32.875  1.00 61.77      1SER6822
+ATOM   6494  OP2   C T  10      80.679  41.421  30.825  1.00 68.12      1SER6823
+ATOM   6495  O5'   C T  10      82.478  43.081  30.547  1.00 69.08      1SER6824
+ATOM   6496  C5'   C T  10      83.846  42.667  30.597  1.00 75.67      1SER6825
+ATOM   6497  C4'   C T  10      84.559  43.129  29.335  1.00 80.04      1SER6826
+ATOM   6498  O4'   C T  10      83.851  42.669  28.172  1.00 81.27      1SER6827
+ATOM   6499  C3'   C T  10      84.484  44.641  29.223  1.00 81.54      1SER6828
+ATOM   6500  O3'   C T  10      85.537  45.239  30.005  1.00 84.31      1SER6829
+ATOM   6501  C2'   C T  10      84.615  44.869  27.738  1.00 81.47      1SER6830
+ATOM   6502  O2'   C T  10      85.964  44.874  27.313  1.00 82.58      1SER6831
+ATOM   6503  C1'   C T  10      83.849  43.688  27.151  1.00 82.62      1SER6832
+ATOM   6504  N1    C T  10      82.472  44.120  26.865  1.00 83.98      1SER6833
+ATOM   6505  C2    C T  10      82.242  44.975  25.789  1.00 84.57      1SER6834
+ATOM   6506  O2    C T  10      83.129  45.394  25.038  1.00 80.36      1SER6835
+ATOM   6507  N3    C T  10      80.957  45.359  25.576  1.00 87.40      1SER6836
+ATOM   6508  C4    C T  10      79.955  44.930  26.363  1.00 87.58      1SER6837
+ATOM   6509  N4    C T  10      78.717  45.340  26.107  1.00 90.03      1SER6838
+ATOM   6510  C5    C T  10      80.177  44.044  27.465  1.00 86.55      1SER6839
+ATOM   6511  C6    C T  10      81.448  43.667  27.663  1.00 84.66      1SER6840
+ATOM   6512  P     C T  11      85.480  46.627  30.822  1.00 88.44      1SER6841
+ATOM   6513  OP1   C T  11      84.103  46.913  31.288  1.00 89.21      1SER6842
+ATOM   6514  OP2   C T  11      86.612  46.650  31.782  1.00 89.17      1SER6843
+ATOM   6515  O5'   C T  11      85.780  47.641  29.629  1.00 89.10      1SER6844
+ATOM   6516  C5'   C T  11      87.034  47.725  28.948  1.00 88.86      1SER6845
+ATOM   6517  C4'   C T  11      86.802  48.394  27.613  1.00 88.40      1SER6846
+ATOM   6518  O4'   C T  11      85.757  47.710  26.903  1.00 88.44      1SER6847
+ATOM   6519  C3'   C T  11      86.207  49.777  27.809  1.00 91.38      1SER6848
+ATOM   6520  O3'   C T  11      87.075  50.827  28.249  1.00 93.74      1SER6849
+ATOM   6521  C2'   C T  11      85.452  50.034  26.535  1.00 91.93      1SER6850
+ATOM   6522  O2'   C T  11      86.375  50.433  25.516  1.00 95.01      1SER6851
+ATOM   6523  C1'   C T  11      84.883  48.636  26.215  1.00 92.12      1SER6852
+ATOM   6524  N1    C T  11      83.459  48.580  26.719  1.00 94.97      1SER6853
+ATOM   6525  C2    C T  11      82.409  49.047  25.910  1.00 97.00      1SER6854
+ATOM   6526  O2    C T  11      82.575  49.500  24.778  1.00 98.82      1SER6855
+ATOM   6527  N3    C T  11      81.136  49.004  26.400  1.00 98.20      1SER6856
+ATOM   6528  C4    C T  11      80.871  48.530  27.630  1.00 98.53      1SER6857
+ATOM   6529  N4    C T  11      79.610  48.505  28.069  1.00 98.50      1SER6858
+ATOM   6530  C5    C T  11      81.928  48.059  28.478  1.00 97.01      1SER6859
+ATOM   6531  C6    C T  11      83.181  48.106  27.981  1.00 95.93      1SER6860
+ATOM   6532  P     C T  12      86.789  51.639  29.629  1.00 95.07      1SER6861
+ATOM   6533  OP1   C T  12      85.797  50.899  30.449  1.00 99.66      1SER6862
+ATOM   6534  OP2   C T  12      88.106  51.957  30.217  1.00 99.32      1SER6863
+ATOM   6535  O5'   C T  12      86.107  53.003  29.133  1.00 96.28      1SER6864
+ATOM   6536  C5'   C T  12      86.820  53.845  28.230  1.00 97.93      1SER6865
+ATOM   6537  C4'   C T  12      85.911  54.558  27.241  1.00 98.40      1SER6866
+ATOM   6538  O4'   C T  12      85.022  53.671  26.534  1.00 97.44      1SER6867
+ATOM   6539  C3'   C T  12      84.987  55.539  27.904  1.00 98.23      1SER6868
+ATOM   6540  O3'   C T  12      85.626  56.730  28.371  1.00 99.99      1SER6869
+ATOM   6541  C2'   C T  12      83.899  55.732  26.867  1.00 98.80      1SER6870
+ATOM   6542  O2'   C T  12      84.330  56.621  25.825  1.00100.53      1SER6871
+ATOM   6543  C1'   C T  12      83.756  54.340  26.277  1.00 99.20      1SER6872
+ATOM   6544  N1    C T  12      82.584  53.645  26.917  1.00100.62      1SER6873
+ATOM   6545  C2    C T  12      81.280  53.989  26.535  1.00101.03      1SER6874
+ATOM   6546  O2    C T  12      81.046  54.847  25.679  1.00101.66      1SER6875
+ATOM   6547  N3    C T  12      80.238  53.333  27.138  1.00100.07      1SER6876
+ATOM   6548  C4    C T  12      80.445  52.390  28.065  1.00 98.93      1SER6877
+ATOM   6549  N4    C T  12      79.401  51.781  28.630  1.00 99.20      1SER6878
+ATOM   6550  C5    C T  12      81.766  52.038  28.473  1.00 99.25      1SER6879
+ATOM   6551  C6    C T  12      82.789  52.688  27.876  1.00100.58      1SER6880
+ATOM   6552  P     G T  13      84.825  57.771  29.315  1.00100.44      1SER6881
+ATOM   6553  OP1   G T  13      84.358  57.013  30.498  1.00100.63      1SER6882
+ATOM   6554  OP2   G T  13      85.700  58.953  29.528  1.00102.52      1SER6883
+ATOM   6555  O5'   G T  13      83.551  58.249  28.404  1.00 98.15      1SER6884
+ATOM   6556  C5'   G T  13      82.403  58.873  28.983  1.00 92.90      1SER6885
+ATOM   6557  C4'   G T  13      81.033  58.401  28.474  1.00 87.86      1SER6886
+ATOM   6558  O4'   G T  13      80.927  56.988  28.410  1.00 86.91      1SER6887
+ATOM   6559  C3'   G T  13      80.174  58.671  29.672  1.00 87.61      1SER6888
+ATOM   6560  O3'   G T  13      79.797  60.038  29.734  1.00 91.21      1SER6889
+ATOM   6561  C2'   G T  13      79.020  57.712  29.616  1.00 87.09      1SER6890
+ATOM   6562  O2'   G T  13      78.034  58.079  28.636  1.00 88.28      1SER6891
+ATOM   6563  C1'   G T  13      79.736  56.523  29.084  1.00 84.46      1SER6892
+ATOM   6564  N9    G T  13      80.151  55.418  29.995  1.00 80.87      1SER6893
+ATOM   6565  C8    G T  13      81.411  55.123  30.447  1.00 80.43      1SER6894
+ATOM   6566  N7    G T  13      81.498  54.050  31.188  1.00 81.10      1SER6895
+ATOM   6567  C5    G T  13      80.199  53.603  31.241  1.00 78.46      1SER6896
+ATOM   6568  C6    G T  13      79.687  52.465  31.906  1.00 75.70      1SER6897
+ATOM   6569  O6    G T  13      80.299  51.649  32.582  1.00 71.27      1SER6898
+ATOM   6570  N1    G T  13      78.327  52.361  31.715  1.00 73.47      1SER6899
+ATOM   6571  C2    G T  13      77.560  53.222  30.972  1.00 73.52      1SER6900
+ATOM   6572  N2    G T  13      76.269  52.967  30.890  1.00 72.79      1SER6901
+ATOM   6573  N3    G T  13      78.033  54.290  30.334  1.00 74.59      1SER6902
+ATOM   6574  C4    G T  13      79.366  54.427  30.516  1.00 78.79      1SER6903
+ATOM   6575  P     A T  14      79.456  60.575  31.197  1.00 93.87      1SER6904
+ATOM   6576  OP1   A T  14      80.195  59.727  32.163  1.00 97.15      1SER6905
+ATOM   6577  OP2   A T  14      79.621  62.051  31.243  1.00 93.64      1SER6906
+ATOM   6578  O5'   A T  14      77.879  60.219  31.284  1.00 92.37      1SER6907
+ATOM   6579  C5'   A T  14      76.939  60.882  30.442  1.00 87.95      1SER6908
+ATOM   6580  C4'   A T  14      75.561  60.285  30.520  1.00 83.51      1SER6909
+ATOM   6581  O4'   A T  14      75.551  58.896  30.181  1.00 82.13      1SER6910
+ATOM   6582  C3'   A T  14      74.999  60.330  31.905  1.00 82.26      1SER6911
+ATOM   6583  O3'   A T  14      74.486  61.620  32.191  1.00 84.76      1SER6912
+ATOM   6584  C2'   A T  14      73.927  59.278  31.879  1.00 83.34      1SER6913
+ATOM   6585  O2'   A T  14      72.713  59.716  31.243  1.00 83.38      1SER6914
+ATOM   6586  C1'   A T  14      74.562  58.244  30.999  1.00 80.40      1SER6915
+ATOM   6587  N9    A T  14      75.086  57.077  31.715  1.00 76.73      1SER6916
+ATOM   6588  C8    A T  14      76.367  56.719  32.005  1.00 76.69      1SER6917
+ATOM   6589  N7    A T  14      76.464  55.598  32.643  1.00 74.18      1SER6918
+ATOM   6590  C5    A T  14      75.161  55.189  32.791  1.00 74.94      1SER6919
+ATOM   6591  C6    A T  14      74.591  54.064  33.384  1.00 76.02      1SER6920
+ATOM   6592  N6    A T  14      75.298  53.106  33.974  1.00 77.39      1SER6921
+ATOM   6593  N1    A T  14      73.262  53.972  33.345  1.00 79.68      1SER6922
+ATOM   6594  C2    A T  14      72.551  54.924  32.755  1.00 80.17      1SER6923
+ATOM   6595  N3    A T  14      72.966  56.027  32.163  1.00 78.63      1SER6924
+ATOM   6596  C4    A T  14      74.313  56.089  32.224  1.00 75.93      1SER6925
+ATOM   6597  P     G T  15      74.799  62.275  33.608  1.00 88.80      1SER6926
+ATOM   6598  OP1   G T  15      76.208  61.984  33.954  1.00 90.32      1SER6927
+ATOM   6599  OP2   G T  15      74.319  63.674  33.616  1.00 91.90      1SER6928
+ATOM   6600  O5'   G T  15      73.868  61.434  34.599  1.00 90.36      1SER6929
+ATOM   6601  C5'   G T  15      72.441  61.441  34.591  1.00 88.44      1SER6930
+ATOM   6602  C4'   G T  15      71.951  60.184  35.319  1.00 89.85      1SER6931
+ATOM   6603  O4'   G T  15      72.545  58.963  34.803  1.00 88.71      1SER6932
+ATOM   6604  C3'   G T  15      72.357  60.154  36.791  1.00 91.51      1SER6933
+ATOM   6605  O3'   G T  15      71.573  60.933  37.722  1.00 97.76      1SER6934
+ATOM   6606  C2'   G T  15      72.266  58.692  37.143  1.00 88.47      1SER6935
+ATOM   6607  O2'   G T  15      70.908  58.379  37.462  1.00 87.27      1SER6936
+ATOM   6608  C1'   G T  15      72.762  58.006  35.856  1.00 86.23      1SER6937
+ATOM   6609  N9    G T  15      74.162  57.544  36.059  1.00 82.49      1SER6938
+ATOM   6610  C8    G T  15      75.317  58.226  35.782  1.00 78.59      1SER6939
+ATOM   6611  N7    G T  15      76.397  57.568  36.092  1.00 77.93      1SER6940
+ATOM   6612  C5    G T  15      75.940  56.355  36.615  1.00 77.89      1SER6941
+ATOM   6613  C6    G T  15      76.676  55.242  37.124  1.00 74.70      1SER6942
+ATOM   6614  O6    G T  15      77.893  55.110  37.217  1.00 71.39      1SER6943
+ATOM   6615  N1    G T  15      75.854  54.215  37.548  1.00 72.17      1SER6944
+ATOM   6616  C2    G T  15      74.480  54.239  37.503  1.00 71.73      1SER6945
+ATOM   6617  N2    G T  15      73.850  53.159  37.962  1.00 70.75      1SER6946
+ATOM   6618  N3    G T  15      73.774  55.284  37.042  1.00 76.41      1SER6947
+ATOM   6619  C4    G T  15      74.570  56.314  36.604  1.00 80.69      1SER6948
+ATOM   6620  P     U T  16      72.018  62.381  38.299  1.00 99.57      1SER6949
+ATOM   6621  OP1   U T  16      73.337  62.269  38.966  1.00 99.79      1SER6950
+ATOM   6622  OP2   U T  16      71.844  63.355  37.196  1.00100.80      1SER6951
+ATOM   6623  O5'   U T  16      70.896  62.632  39.419  1.00 98.62      1SER6952
+ATOM   6624  C5'   U T  16      71.094  63.540  40.494  1.00 96.60      1SER6953
+ATOM   6625  C4'   U T  16      71.243  62.781  41.809  1.00 97.43      1SER6954
+ATOM   6626  O4'   U T  16      72.505  62.197  41.669  1.00 96.43      1SER6955
+ATOM   6627  C3'   U T  16      71.501  63.802  42.897  1.00 97.59      1SER6956
+ATOM   6628  O3'   U T  16      70.315  64.412  43.482  1.00 98.50      1SER6957
+ATOM   6629  C2'   U T  16      72.461  63.139  43.845  1.00 97.07      1SER6958
+ATOM   6630  O2'   U T  16      71.710  62.274  44.724  1.00 92.85      1SER6959
+ATOM   6631  C1'   U T  16      73.349  62.355  42.854  1.00 97.67      1SER6960
+ATOM   6632  N1    U T  16      74.535  62.991  42.140  0.00 97.55      1SER6961
+ATOM   6633  C2    U T  16      74.916  64.324  42.238  0.00 98.17      1SER6962
+ATOM   6634  O2    U T  16      74.395  65.195  42.937  0.00 97.97      1SER6963
+ATOM   6635  N3    U T  16      76.008  64.697  41.463  0.00 97.15      1SER6964
+ATOM   6636  C4    U T  16      76.738  63.914  40.621  0.00 98.04      1SER6965
+ATOM   6637  O4    U T  16      77.688  64.371  39.994  0.00 97.90      1SER6966
+ATOM   6638  C5    U T  16      76.270  62.551  40.576  0.00 97.91      1SER6967
+ATOM   6639  C6    U T  16      75.229  62.143  41.320  0.00 97.76      1SER6968
+ATOM   6640  P     G T  18      68.799  63.829  43.492  1.00 98.22      1SER6969
+ATOM   6641  OP1   G T  18      68.073  64.836  44.289  1.00 99.06      1SER6970
+ATOM   6642  OP2   G T  18      68.333  63.571  42.101  1.00 97.20      1SER6971
+ATOM   6643  O5'   G T  18      68.765  62.418  44.357  1.00 91.99      1SER6972
+ATOM   6644  C5'   G T  18      68.994  61.094  43.816  1.00 75.37      1SER6973
+ATOM   6645  C4'   G T  18      68.371  59.876  44.528  1.00 61.42      1SER6974
+ATOM   6646  O4'   G T  18      68.802  59.513  45.848  1.00 55.57      1SER6975
+ATOM   6647  C3'   G T  18      66.867  59.818  44.551  1.00 57.82      1SER6976
+ATOM   6648  O3'   G T  18      66.569  58.487  44.174  1.00 60.56      1SER6977
+ATOM   6649  C2'   G T  18      66.534  59.991  46.000  1.00 51.72      1SER6978
+ATOM   6650  O2'   G T  18      65.270  59.551  46.483  1.00 52.44      1SER6979
+ATOM   6651  C1'   G T  18      67.631  59.257  46.628  1.00 46.91      1SER6980
+ATOM   6652  N9    G T  18      67.714  59.345  48.056  1.00 40.09      1SER6981
+ATOM   6653  C8    G T  18      67.576  60.429  48.824  1.00 39.36      1SER6982
+ATOM   6654  N7    G T  18      67.710  60.198  50.090  1.00 40.34      1SER6983
+ATOM   6655  C5    G T  18      67.984  58.847  50.164  1.00 39.96      1SER6984
+ATOM   6656  C6    G T  18      68.224  58.049  51.316  1.00 40.82      1SER6985
+ATOM   6657  O6    G T  18      68.255  58.404  52.505  1.00 41.82      1SER6986
+ATOM   6658  N1    G T  18      68.437  56.720  50.937  1.00 39.80      1SER6987
+ATOM   6659  C2    G T  18      68.411  56.236  49.643  1.00 36.04      1SER6988
+ATOM   6660  N2    G T  18      68.647  54.947  49.506  1.00 34.96      1SER6989
+ATOM   6661  N3    G T  18      68.185  56.982  48.558  1.00 38.75      1SER6990
+ATOM   6662  C4    G T  18      67.977  58.292  48.907  1.00 42.37      1SER6991
+ATOM   6663  P     G T  19      66.214  58.156  42.650  1.00 66.03      1SER6992
+ATOM   6664  OP1   G T  19      65.384  59.269  42.139  1.00 72.07      1SER6993
+ATOM   6665  OP2   G T  19      67.397  57.698  41.875  1.00 67.95      1SER6994
+ATOM   6666  O5'   G T  19      65.269  56.915  42.908  1.00 65.08      1SER6995
+ATOM   6667  C5'   G T  19      65.807  55.729  43.455  1.00 60.34      1SER6996
+ATOM   6668  C4'   G T  19      64.727  54.694  43.661  1.00 56.72      1SER6997
+ATOM   6669  O4'   G T  19      63.949  54.911  44.835  1.00 50.94      1SER6998
+ATOM   6670  C3'   G T  19      63.740  54.574  42.528  1.00 53.07      1SER6999
+ATOM   6671  O3'   G T  19      63.630  53.174  42.262  1.00 51.89      1SER7000
+ATOM   6672  C2'   G T  19      62.519  55.323  43.107  1.00 48.08      1SER7001
+ATOM   6673  O2'   G T  19      61.383  54.750  42.507  1.00 52.08      1SER7002
+ATOM   6674  C1'   G T  19      62.531  54.946  44.549  1.00 45.95      1SER7003
+ATOM   6675  N9    G T  19      62.071  55.921  45.565  1.00 39.96      1SER7004
+ATOM   6676  C8    G T  19      61.973  57.265  45.492  1.00 42.40      1SER7005
+ATOM   6677  N7    G T  19      61.635  57.836  46.631  1.00 37.47      1SER7006
+ATOM   6678  C5    G T  19      61.508  56.757  47.503  1.00 32.59      1SER7007
+ATOM   6679  C6    G T  19      61.175  56.753  48.879  1.00 31.90      1SER7008
+ATOM   6680  O6    G T  19      60.927  57.721  49.607  1.00 23.37      1SER7009
+ATOM   6681  N1    G T  19      61.163  55.464  49.397  1.00 31.48      1SER7010
+ATOM   6682  C2    G T  19      61.460  54.327  48.690  1.00 29.85      1SER7011
+ATOM   6683  N2    G T  19      61.420  53.181  49.334  1.00 26.10      1SER7012
+ATOM   6684  N3    G T  19      61.771  54.331  47.396  1.00 31.72      1SER7013
+ATOM   6685  C4    G T  19      61.774  55.584  46.867  1.00 34.54      1SER7014
+ATOM   6686  P     C T  20      64.398  52.587  40.981  1.00 51.57      1SER7015
+ATOM   6687  OP1   C T  20      65.571  53.428  40.675  1.00 54.29      1SER7016
+ATOM   6688  OP2   C T  20      64.554  51.127  41.150  1.00 53.96      1SER7017
+ATOM   6689  O5'   C T  20      63.224  52.890  39.914  1.00 60.62      1SER7018
+ATOM   6690  C5'   C T  20      62.759  51.981  38.886  1.00 74.31      1SER7019
+ATOM   6691  C4'   C T  20      62.478  52.677  37.519  1.00 83.79      1SER7020
+ATOM   6692  O4'   C T  20      61.596  53.804  37.768  1.00 84.84      1SER7021
+ATOM   6693  C3'   C T  20      63.804  53.251  36.989  1.00 89.23      1SER7022
+ATOM   6694  O3'   C T  20      63.866  53.324  35.541  1.00 93.39      1SER7023
+ATOM   6695  C2'   C T  20      63.765  54.669  37.534  1.00 90.57      1SER7024
+ATOM   6696  O2'   C T  20      64.700  55.495  36.804  1.00 93.91      1SER7025
+ATOM   6697  C1'   C T  20      62.250  55.069  37.437  1.00 86.41      1SER7026
+ATOM   6698  N1    C T  20      61.864  56.097  38.476  0.50 82.40      1SER7027
+ATOM   6699  C2    C T  20      62.542  57.321  38.600  0.50 80.25      1SER7028
+ATOM   6700  O2    C T  20      63.473  57.673  37.881  0.50 79.33      1SER7029
+ATOM   6701  N3    C T  20      62.140  58.181  39.571  0.50 79.05      1SER7030
+ATOM   6702  C4    C T  20      61.134  57.896  40.391  0.50 79.26      1SER7031
+ATOM   6703  N4    C T  20      60.800  58.791  41.315  0.50 78.91      1SER7032
+ATOM   6704  C5    C T  20      60.422  56.657  40.280  0.50 80.44      1SER7033
+ATOM   6705  C6    C T  20      60.826  55.807  39.318  0.50 82.06      1SER7034
+ATOM   6749  P     A T  21      69.610  45.321  34.212  1.00 64.68      1SER7078
+ATOM   6750  OP1   A T  21      70.153  44.337  33.240  1.00 62.81      1SER7079
+ATOM   6751  OP2   A T  21      68.250  45.132  34.773  1.00 64.74      1SER7080
+ATOM   6752  O5'   A T  21      69.681  46.753  33.497  1.00 61.39      1SER7081
+ATOM   6753  C5'   A T  21      68.787  47.823  33.790  1.00 58.63      1SER7082
+ATOM   6754  C4'   A T  21      69.586  49.087  33.992  1.00 60.92      1SER7083
+ATOM   6755  O4'   A T  21      70.464  48.982  35.116  1.00 60.26      1SER7084
+ATOM   6756  C3'   A T  21      70.545  49.309  32.850  1.00 64.13      1SER7085
+ATOM   6757  O3'   A T  21      69.941  49.809  31.661  1.00 73.09      1SER7086
+ATOM   6758  C2'   A T  21      71.620  50.191  33.442  1.00 60.57      1SER7087
+ATOM   6759  O2'   A T  21      71.187  51.549  33.449  1.00 58.97      1SER7088
+ATOM   6760  C1'   A T  21      71.716  49.622  34.861  1.00 57.62      1SER7089
+ATOM   6761  N9    A T  21      72.878  48.702  34.939  1.00 51.26      1SER7090
+ATOM   6762  C8    A T  21      72.993  47.366  34.620  1.00 44.84      1SER7091
+ATOM   6763  N7    A T  21      74.185  46.875  34.802  1.00 44.78      1SER7092
+ATOM   6764  C5    A T  21      74.916  47.969  35.288  1.00 49.05      1SER7093
+ATOM   6765  C6    A T  21      76.266  48.133  35.688  1.00 48.06      1SER7094
+ATOM   6766  N6    A T  21      77.171  47.164  35.662  1.00 50.67      1SER7095
+ATOM   6767  N1    A T  21      76.650  49.341  36.106  1.00 46.35      1SER7096
+ATOM   6768  C2    A T  21      75.769  50.328  36.093  1.00 49.89      1SER7097
+ATOM   6769  N3    A T  21      74.487  50.316  35.788  1.00 50.01      1SER7098
+ATOM   6770  C4    A T  21      74.121  49.079  35.375  1.00 49.35      1SER7099
+ATOM   6771  P     A T  22      70.526  49.442  30.209  1.00 80.10      1SER7100
+ATOM   6772  OP1   A T  22      71.968  49.122  30.379  1.00 83.48      1SER7101
+ATOM   6773  OP2   A T  22      69.642  48.463  29.536  1.00 80.68      1SER7102
+ATOM   6774  O5'   A T  22      70.371  50.888  29.494  1.00 88.75      1SER7103
+ATOM   6775  C5'   A T  22      69.088  51.548  29.346  1.00 92.71      1SER7104
+ATOM   6776  C4'   A T  22      69.138  53.028  28.879  1.00 95.02      1SER7105
+ATOM   6777  O4'   A T  22      69.977  53.854  29.715  1.00 97.21      1SER7106
+ATOM   6778  C3'   A T  22      69.710  53.230  27.485  1.00 96.86      1SER7107
+ATOM   6779  O3'   A T  22      68.776  52.940  26.436  1.00 98.23      1SER7108
+ATOM   6780  C2'   A T  22      70.096  54.691  27.475  1.00 99.09      1SER7109
+ATOM   6781  O2'   A T  22      69.011  55.561  27.135  1.00 99.06      1SER7110
+ATOM   6782  C1'   A T  22      70.594  54.893  28.906  1.00100.12      1SER7111
+ATOM   6783  N9    A T  22      72.076  54.857  28.940  1.00101.73      1SER7112
+ATOM   6784  C8    A T  22      72.896  53.879  29.444  1.00101.59      1SER7113
+ATOM   6785  N7    A T  22      74.166  54.140  29.326  1.00102.01      1SER7114
+ATOM   6786  C5    A T  22      74.198  55.373  28.697  1.00100.85      1SER7115
+ATOM   6787  C6    A T  22      75.263  56.183  28.292  1.00100.10      1SER7116
+ATOM   6788  N6    A T  22      76.531  55.842  28.476  1.00 95.52      1SER7117
+ATOM   6789  N1    A T  22      74.954  57.340  27.693  1.00102.22      1SER7118
+ATOM   6790  C2    A T  22      73.674  57.666  27.518  1.00102.20      1SER7119
+ATOM   6791  N3    A T  22      72.582  56.994  27.851  1.00100.24      1SER7120
+ATOM   6792  C4    A T  22      72.929  55.827  28.449  1.00101.23      1SER7121
+ATOM   6793  P     G T  23      69.233  52.177  25.099  1.00 99.04      1SER7122
+ATOM   6794  OP1   G T  23      70.098  51.038  25.481  1.00100.21      1SER7123
+ATOM   6795  OP2   G T  23      68.022  51.919  24.283  1.00100.80      1SER7124
+ATOM   6796  O5'   G T  23      70.146  53.267  24.350  1.00 97.59      1SER7125
+ATOM   6797  C5'   G T  23      69.684  54.398  23.592  1.00 97.95      1SER7126
+ATOM   6798  C4'   G T  23      70.873  55.278  23.213  1.00 98.20      1SER7127
+ATOM   6799  O4'   G T  23      71.565  55.556  24.452  1.00 98.33      1SER7128
+ATOM   6800  C3'   G T  23      71.923  54.505  22.387  1.00 98.71      1SER7129
+ATOM   6801  O3'   G T  23      71.796  54.388  20.948  1.00 93.75      1SER7130
+ATOM   6802  C2'   G T  23      73.210  55.192  22.747  1.00101.69      1SER7131
+ATOM   6803  O2'   G T  23      73.339  56.346  21.888  1.00100.02      1SER7132
+ATOM   6804  C1'   G T  23      73.005  55.522  24.254  1.00101.04      1SER7133
+ATOM   6805  N9    G T  23      73.642  54.444  25.105  1.00102.77      1SER7134
+ATOM   6806  C8    G T  23      73.048  53.366  25.724  1.00103.46      1SER7135
+ATOM   6807  N7    G T  23      73.863  52.592  26.385  1.00104.36      1SER7136
+ATOM   6808  C5    G T  23      75.108  53.170  26.179  1.00104.79      1SER7137
+ATOM   6809  C6    G T  23      76.389  52.765  26.660  1.00105.71      1SER7138
+ATOM   6810  O6    G T  23      76.686  51.800  27.370  1.00105.46      1SER7139
+ATOM   6811  N1    G T  23      77.383  53.632  26.227  1.00106.57      1SER7140
+ATOM   6812  C2    G T  23      77.183  54.745  25.438  1.00105.22      1SER7141
+ATOM   6813  N2    G T  23      78.251  55.476  25.111  1.00106.91      1SER7142
+ATOM   6814  N3    G T  23      75.983  55.123  24.995  1.00103.95      1SER7143
+ATOM   6815  C4    G T  23      74.989  54.296  25.397  1.00103.10      1SER7144
+ATOM   6816  P     G T  24      72.494  53.148  20.162  0.50 91.10      1SER7145
+ATOM   6817  OP1   G T  24      72.494  51.965  21.051  0.50 91.98      1SER7146
+ATOM   6818  OP2   G T  24      71.840  53.052  18.839  0.50 92.50      1SER7147
+ATOM   6819  O5'   G T  24      74.026  53.569  19.938  0.50 89.95      1SER7148
+ATOM   6820  C5'   G T  24      74.500  54.278  18.783  0.50 87.75      1SER7149
+ATOM   6821  C4'   G T  24      76.020  54.153  18.643  0.50 85.75      1SER7150
+ATOM   6822  O4'   G T  24      76.619  54.485  19.910  0.50 82.23      1SER7151
+ATOM   6823  C3'   G T  24      76.481  52.720  18.422  0.50 86.99      1SER7152
+ATOM   6824  O3'   G T  24      76.230  52.120  17.127  0.50 92.57      1SER7153
+ATOM   6825  C2'   G T  24      77.898  52.720  18.973  0.50 83.44      1SER7154
+ATOM   6826  O2'   G T  24      78.838  53.313  18.071  0.50 82.47      1SER7155
+ATOM   6827  C1'   G T  24      77.770  53.648  20.180  0.50 78.35      1SER7156
+ATOM   6828  N9    G T  24      77.554  52.822  21.407  0.00 70.77      1SER7157
+ATOM   6829  C8    G T  24      76.369  52.506  22.029  0.00 68.10      1SER7158
+ATOM   6830  N7    G T  24      76.495  51.759  23.087  0.00 65.72      1SER7159
+ATOM   6831  C5    G T  24      77.863  51.546  23.185  0.00 64.61      1SER7160
+ATOM   6832  C6    G T  24      78.599  50.799  24.150  0.00 62.39      1SER7161
+ATOM   6833  O6    G T  24      78.184  50.169  25.122  0.00 61.41      1SER7162
+ATOM   6834  N1    G T  24      79.956  50.839  23.896  0.00 61.44      1SER7163
+ATOM   6835  C2    G T  24      80.546  51.510  22.848  0.00 61.45      1SER7164
+ATOM   6836  N2    G T  24      81.872  51.435  22.756  0.00 60.42      1SER7165
+ATOM   6837  N3    G T  24      79.862  52.212  21.936  0.00 63.57      1SER7166
+ATOM   6838  C4    G T  24      78.523  52.189  22.164  0.00 66.22      1SER7167
+ATOM   6839  P     G T  25      77.177  52.037  15.810  0.50 97.01      1SER7168
+ATOM   6840  OP1   G T  25      76.357  51.418  14.738  0.50 97.75      1SER7169
+ATOM   6841  OP2   G T  25      77.729  53.397  15.577  0.50 97.18      1SER7170
+ATOM   6842  O5'   G T  25      78.390  50.989  16.137  0.50 96.46      1SER7171
+ATOM   6843  C5'   G T  25      79.651  51.099  15.437  0.50 98.24      1SER7172
+ATOM   6844  C4'   G T  25      80.893  50.754  16.280  0.50 97.65      1SER7173
+ATOM   6845  O4'   G T  25      80.685  51.098  17.657  0.50 97.94      1SER7174
+ATOM   6846  C3'   G T  25      81.262  49.295  16.336  0.50 98.15      1SER7175
+ATOM   6847  O3'   G T  25      82.027  48.913  15.199  0.50100.89      1SER7176
+ATOM   6848  C2'   G T  25      82.096  49.193  17.584  0.50 97.48      1SER7177
+ATOM   6849  O2'   G T  25      83.433  49.639  17.319  0.50 99.20      1SER7178
+ATOM   6850  C1'   G T  25      81.395  50.176  18.517  0.50 97.33      1SER7179
+ATOM   6851  N9    G T  25      80.465  49.494  19.466  0.00 95.87      1SER7180
+ATOM   6852  C8    G T  25      79.095  49.429  19.428  0.00 95.30      1SER7181
+ATOM   6853  N7    G T  25      78.555  48.763  20.409  0.00 94.79      1SER7182
+ATOM   6854  C5    G T  25      79.641  48.346  21.163  0.00 94.64      1SER7183
+ATOM   6855  C6    G T  25      79.671  47.574  22.360  0.00 94.51      1SER7184
+ATOM   6856  O6    G T  25      78.731  47.096  22.995  0.00 93.64      1SER7185
+ATOM   6857  N1    G T  25      80.964  47.366  22.797  0.00 93.71      1SER7186
+ATOM   6858  C2    G T  25      82.098  47.839  22.172  0.00 93.79      1SER7187
+ATOM   6859  N2    G T  25      83.267  47.547  22.737  0.00 93.75      1SER7188
+ATOM   6860  N3    G T  25      82.076  48.569  21.050  0.00 94.25      1SER7189
+ATOM   6861  C4    G T  25      80.816  48.782  20.595  0.00 94.98      1SER7190
+ATOM   6862  P     A T  26      81.505  47.741  14.243  0.50104.47      1SER7191
+ATOM   6863  OP1   A T  26      80.027  47.674  14.363  0.50104.98      1SER7192
+ATOM   6864  OP2   A T  26      82.114  47.969  12.908  0.50104.49      1SER7193
+ATOM   6865  O5'   A T  26      82.107  46.358  14.873  0.50102.24      1SER7194
+ATOM   6866  C5'   A T  26      83.486  45.934  14.789  0.50 94.93      1SER7195
+ATOM   6867  C4'   A T  26      83.953  45.262  16.086  0.50 86.52      1SER7196
+ATOM   6868  O4'   A T  26      83.504  46.075  17.182  0.50 92.25      1SER7197
+ATOM   6869  C1'   A T  26      83.153  45.258  18.324  0.50 92.31      1SER7198
+ATOM   6870  P     G T  42      65.208  43.961  17.919  0.50 37.24      1SER7199
+ATOM   6871  OP1   G T  42      66.186  44.928  17.366  0.50 35.64      1SER7200
+ATOM   6872  OP2   G T  42      64.095  44.444  18.780  0.50 36.26      1SER7201
+ATOM   6873  O5'   G T  42      66.023  42.809  18.709  0.50 34.92      1SER7202
+ATOM   6874  C5'   G T  42      65.204  41.845  19.368  0.50 32.53      1SER7203
+ATOM   6875  C4'   G T  42      65.960  40.579  19.656  0.50 30.86      1SER7204
+ATOM   6876  O4'   G T  42      66.683  40.018  18.550  0.50 27.09      1SER7205
+ATOM   6877  C3'   G T  42      66.974  40.726  20.746  0.50 29.05      1SER7206
+ATOM   6878  O3'   G T  42      66.380  40.831  22.051  0.50 30.66      1SER7207
+ATOM   6879  C2'   G T  42      67.806  39.496  20.542  0.50 29.87      1SER7208
+ATOM   6880  O2'   G T  42      67.117  38.376  21.114  0.50 30.67      1SER7209
+ATOM   6881  C1'   G T  42      67.846  39.330  19.041  0.50 28.44      1SER7210
+ATOM   6882  N9    G T  42      69.107  39.907  18.564  0.00 28.11      1SER7211
+ATOM   6883  C8    G T  42      69.296  41.119  17.962  0.00 27.51      1SER7212
+ATOM   6884  N7    G T  42      70.535  41.363  17.654  0.00 28.38      1SER7213
+ATOM   6885  C5    G T  42      71.216  40.235  18.099  0.00 28.99      1SER7214
+ATOM   6886  C6    G T  42      72.595  39.945  18.041  0.00 29.59      1SER7215
+ATOM   6887  O6    G T  42      73.488  40.644  17.570  0.00 31.08      1SER7216
+ATOM   6888  N1    G T  42      72.889  38.709  18.592  0.00 29.93      1SER7217
+ATOM   6889  C2    G T  42      71.967  37.846  19.147  0.00 29.96      1SER7218
+ATOM   6890  N2    G T  42      72.428  36.692  19.630  0.00 29.64      1SER7219
+ATOM   6891  N3    G T  42      70.658  38.119  19.199  0.00 28.58      1SER7220
+ATOM   6892  C4    G T  42      70.355  39.331  18.660  0.00 28.30      1SER7221
+ATOM   6893  P     G T  43      67.003  41.764  23.231  0.50 36.64      1SER7222
+ATOM   6894  OP1   G T  43      67.419  43.075  22.669  0.50 34.15      1SER7223
+ATOM   6895  OP2   G T  43      66.048  41.726  24.369  0.50 35.27      1SER7224
+ATOM   6896  O5'   G T  43      68.301  40.967  23.702  0.50 31.57      1SER7225
+ATOM   6897  C5'   G T  43      68.056  39.720  24.365  0.50 32.85      1SER7226
+ATOM   6898  C4'   G T  43      69.204  38.780  24.120  0.50 35.98      1SER7227
+ATOM   6899  O4'   G T  43      69.614  38.800  22.735  0.50 33.94      1SER7228
+ATOM   6900  C3'   G T  43      70.432  39.230  24.849  0.50 39.91      1SER7229
+ATOM   6901  O3'   G T  43      70.421  39.001  26.266  0.50 53.37      1SER7230
+ATOM   6902  C2'   G T  43      71.547  38.589  24.058  0.50 37.15      1SER7231
+ATOM   6903  O2'   G T  43      71.678  37.201  24.407  0.50 39.01      1SER7232
+ATOM   6904  C1'   G T  43      71.042  38.689  22.627  0.50 32.08      1SER7233
+ATOM   6905  N9    G T  43      71.656  39.888  22.036  0.00 29.22      1SER7234
+ATOM   6906  C8    G T  43      71.069  41.038  21.573  0.00 27.11      1SER7235
+ATOM   6907  N7    G T  43      71.925  41.912  21.117  0.00 27.38      1SER7236
+ATOM   6908  C5    G T  43      73.161  41.304  21.316  0.00 27.65      1SER7237
+ATOM   6909  C6    G T  43      74.468  41.765  21.026  0.00 27.80      1SER7238
+ATOM   6910  O6    G T  43      74.810  42.834  20.527  0.00 28.11      1SER7239
+ATOM   6911  N1    G T  43      75.435  40.838  21.385  0.00 28.66      1SER7240
+ATOM   6912  C2    G T  43      75.185  39.607  21.948  0.00 27.80      1SER7241
+ATOM   6913  N2    G T  43      76.216  38.816  22.240  0.00 28.41      1SER7242
+ATOM   6914  N3    G T  43      73.961  39.175  22.216  0.00 27.62      1SER7243
+ATOM   6915  C4    G T  43      73.003  40.069  21.878  0.00 27.90      1SER7244
+ATOM   6916  P     U T  44      71.094  40.075  27.272  0.50 60.87      1SER7245
+ATOM   6917  OP1   U T  44      70.734  41.449  26.849  0.50 61.98      1SER7246
+ATOM   6918  OP2   U T  44      70.791  39.645  28.654  0.50 61.89      1SER7247
+ATOM   6919  O5'   U T  44      72.669  39.853  26.976  0.50 63.43      1SER7248
+ATOM   6920  C5'   U T  44      73.219  38.523  27.004  0.50 72.06      1SER7249
+ATOM   6921  C4'   U T  44      74.675  38.457  26.590  0.50 76.26      1SER7250
+ATOM   6922  O4'   U T  44      75.007  39.014  25.314  0.50 74.51      1SER7251
+ATOM   6923  C3'   U T  44      75.356  39.351  27.548  0.50 79.22      1SER7252
+ATOM   6924  O3'   U T  44      75.397  38.609  28.747  0.50 82.77      1SER7253
+ATOM   6925  C2'   U T  44      76.656  39.708  26.904  0.50 78.45      1SER7254
+ATOM   6926  O2'   U T  44      77.614  38.664  27.123  0.50 82.21      1SER7255
+ATOM   6927  C1'   U T  44      76.216  39.801  25.444  0.50 76.56      1SER7256
+ATOM   6928  N1    U T  44      75.986  41.176  24.908  0.50 74.96      1SER7257
+ATOM   6929  C2    U T  44      77.074  41.873  24.396  0.50 73.98      1SER7258
+ATOM   6930  O2    U T  44      78.220  41.432  24.374  0.50 76.68      1SER7259
+ATOM   6931  N3    U T  44      76.807  43.140  23.892  0.50 70.08      1SER7260
+ATOM   6932  C4    U T  44      75.574  43.762  23.854  0.50 68.28      1SER7261
+ATOM   6933  O4    U T  44      75.452  44.889  23.386  0.50 66.32      1SER7262
+ATOM   6934  C5    U T  44      74.505  42.971  24.404  0.50 69.52      1SER7263
+ATOM   6935  C6    U T  44      74.734  41.736  24.901  0.50 72.80      1SER7264
+ATOM   6936  P     A T  45      75.217  39.410  30.098  1.00 87.12      1SER7265
+ATOM   6937  OP1   A T  45      74.955  40.844  29.796  1.00 85.88      1SER7266
+ATOM   6938  OP2   A T  45      74.321  38.634  31.005  1.00 81.98      1SER7267
+ATOM   6939  O5'   A T  45      76.774  39.251  30.485  1.00 87.47      1SER7268
+ATOM   6940  C5'   A T  45      77.215  38.061  31.133  1.00 77.28      1SER7269
+ATOM   6941  C4'   A T  45      78.113  38.429  32.290  1.00 67.42      1SER7270
+ATOM   6942  O4'   A T  45      77.838  39.690  32.946  1.00 57.69      1SER7271
+ATOM   6943  C3'   A T  45      77.950  37.438  33.400  1.00 64.43      1SER7272
+ATOM   6944  O3'   A T  45      78.135  36.033  33.170  1.00 65.97      1SER7273
+ATOM   6945  C2'   A T  45      78.514  38.146  34.592  1.00 60.56      1SER7274
+ATOM   6946  O2'   A T  45      79.959  38.114  34.425  1.00 55.01      1SER7275
+ATOM   6947  C1'   A T  45      78.059  39.594  34.365  1.00 53.91      1SER7276
+ATOM   6948  N9    A T  45      76.823  39.975  35.169  1.00 46.22      1SER7277
+ATOM   6949  C8    A T  45      75.527  40.065  34.732  1.00 46.14      1SER7278
+ATOM   6950  N7    A T  45      74.663  40.440  35.637  1.00 41.65      1SER7279
+ATOM   6951  C5    A T  45      75.427  40.621  36.767  1.00 33.60      1SER7280
+ATOM   6952  C6    A T  45      75.080  41.002  38.061  1.00 34.73      1SER7281
+ATOM   6953  N6    A T  45      73.827  41.281  38.409  1.00 37.37      1SER7282
+ATOM   6954  N1    A T  45      76.058  41.086  38.966  1.00 29.59      1SER7283
+ATOM   6955  C2    A T  45      77.289  40.799  38.579  1.00 32.60      1SER7284
+ATOM   6956  N3    A T  45      77.742  40.413  37.407  1.00 33.34      1SER7285
+ATOM   6957  C4    A T  45      76.737  40.346  36.511  1.00 37.78      1SER7286
+ATOM   6958  P     G T  46      79.341  35.129  33.681  1.00 65.16      1SER7287
+ATOM   6959  OP1   G T  46      79.087  33.735  33.226  1.00 65.64      1SER7288
+ATOM   6960  OP2   G T  46      80.569  35.856  33.256  1.00 64.10      1SER7289
+ATOM   6961  O5'   G T  46      79.287  35.075  35.314  1.00 56.35      1SER7290
+ATOM   6962  C5'   G T  46      80.540  34.730  35.930  1.00 37.60      1SER7291
+ATOM   6963  C4'   G T  46      80.844  35.504  37.177  1.00 30.13      1SER7292
+ATOM   6964  O4'   G T  46      80.243  36.789  37.220  1.00 26.63      1SER7293
+ATOM   6965  C3'   G T  46      80.286  34.845  38.367  1.00 27.52      1SER7294
+ATOM   6966  O3'   G T  46      81.025  33.732  38.736  1.00 21.09      1SER7295
+ATOM   6967  C2'   G T  46      80.221  35.911  39.399  1.00 28.28      1SER7296
+ATOM   6968  O2'   G T  46      81.522  36.158  39.927  1.00 29.78      1SER7297
+ATOM   6969  C1'   G T  46      79.831  37.099  38.570  1.00 28.12      1SER7298
+ATOM   6970  N9    G T  46      78.352  37.264  38.729  1.00 24.01      1SER7299
+ATOM   6971  C8    G T  46      77.340  37.003  37.840  1.00 23.57      1SER7300
+ATOM   6972  N7    G T  46      76.144  37.272  38.286  1.00 23.33      1SER7301
+ATOM   6973  C5    G T  46      76.375  37.695  39.589  1.00 21.52      1SER7302
+ATOM   6974  C6    G T  46      75.451  38.124  40.576  1.00 20.87      1SER7303
+ATOM   6975  O6    G T  46      74.224  38.186  40.496  1.00 26.14      1SER7304
+ATOM   6976  N1    G T  46      76.087  38.490  41.757  1.00 19.86      1SER7305
+ATOM   6977  C2    G T  46      77.454  38.458  41.963  1.00 20.58      1SER7306
+ATOM   6978  N2    G T  46      77.916  38.850  43.158  1.00 19.93      1SER7307
+ATOM   6979  N3    G T  46      78.325  38.075  41.021  1.00 18.78      1SER7308
+ATOM   6980  C4    G T  46      77.718  37.700  39.867  1.00 21.56      1SER7309
+ATOM   6981  P     G T  47      80.210  32.371  38.815  1.00 26.97      1SER7310
+ATOM   6982  OP1   G T  47      78.970  32.414  38.010  1.00 30.48      1SER7311
+ATOM   6983  OP2   G T  47      81.182  31.271  38.594  1.00 32.81      1SER7312
+ATOM   6984  O5'   G T  47      79.812  32.353  40.334  1.00 26.49      1SER7313
+ATOM   6985  C5'   G T  47      80.905  32.323  41.236  1.00 23.37      1SER7314
+ATOM   6986  C4'   G T  47      80.508  33.064  42.436  1.00 21.24      1SER7315
+ATOM   6987  O4'   G T  47      79.944  34.340  42.143  1.00 24.25      1SER7316
+ATOM   6988  C3'   G T  47      79.429  32.362  43.179  1.00 22.12      1SER7317
+ATOM   6989  O3'   G T  47      79.848  31.203  43.896  1.00 24.36      1SER7318
+ATOM   6990  C2'   G T  47      78.839  33.454  43.991  1.00 23.41      1SER7319
+ATOM   6991  O2'   G T  47      79.800  33.682  45.024  1.00 29.92      1SER7320
+ATOM   6992  C1'   G T  47      78.892  34.652  43.076  1.00 21.40      1SER7321
+ATOM   6993  N9    G T  47      77.556  34.767  42.451  1.00 20.05      1SER7322
+ATOM   6994  C8    G T  47      77.161  34.476  41.154  1.00 25.10      1SER7323
+ATOM   6995  N7    G T  47      75.884  34.672  40.917  1.00 21.87      1SER7324
+ATOM   6996  C5    G T  47      75.410  35.121  42.160  1.00 18.62      1SER7325
+ATOM   6997  C6    G T  47      74.111  35.507  42.539  1.00 14.09      1SER7326
+ATOM   6998  O6    G T  47      73.086  35.543  41.870  1.00 19.33      1SER7327
+ATOM   6999  N1    G T  47      74.050  35.893  43.846  1.00 13.44      1SER7328
+ATOM   7000  C2    G T  47      75.108  35.932  44.713  1.00 12.57      1SER7329
+ATOM   7001  N2    G T  47      74.855  36.357  45.968  1.00  6.86      1SER7330
+ATOM   7002  N3    G T  47      76.339  35.583  44.355  1.00 12.07      1SER7331
+ATOM   7003  C4    G T  47      76.418  35.186  43.082  1.00 14.70      1SER7332
+ATOM   7236  P     C T  48      78.307  47.764  44.334  1.00 30.78      1SER7565
+ATOM   7237  OP1   C T  48      76.826  47.564  44.341  1.00 34.51      1SER7566
+ATOM   7238  OP2   C T  48      78.915  48.839  45.165  1.00 22.22      1SER7567
+ATOM   7239  O5'   C T  48      78.658  47.964  42.771  1.00 29.94      1SER7568
+ATOM   7240  C5'   C T  48      79.877  47.633  42.130  1.00 32.30      1SER7569
+ATOM   7241  C4'   C T  48      80.222  48.646  41.054  1.00 32.96      1SER7570
+ATOM   7242  O4'   C T  48      79.156  48.762  40.106  1.00 36.47      1SER7571
+ATOM   7243  C3'   C T  48      80.375  49.992  41.689  1.00 33.50      1SER7572
+ATOM   7244  O3'   C T  48      81.402  50.546  40.880  1.00 32.65      1SER7573
+ATOM   7245  C2'   C T  48      78.999  50.614  41.474  1.00 33.95      1SER7574
+ATOM   7246  O2'   C T  48      79.131  52.036  41.523  1.00 38.55      1SER7575
+ATOM   7247  C1'   C T  48      78.611  50.101  40.104  1.00 36.89      1SER7576
+ATOM   7248  N1    C T  48      77.119  49.970  39.829  1.00 42.13      1SER7577
+ATOM   7249  C2    C T  48      76.451  50.995  39.177  1.00 43.21      1SER7578
+ATOM   7250  O2    C T  48      77.022  52.019  38.824  1.00 50.71      1SER7579
+ATOM   7251  N3    C T  48      75.114  50.865  38.911  1.00 40.75      1SER7580
+ATOM   7252  C4    C T  48      74.433  49.765  39.247  1.00 38.83      1SER7581
+ATOM   7253  N4    C T  48      73.133  49.690  38.943  1.00 38.87      1SER7582
+ATOM   7254  C5    C T  48      75.092  48.690  39.924  1.00 36.16      1SER7583
+ATOM   7255  C6    C T  48      76.410  48.839  40.195  1.00 40.41      1SER7584
+ATOM   7256  P     G T  49      82.479  51.618  41.390  1.00 26.62      1SER7585
+ATOM   7257  OP1   G T  49      82.727  52.537  40.258  1.00 31.74      1SER7586
+ATOM   7258  OP2   G T  49      82.034  52.146  42.700  1.00 27.51      1SER7587
+ATOM   7259  O5'   G T  49      83.809  50.827  41.709  1.00 32.10      1SER7588
+ATOM   7260  C5'   G T  49      84.433  49.887  40.825  1.00 33.15      1SER7589
+ATOM   7261  C4'   G T  49      85.738  49.373  41.442  1.00 31.69      1SER7590
+ATOM   7262  O4'   G T  49      86.670  50.443  41.663  1.00 26.55      1SER7591
+ATOM   7263  C3'   G T  49      85.463  48.876  42.851  1.00 34.63      1SER7592
+ATOM   7264  O3'   G T  49      84.968  47.516  42.865  1.00 38.21      1SER7593
+ATOM   7265  C2'   G T  49      86.805  49.006  43.518  1.00 31.35      1SER7594
+ATOM   7266  O2'   G T  49      87.670  47.942  43.081  1.00 44.11      1SER7595
+ATOM   7267  C1'   G T  49      87.344  50.265  42.913  1.00 22.40      1SER7596
+ATOM   7268  N9    G T  49      87.151  51.444  43.749  1.00 17.16      1SER7597
+ATOM   7269  C8    G T  49      86.438  52.565  43.436  1.00 22.93      1SER7598
+ATOM   7270  N7    G T  49      86.448  53.491  44.358  1.00 22.08      1SER7599
+ATOM   7271  C5    G T  49      87.238  52.953  45.343  1.00 13.49      1SER7600
+ATOM   7272  C6    G T  49      87.609  53.531  46.561  1.00 15.04      1SER7601
+ATOM   7273  O6    G T  49      87.289  54.634  46.993  1.00 23.10      1SER7602
+ATOM   7274  N1    G T  49      88.426  52.679  47.288  1.00 20.79      1SER7603
+ATOM   7275  C2    G T  49      88.835  51.424  46.864  1.00 17.31      1SER7604
+ATOM   7276  N2    G T  49      89.602  50.723  47.687  1.00  6.77      1SER7605
+ATOM   7277  N3    G T  49      88.493  50.891  45.688  1.00 14.16      1SER7606
+ATOM   7278  C4    G T  49      87.694  51.710  44.979  1.00 14.80      1SER7607
+ATOM   7279  P     C T  50      84.247  46.803  44.126  1.00 37.58      1SER7608
+ATOM   7280  OP1   C T  50      83.042  47.595  44.486  1.00 40.15      1SER7609
+ATOM   7281  OP2   C T  50      84.097  45.401  43.674  1.00 41.35      1SER7610
+ATOM   7282  O5'   C T  50      85.239  46.857  45.448  1.00 28.69      1SER7611
+ATOM   7283  C5'   C T  50      86.083  45.768  45.852  1.00 30.97      1SER7612
+ATOM   7284  C4'   C T  50      86.870  45.982  47.163  1.00 30.43      1SER7613
+ATOM   7285  O4'   C T  50      87.579  47.217  47.124  1.00 27.79      1SER7614
+ATOM   7286  C3'   C T  50      85.983  46.146  48.376  1.00 37.20      1SER7615
+ATOM   7287  O3'   C T  50      85.456  44.912  48.887  1.00 45.60      1SER7616
+ATOM   7288  C2'   C T  50      86.858  46.912  49.363  1.00 33.68      1SER7617
+ATOM   7289  O2'   C T  50      87.763  46.148  50.191  1.00 41.06      1SER7618
+ATOM   7290  C1'   C T  50      87.608  47.840  48.426  1.00 24.28      1SER7619
+ATOM   7291  N1    C T  50      86.860  49.123  48.400  1.00 17.17      1SER7620
+ATOM   7292  C2    C T  50      87.044  50.014  49.454  1.00 19.24      1SER7621
+ATOM   7293  O2    C T  50      87.817  49.806  50.385  1.00 25.06      1SER7622
+ATOM   7294  N3    C T  50      86.350  51.170  49.463  1.00 16.55      1SER7623
+ATOM   7295  C4    C T  50      85.506  51.445  48.480  1.00 17.35      1SER7624
+ATOM   7296  N4    C T  50      84.879  52.609  48.546  1.00 20.89      1SER7625
+ATOM   7297  C5    C T  50      85.269  50.541  47.386  1.00 11.56      1SER7626
+ATOM   7298  C6    C T  50      85.966  49.400  47.399  1.00 10.97      1SER7627
+ATOM   7299  P     G T  51      84.016  44.681  49.599  1.00 46.24      1SER7628
+ATOM   7300  OP1   G T  51      82.894  45.077  48.711  1.00 45.55      1SER7629
+ATOM   7301  OP2   G T  51      84.067  43.280  50.073  1.00 52.78      1SER7630
+ATOM   7302  O5'   G T  51      84.070  45.625  50.894  1.00 41.16      1SER7631
+ATOM   7303  C5'   G T  51      84.765  45.018  51.987  1.00 43.53      1SER7632
+ATOM   7304  C4'   G T  51      85.060  45.958  53.105  1.00 43.52      1SER7633
+ATOM   7305  O4'   G T  51      85.641  47.142  52.551  1.00 40.04      1SER7634
+ATOM   7306  C3'   G T  51      83.840  46.465  53.833  1.00 42.81      1SER7635
+ATOM   7307  O3'   G T  51      83.184  45.532  54.730  1.00 47.02      1SER7636
+ATOM   7308  C2'   G T  51      84.312  47.776  54.411  1.00 38.14      1SER7637
+ATOM   7309  O2'   G T  51      85.194  47.648  55.534  1.00 42.02      1SER7638
+ATOM   7310  C1'   G T  51      85.200  48.269  53.324  1.00 34.66      1SER7639
+ATOM   7311  N9    G T  51      84.495  49.278  52.527  1.00 25.32      1SER7640
+ATOM   7312  C8    G T  51      83.927  49.218  51.277  1.00 21.90      1SER7641
+ATOM   7313  N7    G T  51      83.396  50.339  50.881  1.00 17.50      1SER7642
+ATOM   7314  C5    G T  51      83.635  51.199  51.961  1.00 21.55      1SER7643
+ATOM   7315  C6    G T  51      83.297  52.570  52.146  1.00 18.91      1SER7644
+ATOM   7316  O6    G T  51      82.702  53.314  51.379  1.00 17.45      1SER7645
+ATOM   7317  N1    G T  51      83.710  53.053  53.372  1.00 16.23      1SER7646
+ATOM   7318  C2    G T  51      84.371  52.307  54.324  1.00 21.14      1SER7647
+ATOM   7319  N2    G T  51      84.710  52.897  55.465  1.00 25.28      1SER7648
+ATOM   7320  N3    G T  51      84.709  51.032  54.159  1.00 21.52      1SER7649
+ATOM   7321  C4    G T  51      84.300  50.545  52.963  1.00 23.09      1SER7650
+ATOM   7322  P     G T  52      81.541  45.373  54.817  1.00 46.12      1SER7651
+ATOM   7323  OP1   G T  52      80.962  45.490  53.457  1.00 42.59      1SER7652
+ATOM   7324  OP2   G T  52      81.271  44.146  55.594  1.00 51.31      1SER7653
+ATOM   7325  O5'   G T  52      81.045  46.634  55.691  1.00 46.11      1SER7654
+ATOM   7326  C5'   G T  52      81.575  46.779  57.016  1.00 41.35      1SER7655
+ATOM   7327  C4'   G T  52      81.729  48.232  57.450  1.00 37.15      1SER7656
+ATOM   7328  O4'   G T  52      82.390  49.011  56.455  1.00 36.09      1SER7657
+ATOM   7329  C3'   G T  52      80.458  49.002  57.685  1.00 37.12      1SER7658
+ATOM   7330  O3'   G T  52      79.705  48.730  58.877  1.00 40.95      1SER7659
+ATOM   7331  C2'   G T  52      80.897  50.418  57.584  1.00 32.96      1SER7660
+ATOM   7332  O2'   G T  52      81.582  50.821  58.746  1.00 31.95      1SER7661
+ATOM   7333  C1'   G T  52      81.917  50.363  56.496  1.00 32.05      1SER7662
+ATOM   7334  N9    G T  52      81.310  50.878  55.266  1.00 24.77      1SER7663
+ATOM   7335  C8    G T  52      80.972  50.210  54.122  1.00 22.14      1SER7664
+ATOM   7336  N7    G T  52      80.425  50.981  53.217  1.00 20.82      1SER7665
+ATOM   7337  C5    G T  52      80.386  52.240  53.825  1.00 18.33      1SER7666
+ATOM   7338  C6    G T  52      79.915  53.477  53.322  1.00 17.81      1SER7667
+ATOM   7339  O6    G T  52      79.422  53.681  52.212  1.00 22.36      1SER7668
+ATOM   7340  N1    G T  52      80.065  54.519  54.242  1.00  7.72      1SER7669
+ATOM   7341  C2    G T  52      80.616  54.387  55.496  1.00 12.49      1SER7670
+ATOM   7342  N2    G T  52      80.698  55.471  56.284  1.00  6.17      1SER7671
+ATOM   7343  N3    G T  52      81.075  53.214  55.956  1.00 19.71      1SER7672
+ATOM   7344  C4    G T  52      80.926  52.189  55.074  1.00 20.36      1SER7673
+ATOM   7345  P     G T  53      78.076  48.630  58.757  1.00 42.04      1SER7674
+ATOM   7346  OP1   G T  53      77.718  47.952  57.487  1.00 33.99      1SER7675
+ATOM   7347  OP2   G T  53      77.618  48.084  60.062  1.00 40.25      1SER7676
+ATOM   7348  O5'   G T  53      77.572  50.174  58.633  1.00 41.01      1SER7677
+ATOM   7349  C5'   G T  53      77.879  51.088  59.716  1.00 37.26      1SER7678
+ATOM   7350  C4'   G T  53      77.735  52.566  59.394  1.00 34.51      1SER7679
+ATOM   7351  O4'   G T  53      78.338  52.837  58.128  1.00 37.75      1SER7680
+ATOM   7352  C3'   G T  53      76.343  53.142  59.209  1.00 38.14      1SER7681
+ATOM   7353  O3'   G T  53      75.510  53.332  60.378  1.00 36.44      1SER7682
+ATOM   7354  C2'   G T  53      76.565  54.391  58.385  1.00 35.65      1SER7683
+ATOM   7355  O2'   G T  53      77.159  55.451  59.136  1.00 38.37      1SER7684
+ATOM   7356  C1'   G T  53      77.651  53.927  57.498  1.00 34.25      1SER7685
+ATOM   7357  N9    G T  53      77.215  53.618  56.133  1.00 32.38      1SER7686
+ATOM   7358  C8    G T  53      77.294  52.450  55.436  1.00 29.35      1SER7687
+ATOM   7359  N7    G T  53      76.861  52.550  54.206  1.00 34.01      1SER7688
+ATOM   7360  C5    G T  53      76.457  53.879  54.078  1.00 34.60      1SER7689
+ATOM   7361  C6    G T  53      75.891  54.587  52.962  1.00 34.57      1SER7690
+ATOM   7362  O6    G T  53      75.614  54.176  51.835  1.00 30.87      1SER7691
+ATOM   7363  N1    G T  53      75.633  55.920  53.269  1.00 37.00      1SER7692
+ATOM   7364  C2    G T  53      75.889  56.519  54.492  1.00 40.08      1SER7693
+ATOM   7365  N2    G T  53      75.596  57.816  54.646  1.00 44.38      1SER7694
+ATOM   7366  N3    G T  53      76.423  55.856  55.530  1.00 40.52      1SER7695
+ATOM   7367  C4    G T  53      76.681  54.541  55.257  1.00 36.83      1SER7696
+ATOM   7368  P     T T  54      73.882  53.196  60.230  1.00 29.81      1SER7697
+ATOM   7369  OP1   T T  54      73.524  52.135  59.250  1.00 29.56      1SER7698
+ATOM   7370  OP2   T T  54      73.385  53.097  61.611  1.00 21.96      1SER7699
+ATOM   7371  O5'   T T  54      73.422  54.617  59.537  1.00 31.11      1SER7700
+ATOM   7372  C5'   T T  54      73.465  55.871  60.261  1.00 28.95      1SER7701
+ATOM   7373  C4'   T T  54      72.956  57.056  59.438  1.00 29.52      1SER7702
+ATOM   7374  O4'   T T  54      73.669  57.160  58.190  1.00 31.03      1SER7703
+ATOM   7375  C3'   T T  54      71.527  56.845  58.981  1.00 31.17      1SER7704
+ATOM   7376  O3'   T T  54      70.534  57.157  59.957  1.00 28.24      1SER7705
+ATOM   7377  C2'   T T  54      71.392  57.713  57.762  1.00 30.92      1SER7706
+ATOM   7378  C1'   T T  54      72.781  57.559  57.109  1.00 24.45      1SER7707
+ATOM   7379  N1    T T  54      72.735  56.520  56.057  1.00 17.32      1SER7708
+ATOM   7380  C2    T T  54      72.295  56.872  54.770  1.00 17.20      1SER7709
+ATOM   7381  O2    T T  54      71.944  57.991  54.405  1.00 14.05      1SER7710
+ATOM   7382  N3    T T  54      72.259  55.847  53.851  1.00 14.08      1SER7711
+ATOM   7383  C4    T T  54      72.611  54.522  54.084  1.00 12.25      1SER7712
+ATOM   7384  O4    T T  54      72.530  53.721  53.148  1.00  9.29      1SER7713
+ATOM   7385  C5    T T  54      73.044  54.247  55.453  1.00  7.31      1SER7714
+ATOM   7386  C5M   T T  54      73.476  52.858  55.890  1.00  9.30      1SER7715
+ATOM   7387  C6    T T  54      73.081  55.219  56.369  1.00  7.76      1SER7716
+ATOM   7388  O2'   T T  54      71.066  59.035  58.198  1.00 39.08      1SER7717
+ATOM   7389  P   PSU T  55      69.302  56.128  60.115  1.00 29.80      1SER7718
+ATOM   7390  OP1 PSU T  55      69.785  54.727  59.916  1.00 37.57      1SER7719
+ATOM   7391  OP2 PSU T  55      68.648  56.469  61.385  1.00 21.29      1SER7720
+ATOM   7392  O5' PSU T  55      68.321  56.400  58.831  1.00 18.61      1SER7721
+ATOM   7393  C5' PSU T  55      67.399  57.454  58.686  1.00 13.83      1SER7722
+ATOM   7394  C4' PSU T  55      67.105  57.590  57.226  1.00 15.65      1SER7723
+ATOM   7395  O4' PSU T  55      68.295  57.248  56.514  1.00 20.42      1SER7724
+ATOM   7396  C3' PSU T  55      66.195  56.465  56.905  1.00 22.15      1SER7725
+ATOM   7397  O3' PSU T  55      64.797  56.606  57.223  1.00 28.95      1SER7726
+ATOM   7398  C2' PSU T  55      66.497  56.128  55.467  1.00 25.65      1SER7727
+ATOM   7399  O2' PSU T  55      65.796  56.922  54.560  1.00 23.36      1SER7728
+ATOM   7400  C1' PSU T  55      68.008  56.349  55.444  1.00 24.06      1SER7729
+ATOM   7401  N1  PSU T  55      69.748  53.188  56.265  1.00 30.53      1SER7730
+ATOM   7402  C2  PSU T  55      69.805  52.529  55.074  1.00 26.81      1SER7731
+ATOM   7403  O2  PSU T  55      70.311  51.435  55.014  1.00 28.64      1SER7732
+ATOM   7404  N3  PSU T  55      69.299  53.153  53.962  1.00 25.05      1SER7733
+ATOM   7405  C4  PSU T  55      68.727  54.394  53.925  1.00 22.25      1SER7734
+ATOM   7406  O4  PSU T  55      68.342  54.848  52.849  1.00 17.52      1SER7735
+ATOM   7407  C5  PSU T  55      68.695  55.013  55.252  1.00 23.72      1SER7736
+ATOM   7408  C6  PSU T  55      69.173  54.414  56.356  1.00 32.29      1SER7737
+ATOM      0 *HO2 PSU T  55      66.005  56.627  53.627  1.00 23.36      1SER H   new
+ATOM   7409  P     C T  56      63.979  55.620  58.245  1.00 27.01      1SER7738
+ATOM   7410  OP1   C T  56      64.896  55.028  59.248  1.00 25.28      1SER7739
+ATOM   7411  OP2   C T  56      62.834  56.407  58.734  1.00 35.39      1SER7740
+ATOM   7412  O5'   C T  56      63.415  54.518  57.197  1.00 25.11      1SER7741
+ATOM   7413  C5'   C T  56      63.025  53.233  57.689  1.00 27.15      1SER7742
+ATOM   7414  C4'   C T  56      62.425  52.355  56.610  1.00 26.07      1SER7743
+ATOM   7415  O4'   C T  56      61.331  53.034  56.017  1.00 20.50      1SER7744
+ATOM   7416  C3'   C T  56      63.381  52.191  55.466  1.00 26.89      1SER7745
+ATOM   7417  O3'   C T  56      64.408  51.202  55.747  1.00 29.12      1SER7746
+ATOM   7418  C2'   C T  56      62.466  51.922  54.289  1.00 23.23      1SER7747
+ATOM   7419  O2'   C T  56      61.863  50.637  54.246  1.00 26.86      1SER7748
+ATOM   7420  C1'   C T  56      61.322  52.807  54.607  1.00 19.85      1SER7749
+ATOM   7421  N1    C T  56      61.446  54.117  53.965  1.00 24.06      1SER7750
+ATOM   7422  C2    C T  56      61.292  54.213  52.580  1.00 23.15      1SER7751
+ATOM   7423  O2    C T  56      61.068  53.232  51.864  1.00 26.93      1SER7752
+ATOM   7424  N3    C T  56      61.378  55.448  52.011  1.00 18.49      1SER7753
+ATOM   7425  C4    C T  56      61.618  56.549  52.744  1.00 20.28      1SER7754
+ATOM   7426  N4    C T  56      61.708  57.750  52.155  1.00 17.18      1SER7755
+ATOM   7427  C5    C T  56      61.800  56.456  54.164  1.00 27.13      1SER7756
+ATOM   7428  C6    C T  56      61.712  55.232  54.722  1.00 24.95      1SER7757
+ATOM   7429  P     G T  57      66.010  51.540  55.729  1.00 24.91      1SER7758
+ATOM   7430  OP1   G T  57      66.323  52.742  56.562  1.00 12.66      1SER7759
+ATOM   7431  OP2   G T  57      66.729  50.283  56.044  1.00 25.60      1SER7760
+ATOM   7432  O5'   G T  57      66.139  51.836  54.127  1.00 13.43      1SER7761
+ATOM   7433  C5'   G T  57      65.887  50.713  53.295  1.00 21.04      1SER7762
+ATOM   7434  C4'   G T  57      65.608  50.996  51.838  1.00 29.47      1SER7763
+ATOM   7435  O4'   G T  57      64.567  51.947  51.656  1.00 34.30      1SER7764
+ATOM   7436  C3'   G T  57      66.739  51.581  51.057  1.00 32.40      1SER7765
+ATOM   7437  O3'   G T  57      67.751  50.646  50.710  1.00 35.88      1SER7766
+ATOM   7438  C2'   G T  57      66.061  52.193  49.846  1.00 33.42      1SER7767
+ATOM   7439  O2'   G T  57      65.728  51.118  48.952  1.00 30.29      1SER7768
+ATOM   7440  C1'   G T  57      64.777  52.738  50.442  1.00 31.15      1SER7769
+ATOM   7441  N9    G T  57      64.858  54.177  50.852  1.00 27.70      1SER7770
+ATOM   7442  C8    G T  57      64.944  54.667  52.132  1.00 27.66      1SER7771
+ATOM   7443  N7    G T  57      64.986  55.953  52.231  1.00 23.33      1SER7772
+ATOM   7444  C5    G T  57      64.912  56.384  50.923  1.00 29.94      1SER7773
+ATOM   7445  C6    G T  57      64.894  57.717  50.421  1.00 34.37      1SER7774
+ATOM   7446  O6    G T  57      64.964  58.781  51.046  1.00 40.27      1SER7775
+ATOM   7447  N1    G T  57      64.821  57.735  49.041  1.00 32.83      1SER7776
+ATOM   7448  C2    G T  57      64.769  56.623  48.243  1.00 33.30      1SER7777
+ATOM   7449  N2    G T  57      64.710  56.845  46.927  1.00 40.60      1SER7778
+ATOM   7450  N3    G T  57      64.757  55.367  48.712  1.00 33.91      1SER7779
+ATOM   7451  C4    G T  57      64.839  55.312  50.063  1.00 29.99      1SER7780
+ATOM   7452  P     A T  58      69.302  51.063  50.741  1.00 32.61      1SER7781
+ATOM   7453  OP1   A T  58      69.474  51.945  51.922  1.00 21.39      1SER7782
+ATOM   7454  OP2   A T  58      70.104  49.829  50.595  1.00 34.80      1SER7783
+ATOM   7455  O5'   A T  58      69.524  51.982  49.420  1.00 28.13      1SER7784
+ATOM   7456  C5'   A T  58      69.296  51.632  48.021  1.00 31.00      1SER7785
+ATOM   7457  C4'   A T  58      70.262  52.366  47.001  1.00 30.64      1SER7786
+ATOM   7458  O4'   A T  58      70.318  53.768  47.381  1.00 30.79      1SER7787
+ATOM   7459  C3'   A T  58      71.705  51.833  47.185  1.00 27.87      1SER7788
+ATOM   7460  O3'   A T  58      72.452  51.913  45.984  1.00 22.89      1SER7789
+ATOM   7461  C2'   A T  58      72.275  52.804  48.176  1.00 25.88      1SER7790
+ATOM   7462  O2'   A T  58      73.696  52.853  48.256  1.00 23.96      1SER7791
+ATOM   7463  C1'   A T  58      71.659  54.118  47.782  1.00 25.82      1SER7792
+ATOM   7464  N9    A T  58      71.707  54.990  48.959  1.00 21.98      1SER7793
+ATOM   7465  C8    A T  58      71.858  54.647  50.276  1.00 23.27      1SER7794
+ATOM   7466  N7    A T  58      71.890  55.660  51.083  1.00 25.63      1SER7795
+ATOM   7467  C5    A T  58      71.754  56.748  50.244  1.00 27.22      1SER7796
+ATOM   7468  C6    A T  58      71.705  58.116  50.501  1.00 33.27      1SER7797
+ATOM   7469  N6    A T  58      71.797  58.614  51.744  1.00 34.83      1SER7798
+ATOM   7470  N1    A T  58      71.558  58.927  49.436  1.00 31.08      1SER7799
+ATOM   7471  C2    A T  58      71.431  58.413  48.216  1.00 23.65      1SER7800
+ATOM   7472  N3    A T  58      71.465  57.153  47.848  1.00 22.14      1SER7801
+ATOM   7473  C4    A T  58      71.637  56.358  48.937  1.00 24.41      1SER7802
+ATOM   7474  P     A T  59      72.524  50.643  45.020  1.00 31.29      1SER7803
+ATOM   7475  OP1   A T  59      72.904  49.467  45.864  1.00 39.02      1SER7804
+ATOM   7476  OP2   A T  59      71.305  50.604  44.185  1.00 34.36      1SER7805
+ATOM   7477  O5'   A T  59      73.701  50.957  43.949  1.00 35.27      1SER7806
+ATOM   7478  C5'   A T  59      75.102  51.040  44.315  1.00 37.26      1SER7807
+ATOM   7479  C4'   A T  59      75.865  52.088  43.495  1.00 34.40      1SER7808
+ATOM   7480  O4'   A T  59      75.379  51.955  42.137  1.00 33.94      1SER7809
+ATOM   7481  C3'   A T  59      75.504  53.505  43.914  1.00 28.63      1SER7810
+ATOM   7482  O3'   A T  59      76.439  54.003  44.879  1.00 20.55      1SER7811
+ATOM   7483  C2'   A T  59      75.732  54.241  42.622  1.00 35.32      1SER7812
+ATOM   7484  O2'   A T  59      77.136  54.431  42.389  1.00 42.04      1SER7813
+ATOM   7485  C1'   A T  59      75.276  53.260  41.557  1.00 38.86      1SER7814
+ATOM   7486  N9    A T  59      73.858  53.417  41.141  1.00 45.98      1SER7815
+ATOM   7487  C8    A T  59      72.892  52.453  41.163  1.00 50.09      1SER7816
+ATOM   7488  N7    A T  59      71.737  52.829  40.707  1.00 53.15      1SER7817
+ATOM   7489  C5    A T  59      71.950  54.144  40.354  1.00 52.05      1SER7818
+ATOM   7490  C6    A T  59      71.089  55.081  39.805  1.00 52.40      1SER7819
+ATOM   7491  N6    A T  59      69.810  54.783  39.548  1.00 55.56      1SER7820
+ATOM   7492  N1    A T  59      71.595  56.294  39.567  1.00 50.09      1SER7821
+ATOM   7493  C2    A T  59      72.868  56.542  39.840  1.00 48.74      1SER7822
+ATOM   7494  N3    A T  59      73.782  55.747  40.363  1.00 51.45      1SER7823
+ATOM   7495  C4    A T  59      73.234  54.530  40.614  1.00 50.30      1SER7824
+ATOM   7496  P     U T  60      76.136  54.988  46.098  1.00 23.68      1SER7825
+ATOM   7497  OP1   U T  60      74.952  54.445  46.773  1.00 20.56      1SER7826
+ATOM   7498  OP2   U T  60      77.333  55.338  46.921  1.00 15.93      1SER7827
+ATOM   7499  O5'   U T  60      75.660  56.313  45.423  1.00 30.98      1SER7828
+ATOM   7500  C5'   U T  60      76.443  57.083  44.541  1.00 36.10      1SER7829
+ATOM   7501  C4'   U T  60      75.605  58.236  44.046  1.00 41.54      1SER7830
+ATOM   7502  O4'   U T  60      74.434  57.816  43.304  1.00 42.05      1SER7831
+ATOM   7503  C3'   U T  60      75.090  59.055  45.213  1.00 43.33      1SER7832
+ATOM   7504  O3'   U T  60      75.293  60.411  44.857  1.00 45.93      1SER7833
+ATOM   7505  C2'   U T  60      73.661  58.560  45.380  1.00 41.79      1SER7834
+ATOM   7506  O2'   U T  60      72.894  59.525  46.082  1.00 33.69      1SER7835
+ATOM   7507  C1'   U T  60      73.231  58.329  43.946  1.00 42.97      1SER7836
+ATOM   7508  N1    U T  60      72.174  57.304  43.747  1.00 48.39      1SER7837
+ATOM   7509  C2    U T  60      71.369  57.428  42.628  1.00 51.34      1SER7838
+ATOM   7510  O2    U T  60      71.460  58.335  41.803  1.00 58.96      1SER7839
+ATOM   7511  N3    U T  60      70.418  56.458  42.435  1.00 52.74      1SER7840
+ATOM   7512  C4    U T  60      70.185  55.379  43.253  1.00 56.04      1SER7841
+ATOM   7513  O4    U T  60      69.296  54.574  42.974  1.00 58.53      1SER7842
+ATOM   7514  C5    U T  60      71.063  55.320  44.399  1.00 55.79      1SER7843
+ATOM   7515  C6    U T  60      72.010  56.256  44.605  1.00 50.81      1SER7844
+ATOM   7516  P     C T  61      76.480  61.140  45.636  1.00 50.16      1SER7845
+ATOM   7517  OP1   C T  61      77.569  60.175  45.938  1.00 50.76      1SER7846
+ATOM   7518  OP2   C T  61      76.761  62.387  44.892  1.00 51.84      1SER7847
+ATOM   7519  O5'   C T  61      75.793  61.486  47.024  1.00 43.98      1SER7848
+ATOM   7520  C5'   C T  61      75.637  62.787  47.555  1.00 35.00      1SER7849
+ATOM   7521  C4'   C T  61      75.265  62.664  49.021  1.00 35.00      1SER7850
+ATOM   7522  O4'   C T  61      74.323  61.590  49.185  1.00 32.71      1SER7851
+ATOM   7523  C3'   C T  61      76.454  62.170  49.784  1.00 37.22      1SER7852
+ATOM   7524  O3'   C T  61      77.318  63.243  50.131  1.00 43.92      1SER7853
+ATOM   7525  C2'   C T  61      75.884  61.458  50.976  1.00 31.37      1SER7854
+ATOM   7526  O2'   C T  61      75.483  62.311  52.021  1.00 29.36      1SER7855
+ATOM   7527  C1'   C T  61      74.655  60.812  50.368  1.00 29.85      1SER7856
+ATOM   7528  N1    C T  61      74.813  59.354  50.080  1.00 23.13      1SER7857
+ATOM   7529  C2    C T  61      75.043  58.488  51.136  1.00 19.30      1SER7858
+ATOM   7530  O2    C T  61      75.131  58.865  52.309  1.00 12.26      1SER7859
+ATOM   7531  N3    C T  61      75.183  57.176  50.848  1.00 16.91      1SER7860
+ATOM   7532  C4    C T  61      75.099  56.724  49.595  1.00 23.68      1SER7861
+ATOM   7533  N4    C T  61      75.224  55.415  49.367  1.00 30.41      1SER7862
+ATOM   7534  C5    C T  61      74.867  57.602  48.503  1.00 20.59      1SER7863
+ATOM   7535  C6    C T  61      74.735  58.898  48.798  1.00 21.40      1SER7864
+ATOM   7536  P     C T  62      78.885  62.944  50.105  1.00 44.96      1SER7865
+ATOM   7537  OP1   C T  62      79.083  61.919  49.036  1.00 45.55      1SER7866
+ATOM   7538  OP2   C T  62      79.648  64.217  50.053  1.00 45.80      1SER7867
+ATOM   7539  O5'   C T  62      79.113  62.329  51.582  1.00 39.26      1SER7868
+ATOM   7540  C5'   C T  62      78.949  63.207  52.701  1.00 36.68      1SER7869
+ATOM   7541  C4'   C T  62      79.015  62.501  54.041  1.00 35.27      1SER7870
+ATOM   7542  O4'   C T  62      78.148  61.370  53.948  1.00 34.26      1SER7871
+ATOM   7543  C3'   C T  62      80.359  61.879  54.204  1.00 35.17      1SER7872
+ATOM   7544  O3'   C T  62      81.336  62.809  54.663  1.00 37.12      1SER7873
+ATOM   7545  C2'   C T  62      80.112  60.671  55.081  1.00 35.46      1SER7874
+ATOM   7546  O2'   C T  62      80.006  60.875  56.499  1.00 35.42      1SER7875
+ATOM   7547  C1'   C T  62      78.764  60.218  54.560  1.00 29.93      1SER7876
+ATOM   7548  N1    C T  62      78.762  59.113  53.574  1.00 22.80      1SER7877
+ATOM   7549  C2    C T  62      79.188  57.847  53.957  1.00 21.63      1SER7878
+ATOM   7550  O2    C T  62      79.598  57.623  55.094  1.00 24.72      1SER7879
+ATOM   7551  N3    C T  62      79.145  56.839  53.034  1.00 14.41      1SER7880
+ATOM   7552  C4    C T  62      78.704  57.067  51.787  1.00 21.16      1SER7881
+ATOM   7553  N4    C T  62      78.651  56.088  50.888  1.00 26.34      1SER7882
+ATOM   7554  C5    C T  62      78.294  58.371  51.373  1.00 22.68      1SER7883
+ATOM   7555  C6    C T  62      78.327  59.343  52.300  1.00 22.94      1SER7884
+ATOM   7556  P     C T  63      82.825  62.746  54.012  1.00 40.29      1SER7885
+ATOM   7557  OP1   C T  63      82.689  62.470  52.544  1.00 33.19      1SER7886
+ATOM   7558  OP2   C T  63      83.644  63.908  54.481  1.00 33.35      1SER7887
+ATOM   7559  O5'   C T  63      83.350  61.425  54.804  1.00 37.43      1SER7888
+ATOM   7560  C5'   C T  63      83.583  61.589  56.210  1.00 35.57      1SER7889
+ATOM   7561  C4'   C T  63      83.876  60.289  56.907  1.00 34.07      1SER7890
+ATOM   7562  O4'   C T  63      82.903  59.298  56.580  1.00 26.66      1SER7891
+ATOM   7563  C3'   C T  63      85.148  59.679  56.406  1.00 36.43      1SER7892
+ATOM   7564  O3'   C T  63      86.309  60.307  56.965  1.00 43.00      1SER7893
+ATOM   7565  C2'   C T  63      85.002  58.213  56.713  1.00 28.89      1SER7894
+ATOM   7566  O2'   C T  63      85.204  57.926  58.106  1.00 33.75      1SER7895
+ATOM   7567  C1'   C T  63      83.555  58.032  56.452  1.00 23.21      1SER7896
+ATOM   7568  N1    C T  63      83.272  57.496  55.131  1.00 18.43      1SER7897
+ATOM   7569  C2    C T  63      83.504  56.137  54.891  1.00 22.44      1SER7898
+ATOM   7570  O2    C T  63      83.972  55.368  55.739  1.00 23.86      1SER7899
+ATOM   7571  N3    C T  63      83.185  55.645  53.665  1.00 19.88      1SER7900
+ATOM   7572  C4    C T  63      82.666  56.454  52.734  1.00 21.79      1SER7901
+ATOM   7573  N4    C T  63      82.370  55.964  51.539  1.00 26.47      1SER7902
+ATOM   7574  C5    C T  63      82.414  57.841  52.976  1.00 17.66      1SER7903
+ATOM   7575  C6    C T  63      82.736  58.309  54.186  1.00 14.34      1SER7904
+ATOM   7576  P     G T  64      87.611  60.464  56.036  1.00 43.05      1SER7905
+ATOM   7577  OP1   G T  64      87.142  60.686  54.633  1.00 39.61      1SER7906
+ATOM   7578  OP2   G T  64      88.504  61.443  56.714  1.00 39.11      1SER7907
+ATOM   7579  O5'   G T  64      88.311  59.013  56.059  1.00 45.55      1SER7908
+ATOM   7580  C5'   G T  64      88.931  58.430  57.217  1.00 45.92      1SER7909
+ATOM   7581  C4'   G T  64      89.140  56.927  57.009  1.00 44.14      1SER7910
+ATOM   7582  O4'   G T  64      87.904  56.357  56.541  1.00 42.58      1SER7911
+ATOM   7583  C3'   G T  64      90.114  56.549  55.894  1.00 44.18      1SER7912
+ATOM   7584  O3'   G T  64      91.516  56.670  56.184  1.00 44.73      1SER7913
+ATOM   7585  C2'   G T  64      89.666  55.160  55.483  1.00 40.74      1SER7914
+ATOM   7586  O2'   G T  64      90.072  54.132  56.401  1.00 39.81      1SER7915
+ATOM   7587  C1'   G T  64      88.171  55.290  55.619  1.00 35.81      1SER7916
+ATOM   7588  N9    G T  64      87.469  55.404  54.331  1.00 24.27      1SER7917
+ATOM   7589  C8    G T  64      86.858  56.474  53.718  1.00 23.67      1SER7918
+ATOM   7590  N7    G T  64      86.311  56.175  52.557  1.00 20.19      1SER7919
+ATOM   7591  C5    G T  64      86.572  54.814  52.415  1.00 14.45      1SER7920
+ATOM   7592  C6    G T  64      86.243  53.915  51.370  1.00  8.18      1SER7921
+ATOM   7593  O6    G T  64      85.632  54.116  50.337  1.00  5.71      1SER7922
+ATOM   7594  N1    G T  64      86.692  52.644  51.600  1.00 10.27      1SER7923
+ATOM   7595  C2    G T  64      87.395  52.253  52.705  1.00 13.60      1SER7924
+ATOM   7596  N2    G T  64      87.737  50.987  52.760  1.00 14.48      1SER7925
+ATOM   7597  N3    G T  64      87.734  53.078  53.706  1.00 18.01      1SER7926
+ATOM   7598  C4    G T  64      87.283  54.344  53.491  1.00 19.99      1SER7927
+ATOM   7599  P     C T  65      92.535  57.189  55.032  1.00 46.99      1SER7928
+ATOM   7600  OP1   C T  65      91.905  58.281  54.246  1.00 47.46      1SER7929
+ATOM   7601  OP2   C T  65      93.850  57.416  55.674  1.00 45.11      1SER7930
+ATOM   7602  O5'   C T  65      92.660  55.917  54.070  1.00 45.02      1SER7931
+ATOM   7603  C5'   C T  65      93.323  54.774  54.640  1.00 41.73      1SER7932
+ATOM   7604  C4'   C T  65      93.059  53.514  53.840  1.00 35.50      1SER7933
+ATOM   7605  O4'   C T  65      91.667  53.341  53.611  1.00 39.05      1SER7934
+ATOM   7606  C3'   C T  65      93.600  53.625  52.457  1.00 35.93      1SER7935
+ATOM   7607  O3'   C T  65      94.978  53.313  52.445  1.00 33.53      1SER7936
+ATOM   7608  C2'   C T  65      92.765  52.648  51.664  1.00 39.15      1SER7937
+ATOM   7609  O2'   C T  65      93.158  51.291  51.884  1.00 49.39      1SER7938
+ATOM   7610  C1'   C T  65      91.403  52.817  52.300  1.00 36.05      1SER7939
+ATOM   7611  N1    C T  65      90.573  53.733  51.475  1.00 30.75      1SER7940
+ATOM   7612  C2    C T  65      89.931  53.215  50.342  1.00 30.35      1SER7941
+ATOM   7613  O2    C T  65      90.021  52.029  50.006  1.00 25.35      1SER7942
+ATOM   7614  N3    C T  65      89.180  54.073  49.585  1.00 27.63      1SER7943
+ATOM   7615  C4    C T  65      89.053  55.372  49.919  1.00 27.02      1SER7944
+ATOM   7616  N4    C T  65      88.313  56.167  49.153  1.00 25.81      1SER7945
+ATOM   7617  C5    C T  65      89.705  55.908  51.079  1.00 30.13      1SER7946
+ATOM   7618  C6    C T  65      90.449  55.058  51.818  1.00 26.62      1SER7947
+ATOM   7619  P     C T  66      96.006  53.932  51.388  1.00 33.02      1SER7948
+ATOM   7620  OP1   C T  66      95.795  55.397  51.310  1.00 35.81      1SER7949
+ATOM   7621  OP2   C T  66      97.314  53.409  51.868  1.00 36.20      1SER7950
+ATOM   7622  O5'   C T  66      95.675  53.325  49.902  1.00 24.22      1SER7951
+ATOM   7623  C5'   C T  66      96.146  51.999  49.654  1.00 23.42      1SER7952
+ATOM   7624  C4'   C T  66      95.528  51.388  48.440  1.00 22.74      1SER7953
+ATOM   7625  O4'   C T  66      94.106  51.500  48.483  1.00 18.62      1SER7954
+ATOM   7626  C3'   C T  66      95.910  52.202  47.219  1.00 26.91      1SER7955
+ATOM   7627  O3'   C T  66      97.247  51.973  46.733  1.00 23.04      1SER7956
+ATOM   7628  C2'   C T  66      94.802  51.908  46.227  1.00 23.56      1SER7957
+ATOM   7629  O2'   C T  66      95.058  50.661  45.568  1.00 24.91      1SER7958
+ATOM   7630  C1'   C T  66      93.584  51.824  47.150  1.00 21.02      1SER7959
+ATOM   7631  N1    C T  66      92.788  53.104  47.136  1.00 17.60      1SER7960
+ATOM   7632  C2    C T  66      91.925  53.375  46.076  1.00 16.70      1SER7961
+ATOM   7633  O2    C T  66      91.778  52.626  45.121  1.00 20.81      1SER7962
+ATOM   7634  N3    C T  66      91.202  54.524  46.078  1.00 16.41      1SER7963
+ATOM   7635  C4    C T  66      91.303  55.399  47.083  1.00 16.54      1SER7964
+ATOM   7636  N4    C T  66      90.581  56.521  47.034  1.00 13.31      1SER7965
+ATOM   7637  C5    C T  66      92.185  55.142  48.186  1.00 16.52      1SER7966
+ATOM   7638  C6    C T  66      92.894  53.991  48.173  1.00 13.88      1SER7967
+ATOM   7639  P     C T  67      98.139  53.187  46.228  1.00 11.64      1SER7968
+ATOM   7640  OP1   C T  67      97.714  54.388  46.965  1.00 25.71      1SER7969
+ATOM   7641  OP2   C T  67      99.560  52.770  46.282  1.00 20.28      1SER7970
+ATOM   7642  O5'   C T  67      97.645  53.330  44.753  1.00  6.00      1SER7971
+ATOM   7643  C5'   C T  67      97.791  52.208  43.927  1.00  8.86      1SER7972
+ATOM   7644  C4'   C T  67      96.869  52.356  42.756  1.00 12.44      1SER7973
+ATOM   7645  O4'   C T  67      95.518  52.514  43.122  1.00 12.58      1SER7974
+ATOM   7646  C3'   C T  67      97.083  53.548  41.882  1.00 10.42      1SER7975
+ATOM   7647  O3'   C T  67      98.294  53.583  41.147  1.00 20.76      1SER7976
+ATOM   7648  C2'   C T  67      95.800  53.700  41.121  1.00  9.07      1SER7977
+ATOM   7649  O2'   C T  67      95.790  52.653  40.125  1.00 12.68      1SER7978
+ATOM   7650  C1'   C T  67      94.798  53.328  42.170  1.00  8.22      1SER7979
+ATOM   7651  N1    C T  67      94.244  54.510  42.915  1.00 12.70      1SER7980
+ATOM   7652  C2    C T  67      93.148  55.218  42.427  1.00 10.10      1SER7981
+ATOM   7653  O2    C T  67      92.614  54.932  41.359  1.00 15.47      1SER7982
+ATOM   7654  N3    C T  67      92.677  56.264  43.168  1.00  6.25      1SER7983
+ATOM   7655  C4    C T  67      93.256  56.607  44.337  1.00  9.34      1SER7984
+ATOM   7656  N4    C T  67      92.811  57.623  45.076  1.00  8.89      1SER7985
+ATOM   7657  C5    C T  67      94.360  55.885  44.853  1.00 10.46      1SER7986
+ATOM   7658  C6    C T  67      94.810  54.862  44.113  1.00 12.18      1SER7987
+ATOM   7659  P     U T  68      98.833  54.912  40.452  1.00 20.48      1SER7988
+ATOM   7660  OP1   U T  68      98.492  56.050  41.332  1.00 17.11      1SER7989
+ATOM   7661  OP2   U T  68     100.263  54.700  40.060  1.00 17.28      1SER7990
+ATOM   7662  O5'   U T  68      97.876  54.864  39.136  1.00 18.85      1SER7991
+ATOM   7663  C5'   U T  68      97.980  55.950  38.240  1.00 36.11      1SER7992
+ATOM   7664  C4'   U T  68      96.719  56.245  37.464  1.00 44.53      1SER7993
+ATOM   7665  O4'   U T  68      95.591  56.242  38.329  1.00 43.58      1SER7994
+ATOM   7666  C3'   U T  68      96.756  57.719  37.059  1.00 50.40      1SER7995
+ATOM   7667  O3'   U T  68      97.599  58.052  35.954  1.00 62.02      1SER7996
+ATOM   7668  C2'   U T  68      95.315  58.145  36.915  1.00 41.87      1SER7997
+ATOM   7669  O2'   U T  68      94.787  57.617  35.672  1.00 43.08      1SER7998
+ATOM   7670  C1'   U T  68      94.715  57.363  38.045  1.00 35.50      1SER7999
+ATOM   7671  N1    U T  68      94.575  58.116  39.307  1.00 25.93      1SER8000
+ATOM   7672  C2    U T  68      93.567  59.023  39.426  1.00 28.45      1SER8001
+ATOM   7673  O2    U T  68      92.800  59.276  38.500  1.00 39.89      1SER8002
+ATOM   7674  N3    U T  68      93.430  59.660  40.660  1.00 26.88      1SER8003
+ATOM   7675  C4    U T  68      94.206  59.457  41.789  1.00 29.74      1SER8004
+ATOM   7676  O4    U T  68      94.033  60.089  42.838  1.00 32.08      1SER8005
+ATOM   7677  C5    U T  68      95.229  58.457  41.573  1.00 28.72      1SER8006
+ATOM   7678  C6    U T  68      95.375  57.850  40.384  1.00 26.49      1SER8007
+ATOM   7679  P     C T  69      98.663  59.241  36.211  1.00 68.29      1SER8008
+ATOM   7680  OP1   C T  69      99.140  59.161  37.617  1.00 68.50      1SER8009
+ATOM   7681  OP2   C T  69      99.628  59.127  35.095  1.00 69.16      1SER8010
+ATOM   7682  O5'   C T  69      97.847  60.647  36.095  1.00 68.19      1SER8011
+ATOM   7683  C5'   C T  69      97.315  61.088  34.829  1.00 70.17      1SER8012
+ATOM   7684  C4'   C T  69      96.264  62.184  34.965  1.00 70.11      1SER8013
+ATOM   7685  O4'   C T  69      95.233  61.836  35.922  1.00 68.85      1SER8014
+ATOM   7686  C3'   C T  69      96.869  63.423  35.574  1.00 74.83      1SER8015
+ATOM   7687  O3'   C T  69      97.778  64.210  34.781  1.00 77.57      1SER8016
+ATOM   7688  C2'   C T  69      95.684  64.153  36.173  1.00 72.68      1SER8017
+ATOM   7689  O2'   C T  69      94.914  64.915  35.240  1.00 78.55      1SER8018
+ATOM   7690  C1'   C T  69      94.838  63.002  36.693  1.00 65.66      1SER8019
+ATOM   7691  N1    C T  69      95.129  62.902  38.145  1.00 57.83      1SER8020
+ATOM   7692  C2    C T  69      94.541  63.839  39.022  1.00 57.12      1SER8021
+ATOM   7693  O2    C T  69      93.787  64.742  38.667  1.00 49.18      1SER8022
+ATOM   7694  N3    C T  69      94.819  63.751  40.346  1.00 60.07      1SER8023
+ATOM   7695  C4    C T  69      95.652  62.798  40.811  1.00 62.45      1SER8024
+ATOM   7696  N4    C T  69      95.887  62.758  42.130  1.00 64.20      1SER8025
+ATOM   7697  C5    C T  69      96.282  61.844  39.921  1.00 56.83      1SER8026
+ATOM   7698  C6    C T  69      95.989  61.938  38.611  1.00 53.27      1SER8027
+ATOM   7699  P     U T  70      98.918  65.072  35.549  0.70 75.88      1SER8028
+ATOM   7700  OP1   U T  70      99.410  64.299  36.718  0.70 77.13      1SER8029
+ATOM   7701  OP2   U T  70      99.878  65.531  34.523  0.70 76.93      1SER8030
+ATOM   7702  O5'   U T  70      98.158  66.340  36.137  0.70 72.45      1SER8031
+ATOM   7703  C5'   U T  70      97.651  67.290  35.212  0.70 73.74      1SER8032
+ATOM   7704  C4'   U T  70      96.829  68.330  35.931  0.70 74.19      1SER8033
+ATOM   7705  O4'   U T  70      95.888  67.671  36.799  0.70 72.97      1SER8034
+ATOM   7706  C3'   U T  70      97.692  69.143  36.879  0.70 74.32      1SER8035
+ATOM   7707  O3'   U T  70      98.507  70.186  36.283  0.70 68.72      1SER8036
+ATOM   7708  C2'   U T  70      96.693  69.605  37.905  0.70 75.36      1SER8037
+ATOM   7709  O2'   U T  70      95.911  70.719  37.484  0.70 78.77      1SER8038
+ATOM   7710  C1'   U T  70      95.766  68.398  38.016  0.70 73.05      1SER8039
+ATOM   7711  N1    U T  70      96.246  67.624  39.173  0.70 72.96      1SER8040
+ATOM   7712  C2    U T  70      95.791  68.028  40.411  0.70 73.76      1SER8041
+ATOM   7713  O2    U T  70      95.009  68.960  40.573  0.70 73.92      1SER8042
+ATOM   7714  N3    U T  70      96.251  67.320  41.491  0.70 73.01      1SER8043
+ATOM   7715  C4    U T  70      97.131  66.259  41.448  0.70 72.71      1SER8044
+ATOM   7716  O4    U T  70      97.467  65.718  42.493  0.70 72.61      1SER8045
+ATOM   7717  C5    U T  70      97.576  65.897  40.121  0.70 71.04      1SER8046
+ATOM   7718  C6    U T  70      97.130  66.575  39.047  0.70 71.81      1SER8047
+ATOM   7719  P     C T  71     100.039  70.438  36.756  0.70 66.86      1SER8048
+ATOM   7720  OP1   C T  71     100.515  69.213  37.440  0.70 69.31      1SER8049
+ATOM   7721  OP2   C T  71     100.794  70.965  35.593  0.70 67.44      1SER8050
+ATOM   7722  O5'   C T  71      99.956  71.608  37.855  0.70 60.46      1SER8051
+ATOM   7723  C5'   C T  71      99.470  72.897  37.461  0.70 52.65      1SER8052
+ATOM   7724  C4'   C T  71      98.680  73.545  38.594  0.70 48.76      1SER8053
+ATOM   7725  O4'   C T  71      97.784  72.563  39.155  0.70 44.30      1SER8054
+ATOM   7726  C3'   C T  71      99.571  73.919  39.790  0.70 48.59      1SER8055
+ATOM   7727  O3'   C T  71     100.370  75.135  39.753  0.70 44.49      1SER8056
+ATOM   7728  C2'   C T  71      98.604  73.894  40.949  0.70 48.86      1SER8057
+ATOM   7729  O2'   C T  71      97.813  75.095  41.040  0.70 52.80      1SER8058
+ATOM   7730  C1'   C T  71      97.683  72.709  40.587  0.70 45.88      1SER8059
+ATOM   7731  N1    C T  71      98.241  71.523  41.335  0.70 45.57      1SER8060
+ATOM   7732  C2    C T  71      98.079  71.469  42.744  0.70 45.30      1SER8061
+ATOM   7733  O2    C T  71      97.483  72.332  43.407  0.70 48.56      1SER8062
+ATOM   7734  N3    C T  71      98.605  70.402  43.412  0.70 40.53      1SER8063
+ATOM   7735  C4    C T  71      99.260  69.434  42.770  0.70 37.56      1SER8064
+ATOM   7736  N4    C T  71      99.737  68.443  43.520  0.70 39.47      1SER8065
+ATOM   7737  C5    C T  71      99.447  69.457  41.341  0.70 37.87      1SER8066
+ATOM   7738  C6    C T  71      98.925  70.513  40.675  0.70 41.00      1SER8067
+TER    7739        C T  71                                              1SER806
+CONECT 6694 6693 6706                                                   1SER811
+CONECT 6706 6694 6707 6708 6709                                         1SER811
+CONECT 6707 6706                                                        1SER811
+CONECT 6708 6706                                                        1SER811
+CONECT 6709 6706 6710                                                   1SER811
+CONECT 6710 6709 6711                                                   1SER811
+CONECT 6711 6710 6712 6713                                              1SER811
+CONECT 6712 6711 6717                                                   1SER812
+CONECT 6713 6711 6714 6715                                              1SER812
+CONECT 6714 6713 6726                                                   1SER812
+CONECT 6715 6713 6716 6717                                              1SER812
+CONECT 6716 6715                                                        1SER812
+CONECT 6717 6712 6715 6718                                              1SER812
+CONECT 6718 6717 6719 6725                                              1SER812
+CONECT 6719 6718 6720 6721                                              1SER812
+CONECT 6720 6719                                                        1SER812
+CONECT 6721 6719 6722                                                   1SER812
+CONECT 6722 6721 6723 6724                                              1SER813
+CONECT 6723 6722                                                        1SER813
+CONECT 6724 6722 6725                                                   1SER813
+CONECT 6725 6718 6724                                                   1SER813
+CONECT 6726 6714 6727 6728 6729                                         1SER813
+CONECT 7389 7390 7391 7392                                              1SER813
+CONECT 7389 7390 7391 7392                                              1SER813
+CONECT 7390 7389                                                        1SER813
+CONECT 7390 7389                                                        1SER813
+CONECT 7391 7389                                                        1SER813
+CONECT 7391 7389                                                        1SER814
+CONECT 7392 7389 7393                                                   1SER814
+CONECT 7392 7389 7393                                                   1SER814
+CONECT 7393 7392 7394                                                   1SER814
+CONECT 7393 7392 7394                                                   1SER814
+CONECT 7394 7393 7395 7396                                              1SER814
+CONECT 7394 7393 7395 7396                                              1SER814
+CONECT 7395 7394 7400                                                   1SER814
+CONECT 7395 7394 7400                                                   1SER814
+CONECT 7396 7394 7397 7398                                              1SER814
+CONECT 7396 7394 7397 7398                                              1SER815
+CONECT 7397 7396                                                        1SER815
+CONECT 7397 7396                                                        1SER815
+CONECT 7398 7396 7399 7400                                              1SER815
+CONECT 7398 7396 7399 7400                                              1SER815
+CONECT 7399 7398                                                        1SER815
+CONECT 7399 7398                                                        1SER815
+CONECT 7400 7395 7398 7407                                              1SER815
+CONECT 7400 7395 7398 7407                                              1SER815
+CONECT 7401 7402 7408                                                   1SER815
+CONECT 7401 7402 7408                                                   1SER816
+CONECT 7402 7401 7403 7404                                              1SER816
+CONECT 7402 7401 7403 7404                                              1SER816
+CONECT 7403 7402                                                        1SER816
+CONECT 7403 7402                                                        1SER816
+CONECT 7404 7402 7405                                                   1SER816
+CONECT 7404 7402 7405                                                   1SER816
+CONECT 7405 7404 7406 7407                                              1SER816
+CONECT 7405 7404 7406 7407                                              1SER816
+CONECT 7406 7405                                                        1SER816
+CONECT 7406 7405                                                        1SER817
+CONECT 7407 7400 7405 7408                                              1SER817
+CONECT 7407 7400 7405 7408                                              1SER817
+CONECT 7408 7401 7407                                                   1SER817
+CONECT 7408 7401 7407                                                   1SER817
+END                                                                     1SER817

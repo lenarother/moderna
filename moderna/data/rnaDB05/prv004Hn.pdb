@@ -1,0 +1,1052 @@
+USER  MOD reduceV2.21 H: found=0, std=0, add=7398, rem=0, adj=268
+HEADER    COMPLEX(VIRUS COAT PROTEIN/RNA)         06-JUN-94   2BBV      2BBV
+COMPND    BLACK BEETLE VIRUS CAPSID PROTEIN (BBV) COMPLEXED WITH        2BBV
+COMPND   2 DUPLEX RNA                                                   2BBV
+SOURCE    BLACK BEETLE VIRUS: GROWN IN (DROSOPHILA MELANOGASTER);       2BBV
+SOURCE   2 RNA: SYNTHETIC                                               2BBV
+AUTHOR    M.V.HOSUR,J.-P.WERY,V.S.REDDY,J.E.JOHNSON                     2BBV
+REVDAT   1   31-AUG-94 2BBV    0                                        2BBV
+JRNL        AUTH   J.-P.WERY,V.S.REDDY,M.V.HOSUR,J.E.JOHNSON            2BBV
+JRNL        TITL   THE REFINED THREE-DIMENSIONAL STRUCTURE OF AN        2BBV  1
+JRNL        TITL 2 INSECT VIRUS AT 2.8 ANGSTROMS RESOLUTION             2BBV  1
+JRNL        REF    J.MOL.BIOL.                   V. 235   565 1994      2BBV  1
+JRNL        REFN   ASTM JMOBAK  UK ISSN 0022-2836                 0070  2BBV  1
+REMARK   1                                                              2BBV  1
+REMARK   1 REFERENCE 1                                                  2BBV  1
+REMARK   1  AUTH   A.J.FISHER,J.E.JOHNSON                               2BBV  1
+REMARK   1  TITL   ORDERED DUPLEX RNA CONTROLS CAPSID ARCHITECTURE      2BBV  1
+REMARK   1  TITL 2 IN AN ICOSAHEDRAL ANIMAL VIRUS                       2BBV  1
+REMARK   1  REF    NATURE                        V. 361   176 1993      2BBV  1
+REMARK   1  REFN   ASTM NATUAS  UK ISSN 0028-0836                 0006  2BBV  2
+REMARK   1 REFERENCE 2                                                  2BBV  2
+REMARK   1  AUTH   P.KAESBERG,R.DASGUPTA,J.-Y.SGRO,J.-P.WERY,           2BBV  2
+REMARK   1  AUTH 2 B.H.SELLING,M.V.HOSUR,J.E.JOHNSON                    2BBV  2
+REMARK   1  TITL   STRUCTURAL HOMOLOGY AMONG FOUR NODAVIRUSES AS        2BBV  2
+REMARK   1  TITL 2 DEDUCED BY SEQUENCING AND X-RAY CRYSTALLOGRAPHY      2BBV  2
+REMARK   1  REF    J.MOL.BIOL.                   V. 214   423 1990      2BBV  2
+REMARK   1  REFN   ASTM JMOBAK  UK ISSN 0022-2836                 0070  2BBV  2
+REMARK   1 REFERENCE 3                                                  2BBV  2
+REMARK   1  AUTH   M.V.HOSUR,T.SCHMIDT,R.C.TUCKER,J.E.JOHNSON,          2BBV  2
+REMARK   1  AUTH 2 T.M.GALLAGHER,B.H.SELLING,R.R.RUECKERT               2BBV  3
+REMARK   1  TITL   STRUCTURE OF AN INSECT VIRUS AT 3.0 ANGSTROMS        2BBV  3
+REMARK   1  TITL 2 RESOLUTION                                           2BBV  3
+REMARK   1  REF    PROTEINS.STRUCT.,FUNCT.,      V.   2   167 1987      2BBV  3
+REMARK   1  REF  2 GENET.                                               2BBV  3
+REMARK   1  REFN   ASTM PSFGEY  US ISSN 0887-3585                 0867  2BBV  3
+REMARK   2                                                              2BBV  3
+REMARK   2 RESOLUTION. 2.8  ANGSTROMS.                                  2BBV  3
+REMARK   3                                                              2BBV  3
+REMARK   3 REFINEMENT.                                                  2BBV  3
+REMARK   3   PROGRAM 1                  X-PLOR                          2BBV  4
+REMARK   3   AUTHORS 1                  BRUNGER                         2BBV  4
+REMARK   3   PROGRAM 2                  PROLSQ                          2BBV  4
+REMARK   3   AUTHORS 2                  KONNERT,HENDRICKSON             2BBV  4
+REMARK   3   R VALUE                    0.221                           2BBV  4
+REMARK   3   RMSD BOND DISTANCES        0.014  ANGSTROMS                2BBV  4
+REMARK   3   RMSD BOND ANGLE DISTANCES  0.03   ANGSTROMS                2BBV  4
+REMARK   3                                                              2BBV  4
+REMARK   3   NUMBER OF REFLECTIONS      112000                          2BBV  4
+REMARK   3   RESOLUTION RANGE       6.0 - 2.8  ANGSTROMS                2BBV  4
+REMARK   3   DATA CUTOFF                4.0    SIGMA(F)                 2BBV  5
+REMARK   3   PERCENT COMPLETION         67.5                            2BBV  5
+REMARK   3                                                              2BBV  5
+REMARK   3   NUMBER OF PROTEIN ATOMS                       7692         2BBV  5
+REMARK   3   NUMBER OF SOLVENT ATOMS                        273         2BBV  5
+REMARK   3                                                              2BBV  5
+REMARK   3  RMS DEVIATIONS FROM IDEAL VALUES (THE VALUES OF             2BBV  5
+REMARK   3      SIGMA, IN PARENTHESES, ARE THE INPUT ESTIMATED          2BBV  5
+REMARK   3      STANDARD DEVIATIONS THAT DETERMINE THE RELATIVE         2BBV  5
+REMARK   3      WEIGHTS OF THE CORRESPONDING RESTRAINTS)                2BBV  5
+REMARK   3    DISTANCE RESTRAINTS (ANGSTROMS)                           2BBV  6
+REMARK   3      BOND DISTANCE                            0.014(0.020)   2BBV  6
+REMARK   3      ANGLE DISTANCE                           0.030(0.030)   2BBV  6
+REMARK   3      PLANAR 1-4 DISTANCE                      0.046(0.050)   2BBV  6
+REMARK   3    PLANE RESTRAINT (ANGSTROMS)                0.018(0.020)   2BBV  6
+REMARK   3    CHIRAL-CENTER RESTRAINT (ANGSTROMS**3)     0.208(0.150)   2BBV  6
+REMARK   3    NON-BONDED CONTACT RESTRAINTS (ANGSTROMS)                 2BBV  6
+REMARK   3      SINGLE TORSION CONTACT                   0.183(0.500)   2BBV  6
+REMARK   3      MULTIPLE TORSION CONTACT                 0.255(0.500)   2BBV  6
+REMARK   3      POSSIBLE HYDROGEN BOND                   0.230(0.500)   2BBV  6
+REMARK   3    CONFORMATIONAL TORSION ANGLE RESTRAINT (DEGREES)          2BBV  7
+REMARK   3      PLANAR                                   3.700(3.000)   2BBV  7
+REMARK   3      STAGGERED                               26.600(15.000)  2BBV  7
+REMARK   3    ISOTROPIC THERMAL FACTOR RESTRAINTS (ANGSTROMS**2)        2BBV  7
+REMARK   3      MAIN-CHAIN BOND                          0.800(1.000)   2BBV  7
+REMARK   3      MAIN-CHAIN ANGLE                         1.300(1.500)   2BBV  7
+REMARK   3      SIDE-CHAIN BOND                          1.900(1.500)   2BBV  7
+REMARK   3      SIDE-CHAIN ANGLE                         2.700(2.000)   2BBV  7
+REMARK   4                                                              2BBV  7
+REMARK   4 BLACK BEETLE VIRUS IS AN INSECT PATHOGENIC, NON-ENVELOPED    2BBV  7
+REMARK   4 SPHERICAL VIRUS, BELONGING TO THE FAMILY OF NODAVIRIDAE.     2BBV  8
+REMARK   4 THE PROTEIN SHELL IS MADE UP OF 180 COPIES OF THE CAPSID     2BBV  8
+REMARK   4 PROTEIN SUBUNIT ARRANGED IN A T=3 ICOSAHEDRAL LATTICE.       2BBV  8
+REMARK   4 EACH CAPSID PROTEIN CONTAINS 407 AMINO ACIDS.  THE 180       2BBV  8
+REMARK   4 SUBUNITS OF THE CAPSID FALL INTO 3 STRUCTURALLY UNIQUE (A,   2BBV  8
+REMARK   4 B AND C) AND QUASI-EQUIVALENT CATEGORIES.  ONE OF EACH A, B  2BBV  8
+REMARK   4 AND C SUBUNITS TOGETHER FORM AN ICOSAHEDRAL ASYMMETRIC       2BBV  8
+REMARK   4 UNIT.  SIXTY COPIES OF EACH A, B AND C TYPE SUBUNIT          2BBV  8
+REMARK   4 ENCAPSIDATE THE SINGLE STRANDED, BIPARTITE RNA GENOME OF     2BBV  8
+REMARK   4 THE VIRUS IN A SINGLE PARTICLE.  THE VIRUS PARTICLE IS       2BBV  8
+REMARK   4 INITIALLY ASSEMBLED INTO A PROVIRION, WHICH BECOMES MATURED  2BBV  9
+REMARK   4 AS THE CAPSID PROTEIN SUBUNITS ARE CLEAVED INTO CHAINS BETA  2BBV  9
+REMARK   4 AND GAMMA.  THE AUTO PROTEOLYTIC CLEAVAGE IS REQUIRED FOR    2BBV  9
+REMARK   4 THE MATURATION AND THE INFECTIVITY OF THE VIRUS.  THE        2BBV  9
+REMARK   4 CLEAVAGE SITE IS BETWEEN RESIDUES ASN 363 AND ALA 364 IN     2BBV  9
+REMARK   4 ALL THREE SUBUNITS.  IN ORDER TO FOLLOW STANDARD PROTEIN     2BBV  9
+REMARK   4 DATA BANK REPRESENTATION, SEPARATE CHAIN IDENTIFIERS HAVE    2BBV  9
+REMARK   4 BEEN ASSIGNED TO EACH CHAIN.  THUS EACH SUBUNIT CONTAINS     2BBV  9
+REMARK   4 TWO CHAINS AS FOLLOWS:                                       2BBV  9
+REMARK   4                                                              2BBV  9
+REMARK   4 SUBUNIT     RESIDUES    CHAIN IDENTIFIER    TYPE             2BBV 10
+REMARK   4                                                              2BBV 10
+REMARK   4    A          1 - 363           A           BETA             2BBV 10
+REMARK   4    A        364 - 407           D           GAMMA            2BBV 10
+REMARK   4    B          1 - 363           B           BETA             2BBV 10
+REMARK   4    B        364 - 407           E           GAMMA            2BBV 10
+REMARK   4    C          1 - 363           C           BETA             2BBV 10
+REMARK   4    C        364 - 407           F           GAMMA            2BBV 10
+REMARK   4                                                              2BBV 10
+REMARK   4 THIS STRUCTURE ALSO CONTAINS A STRAND OF RNA CONSISTING OF   2BBV 10
+REMARK   4 10 NUCLEOTIDES.  IT HAS BEEN ASSIGNED CHAIN INDICATOR *N*.   2BBV 11
+REMARK   5                                                              2BBV 11
+REMARK   5 THE FOLLOWING RESIDUES ARE ORDERED AND CLEARLY VISIBLE:      2BBV 11
+REMARK   5                                                              2BBV 11
+REMARK   5 CHAIN       RESIDUES                                         2BBV 11
+REMARK   5                                                              2BBV 11
+REMARK   5   A          56 - 363                                        2BBV 11
+REMARK   5   D         364 - 379                                        2BBV 11
+REMARK   5   B          56 - 363                                        2BBV 11
+REMARK   5   E         364 - 379                                        2BBV 11
+REMARK   5   C          20 -  31, 55 - 363                              2BBV 12
+REMARK   5   F         364 - 379                                        2BBV 12
+REMARK   5                                                              2BBV 12
+REMARK   5 UNLIKE IN CHAINS A AND B, IN CHAIN C THE PEPTIDE SEGMENT     2BBV 12
+REMARK   5 CONTAINING RESIDUES 20 - 31 IS VISIBLE.  TOGETHER WITH THE   2BBV 12
+REMARK   5 RNA SEGMENT, IT CONTROLS THE PARTICLE QUATERNARY STRUCTURE.  2BBV 12
+REMARK   5 IT IS AN ISLAND OF DENSITY IN THE STRUCTURE, BUT THE FIT OF  2BBV 12
+REMARK   5 RESIDUES TO THE ELECTRON DENSITY IS UNAMBIGUOUS.             2BBV 12
+REMARK   6                                                              2BBV 12
+REMARK   6 THE ENDS OF THE THREE SUBUNITS (A, B AND C) AND ENDS OF      2BBV 12
+REMARK   6 THEIR CLEAVED PRODUCTS (BETA AND GAMMA) AND THE ORDERED      2BBV 13
+REMARK   6 PEPTIDE_ARM MIGHT HAVE UNACCEPTABLE STEREOCHEMISTRY.  THESE  2BBV 13
+REMARK   6 RESIDUES ARE A 56, A 363, D 364, D 379, B 56, B 363, E 364,  2BBV 13
+REMARK   6 E 379, C 20, C 31, C 55, C 363, F 364, AND F 379.            2BBV 13
+REMARK   7                                                              2BBV 13
+REMARK   7 BBV HAS AN ICOSAHEDRAL PENTAMER IN THE CRYSTALLOGRAPHIC      2BBV 13
+REMARK   7 ASYMMETRIC UNIT.  THIS FIVE-FOLD NON-CRYSTALLOGRAPHIC        2BBV 13
+REMARK   7 SYMMETRY WAS USED TO AVERAGE THE ELECTRON DENSITY MAP IN     2BBV 13
+REMARK   7 THE PHASE REFINEMENT PROCEDURE.  THE FOUR TRANSFORMATIONS    2BBV 13
+REMARK   7 PRESENTED ON *MTRIX* RECORDS BELOW WILL GENERATE THE         2BBV 13
+REMARK   7 ADDITIONAL 12 OF THE 15 SUBUNITS COMPRISING THE PENTAMERIC   2BBV 14
+REMARK   7 UNIT WHEN APPLIED TO THE THREE SUBUNITS PRESENTED IN THIS    2BBV 14
+REMARK   7 ENTRY.                                                       2BBV 14
+REMARK   8                                                              2BBV 14
+REMARK   8 EACH SUBUNIT (A OR B OR C) IS ROUGHLY MADE UP OF TWO         2BBV 14
+REMARK   8 DOMAINS, A BETA-BARREL DOMAIN AND AN ALPHA-HELICAL DOMAIN.   2BBV 14
+REMARK   8 THE BETA-BARREL DOMAIN CONSISTS OF AN EIGHT-STRANDED         2BBV 14
+REMARK   8 ANTI-PARALLEL BETA-BARREL AND THE INSERTIONS BETWEEN THE     2BBV 14
+REMARK   8 STRANDS OF THE BARREL.  THE BETA-BARREL CONTAINS TWO BETA    2BBV 14
+REMARK   8 SHEETS, ?BG AND ?CF (? CORRESPONDS TO A OR B OR C DEPENDING  2BBV 14
+REMARK   8 ON THE SUBUNIT).  SHEETS ?BG AND ?CF EACH CONTAIN FOUR       2BBV 15
+REMARK   8 STRANDS (IN SHEET ?BG STRANDS 1, 2, 3, AND, 4 CORRESPOND TO  2BBV 15
+REMARK   8 STRANDS B, I, D, AND G, RESPECTIVELY, WHEREAS IN SHEET ?CF   2BBV 15
+REMARK   8 STRANDS 1, 2, 3, AND 4 CORRESPOND TO STRANDS C, H, E, AND    2BBV 15
+REMARK   8 F, RESPECTIVELY.  THE LETTERS INDICATE THE ORDER OF THE      2BBV 15
+REMARK   8 STRANDS IN THE PRIMARY STRUCTURE).  THERE IS ANOTHER SHEET   2BBV 15
+REMARK   8 ?EX, WHICH CONTAINS FOUR STRANDS (OF WHICH TWO ARE SHORT     2BBV 15
+REMARK   8 STRANDS) AND A PAIR OF PROTRUDING STRANDS, DESIGNATED AS     2BBV 15
+REMARK   8 ?PR BELONG TO THE SAME B-BARREL DOMAIN.                      2BBV 15
+REMARK   9                                                              2BBV 15
+REMARK   9 THE ALPHA-HELICAL DOMAIN CONSISTS OF THREE ALPHA-HELICES     2BBV 16
+REMARK   9 (?H1, ?H2, AND ?H3), WHICH ARE LOCATED INSIDE THE PROTEIN    2BBV 16
+REMARK   9 CONTIGUOUS SHELL.  (? CORRESPONDS TO A OR B OR C DEPENDING   2BBV 16
+REMARK   9 ON THE SUBUNIT).                                             2BBV 16
+REMARK  10                                                              2BBV 16
+REMARK  10 CROSS REFERENCE TO SEQUENCE DATABASE                         2BBV 16
+REMARK  10 SWISS-PROT ENTRY NAME       PDB ENTRY CHAIN NAME             2BBV 16
+REMARK  10    COAT_BBV                         A                        2BBV 16
+REMARK  10    COAT_BBV                         B                        2BBV 16
+REMARK  10    COAT_BBV                         C                        2BBV 16
+REMARK  10    COAT_BBV                         D                        2BBV 17
+REMARK  10    COAT_BBV                         E                        2BBV 17
+REMARK  10    COAT_BBV                         F                        2BBV 17
+SEQRES   1 A  363  MET VAL ARG ASN ASN ASN ARG ARG ARG GLN ARG THR GLN  2BBV 173
+SEQRES   2 A  363  ARG ILE VAL THR THR THR THR GLN THR ALA PRO VAL PRO  2BBV 174
+SEQRES   3 A  363  GLN GLN ASN VAL PRO LYS GLN PRO ARG ARG ARG ARG ASN  2BBV 175
+SEQRES   4 A  363  ARG ALA ARG ARG ASN ARG ARG GLN GLY ARG ALA MET ASN  2BBV 176
+SEQRES   5 A  363  MET GLY ALA LEU THR ARG LEU SER GLN PRO GLY LEU ALA  2BBV 177
+SEQRES   6 A  363  PHE LEU LYS CYS ALA PHE ALA PRO PRO ASP PHE ASN THR  2BBV 178
+SEQRES   7 A  363  ASP PRO GLY LYS GLY ILE PRO ASP ARG PHE GLU GLY LYS  2BBV 179
+SEQRES   8 A  363  VAL VAL THR ARG LYS ASP VAL LEU ASN GLN SER ILE ASN  2BBV 180
+SEQRES   9 A  363  PHE THR ALA ASN ARG ASP THR PHE ILE LEU ILE ALA PRO  2BBV 181
+SEQRES  10 A  363  THR PRO GLY VAL ALA TYR TRP VAL ALA ASP VAL PRO ALA  2BBV 182
+SEQRES  11 A  363  GLY THR PHE PRO ILE SER THR THR THR PHE ASN ALA VAL  2BBV 183
+SEQRES  12 A  363  ASN PHE PRO GLY PHE ASN SER MET PHE GLY ASN ALA ALA  2BBV 184
+SEQRES  13 A  363  ALA SER ARG SER ASP GLN VAL SER SER PHE ARG TYR ALA  2BBV 185
+SEQRES  14 A  363  SER MET ASN VAL GLY ILE TYR PRO THR SER ASN LEU MET  2BBV 186
+SEQRES  15 A  363  GLN PHE ALA GLY SER ILE THR VAL TRP LYS CYS PRO VAL  2BBV 187
+SEQRES  16 A  363  LYS LEU SER ASN VAL GLN PHE PRO VAL ALA THR THR PRO  2BBV 188
+SEQRES  17 A  363  ALA THR SER ALA LEU VAL HIS THR LEU VAL GLY LEU ASP  2BBV 189
+SEQRES  18 A  363  GLY VAL LEU ALA VAL GLY PRO ASP ASN PHE SER GLU SER  2BBV 190
+SEQRES  19 A  363  PHE ILE LYS GLY VAL PHE SER GLN SER VAL CYS ASN GLU  2BBV 191
+SEQRES  20 A  363  PRO ASP PHE GLU PHE SER ASP ILE LEU GLU GLY ILE GLN  2BBV 192
+SEQRES  21 A  363  THR LEU PRO PRO ALA ASN VAL THR VAL ALA THR SER GLY  2BBV 193
+SEQRES  22 A  363  GLN PRO PHE ASN LEU ALA ALA GLY ALA GLU ALA VAL SER  2BBV 194
+SEQRES  23 A  363  GLY ILE VAL GLY TRP GLY ASN MET ASP THR ILE VAL ILE  2BBV 195
+SEQRES  24 A  363  ARG VAL SER ALA PRO THR GLY ALA VAL ASN SER ALA ILE  2BBV 196
+SEQRES  25 A  363  LEU LYS THR TRP ALA CYS LEU GLU TYR ARG PRO ASN PRO  2BBV 197
+SEQRES  26 A  363  ASN ALA MET LEU TYR GLN PHE GLY HIS ASP SER PRO PRO  2BBV 198
+SEQRES  27 A  363  CYS ASP GLU VAL ALA LEU GLN GLU TYR ARG THR VAL ALA  2BBV 199
+SEQRES  28 A  363  ARG SER LEU PRO VAL ALA VAL ILE ALA ALA GLN ASN      2BBV 200
+SEQRES   1 D   44  ALA SER MET TRP GLU ARG VAL LYS SER ILE ILE LYS SER  2BBV 201
+SEQRES   2 D   44  SER LEU ALA MET ALA SER ASN VAL PRO GLY PRO ILE GLY  2BBV 202
+SEQRES   3 D   44  ILE ALA ALA SER GLY LEU SER GLY LEU SER ALA LEU PHE  2BBV 203
+SEQRES   4 D   44  GLU GLY PHE GLY PHE                                  2BBV 204
+SEQRES   1 B  363  MET VAL ARG ASN ASN ASN ARG ARG ARG GLN ARG THR GLN  2BBV 205
+SEQRES   2 B  363  ARG ILE VAL THR THR THR THR GLN THR ALA PRO VAL PRO  2BBV 206
+SEQRES   3 B  363  GLN GLN ASN VAL PRO LYS GLN PRO ARG ARG ARG ARG ASN  2BBV 207
+SEQRES   4 B  363  ARG ALA ARG ARG ASN ARG ARG GLN GLY ARG ALA MET ASN  2BBV 208
+SEQRES   5 B  363  MET GLY ALA LEU THR ARG LEU SER GLN PRO GLY LEU ALA  2BBV 209
+SEQRES   6 B  363  PHE LEU LYS CYS ALA PHE ALA PRO PRO ASP PHE ASN THR  2BBV 210
+SEQRES   7 B  363  ASP PRO GLY LYS GLY ILE PRO ASP ARG PHE GLU GLY LYS  2BBV 211
+SEQRES   8 B  363  VAL VAL THR ARG LYS ASP VAL LEU ASN GLN SER ILE ASN  2BBV 212
+SEQRES   9 B  363  PHE THR ALA ASN ARG ASP THR PHE ILE LEU ILE ALA PRO  2BBV 213
+SEQRES  10 B  363  THR PRO GLY VAL ALA TYR TRP VAL ALA ASP VAL PRO ALA  2BBV 214
+SEQRES  11 B  363  GLY THR PHE PRO ILE SER THR THR THR PHE ASN ALA VAL  2BBV 215
+SEQRES  12 B  363  ASN PHE PRO GLY PHE ASN SER MET PHE GLY ASN ALA ALA  2BBV 216
+SEQRES  13 B  363  ALA SER ARG SER ASP GLN VAL SER SER PHE ARG TYR ALA  2BBV 217
+SEQRES  14 B  363  SER MET ASN VAL GLY ILE TYR PRO THR SER ASN LEU MET  2BBV 218
+SEQRES  15 B  363  GLN PHE ALA GLY SER ILE THR VAL TRP LYS CYS PRO VAL  2BBV 219
+SEQRES  16 B  363  LYS LEU SER ASN VAL GLN PHE PRO VAL ALA THR THR PRO  2BBV 220
+SEQRES  17 B  363  ALA THR SER ALA LEU VAL HIS THR LEU VAL GLY LEU ASP  2BBV 221
+SEQRES  18 B  363  GLY VAL LEU ALA VAL GLY PRO ASP ASN PHE SER GLU SER  2BBV 222
+SEQRES  19 B  363  PHE ILE LYS GLY VAL PHE SER GLN SER VAL CYS ASN GLU  2BBV 223
+SEQRES  20 B  363  PRO ASP PHE GLU PHE SER ASP ILE LEU GLU GLY ILE GLN  2BBV 224
+SEQRES  21 B  363  THR LEU PRO PRO ALA ASN VAL THR VAL ALA THR SER GLY  2BBV 225
+SEQRES  22 B  363  GLN PRO PHE ASN LEU ALA ALA GLY ALA GLU ALA VAL SER  2BBV 226
+SEQRES  23 B  363  GLY ILE VAL GLY TRP GLY ASN MET ASP THR ILE VAL ILE  2BBV 227
+SEQRES  24 B  363  ARG VAL SER ALA PRO THR GLY ALA VAL ASN SER ALA ILE  2BBV 228
+SEQRES  25 B  363  LEU LYS THR TRP ALA CYS LEU GLU TYR ARG PRO ASN PRO  2BBV 229
+SEQRES  26 B  363  ASN ALA MET LEU TYR GLN PHE GLY HIS ASP SER PRO PRO  2BBV 230
+SEQRES  27 B  363  CYS ASP GLU VAL ALA LEU GLN GLU TYR ARG THR VAL ALA  2BBV 231
+SEQRES  28 B  363  ARG SER LEU PRO VAL ALA VAL ILE ALA ALA GLN ASN      2BBV 232
+SEQRES   1 E   44  ALA SER MET TRP GLU ARG VAL LYS SER ILE ILE LYS SER  2BBV 233
+SEQRES   2 E   44  SER LEU ALA MET ALA SER ASN VAL PRO GLY PRO ILE GLY  2BBV 234
+SEQRES   3 E   44  ILE ALA ALA SER GLY LEU SER GLY LEU SER ALA LEU PHE  2BBV 235
+SEQRES   4 E   44  GLU GLY PHE GLY PHE                                  2BBV 236
+SEQRES   1 C  363  MET VAL ARG ASN ASN ASN ARG ARG ARG GLN ARG THR GLN  2BBV 237
+SEQRES   2 C  363  ARG ILE VAL THR THR THR THR GLN THR ALA PRO VAL PRO  2BBV 238
+SEQRES   3 C  363  GLN GLN ASN VAL PRO LYS GLN PRO ARG ARG ARG ARG ASN  2BBV 239
+SEQRES   4 C  363  ARG ALA ARG ARG ASN ARG ARG GLN GLY ARG ALA MET ASN  2BBV 240
+SEQRES   5 C  363  MET GLY ALA LEU THR ARG LEU SER GLN PRO GLY LEU ALA  2BBV 241
+SEQRES   6 C  363  PHE LEU LYS CYS ALA PHE ALA PRO PRO ASP PHE ASN THR  2BBV 242
+SEQRES   7 C  363  ASP PRO GLY LYS GLY ILE PRO ASP ARG PHE GLU GLY LYS  2BBV 243
+SEQRES   8 C  363  VAL VAL THR ARG LYS ASP VAL LEU ASN GLN SER ILE ASN  2BBV 244
+SEQRES   9 C  363  PHE THR ALA ASN ARG ASP THR PHE ILE LEU ILE ALA PRO  2BBV 245
+SEQRES  10 C  363  THR PRO GLY VAL ALA TYR TRP VAL ALA ASP VAL PRO ALA  2BBV 246
+SEQRES  11 C  363  GLY THR PHE PRO ILE SER THR THR THR PHE ASN ALA VAL  2BBV 247
+SEQRES  12 C  363  ASN PHE PRO GLY PHE ASN SER MET PHE GLY ASN ALA ALA  2BBV 248
+SEQRES  13 C  363  ALA SER ARG SER ASP GLN VAL SER SER PHE ARG TYR ALA  2BBV 249
+SEQRES  14 C  363  SER MET ASN VAL GLY ILE TYR PRO THR SER ASN LEU MET  2BBV 250
+SEQRES  15 C  363  GLN PHE ALA GLY SER ILE THR VAL TRP LYS CYS PRO VAL  2BBV 251
+SEQRES  16 C  363  LYS LEU SER ASN VAL GLN PHE PRO VAL ALA THR THR PRO  2BBV 252
+SEQRES  17 C  363  ALA THR SER ALA LEU VAL HIS THR LEU VAL GLY LEU ASP  2BBV 253
+SEQRES  18 C  363  GLY VAL LEU ALA VAL GLY PRO ASP ASN PHE SER GLU SER  2BBV 254
+SEQRES  19 C  363  PHE ILE LYS GLY VAL PHE SER GLN SER VAL CYS ASN GLU  2BBV 255
+SEQRES  20 C  363  PRO ASP PHE GLU PHE SER ASP ILE LEU GLU GLY ILE GLN  2BBV 256
+SEQRES  21 C  363  THR LEU PRO PRO ALA ASN VAL THR VAL ALA THR SER GLY  2BBV 257
+SEQRES  22 C  363  GLN PRO PHE ASN LEU ALA ALA GLY ALA GLU ALA VAL SER  2BBV 258
+SEQRES  23 C  363  GLY ILE VAL GLY TRP GLY ASN MET ASP THR ILE VAL ILE  2BBV 259
+SEQRES  24 C  363  ARG VAL SER ALA PRO THR GLY ALA VAL ASN SER ALA ILE  2BBV 260
+SEQRES  25 C  363  LEU LYS THR TRP ALA CYS LEU GLU TYR ARG PRO ASN PRO  2BBV 261
+SEQRES  26 C  363  ASN ALA MET LEU TYR GLN PHE GLY HIS ASP SER PRO PRO  2BBV 262
+SEQRES  27 C  363  CYS ASP GLU VAL ALA LEU GLN GLU TYR ARG THR VAL ALA  2BBV 263
+SEQRES  28 C  363  ARG SER LEU PRO VAL ALA VAL ILE ALA ALA GLN ASN      2BBV 264
+SEQRES   1 F   44  ALA SER MET TRP GLU ARG VAL LYS SER ILE ILE LYS SER  2BBV 265
+SEQRES   2 F   44  SER LEU ALA MET ALA SER ASN VAL PRO GLY PRO ILE GLY  2BBV 266
+SEQRES   3 F   44  ILE ALA ALA SER GLY LEU SER GLY LEU SER ALA LEU PHE  2BBV 267
+SEQRES   4 F   44  GLU GLY PHE GLY PHE                                  2BBV 268
+SEQRES   1 N   10    U   C   U   U   A   U   A   U   C   U              2BBV 269
+FTNOTE   1                                                              2BBV 27
+FTNOTE   1 CIS PROLINE - PRO A   263                                    2BBV 27
+FTNOTE   2                                                              2BBV 27
+FTNOTE   2 CIS PROLINE - PRO B   263                                    2BBV 27
+FTNOTE   3                                                              2BBV 27
+FTNOTE   3 CIS PROLINE - PRO C   263                                    2BBV 27
+HET     CA      1       1     CALCIUM +2 COUNTER ION                    2BBV 27
+HET     CA      2       1     CALCIUM +2 COUNTER ION                    2BBV 27
+HET     CA      3       1     CALCIUM +2 COUNTER ION                    2BBV 27
+HET     CA      4       1     CALCIUM +2 COUNTER ION                    2BBV 27
+HET     CA      5       1     CALCIUM +2 COUNTER ION                    2BBV 28
+FORMUL   8   CA    5(CA1 ++)                                            2BBV 28
+FORMUL   9  HOH   *208(H2 O1)                                           2BBV 28
+HELIX    1  A1 GLN A   61  PRO A   73  1                                2BBV 28
+HELIX    2 SA1 GLY A  147  MET A  151  5                                2BBV 28
+HELIX    3 SA2 GLY A  219  VAL A  223  5                                2BBV 28
+HELIX    4 SA3 LEU A  329  GLY A  333  5                                2BBV 28
+HELIX    5  A2 GLU A  341  SER A  353  1                                2BBV 28
+HELIX    6  A3 SER D  365  ALA D  379  1                                2BBV 28
+HELIX    7  B1 GLN B   61  PRO B   73  1                                2BBV 28
+HELIX    8 SB1 GLY B  147  MET B  151  5                                2BBV 29
+HELIX    9 SB2 GLY B  219  VAL B  223  5                                2BBV 29
+HELIX   10 SB3 LEU B  329  GLY B  333  5                                2BBV 29
+HELIX   11  B2 GLU B  341  SER B  353  1                                2BBV 29
+HELIX   12  B3 SER E  365  ALA E  379  1                                2BBV 29
+HELIX   13  C1 GLN C   61  PRO C   73  1                                2BBV 29
+HELIX   14 SC1 GLY C  147  MET C  151  5                                2BBV 29
+HELIX   15 SC2 GLY C  219  VAL C  223  5                                2BBV 29
+HELIX   16 SC3 LEU C  329  GLY C  333  5                                2BBV 29
+HELIX   17  C2 GLU C  341  SER C  353  1                                2BBV 29
+HELIX   18  C3 SER F  365  ALA F  379  1                                2BBV 30
+SHEET    1 ABG 4 VAL A  92  PHE A 105  0                                2BBV 30
+SHEET    2 ABG 4 ASN A 309  LEU A 319 -1                                2BBV 30
+SHEET    3 ABG 4 ALA A 169  THR A 178 -1                                2BBV 30
+SHEET    4 ABG 4 VAL A 239  SER A 243 -1                                2BBV 30
+SHEET    1 ACF 4 ASN A 108  THR A 118  0                                2BBV 30
+SHEET    2 ACF 4 THR A 296  SER A 302 -1                                2BBV 30
+SHEET    3 ACF 4 SER A 187  CYS A 193 -1                                2BBV 30
+SHEET    4 ACF 4 PHE A 231  PHE A 235 -1                                2BBV 30
+SHEET    1 AEX 4 VAL A 121  PRO A 129  0                                2BBV 30
+SHEET    2 AEX 4 THR A 137  PHE A 145 -1                                2BBV 31
+SHEET    3 AEX 4 ASN A 277  ALA A 279  1                                2BBV 31
+SHEET    4 AEX 4 GLN A 260  LEU A 262 -1                                2BBV 31
+SHEET    1 APR 2 LYS A 196  VAL A 204  0                                2BBV 31
+SHEET    2 APR 2 ALA A 209  VAL A 218 -1                                2BBV 31
+SHEET    1 BBG 4 VAL B  92  PHE B 105  0                                2BBV 31
+SHEET    2 BBG 4 ASN B 309  LEU B 319 -1                                2BBV 31
+SHEET    3 BBG 4 ALA B 169  THR B 178 -1                                2BBV 31
+SHEET    4 BBG 4 VAL B 239  SER B 243 -1                                2BBV 31
+SHEET    1 BCF 4 ASN B 108  THR B 118  0                                2BBV 31
+SHEET    2 BCF 4 THR B 296  SER B 302 -1                                2BBV 32
+SHEET    3 BCF 4 SER B 187  CYS B 193 -1                                2BBV 32
+SHEET    4 BCF 4 PHE B 231  PHE B 235 -1                                2BBV 32
+SHEET    1 BEX 4 VAL B 121  PRO B 129  0                                2BBV 32
+SHEET    2 BEX 4 THR B 137  PHE B 145 -1                                2BBV 32
+SHEET    3 BEX 4 ASN B 277  ALA B 279  1                                2BBV 32
+SHEET    4 BEX 4 GLN B 260  LEU B 262 -1                                2BBV 32
+SHEET    1 BPR 2 LYS B 196  VAL B 204  0                                2BBV 32
+SHEET    2 BPR 2 ALA B 209  VAL B 218 -1                                2BBV 32
+SHEET    1 CBG 4 VAL C  92  PHE C 105  0                                2BBV 32
+SHEET    2 CBG 4 ASN C 309  LEU C 319 -1                                2BBV 33
+SHEET    3 CBG 4 ALA C 169  THR C 178 -1                                2BBV 33
+SHEET    4 CBG 4 VAL C 239  SER C 243 -1                                2BBV 33
+SHEET    1 CCF 4 ASN C 108  THR C 118  0                                2BBV 33
+SHEET    2 CCF 4 THR C 296  SER C 302 -1                                2BBV 33
+SHEET    3 CCF 4 SER C 187  CYS C 193 -1                                2BBV 33
+SHEET    4 CCF 4 PHE C 231  PHE C 235 -1                                2BBV 33
+SHEET    1 CEX 4 VAL C 121  PRO C 129  0                                2BBV 33
+SHEET    2 CEX 4 THR C 137  PHE C 145 -1                                2BBV 33
+SHEET    3 CEX 4 ASN C 277  ALA C 279  1                                2BBV 33
+SHEET    4 CEX 4 GLN C 260  LEU C 262 -1                                2BBV 34
+SHEET    1 CPR 2 LYS C 196  VAL C 204  0                                2BBV 34
+SHEET    2 CPR 2 ALA C 209  VAL C 218 -1                                2BBV 34
+TURN     1  A1 ALA A  72  ASP A  75                                     2BBV 34
+TURN     2  A2 PRO A  73  PHE A  76                                     2BBV 34
+TURN     3  A3 THR A 106  ARG A 109                                     2BBV 34
+TURN     4  A4 THR A 118  VAL A 121                                     2BBV 34
+TURN     5  A5 PRO A 129  THR A 132                                     2BBV 34
+TURN     6  A6 ILE A 135  THR A 138                                     2BBV 34
+TURN     7  A7 PHE A 145  PHE A 148                                     2BBV 34
+TURN     8  A8 ALA A 155  SER A 158                                     2BBV 35
+TURN     9  A9 SER A 158  ASP A 161                                     2BBV 35
+TURN    10 A10 ASN A 180  GLN A 183                                     2BBV 35
+TURN    11 A11 THR A 206  ALA A 209                                     2BBV 35
+TURN    12 A12 SER A 234  LYS A 237                                     2BBV 35
+TURN    13 A13 PHE A 235  GLY A 238                                     2BBV 35
+TURN    14 A14 THR A 268  THR A 271                                     2BBV 35
+TURN    15 A15 ALA A 282  VAL A 285                                     2BBV 35
+TURN    16 A16 PRO A 304  ALA A 307                                     2BBV 35
+TURN    17 A17 ASN A 324  ALA A 327                                     2BBV 35
+TURN    18 A18 ALA A 360  ASN A 363                                     2BBV 36
+TURN    19  B1 ALA B  72  ASP B  75                                     2BBV 36
+TURN    20  B2 PRO B  73  PHE B  76                                     2BBV 36
+TURN    21  B3 THR B 106  ARG B 109                                     2BBV 36
+TURN    22  B4 THR B 118  VAL B 121                                     2BBV 36
+TURN    23  B5 PRO B 129  THR B 132                                     2BBV 36
+TURN    24  B6 ILE B 135  THR B 138                                     2BBV 36
+TURN    25  B7 PHE B 145  PHE B 148                                     2BBV 36
+TURN    26  B8 ALA B 155  SER B 158                                     2BBV 36
+TURN    27  B9 SER B 158  ASP B 161                                     2BBV 36
+TURN    28 B10 ASN B 180  GLN B 183                                     2BBV 37
+TURN    29 B11 THR B 206  ALA B 209                                     2BBV 37
+TURN    30 B12 SER B 234  LYS B 237                                     2BBV 37
+TURN    31 B13 PHE B 235  GLY B 238                                     2BBV 37
+TURN    32 B14 THR B 268  THR B 271                                     2BBV 37
+TURN    33 B15 ALA B 282  VAL B 285                                     2BBV 37
+TURN    34 B16 PRO B 304  ALA B 307                                     2BBV 37
+TURN    35 B17 ASN B 324  ALA B 327                                     2BBV 37
+TURN    36 B18 ALA B 360  ASN B 363                                     2BBV 37
+TURN    37  C1 ALA C  72  ASP C  75                                     2BBV 37
+TURN    38  C2 PRO C  73  PHE C  76                                     2BBV 38
+TURN    39  C3 THR C 106  ARG C 109                                     2BBV 38
+TURN    40  C4 THR C 118  VAL C 121                                     2BBV 38
+TURN    41  C5 PRO C 129  THR C 132                                     2BBV 38
+TURN    42  C6 ILE C 135  THR C 138                                     2BBV 38
+TURN    43  C7 PHE C 145  PHE C 148                                     2BBV 38
+TURN    44  C8 ALA C 155  SER C 158                                     2BBV 38
+TURN    45  C9 SER C 158  ASP C 161                                     2BBV 38
+TURN    46 C10 ASN C 180  GLN C 183                                     2BBV 38
+TURN    47 C11 THR C 206  ALA C 209                                     2BBV 38
+TURN    48 C12 SER C 234  LYS C 237                                     2BBV 39
+TURN    49 C13 PHE C 235  GLY C 238                                     2BBV 39
+TURN    50 C14 THR C 268  THR C 271                                     2BBV 39
+TURN    51 C15 ALA C 282  VAL C 285                                     2BBV 39
+TURN    52 C16 PRO C 304  ALA C 307                                     2BBV 39
+TURN    53 C17 ASN C 324  ALA C 327                                     2BBV 39
+TURN    54 C18 ALA C 360  ASN C 363                                     2BBV 39
+CRYST1  362.000  362.000  362.000  90.00  90.00  90.00 P 42 3 2    360  2BBV 39
+ORIGX1      1.000000  0.000000  0.000000        0.00000                 2BBV 39
+ORIGX2      0.000000  1.000000  0.000000        0.00000                 2BBV 39
+ORIGX3      0.000000  0.000000  1.000000        0.00000                 2BBV 40
+SCALE1      0.002762  0.000000  0.000000        0.00000                 2BBV 40
+SCALE2      0.000000  0.002762  0.000000        0.00000                 2BBV 40
+SCALE3      0.000000  0.000000  0.002762        0.00000                 2BBV 40
+MTRIX1   1  0.309020  0.809020 -0.500000        0.00000                 2BBV 40
+MTRIX2   1 -0.809020  0.500000  0.309020        0.00000                 2BBV 40
+MTRIX3   1  0.500000  0.309020  0.809020        0.00000                 2BBV 40
+MTRIX1   2 -0.809020  0.500000 -0.309020        0.00000                 2BBV 40
+MTRIX2   2 -0.500000 -0.309020  0.809020        0.00000                 2BBV 40
+MTRIX3   2  0.309020  0.809020  0.500000        0.00000                 2BBV 40
+MTRIX1   3 -0.809020 -0.500000  0.309020        0.00000                 2BBV 41
+MTRIX2   3  0.500000 -0.309020  0.809020        0.00000                 2BBV 41
+MTRIX3   3 -0.309020  0.809020  0.500000        0.00000                 2BBV 41
+MTRIX1   4  0.309020 -0.809020  0.500000        0.00000                 2BBV 41
+MTRIX2   4  0.809020  0.500000  0.309020        0.00000                 2BBV 41
+MTRIX3   4 -0.500000  0.309020  0.809020        0.00000                 2BBV 41
+USER  MOD -----------------------------------------------------------------
+USER  MOD scores for adjustable sidechains, with "set" totals for H,N and Q
+USER  MOD "o" means original, "f" means flipped, "180deg" is methyl default
+USER  MOD "!" flags a clash with an overlap of 0.40A or greater
+USER  MOD flip categories: "K"=keep, "C"=clashes, "X"=uncertain, "F"=flip
+USER  MOD Set 1.1:B  69 CYS SG  :   rot   96:sc=   0.208
+USER  MOD Set 1.2:B 170 SER OG  :   rot  175:sc=   -1.29!
+USER  MOD Set 2.1:B 144 ASN     :      amide:sc=   0.979  K(o=1.8,f=-4.9!)
+USER  MOD Set 2.2:B 286 SER OG  :   rot  114:sc=   0.804
+USER  MOD Set 3.1:A 189 THR OG1 :   rot  -85:sc=    0.82
+USER  MOD Set 3.2:A 232 SER OG  :   rot  180:sc=   0.731
+USER  MOD Set 4.1:C 268 THR OG1 :   rot  180:sc=   0.283
+USER  MOD Set 4.2:C 271 THR OG1 :   rot   83:sc=   0.306
+USER  MOD Set 5.1:A 179 SER OG  :   rot -101:sc=    1.22
+USER  MOD Set 5.2:A 310 SER OG  :   rot  180:sc=       0
+USER  MOD Set 6.1:A 101 GLN     :      amide:sc=   0.687  K(o=1.8,f=-3.4!)
+USER  MOD Set 6.2:A 123 TYR OH  :   rot   10:sc=    1.14
+USER  MOD Set 7.1:A 206 THR OG1 :   rot  130:sc= -0.0568
+USER  MOD Set 7.2:A 210 THR OG1 :   rot  100:sc=   -1.18
+USER  MOD Set 7.3:B 206 THR OG1 :   rot  180:sc=  -0.317
+USER  MOD Set 8.1:A 215 HIS     :     no HD1:sc=   -3.98! C(o=-5.3!,f=-12!)
+USER  MOD Set 8.2:C 199 ASN     :      amide:sc=   -1.34  K(o=-5.3,f=-9)
+USER  MOD Set 9.1:A 100 ASN     :      amide:sc=  -0.972  K(o=-0.97,f=-2.3!)
+USER  MOD Set 9.2:A 314 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Set10.1:A 216 THR OG1 :   rot  170:sc=   0.828
+USER  MOD Set10.2:A 274 GLN     :FLIP  amide:sc=  -0.873  F(o=-1.3,f=-0.046)
+USER  MOD Set11.1:C 242 GLN     :FLIP  amide:sc=   -1.29  F(o=-2.9!,f=-1.3)
+USER  MOD Set11.2:F 366 MET CE  :methyl -137:sc=       0   (180deg=0)
+USER  MOD Set12.1:C 164 SER OG  :   rot  144:sc=   -1.26!
+USER  MOD Set12.2:C 165 SER OG  :   rot  170:sc=       0
+USER  MOD Set13.1:A 196 LYS NZ  :NH3+    165:sc=   0.463   (180deg=0.363)
+USER  MOD Set13.2:B 164 SER OG  :   rot  176:sc=    1.22
+USER  MOD Set13.3:B 165 SER OG  :   rot   76:sc=   0.365
+USER  MOD Set14.1:C  29 ASN     :      amide:sc= -0.0195  X(o=-0.02,f=0)
+USER  MOD Set14.2:C  78 THR OG1 :   rot  180:sc=       0
+USER  MOD Set15.1:A  94 THR OG1 :   rot   78:sc=   0.763
+USER  MOD Set15.2:A 334 HIS     :     no HE2:sc=    1.64  K(o=2.4,f=-7.6!)
+USER  MOD Set16.1:A 165 SER OG  :   rot   18:sc=   -4.79!
+USER  MOD Set16.2:C 196 LYS NZ  :NH3+   -124:sc=   0.292   (180deg=0.652)
+USER  MOD Set17.1:A 349 THR OG1 :   rot  180:sc=       0
+USER  MOD Set17.2:D 377 SER OG  :   rot  180:sc=       0
+USER  MOD Set18.1:F 375 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Set18.2:N  10   U O3' :   rot  180:sc=   0.135
+USER  MOD Set19.1:C  94 THR OG1 :   rot -105:sc=   0.406
+USER  MOD Set19.2:C 334 HIS     :     no HE2:sc=   -11.5! C(o=-11!,f=-16!)
+USER  MOD Set20.1:C 189 THR OG1 :   rot  -88:sc=  0.0589
+USER  MOD Set20.2:C 232 SER OG  :   rot  162:sc=   0.896
+USER  MOD Set21.1:B 104 ASN     :      amide:sc=   -3.36! C(o=-1.7!,f=-4.4!)
+USER  MOD Set21.2:B 179 SER OG  :   rot -124:sc=     1.6
+USER  MOD Set21.3:B 310 SER OG  :   rot -127:sc=  0.0431
+USER  MOD Set22.1:B  94 THR OG1 :   rot -102:sc=   0.563
+USER  MOD Set22.2:B 334 HIS     :     no HE2:sc=  -0.648  K(o=-0.085,f=-8!)
+USER  MOD Set23.1:C 178 THR OG1 :   rot  180:sc=       0
+USER  MOD Set23.2:C 179 SER OG  :   rot   68:sc=  -0.184
+USER  MOD Set23.3:C 310 SER OG  :   rot   33:sc=   0.217
+USER  MOD Set24.1:A  91 LYS NZ  :NH3+   -148:sc=    1.18   (180deg=-0.25!)
+USER  MOD Set24.2:A 330 TYR OH  :   rot    3:sc=     1.2
+USER  MOD Set25.1:B 101 GLN     :      amide:sc=    1.03  K(o=2.2,f=1.2)
+USER  MOD Set25.2:B 123 TYR OH  :   rot  -15:sc=     1.2
+USER  MOD Set26.1:A 144 ASN     :FLIP  amide:sc=    -1.8  F(o=-3.5!,f=-2.1)
+USER  MOD Set26.2:A 286 SER OG  :   rot  180:sc=  -0.272
+USER  MOD Set27.1:B 199 ASN     :      amide:sc=   -4.93! C(o=-11!,f=-14!)
+USER  MOD Set27.2:B 201 GLN     :FLIP  amide:sc=   -1.36  F(o=-12!,f=-11)
+USER  MOD Set27.3:C 215 HIS     :FLIP no HD1:sc=   -4.48! C(o=-22!,f=-11!)
+USER  MOD Set28.1:B 171 MET CE  :methyl  149:sc=   -2.57   (180deg=-4.32!)
+USER  MOD Set28.2:B 243 SER OG  :   rot  170:sc=    1.16
+USER  MOD Set29.1:C 349 THR OG1 :   rot  180:sc=-0.00834
+USER  MOD Set29.2:F 377 SER OG  :   rot -140:sc=       0
+USER  MOD Set30.1:C 100 ASN     :FLIP  amide:sc=   -10.4! C(o=-13!,f=-9.6!)
+USER  MOD Set30.2:C 314 LYS NZ  :NH3+   -149:sc=    0.83   (180deg=-0.389)
+USER  MOD Set31.1:A 199 ASN     :      amide:sc=  -0.693  K(o=-1.3,f=-3.8!)
+USER  MOD Set31.2:B 215 HIS     :FLIP no HD1:sc=   -0.62  F(o=-2,f=-1.3)
+USER  MOD Set32.1:C  69 CYS SG  :   rot  -13:sc=  -0.769
+USER  MOD Set32.2:C  96 LYS NZ  :NH3+    162:sc=   -2.09!  (180deg=-2.17!)
+USER  MOD Set32.3:C 170 SER OG  :   rot  147:sc=   0.149
+USER  MOD Set32.4:C 172 ASN     :FLIP  amide:sc=   -1.24  F(o=-7!,f=-3.6)
+USER  MOD Set32.5:C 318 CYS SG  :   rot  160:sc=    0.34
+USER  MOD Set33.1:B 216 THR OG1 :   rot  160:sc=    1.41
+USER  MOD Set33.2:B 274 GLN     :      amide:sc=   -2.68! C(o=-1.3!,f=-6.4!)
+USER  MOD Set34.1:B 100 ASN     :      amide:sc=-0.00139  X(o=-0.0014,f=0)
+USER  MOD Set34.2:B 314 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Set35.1:B 176 TYR OH  :   rot   -3:sc=   0.441
+USER  MOD Set35.2:B 363 ASN     :      amide:sc=   -5.24! C(o=-4.8!,f=-4.7!)
+USER  MOD Set36.1:C 216 THR OG1 :   rot  160:sc=    1.15
+USER  MOD Set36.2:C 274 GLN     :      amide:sc=  -0.101  K(o=1,f=-2.6!)
+USER  MOD Set37.1:A  69 CYS SG  :   rot   88:sc=   0.268
+USER  MOD Set37.2:A 170 SER OG  :   rot -151:sc=    0.33
+USER  MOD Set38.1:A 243 SER OG  :   rot  152:sc=   0.655
+USER  MOD Set38.2:A 294 MET CE  :methyl  179:sc=   -6.97!  (180deg=-7.12!)
+USER  MOD Single :A  57 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A  60 SER OG  :   rot  -99:sc=    1.57
+USER  MOD Single :A  61 GLN     :FLIP  amide:sc=   -9.44! C(o=-13!,f=-9.4!)
+USER  MOD Single :A  68 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :A  77 ASN     :      amide:sc=  -0.495  X(o=-0.49,f=-0.46)
+USER  MOD Single :A  78 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A  82 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :A  96 LYS NZ  :NH3+    177:sc=   -2.39!  (180deg=-2.72!)
+USER  MOD Single :A 102 SER OG  :   rot  180:sc=   0.169
+USER  MOD Single :A 104 ASN     :FLIP  amide:sc=    -2.7! C(o=-6!,f=-2.7!)
+USER  MOD Single :A 106 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A 108 ASN     :      amide:sc=  -0.197  K(o=-0.2,f=-2.4!)
+USER  MOD Single :A 111 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A 118 THR OG1 :   rot   46:sc=   0.712
+USER  MOD Single :A 132 THR OG1 :   rot  160:sc=       0
+USER  MOD Single :A 136 SER OG  :   rot  180:sc=  -0.539
+USER  MOD Single :A 137 THR OG1 :   rot -167:sc=   -1.49
+USER  MOD Single :A 138 THR OG1 :   rot -130:sc=   0.122
+USER  MOD Single :A 139 THR OG1 :   rot    4:sc=   0.168
+USER  MOD Single :A 141 ASN     :      amide:sc=-0.00343  X(o=-0.0034,f=-0.11)
+USER  MOD Single :A 149 ASN     :      amide:sc=   -1.83! X(o=-1.8!,f=-1.4)
+USER  MOD Single :A 150 SER OG  :   rot  -65:sc=     1.6
+USER  MOD Single :A 151 MET CE  :methyl -155:sc=  -0.148   (180deg=-0.268)
+USER  MOD Single :A 154 ASN     :      amide:sc= -0.0315  X(o=-0.032,f=-0.067)
+USER  MOD Single :A 158 SER OG  :   rot  -49:sc=  -0.391
+USER  MOD Single :A 160 SER OG  :   rot  120:sc=-0.00915
+USER  MOD Single :A 162 GLN     :FLIP  amide:sc=   -4.32! C(o=-15!,f=-4.3!)
+USER  MOD Single :A 164 SER OG  :   rot  166:sc=    1.19
+USER  MOD Single :A 168 TYR OH  :   rot  180:sc=  -0.203
+USER  MOD Single :A 171 MET CE  :methyl  158:sc=  -0.125   (180deg=-1.26)
+USER  MOD Single :A 172 ASN     :FLIP  amide:sc=   -3.75! C(o=-5.7!,f=-3.7!)
+USER  MOD Single :A 176 TYR OH  :   rot  180:sc=  -0.142
+USER  MOD Single :A 178 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A 180 ASN     :      amide:sc=   -3.97! C(o=-4!,f=-11!)
+USER  MOD Single :A 182 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :A 183 GLN     :      amide:sc=   -4.07! C(o=-4.1!,f=-6.3!)
+USER  MOD Single :A 187 SER OG  :   rot  180:sc=       0
+USER  MOD Single :A 192 LYS NZ  :NH3+    138:sc=    1.56   (180deg=0.628)
+USER  MOD Single :A 193 CYS SG  :   rot  180:sc=    -1.1
+USER  MOD Single :A 198 SER OG  :   rot  153:sc=    1.65
+USER  MOD Single :A 201 GLN     :      amide:sc=   -7.83! C(o=-7.8!,f=-11!)
+USER  MOD Single :A 207 THR OG1 :   rot  180:sc=  0.0342
+USER  MOD Single :A 211 SER OG  :   rot  117:sc=   0.451
+USER  MOD Single :A 230 ASN     :      amide:sc=   0.545  K(o=0.55,f=-1.4)
+USER  MOD Single :A 234 SER OG  :   rot  180:sc=       0
+USER  MOD Single :A 237 LYS NZ  :NH3+    164:sc=   0.288   (180deg=0.0121)
+USER  MOD Single :A 241 SER OG  :   rot   86:sc=   0.845
+USER  MOD Single :A 242 GLN     :FLIP  amide:sc=  -0.925  F(o=-2!,f=-0.92)
+USER  MOD Single :A 245 CYS SG  :   rot -169:sc=   0.603
+USER  MOD Single :A 246 ASN     :FLIP  amide:sc=   -2.48  F(o=-9.4!,f=-2.5)
+USER  MOD Single :A 253 SER OG  :   rot  180:sc=       0
+USER  MOD Single :A 260 GLN     :FLIP  amide:sc=    1.01  F(o=-2.7!,f=1)
+USER  MOD Single :A 261 THR OG1 :   rot   80:sc=   0.717
+USER  MOD Single :A 266 ASN     :      amide:sc=-0.00376  K(o=-0.0038,f=-1.9!)
+USER  MOD Single :A 268 THR OG1 :   rot  179:sc=  -0.916
+USER  MOD Single :A 271 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A 272 SER OG  :   rot  -61:sc=    1.47
+USER  MOD Single :A 277 ASN     :      amide:sc=   -3.82! C(o=-3.8!,f=-4.8!)
+USER  MOD Single :A 293 ASN     :FLIP  amide:sc= -0.0252  F(o=-0.74,f=-0.025)
+USER  MOD Single :A 296 THR OG1 :   rot -170:sc=  -0.124
+USER  MOD Single :A 302 SER OG  :   rot   47:sc=     1.2
+USER  MOD Single :A 305 THR OG1 :   rot  180:sc= -0.0051
+USER  MOD Single :A 309 ASN     :FLIP  amide:sc=   0.412  F(o=-7!,f=0.41)
+USER  MOD Single :A 315 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :A 318 CYS SG  :   rot  180:sc=   -3.82!
+USER  MOD Single :A 321 TYR OH  :   rot  180:sc= -0.0436
+USER  MOD Single :A 324 ASN     :      amide:sc=  -0.715  K(o=-0.72,f=-1.4)
+USER  MOD Single :A 326 ASN     :FLIP  amide:sc=   -2.61! C(o=-11!,f=-2.6!)
+USER  MOD Single :A 328 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :A 331 GLN     :FLIP  amide:sc=   -2.45! C(o=-10!,f=-2.4!)
+USER  MOD Single :A 339 CYS SG  :   rot  120:sc=   -4.73!
+USER  MOD Single :A 345 GLN     :      amide:sc=  -0.416  K(o=-0.42,f=-2.3!)
+USER  MOD Single :A 347 TYR OH  :   rot   11:sc=    1.42
+USER  MOD Single :A 353 SER OG  :   rot   57:sc=   0.594
+USER  MOD Single :A 362 GLN     :      amide:sc=   -3.68! C(o=-3.7!,f=-5.7!)
+USER  MOD Single :A 363 ASN     :      amide:sc=  -0.514! C(o=-0.51!,f=-5.4!)
+USER  MOD Single :B  57 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B  60 SER OG  :   rot  136:sc=   -2.91!
+USER  MOD Single :B  61 GLN     :FLIP  amide:sc=   -1.98! C(o=-3!,f=-2!)
+USER  MOD Single :B  68 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B  77 ASN     :      amide:sc=   0.497  K(o=0.5,f=-0.76)
+USER  MOD Single :B  78 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B  82 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B  91 LYS NZ  :NH3+   -136:sc=  0.0313   (180deg=-0.00174)
+USER  MOD Single :B  96 LYS NZ  :NH3+   -161:sc=   -1.34   (180deg=-2.6!)
+USER  MOD Single :B 102 SER OG  :   rot  180:sc=       0
+USER  MOD Single :B 106 THR OG1 :   rot   85:sc=   0.489
+USER  MOD Single :B 108 ASN     :      amide:sc=  -0.729  K(o=-0.73,f=-1.2)
+USER  MOD Single :B 111 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B 118 THR OG1 :   rot   53:sc=   0.794
+USER  MOD Single :B 132 THR OG1 :   rot  -50:sc=    1.25
+USER  MOD Single :B 136 SER OG  :   rot  180:sc=       0
+USER  MOD Single :B 137 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B 138 THR OG1 :   rot   77:sc=   0.862
+USER  MOD Single :B 139 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B 141 ASN     :      amide:sc= -0.0112  X(o=-0.011,f=0)
+USER  MOD Single :B 149 ASN     :      amide:sc=    2.44  K(o=2.4,f=-0.78)
+USER  MOD Single :B 150 SER OG  :   rot  -79:sc=    1.22
+USER  MOD Single :B 151 MET CE  :methyl -172:sc=  -0.541   (180deg=-0.753)
+USER  MOD Single :B 154 ASN     :FLIP  amide:sc= -0.0103  F(o=-1.9,f=-0.01)
+USER  MOD Single :B 158 SER OG  :   rot  180:sc= -0.0722
+USER  MOD Single :B 160 SER OG  :   rot  130:sc=  -0.192
+USER  MOD Single :B 162 GLN     :      amide:sc=  -0.476  K(o=-0.48,f=-2.8)
+USER  MOD Single :B 168 TYR OH  :   rot  180:sc=       0
+USER  MOD Single :B 172 ASN     :      amide:sc=   -7.73! C(o=-7.7!,f=-13!)
+USER  MOD Single :B 178 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B 180 ASN     :      amide:sc=  0.0477  K(o=0.048,f=-8.8!)
+USER  MOD Single :B 182 MET CE  :methyl -165:sc=  -0.427   (180deg=-0.715)
+USER  MOD Single :B 183 GLN     :      amide:sc=   -3.29! C(o=-3.3!,f=-11!)
+USER  MOD Single :B 187 SER OG  :   rot  180:sc=       0
+USER  MOD Single :B 189 THR OG1 :   rot -120:sc=       0
+USER  MOD Single :B 192 LYS NZ  :NH3+    145:sc=   0.767   (180deg=0.00717)
+USER  MOD Single :B 193 CYS SG  :   rot   -8:sc=   -3.61!
+USER  MOD Single :B 196 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :B 198 SER OG  :   rot  169:sc=    1.52
+USER  MOD Single :B 207 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B 210 THR OG1 :   rot -132:sc=   -8.64!
+USER  MOD Single :B 211 SER OG  :   rot -110:sc=  -0.283
+USER  MOD Single :B 230 ASN     :      amide:sc=    1.11  K(o=1.1,f=-0.57)
+USER  MOD Single :B 232 SER OG  :   rot  180:sc=       0
+USER  MOD Single :B 234 SER OG  :   rot  180:sc=       0
+USER  MOD Single :B 237 LYS NZ  :NH3+    145:sc=   -1.58!  (180deg=-2.73!)
+USER  MOD Single :B 241 SER OG  :   rot   91:sc=   0.712
+USER  MOD Single :B 242 GLN     :FLIP  amide:sc=  0.0818  F(o=-2,f=0.082)
+USER  MOD Single :B 245 CYS SG  :   rot -100:sc=   0.282
+USER  MOD Single :B 246 ASN     :FLIP  amide:sc=   -3.68! C(o=-10!,f=-3.7!)
+USER  MOD Single :B 253 SER OG  :   rot  180:sc=       0
+USER  MOD Single :B 260 GLN     :      amide:sc=   0.843  K(o=0.84,f=-3.3!)
+USER  MOD Single :B 261 THR OG1 :   rot  180:sc=  -0.029
+USER  MOD Single :B 266 ASN     :      amide:sc=  -0.131  K(o=-0.13,f=-1.7!)
+USER  MOD Single :B 268 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B 271 THR OG1 :   rot  180:sc=-0.00653
+USER  MOD Single :B 272 SER OG  :   rot  -84:sc=    1.79
+USER  MOD Single :B 277 ASN     :      amide:sc=   -2.73! C(o=-2.7!,f=-11!)
+USER  MOD Single :B 293 ASN     :FLIP  amide:sc=  -0.013  F(o=-1.5,f=-0.013)
+USER  MOD Single :B 294 MET CE  :methyl  166:sc=   -14.6!  (180deg=-15.6!)
+USER  MOD Single :B 296 THR OG1 :   rot   90:sc=   -1.45
+USER  MOD Single :B 302 SER OG  :   rot   80:sc=    1.31
+USER  MOD Single :B 305 THR OG1 :   rot -143:sc=   -2.94!
+USER  MOD Single :B 309 ASN     :      amide:sc=  -0.533  K(o=-0.53,f=-7.8!)
+USER  MOD Single :B 315 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B 318 CYS SG  :   rot  180:sc=   -0.17
+USER  MOD Single :B 321 TYR OH  :   rot  180:sc=  -0.513
+USER  MOD Single :B 324 ASN     :FLIP  amide:sc=  -0.364  F(o=-2,f=-0.36)
+USER  MOD Single :B 326 ASN     :FLIP  amide:sc=   -5.25! C(o=-13!,f=-5.2!)
+USER  MOD Single :B 328 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :B 330 TYR OH  :   rot    4:sc=   0.815
+USER  MOD Single :B 331 GLN     :FLIP  amide:sc=   -0.67  F(o=-5.3!,f=-0.67)
+USER  MOD Single :B 339 CYS SG  :   rot  180:sc=       0
+USER  MOD Single :B 345 GLN     :      amide:sc=  -0.557  X(o=-0.56,f=-0.55)
+USER  MOD Single :B 347 TYR OH  :   rot   90:sc=   0.433
+USER  MOD Single :B 349 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :B 353 SER OG  :   rot   83:sc=    1.11
+USER  MOD Single :B 362 GLN     :      amide:sc=   0.702  K(o=0.7,f=-5.7!)
+USER  MOD Single :C  20 THR OG1 :   rot  -23:sc=   0.247
+USER  MOD Single :C  21 GLN     :FLIP  amide:sc=   -19.9! C(o=-31!,f=-20!)
+USER  MOD Single :C  22 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :C  27 GLN     :FLIP  amide:sc=     -14! C(o=-18!,f=-14!)
+USER  MOD Single :C  28 GLN     :      amide:sc=   0.445  K(o=0.45,f=-3.2!)
+USER  MOD Single :C  57 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :C  60 SER OG  :   rot  -95:sc=    1.32
+USER  MOD Single :C  61 GLN     :FLIP  amide:sc=       0  F(o=-2.1,f=0)
+USER  MOD Single :C  68 LYS NZ  :NH3+   -128:sc=    1.66   (180deg=-0.604)
+USER  MOD Single :C  77 ASN     :      amide:sc=   -2.65! C(o=-2.6!,f=-19!)
+USER  MOD Single :C  82 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :C  91 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :C 101 GLN     :      amide:sc=  -0.511  K(o=-0.51,f=-4.2!)
+USER  MOD Single :C 102 SER OG  :   rot  180:sc=       0
+USER  MOD Single :C 104 ASN     :      amide:sc=       0  K(o=0,f=-0.58)
+USER  MOD Single :C 106 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :C 108 ASN     :      amide:sc=    -6.2! C(o=-6.2!,f=-8.3!)
+USER  MOD Single :C 111 THR OG1 :   rot  -88:sc=     1.4
+USER  MOD Single :C 118 THR OG1 :   rot   30:sc=   0.481
+USER  MOD Single :C 123 TYR OH  :   rot  110:sc=  -0.255
+USER  MOD Single :C 132 THR OG1 :   rot  149:sc=  -0.665!
+USER  MOD Single :C 136 SER OG  :   rot  180:sc= -0.0653
+USER  MOD Single :C 137 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :C 138 THR OG1 :   rot  -90:sc=  -0.578!
+USER  MOD Single :C 139 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :C 141 ASN     :      amide:sc=    1.03  X(o=1,f=0.91)
+USER  MOD Single :C 144 ASN     :      amide:sc=   -3.26! C(o=-3.3!,f=-8.4!)
+USER  MOD Single :C 149 ASN     :      amide:sc=    1.32  K(o=1.3,f=0)
+USER  MOD Single :C 150 SER OG  :   rot  -53:sc=    1.03
+USER  MOD Single :C 151 MET CE  :methyl -171:sc=  -0.503   (180deg=-0.788)
+USER  MOD Single :C 154 ASN     :FLIP  amide:sc=   0.202! C(o=-7.9!,f=0.2!)
+USER  MOD Single :C 158 SER OG  :   rot  180:sc=       0
+USER  MOD Single :C 160 SER OG  :   rot  120:sc=       0
+USER  MOD Single :C 162 GLN     :      amide:sc=  0.0755  K(o=0.075,f=-3.1!)
+USER  MOD Single :C 168 TYR OH  :   rot  180:sc=  -0.227
+USER  MOD Single :C 171 MET CE  :methyl  171:sc=   -11.7!  (180deg=-12.9!)
+USER  MOD Single :C 176 TYR OH  :   rot  150:sc=       0
+USER  MOD Single :C 180 ASN     :      amide:sc=   -1.15! C(o=-1.1!,f=-10!)
+USER  MOD Single :C 182 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :C 183 GLN     :      amide:sc=  -0.113  X(o=-0.11,f=0)
+USER  MOD Single :C 187 SER OG  :   rot  180:sc=       0
+USER  MOD Single :C 192 LYS NZ  :NH3+   -147:sc=     1.2   (180deg=0.0681)
+USER  MOD Single :C 193 CYS SG  :   rot  170:sc=   -1.92!
+USER  MOD Single :C 198 SER OG  :   rot -169:sc=   0.301
+USER  MOD Single :C 201 GLN     :      amide:sc=   -2.98  K(o=-3,f=-4.3!)
+USER  MOD Single :C 206 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :C 207 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :C 210 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :C 211 SER OG  :   rot  140:sc=   0.479
+USER  MOD Single :C 230 ASN     :      amide:sc=    0.38  K(o=0.38,f=-1.7)
+USER  MOD Single :C 234 SER OG  :   rot  150:sc=   -1.36
+USER  MOD Single :C 237 LYS NZ  :NH3+   -133:sc=   0.673   (180deg=0.0215)
+USER  MOD Single :C 241 SER OG  :   rot   99:sc=    1.22
+USER  MOD Single :C 243 SER OG  :   rot  137:sc=    1.18
+USER  MOD Single :C 245 CYS SG  :   rot -165:sc=   0.497
+USER  MOD Single :C 246 ASN     :FLIP  amide:sc=   -1.96! C(o=-9.4!,f=-2!)
+USER  MOD Single :C 253 SER OG  :   rot -140:sc=       0
+USER  MOD Single :C 260 GLN     :      amide:sc=   0.422  K(o=0.42,f=-1.5)
+USER  MOD Single :C 261 THR OG1 :   rot   74:sc=    0.98
+USER  MOD Single :C 266 ASN     :      amide:sc=   0.262  K(o=0.26,f=-2.2!)
+USER  MOD Single :C 272 SER OG  :   rot  -70:sc=  0.0226
+USER  MOD Single :C 277 ASN     :FLIP  amide:sc=   -2.22  F(o=-4.5!,f=-2.2)
+USER  MOD Single :C 286 SER OG  :   rot  180:sc=   -3.58!
+USER  MOD Single :C 293 ASN     :      amide:sc=       0  X(o=0,f=0.072)
+USER  MOD Single :C 294 MET CE  :methyl -117:sc=  -0.667   (180deg=-3.82!)
+USER  MOD Single :C 296 THR OG1 :   rot  180:sc=       0
+USER  MOD Single :C 302 SER OG  :   rot   -5:sc=  -0.783
+USER  MOD Single :C 305 THR OG1 :   rot   19:sc=     0.1
+USER  MOD Single :C 309 ASN     :      amide:sc=   -3.06! C(o=-3.1!,f=-5.2!)
+USER  MOD Single :C 315 THR OG1 :   rot  -76:sc=   0.293
+USER  MOD Single :C 321 TYR OH  :   rot  180:sc=   -1.75!
+USER  MOD Single :C 324 ASN     :      amide:sc=   0.204  K(o=0.2,f=-1.7)
+USER  MOD Single :C 326 ASN     :      amide:sc=   -2.08! C(o=-2.1!,f=-7.8!)
+USER  MOD Single :C 328 MET CE  :methyl  180:sc=       0   (180deg=0)
+USER  MOD Single :C 330 TYR OH  :   rot  180:sc=  -0.422
+USER  MOD Single :C 331 GLN     :FLIP  amide:sc= -0.0162  F(o=-1.1,f=-0.016)
+USER  MOD Single :C 336 SER OG  :   rot  -98:sc=   0.831!
+USER  MOD Single :C 339 CYS SG  :   rot  180:sc=       0
+USER  MOD Single :C 345 GLN     :FLIP  amide:sc=   -2.01! C(o=-9.2!,f=-2!)
+USER  MOD Single :C 347 TYR OH  :   rot   30:sc=   0.408
+USER  MOD Single :C 353 SER OG  :   rot   72:sc=  0.0149!
+USER  MOD Single :C 362 GLN     :FLIP  amide:sc=  -0.263  F(o=-2.9,f=-0.26)
+USER  MOD Single :C 363 ASN     :      amide:sc=  -0.931  K(o=-0.93,f=-6.4!)
+USER  MOD Single :D 365 SER OG  :   rot  180:sc=       0
+USER  MOD Single :D 366 MET CE  :methyl -148:sc=   -8.21!  (180deg=-13.1!)
+USER  MOD Single :D 371 LYS NZ  :NH3+    -99:sc=   -2.42!  (180deg=-3.55!)
+USER  MOD Single :D 372 SER OG  :   rot   87:sc=   -1.09
+USER  MOD Single :D 375 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :D 376 SER OG  :   rot  180:sc=       0
+USER  MOD Single :E 365 SER OG  :   rot  180:sc= -0.0684
+USER  MOD Single :E 366 MET CE  :methyl  171:sc=   -6.12!  (180deg=-6.64!)
+USER  MOD Single :E 371 LYS NZ  :NH3+    136:sc=   -11.9!  (180deg=-21.3!)
+USER  MOD Single :E 372 SER OG  :   rot  -40:sc=   0.942
+USER  MOD Single :E 375 LYS NZ  :NH3+    180:sc=       0   (180deg=0)
+USER  MOD Single :E 376 SER OG  :   rot  180:sc=       0
+USER  MOD Single :E 377 SER OG  :   rot  180:sc=  0.0753
+USER  MOD Single :F 365 SER OG  :   rot  180:sc=   -4.08!
+USER  MOD Single :F 371 LYS NZ  :NH3+   -167:sc=   0.227   (180deg=0.174)
+USER  MOD Single :F 372 SER OG  :   rot  -71:sc=   0.732
+USER  MOD Single :F 376 SER OG  :   rot  180:sc=       0
+USER  MOD Single :N   1   U O2' :   rot  -21:sc=  0.0981
+USER  MOD Single :N   1   U O5' :   rot  -18:sc=    0.92
+USER  MOD Single :N   2   C O2' :   rot  -23:sc=   0.096
+USER  MOD Single :N   3   U O2' :   rot  -24:sc=   0.113
+USER  MOD Single :N   4   U O2' :   rot  160:sc=   -15.4!
+USER  MOD Single :N   5   A O2' :   rot  -13:sc=   -1.24!
+USER  MOD Single :N   6   U O2' :   rot  -96:sc=     1.1
+USER  MOD Single :N   7   A O2' :   rot  -28:sc=  -0.479
+USER  MOD Single :N   8   U O2' :   rot -152:sc=   -4.82!
+USER  MOD Single :N   9   C O2' :   rot -120:sc=  0.0911
+USER  MOD Single :N  10   U O2' :   rot  -14:sc=   0.105
+USER  MOD -----------------------------------------------------------------
+HETATM 7546  O   HOH   201      -9.287   8.472 111.375  0.75  6.56      2BBV7961
+HETATM 7547  O   HOH   202     -13.487  16.438 123.467  0.75  3.89      2BBV7962
+HETATM 7548  O   HOH   203      -6.191   4.225 119.554  0.75 19.80      2BBV7963
+HETATM 7549  O   HOH   204     -20.161   7.203 110.263  0.75 11.47      2BBV7964
+HETATM 7550  O   HOH   205     -16.860   6.939 107.735  0.75 11.68      2BBV7965
+HETATM 7551  O   HOH   206     -21.468   3.532 109.475  0.75 18.23      2BBV7966
+HETATM 7552  O   HOH   207     -39.781  24.627 140.482  0.75 25.00      2BBV7967
+HETATM 7553  O   HOH   208     -15.249  -2.164 112.012  0.75 14.36      2BBV7968
+HETATM 7554  O   HOH   209     -13.814   1.586 112.336  0.75 18.87      2BBV7969
+HETATM 7555  O   HOH   210       1.105  17.436 119.077  0.75  2.00      2BBV7970
+HETATM 7556  O   HOH   211      -7.409  12.092 120.424  0.75  2.00      2BBV7971
+HETATM 7557  O   HOH   212       9.402  13.155 124.928  0.75 12.11      2BBV7972
+HETATM 7558  O   HOH   213     -21.389  -1.347 125.698  0.75  6.78      2BBV7973
+HETATM 7559  O   HOH   214     -30.406   9.343 141.408  0.75  2.92      2BBV7974
+HETATM 7560  O   HOH   215     -30.031   6.348 146.638  0.75 16.27      2BBV7975
+HETATM 7561  O   HOH   216     -42.401  13.464 149.897  0.75 16.50      2BBV7976
+HETATM 7562  O   HOH   217     -43.799  14.764 136.300  0.75 16.12      2BBV7977
+HETATM 7563  O   HOH   218     -41.465  17.027 133.318  0.75  5.72      2BBV7978
+HETATM 7564  O   HOH   219     -24.979   5.999 141.032  0.75  8.95      2BBV7979
+HETATM 7565  O   HOH   220     -32.826  20.514 147.690  0.75 13.84      2BBV7980
+HETATM 7566  O   HOH   221     -35.461  22.452 132.186  0.75 26.62      2BBV7981
+HETATM 7567  O   HOH   222     -37.726  27.992 137.349  0.75 10.69      2BBV7982
+HETATM 7568  O   HOH   223     -40.133  28.674 140.558  0.75 13.92      2BBV7983
+HETATM 7569  O   HOH   224     -42.629  26.997 142.997  0.75 18.50      2BBV7984
+HETATM 7570  O   HOH   225     -23.022   5.049 142.643  0.75  8.21      2BBV7985
+HETATM 7571  O   HOH   226     -17.632   5.856 143.868  0.75 16.91      2BBV7986
+HETATM 7572  O   HOH   227     -20.727   7.480 152.613  0.75 18.27      2BBV7987
+HETATM 7573  O   HOH   228      -6.835  -2.628 142.472  0.75 15.99      2BBV7988
+HETATM 7574  O   HOH   229      -5.473   4.268 155.399  0.75 22.51      2BBV7989
+HETATM 7575  O   HOH   230     -10.110   6.206 153.986  0.75 18.94      2BBV7990
+HETATM 7576  O   HOH   231     -18.158  23.458 124.214  0.75 10.05      2BBV7991
+HETATM 7577  O   HOH   232     -17.360  26.508 123.400  0.75 11.94      2BBV7992
+HETATM 7578  O   HOH   233     -20.201  26.567 126.795  0.75  6.87      2BBV7993
+HETATM 7579  O   HOH   234     -15.559  13.874 135.982  0.75 14.81      2BBV7994
+HETATM 7580  O   HOH   235      -5.795  33.287 146.933  0.75  3.09      2BBV7995
+HETATM 7581  O   HOH   236      -2.615  20.183 145.261  0.75  7.94      2BBV7996
+HETATM 7582  O   HOH   237      -7.664  24.994 136.584  0.75 12.86      2BBV7997
+HETATM 7583  O   HOH   238     -24.241  30.559 145.281  0.75 14.30      2BBV7998
+HETATM 7584  O   HOH   239     -28.851  30.120 142.464  0.75 16.31      2BBV7999
+HETATM 7585  O   HOH   240     -31.826  32.672 146.321  0.75 17.06      2BBV8000
+HETATM 7586  O   HOH   241     -28.646  30.657 147.191  0.75 20.36      2BBV8001
+HETATM 7587  O   HOH   242     -32.745  20.457 121.128  0.75 12.73      2BBV8002
+HETATM 7588  O   HOH   243     -42.382  11.979 122.900  0.75 16.73      2BBV8003
+HETATM 7589  O   HOH   244      -5.234  20.201 129.842  0.75 11.88      2BBV8004
+HETATM 7590  O   HOH   245     -13.629  26.812 121.380  0.75  8.69      2BBV8005
+HETATM 7591  O   HOH   246      -0.124  31.897 118.571  0.75  6.55      2BBV8006
+HETATM 7592  O   HOH   247      -3.756  19.320 137.306  0.75  5.96      2BBV8007
+HETATM 7593  O   HOH   248      -2.958  23.621 140.772  0.75 20.04      2BBV8008
+HETATM 7594  O   HOH   249       0.361  22.222 137.635  0.75 10.24      2BBV8009
+HETATM 7595  O   HOH   250     -15.313  18.994 154.104  0.75 13.37      2BBV8010
+HETATM 7596  O   HOH   251     -13.125  12.642 159.031  0.75 28.45      2BBV8011
+HETATM 7597  O   HOH   252     -15.814  11.571 154.853  0.75 17.72      2BBV8012
+HETATM 7598  O   HOH   253     -13.698  15.251 155.928  0.75 20.70      2BBV8013
+HETATM 7599  O   HOH   254     -21.778  15.364 153.871  0.75 18.35      2BBV8014
+HETATM 7600  O   HOH   255      -9.723  15.220 159.772  0.75 17.82      2BBV8015
+HETATM 7601  O   HOH   256     -16.342   2.440 146.234  0.75 13.90      2BBV8016
+HETATM 7602  O   HOH   257     -20.390  10.689 150.732  0.75  7.48      2BBV8017
+HETATM 7603  O   HOH   258     -23.903   9.709 149.809  0.75 28.24      2BBV8018
+HETATM 7604  O   HOH   259     -15.308  25.879 126.508  0.75 15.89      2BBV8019
+HETATM 7605  O   HOH   260     -45.827  12.609 134.082  0.75 11.40      2BBV8020
+HETATM 7606  O   HOH   261       2.892   4.098 119.365  0.75 13.54      2BBV8021
+HETATM 7607  O   HOH   262       5.012  12.798 110.121  0.75 14.27      2BBV8022
+HETATM 7608  O   HOH   263       8.402  12.629 110.302  0.75 12.59      2BBV8023
+HETATM 7609  O   HOH   264      -0.536  12.973 106.749  0.75 10.80      2BBV8024
+HETATM 7610  O   HOH   265       0.709  23.066 109.520  0.75 20.53      2BBV8025
+HETATM 7611  O   HOH   266      -5.356  27.670 105.474  0.75 20.53      2BBV8026
+HETATM 7612  O   HOH   267     -26.598  21.065 114.264  0.75  8.16      2BBV8027
+HETATM 7613  O   HOH   268     -20.061  32.549 111.742  0.75 18.98      2BBV8028
+HETATM 7614  O   HOH   269     -30.842  -2.999 119.168  0.75 18.44      2BBV8029
+HETATM 7615  O   HOH   270     -40.148  10.666 150.190  0.75 18.00      2BBV8030
+HETATM 7616  O   HOH   281     -44.202   8.661 146.905  0.75 18.00      2BBV8031
+HETATM 7617  O   HOH   282     -26.902  13.047 115.743  0.75 18.00      2BBV8032
+ATOM   7618  O5'   U N   1      12.003   4.744  94.642  1.00 27.06      2BBV8033
+ATOM   7619  C5'   U N   1      11.034   4.634  93.577  1.00 34.01      2BBV8034
+ATOM   7620  C4'   U N   1      11.171   3.265  92.907  1.00 37.53      2BBV8035
+ATOM   7621  O4'   U N   1      12.465   2.721  93.294  1.00 39.37      2BBV8036
+ATOM   7622  C3'   U N   1      10.156   2.200  93.317  1.00 36.77      2BBV8037
+ATOM   7623  O3'   U N   1       8.937   2.309  92.570  1.00 39.27      2BBV8038
+ATOM   7624  C2'   U N   1      10.940   0.920  93.058  1.00 36.15      2BBV8039
+ATOM   7625  O2'   U N   1      10.832   0.525  91.699  1.00 37.41      2BBV8040
+ATOM   7626  C1'   U N   1      12.363   1.313  93.487  1.00 39.52      2BBV8041
+ATOM   7627  N1    U N   1      12.724   1.057  94.906  1.00 44.02      2BBV8042
+ATOM   7628  C2    U N   1      12.315  -0.125  95.464  1.00 38.81      2BBV8043
+ATOM   7629  O2    U N   1      11.682  -0.965  94.847  1.00 34.40      2BBV8044
+ATOM   7630  N3    U N   1      12.661  -0.324  96.785  1.00 44.14      2BBV8045
+ATOM   7631  C4    U N   1      13.381   0.556  97.583  1.00 45.56      2BBV8046
+ATOM   7632  O4    U N   1      13.626   0.266  98.753  1.00 45.64      2BBV8047
+ATOM   7633  C5    U N   1      13.773   1.768  96.912  1.00 42.89      2BBV8048
+ATOM   7634  C6    U N   1      13.447   1.986  95.630  1.00 41.95      2BBV8049
+ATOM   7635  P     C N   2       7.563   1.747  93.176  1.00 47.90      2BBV8050
+ATOM   7636  OP1   C N   2       7.662   1.642  94.650  1.00 40.11      2BBV8051
+ATOM   7637  OP2   C N   2       6.426   2.568  92.699  1.00 45.51      2BBV8052
+ATOM   7638  O5'   C N   2       7.478   0.271  92.540  1.00 44.42      2BBV8053
+ATOM   7639  C5'   C N   2       6.170  -0.292  92.242  1.00 40.62      2BBV8054
+ATOM   7640  C4'   C N   2       6.285  -1.817  92.082  1.00 39.59      2BBV8055
+ATOM   7641  O4'   C N   2       7.628  -2.192  92.501  1.00 38.97      2BBV8056
+ATOM   7642  C3'   C N   2       5.370  -2.683  92.960  1.00 41.66      2BBV8057
+ATOM   7643  O3'   C N   2       4.064  -2.870  92.417  1.00 46.16      2BBV8058
+ATOM   7644  C2'   C N   2       6.162  -3.973  93.061  1.00 37.98      2BBV8059
+ATOM   7645  O2'   C N   2       5.930  -4.802  91.931  1.00 26.07      2BBV8060
+ATOM   7646  C1'   C N   2       7.592  -3.448  93.174  1.00 39.13      2BBV8061
+ATOM   7647  N1    C N   2       8.054  -3.213  94.555  1.00 41.24      2BBV8062
+ATOM   7648  C2    C N   2       7.904  -4.239  95.478  1.00 45.32      2BBV8063
+ATOM   7649  O2    C N   2       7.401  -5.311  95.110  1.00 44.19      2BBV8064
+ATOM   7650  N3    C N   2       8.316  -4.038  96.759  1.00 47.45      2BBV8065
+ATOM   7651  C4    C N   2       8.856  -2.863  97.113  1.00 48.12      2BBV8066
+ATOM   7652  N4    C N   2       9.241  -2.710  98.365  1.00 49.72      2BBV8067
+ATOM   7653  C5    C N   2       9.022  -1.787  96.173  1.00 45.61      2BBV8068
+ATOM   7654  C6    C N   2       8.606  -2.011  94.911  1.00 42.27      2BBV8069
+ATOM   7655  P     U N   3       2.882  -3.372  93.380  1.00 55.94      2BBV8070
+ATOM   7656  OP1   U N   3       2.909  -2.609  94.649  1.00 47.93      2BBV8071
+ATOM   7657  OP2   U N   3       1.589  -3.324  92.663  1.00 52.28      2BBV8072
+ATOM   7658  O5'   U N   3       3.280  -4.907  93.682  1.00 50.46      2BBV8073
+ATOM   7659  C5'   U N   3       2.268  -5.798  94.241  1.00 46.15      2BBV8074
+ATOM   7660  C4'   U N   3       2.942  -7.059  94.818  1.00 43.56      2BBV8075
+ATOM   7661  O4'   U N   3       4.362  -6.779  94.909  1.00 42.64      2BBV8076
+ATOM   7662  C3'   U N   3       2.537  -7.493  96.241  1.00 45.87      2BBV8077
+ATOM   7663  O3'   U N   3       1.355  -8.299  96.241  1.00 44.85      2BBV8078
+ATOM   7664  C2'   U N   3       3.785  -8.230  96.698  1.00 42.15      2BBV8079
+ATOM   7665  O2'   U N   3       3.768  -9.580  96.256  1.00 40.77      2BBV8080
+ATOM   7666  C1'   U N   3       4.900  -7.379  96.079  1.00 39.65      2BBV8081
+ATOM   7667  N1    U N   3       5.397  -6.269  96.911  1.00 41.28      2BBV8082
+ATOM   7668  C2    U N   3       5.473  -6.482  98.257  1.00 42.11      2BBV8083
+ATOM   7669  O2    U N   3       5.170  -7.540  98.784  1.00 41.04      2BBV8084
+ATOM   7670  N3    U N   3       5.923  -5.418  99.007  1.00 41.92      2BBV8085
+ATOM   7671  C4    U N   3       6.300  -4.173  98.513  1.00 37.19      2BBV8086
+ATOM   7672  O4    U N   3       6.683  -3.299  99.286  1.00 33.22      2BBV8087
+ATOM   7673  C5    U N   3       6.190  -4.049  97.084  1.00 40.22      2BBV8088
+ATOM   7674  C6    U N   3       5.754  -5.068  96.336  1.00 39.82      2BBV8089
+ATOM   7675  P     U N   4       0.562  -8.650  97.602  1.00 49.09      2BBV8090
+ATOM   7676  OP1   U N   4      -0.345  -7.545  97.969  1.00 43.61      2BBV8091
+ATOM   7677  OP2   U N   4      -0.094  -9.974  97.475  1.00 44.88      2BBV8092
+ATOM   7678  O5'   U N   4       1.690  -8.758  98.745  1.00 44.70      2BBV8093
+ATOM   7679  C5'   U N   4       1.625  -9.913  99.623  1.00 45.20      2BBV8094
+ATOM   7680  C4'   U N   4       1.512  -9.525 101.120  1.00 43.57      2BBV8095
+ATOM   7681  O4'   U N   4       2.789  -8.960 101.559  1.00 41.91      2BBV8096
+ATOM   7682  C3'   U N   4       0.518  -8.412 101.494  1.00 42.31      2BBV8097
+ATOM   7683  O3'   U N   4      -0.826  -8.832 101.650  1.00 42.14      2BBV8098
+ATOM   7684  C2'   U N   4       1.058  -7.905 102.811  1.00 43.09      2BBV8099
+ATOM   7685  O2'   U N   4       0.611  -8.714 103.890  1.00 44.11      2BBV8100
+ATOM   7686  C1'   U N   4       2.547  -7.965 102.560  1.00 40.57      2BBV8101
+ATOM   7687  N1    U N   4       3.020  -6.658 102.113  1.00 35.22      2BBV8102
+ATOM   7688  C2    U N   4       3.097  -5.696 103.078  1.00 35.63      2BBV8103
+ATOM   7689  O2    U N   4       2.836  -5.896 104.253  1.00 34.82      2BBV8104
+ATOM   7690  N3    U N   4       3.501  -4.456 102.641  1.00 37.95      2BBV8105
+ATOM   7691  C4    U N   4       3.836  -4.123 101.332  1.00 36.98      2BBV8106
+ATOM   7692  O4    U N   4       4.177  -2.974 101.065  1.00 37.14      2BBV8107
+ATOM   7693  C5    U N   4       3.736  -5.217 100.397  1.00 35.17      2BBV8108
+ATOM   7694  C6    U N   4       3.339  -6.429 100.797  1.00 33.82      2BBV8109
+ATOM   7695  P     A N   5      -1.914  -7.712 102.006  1.00 49.31      2BBV8110
+ATOM   7696  OP1   A N   5      -1.607  -6.463 101.270  1.00 45.81      2BBV8111
+ATOM   7697  OP2   A N   5      -3.276  -8.239 101.778  1.00 49.43      2BBV8112
+ATOM   7698  O5'   A N   5      -1.682  -7.453 103.585  1.00 46.08      2BBV8113
+ATOM   7699  C5'   A N   5      -1.188  -8.545 104.381  1.00 47.74      2BBV8114
+ATOM   7700  C4'   A N   5      -1.286  -8.266 105.901  1.00 46.76      2BBV8115
+ATOM   7701  O4'   A N   5      -0.006  -7.671 106.349  1.00 48.02      2BBV8116
+ATOM   7702  C3'   A N   5      -2.339  -7.269 106.365  1.00 50.55      2BBV8117
+ATOM   7703  O3'   A N   5      -3.630  -7.864 106.487  1.00 48.39      2BBV8118
+ATOM   7704  C2'   A N   5      -1.802  -6.799 107.706  1.00 48.70      2BBV8119
+ATOM   7705  O2'   A N   5      -2.188  -7.680 108.751  1.00 44.89      2BBV8120
+ATOM   7706  C1'   A N   5      -0.297  -6.763 107.443  1.00 44.79      2BBV8121
+ATOM   7707  N9    A N   5       0.187  -5.367 107.165  1.00 38.45      2BBV8122
+ATOM   7708  C8    A N   5       0.514  -4.414 108.083  1.00 37.69      2BBV8123
+ATOM   7709  N7    A N   5       0.902  -3.284 107.576  1.00 35.51      2BBV8124
+ATOM   7710  C5    A N   5       0.834  -3.488 106.220  1.00 32.10      2BBV8125
+ATOM   7711  C6    A N   5       1.115  -2.663 105.113  1.00 32.23      2BBV8126
+ATOM   7712  N6    A N   5       1.544  -1.388 105.238  1.00 30.24      2BBV8127
+ATOM   7713  N1    A N   5       0.943  -3.181 103.892  1.00 31.10      2BBV8128
+ATOM   7714  C2    A N   5       0.516  -4.448 103.782  1.00 30.06      2BBV8129
+ATOM   7715  N3    A N   5       0.219  -5.316 104.737  1.00 31.55      2BBV8130
+ATOM   7716  C4    A N   5       0.402  -4.757 105.944  1.00 34.60      2BBV8131
+ATOM   7717  P     U N   6      -4.918  -7.036 106.037  1.00 54.16      2BBV8132
+ATOM   7718  OP1   U N   6      -4.758  -6.576 104.640  1.00 50.05      2BBV8133
+ATOM   7719  OP2   U N   6      -6.143  -7.837 106.277  1.00 49.61      2BBV8134
+ATOM   7720  O5'   U N   6      -4.870  -5.776 107.029  1.00 47.95      2BBV8135
+ATOM   7721  C5'   U N   6      -4.403  -6.010 108.369  1.00 40.54      2BBV8136
+ATOM   7722  C4'   U N   6      -4.199  -4.695 109.140  1.00 38.71      2BBV8137
+ATOM   7723  O4'   U N   6      -2.902  -4.131 108.772  1.00 38.16      2BBV8138
+ATOM   7724  C3'   U N   6      -5.200  -3.576 108.869  1.00 41.68      2BBV8139
+ATOM   7725  O3'   U N   6      -6.377  -3.760 109.658  1.00 43.86      2BBV8140
+ATOM   7726  C2'   U N   6      -4.392  -2.337 109.241  1.00 38.50      2BBV8141
+ATOM   7727  O2'   U N   6      -4.493  -2.062 110.627  1.00 36.42      2BBV8142
+ATOM   7728  C1'   U N   6      -2.974  -2.703 108.781  1.00 36.31      2BBV8143
+ATOM   7729  N1    U N   6      -2.604  -2.185 107.436  1.00 33.70      2BBV8144
+ATOM   7730  C2    U N   6      -1.607  -1.245 107.400  1.00 36.74      2BBV8145
+ATOM   7731  O2    U N   6      -1.034  -0.856 108.404  1.00 35.18      2BBV8146
+ATOM   7732  N3    U N   6      -1.273  -0.752 106.154  1.00 37.24      2BBV8147
+ATOM   7733  C4    U N   6      -1.848  -1.127 104.946  1.00 39.85      2BBV8148
+ATOM   7734  O4    U N   6      -1.465  -0.608 103.896  1.00 40.52      2BBV8149
+ATOM   7735  C5    U N   6      -2.879  -2.130 105.074  1.00 38.62      2BBV8150
+ATOM   7736  C6    U N   6      -3.227  -2.624 106.280  1.00 36.57      2BBV8151
+ATOM   7737  P     A N   7      -7.526  -2.646 109.719  1.00 52.92      2BBV8152
+ATOM   7738  OP1   A N   7      -8.061  -2.385 108.368  1.00 46.05      2BBV8153
+ATOM   7739  OP2   A N   7      -8.541  -3.025 110.728  1.00 47.06      2BBV8154
+ATOM   7740  O5'   A N   7      -6.762  -1.333 110.230  1.00 50.70      2BBV8155
+ATOM   7741  C5'   A N   7      -7.567  -0.269 110.804  1.00 49.60      2BBV8156
+ATOM   7742  C4'   A N   7      -6.799   1.044 110.731  1.00 47.10      2BBV8157
+ATOM   7743  O4'   A N   7      -5.559   0.722 110.058  1.00 46.71      2BBV8158
+ATOM   7744  C3'   A N   7      -7.410   2.143 109.856  1.00 49.31      2BBV8159
+ATOM   7745  O3'   A N   7      -8.420   2.903 110.474  1.00 49.26      2BBV8160
+ATOM   7746  C2'   A N   7      -6.225   2.971 109.481  1.00 47.68      2BBV8161
+ATOM   7747  O2'   A N   7      -5.909   3.902 110.512  1.00 48.07      2BBV8162
+ATOM   7748  C1'   A N   7      -5.234   1.848 109.277  1.00 44.21      2BBV8163
+ATOM   7749  N9    A N   7      -5.288   1.521 107.887  1.00 36.08      2BBV8164
+ATOM   7750  C8    A N   7      -5.764   0.397 107.265  1.00 35.43      2BBV8165
+ATOM   7751  N7    A N   7      -5.707   0.490 105.966  1.00 31.69      2BBV8166
+ATOM   7752  C5    A N   7      -5.156   1.749 105.776  1.00 29.73      2BBV8167
+ATOM   7753  C6    A N   7      -4.834   2.524 104.645  1.00 27.42      2BBV8168
+ATOM   7754  N6    A N   7      -5.084   2.132 103.382  1.00 23.30      2BBV8169
+ATOM   7755  N1    A N   7      -4.256   3.721 104.843  1.00 29.11      2BBV8170
+ATOM   7756  C2    A N   7      -4.013   4.130 106.091  1.00 27.80      2BBV8171
+ATOM   7757  N3    A N   7      -4.278   3.524 107.214  1.00 30.06      2BBV8172
+ATOM   7758  C4    A N   7      -4.866   2.359 106.971  1.00 33.43      2BBV8173
+ATOM   7759  P     U N   8      -9.630   3.374 109.555  1.00 50.50      2BBV8174
+ATOM   7760  OP1   U N   8     -10.250   2.194 108.908  1.00 45.50      2BBV8175
+ATOM   7761  OP2   U N   8     -10.561   4.213 110.335  1.00 46.62      2BBV8176
+ATOM   7762  O5'   U N   8      -8.898   4.263 108.423  1.00 42.94      2BBV8177
+ATOM   7763  C5'   U N   8      -8.121   5.406 108.844  1.00 40.82      2BBV8178
+ATOM   7764  C4'   U N   8      -8.091   6.503 107.756  1.00 40.29      2BBV8179
+ATOM   7765  O4'   U N   8      -7.091   6.143 106.750  1.00 41.85      2BBV8180
+ATOM   7766  C3'   U N   8      -9.373   6.717 106.962  1.00 37.28      2BBV8181
+ATOM   7767  O3'   U N   8     -10.276   7.570 107.666  1.00 38.06      2BBV8182
+ATOM   7768  C2'   U N   8      -8.844   7.321 105.661  1.00 38.05      2BBV8183
+ATOM   7769  O2'   U N   8      -8.687   8.726 105.777  1.00 33.48      2BBV8184
+ATOM   7770  C1'   U N   8      -7.525   6.560 105.449  1.00 40.28      2BBV8185
+ATOM   7771  N1    U N   8      -7.599   5.348 104.581  1.00 39.56      2BBV8186
+ATOM   7772  C2    U N   8      -7.410   5.524 103.230  1.00 38.63      2BBV8187
+ATOM   7773  O2    U N   8      -7.212   6.617 102.726  1.00 36.91      2BBV8188
+ATOM   7774  N3    U N   8      -7.459   4.383 102.452  1.00 37.79      2BBV8189
+ATOM   7775  C4    U N   8      -7.685   3.091 102.909  1.00 41.43      2BBV8190
+ATOM   7776  O4    U N   8      -7.701   2.150 102.115  1.00 39.65      2BBV8191
+ATOM   7777  C5    U N   8      -7.882   3.001 104.334  1.00 40.98      2BBV8192
+ATOM   7778  C6    U N   8      -7.835   4.095 105.115  1.00 38.91      2BBV8193
+ATOM   7779  P     C N   9     -11.805   7.655 107.229  1.00 42.52      2BBV8194
+ATOM   7780  OP1   C N   9     -12.370   6.296 107.080  1.00 41.54      2BBV8195
+ATOM   7781  OP2   C N   9     -12.551   8.532 108.160  1.00 41.72      2BBV8196
+ATOM   7782  O5'   C N   9     -11.709   8.342 105.791  1.00 39.91      2BBV8197
+ATOM   7783  C5'   C N   9     -11.141   9.660 105.699  1.00 37.99      2BBV8198
+ATOM   7784  C4'   C N   9     -11.079  10.072 104.232  1.00 39.29      2BBV8199
+ATOM   7785  O4'   C N   9     -10.133   9.183 103.563  1.00 38.66      2BBV8200
+ATOM   7786  C3'   C N   9     -12.360   9.856 103.437  1.00 36.22      2BBV8201
+ATOM   7787  O3'   C N   9     -13.318  10.876 103.590  1.00 43.58      2BBV8202
+ATOM   7788  C2'   C N   9     -11.849   9.744 102.020  1.00 33.77      2BBV8203
+ATOM   7789  O2'   C N   9     -11.632  11.029 101.453  1.00 33.83      2BBV8204
+ATOM   7790  C1'   C N   9     -10.589   8.931 102.234  1.00 36.76      2BBV8205
+ATOM   7791  N1    C N   9     -10.864   7.499 102.074  1.00 35.01      2BBV8206
+ATOM   7792  C2    C N   9     -10.682   6.950 100.816  1.00 37.89      2BBV8207
+ATOM   7793  O2    C N   9     -10.261   7.668  99.896  1.00 38.53      2BBV8208
+ATOM   7794  N3    C N   9     -10.969   5.635 100.631  1.00 40.81      2BBV8209
+ATOM   7795  C4    C N   9     -11.409   4.895 101.659  1.00 40.31      2BBV8210
+ATOM   7796  N4    C N   9     -11.682   3.625 101.434  1.00 39.51      2BBV8211
+ATOM   7797  C5    C N   9     -11.589   5.447 102.977  1.00 39.29      2BBV8212
+ATOM   7798  C6    C N   9     -11.304   6.752 103.131  1.00 37.20      2BBV8213
+ATOM   7799  P     U N  10     -14.827  10.489 103.282  1.00 49.98      2BBV8214
+ATOM   7800  OP1   U N  10     -14.985   9.016 103.335  1.00 48.62      2BBV8215
+ATOM   7801  OP2   U N  10     -15.733  11.236 104.177  1.00 47.19      2BBV8216
+ATOM   7802  O5'   U N  10     -14.997  10.981 101.769  1.00 47.31      2BBV8217
+ATOM   7803  C5'   U N  10     -14.507  12.291 101.436  1.00 46.19      2BBV8218
+ATOM   7804  C4'   U N  10     -14.529  12.504  99.919  1.00 48.56      2BBV8219
+ATOM   7805  O4'   U N  10     -13.593  11.563  99.306  1.00 47.88      2BBV8220
+ATOM   7806  C3'   U N  10     -15.850  12.214  99.222  1.00 49.22      2BBV8221
+ATOM   7807  O3'   U N  10     -16.749  13.309  99.306  1.00 45.44      2BBV8222
+ATOM   7808  C2'   U N  10     -15.400  11.909  97.802  1.00 47.42      2BBV8223
+ATOM   7809  O2'   U N  10     -15.241  13.104  97.051  1.00 45.18      2BBV8224
+ATOM   7810  C1'   U N  10     -14.099  11.142  98.035  1.00 47.43      2BBV8225
+ATOM   7811  N1    U N  10     -14.275   9.671  98.048  1.00 46.44      2BBV8226
+ATOM   7812  C2    U N  10     -14.292   9.043  96.830  1.00 47.34      2BBV8227
+ATOM   7813  O2    U N  10     -14.168   9.639  95.774  1.00 47.14      2BBV8228
+ATOM   7814  N3    U N  10     -14.460   7.673  96.858  1.00 45.01      2BBV8229
+ATOM   7815  C4    U N  10     -14.610   6.892  97.997  1.00 44.40      2BBV8230
+ATOM   7816  O4    U N  10     -14.754   5.674  97.892  1.00 41.69      2BBV8231
+ATOM   7817  C5    U N  10     -14.577   7.639  99.231  1.00 46.97      2BBV8232
+ATOM   7818  C6    U N  10     -14.416   8.972  99.231  1.00 45.28      2BBV8233
+CONECT 1462 1460 7822                                                   2BBV823
+CONECT 1638 1637 7819                                                   2BBV824
+CONECT 3765 3763 7820                                                   2BBV824
+CONECT 6744 6743 7821                                                   2BBV824
+CONECT 7819 1638                                                        2BBV824
+CONECT 7820 3765                                                        2BBV824
+CONECT 7821 6744                                                        2BBV824
+CONECT 7822 1462                                                        2BBV824
+END                                                                     2BBV824

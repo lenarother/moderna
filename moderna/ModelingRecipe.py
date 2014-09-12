@@ -11,7 +11,7 @@ __copyright__ = "Copyright 2008, The Moderna Project"
 __credits__ = ["Janusz Bujnicki"]
 __license__ = "GPL"
 __maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
+__email__ = "rother.magdalena@gmail.com"
 __status__ = "Production"
 
 import os
