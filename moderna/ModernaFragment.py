@@ -624,7 +624,9 @@ class ModernaFragmentStrand(ModernaFragment):
         struc = ModernaStructure('file', data_file)
         if new_sequence:
             base = WC_BASE_PAIRS[new_sequence[0].short_abbrev]
-            list(struc)[0].mutate(base)
+            #list(struc)[0].mutate(base)
+            modify_residue(list(struc)[0], base)
+
         ModernaFragment.__init__(self, struc, new_sequence=new_sequence, keep=keep_nothing, strict=strict)
 
         sup_atoms = self.__choose_superposition_atoms(anchor)
