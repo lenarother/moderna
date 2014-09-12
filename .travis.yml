@@ -8,3 +8,8 @@ install:
 
 # command to run tests, e.g. python setup.py test
 script: "bash run-tests.sh"
+
+#notifications:
+#  email:
+#    - one@example.com
+#    - other@example.com
