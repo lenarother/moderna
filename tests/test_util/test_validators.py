@@ -20,7 +20,6 @@ from moderna.ModernaStructure import ModernaStructure
 from moderna.Template import Template
 from moderna.RNAModel import RnaModel
 from moderna.ModernaFragment import ModernaFragment53
-from moderna.ModernaResidue import ModernaResidue
 from moderna.sequence.RNAAlignment import read_alignment
 from moderna.sequence.ModernaSequence import Sequence
 from Bio.PDB import PDBParser

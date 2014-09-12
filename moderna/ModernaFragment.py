@@ -17,10 +17,11 @@ __status__ = "Production"
 
 
 from ModernaSuperimposer import ModernaSuperimposer
-from ModernaResidue import ModernaResidue
+from RNAResidue import RNAResidue
 from analyze.ClashRecognizer import ClashRecognizer
 from analyze.ChainConnectivity import is_chain_continuous
 from Renumerator import Renumerator
+from modifications import modify_residue
 from ModernaStructure import ModernaStructure
 from sequence.ModernaSequence import Sequence
 from FragmentInsertion import FragmentInserter
@@ -94,7 +95,7 @@ class AnchorResidue(object):
 
     def _build_residue_from_two(self, resi, second_resi, atom_names):
         """Combines atoms from two residues into one."""
-        prep = ModernaResidue(resi, alphabet_entry=resi.alphabet_entry)
+        prep = RNAResidue(resi, alphabet_entry=resi.alphabet_entry)
         for atom in atom_names:
             if prep.has_id(atom):
                 prep.detach_child(atom)
@@ -106,7 +107,7 @@ class AnchorResidue(object):
         if self.build_rule.base == 'model': # fixed
             prep = self._build_residue_from_two(self.fixed_resi, \
                             self.mobile_resi, self.build_rule.mobile_at)
-            prep.mutate(self.fixed_resi.long_abbrev) 
+            modify_residue(prep, self.fixed_resi.long_abbrev)
         elif self.build_rule.base == 'fragment': # mobile
             prep = self._build_residue_from_two(self.mobile_resi, \
                             self.fixed_resi, self.build_rule.fixed_at)
@@ -222,7 +223,7 @@ Unknown residue is present in the chain.')
 match number of fragment residues to change (%i).'\
                 %(len(self.new_sequence), len(resis))) 
             for resi, letter in zip(resis, self.new_sequence):
-                resi.mutate(letter.long_abbrev)
+                modify_residue(resi, letter.long_abbrev)
 
     def get_resi_to_remove(self, struc):
         """
@@ -623,7 +624,9 @@ class ModernaFragmentStrand(ModernaFragment):
         struc = ModernaStructure('file', data_file)
         if new_sequence:
             base = WC_BASE_PAIRS[new_sequence[0].short_abbrev]
-            list(struc)[0].mutate(base)
+            #list(struc)[0].mutate(base)
+            modify_residue(list(struc)[0], base)
+
         ModernaFragment.__init__(self, struc, new_sequence=new_sequence, keep=keep_nothing, strict=strict)
 
         sup_atoms = self.__choose_superposition_atoms(anchor)

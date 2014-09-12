@@ -16,6 +16,7 @@ __status__ = "Production"
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
+from moderna.modifications import exchange_base, add_modification, remove_modification
 from Bio.PDB import PDBParser
 from test_data import *
 
@@ -49,21 +50,21 @@ class WritePDBTests(TestCase):
         
     def test_res_names_exchanged(self):
         """Names should be consistent after base exchanges."""
-        self.s['5'].exchange_base('C')
+        exchange_base(self.s['5'], 'C')
         self.s.write_pdb_file(TEST_OUTPUT)
         rn = self.get_resnames(TEST_OUTPUT)
         self.assertEqual(rn[4], '  C')
         
     def test_res_names_add_modif(self):
         """Names should be consistent after adding modifications."""
-        self.s['5'].add_modification('m7G')
+        add_modification(self.s['5'], 'm7G')
         self.s.write_pdb_file(TEST_OUTPUT)
         rn = self.get_resnames(TEST_OUTPUT)
         self.assertEqual(rn[4], '7MG')
         
     def test_res_names_remove_modif(self):
         """Names should be consistent after adding modifications."""
-        self.s['10'].remove_modification()
+        remove_modification(self.s['10'])
         self.s.write_pdb_file(TEST_OUTPUT)
         rn = self.get_resnames(TEST_OUTPUT)
         self.assertEqual(rn[4], '  A')

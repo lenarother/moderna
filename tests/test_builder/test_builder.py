@@ -21,6 +21,7 @@ from test_backbone_builder import BackboneBuilderTests
 from test_phosphate_builder import PhosphateBuilderTests
 from test_fccd_loop_closer import FCCDLoopCloserTests
 from test_coord_builder import CoordBuilderTests
+from test_chi_rotation import ChiRotationTests
 
 if __name__ == '__main__':
     log.write_to_stderr = False

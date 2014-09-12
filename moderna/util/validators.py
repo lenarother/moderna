@@ -21,7 +21,7 @@ from moderna.Template import Template
 from moderna.RNAModel import RnaModel
 from moderna.ModernaFragment import ModernaFragment
 from moderna.fragment_library.SearchLIR import LirHit, FragmentCandidates
-from moderna.ModernaResidue import ModernaResidue
+from moderna.RNAResidue import RNAResidue
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.sequence.ModernaAlphabet import alphabet
 from Errors import ParameterError, AlphabetError
@@ -96,8 +96,8 @@ def validate_frag_candidate_list(fc_list):
     raise ParameterError("Bad parameter: '%s' must be a list of fragment candidates."%str(fc_list))
     
 def validate_resi(resi):
-    """Checks ModernaResidue"""
-    if isinstance(resi, ModernaResidue):
+    """Checks RNAResidue"""
+    if isinstance(resi, RNAResidue):
         return resi
     raise ParameterError("Bad parameter: '%s' must be a ModeRNAResidue."%str(resi))
     

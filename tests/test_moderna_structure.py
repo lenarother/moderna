@@ -15,9 +15,10 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
-from moderna.ModernaStructure import ModernaStructure, ModernaResidue
-from moderna.util.Errors import ModernaStructureError, ModernaResidueError, RNAChainError
+from moderna.ModernaStructure import ModernaStructure
+from moderna.util.Errors import ModernaStructureError, RNAChainError
 from moderna.sequence.ModernaSequence import Sequence
+from moderna.modifications import add_modification
 from moderna.util.LogFile import log
 from moderna import load_model
 
@@ -34,7 +35,7 @@ class ModernaStructureTests(TestCase):
     def test_add_write(self):
         """A modified base should be written to PDB."""
         s=ModernaStructure('file',A_RESIDUE)
-        s['1'].add_modification('m1A')
+        add_modification(s['1'], 'm1A')
         s.write_pdb_file(OUTPUT)
         t = ModernaStructure('file', OUTPUT)
         self.assertEqual(t['1'].long_abbrev,s['1'].long_abbrev)
@@ -53,14 +54,6 @@ class ModernaStructureTests(TestCase):
         self.assertTrue(s['30'])
         self.assertRaises(RNAChainError,s.__getitem__,'3')
         self.assertEqual(s['30'].identifier,'30')
-
-    def test_get_renumbered_resi(self):
-        """Should renumber but not insert a residue."""
-        s = ModernaStructure('file', MINI_TEMPLATE)
-        resi = s['3'].get_renumbered_resi('100B')
-        self.assertNotEqual(resi, s['3'])
-        self.assertEqual(resi.identifier, '100B')
-        self.assertEqual(s['3'].identifier, '3')
 
     def test_renumber_residue_letter(self):
         s = ModernaStructure('file', MINI_TEMPLATE)
@@ -136,16 +129,6 @@ class ModernaStructureTests(TestCase):
         unk = load_model(PDB_UNK)
         unk.change_sequence('DAAAPAEA?A7A')
         self.assertEqual(unk.get_sequence(), Sequence('DAAAPAEA?A7A'))
-        
-    def _test_messy_atoms(self):
-        """Structure with messed up atoms is rejected."""
-        #TEST DISABLED
-        before = len(log.contents)
-        m = ModernaStructure('file',MESSED_ATOMS) 
-        after = len(log.contents)
-        self.assertTrue(after>before)
-        self.assertTrue(re.find('no nucleotide residues found', log.contents[-1]))
-        #TODO: new test, code not implemented yet.
         
     def test_cap5(self):
         """Caps in mRNA are recognized."""

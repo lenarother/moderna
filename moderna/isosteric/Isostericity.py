@@ -36,7 +36,7 @@ look out for TODO's below.
 
 from moderna.Constants import DATA_PATH
 from IsostericityMatrices import IsostericityMatrices
-from moderna.ModernaResidue import ModernaResidue
+from moderna.RNAResidue import RNAResidue
 from moderna.ModernaStructure import ModernaStructure
 from moderna.ModernaSuperimposer import ModernaSuperimposer
 from moderna.util.Errors import IsostericityError
@@ -94,8 +94,8 @@ class Isostericity:
         if type(self.old_bp) is not tuple and type(self.old_bp) is not list:
             raise IsostericityError("Input data must be a tuple or list")
         elif len(self.old_bp) is not 2:
-            raise IsostericityError("Input data lenght must be equal 2")
-        elif type(self.old_bp[0]) is not ModernaResidue or type(self.old_bp[1]) is not ModernaResidue:
+            raise IsostericityError("Input data length must be equal 2")
+        elif type(self.old_bp[0]) is not RNAResidue or type(self.old_bp[1]) is not RNAResidue:
             raise IsostericityError("First input element must be a tuple with two interacting ModernaResidue objects")
         elif type(self.new_bp) is not str or len(self.new_bp) is not 2:
             raise IsostericityError("Second input element must be a 2-chars String description of new base pair") 

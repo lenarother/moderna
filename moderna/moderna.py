@@ -86,8 +86,10 @@ def parser_usage(parser, options):
     if options.t_file:
         try:
             t = load_template(options.t_file, options.chain_name)
-            if options.examine_template: print examine_structure(t)
-            if options.clean_template: clean_structure(t)
+            if options.examine_template: 
+                print examine_structure(t)
+            if options.clean_template: 
+                clean_structure(t)
             print 'TEMPLATE SEQUENCE:\n%s'%t.get_sequence()
            
         except KeyError:

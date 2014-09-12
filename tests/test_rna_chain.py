@@ -15,11 +15,11 @@ __email__ = "mmusiel@genesilico.pl"
 __status__ = "Production"
 
 from unittest import main, TestCase
+from moderna.RNAResidue import RNAResidue
 from moderna.RNAChain import RNAChain
 from Bio.PDB.PDBParser import PDBParser
-from moderna.util.Errors import ModernaResidueError, RNAChainError
+from moderna.util.Errors import RNAChainError
 from moderna.sequence.ModernaSequence import Sequence
-from moderna.ModernaResidue import ModernaResidue
 
 from test_data import *
 
@@ -27,14 +27,6 @@ OUTPUT = 'test_data/test_output.ent'
 
 
 class RNAChainTests(TestCase):
-
-    def setUp(self):
-        """ """
-        pass
-        
-    def tearDown(self):
-        """ """
-        pass
 
     def test_init_empty(self):
         """Empty chain can be initialized."""
@@ -86,11 +78,11 @@ class RNAChainTests(TestCase):
         self.assertRaises(RNAChainError, RNAChain, 'file', MINI_TEMPLATE, 'B')
 
     def test_iterate(self):
-        """Iteration over ModernaResidues with correct numbers."""
+        """Iteration over RNAResidues with correct numbers."""
         s = RNAChain('file',MINI_TEMPLATE)
         i = 1
         for resi in s:
-            self.assertTrue(isinstance(resi,ModernaResidue))
+            self.assertTrue(isinstance(resi,RNAResidue))
             self.assertEqual(resi.id[1], i)
             i+=1    
 

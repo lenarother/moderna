@@ -26,7 +26,7 @@ __status__ = "Production"
 
 from moderna.analyze.GeometryParameters import GeometryStandards
 from PhosphateBuilder import PhosphateBuilder
-from moderna.ModernaResidue import ModernaResidue
+from moderna.RNAResidue import RNAResidue
 from FCCDLoopCloser import FCCDLoopCloser
 from CoordBuilder import build_coord
 from moderna.analyze.RNASuites import TORSIONS, DEFAULT_TORSIONS
@@ -93,7 +93,7 @@ class BackboneBuilder(object):
 
     def create_resi_from_torsions(self, torsions):
         """Creates residue with backbone atoms in different positions."""
-        resi2_copy = ModernaResidue(self.resi2, \
+        resi2_copy = RNAResidue(self.resi2, \
                 alphabet_entry=self.resi2.alphabet_entry)
         epsilon, zeta, alpha, beta, gamma, delta = torsions
         c4c3 = self.resi2["C4'"]-self.resi2["C3'"]
