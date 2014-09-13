@@ -9,7 +9,8 @@ install:
 # command to run tests, e.g. python setup.py test
 script: "bash run-tests.sh"
 
-#notifications:
-#  email:
-#    - one@example.com
-#    - other@example.com
+notifications:
+  email:
+    - rother.magdalena@gmail.com
+    - krother@academis.eu
+    - ppiatkowski@genesilico.pl
