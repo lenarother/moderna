@@ -225,7 +225,7 @@ def setup_package():
           author=AUTHOR,
           author_email=EMAIL,
           license=LICENSE,
-          long_description=read('README.rst'),
+          long_description=read('README.md'),
           classifiers=CLASSIFIERS,
           test_suite='tests',
           packages=setuptools.find_packages(exclude=['tests', 'tests.*']),
