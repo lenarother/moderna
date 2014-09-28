@@ -1,7 +1,8 @@
 include versioneer.py
 include *.txt
 include *.rst
+include *.md
 include *.pdb
 include *.ent
-recursive-include moderna *.py *.c *.h *.pxd *.pyx
-recursive-include docs *.rst *.py
+recursive-include moderna *.py *.c *.h *.pxd *.pyx *.md
+recursive-include docs *.rst *.py *.md
