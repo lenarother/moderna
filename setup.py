@@ -161,7 +161,7 @@ def all_from_dir(path):
 PATH = 'moderna' + os.sep + 'data' + os.sep
 
 file_list = [
-              ('.',['COPYING','README.rst','RELEASE_NOTES.TXT']),
+              ('.',['COPYING','README.md','RELEASE_NOTES.txt']),
               (PATH,[
                   #PATH + 'LIR_fragments.lib',
                   PATH + 'rnaDB05_list.txt',
