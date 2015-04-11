@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+  
+<head></head>
+
+<body>
+
+<h1>ModeRNA - A program for comparative RNA modeling</h1>
+<p>by Magdalena Rother, Kristian Rother, Tomasz Puton and Janusz M. Bujnicki</p>
+<p>see <a href="http://iimcb.genesilico.pl/moderna/" target="_new">http://iimcb.genesilico.pl/moderna/</a></p>
+
+
+<h2>ModeRNA Docker interface</h2>
+<p>Build a model from a template PDB structure and FASTA alignment. If no alignment is given, the template structure is analyzed instead.</p>
+
+<hr>
+
+    <title>Upload new File</title>
+    <form action="" method=post enctype=multipart/form-data>
+    <h3>Upload Template PDB file</h3>
+      <p><input type=file name=template></p>
+    <h3>Upload Alignment FASTA file (optional)</h3>
+      <p><input type=file name=alignment></p>
+      <p><input type=submit value="Run ModeRNA"></p>
+    </form>
+
+{% if model %}
+  <hr>
+  <h3>ModeRNA model</h3>
+  <a href="{{ model }}">Download model structure</a>
+{% endif %}
+
+{% if log %}
+  <hr>
+  <h3>ModeRNA log</h3>
+  <pre>{{ log }}
+  </pre>
+{% endif %}
+
+</body>
+</html>
