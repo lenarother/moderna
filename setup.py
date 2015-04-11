@@ -155,7 +155,7 @@ def all_from_dir(path):
     """Returns a path, list of files from the given path."""
     if path[-1] != os.sep:
         path += os.sep
-    files = [path+f for f in os.listdir(path) if not f=='.git']
+    files = [path+f for f in os.listdir(path) if not f=='.git' and not os.path.isdir(path+f)]
     return path, files
 
 PATH = 'moderna' + os.sep + 'data' + os.sep
@@ -163,7 +163,7 @@ PATH = 'moderna' + os.sep + 'data' + os.sep
 file_list = [
               ('.',['COPYING','README.md','RELEASE_NOTES.txt']),
               (PATH,[
-                  #PATH + 'LIR_fragments.lib',
+                  PATH + 'LIR_fragments.lib',
                   PATH + 'rnaDB05_list.txt',
                   PATH + 'modification_names_table',
                   PATH + 'modification_topologies.txt',
@@ -176,7 +176,7 @@ file_list = [
                   PATH + 'IsostericityMatrices.txt',
               ]),
                all_from_dir(PATH + 'modification_fragments'),
-               #all_from_dir(PATH + 'rnaDB05'),
+               all_from_dir(PATH + 'rnaDB05'),
                all_from_dir(PATH + 'standard_bases'),
                all_from_dir(PATH + 'base_pairs'),
     ]
