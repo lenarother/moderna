@@ -60,7 +60,7 @@ def main():
             moderna.write_logfile()
             log = open('moderna.log').read()
             # return redirect(url_for('uploaded_file', filename=filename))
-        if m:
+        if model:
             model = 'static/model.pdb'
     return render_template('main.html', log=log, model=model)
     

@@ -22,7 +22,9 @@ Technical Support: rother.magdalena@gmail.com
 
 ModeRNA runs on any modern Windows or Linux PC. It requires the Biopython library.
 
-### 3. Installation on Linux
+### 3. Installation
+
+#### 3.1 Installing ModeRNA on Linux
 
 To install ModeRNA on Linux, you need to:
 
@@ -39,7 +41,7 @@ To install ModeRNA on Linux, you need to:
     python
     >>> from moderna.moderna import *
 
-### 4. Installing ModeRNA on Windows
+#### 3.2 Installing ModeRNA on Windows
 
 To install ModeRNA on Windows, you need to:
 
@@ -58,6 +60,21 @@ To install ModeRNA on Windows, you need to:
 
     >>> from moderna.moderna import *
 
+### 4. Web Interface and Docker Container
+
+There is a very simple web interface based on Flask delivered with ModeRNA:
+
+    cd server/
+    python server.py
+
+Also, if you are using Docker, you can deploy ModeRNA as a local sevice:
+
+    docker pull krother/moderna
+    docker run -t -i -p 5000:5000 krother/moderna
+    cd moderna/server
+    python server.py
+
+Which should run the server inside the Docker environment.
 
 ### 5. Legal Disclaimer
 
