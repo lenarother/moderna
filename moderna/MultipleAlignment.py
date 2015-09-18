@@ -14,7 +14,7 @@ import re
 import Bio
 
 
-DISTANCE_THRESHOLD = 5.0    # C4' atom distance threshold (angstroms)
+DISTANCE_THRESHOLD = 3.0    # C4' atom distance threshold (angstroms)
 
 def get_atom_distance(coords1, coords2):
     """
@@ -71,6 +71,7 @@ class MultipleAlignment(object):
     def __init__(self, seq_alignment, templates):
         self.seq_alignment = seq_alignment
         self.seq_alignment_tuple = parse_alignment(seq_alignment)
+        self.template_matrix = []
         self.set_templates(templates)
     
     def __repr__(self):
@@ -240,13 +241,6 @@ class MultipleAlignment(object):
         self.templates = template_list
         self.make_sec_struct_alignment()
 
-    def add_template(self, template):
-        """
-        Adds a template to the template list (on the last position).
-        """
-        self.templates.append(template)
-        self.make_sec_struct_alignment()
-
     def get_templates(self):
         """
         Returns all templates.
@@ -330,6 +324,8 @@ class MultipleAlignment(object):
         at specified position, basing on their secondary structures
         AND the distances of C4' atoms from the guide template.
         """     
+        if len(self.template_matrix)>0:
+            return self.template_matrix
         struct_matrix = self.get_structure_matrix()
         dist_matrix = []
         self.coords = {"C4'": [], "C1'": [], "C2'": [],
@@ -346,9 +342,11 @@ class MultipleAlignment(object):
                 guide_coords.append(self.coords["C4'"][self.guides[pos]][pos])
             except TypeError: # no guide at that position
                 guide_coords.append(None)
+        self.dists = [] #XXX
         for temp_num in self.all_template_numbers():
             tmp = [0] * self.length
             for pos in range(self.length):
+                distance = None
                 if self.guides[pos]==temp_num:
                     tmp[pos] = 1
                 elif struct_matrix[temp_num][pos]==1:
@@ -356,7 +354,10 @@ class MultipleAlignment(object):
                                guide_coords[pos])
                     if distance<=DISTANCE_THRESHOLD:
                         tmp[pos] = 1
+                if distance is None: distance = "-" #XXX
+                if temp_num==1: self.dists.append(str(distance)) #XXX
             dist_matrix.append(tmp)
+        self.template_matrix = dist_matrix
         return dist_matrix
 
     def target_atom_coords(self, name):
@@ -487,6 +488,22 @@ class TemplateWrapper(Template):
                        "C8/C6": multaln.target_atom_coords("C8/C6"),
                        "C4/C2": multaln.target_atom_coords("C4/C2"),}
         self.rotate_bases(base_coords)
+        for pos in range(len(struct_matrix[0])): #XXX
+            r1 = temp_list[0][pos]
+            if r1 is None:
+                id1 = "-"
+                name1 = "-"
+            else:
+                id1 = str(r1.id[1])
+                name1 = r1.resname
+            r2 = temp_list[1][pos]
+            if r2 is None:
+                id2 = "-"
+                name2 = "-"
+            else:
+                id2 = str(r2.id[1])
+                name2 = r2.resname
+            print "\t".join((id1, name1, id2, name2, multaln.dists[pos]))
 
     def get_opening_bracket(self, position, multaln, temp_used):
         """
