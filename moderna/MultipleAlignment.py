@@ -328,7 +328,7 @@ class MultipleAlignment(object):
             return self.template_matrix
         struct_matrix = self.get_structure_matrix()
         dist_matrix = []
-        self.coords = {"C4'": [], "C1'": [], "C2'": [],
+        self.coords = {"C4'": [], "C1'": [], "O2'": [],
                        "N9/N1": [], "C8/C6": [], "C4/C2": []}
         try:
             for name in self.coords.keys():
@@ -481,7 +481,7 @@ class TemplateWrapper(Template):
                           template_chain_name=template.chain_name)
         back_coords = {"C4'": multaln.target_atom_coords("C4'"),
                        "C1'": multaln.target_atom_coords("C1'"),
-                       "C2'": multaln.target_atom_coords("C2'"),}
+                       "O2'": multaln.target_atom_coords("O2'"),}
         self.replace_sugars(back_coords, temp_list)
         self.move_residues(back_coords, pair_list)
         base_coords = {"N9/N1": multaln.target_atom_coords("N9/N1"),
@@ -535,8 +535,8 @@ class TemplateWrapper(Template):
                                               centroids["C4'"][i])
                     dist2 = get_atom_distance(t[i]["C1'"].coord,\
                                               centroids["C1'"][i])
-                    dist3 = get_atom_distance(t[i]["C2'"].coord,\
-                                              centroids["C2'"][i])
+                    dist3 = get_atom_distance(t[i]["O2'"].coord,\
+                                              centroids["O2'"][i])
                     d.append(sqrt(dist1 + dist2 + dist3))
                 else:
                     d.append(1e4)
@@ -574,7 +574,7 @@ class TemplateWrapper(Template):
     
     def move_residues(self, new_coords, pair_list):
         """
-        Superimposes all residues against (C4', C1', C2') centroids.
+        Superimposes all residues against (C4', C1', O2') centroids.
         Paired residues are treated as a whole.
         """
         i = 0
@@ -584,11 +584,11 @@ class TemplateWrapper(Template):
             while self.guides[i] is None:
                 i += 1
             centroids = []
-            for name in ("C4'", "C1'", "C2'"):
+            for name in ("C4'", "C1'", "O2'"):
                 centroids.append(Bio.PDB.Atom.Atom(name, new_coords[name][i],\
                                  0.0, 1.0, " ", " %s " % name, i, name[0]))
             sup = Bio.PDB.Superimposer()
-            sup.set_atoms(centroids, (r["C4'"], r["C1'"], r["C2'"]))
+            sup.set_atoms(centroids, (r["C4'"], r["C1'"], r["O2'"]))
             rot, tran = sup.rotran
             if i in openings:
                 transform_data[i] = (r, rot, tran)
