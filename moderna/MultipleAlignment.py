@@ -329,7 +329,7 @@ class MultipleAlignment(object):
         struct_matrix = self.get_structure_matrix()
         dist_matrix = []
         self.coords = {"C4'": [], "C1'": [], "O2'": [],
-                       "N9/N1": [], "C8/C6": [], "C4/C2": []}
+                       "N9/N1": [], "C2": [], "C6/C4": []}
         try:
             for name in self.coords.keys():
                 self.coords[name] = [self.get_atoms(temp_num, name) for\
@@ -485,9 +485,9 @@ class TemplateWrapper(Template):
         self.replace_sugars(back_coords, temp_list)
         self.move_residues(back_coords, pair_list)
         base_coords = {"N9/N1": multaln.target_atom_coords("N9/N1"),
-                       "C8/C6": multaln.target_atom_coords("C8/C6"),
-                       "C4/C2": multaln.target_atom_coords("C4/C2"),}
-        self.rotate_bases(base_coords)
+                       "C2": multaln.target_atom_coords("C2"),
+                       "C6/C4": multaln.target_atom_coords("C6/C4"),}
+        self.rotate_bases(base_coords, pair_list)
         for pos in range(len(struct_matrix[0])): #XXX
             r1 = temp_list[0][pos]
             if r1 is None:
@@ -503,7 +503,7 @@ class TemplateWrapper(Template):
             else:
                 id2 = str(r2.id[1])
                 name2 = r2.resname
-            print "\t".join((id1, name1, id2, name2, multaln.dists[pos]))
+            #print "\t".join((id1, name1, id2, name2, multaln.dists[pos]))
 
     def get_opening_bracket(self, position, multaln, temp_used):
         """
@@ -546,26 +546,32 @@ class TemplateWrapper(Template):
                 r[atom.name].set_coord(atom.coord)
             i += 1
     
-    def rotate_bases(self, new_coords):
+    def rotate_bases(self, new_coords, pair_list):
         """
-        Rotates each base superimposing it against (N9, C8, C4) centroids
-        for purines and (N1, C6, C2) for pyrimidines.
+        Rotates each base superimposing it against (N9, C2, C6) centroids
+        for purines and (N1, C2, C4) for pyrimidines.
+        Only bases from unpaired residues are rotated.
         """
         i = 0
         exclude_atoms = ("P", "OP1", "OP2", "O5'", "C5'", "C4'", "O4'",\
                          "C3'", "O3'", "C2'", "O2'", "C1'")
+        openings, closings = zip(*pair_list)
+        paired = openings + closings
         for r in self:
             while self.guides[i] is None:
                 i += 1
+            if i in paired:
+                i += 1
+                continue
             centroids = []
-            for name in ("N9/N1", "C8/C6", "C4/C2"):
+            for name in ("N9/N1", "C2", "C6/C4"):
                 centroids.append(Bio.PDB.Atom.Atom(name, new_coords[name][i],\
                                  0.0, 1.0, " ", " %s " % name, i, name[0]))
             sup = Bio.PDB.Superimposer()
             if r.pyrimidine:
-                sup.set_atoms(centroids, (r["N1"], r["C6"], r["C2"]))
+                sup.set_atoms(centroids, (r["N1"], r["C2"], r["C4"]))
             else:
-                sup.set_atoms(centroids, (r["N9"], r["C8"], r["C4"]))
+                sup.set_atoms(centroids, (r["N9"], r["C2"], r["C6"]))
             rot, tran = sup.rotran
             for atom in r:
                 if not atom.name in exclude_atoms:
