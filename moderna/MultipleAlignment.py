@@ -488,6 +488,7 @@ class TemplateWrapper(Template):
                        "C2": multaln.target_atom_coords("C2"),
                        "C6/C4": multaln.target_atom_coords("C6/C4"),}
         self.rotate_bases(base_coords, pair_list)
+        '''
         for pos in range(len(struct_matrix[0])): #XXX
             r1 = temp_list[0][pos]
             if r1 is None:
@@ -503,7 +504,8 @@ class TemplateWrapper(Template):
             else:
                 id2 = str(r2.id[1])
                 name2 = r2.resname
-            #print "\t".join((id1, name1, id2, name2, multaln.dists[pos]))
+            print "\t".join((id1, name1, id2, name2, multaln.dists[pos]))
+        '''
 
     def get_opening_bracket(self, position, multaln, temp_used):
         """
@@ -570,12 +572,23 @@ class TemplateWrapper(Template):
             sup = Bio.PDB.Superimposer()
             if r.pyrimidine:
                 sup.set_atoms(centroids, (r["N1"], r["C2"], r["C4"]))
+                anchor_atom = "N1"
             else:
                 sup.set_atoms(centroids, (r["N9"], r["C2"], r["C6"]))
+                anchor_atom = "N9"
+            anchor_coord = r[anchor_atom].get_coord()
             rot, tran = sup.rotran
             for atom in r:
                 if not atom.name in exclude_atoms:
                     atom.transform(rot, tran)
+            # the base is dislocated after the transformation
+            # and we need to move it back, so that the anchoring atom (N1/N9)
+            # will be exactly in the same place as before
+            new_anchor_coord = r[anchor_atom].get_coord()
+            move_back_vec = anchor_coord - new_anchor_coord
+            for atom in r:
+                if not atom.name in exclude_atoms:
+                    atom.set_coord(atom.get_coord() + move_back_vec)
             i += 1
     
     def move_residues(self, new_coords, pair_list):
