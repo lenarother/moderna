@@ -525,6 +525,8 @@ class TemplateWrapper(Template):
         Replaces sugars in all residues with the sugars
         closest to given centroid coordinates.
         """
+        replace_atoms = ("P", "OP1", "OP2", "OP3", "O5'", "C5'", "C4'", "O4'",\
+                         "C3'", "O3'", "C2'", "O2'", "C1'")
         num_templates = len(repl_templates)
         i = 0
         for r in self:
@@ -544,7 +546,7 @@ class TemplateWrapper(Template):
                     d.append(1e4)
             repl_res = repl_templates[d.index(min(d))][i]
             for atom in repl_res:
-                if not "'" in atom.name: continue
+                if not atom.name in replace_atoms: continue
                 r[atom.name].set_coord(atom.coord)
             i += 1
     
@@ -555,7 +557,7 @@ class TemplateWrapper(Template):
         Only bases from unpaired residues are rotated.
         """
         i = 0
-        exclude_atoms = ("P", "OP1", "OP2", "O5'", "C5'", "C4'", "O4'",\
+        exclude_atoms = ("P", "OP1", "OP2", "OP3", "O5'", "C5'", "C4'", "O4'",\
                          "C3'", "O3'", "C2'", "O2'", "C1'")
         openings, closings = zip(*pair_list)
         paired = openings + closings
@@ -595,7 +597,9 @@ class TemplateWrapper(Template):
         """
         Superimposes all residues against (C4', C1', O2') centroids.
         Paired residues are treated as a whole.
+        Phosphates are excluded.
         """
+        exclude_atoms = ("P", "OP1", "OP2", "OP3")
         i = 0
         openings, closings = zip(*pair_list)
         transform_data = {} # contains "opening bracket" residues and their rot/tran data
@@ -616,8 +620,12 @@ class TemplateWrapper(Template):
                 r_op, rot_op, tran_op = transform_data[openings[index]]
                 rot = (rot + rot_op) / 2
                 tran = (tran + tran_op) / 2
-                r_op.transform(rot, tran)
+                for atom in r_op:
+                    if not atom in exclude_atoms:
+                        atom.transform(rot, tran)
             if not i in openings:
-                r.transform(rot, tran)
+                for atom in r:
+                    if not atom in exclude_atoms:
+                        atom.transform(rot, tran)
             i += 1
 
