@@ -621,11 +621,11 @@ class TemplateWrapper(Template):
                 rot = (rot + rot_op) / 2
                 tran = (tran + tran_op) / 2
                 for atom in r_op:
-                    if not atom in exclude_atoms:
+                    if not atom.name in exclude_atoms:
                         atom.transform(rot, tran)
             if not i in openings:
                 for atom in r:
-                    if not atom in exclude_atoms:
+                    if not atom.name in exclude_atoms:
                         atom.transform(rot, tran)
             i += 1
 
