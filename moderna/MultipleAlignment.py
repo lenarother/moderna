@@ -16,6 +16,11 @@ import Bio
 
 DISTANCE_THRESHOLD = 3.0    # C4' atom distance threshold (angstroms)
 
+PHOSPHATE_ATOMS_NO_O3 = ("P", "OP1", "OP2", "OP3", "O5'")
+PHOSPHATE_ATOMS = PHOSPHATE_ATOMS_NO_O3 + ("O3'",)
+RIBOSE_ATOMS = ("C5'", "C4'", "O4'", "C3'", "C2'", "O2'", "C1'")
+
+
 def get_atom_distance(coords1, coords2):
     """
     Returns the distance between two atoms in 3D space.
@@ -329,7 +334,8 @@ class MultipleAlignment(object):
         struct_matrix = self.get_structure_matrix()
         dist_matrix = []
         self.coords = {"C4'": [], "C1'": [], "O2'": [],
-                       "N9/N1": [], "C2": [], "C6/C4": []}
+                       "N9/N1": [], "C2": [], "C6/C4": [],
+                       "P": [], "OP1": [], "OP2": [],}
         try:
             for name in self.coords.keys():
                 self.coords[name] = [self.get_atoms(temp_num, name) for\
@@ -488,6 +494,11 @@ class TemplateWrapper(Template):
                        "C2": multaln.target_atom_coords("C2"),
                        "C6/C4": multaln.target_atom_coords("C6/C4"),}
         self.rotate_bases(base_coords, pair_list)
+        phosph_coords = {"P": multaln.target_atom_coords("P"),
+                         "OP1": multaln.target_atom_coords("OP1"),
+                         "OP2": multaln.target_atom_coords("OP2"),}
+        self.move_phosphates(phosph_coords)
+        self.write_pdb_file("stadium_posrednie.pdb")
         '''
         for pos in range(len(struct_matrix[0])): #XXX
             r1 = temp_list[0][pos]
@@ -525,9 +536,10 @@ class TemplateWrapper(Template):
         Replaces sugars in all residues with the sugars
         closest to given centroid coordinates.
         """
-        replace_atoms = ("P", "OP1", "OP2", "OP3", "O5'", "C5'", "C4'", "O4'",\
-                         "C3'", "O3'", "C2'", "O2'", "C1'")
+        replace_atoms = RIBOSE_ATOMS + PHOSPHATE_ATOMS_NO_O3
         num_templates = len(repl_templates)
+        last_resi = None
+        last_O3_coords = [None] * num_templates
         i = 0
         for r in self:
             while self.real_sequence[i]=="-":
@@ -544,10 +556,22 @@ class TemplateWrapper(Template):
                     d.append(sqrt(dist1 + dist2 + dist3))
                 else:
                     d.append(1e4)
-            repl_res = repl_templates[d.index(min(d))][i]
+            temp_num = d.index(min(d))
+            repl_res = repl_templates[temp_num][i]
             for atom in repl_res:
                 if not atom.name in replace_atoms: continue
                 r[atom.name].set_coord(atom.coord)
+
+            # O3' atom from the previous residue makes the phosphate,
+            # so it needs to be taken from the same template as the rest.
+            if last_resi is not None and last_O3_coords[temp_num] is not None:
+                last_resi["O3'"].set_coord(last_O3_coords[temp_num])
+            last_resi = r
+            for n in range(num_templates):
+                resi = repl_templates[n][i]
+                if resi is not None:
+                    last_O3_coords[n] = resi["O3'"].coord
+            
             i += 1
     
     def rotate_bases(self, new_coords, pair_list):
@@ -557,8 +581,7 @@ class TemplateWrapper(Template):
         Only bases from unpaired residues are rotated.
         """
         i = 0
-        exclude_atoms = ("P", "OP1", "OP2", "OP3", "O5'", "C5'", "C4'", "O4'",\
-                         "C3'", "O3'", "C2'", "O2'", "C1'")
+        exclude_atoms = RIBOSE_ATOMS + PHOSPHATE_ATOMS
         openings, closings = zip(*pair_list)
         paired = openings + closings
         for r in self:
@@ -599,13 +622,17 @@ class TemplateWrapper(Template):
         Paired residues are treated as a whole.
         Phosphates are excluded.
         """
-        exclude_atoms = ("P", "OP1", "OP2", "OP3")
+        exclude_atoms = PHOSPHATE_ATOMS
         i = 0
         openings, closings = zip(*pair_list)
+        paired = openings + closings
         transform_data = {} # contains "opening bracket" residues and their rot/tran data
         for r in self:
             while self.guides[i] is None:
                 i += 1
+            if i in paired:
+                i += 1
+                continue
             centroids = []
             for name in ("C4'", "C1'", "O2'"):
                 centroids.append(Bio.PDB.Atom.Atom(name, new_coords[name][i],\
@@ -627,5 +654,31 @@ class TemplateWrapper(Template):
                 for atom in r:
                     if not atom.name in exclude_atoms:
                         atom.transform(rot, tran)
+            i += 1
+
+    def move_phosphates(self, new_coords):
+        """
+        Superimposes phosphates against (P, OP1, OP2) centroids.
+        Each phosphate includes O3' atom from the previous residue.
+        """
+        move_atoms = PHOSPHATE_ATOMS_NO_O3
+        i = 0
+        o3 = None # O3' atom from the previous residue
+        for r in self:
+            while self.guides[i] is None:
+                i += 1
+            centroids = []
+            for name in ("P", "OP1", "OP2"):
+                centroids.append(Bio.PDB.Atom.Atom(name, new_coords[name][i],\
+                                 0.0, 1.0, " ", " %s " % name, i, name[0]))
+            sup = Bio.PDB.Superimposer()
+            sup.set_atoms(centroids, (r["P"], r["OP1"], r["OP2"]))
+            rot, tran = sup.rotran
+            for atom in r:
+                if atom.name in move_atoms:
+                    atom.transform(rot, tran)
+            if o3 is not None:
+                o3.transform(rot, tran)
+            o3 = r["O3'"]
             i += 1
 
