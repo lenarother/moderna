@@ -40,15 +40,15 @@ class AlphabetEntry(object):
 
     def __repr__(self):
         return self.new_abbrev
-        
+
     def __eq__(self, other_ae):
         if self.short_abbrev == ANY_RESIDUE or other_ae.short_abbrev == ANY_RESIDUE: 
             return False
-        elif self.long_abbrev == other_ae.long_abbrev: 
+        elif self.long_abbrev == other_ae.long_abbrev:
             return True
-        else: 
+        else:
             return False
-        
+
     @property
     def purine(self):
         if self.original_base in ['A', 'G']: 
@@ -68,7 +68,7 @@ class AlphabetEntry(object):
             string = '0' * (4 - len(self.new_abbrev)) + self.new_abbrev
             length = 4
         return string, length
-        
+
 
 
 class Alphabet(dict):

@@ -47,9 +47,9 @@ class ModificationRemover(ResidueEditor):
                 'remove': ''
             }
             if resi.long_abbrev == 'dT':
-                if resi.child_dict.has_key('C7'):
+                if 'C7' in resi.child_dict:
                     rule['remove'] = 'C7'
-                elif resi.child_dict.has_key('C5M'):
+                elif 'C5M' in resi.child_dict:
                     rule['remove'] = 'C5M'
             rule['moved_link_atoms'] = ["C3'", "C2'", "C1'"]
             rule['fixed_link_atoms'] = ["C3'", "C2'", "C1'"]

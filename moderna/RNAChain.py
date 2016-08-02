@@ -16,6 +16,7 @@ from .Constants import MISSING_RESIDUE
 from .util.Errors import RNAChainError, ModernaStructureError
 from .analyze.ChainConnectivity import are_residues_connected
 import os
+import functools
 
 
 class RNAChain:
@@ -66,7 +67,7 @@ class RNAChain:
         return PDBParser().get_structure('', filename)
 
     def _get_chain_from_struct(self, struct, chain_name):
-        if not struct[0].child_dict.has_key(chain_name):
+        if not chain_name in struct[0].child_dict:
             raise RNAChainError("Chain '%s' does not exist."%chain_name)
         return struct[0][chain_name]
 
@@ -80,7 +81,7 @@ class RNAChain:
             for resi in data:
                 temp = RNAResidue(resi, new_atoms=new_atoms)
                 self.moderna_residues[temp.identifier] = temp
-    # 
+    #
     # data management
     #
     def __nonzero__(self):
@@ -206,14 +207,15 @@ class RNAChain:
                 return 1
             if x_ins_id == y_ins_id:
                 return 0
-     
+
     def sort_residues(self):
         """
         Sorts residues in a chain object (also negative numbers),
         so that they can be written in the right order.
         """
-        sorted_residues = sorted(self.moderna_residues.values(), \
-            cmp=self.cmp_for_moderna_residues)
+        keyfunc = functools.cmp_to_key(self.cmp_for_moderna_residues)
+        sorted_residues = sorted(self.moderna_residues.values(),
+            key=keyfunc)
         sorted_residue_numbers = [resi.identifier for resi in sorted_residues]
         return sorted_residue_numbers
 

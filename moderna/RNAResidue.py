@@ -48,10 +48,10 @@ class RNAResidue(Residue):
             abbrev = alphabet_entry.long_abbrev
         else:
             try:
-                abbrev = self.br.identify_resi(pdb_residue)
+                aentry = self.br.identify_resi(pdb_residue)
             except BaseRecognitionError:
-                abbrev = alphabet.get_short_original(ANY_RESIDUE)
-        self.change_name(abbrev)
+                aentry = alphabet.get_short_original(ANY_RESIDUE)
+        self.change_name(aentry)
 
         self.identifier = str(self.id[1]).strip() + self.id[2].strip()
         self.__create_atoms(pdb_residue, new_atoms)
@@ -113,11 +113,11 @@ class RNAResidue(Residue):
             elif self.original_base == 'X':
                 if 'N9' in self.child_dict:
                     return Residue.__getitem__(self, 'N9')
-                elif 'N1' in self.child_dict.has_key:
+                elif 'N1' in self.child_dict:
                     return Residue.__getitem__(self, 'N1')
                 else:
                     raise RNAResidueError('Cannot decide which atom to use for glycosidic N in residue %s' % self)
-            elif 'N1' in self.child_dict.has_key:
+            elif 'N1' in self.child_dict:
                 return Residue.__getitem__(self, 'N1')
             elif 'N9' in self.child_dict:
                 return Residue.__getitem__(self, 'N9')
@@ -146,6 +146,8 @@ class RNAResidue(Residue):
         Changes the residues name.
         to a new name (as a long abbreviation if modified)
         """
+        if type(new_name) != str:
+            new_name = str(new_name)
         if new_name not in alphabet:
             new_name = alphabet.get_short_original(ANY_RESIDUE).long_abbrev
         aentry = alphabet[new_name]

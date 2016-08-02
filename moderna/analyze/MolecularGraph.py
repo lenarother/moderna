@@ -95,7 +95,7 @@ class AnnotatedAtom(Atom):
         'charge' and 'free_electron_pairs' fields.
         Radicals are not considered here
         """
-        if OUTER_ELECTRONS.has_key(self.element):
+        if self.element in OUTER_ELECTRONS:
             outer = OUTER_ELECTRONS[self.element]
         else:
             outer = 1
@@ -433,7 +433,7 @@ class AnnotatedMolecule(Molecule):
             if s == 'H': continue
             if self.sum_formula.get(s,0) < sumdict[s]: return False
         for s in ['S','Se']:
-            if self.sum_formula.has_key(s) and not sumdict.has_key(s):
+            if s in self.sum_formula and not s in sumdict:
                 return False
         return True
         

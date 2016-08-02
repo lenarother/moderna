@@ -34,27 +34,27 @@ class PairQueue(object):
         if self.ap_queue and self.guide_queue:
             return True
         
-    @property    
+    @property  
     def pair(self):
         """Return current pair of elements."""
         return self.guide_queue[-1], self.ap_queue[-1]
-    
+
     def next_ap(self):
         """Moves one queue forward."""
         self.ap_queue.pop()
         self.i_ali += 1
-        
+
     def next_guide(self):
         """Moves the other queue forward."""
         self.guide_queue.pop()
         self.i_guide += 1
 
     def next_both(self):
-        """Moves both queues forward."""        
+        """Moves both queues forward."""    
         self.next_guide()
         self.next_ap()
 
-    
+
 class AlignmentMatcher(object):
     """
     Compares a sequence to a sequence in an alignment,
@@ -62,20 +62,20 @@ class AlignmentMatcher(object):
     """
     def __init__(self, alignment):
         self.align = alignment
-        
+
     def is_template_identical(self, seq):
         """Returns boolean"""
-        seq_t = seq.seq_without_breaks 
+        seq_t = seq.seq_without_breaks
         seq_a = self.align.template_seq.seq_without_breaks
         return seq_t == seq_a
-        
+
     def is_target_identical(self, seq):
         """Returns boolean"""
         return seq == self.align.target_seq
-        
+
     def is_seq_fixable(self, seq):
         """Returns True if the guide sequence can be used for fixing."""
-        if self.is_template_identical(seq): 
+        if self.is_template_identical(seq):
             return False
         tseq = self.align.template_seq
         if len(seq.seq_without_breaks) != len(tseq.seq_without_breaks):
@@ -85,13 +85,13 @@ class AlignmentMatcher(object):
 
     def set_aligned_sequences(self, char_tuples):
         """Resets the sequences in the RNAAlignment object."""
-        transposed = map(list, zip(*char_tuples))
+        transposed = [list(x) for x in zip(*char_tuples)]
         target = Sequence(transposed[0])
         template = Sequence(transposed[1])
         if len(target) != len(template):
             raise AlignmentError("Error correcting alignment; lenghts differ:\n%s\%s"%(str(target), str(template)))
         self.align.set_aligned_sequences(target, template)
-        
+
     def check_breaks(self, guide, apos, dqueue, result):
         """Reacts on underscores in either of the sequences."""
         temp, targ = apos.template_letter, apos.target_letter
@@ -113,25 +113,25 @@ class AlignmentMatcher(object):
         elif apos.has_target_gap():
             result.append((GAP, guide))
         dqueue.next_ap()
-    
+
     def check_matches(self, guide, apos, dqueue, result):
         """Reacts on matches and mismatches."""
         temp, targ = apos.template_letter, apos.target_letter
         if temp.short_abbrev == ANY_RESIDUE:
             log.write_message(".. incomplete template residue in alignment position %i (%s/%s) - alignment edited." \
-                              % (dqueue.i_ali+1, guide, temp))
+                              % (dqueue.i_ali + 1, guide, temp))
             result.append((targ, guide))
         elif guide.short_abbrev == ANY_RESIDUE:
             log.write_message(".. unknown residue in alignment position %i (%s/%s) - alignment edited." \
-                              % (dqueue.i_ali+1, guide, temp))
+                              % (dqueue.i_ali + 1, guide, temp))
             result.append((targ, guide))
         elif guide.original_base != temp.original_base:
             log.write_message(".. different nucleobase in alignment position %i (%s/%s) - please check manually." \
-                              % (dqueue.i_ali+1, guide, temp))
+                              % (dqueue.i_ali + 1, guide, temp))
             result.append((targ, temp))
         elif guide != temp and guide.original_base == temp.original_base:
             log.write_message(".. different modified base found in alignment position %i (%s/%s) - alignment edited." \
-                              % (dqueue.i_ali+1, guide, temp))
+                              % (dqueue.i_ali + 1, guide, temp))
             result.append((targ, guide))
         elif guide == temp:
             result.append((targ, guide))
@@ -147,10 +147,10 @@ class AlignmentMatcher(object):
         # validate input seq
         if not self.is_seq_fixable(seq):
             return
-        
+
         log.write_message("\nTemplate and alignment sequences differ - trying to fix small differences.\n")
-        log.write_message("template           : %s"%seq)
-        log.write_message("alignment (before) : %s\n"%\
+        log.write_message("template           : %s" % seq)
+        log.write_message("alignment (before) : %s\n" % 
                           self.align.aligned_template_seq)
         # iterate through positions
         dqueue = PairQueue(self.align, seq)
@@ -165,6 +165,5 @@ class AlignmentMatcher(object):
                 self.check_matches(guide, apos, dqueue, result)
 
         self.set_aligned_sequences(result)
-        log.write_message("\ntemplate          : %s"%seq)
-        log.write_message("alignment (after) : %s\n"%str(self.align))
-
+        log.write_message("\ntemplate          : %s" % seq)
+        log.write_message("alignment (after) : %s\n" % str(self.align))

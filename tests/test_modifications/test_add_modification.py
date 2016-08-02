@@ -16,25 +16,25 @@ class AddModificationTests(TestCase):
     """
     def setUp(self):
         """Loads the A residue to start with."""
-        self.struc = ModernaStructure('file',A_RESIDUE)
+        self.struc = ModernaStructure('file', A_RESIDUE)
         self.adenosine = self.struc['1']
 
     def test_add_to_a(self):
         """Add modification to A."""
         add_modification(self.adenosine, 'm1A')
-        self.assertEqual(BaseRecognizer().identify_resi(self.adenosine),'m1A')
+        self.assertEqual(BaseRecognizer().identify_resi(self.adenosine), 'm1A')
 
     def test_add_to_g(self):
         """Add modification to G."""
         exchange_base(self.adenosine, 'G')
         add_modification(self.adenosine, 'm1G')
-        self.assertEqual(BaseRecognizer().identify_resi(self.adenosine),'m1G')
+        self.assertEqual(BaseRecognizer().identify_resi(self.adenosine), 'm1G')
 
     def test_add_to_u(self):
         """Add modification to U."""
         exchange_base(self.adenosine,'U')
         add_modification(self.adenosine, 'Y')
-        self.assertEqual(BaseRecognizer().identify_resi(self.adenosine),'Y')
+        self.assertEqual(BaseRecognizer().identify_resi(self.adenosine), 'Y')
 
     def test_add_to_wrong_base(self):
         """Add modification to A that belongs to G should not work."""
@@ -46,8 +46,8 @@ class AddModificationTests(TestCase):
         self.assertEqual(atoms_m1G,atoms)
 
     def test_add_to_unk(self):
-        """Should be possible to add modification to unknown residue when ribose is present"""
-        m=load_model(PDB_UNK)
+        """Add modification to unknown residue when ribose is present"""
+        m = load_model(PDB_UNK)
         for resi in m:
             add_modification(resi, 'm1G')
             self.assertEqual(resi.long_abbrev, 'm1G')
@@ -85,13 +85,14 @@ class AddModificationTests(TestCase):
                     errors.append(k)
 
         if not_working or errors:
-            print '\nTest failed for modifications.'
-            print 'Different base was recognized:'
-            print ', '.join(not_working)
-            print 'ERROR occured:'
-            print ', '.join(errors)
+            print('''
+Test failed for modifications.
+Different base was recognized:''')
+            print(', '.join(not_working))
+            print('ERROR occured:')
+            print(', '.join(errors))
 
-        self.assertEqual(len(not_working) + len(errors),0)
+        self.assertEqual(len(not_working) + len(errors), 0)
 
 
 class ExchangeModificationTests(TestCase):
