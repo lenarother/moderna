@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# LIR.py
-#
-# Calculates LIR values, makes LIRRecord.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Calculates LIR values, makes LIRRecord.
+"""
 
 
 import math
@@ -162,25 +151,22 @@ See : LIP - Loops In Proteins. Michalska et al.
         # Stem5 ---> P, C4';    Stem3 ---> C4', O3';
         """
         # What can go wrong: such atoms may not be present in residue.
-        self.vP5=self.anchor5.get_atom_vector(STEM5_AT1)
-        self.vC5=self.anchor5.get_atom_vector(STEM5_AT2)
-        self.vC3=self.anchor3.get_atom_vector(STEM3_AT1)
-        self.vO3=self.anchor3.get_atom_vector(STEM3_AT2)
+        self.vP5 = self.anchor5.get_atom_vector(STEM5_AT1)
+        self.vC5 = self.anchor5.get_atom_vector(STEM5_AT2)
+        self.vC3 = self.anchor3.get_atom_vector(STEM3_AT1)
+        self.vO3 = self.anchor3.get_atom_vector(STEM3_AT2)
         # Getting vectors for base atom from anchor residues.
         self.vN5 = self.anchor5.get_atom_vector(OMEGA5_AT)
         self.vN3 = self.anchor3.get_atom_vector(OMEGA5_AT)
-            
-        self.vP5C5=self.vC5-self.vP5
-        self.vP5C3=self.vC3-self.vP5
 
-        vnP5C5=self.vP5C5/self.vP5C5.norm() # length
-        vnP5C3=self.vP5C3/self.vP5C3.norm() # length
-        self.cosC5P5C3=vnP5C5*vnP5C3
+        self.vP5C5 = self.vC5 - self.vP5
+        self.vP5C3 = self.vC3 - self.vP5
 
+        self.cosC5P5C3 = self.vP5C5.normalized() * self.vP5C3.normalized()
 
     def calculate_dihedrals(self):
         """
-        Calculates the dihedral angles: 
+        Calculates the dihedral angles:
         """
         # create positive dihedrals [0..2pi]
         posi = lambda x:x<0 and 2*pi+x or x

@@ -44,14 +44,12 @@ class RNAResidue(Residue):
         self.has_double_coord = self.__check_double_coord(pdb_residue)
         self.modified = None
         self.long_abbrev = None
-        if alphabet_entry:
-            abbrev = alphabet_entry.long_abbrev
-        else:
+        if not alphabet_entry:
             try:
-                aentry = self.br.identify_resi(pdb_residue)
+                alphabet_entry = self.br.identify_resi(pdb_residue)
             except BaseRecognitionError:
-                aentry = alphabet.get_short_original(ANY_RESIDUE)
-        self.change_name(aentry)
+                alphabet_entry = alphabet.get_short_original(ANY_RESIDUE)
+        self.change_name(alphabet_entry)
 
         self.identifier = str(self.id[1]).strip() + self.id[2].strip()
         self.__create_atoms(pdb_residue, new_atoms)

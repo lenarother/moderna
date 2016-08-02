@@ -13,9 +13,10 @@ from .modifications import modify_residue
 from .util.Errors import ModernaStructureError
 from .util.LogFile import log
 
-#TODO: PDB structures 3ftm and 3fic are messed up. 
+# TODO: PDB structures 3ftm and 3fic are messed up.
 # Should ModeRNA do something reasonable with them anyway?
 # They have residues with negative numbers.
+
 
 class ModernaStructure(RNAChain):
     """RNAChain extended by some editing functionality"""
@@ -60,7 +61,7 @@ class ModernaStructure(RNAChain):
         """
         #TODO: should be in RNAChain.
         residue_number = number or resi.identifier
-        if self.moderna_residues.has_key(residue_number): 
+        if residue_number in self.moderna_residues:
             if strict:
                 raise ModernaStructureError('There is a residue with the number "%s" already'%residue_number)
             else:
@@ -199,16 +200,17 @@ class ModernaStructure(RNAChain):
             if (b1 < a1 < b2 < a2) or (b2 < a1 < b1 < a2) or (b2 < a2 < b1 < a1):
                 return True
         return False
-            
+
     def get_secstruc(self):
         """Returns secondary structure as a dot-bracket string."""
         #TODO: refactor out.
         bp_dict = self.get_base_pairs()
         res_indices = dict([(res.identifier, i) for i, res in enumerate(self)])
-        ss = ['.']*len(self)
+        ss = ['.'] * len(self)
         bplist = []
         for resi in self:
-            if not bp_dict.has_key(resi.identifier): continue
+            if resi.identifier not in bp_dict:
+                continue
             res1 = resi.identifier
             for base_pair in bp_dict[res1]:
                 # set bracket symbols.

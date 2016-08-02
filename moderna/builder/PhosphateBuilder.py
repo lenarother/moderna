@@ -44,15 +44,15 @@ OP2_TORSION = -178.0
 OP3_TORSION = -62.1
 
 STD_ANGLES = array([A2, A3, A4])
-ANGLE_WEIGHT = 1.0/180.0
-MAKE_DEGREES = 180/math.pi
+ANGLE_WEIGHT = 1.0 / 180.0
+MAKE_DEGREES = 180 / math.pi
 
 class PhosphateBuilder(object):
     """
     uses a simplistic approach to construct missing
     C5' and P atoms.
     """
-    def __init__(self,resi1,resi2):
+    def __init__(self, resi1, resi2):
         self.r1 = resi1
         self.r2 = resi2
         self.p = None
@@ -67,7 +67,7 @@ class PhosphateBuilder(object):
         self.c5v = self.c5.get_vector()
         self.c42 = self.r2["C4'"]
         self.c42v = self.c42.get_vector()
-    
+
     def build(self):
         """Runs the full phosphate construction procedure."""
         self.remove_old_linker()
@@ -75,33 +75,29 @@ class PhosphateBuilder(object):
         self.minimize_atoms()
         self.add_op12()
 
+    def remove_atoms(self, resi, *atom_names):
+        for atom in atom_names:
+            if atom in resi.child_dict:
+                resi.detach_child(atom)
 
     def remove_old_linker(self):
         """Removes eventually existing backbone atoms."""
-        if self.r2.child_dict.has_key("P"):
-            self.r2.detach_child("P")
-        if self.r2.child_dict.has_key("O5'"):
-            self.r2.detach_child("O5'")
+        self.remove_atoms(self.r2, "P", "O5'")
         self.remove_op1_op2()
-        
+
     def remove_op1_op2(self):
-        if self.r2.child_dict.has_key("OP1"):
-            self.r2.detach_child("OP1")
-        if self.r2.child_dict.has_key("OP2"):
-            self.r2.detach_child("OP2")
-        if self.r2.child_dict.has_key("OP3"):
-            self.r2.detach_child("OP3")
+        self.remove_atoms(self.r2, "OP1", "OP2", "OP3")
 
     def construct_initial_atoms(self):
         """Finds positions in between the O3' and C5'"""
         vec = self.c5.coord - self.o3.coord
-        coord_p = self.o3.coord + vec*0.333333
-        coord_o5 = self.o3.coord + vec*0.666666
-        self.p = Atom.Atom("P", coord_p, 0.0,1.0,' '," P",1, element="P")
-        self.o5 = Atom.Atom("O5'", coord_o5, 0.0,1.0,' '," O5'",1, element="O")
+        coord_p = self.o3.coord + vec * 0.333333
+        coord_o5 = self.o3.coord + vec * 0.666666
+        self.p = Atom.Atom("P", coord_p, 0.0, 1.0,' '," P", 1, element="P")
+        self.o5 = Atom.Atom("O5'", coord_o5, 0.0, 1.0, ' ', " O5'", 1, element="O")
         self.r2.add(self.p)
         self.r2.add(self.o5)
-        
+
     def __str__(self):
         d1 = abs(O3_P_DIST - float(self.o3-self.p))
         d2 = abs(P_O5_DIST - float(self.p-self.o5))
@@ -118,7 +114,6 @@ class PhosphateBuilder(object):
         result += "%5.2f\t%5.2f\t%5.2f\t%5.2f\t"%(a1, a2, a3, a4)
         result += "total %5.2f\n"%self.get_score()
         return result
-        
 
     def get_score(self, max_score=0.0):
         """Returns the square deviation from reference values."""
@@ -195,7 +190,6 @@ class PhosphateBuilder(object):
                 self.p.coord, self.o5.coord, tor1, tor2 = old
                 step = step*0.5
             i += 1
-        
 
     def add_op12(self):
         """Adds OP1 OP2 atoms"""
@@ -287,16 +281,6 @@ class TerminalPhosphateBuilder(object):
         atom = Atom.Atom(name, coord, 0.0,1.0,' '," "+name,1, element=elem)
         return atom
         
-
     def remove_phosphate_group(self):
         """Removes eventually existing phosphate group atoms."""
-        if self.r1.child_dict.has_key("P"):
-            self.r1.detach_child("P")
-        if self.r1.child_dict.has_key("OP1"):
-            self.r1.detach_child("OP1")
-        if self.r1.child_dict.has_key("OP2"):
-            self.r1.detach_child("OP2")
-        if self.r1.child_dict.has_key("OP3"):
-            self.r1.detach_child("OP3")
-
-
+        self.remove_atoms(self.r1, "P", "OP1", "OP2", "OP3")

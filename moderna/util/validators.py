@@ -13,7 +13,8 @@ from moderna.sequence.ModernaSequence import Sequence
 from moderna.sequence.ModernaAlphabet import alphabet
 from .Errors import ParameterError, AlphabetError
 from moderna.sequence.RNAAlignment import RNAAlignment, read_alignment
-import os, re
+import os
+import re
 
 
 def validate_structure(struc):
@@ -22,7 +23,7 @@ def validate_structure(struc):
         return struc
     raise ParameterError("Bad parameter: '%s' must be a structure object."%str(struc))
 
-    
+
 def validate_template(template):
     """Checks Template object"""
     if isinstance(template, Template):
@@ -52,7 +53,7 @@ def validate_alignment(ali):
         return read_alignment(ali)
     raise ParameterError("Bad parameter: '%s' must be a pairwise Alignment (object or fasta string)."%str(ali))
 
-    
+
 def validate_seq(seq):
     """Checks sequence format"""
     if isinstance(seq, Sequence):
@@ -92,14 +93,14 @@ def validate_frag_candidate_list(fc_list):
         return fc_list
     raise ParameterError("Bad parameter: '%s' must be a list of fragment candidates."%str(fc_list))
 
-    
+
 def validate_resi(resi):
     """Checks RNAResidue"""
     if isinstance(resi, RNAResidue):
         return resi
     raise ParameterError("Bad parameter: '%s' must be a ModeRNAResidue."%str(resi))
 
-    
+
 def validate_resi_list(resi_list, length=None):
     """Checks list of residues"""
     if hasattr(resi_list, '__iter__'):
@@ -108,10 +109,10 @@ def validate_resi_list(resi_list, length=None):
             return resi_list
     raise ParameterError("Bad parameter: '%s' must be a list of residues."%str(resi_list))
 
-    
+
 def validate_alphabet(alpha):
     """Checks residue names."""
-    if alphabet.has_key(str(alpha)):
+    if str(alpha) in alphabet:
         return alphabet[str(alpha)].long_abbrev
     else:
         try:

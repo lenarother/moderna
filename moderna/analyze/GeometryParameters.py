@@ -1,19 +1,7 @@
 #!/usr/bin/env python
-#
-# GeometryParameters.py
-#
-# Allowed and disallowed geometry values in RNA.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, Genesilico"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@rubor.de"
-__status__ = "beta"
-
+"""
+Allowed and disallowed geometry values in RNA.
+"""
 
 class GeometryStandards:
     """Defines allowed and disallowed geometry values."""
@@ -169,7 +157,7 @@ class GeometryStandards:
         for d in self.dihedrals: self.values[d] = self.dihedrals[d]
         
     def is_outlier(self, descriptor, value):
-        if not self.values.has_key(descriptor):
+        if descriptor not in self.values:
             return True
         for lower, upper in self.values[descriptor]:
             if lower <= value <= upper:

@@ -1,24 +1,14 @@
 #!/usr/bin/env python
-#
-# test_base_pair_calc.py
-#
-# unit tests for different functions calculating base pairs.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Pawel Skiba, Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Pawel Skiba"
-__email__ = "eagle-eagle@wp.pl"
-__status__ = "Prototype"
+"""
+unit tests for different functions calculating base pairs.
+"""
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import  ModernaStructure
 from test_data import *
 
 EXAMPLE_CHAR =  TEST_DATA_PATH+'rna_structures/rna_with_char_resid_1n77_C.pdb'
+
 
 class BasePairCalcTests(TestCase):
     
@@ -54,10 +44,10 @@ class BasePairCalcTests(TestCase):
     def test_get_base_pairs_generator(self):
         """aaa"""
         m = ModernaStructure('file', RNA_HAIRPIN, 'D')
-        result = map(str, list(m.get_base_pairs('generator')))
+        result = [str(x) for x in m.get_base_pairs('generator')]
         self.assertTrue('30 +/+ 40' in result)
-        self.assertTrue(len(result)>=4)
-        #TODO: check with RNAView output.
+        self.assertTrue(len(result) >= 4)
+        # TODO: check with RNAView output.
         
     def test_wc_pairs_hairpin(self):
         """Exactly two W-C pairs in a hairpin are recognized."""
