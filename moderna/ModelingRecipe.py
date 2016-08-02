@@ -1,25 +1,15 @@
 #!/usr/bin/env python
-#
-# ModelingRecipe
-#
-# ModelingRecipe sorts alignment positions into different boxes (1 box == 1 operation, e.g. copying residues)
-# 
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "rother.magdalena@gmail.com"
-__status__ = "Production"
+"""
+ModelingRecipe sorts alignment positions into different boxes 
+(1 box == 1 operation, e.g. copying residues)
+"""
 
 import os
 
-from sequence.RNAAlignment import RNAAlignmentParser, DEFAULT_SHRINK
-from Constants import STANDARD_BASES
-from util.Errors import AlignmentError
-from util.LogFile import log
+from .sequence.RNAAlignment import RNAAlignmentParser, DEFAULT_SHRINK
+from .Constants import STANDARD_BASES
+from .util.Errors import AlignmentError
+from .util.LogFile import log
 
 
 MODES = ['has_gap', 'is_mismatch', 'has_template_gap', \

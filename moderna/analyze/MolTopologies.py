@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# mol_topologies.py
-#
-# Pattern definitions for recognizing local topologies in molecular structures.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, Kristian Rother"
-__credits__ = ["Sabrina Hofmann"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@rubor.de"
-__status__ = "Production"
+"""
+Pattern definitions for recognizing local topologies in molecular structures.
+"""
 
 import re
 
@@ -299,7 +288,7 @@ class Pattern(object):
                 j += 1
                 
             if parenthese_level != -1:
-                print "MISMATCHED PARENTHESES IN PATTERN:",pattern
+                print("MISMATCHED PARENTHESES IN PATTERN:", pattern)
 
         return (elem,subnodes,bool,index,valence)
 
@@ -308,7 +297,8 @@ class Pattern(object):
         elem,subnodes,boole,idd,valence = node
         if boole==0: return
         if idd!=0:
-            if circles.has_key(idd): return
+            if idd in circles:
+                return
             else:
                 circles[idd] = True
         sumdict.setdefault(elem,0)

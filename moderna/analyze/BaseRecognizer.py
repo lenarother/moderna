@@ -1,24 +1,13 @@
 #!/usr/bin/env python
-#
-# BaseRecognizer.py
-#
-# Class recognizing modified base residues.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Class recognizing modified base residues.
+"""
 
 
-from MolecularGraph import AnnotatedMolecule
-from MolTopologies import read_nucleotide_topologies
+from .MolecularGraph import AnnotatedMolecule
+from .MolTopologies import read_nucleotide_topologies
 from moderna.util.Errors import BaseRecognitionError
-from Constants import AMINO, STANDARD_BASES, HETERO_GROUPS, PHOSPHATE_GROUP, \
+from .Constants import AMINO, STANDARD_BASES, HETERO_GROUPS, PHOSPHATE_GROUP, \
     NUCLEOTIDE_ATOMS
 from moderna.Constants import MODIFICATION_TOPOLOGY_FILE
 import re
@@ -31,23 +20,22 @@ EXCLUDE_AMINO = True
 DNA_BASES = ['dA', 'dC', 'dG', 'dT']
 
 NAME_MATCHES = {
-    'RMP': 'd5mpA', 
-    'SMP': 'd5mpA', 
-    'CMR':'d5mpC', 
-    'A3A': 'alpha-dA', 
-    'GAO': 'arabinoseG', 
-    'CAR': 'arabinoseC', 
-    'UAR': 'arabinoseU', 
-    'A5O': 'arabinoseA', 
-    'G25': 'GMP', 
-    'A5L': 'dA', 
-    'DA': 'dA', 
-    
+    'RMP': 'd5mpA',
+    'SMP': 'd5mpA',
+    'CMR':'d5mpC',
+    'A3A': 'alpha-dA',
+    'GAO': 'arabinoseG',
+    'CAR': 'arabinoseC',
+    'UAR': 'arabinoseU',
+    'A5O': 'arabinoseA',
+    'G25': 'GMP',
+    'A5L': 'dA',
+    'DA': 'dA',
     }
-    
-    
+
+
 class BaseRecognitionResult(object):
-    
+   
     def __init__(self, resi):
         self.resi = resi
         self.abbrev = ''

@@ -1,32 +1,21 @@
 #!/usr/bin/env python
-#
-# ModernaFragment.py
-#
-# Class that supports inserting missing fragments into a model.
-# includes linear and 2D fragments.
-#
-# http://iimcb.genesilico.pl/moderna/ 
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Class that supports inserting missing fragments into a model.
+includes linear and 2D fragments.
+"""
 
 
-from ModernaSuperimposer import ModernaSuperimposer
-from RNAResidue import RNAResidue
-from analyze.ClashRecognizer import ClashRecognizer
-from analyze.ChainConnectivity import is_chain_continuous
-from Renumerator import Renumerator
-from modifications import modify_residue
-from ModernaStructure import ModernaStructure
-from sequence.ModernaSequence import Sequence
-from FragmentInsertion import FragmentInserter
-from util.Errors import ModernaFragmentError
-from Constants import LIR_SUPERPOSITION5, LIR_SUPERPOSITION3, \
+from .ModernaSuperimposer import ModernaSuperimposer
+from .RNAResidue import RNAResidue
+from .analyze.ClashRecognizer import ClashRecognizer
+from .analyze.ChainConnectivity import is_chain_continuous
+from .Renumerator import Renumerator
+from .modifications import modify_residue
+from .ModernaStructure import ModernaStructure
+from .sequence.ModernaSequence import Sequence
+from .FragmentInsertion import FragmentInserter
+from .util.Errors import ModernaFragmentError
+from .Constants import LIR_SUPERPOSITION5, LIR_SUPERPOSITION3, \
     HELIX_SUPERPOSITION, SINGLE_PAIR, \
     PAIR_PURINE_SUPERPOSITION,  PAIR_PYRIMIDINE_SUPERPOSITION, \
     BASE_PAIR_PATH, WC_BASE_PAIRS

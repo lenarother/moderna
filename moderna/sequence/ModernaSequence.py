@@ -1,21 +1,10 @@
 #!/usr/bin/env python
-#
-# ModernaSequence.py
-#
-# Enables work with RNA sequences.
-# 
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Enables work with RNA sequences.
+"""
 
 import re
-from ModernaAlphabet import alphabet
+from .ModernaAlphabet import alphabet
 from moderna.Constants import STANDARD_BASES
 from moderna.util.Errors import SequenceError
 
@@ -25,7 +14,7 @@ SPECIAL_ABBREVS = ['a', 'c', 't', 'g', 'X', 'N', 'H', '<', ';', 'Q']
 class Sequence(object):
     """
     Represents RNA sequences.
-    
+
     Attributes:
     - seq_with_modifications ---> an original string given by a user
     - seq_without_modifications ---> a string in which all modified bases 

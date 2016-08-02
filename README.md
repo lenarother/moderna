@@ -103,8 +103,8 @@ or its components.
 * Pawel Piatkowski   - implementation
 * Kristian Rother    - architecture and unit tests
 * Tomasz Puton       - model validation and testing
+* Natalia Szostak    - base pair calculator
 * Janusz Bujnicki    - concept and supervision
-
 
 ### 7. Acknowledgements
 
@@ -119,6 +119,9 @@ Thomas Hamelryck. The unit test framework was brought near to us by
 Sandra Smit, Rob Knight, and Gavin Huttley. We also would like to thank 
 Neocles Leontis, Fabrice Jossinet, Francois Major, and Eric Westhof who 
 provided helpful advice on various occasions.
+
+Sabrina Hofmann and Hermann-Georg Holzhütter provided valuable input for 
+the recognition of molecular topologies.
 
 Special thanks go to the group of Russ Altman, who provided us with 
 their modeling example to test ModeRNA.

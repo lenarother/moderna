@@ -1,21 +1,10 @@
 #!/usr/bin/env python
-#
-# Renumerator.py
-#
-# Generates identifiers for residues from ModernaFragment objects.
-# 
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Generates identifiers for residues from ModernaFragment objects.
+"""
 
 
-from util.Errors import RenumeratorError
+from .util.Errors import RenumeratorError
 
 class Renumerator:
     """

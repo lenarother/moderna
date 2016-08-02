@@ -1,20 +1,7 @@
 #!/usr/bin/env python
-#
-# validators.py
-#
-# RNA 3D structure prediction.
-# 
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
-
-"""Checking of toplevel command parameters."""
+"""
+Checking of toplevel command parameters.
+"""
 
 from moderna.ModernaStructure import ModernaStructure
 from moderna.Template import Template
@@ -24,15 +11,17 @@ from moderna.fragment_library.SearchLIR import LirHit, FragmentCandidates
 from moderna.RNAResidue import RNAResidue
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.sequence.ModernaAlphabet import alphabet
-from Errors import ParameterError, AlphabetError
+from .Errors import ParameterError, AlphabetError
 from moderna.sequence.RNAAlignment import RNAAlignment, read_alignment
 import os, re
+
 
 def validate_structure(struc):
     """Checks for ModernaStructure objects."""
     if isinstance(struc, ModernaStructure):
         return struc
     raise ParameterError("Bad parameter: '%s' must be a structure object."%str(struc))
+
     
 def validate_template(template):
     """Checks Template object"""
@@ -40,17 +29,20 @@ def validate_template(template):
         return template
     raise ParameterError("Bad parameter: '%s' must be a Template object."%str(template))
 
+
 def validate_model(model):
     """Checks RnaModel object"""
     if isinstance(model, RnaModel):
         return model
     raise ParameterError("Bad parameter: '%s' must be a RnaModel object."%str(model))
 
+
 def validate_fragment(frag):
     """Checks RnaModel object"""
     if isinstance(frag, ModernaFragment) or isinstance(frag, LirHit):
         return frag
     raise ParameterError("Bad parameter: '%s' must be a ModernaFragment object."%str(frag))
+
 
 def validate_alignment(ali):
     """Checks alignment string or object"""
@@ -59,6 +51,7 @@ def validate_alignment(ali):
     elif isinstance(ali, str):
         return read_alignment(ali)
     raise ParameterError("Bad parameter: '%s' must be a pairwise Alignment (object or fasta string)."%str(ali))
+
     
 def validate_seq(seq):
     """Checks sequence format"""
@@ -69,11 +62,13 @@ def validate_seq(seq):
         return seq
     raise ParameterError("Bad parameter: '%s' must be a RNA sequence."%str(seq))
 
+
 def validate_secstruc(secstruc):
     """Checks vienna string format"""
     if re.search("^[\(\)\.]*$", secstruc):
         return secstruc
     raise ParameterError("Bad parameter: '%s' must be a RNA secondary structure in dot-bracket format."%str(secstruc))
+
 
 def validate_resnum(resnum):
     """Checks residue number format"""
@@ -81,6 +76,7 @@ def validate_resnum(resnum):
     if re.search("^\d+\w*$", resnum):
         return resnum
     raise ParameterError("Bad parameter: '%s' must be a residue number."%str(resnum))
+
 
 def validate_resnum_list(resnum_list, length=None):
     """Checks list of residues"""
@@ -90,16 +86,19 @@ def validate_resnum_list(resnum_list, length=None):
             return resnum_list
     raise ParameterError("Bad parameter: '%s' must be a list of residues."%str(resnum_list))
 
+
 def validate_frag_candidate_list(fc_list):
     if isinstance(fc_list, FragmentCandidates):
         return fc_list
     raise ParameterError("Bad parameter: '%s' must be a list of fragment candidates."%str(fc_list))
+
     
 def validate_resi(resi):
     """Checks RNAResidue"""
     if isinstance(resi, RNAResidue):
         return resi
     raise ParameterError("Bad parameter: '%s' must be a ModeRNAResidue."%str(resi))
+
     
 def validate_resi_list(resi_list, length=None):
     """Checks list of residues"""
@@ -108,6 +107,7 @@ def validate_resi_list(resi_list, length=None):
         if length==None or length==len(resi_list):
             return resi_list
     raise ParameterError("Bad parameter: '%s' must be a list of residues."%str(resi_list))
+
     
 def validate_alphabet(alpha):
     """Checks residue names."""
@@ -119,6 +119,7 @@ def validate_alphabet(alpha):
         except AlphabetError:
             pass
     raise ParameterError("Bad parameter: '%s' must be a valid residue name."%str(alpha))
+
 
 def validate_alphabet_list(alphabet_list, length=None):
     """Checks list of residue names"""
@@ -138,15 +139,11 @@ def validate_filename(filename, exist=False):
         path = os.path.dirname(filename)
         validate_path(path)
     return filename
-    
+
+
 def validate_path(path, exist=True):
     """Checks path names."""
     if exist:
         if path != '' and not os.path.exists(path):
             raise ParameterError("Bad parameter: '%s' must be a valid path name."%str(path))
     return path
-        
-    
-    
-    
-    

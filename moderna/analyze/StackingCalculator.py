@@ -1,19 +1,4 @@
 #!/usr/bin/env python
-#
-# StackingCalculator.py
-#
-# Class that calculates base stacking.
-# 
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
-
 """
 A procedure for calculating stacking of RNA nucleotides.
 
@@ -45,7 +30,7 @@ for calculating stacking:
 import sys
 from numpy import array, add, cross, sqrt, arccos
 from moderna import *
-from Constants import NORMAL_SUPPORT, ARCPI
+from .Constants import NORMAL_SUPPORT, ARCPI
 
 STACKINGS = {
         (True, True): '>>', 

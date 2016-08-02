@@ -1,34 +1,16 @@
 #!/usr/bin/env python
-#
-# BackboneBuilder.py
-#
-# For backbone fixing.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-
 """
-BackboneBuilder.py
-
-module for reconstructing the full backbone 
+Module for reconstructing the full backbone 
 between two riboses.
 e.g. after loop insertsions.
 """
 
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
-
 
 from moderna.analyze.GeometryParameters import GeometryStandards
-from PhosphateBuilder import PhosphateBuilder
+from .PhosphateBuilder import PhosphateBuilder
 from moderna.RNAResidue import RNAResidue
-from FCCDLoopCloser import FCCDLoopCloser
-from CoordBuilder import build_coord
+from .FCCDLoopCloser import FCCDLoopCloser
+from .CoordBuilder import build_coord
 from moderna.analyze.RNASuites import TORSIONS, DEFAULT_TORSIONS
 from moderna.analyze.ChainConnectivity import are_residues_connected, \
     is_backbone_intact, is_phosphate_intact, is_backbone_congested

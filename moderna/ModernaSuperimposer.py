@@ -1,22 +1,11 @@
 #!/usr/bin/env python
-#
-# ModernaSuperimposer.py
-#
-# Wrapper for Bio.PDB.Superimposer.
-# 
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Wrapper for Bio.PDB.Superimposer.
+"""
 
 
-from Bio.PDB  import Superimposer
-from util.Errors import ModernaSuperimposerError
+from Bio.PDB import Superimposer
+from .util.Errors import ModernaSuperimposerError
 
 
 class ModernaSuperimposer:
@@ -30,14 +19,14 @@ class ModernaSuperimposer:
         fixed - list of atoms the moved atom will be superimposed upon.
         moved - list of atoms that will be superimposed on the fixed ones.
         moved_atoms - all atoms whose coordinates should be transformed.
-        If all three parameters are given, the superpositions 
+        If all three parameters are given, the superpositions
         will be carried out immediately.
         """
         self.fixed = fixed
         self.moved = moved
         self.moved_atoms = moved_atoms
         self.rmsd = None
-        if fixed and moved and moved_atoms: 
+        if fixed and moved and moved_atoms:
             self.superimpose()
 
 

@@ -1,30 +1,20 @@
 #!/usr/bin/env python
-#
-# RNAChain.py
-#
-# Superclass that supports work with PDB.Structure objects.
-# 
-# http://iimcb.genesilico.pl/moderna/ 
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Superclass that supports work with PDB.Structure objects.
+"""
 
 
 from Bio.PDB import PDBParser, PDBIO
 from Bio.PDB.Structure import Structure
 from Bio.PDB.Model import Model
 from Bio.PDB.Chain import Chain
-from RNAResidue import RNAResidue
-from sequence.ModernaAlphabet import alphabet
-from sequence.ModernaSequence import Sequence
-from Constants import MISSING_RESIDUE
-from util.Errors import RNAChainError, ModernaStructureError
-from analyze.ChainConnectivity import are_residues_connected
+
+from .RNAResidue import RNAResidue
+from .sequence.ModernaAlphabet import alphabet
+from .sequence.ModernaSequence import Sequence
+from .Constants import MISSING_RESIDUE
+from .util.Errors import RNAChainError, ModernaStructureError
+from .analyze.ChainConnectivity import are_residues_connected
 import os
 
 
@@ -52,7 +42,7 @@ class RNAChain:
 
         if data_type == 'file':
             data = self._get_struct_from_file(data)
-            
+
         if data_type in ['file', 'structure']:
             data = self._get_chain_from_struct(data, self.chain_name)
             

@@ -1,27 +1,16 @@
 #!/usr/bin/env python
-#
-# SearchLIR.py
-#
-# Searches a local LIR file for RNA fragments that fits.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Searches a local LIR file for RNA fragments that fits.
+"""
 
 import os
 from numpy import array
-from LIR import Lir, LirRecord
+from .LIR import Lir, LirRecord
 from moderna.ModernaStructure import ModernaStructure
 from moderna.ModernaFragment import keep_first_last
 from moderna.FragmentInsertion import FragmentInserter
 from moderna.sequence.ModernaSequence import Sequence
-from StructureLibrary import library
+from .StructureLibrary import library
 from moderna.util.Errors import LirError, SearchLirError
 
 from moderna.Constants import PATH_TO_LIR_STRUCTURES, \

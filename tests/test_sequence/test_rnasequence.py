@@ -1,33 +1,24 @@
 #!/usr/bin/env python
-#
-# test_sequence.py
-#
-# unit tests for sequence class
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for RNA sequences
+"""
 
 from unittest import main, TestCase
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.sequence.ModernaAlphabet import AlphabetEntry
 from moderna.util.Errors import SequenceError, AlphabetError
 
+
 class SequenceTests(TestCase):
     """
+    Unit Tests for sequence class
     """
     def setUp(self):
         """Defines some simple cases."""
         self.normal = 'AGCU'
         self.longer = 'AAAAAAAAAAA'
         self.modified = 'CCCCDDDGGG'
-        self.unmodified = 'CCCCUUUGGG'        
+        self.unmodified = 'CCCCUUUGGG'
         self.different = 'CCCC777GGG'
 
     def test_init(self):

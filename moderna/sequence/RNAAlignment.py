@@ -1,26 +1,16 @@
 #!/usr/bin/env python
-#
-# RNAAlignment.py
-#
-# Parses a pairwise alignment of RNA sequences.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Parses a pairwise alignment of RNA sequences.
+"""
 
 import re, os
-from ModernaSequence import Sequence
+from .ModernaSequence import Sequence
 from moderna.Constants import ANY_RESIDUE
 from moderna.util.LogFile import log
 from moderna.util.Errors import AlignmentError
 
 DEFAULT_SHRINK = True
+
 
 class AlignmentPosition(object):
     """

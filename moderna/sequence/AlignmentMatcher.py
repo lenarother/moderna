@@ -1,23 +1,12 @@
 #!/usr/bin/env python
-#
-# AlignmentMatcher.py
-#
-# Fixes Alignment object so that it matches a given template.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@genesilico.pl"
-__status__ = "Production"
+"""
+Fixes Alignment object so that it matches a given template.
+"""
 
 
-from ModernaSequence import Sequence
+from .ModernaSequence import Sequence
 from moderna.util.LogFile import log
-from ModernaAlphabet import alphabet
+from .ModernaAlphabet import alphabet
 from moderna.Constants import ANY_RESIDUE
 from moderna.util.Errors import AlignmentError
 

@@ -2,9 +2,9 @@
 Add modifications to a residue
 """
 
-from ResidueEditor import ResidueEditor
-from BaseExchanger import BaseExchanger
-from ModificationRemover import ModificationRemover
+from .ResidueEditor import ResidueEditor
+from .BaseExchanger import BaseExchanger
+from .ModificationRemover import ModificationRemover
 from moderna.util.Errors import AddModificationError
 from moderna.util.LogFile import log
 from moderna.Constants import ANY_RESIDUE, MISSING_RESIDUE, \

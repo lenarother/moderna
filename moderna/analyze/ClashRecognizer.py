@@ -1,34 +1,21 @@
 #!/usr/bin/env python
-#
-# ClashRecognizer.py
-#
-# Class finding clashing residues.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-
 """
+Class finding clashing residues.
+
 One class is implemented here - ClashRecognizer.
 It can detect clashes between different RNA residues
 (not between atoms in the same residue).
 """
 
-__author__ = "Tomasz Puton"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__contributors__ = "Magdalena Rother, Kristian Rother"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Tomasz Puton"
-__email__ = "t.puton@amu.edu.pl"
-__status__ = "Production"
 
-from Bio.PDB import NeighborSearch
+# from Bio.PDB import NeighborSearch
 from Bio.PDB.PDBParser import PDBParser
 from Bio.PDB.Structure import Structure
 from Bio.PDB.Model import Model
 from Bio.PDB.Chain import Chain
-from ChainConnectivity import are_residues_connected
-from Constants import ATOM_RADII, SEARCH_RADIUS
+from .ChainConnectivity import are_residues_connected
+from .Constants import ATOM_RADII, SEARCH_RADIUS
+
 
 class ClashRecognizer:
     """

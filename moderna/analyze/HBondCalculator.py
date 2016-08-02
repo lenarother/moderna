@@ -1,32 +1,23 @@
 #!/usr/bin/env python
-#
-# HBondCalculator.py
-#
-# Calculates hydrogen bonds between residues.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@genesilico.pl"
-__status__ = "Prototype"
+"""
+Calculates hydrogen bonds between residues.
+"""
 # -*- coding: cp1250 -*-
 
 from Bio.PDB.Vector import calc_angle
 from math import degrees
 from Bio.PDB.Vector import Vector
-from Constants import MAX_C1_DIST, MAXD1, MAXD2
+from .Constants import MAX_C1_DIST, MAXD1, MAXD2
 from moderna.Constants import BACKBONE_RIBOSE_ATOMS
-#TODO: bifurcated bonds
-#TODO: different parameter sets
-#TODO: h-bond tolerance depending on b-factor
+
+# TODO: bifurcated bonds
+# TODO: different parameter sets
+# TODO: h-bond tolerance depending on b-factor
 
 def sq3_norm(a):
     return a.norm()
-    
+
+
 class HBond:
     def __init__(self,donor,acceptor,dist):
         self.donor = donor

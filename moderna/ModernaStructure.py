@@ -1,29 +1,17 @@
 #!/usr/bin/env python
-#
-# ModernaStructure.py
-#
-# RNAStructure with some functions for editing.
-# 
-# http://iimcb.genesilico.pl/moderna/ 
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
-
+"""
+RNAStructure with some functions for editing.
+"""
 
 import re
-from RNAResidue import RNAResidue
-from RNAChain import RNAChain
-from sequence.ModernaSequence import Sequence
-from analyze.BasePairCalculator import base_pair_calc
-from builder.BackboneBuilder import BackboneBuilder
-from modifications import modify_residue
-from util.Errors import ModernaStructureError
-from util.LogFile import log
+from .RNAResidue import RNAResidue
+from .RNAChain import RNAChain
+from .sequence.ModernaSequence import Sequence
+from .analyze.BasePairCalculator import base_pair_calc
+from .builder.BackboneBuilder import BackboneBuilder
+from .modifications import modify_residue
+from .util.Errors import ModernaStructureError
+from .util.LogFile import log
 
 #TODO: PDB structures 3ftm and 3fic are messed up. 
 # Should ModeRNA do something reasonable with them anyway?

@@ -1,20 +1,10 @@
 #!/usr/bin/env python
-#
-# Template.py
-#
-# Template structure for building a RNA model.
-#
-# http://iimcb.genesilico.pl/moderna/ 
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "rother.magdalena@gmail.com"
-__status__ = "Production"
+"""
+Template structure for building a RNA model.
+"""
 
-from ModernaStructure import ModernaStructure
+from .ModernaStructure import ModernaStructure
+
 
 class Template(ModernaStructure):
     """

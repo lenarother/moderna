@@ -1,21 +1,8 @@
 #!/usr/bin/env python
-#
-# PhosphateBuilder.py
-#
-# Module for reconstructing P, O5', OP1, OP2 atoms
-# e.g. after loop insertions.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Prototype"
-
 """
+Module for reconstructing P, O5', OP1, OP2 atoms
+e.g. after loop insertions.
+
 Constructs backbone atoms that satisfy standard distance, angle, and torsion 
 constraints. P and O5' atoms are constructed given that all other backbone atoms are present.
 
@@ -36,9 +23,9 @@ from moderna.RNAChain import RNAChain
 from moderna.ModernaSuperimposer import ModernaSuperimposer
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 from moderna.Constants import DATA_PATH
-from CoordBuilder import build_coord, get_ref_matrix
+from .CoordBuilder import build_coord, get_ref_matrix
 from moderna.analyze.RNASuites import BETA, DEFAULT_TORSIONS
-from Bio.PDB import NeighborSearch
+#from Bio.PDB import NeighborSearch
 import math
 
 gs = GeometryStandards()

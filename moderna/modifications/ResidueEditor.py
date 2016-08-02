@@ -15,8 +15,8 @@ class ResidueEditor:
     - add modifications
     - remove modifications
     - rotat chi angle
-    The type of each ModernaResidue is automatically recognized, and has a couple
-    of long and short names as attributes:
+    The type of each ModernaResidue is automatically recognized, 
+    and has a couple of long and short names as attributes:
     - long_abbrev
     - short_abbrev (one letter abbreviation)
     - original_base
@@ -53,8 +53,8 @@ class ResidueEditor:
                 resi.detach_child(atom_name)
             for atom in fragment:
                 resi.add(atom)
-        except ModernaResidueError, e:
-            raise e
+        except ModernaResidueError:
+            raise
         except:
             raise ModernaResidueError('Residue %s: could not remove unnecessary and add proper atoms' % resi.identifier)
             #TODO: remove except:

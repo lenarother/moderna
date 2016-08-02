@@ -1,64 +1,47 @@
 #!/usr/bin/env python
-#
-# commands.py
-#
-# commands for RNA 3D structure prediction.
-# 
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__version__ = "1.7.1"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
-
 """
  ModeRNA
 
  A program for comparative RNA structure modeling
 
- Authors: 
+ Authors:
     Magdalena Rother
     Kristian Rother
     Tomasz Puton
     Janusz Bujnicki
 
  (c) 2008
- 
+
  www.genesilico.pl 
 
+This module contains toplevel commands for RNA 3D structure prediction.
 """
 
-from util.LogFile import log
-from RNAModel import RnaModel
-from Template import Template
-from sequence.ModernaAlphabet import Alphabet
-from sequence.ModernaSequence import Sequence
-from sequence.RNAAlignment import read_alignment
-from ModelingRecipe import RecipeMaker
-from ModernaStructure import ModernaStructure
-from ModernaFragment import ModernaFragment53, ModernaFragment5, \
+from .util.LogFile import log
+from .RNAModel import RnaModel
+from .Template import Template
+from .sequence.ModernaSequence import Sequence
+from .sequence.RNAAlignment import read_alignment
+from .ModelingRecipe import RecipeMaker
+from .ModernaStructure import ModernaStructure
+from .ModernaFragment import ModernaFragment53, ModernaFragment5, \
     ModernaFragment3, ModernaFragmentStrand, ModernaFragment2D
-from Helix import HelixBuilder, HelixFragmentBuilder
-from fragment_library.SearchLIR import *
-from analyze.ClashRecognizer import ClashRecognizer
-from analyze.GeometryAnalyzer import GeometryAnalyzer
-from analyze.StackingCalculator import StackingCalculator
-from builder.BackboneBuilder import BackboneBuilder
-from builder.ChiRotator import rotate_chi as rc
-import modifications
-from CheckPdb import PdbController
-from sequence.AlignmentMatcher import AlignmentMatcher
+from .Helix import HelixBuilder, HelixFragmentBuilder
+from .fragment_library.SearchLIR import *
+from .analyze.ClashRecognizer import ClashRecognizer
+from .analyze.GeometryAnalyzer import GeometryAnalyzer
+from .analyze.StackingCalculator import StackingCalculator
+from .builder.ChiRotator import rotate_chi as rc
+from . import modifications
+from .CheckPdb import PdbController
+from .sequence.AlignmentMatcher import AlignmentMatcher
 
-from util.Errors import ModernaError
+from moderna.util.Errors import ModernaError
 
-from Constants import NUMBER_OF_FRAGMENT_CANDIDATES
+from .Constants import NUMBER_OF_FRAGMENT_CANDIDATES
 
-from util.decorators import toplevel_function
-from util.validators import validate_structure, validate_template, validate_model, \
+from .util.decorators import toplevel_function
+from .util.validators import validate_structure, validate_template, validate_model, \
     validate_alignment, validate_seq, validate_resnum, validate_resnum_list, \
     validate_resi, validate_fragment, validate_frag_candidate_list,  \
     validate_resi_list, validate_filename, validate_path, \
@@ -478,7 +461,8 @@ The user needs to give a structure object, and optionally a name of the file the
     pc = PdbController(st)
     if ex_log: pc.write_log(ex_log)
     else: log.write_message(str(pc))
-    if verbose: print pc
+    if verbose:
+        print(pc)
     return pc
 
 
@@ -1114,7 +1098,7 @@ When ModeRNA terminates, any remaining messages will be written to 'moderna.log'
         log.set_filename(logfile_name)
         log.write_logfile()
     except IOError:
-        print 'problem writing log file to "%s"'%logfile_name
+        print('problem writing log file to "%s"' % logfile_name)
     
 
 @toplevel_function

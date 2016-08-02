@@ -1,22 +1,11 @@
 #!/usr/bin/env python
-#
-# mol_parser.py
-#
-# Reads molecule structures into a data structure
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, Kristian Rother"
-__credits__ = ["Sabrina Hofmann"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@rubor.de"
-__status__ = "Production"
+"""
+Reads molecule structures into a data structure
+"""
 
-from MolParameters import *
+from .MolParameters import *
 import re
-    
+
 
 class Bond:
     """Something connecting two atoms"""
@@ -178,7 +167,7 @@ class Molecule(list):
         if 0:
             for atom1, atom2 in zip(atoms, self):
                 atom2.detect_bonding_schema()
-                print atom1.fullname, atom2['bondschema']
+                print(atom1.fullname, atom2['bondschema'])
 
     def parse_molfile(self,filename):
         """

@@ -1,6 +1,6 @@
 
-from ResidueEditor import ResidueEditor
-from ModificationRemover import remove_modification
+from .ResidueEditor import ResidueEditor
+from .ModificationRemover import remove_modification
 from moderna.util.Errors import ExchangeBaseError
 from moderna.util.LogFile import log
 from moderna.Constants import UNKNOWN_RESIDUE_SHORT, B_FACTOR_EXCHANGE, BASE_PATH

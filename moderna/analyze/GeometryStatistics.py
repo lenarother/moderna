@@ -1,23 +1,14 @@
 #!/usr/bin/env python
-#
-# GeometryStatistics.py
-#
-# Statitic for base type recognition.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, Genesilico"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@rubor.de"
-__status__ = "beta"
+"""
+Statitic for base type recognition.
+"""
 
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 import os, math, re
-    
+
+
 class GeometryError(Exception): pass
+
 
 class AtomDefinition(object):
     """
@@ -31,7 +22,7 @@ class AtomDefinition(object):
     NUC:Y+1[C]:O2'
     Returns an AtomDefinition object.
     """
-    def __init__(self,atom_def):
+    def __init__(self, atom_def):
         self.atom_name = None
         self.res_code = None
         self.res_name = None
@@ -39,7 +30,7 @@ class AtomDefinition(object):
         self.chain_id = None
         self.mol_type = None
         self.parse_atom_definition(atom_def)
-    
+
     def parse_atom_definition(self,atom_def):
         # first element may be omitted
         token = atom_def.split(':')
@@ -300,11 +291,11 @@ class GeometryStatistics(object):
                     a3 = self.get_atom_annotation(atom3)
                     a4 = self.get_atom_annotation(atom4)
                     result.append((self.calc_dihedral(atom1,atom2,atom3,atom4),a1,a2,a3,a4))
-                except ValueError,e:
-                    print str(e)
-                    print atom1.coord,atom2.coord,atom3.coord,atom4.coord
+                except ValueError:
+                    print(atom1.coord,atom2.coord,atom3.coord,atom4.coord)
         return result
-        
+
+
 class PDBSetGeometryStatistics(GeometryStatistics):
     """
     Calculates statistics over a set of structure files.
@@ -325,9 +316,9 @@ class PDBSetGeometryStatistics(GeometryStatistics):
     
 
 if __name__ == '__main__':
-    print """
+    print("""
     
-GeometryStatistics by Kristian.
+ModeRNA GeometryStatistics:
 (c) 2008 Genesilico
 
 alpha version (!)
@@ -376,4 +367,4 @@ The fourth segment 'cis/+/+(A/10)' describes a base pair.
 If no annotation was found, some of these descriptors may be missing.
 Also, a single residue may undergo more than one stacking/base pair interaction.
 
-"""
+""")

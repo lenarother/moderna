@@ -1,28 +1,17 @@
 #!/usr/bin/env python
-#
-# Helix
-#
-# Implements generation of A-type RNA helices.
-# 
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Implements generation of A-type RNA helices.
+"""
 
-from ModernaStructure import ModernaStructure
-from ModernaFragment import ModernaFragment53, ModernaFragment2D, \
+from .ModernaStructure import ModernaStructure
+from .ModernaFragment import ModernaFragment53, ModernaFragment2D, \
     ModernaFragment553, ModernaFragment533
-from FragmentInsertion import FragmentInserter
-from sequence.ModernaSequence import Sequence
-from Renumerator import renumber_section
-from Constants import HELIX, HELIX_SUPERPOSITION, WC_BASE_PAIRS
-from util.Errors import ModernaFragmentError
-from analyze.ChainConnectivity import are_residues_connected
+from .FragmentInsertion import FragmentInserter
+from .sequence.ModernaSequence import Sequence
+from .Renumerator import renumber_section
+from .Constants import HELIX, HELIX_SUPERPOSITION, WC_BASE_PAIRS
+from .util.Errors import ModernaFragmentError
+from .analyze.ChainConnectivity import are_residues_connected
 
 
 class Helix(ModernaStructure):

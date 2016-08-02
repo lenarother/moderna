@@ -1,23 +1,7 @@
 #!/usr/bin/env python
-#
-# test_alphabet.py
-#
-# unit tests for Alphabet
-#!/usr/bin/env python
-#
-# test_moderna_structure.py
-#
-# unit tests for StructureLibrary class
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+unit tests for Alphabet
+"""
 
 from unittest import main, TestCase
 from moderna.sequence.ModernaAlphabet import Alphabet, AlphabetEntry
@@ -25,6 +9,7 @@ from moderna.Constants import UNKNOWN_RESIDUE_SHORT, \
     UNKNOWN_RESIDUE_ONELETTER,  RESIDUE_WITHOUT_ONE_LETTER_ABBREV, \
     MODIFICATION_NAMES_TABLE_PATH
 from tests.test_data import *
+
 
 class AlphabetTests(TestCase):
     """
@@ -36,26 +21,26 @@ class AlphabetTests(TestCase):
     def test_init(self):
         """init should result in a dictionary with the test file contents."""
         a = Alphabet(TEST_MODIFICATION_TABLE)
-        self.assertEqual(len(a.keys()),2)
-        self.assertTrue(a.has_key('first'))
-        self.assertTrue(a.has_key('second'))        
-        self.assertEqual(a['first'].pdb_abbrev,'UNK')
-        self.assertEqual(a['first'].original_base,'A')
-        self.assertEqual(a['first'].long_abbrev,'first')
-        self.assertEqual(a['first'].short_abbrev,'F')
-        self.assertEqual(a['first'].full_name,'first_full_name')
-        self.assertEqual(a['second'].pdb_abbrev,'UNK')
-        self.assertEqual(a['second'].original_base,'B')
-        self.assertEqual(a['second'].long_abbrev,'second')
-        self.assertEqual(a['second'].short_abbrev,'S')
-        self.assertEqual(a['second'].full_name,'second_full_name')
+        self.assertEqual(len(a.keys()), 2)
+        self.assertTrue('first' in a)
+        self.assertTrue('second' in a)
+        self.assertEqual(a['first'].pdb_abbrev, 'UNK')
+        self.assertEqual(a['first'].original_base, 'A')
+        self.assertEqual(a['first'].long_abbrev, 'first')
+        self.assertEqual(a['first'].short_abbrev, 'F')
+        self.assertEqual(a['first'].full_name, 'first_full_name')
+        self.assertEqual(a['second'].pdb_abbrev, 'UNK')
+        self.assertEqual(a['second'].original_base, 'B')
+        self.assertEqual(a['second'].long_abbrev, 'second')
+        self.assertEqual(a['second'].short_abbrev, 'S')
+        self.assertEqual(a['second'].full_name, 'second_full_name')
 
     def test_second_dict(self):
         """The reverse modification_abbrev->original_base dict should work."""
         a = Alphabet(TEST_MODIFICATION_TABLE)
-        self.assertEqual(a._short_original['F'].original_base,'A')
-        self.assertEqual(a._short_original['S'].original_base,'B')
-        self.assertRaises(KeyError,a._short_original.__getitem__,'A')
+        self.assertEqual(a._short_original['F'].original_base, 'A')
+        self.assertEqual(a._short_original['S'].original_base, 'B')
+        self.assertRaises(KeyError,a._short_original.__getitem__, 'A')
 
     def test_unknown_residue(self):
         """The modification_abbrev dict should also work for unspecified residues."""

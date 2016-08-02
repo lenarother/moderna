@@ -1,31 +1,15 @@
 #!/usr/bin/env python
-#
-# BasePairCalculator.py
-#
-# Class for calculating interaction between RNA bases.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-
 """
-A module for  calculating the base pair type for two residues.
+A module for calculating the base pair type for two RNA residues.
+
 INPUT: two ModernaResidue objects
 OUTPUT: a base pair type as a string, or None.
 The main function here is base_pair_calc.
 """
 
-__author__ = "Natalia Szostak"
-__contributors__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Natalia Szostak"
-__email__ = "ms_arwi@wp.pl"
-__status__ = "alpha"
 
-
-from HBondCalculator import HBondCalculator
-from ChainConnectivity import is_ribose_complete
+from .HBondCalculator import HBondCalculator
+from .ChainConnectivity import is_ribose_complete
 from numpy import array
 from Bio.PDB.Atom import Vector
 
@@ -42,6 +26,7 @@ H2=["N4","O4","C5","C6"]
 EDGES_UC = {"WC":WC2,"S":S2,"H":H2}
 
 NN_CUTOFF = 12.0
+
 
 class BasePairInteraction(object):
     """Result from base pair calculation."""

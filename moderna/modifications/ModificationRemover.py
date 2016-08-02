@@ -2,7 +2,7 @@
 Removing modifications from RNA nucleotides
 """
 
-from ResidueEditor import ResidueEditor
+from .ResidueEditor import ResidueEditor
 from moderna.util.Errors import RemoveModificationError
 from moderna.util.LogFile import log
 from moderna.Constants import BASE_PATH, BACKBONE_RIBOSE_ATOMS, B_FACTOR_REMOVE_MODIF

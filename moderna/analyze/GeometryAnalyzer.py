@@ -1,24 +1,14 @@
 #!/usr/bin/env python
-#
-# GeometryAnanlyzer.py
-#
-# Analyze geometry of a RNA structure.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, Genesilico"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@rubor.de"
-__status__ = "Production"
+"""
+Analyze geometry of a RNA structure.
+"""
 
 
 from numpy import array
-from GeometryStatistics import AtomDefinition, GeometryStatistics
-from GeometryParameters import GeometryStandards
-              
+from .GeometryStatistics import AtomDefinition, GeometryStatistics
+from .GeometryParameters import GeometryStandards
+
+
 class GeometryAnalyzer:
     standards = GeometryStandards()
     

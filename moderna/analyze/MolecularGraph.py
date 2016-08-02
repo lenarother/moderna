@@ -1,17 +1,4 @@
 #!/usr/bin/env python
-#
-# MolecularGraph.py
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, Kristian Rother"
-__credits__ = ["Sabrina Hofmann"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@rubor.de"
-__status__ = "Production"
-
 """
 Topology matching algorithm
 
@@ -74,11 +61,11 @@ for atom in mol:
     print atom.element, len(atom.bonds)
     print atom['attributes']
 
-
 """
+
 import os, re
-from MolTopologies import *
-from MolGraphParser import *
+from .MolTopologies import *
+from .MolGraphParser import *
 
 PERMUTATIONS = (
     [[0]],
@@ -112,7 +99,7 @@ class AnnotatedAtom(Atom):
             outer = OUTER_ELECTRONS[self.element]
         else:
             outer = 1
-            print "UNKNOWN ELEMENT",self.element
+            print("UNKNOWN ELEMENT", self.element)
         electrons  = 0
         free_pairs = 0
         charge     = 0
@@ -143,7 +130,7 @@ class AnnotatedAtom(Atom):
 
     def calc_electronegativity(self):
         """assign the electronegativity field."""
-        self['electronegativity'] =  ELECTRONEGATIVITIES.get(self.element, 1.0)
+        self['electronegativity'] = ELECTRONEGATIVITIES.get(self.element, 1.0)
 
     def calc_oxidative_number(self):
         """
@@ -167,7 +154,7 @@ class AnnotatedAtom(Atom):
             # For ion bonds (en-diff>1.7), a warning will be printed
             if abs(en_diff) >= POLAR_BOND_MIN:
                 if abs(en_diff) > POLAR_BOND_MAX: 
-                    print "WARNING: Ion bond marked as bond with e.n.-difference of",en_diff
+                    print("WARNING: Ion bond marked as bond with e.n.-difference of", en_diff)
                 else: 
                     self['partial_charge'] += en_diff*bond.valence
                     
@@ -185,7 +172,7 @@ class AnnotatedAtom(Atom):
             if bond.valence<len(bonds):
                 bonds[bond.valence] += 1
             else:
-                print "HUGE VALENCE FOUND",bond.valence
+                print("HUGE VALENCE FOUND", bond.valence)
         total_bonds = bonds[1] + bonds[2]*2 + bonds[3]*3
         
         # check for single atoms
@@ -239,7 +226,7 @@ class AnnotatedAtom(Atom):
             for bond in self.bonds:
                 molstring = bond.atom2.get_molstring([self])
                 branches[molstring] = True
-            if len(branches.keys())>= 4:
+            if len(branches.keys()) >= 4:
                 # four different branches.. chiral.
                 self.add_attribute('chiral_atom')
 
@@ -377,7 +364,7 @@ class AnnotatedAtom(Atom):
         # and a True diagonal from [0][0] to [n][n] is looked for.
         if len(include_nodes) > self.n_bonds: return 0
         if len(self.bonds)>5:
-            print "MORE THAN FIVE BONDS ON ATOM, SKIPPING."
+            print("MORE THAN FIVE BONDS ON ATOM, SKIPPING.")
             return 0
         for permu in PERMUTATIONS[self.n_bonds-1]:
             diagonal = 1
@@ -492,7 +479,7 @@ class AnnotatedMolecule(Molecule):
 
     def test_condition(self,condition,atom,elem,bondtype,attributes,neighbors):
         result = 0
-        exec "if %s: result = 1"%(condition)
+        exec("if %s: result = 1" % (condition))
         return result
 
     

@@ -1,22 +1,11 @@
 #!/usr/bin/env python
-#
-# ModernaAlphabet.py
-#
-# Defines alphabet for RNA including modifications.
-# 
-# http://iimcb.genesilico.pl/moderna/ 
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Defines alphabet for RNA including modifications.
+"""
 
 
 from moderna.Constants import MODIFICATION_NAMES_TABLE_PATH, ANY_RESIDUE, \
-    RESIDUE_WITHOUT_ONE_LETTER_ABBREV 
+    RESIDUE_WITHOUT_ONE_LETTER_ABBREV
 from moderna.util.Errors import AlphabetError
 
 
@@ -26,13 +15,13 @@ class AlphabetEntry(object):
 
     Arguments:
     - long abbreviation e.g. m1A, m66Am, A
-    - short abbreviation - one letter abbreviation or ANY RESIDUE (X) 
+    - short abbreviation - one letter abbreviation or ANY RESIDUE (X)
         if there is no such abbreviation for residue
     - pdb abbreviation - abbreviation used in pdb e.g. MMA, MTA, UNK
     - full name
     - original base - stores name of original base for modification
 
-    If a base is not modified then long_abbrev, short_abbrev, 
+    If a base is not modified then long_abbrev, short_abbrev,
     pdb_abbrev and original_base are equal.
     """
     def __init__(self, long_abbrev=None, short_abbrev=None, pdb_abbrev=None, \
@@ -95,7 +84,7 @@ there in an another dict available as Alphabet.one_letter_original:
 key - short abbreviation (one letter code)
     """
     def __init__(self, table_path = MODIFICATION_NAMES_TABLE_PATH):
-        dict.__init__(self) 
+        super()
         self.table_path = table_path
         self.parse_alphabet_table()
         self._short_original = {}
@@ -115,7 +104,7 @@ key - short abbreviation (one letter code)
                 continue
             tokens = line.replace('\n','').split('\t')
             tokens = [t.strip() for t in tokens]
-            if len(tokens) == 7: 
+            if len(tokens) == 7:
                 aentry = AlphabetEntry()
                 aentry.new_abbrev = tokens[0]
                 aentry.original_base = tokens[1]
@@ -128,8 +117,8 @@ key - short abbreviation (one letter code)
                 aentry.pdb_abbrev = tokens[5]
                 aentry.category = tokens[6]
                 self[tokens[2]] = aentry
-            elif len(tokens) >0 :
-                raise AlphabetError('Wrong line format: %s' %line)
+            elif len(tokens) >0:
+                raise AlphabetError('Wrong line format: %s' % line)
 
 
     def set_short_original(self):
@@ -138,7 +127,7 @@ key - short abbreviation (one letter code)
             if self[abbrev].short_abbrev != RESIDUE_WITHOUT_ONE_LETTER_ABBREV:
                 self._short_original[self[abbrev].short_abbrev] = self[abbrev]
         # add one defined entry for all entries without one letter abbreviations
-        if self.has_key(RESIDUE_WITHOUT_ONE_LETTER_ABBREV):
+        if RESIDUE_WITHOUT_ONE_LETTER_ABBREV in self:
             self._short_original[RESIDUE_WITHOUT_ONE_LETTER_ABBREV] = self[RESIDUE_WITHOUT_ONE_LETTER_ABBREV]
 
 
@@ -154,7 +143,7 @@ key - short abbreviation (one letter code)
         try:
             return self._short_original[short_abbrev]
         except KeyError:
-            raise AlphabetError('This residue [%s] has no one letter abbreviation, cannot return alphabet entry'%short_abbrev)
+            raise AlphabetError('This residue [%s] has no one letter abbreviation, cannot return alphabet entry' % short_abbrev)
 
 
     def get_new_original(self, new_abbrev):

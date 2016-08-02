@@ -1,22 +1,11 @@
 #!/usr/bin/env python
-#
-# decorators.py
-#
-# Decorators for moderna.py.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@genesilico.pl"
-__status__ = "Production"
+"""
+Decorators for moderna.py.
+"""
 
 
-from Errors import ModernaError, ParameterError
-from LogFile import log
+from .Errors import ModernaError, ParameterError
+from .LogFile import log
 from moderna.examples.usage_examples import COMMAND_EXAMPLES
 
 
@@ -51,17 +40,17 @@ def toplevel_function(func):
     """If a ModeRNA Error occurs, it will be written to the logfile.
     Also adds examples to the documentation strings.
     """
-    if not COMMAND_EXAMPLES.has_key(func.__name__):
+    if not func.__name__ in COMMAND_EXAMPLES:
         raise ValueError("No example for ModeRNA function: %s"%func.__name__)
-    func.__doc__ += '\nExamples:\n%s'%COMMAND_EXAMPLES[func.__name__]
-    
+    func.__doc__ += '\nExamples:\n%s' % COMMAND_EXAMPLES[func.__name__]
+
     def catch_and_log_errors(*args, **kwargs):
         try:
             return func(*args, **kwargs)
-        except ModernaError, e: 
-            log.write_error(e)
+        except ModernaError:
+            log.write_error()
             if log.raise_exceptions:
-                raise e
-            
+                raise
+
     return catch_and_log_errors
     

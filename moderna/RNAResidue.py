@@ -6,18 +6,19 @@ import re
 from Bio.PDB.Residue import Residue
 from Bio.PDB.Atom import Atom
 from numpy import array
-from sequence.ModernaAlphabet import alphabet
-from analyze.BaseRecognizer import BaseRecognizer, BaseRecognitionError
-from analyze.BasePairCalculator import base_pair_calc
-from builder.CoordBuilder import build_coord
 
-from util.Errors import RNAResidueError
+from .sequence.ModernaAlphabet import alphabet
+from .analyze.BaseRecognizer import BaseRecognizer, BaseRecognitionError
+from .analyze.BasePairCalculator import base_pair_calc
+from .builder.CoordBuilder import build_coord
 
-from Constants import STANDARD_BASES, ANY_RESIDUE
-from Constants import PURINE_NEIGHBOR_TABLE, PYRIMIDINE_NEIGHBOR_TABLE
-from Constants import DONORS, ACCEPTORS
-from Constants import H_GENERATE_STEP, H_COVALENT_BOND
-from Constants import H_ANGLE_ONE, H_ANGLE_TWO
+from .util.Errors import RNAResidueError
+
+from .Constants import STANDARD_BASES, ANY_RESIDUE
+from .Constants import PURINE_NEIGHBOR_TABLE, PYRIMIDINE_NEIGHBOR_TABLE
+from .Constants import DONORS, ACCEPTORS
+from .Constants import H_GENERATE_STEP, H_COVALENT_BOND
+from .Constants import H_ANGLE_ONE, H_ANGLE_TWO
 
 
 H_GENERATE_TORSIONS = range(0, 360, H_GENERATE_STEP)

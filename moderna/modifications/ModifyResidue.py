@@ -1,8 +1,8 @@
 
-from ResidueEditor import ResidueEditor, make_backbone_only_residue
-from ModificationRemover import remove_modification
-from ModificationAdder import add_modification
-from BaseExchanger import exchange_base
+from .ResidueEditor import ResidueEditor, make_backbone_only_residue
+from .ModificationRemover import remove_modification
+from .ModificationAdder import add_modification
+from .BaseExchanger import exchange_base
 from moderna.Constants import UNKNOWN_RESIDUE_SHORT
 
 

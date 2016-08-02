@@ -1,30 +1,18 @@
 #!/usr/bin/env python
-#
-# CheckPdb.py
-#
-# Supports work with PDB.Structure objects.
-# 
-# http://iimcb.genesilico.pl/moderna/ 
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
-
+"""
+Supports work with PDB.Structure objects.
+"""
 
 import re,os
 
 from Bio.PDB.Atom import Atom
-from ModernaStructure import ModernaStructure
-from builder.PhosphateBuilder import TerminalPhosphateBuilder
-from analyze.ChainConnectivity import are_residues_connected, is_chain_continuous
+from .ModernaStructure import ModernaStructure
+from .builder.PhosphateBuilder import TerminalPhosphateBuilder
+from .analyze.ChainConnectivity import are_residues_connected, is_chain_continuous
 
-from Constants import MISSING_RESIDUE, UNKNOWN_RESIDUE_SHORT, PHOSPHATE_GROUP, RIBOSE, BACKBONE_ATOMS, AA_ATOMS, \
+from .Constants import MISSING_RESIDUE, UNKNOWN_RESIDUE_SHORT, PHOSPHATE_GROUP, RIBOSE, BACKBONE_ATOMS, AA_ATOMS, \
     BACKBONE_RIBOSE_ATOMS,  PHOSPHORYLATED_NUCLEOTIDES
-from util.LogFile import log
+from .util.LogFile import log
 
 
 # what about aa

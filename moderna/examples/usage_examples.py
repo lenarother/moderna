@@ -1,19 +1,7 @@
-
 #!/usr/bin/env python
-#
-# usage_examples.py
-#
-# code examples for each toplevel function
-# 
-# http://iimcb.genesilico.pl/moderna
-#
-__author__ = "Magdalena Musielak, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Musielak"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+code examples for each toplevel function
+"""
 
 
 COMMAND_EXAMPLES = {
@@ -202,5 +190,5 @@ write_secstruc(m, '1F1T_secondary_structure.vienna')"""
 }
 
 # list of all commands
-COMMANDS = COMMAND_EXAMPLES.keys()
+COMMANDS = list(COMMAND_EXAMPLES.keys())
 COMMANDS.sort()
