@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# test_topology_matcher.py
-#
-# Tests the topology matching algorithm.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, Kristian Rother"
-__credits__ = ["Sabrina Hofmann"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@rubor.de"
-__status__ = "Production"
+"""
+Tests the topology matching algorithm.
+"""
 
 from unittest import main, TestCase
 from moderna.analyze.MolecularGraph import AnnotatedMolecule
@@ -22,7 +11,8 @@ import os
 
 ATTRIBUTES = ['h-bond acceptor','h-bond donor','h-bond hydrogen',\
             'sp2-hybrid','sp3-hybrid','chiral_atom','conjugated_system'
-            ]
+]
+
 
 class MolParserTests(TestCase):
 
@@ -35,16 +25,16 @@ class MolParserTests(TestCase):
         """Checks element numbers and makes sure each atom has basic attributes."""
         count = {}
         for atom in m:
-            count.setdefault(atom.element,0)
+            count.setdefault(atom.element, 0)
             count[atom.element] += 1
         for key in elements:
-            self.assertEqual(count.get(key,0),elements[key])
+            self.assertEqual(count.get(key, 0), elements[key])
         for atom in m:
-            self.assertTrue(atom.has_key('coordinates'))
-            self.assertTrue(atom.has_key('atom_name'))
-            self.assertTrue(atom.has_key('attributes'))
-            self.assertTrue(atom.has_key('rdf_index'))    
-        
+            self.assertTrue('coordinates' in atom)
+            self.assertTrue('atom_name' in atom)
+            self.assertTrue('attributes' in atom)
+            self.assertTrue('rdf_index' in atom)
+
     def test_parse_molfile(self):
         """Resulting molecules should have the right number of atoms for each element."""
         # water molecule from kegg

@@ -61,9 +61,9 @@ class Atom(dict):
         neighbors = {}
         for bond in self.bonds:
             elem = bond.atom2.element
-            neighbors.setdefault(elem,[])
+            neighbors.setdefault(elem, [])
             neighbors[elem].append(str(bond.valence))
-        k = neighbors.keys()
+        k = list(neighbors.keys())
         k.sort()
         atomtype = self.element
         for kk in k:
@@ -75,7 +75,7 @@ class Atom(dict):
         protortype = self.element
         if atomtype[0] != 'H':
             bonded_h = 0
-            if neighbors.has_key('H'): bonded_h = len(neighbors['H'])
+            if 'H' in neighbors: bonded_h = len(neighbors['H'])
             protortype += "%iH%i"%(len(self.bonds),bonded_h)
 
     def get_molstring(self, taboo_list,depth=-1):

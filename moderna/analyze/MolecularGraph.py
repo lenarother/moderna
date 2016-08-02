@@ -196,7 +196,7 @@ class AnnotatedAtom(Atom):
         Assigns H-donor and  H-acceptor attributes.
         """
         # identify h donors
-        if ELECTRONEGATIVITIES.has_key(self.element):
+        if self.element in ELECTRONEGATIVITIES:
             diff = ELECTRONEGATIVITIES[self.element]-ELECTRONEGATIVITIES['H']
         else:
             diff = -1
@@ -207,12 +207,12 @@ class AnnotatedAtom(Atom):
                 if bond.atom2.element == 'H':
                     donor = 1
                     bond.atom2.add_attribute('h-bond hydrogen')
-            if donor: 
+            if donor:
                 self.add_attribute('h-bond donor')
-    
+
         # identify h acceptors
         if diff >= H_ACCEPTOR_DIFFERENCE:
-            if self['free_electron_pairs']>0:
+            if self['free_electron_pairs'] > 0:
                 self.add_attribute('h-bond acceptor')
 
 
@@ -234,10 +234,13 @@ class AnnotatedAtom(Atom):
         """
         Checks whether atom j has a double bond, charge or free electron pair.
         """
-        if self['free_electron_pairs'] > 0: return True
-        if self['charge'] != 0: return True
+        if self['free_electron_pairs'] > 0:
+            return True
+        if self['charge'] != 0:
+            return True
         for bond in self.bonds:
-            if bond.valence >= 2: return True
+            if bond.valence >= 2:
+                return True
         return False
 
     def get_conjugated_system(self, candidates,visited,depth = -1):

@@ -33,10 +33,10 @@ from moderna import *
 from .Constants import NORMAL_SUPPORT, ARCPI
 
 STACKINGS = {
-        (True, True): '>>', 
-        (True, False): '<<', 
-        (False, False): '<>', 
-        (False, True): '><', 
+        (True, True): '>>',
+        (True, False): '<<',
+        (False, False): '<>',
+        (False, True): '><',
         }
 
 # vector placeholder functions
@@ -47,7 +47,8 @@ def angle(vec_a, vec_b):
         add.reduce(vec_b*vec_b))
     cosa = max(-1., min(1., cosa))
     return arccos(cosa) * ARCPI
-    
+
+
 class StackingInteraction(object):
     """Result from stacking calculation."""
     def __init__(self, resi1, resi2, stack_type):
@@ -59,8 +60,8 @@ class StackingInteraction(object):
     def __repr__(self):
         return "%s %s %s"% \
             (self.resi1.identifier, self.type, self.resi2.identifier)
-    
-    
+
+
 class ResidueVector(object):
     """
     Residue class with center vector and normal vector for stacking calculation.
@@ -77,12 +78,12 @@ class ResidueVector(object):
         self.normal_set = NORMAL_SUPPORT.get(residue.original_base)
         self.normal = None
         self.center = None
-            
+
     def is_valid(self):
         """Checks if all necessary atoms are present."""
         if self.normal_set:
             for name in self.normal_set:
-                if not self.atoms.has_key(name): 
+                if not name in self.atoms: 
                     return False
             return True
     
