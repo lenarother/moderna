@@ -225,7 +225,7 @@ class TerminalPhosphateBuilder(object):
         """Constructs a phosphate group based on O5', C5', and C4'"""
         self.remove_phosphate_group()
         atoms = self.__get_P_group_in_right_conformation()
-        for at in atoms: 
+        for at in atoms:
             self.r1.add(at)
 
     def __has_local_clashes(self, ns, atoms):

@@ -10,6 +10,7 @@ from numpy import array
 from .sequence.ModernaAlphabet import alphabet
 from .analyze.BaseRecognizer import BaseRecognizer, BaseRecognitionError
 from .analyze.BasePairCalculator import base_pair_calc
+from .analyze.PuckerCalculator import PuckerCalculator
 from .builder.CoordBuilder import build_coord
 
 from .util.Errors import RNAResidueError
@@ -58,6 +59,15 @@ class RNAResidue(Residue):
         self._donors = None
         self._acceptors = None
         self._donor_hydrogens = {}
+
+        self._pucker = None
+
+    @property
+    def pucker(self):
+        if not self._pucker:
+            pc = PuckerCalculator()
+            self._pucker = pc.get_pucker(self)
+        return self._pucker
 
     def __check_double_coord(self, resi):
         """

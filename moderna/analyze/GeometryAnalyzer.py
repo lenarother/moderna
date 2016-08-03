@@ -11,21 +11,21 @@ from .GeometryParameters import GeometryStandards
 
 class GeometryAnalyzer:
     standards = GeometryStandards()
-    
+
     def __init__(self, structure):
         """Takes a ModernaStructure object"""
         self.struc = structure
         self.bad_bonds = []
         self.bad_angles = []
         self.bad_dihedrals = []
-    
+
     def analyze(self):
-        gs = GeometryStatistics(self.struc)
+        GeometryStatistics(self.struc)
         self.check_bonds()
         self.check_angles()
         self.check_dihedrals()
-        
-                
+
+
     def find_outliers(self, descriptor, values):
         result = []
         for v in values:
@@ -40,15 +40,15 @@ class GeometryAnalyzer:
             result = gs.get_distances(b)
             self.bad_bonds += self.find_outliers(b, result)
         return self.bad_bonds
-        
+
     def check_angles(self):
         gs = GeometryStatistics(self.struc)
         self.bad_angles = []
         for a in self.standards.angles:
-            result = gs.get_angles(a)            
+            result = gs.get_angles(a)
             self.bad_angles += self.find_outliers(a, result)
         return self.bad_angles
-        
+
     def check_dihedrals(self):
         gs = GeometryStatistics(self.struc)
         self.bad_dihedrals = []
@@ -56,7 +56,7 @@ class GeometryAnalyzer:
             result = gs.get_dihedrals(d)
             self.bad_dihedrals += self.find_outliers(d, result)
         return self.bad_dihedrals
-        
+
     def get_resi_num_str(self,b):
         """ """
         resi = set(b[1][1:])

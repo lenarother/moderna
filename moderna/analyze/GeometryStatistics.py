@@ -3,8 +3,10 @@
 Statitic for base type recognition.
 """
 
-from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
-import os, math, re
+from Bio.PDB.Vector import calc_angle, calc_dihedral
+import os
+import math
+import re
 
 
 class GeometryError(Exception): pass
@@ -31,20 +33,18 @@ class AtomDefinition(object):
         self.mol_type = None
         self.parse_atom_definition(atom_def)
 
-    def parse_atom_definition(self,atom_def):
+    def parse_atom_definition(self, atom_def):
         # first element may be omitted
         token = atom_def.split(':')
         if not 2 <= len(token) <= 3:
-            raise GeometryError("invalid atom definition: '%s'"%atom_def)
-            
-        self.atom_name = token[-1] # atom name is always the last
-        self.res_code = token[-2][0] # residue comes second last
+            raise GeometryError("invalid atom definition: '%s'" % atom_def)
+
+        self.atom_name = token[-1]    # atom name is always the last
+        self.res_code = token[-2][0]  # residue comes second last
         suffix = token[-2][1:]
-        if len(suffix)>1:
-            #chain = re.findall('\{(.+)\}',suffix)
-            resi = re.findall('\[(.+)\]',suffix)
-            offset = re.findall('^([+-]\d+)',suffix)
-            #if chain: self.chain_id = chain[0]
+        if len(suffix) > 1:
+            resi = re.findall('\[(.+)\]', suffix)
+            offset = re.findall('^([+-]\d+)', suffix)
             if resi: self.res_name = resi[0]
             if offset: self.res_offset = int(offset[0]) 
         if len(token) == 3:
@@ -59,12 +59,13 @@ class AtomDefinition(object):
             # get the residue
             resi = residue_list[ofs_index]
             # assert the chain is set correctly
-            if not self.chain_id:# or resi.parent.id == self.chain_id:
+            if not self.chain_id:  # or resi.parent.id == self.chain_id:
                 # assert the residue name is set correctly
                 resname_ok = True
                 if self.res_name:
                     rn = resi.resname.strip()
-                    if self.res_name!=rn: resname_ok = False
+                    if self.res_name != rn: 
+                        resname_ok = False
                     if self.res_name == 'R' and rn in ['A','G'] \
                        or self.res_name == 'Y' and rn in ['C','U']:
                         resname_ok = True
@@ -74,17 +75,19 @@ class AtomDefinition(object):
                         return resi[self.atom_name]
         return None
 
-            
+
 class GeometryExpression(list):
-    """Handles the "X:C5',X:C4'"-like strings given to the GeometryStatistics class. 
-    Is a list of AtomDefinition objects."""
-    
+    """
+    Handles the "X:C5',X:C4'"-like strings given to the GeometryStatistics class.
+    Is a list of AtomDefinition objects.
+    """
+
     def __init__(self,expression):
         """Parses the expression and creates AtomDefinition objects."""
-        list.__init__(self)
+        super()
         for atom_def in expression.split(','):
             self.append(AtomDefinition(atom_def))
-            
+
         self.residue_codes = self.get_residue_codes()
         
     def get_residue_codes(self):
@@ -149,7 +152,7 @@ class GeometryExpression(list):
                     yield atoms
             # count up atom indices
             i = 0
-            while i< len(r_index):
+            while i < len(r_index):
                 r_index[i] += 1
                 if r_index[i] >= len(residues[i]):
                     r_index[i] = 0
@@ -158,7 +161,7 @@ class GeometryExpression(list):
                         ready = True
                 else:
                     i = len(r_index)
-                    
+
 
 class GeometryResult(list):
     """List of floats producing tabular reports and plots."""
@@ -228,26 +231,20 @@ class GeometryResult(list):
         pass
 
 
-class GeometryStatistics(object):
+class GeometryStatistics:
     """
     Calculates geometry statistics for a single structure object.
     """
     def __init__(self, structure):
         """structure is a ModernaStructure object."""
         self.struct = structure
-        
+
     def get_structures(self):
         yield self.struct
-                
+
     def get_atom_annotation(self,atom):
         res = atom.parent
-        return '%s;'%(res.identifier)
-        #rid = str(res.id[1])+res.id[2].strip()
-        #chain = res.parent
-        #cid = chain.id
-        #struc = chain.parent.parent.id
-        #anno = '%s/%s/%s;'%(struc,cid,rid)
-        #return anno
+        return '%s;' % (res.identifier)
                 
     def get_distances(self, expression):
         result = GeometryResult('distances of (%s)'%expression)
@@ -258,28 +255,30 @@ class GeometryStatistics(object):
                 a2 = self.get_atom_annotation(atom2)
                 result.append((atom1-atom2,a1,a2))
         return result
-        
+
     def get_angles(self, expression):
         result = GeometryResult('angles of (%s)'%expression, angles=True)
         expr = GeometryExpression(expression)
         for struc in self.get_structures():
-            for atom1,atom2,atom3 in expr.get_atoms(struc):
-                a = calc_angle(atom1.get_vector(),atom2.get_vector(),atom3.get_vector())
-                #a=angle(atom2.coord-atom1.coord,atom2.coord-atom3.coord)
-                a = a*180.0/math.pi
+            for atom1, atom2, atom3 in expr.get_atoms(struc):
+                a = calc_angle(atom1.get_vector(), atom2.get_vector(), atom3.get_vector())
+                a = a * 180.0 / math.pi
                 a1 = self.get_atom_annotation(atom1)
                 a2 = self.get_atom_annotation(atom2)
                 a3 = self.get_atom_annotation(atom3)
-                result.append((a,a1,a2,a3))
+                result.append((a, a1, a2, a3))
         return result
-    
-    def calc_dihedral(self,atom1,atom2,atom3,atom4):
-        dihedral = calc_dihedral(atom1.get_vector(),\
-            atom2.get_vector(),atom3.get_vector(), atom4.get_vector())
-        dihedral *= 180/math.pi
-        if dihedral < 0: dihedral += 360
+
+    def calc_dihedral(self, atom1, atom2, atom3, atom4):
+        dihedral = calc_dihedral(atom1.get_vector(),
+                                 atom2.get_vector(),
+                                 atom3.get_vector(),
+                                 atom4.get_vector())
+        dihedral *= 180 / math.pi
+        if dihedral < 0:
+            dihedral += 360
         return dihedral
-        
+
     def get_dihedrals(self, expression):
         result = GeometryResult('dihedrals of (%s)'%expression, angles=True)
         expr = GeometryExpression(expression)
@@ -301,23 +300,25 @@ class PDBSetGeometryStatistics(GeometryStatistics):
     Calculates statistics over a set of structure files.
     """
     def __init__(self, pdb_path):
-        if pdb_path[-1] != os.sep: 
-            pdb_path += os.sep # make sure there is a terminating slash
+        if pdb_path[-1] != os.sep:
+            pdb_path += os.sep  # make sure there is a terminating slash
         self.pdb_path = pdb_path
-        
+
     def get_structures(self):
         from moderna import ModernaStructure
         for fn in os.listdir(self.pdb_path):
-            if fn[-4:].upper() in ['.ENT','.PDB']:
-                if fn[-6] == '_': chain_id = fn[-5]
-                else: chain_id = 'A'
+            if fn[-4:].upper() in ['.ENT', '.PDB']:
+                if fn[-6] == '_': 
+                    chain_id = fn[-5]
+                else:
+                    chain_id = 'A'
                 structure=ModernaStructure('file', self.pdb_path + fn, chain_name=chain_id)
                 yield structure
-    
+
 
 if __name__ == '__main__':
     print("""
-    
+
 ModeRNA GeometryStatistics:
 (c) 2008 Genesilico
 

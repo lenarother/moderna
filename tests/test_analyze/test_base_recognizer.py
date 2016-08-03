@@ -1,27 +1,15 @@
 #!/usr/bin/env python
-#
-# test_base_recognizer.py
-#
-# unit tests for the BaseRecognizer class
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for the BaseRecognizer class
+"""
 
 from unittest import main, TestCase
 from moderna.analyze.BaseRecognizer import BaseRecognizer
 from Bio.PDB import PDBParser
-from moderna.ModernaStructure import ModernaStructure
-from moderna.sequence.ModernaSequence import Sequence
 from moderna.util.Errors import BaseRecognitionError
 from moderna.Constants import PATH_TO_LIR_STRUCTURES
 from test_data import *
+
 
 class BaseRecognizerTests(TestCase):
     """
@@ -30,31 +18,31 @@ class BaseRecognizerTests(TestCase):
     """
     def setUp(self):
         self.br = BaseRecognizer()
-        
+
     def tearDown(self):
         self.br = None
-        
+
     def test_mini_template(self):
         """Should identify 15 bases including one modification."""
         names = ['G','C','G','G','A','U','U','U','A','m2G','C','U','C','A','G']
-        struc=PDBParser().get_structure('test',MINI_TEMPLATE)
-        chain=struc[0]['A']
+        struc = PDBParser().get_structure('test', MINI_TEMPLATE)
+        chain = struc[0]['A']
         for resi, correct in zip(chain,names):
             base = self.br.identify_resi(resi)
             self.assertEqual(base,correct)
             
     def test_border_cases(self):
         """Recognize difficult residues by M.Skorupski."""
-        path = TEST_DATA_PATH+'nucleotides/border_cases/unknown%i_%s.pdb'
+        path = TEST_DATA_PATH + 'nucleotides/border_cases/unknown%i_%s.pdb'
         EXAMPLES = [(1, 'C'), (2, 'C'), (3, 'C'), 
                     (4, 'U'), (5, 'C'), (6, 'C')]
         for num, base in EXAMPLES:
-            fname = path%(num, base)
-            struc=PDBParser().get_structure('test', fname)
+            fname = path % (num, base)
+            struc = PDBParser().get_structure('test', fname)
             resi = struc[0].child_list[0].child_list[0]
             result = self.br.identify_resi(resi)
             self.assertEqual(result, base)
-            
+
     def test_1ehz(self):
         """In the tRNA structure 14 modifications should be found."""
         # check the modifications in 1ehz
@@ -177,25 +165,23 @@ class BaseRecognizerTests(TestCase):
         correct = 0
         chain=PDBParser().get_structure('test_struc', TEST_DATA_PATH+'nucleotides/misc_nucleotides.pdb')[0]['A']
         for resi, exp in zip(chain.child_list, expected):
-            #if exp != "3meo5mC": continue
             try:
                 result = self.br.identify_resi(resi)
-            except BaseRecognitionError, e:
-                #print 'error: '+str(e)
+            except BaseRecognitionError:
                 result = None
             if result == exp:
-                correct +=1
+                correct += 1
             else:
-                print resi, result, exp
+                print(resi, result, exp)
         self.assertEqual(correct, len(chain.child_list))
-                              
+
     def test_dna(self):
         """DNA should also be recognized correctly."""
-        struc=PDBParser().get_structure('test_struc',DNA_WITH_MISMATCH)
-        chain=struc[0]['E']
+        struc = PDBParser().get_structure('test_struc',DNA_WITH_MISMATCH)
+        chain = struc[0]['E']
         seq = [self.br.identify_resi(resi) for resi in chain.child_list]
-        self.assertEqual(seq,['dA','dG','dC','dT','dG','dC','dC','dA','dG',\
-                              'dG','dC','dA','dC','dC','dA','dG','dT','dG'])
+        self.assertEqual(seq, ['dA','dG','dC','dT','dG','dC','dC','dA','dG',\
+                               'dG','dC','dA','dC','dC','dA','dG','dT','dG'])
 
     def test_fail_unrecognizable(self):
         """Bad residues should raise an exception."""

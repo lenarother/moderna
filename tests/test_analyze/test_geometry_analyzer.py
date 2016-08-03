@@ -1,19 +1,7 @@
 #!/usr/bin/env python
-#
-# test_geometry_analyzer.py
-#
-# unit tests GeometryAnalyzer
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__contributors__ = "Magdalena Rother, Kristian Rother"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Tomasz Puton"
-__email__ = "t.puton@amu.edu.pl"
-__status__ = "Production"
+"""
+Unit Tests for GeometryAnalyzer
+"""
 
 
 from unittest import main, TestCase
@@ -30,14 +18,14 @@ class GeometryAnalyzerTests(TestCase):
         self.ga = GeometryAnalyzer(t)
         t = ModernaStructure('file', BAD_TEMPLATE, chain_name='A', seq=t.get_sequence())
         self.bad_ga = GeometryAnalyzer(t)
-        
+
     def test_check_bonds(self):
         """Should return a list of bad bond lengths."""
         r = self.ga.check_bonds()
         self.assertEqual(len(r), 0)
         r = self.bad_ga.check_bonds()
         self.assertEqual(len(r), 3)
-        
+
     def test_check_angles(self):
         """Should return a list of bad angles."""
         r = self.ga.check_angles()

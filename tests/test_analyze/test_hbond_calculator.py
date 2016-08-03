@@ -1,21 +1,10 @@
 #!/usr/bin/env python
-#
-# test_hbond_calculator.py
-#
-# unit tests for checking interactions calculation
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for checking interactions calculation
+"""
 
-from moderna.analyze.HBondCalculator import HBondCalculator, HBond
-from unittest import main,TestCase
+from moderna.analyze.HBondCalculator import HBondCalculator
+from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
 from test_data import *
 import os
@@ -47,7 +36,6 @@ class HBondCalculatorTests(TestCase):
     def test_calc_hbond_modified(self):
         """Calculates Hbonds of modified residues."""
         hbonds = self.hb.calc_hbond_list(self.ehz['25'], self.ehz['10'])
-        #print hbonds
         self.assertNotEqual(hbonds,[])
         
 
@@ -129,7 +117,7 @@ class HBondCalculatorTests(TestCase):
         c8 = self.example1['498']["C8"]
         hydro = [h for h in self.example1['498'].get_donor_hydrogens(c8)]
         self.assertEqual(len(hydro), 1)
-        
+
 
 class HBondWesthofTests(TestCase):
  
@@ -142,27 +130,27 @@ class HBondWesthofTests(TestCase):
             ll = [l for l in ll if l.startswith('ATOM')]
             chain1 = ll[3][21]
             chain2 = ll[-3][21]
-            bp1 = ModernaStructure('file',fn, chain1)
-            bp2 = ModernaStructure('file',fn, chain2)            
+            bp1 = ModernaStructure('file', fn, chain1)
+            bp2 = ModernaStructure('file', fn, chain2)
             resi1 = [r for r in bp1][0]
             resi2 = [r for r in bp2][-1]
             hbonds = self.hb.calc_hbond_list(resi1, resi2)
             return hbonds
-    
+
     def test_specific(self):
         # OK with just one hbond:
         # cHS_AC_Exemplar.pdb
         # tHS_UG_Exemplar.pdb
         #TODO: has to be argued:
         #  tWS_UU_Exemplar.pdb
-        print self.check_example('../../mod_isostericity/Westhof_new/tHS_AA_Exemplar.pdb')
+        print(self.check_example('../../mod_isostericity/Westhof_new/tHS_AA_Exemplar.pdb'))
         
     def test_new_westhof_examples(self):
         wh_path = '../../mod_isostericity/Westhof_new/'
         for fn in os.listdir(wh_path):
             if not fn.endswith('.pdb'): continue
             hbonds = self.check_example(wh_path+fn)
-            print fn, hbonds
+            print(fn, hbonds)
           
             
 
