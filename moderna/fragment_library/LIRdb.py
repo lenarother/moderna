@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# LIRdb.py
-#
-# Script for preparing file with information about all possible fragments from given structures.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Script for preparing file with information about all possible fragments from given structures.
+"""
 
 
 import sys, re, os, os.path
@@ -20,7 +9,7 @@ import sys, re, os, os.path
 from moderna.ModernaStructure import ModernaStructure
 from moderna.sequence.ModernaSequence import Sequence
 
-from LIR import Lir, LirRecord
+from .LIR import Lir, LirRecord
 from moderna.Constants import PATH_TO_LIR_STRUCTURES, PATH_TO_LIR_LIST, ANY_RESIDUE,  \
     UNKNOWN_RESIDUE_SHORT, MAX_FRAGMENT_LENGTH
 from moderna.util.LogFile import log
@@ -28,6 +17,7 @@ from moderna.util.LogFile import log
 # constants to create LIR test DB.
 #PATH_TO_LIR_STRUCTURES = '../test/test_data/lir_test_files/'
 #PATH_TO_LIR_LIST = '../test/test_data/lir_chains.txt'
+
 
 class ResidueList:
     """
@@ -252,20 +242,17 @@ class MakeLirFile:
         g=open(log_filename, 'w')
         g.write('GENERAL FRAGMENT STATISTICS\n\n')
         statistics_dict = self.get_lir_statistics()
-        statistics_dict_keys = statistics_dict.keys()
-        statistics_dict_keys.sort()
-        for x in statistics_dict_keys:
+        for x in sorted(statistics_dict.keys()):
             g.write(x+str(statistics_dict[x])+'\n')
         g.write('\n'+50*'_'+'\n'+'DETAILED FRAGMENT STATISTICS\n\n')
         for pdb in self.info.keys():
             for ch in self.info[pdb].keys():
-                g.write('Structure: %s\tChain: %s\tRecords: %s\tErrors: %s\n' %(pdb,  ch, str(self.info[pdb][ch]['record_number'] ),  str(self.info[pdb][ch]['record_errors'] ) ))
+                g.write('Structure: %s\tChain: %s\tRecords: %s\tErrors: %s\n' % (pdb,  ch, str(self.info[pdb][ch]['record_number'] ),  str(self.info[pdb][ch]['record_errors'] ) ))
         g.close()
 
 
 if __name__ == '__main__':
     log.print_all = True
-    l=MakeLirFile()
+    l = MakeLirFile()
     l.generate_lir_db()
     l.write_lir_db_to_file()
-    

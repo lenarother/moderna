@@ -56,7 +56,7 @@ OMEGA3_AT = "C4'"
 #####################################################################
 
 
-class LirRecord(object):
+class LirRecord:
     """
 Represents a single fragment as it is stored in the database
 

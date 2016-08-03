@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# test_rna_chain.py
-#
-# unit tests for RNAChain class
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for RNAChain class
+"""
 
 from unittest import main, TestCase
 from moderna.RNAResidue import RNAResidue
@@ -31,7 +20,7 @@ class RNAChainTests(TestCase):
     def test_init_empty(self):
         """Empty chain can be initialized."""
         s = RNAChain()
-        
+
     def test_init_struc(self):
         struc = PDBParser().get_structure('test', MINI_TEMPLATE)
         s = RNAChain('structure', struc, seq=Sequence("GCGGAUUUALCUCAG"))
@@ -68,7 +57,7 @@ class RNAChainTests(TestCase):
         for resi in s:
             i += 1
         self.assertEqual(i,15)
-        
+
     def test_load_error(self):
         """Should raise exception if the file does not exist."""
         self.assertRaises(RNAChainError, RNAChain, 'file','nonexisting_file.ent')
@@ -79,25 +68,25 @@ class RNAChainTests(TestCase):
 
     def test_iterate(self):
         """Iteration over RNAResidues with correct numbers."""
-        s = RNAChain('file',MINI_TEMPLATE)
+        s = RNAChain('file', MINI_TEMPLATE)
         i = 1
         for resi in s:
-            self.assertTrue(isinstance(resi,RNAResidue))
+            self.assertTrue(isinstance(resi, RNAResidue))
             self.assertEqual(resi.id[1], i)
-            i+=1    
+            i += 1
 
     def test_write_pdb(self):
         """write_pdb should create a file."""
-        s = RNAChain('file',MINI_TEMPLATE)
-        if os.access(OUTPUT,os.F_OK):
+        s = RNAChain('file', MINI_TEMPLATE)
+        if os.access(OUTPUT, os.F_OK):
             os.remove(OUTPUT)
         s.write_pdb_file(OUTPUT)
-        self.assertTrue(os.access,os.F_OK)
+        self.assertTrue(os.access, os.F_OK)
 
     def test_write_load_sanity(self):
         """After re-reading written file, there should be the same residues."""
-        s = RNAChain('file',MINI_TEMPLATE)
-        if os.access(OUTPUT,os.F_OK):
+        s = RNAChain('file', MINI_TEMPLATE)
+        if os.access(OUTPUT, os.F_OK):
             os.remove(OUTPUT)
         s.write_pdb_file(OUTPUT)
         t = RNAChain('file', OUTPUT)

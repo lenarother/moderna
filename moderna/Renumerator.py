@@ -92,8 +92,7 @@ class Renumerator:
             return self.number_generator(first_id)
         else:
             return self.number_generator(first_id)
-    
-    
+
     def prepare_identifiers(self,  before,  middle,  after):
         """
         middle - query list with None elements
@@ -102,11 +101,9 @@ class Renumerator:
         """
         fn = self.find_first_number(before, middle, after)
         id_generator = self.get_generator(fn, before, middle, after)
-        identifiers = []
-        for x in middle: identifiers.append(id_generator.next())
+        identifiers = [next(id_generator) for x in middle]
         return identifiers
-    
-    
+
     def get_identifiers_list(self):
         """
         Returns complete new identifiers list for given query identifiers list.
@@ -120,13 +117,13 @@ class Renumerator:
         divided_list = self.divide_identifiers()
         for x in range(len(divided_list)):
             if divided_list[x][0] == None:
-                if x>0: 
+                if x > 0: 
                     before = divided_list[x-1]
-                else: 
+                else:
                     before = None
-                if x<len(divided_list)-1: 
+                if x < len(divided_list)-1: 
                     after = divided_list[x+1]
-                else: 
+                else:
                     after = None
                 identifiers_list += self.prepare_identifiers(before, divided_list[x], after)
             else: identifiers_list += divided_list[x]

@@ -38,3 +38,11 @@ docs/_build/*
 cover/*
 MANIFEST
 .eggs
+
+# ModeRNA specific test files
+tests/out.pdb
+tests/test_builder/out.pdb
+tests/test_data/loop_candidates/*
+tests/test_data/test_output.ent
+tests/test_data/test_output/*
+

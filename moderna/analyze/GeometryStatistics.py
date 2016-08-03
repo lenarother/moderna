@@ -4,7 +4,6 @@ Statitic for base type recognition.
 """
 
 from Bio.PDB.Vector import calc_angle, calc_dihedral
-import os
 import math
 import re
 
@@ -121,7 +120,7 @@ class GeometryExpression(list):
             if resi[i] in resi[i+1:]:
                     return False
         return True
-    
+
     def get_atom_combination(self, residues, r_index):
         """Returns a list of atoms corresponding to the list of atom definitions.
         residues is a nested list of residue objects,
@@ -145,7 +144,7 @@ class GeometryExpression(list):
         r_index = [0] * len(residues)
         ready = False
         while not ready:
-            if self.has_distinct_residues(residues,r_index): 
+            if self.has_distinct_residues(residues, r_index):
                 # retrieve atom information and generate if it is ok.
                 atoms = self.get_atom_combination(residues, r_index)
                 if self.check_atom_combination(atoms):
@@ -168,7 +167,8 @@ class GeometryResult(list):
     def __init__(self, title, angles=False):
         """
         title - string
-        angles - if set true, 360.0 = 0.0, taken into account in all average/stddev calculations.
+        angles - if set true, 360.0 = 0.0, taken into account 
+                 in all average/stddev calculations.
         """
         list.__init__(self)
         self.title = title
@@ -182,10 +182,10 @@ class GeometryResult(list):
         if self.angles :
             assert 0.0 <= value[0] < 360.0
         list.append(self,value)
-        
+
     def get_avg(self):
         """returns the average value"""
-        avg = sum([d[0] for d in self])/len(self)
+        avg = sum([d[0] for d in self]) / len(self)
         if self.angles:
             # angle overlap correction
             dev = sum([abs(d[0]-avg) for d in self])
@@ -193,7 +193,7 @@ class GeometryResult(list):
             alt_dev = sum([min(abs(d[0]-alt_avg),abs(d[0]-360.0-alt_avg)) for d in self])
             avg = dev<alt_dev and avg or alt_avg
         return avg
-        
+
     def get_stddev(self):
         """returns the standard deviation."""
         avg = self.get_avg()
@@ -209,26 +209,17 @@ class GeometryResult(list):
         else:
             stddev = -1.0
         return stddev
-        
+
     def add_data(self,data):
         for d in data:
             self.append(d)
-       
-    def write_plot(self, fn, xmin=0.0, ymin=0.0, xmax=None, ymax=None):
-        pass
-        
+
     def write_table(self, fn):
         out = [self.title + '\n']
         for d in self:
             line = "%8.3f\t%s\n"%(d[0],'\t'.join(d[1:]))
             out.append(line)
         open(fn,'w').writelines(out)
-        
-    def histogram(self):
-        pass
-        
-    def scatterplot(self):
-        pass
 
 
 class GeometryStatistics:
@@ -237,36 +228,33 @@ class GeometryStatistics:
     """
     def __init__(self, structure):
         """structure is a ModernaStructure object."""
-        self.struct = structure
+        self.struc = structure
 
-    def get_structures(self):
-        yield self.struct
-
-    def get_atom_annotation(self,atom):
+    def get_atom_annotation(self, atom):
         res = atom.parent
         return '%s;' % (res.identifier)
-                
+
     def get_distances(self, expression):
-        result = GeometryResult('distances of (%s)'%expression)
+        result = GeometryResult('distances of (%s)' % expression)
         expr = GeometryExpression(expression)
-        for struc in self.get_structures():
-            for atom1,atom2 in expr.get_atoms(struc):
-                a1 = self.get_atom_annotation(atom1)
-                a2 = self.get_atom_annotation(atom2)
-                result.append((atom1-atom2,a1,a2))
+        for atom1, atom2 in expr.get_atoms(self.struc):
+            a1 = self.get_atom_annotation(atom1)
+            a2 = self.get_atom_annotation(atom2)
+            distance = atom1 - atom2
+            result.append((distance, a1, a2))
         return result
 
     def get_angles(self, expression):
-        result = GeometryResult('angles of (%s)'%expression, angles=True)
+        result = GeometryResult('angles of (%s)' % expression, angles=True)
         expr = GeometryExpression(expression)
-        for struc in self.get_structures():
-            for atom1, atom2, atom3 in expr.get_atoms(struc):
-                a = calc_angle(atom1.get_vector(), atom2.get_vector(), atom3.get_vector())
-                a = a * 180.0 / math.pi
-                a1 = self.get_atom_annotation(atom1)
-                a2 = self.get_atom_annotation(atom2)
-                a3 = self.get_atom_annotation(atom3)
-                result.append((a, a1, a2, a3))
+        for atom1, atom2, atom3 in expr.get_atoms(self.struc):
+            angle = calc_angle(atom1.get_vector(), atom2.get_vector(),
+                               atom3.get_vector())
+            angle = angle * 180.0 / math.pi
+            a1 = self.get_atom_annotation(atom1)
+            a2 = self.get_atom_annotation(atom2)
+            a3 = self.get_atom_annotation(atom3)
+            result.append((angle, a1, a2, a3))
         return result
 
     def calc_dihedral(self, atom1, atom2, atom3, atom4):
@@ -280,40 +268,18 @@ class GeometryStatistics:
         return dihedral
 
     def get_dihedrals(self, expression):
-        result = GeometryResult('dihedrals of (%s)'%expression, angles=True)
+        result = GeometryResult('dihedrals of (%s)' % expression, angles=True)
         expr = GeometryExpression(expression)
-        for struc in self.get_structures():
-            for atom1,atom2,atom3,atom4 in expr.get_atoms(struc):
-                try:
-                    a1 = self.get_atom_annotation(atom1)
-                    a2 = self.get_atom_annotation(atom2)
-                    a3 = self.get_atom_annotation(atom3)
-                    a4 = self.get_atom_annotation(atom4)
-                    result.append((self.calc_dihedral(atom1,atom2,atom3,atom4),a1,a2,a3,a4))
-                except ValueError:
-                    print(atom1.coord,atom2.coord,atom3.coord,atom4.coord)
+        for atom1,atom2,atom3,atom4 in expr.get_atoms(self.struc):
+            try:
+                a1 = self.get_atom_annotation(atom1)
+                a2 = self.get_atom_annotation(atom2)
+                a3 = self.get_atom_annotation(atom3)
+                a4 = self.get_atom_annotation(atom4)
+                result.append((self.calc_dihedral(atom1,atom2,atom3,atom4),a1,a2,a3,a4))
+            except ValueError:
+                print(atom1.coord,atom2.coord,atom3.coord,atom4.coord)
         return result
-
-
-class PDBSetGeometryStatistics(GeometryStatistics):
-    """
-    Calculates statistics over a set of structure files.
-    """
-    def __init__(self, pdb_path):
-        if pdb_path[-1] != os.sep:
-            pdb_path += os.sep  # make sure there is a terminating slash
-        self.pdb_path = pdb_path
-
-    def get_structures(self):
-        from moderna import ModernaStructure
-        for fn in os.listdir(self.pdb_path):
-            if fn[-4:].upper() in ['.ENT', '.PDB']:
-                if fn[-6] == '_': 
-                    chain_id = fn[-5]
-                else:
-                    chain_id = 'A'
-                structure=ModernaStructure('file', self.pdb_path + fn, chain_name=chain_id)
-                yield structure
 
 
 if __name__ == '__main__':
@@ -347,12 +313,13 @@ there are a number of ways how atoms can be specified. Examples:
     NUC:Y+1[C]:O2'
 
 Things to be checked:
-- Are the angles calculated properly (between vector(atom1-atom2) and vector(atom1-atom3)?
+- Are the angles calculated properly (between vector(atom1-atom2)
+  and vector(atom1-atom3)?
 
 Known issues:
 - calculates junk for multi-chain structures
-- cannot distinguish between protein/nucleic acid chains -> slower than it could be
-- plotting does not work yet.
+- cannot distinguish between protein/nucleic acid chains
+  -> slower than it could be
 
 Annotation of atoms:
 In the result tables, each atom used for calculation in each line is annotated
@@ -366,6 +333,6 @@ The third segment '<<(A/24)', describes a stacking interaction.
 The fourth segment 'cis/+/+(A/10)' describes a base pair.
 
 If no annotation was found, some of these descriptors may be missing.
-Also, a single residue may undergo more than one stacking/base pair interaction.
-
+Also, a single residue may undergo more than one
+stacking/base pair interaction.
 """)

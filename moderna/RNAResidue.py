@@ -45,7 +45,7 @@ class RNAResidue(Residue):
         self.has_double_coord = self.__check_double_coord(pdb_residue)
         self.modified = None
         self.long_abbrev = None
-        if not alphabet_entry:
+        if alphabet_entry is None:
             try:
                 alphabet_entry = self.br.identify_resi(pdb_residue)
             except BaseRecognitionError:
@@ -154,11 +154,14 @@ class RNAResidue(Residue):
         Changes the residues name.
         to a new name (as a long abbreviation if modified)
         """
-        if type(new_name) != str:
+        if type(new_name) == str:
             new_name = str(new_name)
-        if new_name not in alphabet:
-            new_name = alphabet.get_short_original(ANY_RESIDUE).long_abbrev
-        aentry = alphabet[new_name]
+            if new_name not in alphabet:
+                new_name = alphabet.get_short_original(ANY_RESIDUE).long_abbrev
+            aentry = alphabet[new_name]
+        else:
+            aentry = new_name
+            new_name = aentry.short_abbrev
         self.resname = aentry.pdb_abbrev
         self.long_abbrev = aentry.long_abbrev
 

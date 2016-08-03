@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# test_lirdb.py
-#
-# unit tests for linkers library
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit tests for linkers library
+"""
 
 from unittest import TestCase, main
 from moderna.fragment_library.LIRdb import MakeLirFile
@@ -29,6 +18,7 @@ STRUC = 'pr0047Hc_with_gap_and_N.pdb'
 CHAIN_LIST = TEST_DATA_PATH + 'lir_chains.txt'
 # has a gap between resi 17 and 19
 # has a N residue at resi 24
+
 
 class LirDbTests(TestCase):
 

@@ -40,8 +40,9 @@ class Log:
         if self.print_all:
             print(message)
 
-    def write_error(self, error):
+    def write_error(self):
         """Adds an Exception to the log."""
+        error = sys.exc_info()[0]
         self.contents.append('\nERROR: ' + str(error) + '\n')
         # also writing errors to stderr, so they are visible
         # in the console and shell

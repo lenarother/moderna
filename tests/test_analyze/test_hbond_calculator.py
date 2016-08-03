@@ -119,7 +119,8 @@ class HBondCalculatorTests(TestCase):
         self.assertEqual(len(hydro), 1)
 
 
-class HBondWesthofTests(TestCase):
+class HBondWesthofTes__:#(TestCase):
+    # Deactivated. were not used in ModeRNA 1.7.1
  
     def setUp(self):
         """Initializes class instances used for testing."""

@@ -20,11 +20,9 @@ class GeometryAnalyzer:
         self.bad_dihedrals = []
 
     def analyze(self):
-        GeometryStatistics(self.struc)
         self.check_bonds()
         self.check_angles()
         self.check_dihedrals()
-
 
     def find_outliers(self, descriptor, values):
         result = []
@@ -57,11 +55,11 @@ class GeometryAnalyzer:
             self.bad_dihedrals += self.find_outliers(d, result)
         return self.bad_dihedrals
 
-    def get_resi_num_str(self,b):
+    def get_resi_num_str(self, b):
         """ """
         resi = set(b[1][1:])
-        if len(resi)==1:
-            return '- Residue %s'%((b[1][1]).replace(';',''))
+        if len(resi) == 1:
+            return '- Residue %s' % ((b[1][1]).replace(';', ''))
         else:
             res_num = list(resi)
             return '- Residues %s --- %s'%(res_num[0].replace(';',''),res_num[1].replace(';',''))

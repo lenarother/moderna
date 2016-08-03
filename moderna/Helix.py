@@ -21,14 +21,14 @@ class Helix(ModernaStructure):
     @property
     def strand5(self):
         """Return residues on the 5'strand."""
-        return list(self)[:len(self)/2]
+        return list(self)[:len(self)//2]
 
     @property
     def strand3(self):
         """Return residues on the 3'strand."""
-        return list(self)[len(self)/2:]
+        return list(self)[len(self)//2:]
 
-    
+
 class HelixBuilder(object):
     """
     Creates A-type RNA helices of a given length.
@@ -37,7 +37,7 @@ class HelixBuilder(object):
         self.data_type = data_type
         self.data = data
         self.chain_name = chain_name
-        
+
     def _get_helix(self):
         """Creates a helix structure."""
         helix = Helix(self.data_type, self.data, self.chain_name)
@@ -45,7 +45,7 @@ class HelixBuilder(object):
             raise ModernaFragmentError('Helix must have even length.')
         self.renumber_helix(helix)
         return helix
-        
+
     def renumber_helix(self, helix):
         """
         Renumbers 5' strand starting from 1, and 3' strand starting from 401.
@@ -58,11 +58,11 @@ class HelixBuilder(object):
 
     def make_helix_shorter(self, helix, dest_length):
         """Deletes base pairs from a helix."""
-        resis = list(helix)[dest_length/2:-dest_length/2]
+        resis = list(helix)[dest_length//2:-dest_length//2]
         for resi in resis:
             helix.remove_residue(resi.identifier)
         self.renumber_helix(helix)
-        
+
     def make_helix_longer(self, helix): #, dest_length):
         """Adds base pairs to a helix."""
         helix2 = self._get_helix()

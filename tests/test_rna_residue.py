@@ -1,16 +1,7 @@
 #!/usr/bin/env python
-#
-# test_copy_residue.py
-#
-# unit tests for residue duplication functionality
-#
-__author__ = "Magdalena Musielak, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Musielak"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Prototype"
+"""
+Unit Tests for residue duplication functionality
+"""
 
 from unittest import main, TestCase
 from moderna.RNAResidue import RNAResidue
@@ -20,6 +11,7 @@ from moderna.util.Errors import RNAResidueError
 from moderna.sequence.ModernaAlphabet import Alphabet
 
 from test_data import *
+
 
 class RNAResidueTests(TestCase):
     def setUp(self):
@@ -43,13 +35,13 @@ class RNAResidueTests(TestCase):
         self.assertNotEqual(r1, r2)
         self.assertNotEqual(r1, r3)
         self.assertNotEqual(r1, r4)
-        
+
     def test_atom_parent(self):
         """Atoms should link back to their parent."""
         resi = RNAResidue(self.a)
         for atom in resi:
-            self.assertEqual(atom.get_parent(),resi)
-            
+            self.assertEqual(atom.get_parent(), resi)
+
     def test_atom_name(self):
         """Atoms should have the right names."""
         resi = RNAResidue(self.a)
@@ -67,19 +59,34 @@ class RNAResidueTests(TestCase):
         self.assertEqual(a.identifier,'15')
         
     def test_init_recog_base(self):
-        """Base recognition should succeed regardless of parameter"""
-        alphabet = Alphabet()
-        # recognition with base recognizer
+        """Base recognition works"""
         a = RNAResidue(self.chain.child_list[9])
         self.assertEqual(a.long_abbrev,'m2G')
-        # assignment by alphabet entry
-        # IMPORTANT FOR BASE RECOGNIZER BYPASS
+
+    def test_init_alphabet_entry(self):
+        alphabet = Alphabet()
         a = RNAResidue(self.chain.child_list[9], alphabet['m2G'])
-        self.assertEqual(a.long_abbrev,'m2G')
-        # assignment by wrong alphabet entry should succeed!
+        self.assertEqual(a.long_abbrev, 'm2G')
+
+    def test_init_wrong_alphabet_entry(self):
+        """assignment by wrong alphabet entry should succeed!"""
+        alphabet = Alphabet()
         a = RNAResidue(self.chain.child_list[9], alphabet['m7G'])
-        self.assertEqual(a.long_abbrev,'m7G')
-        
+        self.assertEqual(a.long_abbrev, 'm7G')
+
+    def test_change_name_str(self):
+        """Change names with string param."""
+        a = RNAResidue(self.a)
+        a.change_name('m2G')
+        self.assertEqual(a.long_abbrev, 'm2G')
+
+    def test_change_name_aentry(self):
+        """Change names with alphabet entry."""
+        alphabet = Alphabet()
+        a = RNAResidue(self.a)
+        a.change_name(alphabet['m2G'])
+        self.assertEqual(a.long_abbrev, 'm2G')
+
     def test_renumber(self):
         res = RNAResidue(self.chain.child_list[2])
         res.change_number('64')

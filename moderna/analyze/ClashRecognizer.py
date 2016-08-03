@@ -8,7 +8,7 @@ It can detect clashes between different RNA residues
 """
 
 
-# from Bio.PDB import NeighborSearch
+from Bio.PDB import NeighborSearch
 from Bio.PDB.PDBParser import PDBParser
 from Bio.PDB.Structure import Structure
 from Bio.PDB.Model import Model
@@ -31,10 +31,6 @@ it implements three public methods:
     #TODO: atom radii and search radius as configurable parameters?
     
     radius_cache = {} # memorize radii by atom full names
-
-    def compare_residues(self, one, two):
-        # !!! KR: this should go into ModernaResidue
-        return cmp(one.id[1], two.id[1])    
 
     def __get_model_atoms__(self, struct):
         """
@@ -140,15 +136,15 @@ it implements three public methods:
                 else:
                     minimum_distance_between_atom_centers = \
                     first_atom_radius + second_atom_radius
-                
-                #TODO: could be checked before calculating the atom-atom 
+
+                # TODO: could be checked before calculating the atom-atom
                 # distance explicitly
                 if resi_1 != resi_2 and distance_between_atom_centers < \
-                    minimum_distance_between_atom_centers:
-                    #We have a clash!
-                    if self.compare_residues(resi_1, resi_2) <0:
+                   minimum_distance_between_atom_centers:
+                    # We have a clash!
+                    if resi_1.id[1] < resi_2.id[1]:
                         yield resi_1, resi_2
-                    else: 
+                    else:
                         yield resi_2, resi_1
 
     def __find_clashes__(self, struct):
@@ -162,7 +158,7 @@ Returns a list of clashing pairs of residues.
             if clash not in clashes:
                 clashes.append(clash)
         return clashes
-       
+
     def find_clashes_in_pdb(self, pdb_file):
         """
 find_clashes_in_pdb(pdb_file)
@@ -181,16 +177,16 @@ find_clashes_in_structure(struct)
 - returns True if a clash is found and False if not
         """
         return self.__find_clashes__(struct)
-    
+
     def find_clashes_in_residues(self, residues):
         """
 find_clashes_in_residues(self, residues)
 - runs clash recognition function on a list of residues;
-  a residue is an object of returned by PDBParser from 
+  a residue is an object of returned by PDBParser from
   Bio.PDB.PDBParser
 - returns True if a clash is found and False if not
         """
         if len(residues) == 0:
             return False
         struct = self.__make_structure_from_residues__(residues)
-        return self.__find_clashes__(struct) 
+        return self.__find_clashes__(struct)

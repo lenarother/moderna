@@ -1,41 +1,28 @@
 #!/usr/bin/env python
-#
-# moderna_cli.py
-#
-# Command-line interface
-# 
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__version__ = "1.7.1"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
-
 """
  ModeRNA
 
  A program for comparative RNA structure modeling
+ Command-Line Interface
 
  Authors: 
     Magdalena Rother
     Kristian Rother
+    Pawel Piatkowski
     Tomasz Puton
     Janusz Bujnicki
 
  (c) 2008
- 
+
  www.genesilico.pl 
 
 """
 
-import sys, os
-from Constants import MODULE_PATH
+import sys
+import os
+from .Constants import MODULE_PATH
 
-#KR: manipulating the import order in sys.path 
+# KR: manipulating the import order in sys.path 
 # to avoid a conflict between moderna/ and moderna.py
 # It's ugly but tested.
 # DON'T TRY THIS AT HOME.
@@ -45,6 +32,7 @@ sys.path.append(MODULE_PATH)
 
 from moderna import *
 from optparse import OptionParser
+# TODO: use argparse
 from commands import *
 
 ########################################  MAIN  ##########################################
@@ -87,10 +75,10 @@ def parser_usage(parser, options):
         try:
             t = load_template(options.t_file, options.chain_name)
             if options.examine_template: 
-                print examine_structure(t)
+                print(examine_structure(t))
             if options.clean_template: 
                 clean_structure(t)
-            print 'TEMPLATE SEQUENCE:\n%s'%t.get_sequence()
+            print('TEMPLATE SEQUENCE:\n%s'%t.get_sequence())
            
         except KeyError:
             parser.error("Bad chain name. Add your template chain name as -c option")
@@ -101,7 +89,7 @@ def parser_usage(parser, options):
      
     if options.s_file:
         try:
-            model=load_model(options.s_file, options.chain_name)
+            model = load_model(options.s_file, options.chain_name)
         except KeyError:
             parser.error("Bad chain name. Add your template chain name as -c option")
 
@@ -113,15 +101,14 @@ def parser_usage(parser, options):
 
     if (options.position or options.modification) and ( not (options.position and options.modification) or not model):
         parser.error("Modification name, modification position (residue number) and structure required for adding modification") 
-    
+
     if options.a_file and options.t_file and options.s_file:
         parser.error("Too many options")
-           
-    if model: 
-        write_model(model,options.o_file)
+
+    if model:
+        write_model(model, options.o_file)
 
 
 if __name__ == "__main__":
-    p,o=prepare_parser()
-    parser_usage(p,o)
-
+    p,o = prepare_parser()
+    parser_usage(p, o)

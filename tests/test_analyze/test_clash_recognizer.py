@@ -14,6 +14,7 @@ CLASH = TEST_DATA_PATH+'clash/clash.ent'
 NOCLASH = TEST_DATA_PATH+'clash/no_clash.ent'
 FIRST = TEST_DATA_PATH+'clash/first_model.pdb'
 
+
 class FindClashesTests(TestCase):
 
     def setUp(self):
@@ -32,20 +33,20 @@ class FindClashesTests(TestCase):
         s = ModernaStructure('file', CLASH)
         self.assertEqual(str(self.cr.find_clashes_in_residues(s)),
                          "[(<Residue 3 G>, <Residue 4 G>)]")
-        
+
         s = ModernaStructure('file', NOCLASH)
         self.assertFalse(self.cr.find_clashes_in_residues(s))
-        
+
     def test_clash_recognition_empty(self):
         """Shouldn't find any clashes in an empty list"""
         self.assertFalse(self.cr.find_clashes_in_residues([]))
-        
+
     def test_clash_recognition_too_close_P_and_O3(self):
         """Shouldn't find any clashes if P & O3 from neighbors in 1.4A"""
         # This feature was requested by MM and KR
         s = ModernaStructure('file', FIRST)
         self.assertEqual(self.cr.find_clashes_in_residues(s), [])
-        
+
     def test_clash_recognition(self):
         """The two example files should be distinguished."""
         self.assertEqual(\
@@ -138,15 +139,14 @@ class FindClashesTests(TestCase):
 
 
 class MemoryLeakTests(TestCase):
-    
+
     def _test_multi(self):
         "Memory should not run full - this test should not terminate!"
         print('THIS TEST RUNS FOREVER IF OK! - WATCH MEMORY')
-        s = ModernaStructure('file', FIRST)        
+        s = ModernaStructure('file', FIRST)
         while True:
             cr = ClashRecognizer()
             cr.find_clashes_in_residues(s)
 
 if __name__ == '__main__':
     main()
-

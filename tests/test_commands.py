@@ -313,7 +313,7 @@ class CommandTests(TestCase):
     def test_find_modifications(self):
         """Finding modifications returns a dictionary."""
         mods = find_modifications(self.t)
-        self.assertTrue(mods.has_key('10'))
+        self.assertTrue('10' in mods))
         self.assertEqual(mods['10'].long_abbrev,'m2G')
         # KR: Check return type with MM
         
@@ -337,11 +337,11 @@ class CommandTests(TestCase):
             )
         t = load_template(RNA_1EHZ, 'A')
         modifications = find_modifications(t)
-        self.assertEqual(len(modifications),len(ehz_modifications))
-        keys = modifications.keys()
+        self.assertEqual(len(modifications), len(ehz_modifications))
+        keys = list(modifications.keys())
         keys.sort()
         for i in range(len(ehz_modifications)):
-            self.assertEqual(keys[i],ehz_modifications[i][0])
+            self.assertEqual(keys[i], ehz_modifications[i][0])
             self.assertEqual(modifications[keys[i]].identifier, ehz_modifications[i][0])
             self.assertEqual(modifications[keys[i]].short_abbrev, ehz_modifications[i][1])
     #----------------------------------------------------------

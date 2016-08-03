@@ -6,7 +6,7 @@ from moderna.analyze.ChainConnectivity import are_residues_connected, \
     is_phosphate_intact, is_backbone_congested
 from moderna.ModernaStructure import ModernaStructure
 from moderna.RNAResidue import RNAResidue
-from test_data import *
+from .test_data import *
 
 
 class ChainConnectivityTests(TestCase):

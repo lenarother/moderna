@@ -4,7 +4,7 @@ Decorators for moderna.py.
 """
 
 
-from .Errors import ModernaError, ParameterError
+from .Errors import ModernaError
 from .LogFile import log
 from moderna.examples.usage_examples import COMMAND_EXAMPLES
 
@@ -53,4 +53,3 @@ def toplevel_function(func):
                 raise
 
     return catch_and_log_errors
-    

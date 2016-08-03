@@ -12,6 +12,7 @@ from moderna.FragmentInsertion import FragmentInserter
 from moderna.sequence.ModernaSequence import Sequence
 from .StructureLibrary import library
 from moderna.util.Errors import LirError, SearchLirError
+from operator import attrgetter
 
 from moderna.Constants import PATH_TO_LIR_STRUCTURES, \
                 LIR_DATABASE_PATH, MAX_DIST_STEM, \
@@ -23,7 +24,8 @@ struc_cache = {}
 
 DIST_MASK = array([0, 1, 1, 1, 1, 0, 0, 1, 1])
 
-class LirScoringOption(object):
+
+class LirScoringOption:
     """
     Class for gathering all Lir scoring values toogether.
     Has an influence on the way in which fragment candidates are choosen. 
@@ -114,11 +116,6 @@ class LirHit(LirRecord):
         self.d_secstruc = 0
         self.fragment_instance = None
         self.query = query
-    
-    def __cmp__(self, hit):
-        """Allow lists of LirHits to be sorted."""
-        return cmp(self.score, hit.score)
-
 
     def __str__(self):
         """Returns one-line summary."""
@@ -278,11 +275,11 @@ class LirHit(LirRecord):
             m.fix_backbone()
             resis = m.moderna_residues.values() # MM: or resi = m.moderna_residues
                     
-        m = ModernaStructure('residues',  resis,  'A')
+        m = ModernaStructure('residues', resis, 'A')
         m.sort_residues()
         m.write_pdb_file(file_name)
-    
-    
+
+
 class FragmentCandidates(object): 
     """
     Takes care about fragment candidates.
@@ -300,15 +297,12 @@ class FragmentCandidates(object):
         self.accepted_fragments=[]
         self.index = 0
 
-
     def __getitem__(self, args):
         return self.accepted_fragments[args]
 
-    
     def __len__(self):
         return len(self.accepted_fragments)
-        
-    
+
     def __iter__(self):
         return self.accepted_fragments.__iter__()
  
@@ -372,12 +366,12 @@ class FragmentCandidates(object):
         Collects all records from the LIR database that fill the length and anchor distance conditions.
         """
         self.parse_lir_database(separator)
-        #Creates a list of LirHit objects for all entries in the pre-parsed LIR DB.
-        length = self.query.fr_length # SPEEDUP
+        # Creates a list of LirHit objects for all entries in the pre-parsed LIR DB.
+        length = self.query.fr_length  # SPEEDUP
         self.accepted_fragments = [self.create_hit_from_line(line) for line in self.lir_cache[1] if int(line[0])==length]
 
 
-    def make_fast_scoring(self,  scoring_option,  number_of_candidates):
+    def make_fast_scoring(self, scoring_option, number_of_candidates):
         """
         Prepares scoring for all candidates based on values that are already present in LIR database.
         Takes into account goodness ans sequence similarity.
@@ -386,7 +380,7 @@ class FragmentCandidates(object):
         """
         #for hit in self.accepted_fragments: hit.calculate_score(scoring_option)
         [hit.calculate_score(scoring_option) for hit in self.accepted_fragments]
-        self.accepted_fragments.sort()
+        self.accepted_fragments.sort(key=attrgetter('score'))
         self.accepted_fragments = self.accepted_fragments[:number_of_candidates]
   
   
@@ -398,7 +392,7 @@ class FragmentCandidates(object):
         """
         #for hit in self.accepted_fragments: hit.calculate_score(scoring_option)
         [hit.calculate_score(scoring_option) for hit in self.accepted_fragments]
-        self.accepted_fragments.sort()
+        self.accepted_fragments.sort(key=attrgetter('score'))
         if self.accepted_fragments != []:
             if not self.accepted_fragments[0].fragment_instance: 
                 for hit in self.accepted_fragments: hit.get_fragment()

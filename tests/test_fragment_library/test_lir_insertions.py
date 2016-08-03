@@ -1,23 +1,9 @@
 #!/usr/bin/env python
-#
-# test_lir_insertions.py
-#
-# unit tests for insertion of linkers from library
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-
 """
+Unit tests for insertion of linkers from library
+
 tests whether LIR finds its own fragments
 """
-
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
 
 from unittest import TestCase, main
 from moderna.ModernaStructure import ModernaStructure
@@ -35,6 +21,7 @@ FRAGMENTS_TO_INSERT = [
     (7 ,'ur0052H.pdb','X','21','29','UAAUCGC'), 
     (12,'ur0052H.pdb','X','30','43','GGAUAUGGCACG')
 ]
+
 
 class LIRInsertionTests(TestCase):
     

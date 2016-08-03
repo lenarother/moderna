@@ -44,17 +44,17 @@ class RenumeratorTests(TestCase):
         """Append to a number A, B, C, ..."""
         r = Renumerator(['A']*7, ['5', '6', None, None, None, '7', '8'])
         gen = r.letter_generator('42')
-        self.assertEqual(gen.next(), '42A')
-        self.assertEqual(gen.next(), '42B')
-        self.assertEqual(gen.next(), '42C')
+        self.assertEqual(next(gen), '42A')
+        self.assertEqual(next(gen), '42B')
+        self.assertEqual(next(gen), '42C')
 
     def test_number_generator(self):
         """Increase a number stepwise"""
         r = Renumerator(['A']*7, ['5', '6', None, None, None, '7', '8'])
         gen = r.number_generator('42')
-        self.assertEqual(gen.next(), '43')
-        self.assertEqual(gen.next(), '44')
-        self.assertEqual(gen.next(), '45')
+        self.assertEqual(next(gen), '43')
+        self.assertEqual(next(gen), '44')
+        self.assertEqual(next(gen), '45')
 
     def test_prepare_identifiers(self):
         """Should generate a list of identifiers."""

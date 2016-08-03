@@ -84,7 +84,7 @@ class RNAChain:
     #
     # data management
     #
-    def __nonzero__(self):
+    def __bool__(self):
         """RNAChains are always True."""
         return True
 

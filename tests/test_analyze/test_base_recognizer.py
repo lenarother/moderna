@@ -57,7 +57,7 @@ class BaseRecognizerTests(TestCase):
         checked = 0
         for resi in chain.child_list:
             base = self.br.identify_resi(resi)
-            if ehz_modifications.has_key(resi.id[1]):
+            if resi.id[1] in ehz_modifications:
                 self.assertEqual(base,ehz_modifications[resi.id[1]])
                 checked += 1
             else:
@@ -84,12 +84,12 @@ class BaseRecognizerTests(TestCase):
         chain=struc[0]['B']
         checked = 0
         for resi in chain.child_list:
-            if qf_modifications.has_key(resi.id[1]):
+            if resi.id[1] in qf_modifications:
                 base = self.br.identify_resi(resi)
                 self.assertEqual(base,qf_modifications[resi.id[1]])
                 checked += 1
         self.assertEqual(checked,len(qf_modifications.keys()))
-        
+
     def test_trna12H_37(self):
         """Difficult t6A example should work."""
         struc=PDBParser().get_structure('test_struc',PATH_TO_LIR_STRUCTURES+'trna12H.pdb')[0][' ']
@@ -216,7 +216,7 @@ class BaseRecognizerTests(TestCase):
         chain=struc[0]['E']
         checked = 0
         for resi in chain.child_list:
-            if amino.has_key(resi.id[1]):
+            if resi.id[1] in amino:
                 aa = self.br.identify_resi(resi)
                 self.assertEqual(aa,amino[resi.id[1]])
                 checked += 1

@@ -30,7 +30,7 @@ class BasePairCalcTests(TestCase):
         """Calculates one canonical and two noncanonicals correctly."""
         m = ModernaStructure('file', RNA_HAIRPIN, 'D')
         result = m.get_base_pairs()
-        result = map(str, result['31'])
+        result = [str(bp) for bp in result['31']]
         self.assertTrue('31 +/+ 39' in result)  
         self.assertTrue('31 HS 32' in result)  
         self.assertTrue('31 SS 30' in result)  

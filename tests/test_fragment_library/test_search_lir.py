@@ -1,18 +1,4 @@
 #!/usr/bin/env python
-#
-# test_poweruser.py
-#
-# unit tests for base exchange functionality
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
 
 from unittest import main, TestCase
 from moderna.fragment_library.LIR import LirRecord
@@ -27,6 +13,7 @@ from math import pi,radians
 
 FRAGMENT_DB = TEST_DATA_PATH + 'other/LIR_test_db'
 TEST_LIR_PATH = TEST_DATA_PATH + 'lir_test_files/'
+
 
 class FragmentFinderTests(TestCase):
     def setUp(self):

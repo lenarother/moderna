@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# test_moderna_structure.py
-#
-# unit tests for ModernaStructure class
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for ModernaStructure class
+"""
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
@@ -26,6 +15,7 @@ from test_data import *
 
 OUTPUT = 'test_data/test_output.ent'
 
+
 class ModernaStructureTests(TestCase):
     
     def tearDown(self):
@@ -34,18 +24,18 @@ class ModernaStructureTests(TestCase):
 
     def test_add_write(self):
         """A modified base should be written to PDB."""
-        s=ModernaStructure('file',A_RESIDUE)
+        s=ModernaStructure('file', A_RESIDUE)
         add_modification(s['1'], 'm1A')
         s.write_pdb_file(OUTPUT)
         t = ModernaStructure('file', OUTPUT)
-        self.assertEqual(t['1'].long_abbrev,s['1'].long_abbrev)
-        
+        self.assertEqual(t['1'].long_abbrev, s['1'].long_abbrev)
+
     def test_find_residues_in_range(self):
         """Should return a list of residues."""
-        s = ModernaStructure('file',MINI_TEMPLATE)
+        s = ModernaStructure('file', MINI_TEMPLATE)
         result = s.find_residues_in_range('3', '9')
         self.assertEqual(result, ['4', '5', '6', '7', '8'])
-        
+
     def test_renumber_residue(self):
         s = ModernaStructure('file', MINI_TEMPLATE)
         self.assertTrue(s['3'])
@@ -101,8 +91,6 @@ class ModernaStructureTests(TestCase):
         # water and ions should not be recognized
         s = ModernaStructure('file', RNA_1EHZ, ' ')
         resis = s.get_modified_residues()
-        for r in resis:
-            print r, s[r]
         self.assertEqual(len(resis), 0)
         
     def test_read_write_phosphate(self):
