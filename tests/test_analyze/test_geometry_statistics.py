@@ -1,21 +1,10 @@
 #!/usr/bin/env python
-#
-# test_geometry_statistics.py
-#
-# unit tests for checkinh geometry statisticcs
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Kristian Rother"
-__copyright__ = "Copyright 2008, Genesilico"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@rubor.de"
-__status__ = "alpha"
+"""
+unit tests for checking geometry statisticcs
+"""
 
 from unittest import main, TestCase
-from moderna.analyze.GeometryStatistics import GeometryStatistics, PDBSetGeometryStatistics, GeometryResult, GeometryExpression, AtomDefinition
+from moderna.analyze.GeometryStatistics import GeometryStatistics, GeometryResult, GeometryExpression, AtomDefinition
 from moderna.ModernaStructure import ModernaStructure
 from moderna.RNAResidue import RNAResidue
 from test_data import *
@@ -39,8 +28,9 @@ residue_list = [r for r in model]
 <Residue   G het=  resseq=4 icode= >
 """
 
+
 class AtomDefinitionTests(TestCase):
-    
+
     def setUp(self):
         self.plain = AtomDefinition("X:C5'")
         self.resname = AtomDefinition("X[C]:N1")
@@ -51,10 +41,10 @@ class AtomDefinitionTests(TestCase):
         self.offset = AtomDefinition("X+1:C5'")
         self.neg_offset = AtomDefinition("X-1:C5'")
         self.combined = AtomDefinition("NUC:Y+1[G]:O2'")
-        
+
         self.purine = AtomDefinition("X[R]:N1")
         self.pyrimidine = AtomDefinition("X[Y]:N1")
-        
+
     def test_get_atom(self):
         atom = self.plain.get_atom(residue_list,2)
         self.assertEqual(atom.name,"C5'")
@@ -219,12 +209,6 @@ class PDBSetGeometryStatisticsTests(TestCase):
         result.write_table('table.txt')
         self.assertTrue(os.access('table.txt',os.F_OK))
 
-    def _test_plotting(self):
-        """NOT IMPLEMENTED:Results should be written to a png plot."""
-        result = self.gs.get_distances("X:C5',X:C4'")
-        result.write_plot('plot.png')
-        self.assertTrue(os.access('plot.png',os.F_OK))
-        
     def test_get_distances(self):
         result = self.gs.get_distances("X:C5',X:C4'")
         self.assertTrue(result)
@@ -236,10 +220,10 @@ class PDBSetGeometryStatisticsTests(TestCase):
     def test_get_dihedrals(self):
         result = self.gs.get_dihedrals("X:C5',X:C4',X:C3',X:O3'")
         self.assertTrue(result)
-    
-        
+
 
 class GeometryResultTests(TestCase):
+
     def setUp(self):
         self.plain = GeometryResult('plain data')
         self.angles = GeometryResult('angles', angles=True)
@@ -267,12 +251,6 @@ class GeometryResultTests(TestCase):
     def test_tabular_output(self):
         self.plain.write_table('table.txt')
         self.assertTrue(os.access('table.txt',os.F_OK))    
-
-    def _test_plotting(self):
-        """NOT IMPLEMENTED"""
-        self.angles.write_plot('plot.png')
-        self.assertTrue(os.access('plot.png',os.F_OK))
-    
 
 
 if __name__ == '__main__':

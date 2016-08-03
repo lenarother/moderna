@@ -1,27 +1,17 @@
 #!/usr/bin/env python
-#
-# test_poweruser.py
-#
-# unit tests for linkers insertion and backbone continuity
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for linker insertion and backbone continuity
+"""
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
-from moderna.SearchLIR import *
+from moderna.fragment_library.SearchLIR import *
 from moderna import *
 from moderna.ModernaSequence import Sequence
 import os
 
 FRAGMENTS_NUMBER = 5000
+
 
 class GapInModelTests(TestCase):
     def test_gap1_model(self):
@@ -328,7 +318,7 @@ class GapInModelTests(TestCase):
         m = create_model(t, a)
         os.system('mkdir -p test_data/gaps/structure1_candidates1')
         old_candidates = os.listdir('test_data/gaps/structure1_candidates1')
-        for x in old_candidates: 
+        for x in old_candidates:
             if x.startswith('model'): os.remove('test_data/gaps/structure1_candidates1/'+x)
         write_model(m,'test_data/gaps/structure1_candidates1/model_structure1.pdb')
         self.assertEqual(m.get_sequence(),  Sequence('GCGGAUUUALCUCAGDDGGGAGAGCRCCAGABU#AAYAP?UGGAG7UC?UGUGTPCG"UCCACAGAAUUCGCACCA'))
@@ -382,16 +372,16 @@ class GapInModelTests(TestCase):
         Target: 1WZ2 C (whole structure)
         """
         t = load_template('test_data/gaps/1h3e_B.pdb','B')
-        print examine_structure(t)
-        print t['16']
+        print(examine_structure(t))
+        print(t['16'])
         a = load_alignment('test_data/gaps/structure2_alignment.fasta')
-        print a
+        print(a)
         m = create_model(t, a)
         os.system('mkdir -p test_data/gaps/structure2_candidates1')
         old_candidates = os.listdir('test_data/gaps/structure2_candidates1')
         for x in old_candidates: 
             if x.startswith('model'): os.remove('test_data/gaps/structure2_candidates1/'+x)
-        print m
+        print(m)
         write_model(m,'test_data/gaps/structure2_candidates1/model_structure2.pdb')
         self.assertEqual(m.get_sequence(),  Sequence('GCGGGGGUUGCCGAGCCUGGUCAAAGGCGGGGGACUCAAGAUCCCCUCCCGUA.GGGUUCCGGGGUUCGAAUCCCCGCCCCCGCACCA'))
     

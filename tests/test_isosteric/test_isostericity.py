@@ -1,16 +1,8 @@
 #!/usr/bin/env python
-#
-# test_isostericity.py
-#
-# unit tests for different functions working with isosteric base pairs
-#
-__author__ = "Pawel Skiba, Magdalena Rother, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Pawel Skiba"
-__email__ = "pw.skiba@gmail.com"
-__status__ = "Prototype"
+"""
+unit tests for different functions working with isosteric base pairs
+"""
+
 
 from unittest import TestCase, main
 from moderna.Constants import DATA_PATH
@@ -22,19 +14,19 @@ class _____IsostericityTests(TestCase):
     SWITCHED OFF 2014/08/15
     '''
 
-    def test_superimpose(self):
+    def xtest_superimpose(self):
         struct = ModernaStructure('file', 'test_data/rna_structures/1EHZ.pdb')
         iso = Isostericity((struct['14'], struct['13']), 'AC')
         rmsd = iso.rmsd       
         self.assertTrue(rmsd < iso.offset)
 
-    def test_superimpose2(self):
+    def xtest_superimpose2(self):
         struct = ModernaStructure('file', 'test_data/rna_structures/1EHZ.pdb')
         iso = Isostericity((struct['20'], struct['22']), 'CU')
         rmsd = iso.rmsd       
         self.assertTrue(rmsd > iso.offset)
     
-    def test_result_bp_numbers(self):
+    def xtest_result_bp_numbers(self):
         struct = ModernaStructure('file', 'test_data/rna_structures/1EHZ.pdb')
         iso = Isostericity((struct['12'], struct['23']), 'CG')  
         source = [12, 23]

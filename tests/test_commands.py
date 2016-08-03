@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# test_commands.py
-#
-# unit tests for moderna interface
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+unit tests for moderna interface
+"""
 
 from unittest import main, TestCase
 from moderna import *
@@ -313,7 +302,7 @@ class CommandTests(TestCase):
     def test_find_modifications(self):
         """Finding modifications returns a dictionary."""
         mods = find_modifications(self.t)
-        self.assertTrue('10' in mods))
+        self.assertTrue('10' in mods)
         self.assertEqual(mods['10'].long_abbrev,'m2G')
         # KR: Check return type with MM
         

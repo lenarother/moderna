@@ -20,20 +20,11 @@
 
 import sys
 import os
-from .Constants import MODULE_PATH
 
-# KR: manipulating the import order in sys.path 
-# to avoid a conflict between moderna/ and moderna.py
-# It's ugly but tested.
-# DON'T TRY THIS AT HOME.
-while MODULE_PATH in sys.path:
-    sys.path.remove(MODULE_PATH)
-sys.path.append(MODULE_PATH)
-
-from moderna import *
 from optparse import OptionParser
 # TODO: use argparse
-from commands import *
+from moderna.commands import *
+from moderna import __version__
 
 ########################################  MAIN  ##########################################
 

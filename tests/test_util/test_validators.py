@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# test_validators.py
-#
-# unit tests for parameter validators.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+unit tests for parameter validators.
+"""
 
 from unittest import main, TestCase
 from moderna.util.Errors import ParameterError
@@ -23,7 +12,7 @@ from moderna.ModernaFragment import ModernaFragment53
 from moderna.sequence.RNAAlignment import read_alignment
 from moderna.sequence.ModernaSequence import Sequence
 from Bio.PDB import PDBParser
-from test_data import TEST_DATA_PATH, A_RESIDUE, MINI_TEMPLATE, MINI_ALIGNMENT_FILE
+from data import TEST_DATA_PATH, A_RESIDUE, MINI_TEMPLATE, MINI_ALIGNMENT_FILE
 from moderna.util.validators import validate_structure, validate_template, validate_model, \
     validate_alignment, validate_seq, validate_resnum, \
     validate_resi, validate_fragment, \

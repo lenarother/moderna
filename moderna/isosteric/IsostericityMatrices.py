@@ -1,23 +1,12 @@
 #!/usr/bin/env python
-#
-# IsostericityMatrices.py
-#
-# Module for modeling isosteric base pairs.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Pawel Skiba, Magdalena Rother, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__version__ = "0.1.0"
-__maintainer__ = "Pawel Skiba"
-__email__ = "pw.skiba@gmail.com"
-__status__ = "Prototype"
+"""
+Module for modeling isosteric base pairs.
+"""
 
 
 from moderna.Constants import DATA_PATH
 from moderna.util.LogFile import log
+
 
 class IsostericityMatrices:
     """
@@ -57,7 +46,7 @@ class IsostericityMatrices:
         try:
             result = self.matrices[bp1][interact_type][bp2] 
             log.write_message(bp1+"->"+bp2+" ("+interact_type+")")
-            return result <= max_value and result != None
+            return result <= max_value and result is not None
         except:
             log.write_message("No information in IsostericityMatrices about: "+bp1+"->"+bp2+" ("+interact_type+")")
             return False
@@ -68,15 +57,5 @@ class IsostericityMatrices:
         Returns a tuple with all base pairs isosteric to bp1 when interaction type is interact_type
         """
         pairs = self.matrices[bp1][interact_type]
-        result = [bp for bp in pairs if pairs[bp] <= max_value and pairs[bp] != None]
+        result = [bp for bp in pairs if pairs[bp] is not None and pairs[bp] <= max_value]
         return tuple(result)
-        
-                
-##########################################################################                
-                
-if __name__ == '__main__':
-    test = IsostericityMatrices()
-    print test.check_isostericity('AC','GU','cWW') #Is isosteric
-    print test.check_isostericity('AA','GG','cWW') #Is None
-    print test.check_isostericity('AC','UU','cWW') #Is not isosteric
-    print test.show_isosteric_bp('AC','cWW')

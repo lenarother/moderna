@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# test_isostericity_matrix.py
-#
-# unit tests for different functions calculating isosteric base pairs
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Pawel Skiba, Magdalena Rother, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Pawel Skiba"
-__email__ = "pw.skiba@gmail.com"
-__status__ = "Prototype"
+"""
+unit tests for different functions calculating isosteric base pairs
+"""
 
 from unittest import main, TestCase
 from moderna.isosteric.IsostericityMatrices import IsostericityMatrices

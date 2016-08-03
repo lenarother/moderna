@@ -1,25 +1,14 @@
 #!/usr/bin/env python
-#
-# test_gui_functions.py
-#
-# unit tests for helper functions for the ModernaGUI
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Piotr Byzia, Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__version__ = "1.5.0"
-__maintainer__ = "Piotr Byzia"
-__email__ = "krother@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for helper functions for the ModernaGUI
+"""
 
 from unittest import main, TestCase
 from test_data import *
 from moderna import *
-from moderna.topology_matcher import topology_graph
+from moderna.analyze.topology_matcher import topology_graph
 from numpy import array, ndarray
+
 
 class BondCoordTests(TestCase):
     """Tests for the function delivering coord tuples for bonds."""

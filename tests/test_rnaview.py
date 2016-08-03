@@ -19,7 +19,7 @@ class RnaViewTests(TestCase):
         for fn in os.listdir(LIR_DIRECTORY_PATH):
             if not fn.endswith('.pdb'):continue
             pdb_file = LIR_DIRECTORY_PATH+fn
-            print pdb_file
+            print(pdb_file)
             #copy to temporary file
             tmp_file = '/tmp/rna.pdb'
             open(tmp_file, 'w').write(open(pdb_file).read())
@@ -41,7 +41,7 @@ class RnaViewTests(TestCase):
                 for fn in os.listdir(path):
                     if not fn.endswith('.pdb'):continue
                     pdb_file = path+fn
-                    print pdb_file
+                    print(pdb_file)
                     #copy to temporary file
                     tmp_file = '/tmp/rna.pdb'
                     open(tmp_file, 'w').write(open(pdb_file).read())

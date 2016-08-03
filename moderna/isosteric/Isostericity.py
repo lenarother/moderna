@@ -1,20 +1,7 @@
 #!/usr/bin/env python
-#
-# Isostericity.py
-#  
-# Module for modeling isosteric base pairs.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Pawel Skiba, Magdalena Musielak, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Pawel Skiba"
-__email__ = "pw.skiba@gmail.com"
-__status__ = "Prototype"
-
 """
+Module for modeling isosteric base pairs.
+
 Code Review: 2010-02-01 by KR.
 
 The code is very well structured and clear to read.
@@ -35,7 +22,7 @@ look out for TODO's below.
 
 
 from moderna.Constants import DATA_PATH
-from IsostericityMatrices import IsostericityMatrices
+from .IsostericityMatrices import IsostericityMatrices
 from moderna.RNAResidue import RNAResidue
 from moderna.ModernaStructure import ModernaStructure
 from moderna.ModernaSuperimposer import ModernaSuperimposer
