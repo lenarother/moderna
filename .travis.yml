@@ -14,3 +14,8 @@ notifications:
     - rother.magdalena@gmail.com
     - krother@academis.eu
     - ppiatkowski@genesilico.pl
+
+branches:
+  except:
+    - py3
+    - workingtests
