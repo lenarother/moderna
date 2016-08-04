@@ -112,11 +112,11 @@ class RNAResidue(Residue):
             elif self.original_base == 'X':
                 if 'N9' in self.child_dict:
                     return Residue.__getitem__(self, 'N9')
-                elif 'N1' in self.child_dict.has_key:
+                elif 'N1' in self.child_dict:
                     return Residue.__getitem__(self, 'N1')
                 else:
                     raise RNAResidueError('Cannot decide which atom to use for glycosidic N in residue %s' % self)
-            elif 'N1' in self.child_dict.has_key:
+            elif 'N1' in self.child_dict:
                 return Residue.__getitem__(self, 'N1')
             elif 'N9' in self.child_dict:
                 return Residue.__getitem__(self, 'N9')
