@@ -1,16 +1,7 @@
 #!/usr/bin/env python
-#
-# test_moderna_fragment.py
-#
-# unit tests for ModernaStructure.ModernaFragment
-#
-__author__ = "Magdalena Musielak, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Musielak"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Prototype"
+"""
+Unit Tests for ModernaStructure.ModernaFragment
+"""
 
 from unittest import main, TestCase
 from moderna.Helix import HelixBuilder, HelixFragmentBuilder
@@ -19,8 +10,9 @@ from moderna.FragmentInsertion import FragmentInserter
 from moderna.util.Errors import ModernaFragmentError
 from moderna.Constants import HELIX
 from moderna import load_template, create_model, copy_some_residues, create_fragment, load_model
-from test_data import *
+from moderna.tests.test_data import *
 import re
+
 
 class HelixTests(TestCase):
     """
@@ -135,7 +127,8 @@ class HelixFragmentBuilderTests(TestCase):
                                        sequence=seq, model=self.rna)
         self.rna.insert_fragment(frag)
         self.assertEqual(self.rna.get_sequence(), Sequence('CUGAUCGAAUUCCGGAAAAAGGGGGCCUQUC/CGCCCCCUUUUUCCGGAAUUCGAUC'))
-        
+
+
 if __name__ == '__main__':
     main()
     

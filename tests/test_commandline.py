@@ -6,7 +6,7 @@ Tests for moderna command-line interface
 from unittest import main, TestCase
 from moderna.Template import Template
 from moderna.sequence.ModernaSequence import Sequence
-from test_data import *
+from moderna.tests.test_data import *
 from moderna.Constants import MODULE_PATH
 import os
 import tempfile

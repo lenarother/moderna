@@ -1,20 +1,20 @@
 #!/usr/bin/env python
 
-from unittest import TestCase, main
+from unittest import TestCase, main, skip
 from moderna.ModernaStructure import ModernaStructure
-from moderna.ModernaSequence import Sequence
+from moderna.sequence.ModernaSequence import Sequence
 from moderna.Constants import LIR_DIRECTORY_PATH
-from test_data import *
+from moderna.tests.test_data import *
 import os
 
-from moderna.pycogent.rnaview_app import RnaView
-from moderna.pycogent.rnaview import RnaviewParser
+# from moderna.pycogent.rnaview_app import RnaView
+# from moderna.pycogent.rnaview import RnaviewParser
 
-MODEL_PATH = '/home/krother/Desktop/modele_05032010/'
 
 class RnaViewTests(TestCase):
 
-    def _test_calc_bp(self):
+    @skip('requires rnaview installation')
+    def test_calc_bp(self):
         """Should calculate all base pairs."""
         for fn in os.listdir(LIR_DIRECTORY_PATH):
             if not fn.endswith('.pdb'):continue
@@ -31,6 +31,7 @@ class RnaViewTests(TestCase):
             for bp in bp_dict['BP']:
                 pass
 
+    @skip('no assert found')
     def test_calc_bp_on_models(self):
         """Should calculate all base pairs."""
         for dname in os.listdir(MODEL_PATH):

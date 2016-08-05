@@ -7,8 +7,7 @@ from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
 from moderna.util.Errors import ModernaStructureError
 from operator import attrgetter
-
-from test_data import *
+from moderna.tests.test_data import *
 
 
 class CopyResidueTests(TestCase):

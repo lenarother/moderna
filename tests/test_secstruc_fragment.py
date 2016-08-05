@@ -1,16 +1,7 @@
 #!/usr/bin/env python
-#
-# test_moderna_fragment.py
-#
-# unit tests for ModernaStructure.ModernaFragment
-#
-__author__ = "Magdalena Musielak, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Musielak"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Prototype"
+"""
+Unit Tests for ModernaStructure.ModernaFragment
+"""
 
 from unittest import main, TestCase
 from moderna.ModernaFragment import ModernaFragment2D, ModernaFragmentStrand
@@ -20,7 +11,7 @@ from moderna.sequence.ModernaSequence import Sequence
 from moderna.FragmentInsertion import FragmentInserter
 from moderna.Constants import HELIX
 from moderna import load_model
-from test_data import *
+from moderna.tests.test_data import *
 
 
 class ModernaFragment2DTests(TestCase):

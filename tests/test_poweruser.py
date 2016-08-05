@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 
-from unittest import main, TestCase
+from unittest import main, TestCase, skip
 from moderna.RNAResidue import RNAResidue
 from moderna.ModernaStructure import ModernaStructure
 import os
@@ -15,22 +15,27 @@ class PoweruserTests(TestCase):
     """
     Checks how Moderna handles a wide range of structures.
     """
+    @skip('requires customizing of test runner or tag')
     def test_load_rnadb(self):
         """Should load all of Richardsons RNADB2005 structures."""
         self.check_struc_dir(RNADB_PATH)
 
+    @skip('requires customizing of test runner or tag')
     def test_load_hires(self):
         """Should load Tomek Osinskis Hires dataset."""
         self.check_struc_dir(MISC_PATH+'hi-res_cleaned/')
 
+    @skip('requires customizing of test runner or tag')
     def test_load_trna(self):
         """Should load all of Rother/Bauers tRNA structures."""
         self.check_struc_dir(MISC_PATH+'trna\\')
         self.check_struc_dir(MISC_PATH+'trna_curated\\')
 
+    @skip('requires customizing of test runner or tag')
     def test_load_risc(self):
         self.check_struc_dir(MISC_PATH+'risc\\')
 
+    @skip('requires customizing of test runner or tag')
     def test_load_(self):
         self.check_struc_dir()
 

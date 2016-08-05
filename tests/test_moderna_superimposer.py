@@ -1,23 +1,12 @@
 #!/usr/bin/env python
-#
-# test_moderna_superimposer.py
-#
-# unit tests for ModernaStructure.ModernaSuperimposer
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for ModernaStructure.ModernaSuperimposer
+"""
 
 from unittest import main, TestCase
 from Bio.PDB import PDBParser
 from moderna.ModernaSuperimposer import ModernaSuperimposer
-from test_data import *
+from moderna.tests.test_data import *
 from moderna.Constants import BASE_PATH
 
 A_SUPERIMPOSED_ON_C = {

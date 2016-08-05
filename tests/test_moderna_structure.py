@@ -10,10 +10,9 @@ from moderna.sequence.ModernaSequence import Sequence
 from moderna.modifications import add_modification
 from moderna.util.LogFile import log
 from moderna import load_model
+from moderna.tests.test_data import *
 
-from test_data import *
-
-OUTPUT = 'test_data/test_output.ent'
+OUTPUT = 'test_output.ent'
 
 
 class ModernaStructureTests(TestCase):

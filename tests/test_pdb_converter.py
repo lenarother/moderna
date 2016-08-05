@@ -3,7 +3,7 @@
 from unittest import main, TestCase
 from moderna.PdbConverter import *
 from moderna import load_model
-from test_data import *
+from moderna.tests.test_data import *
 import os
 
 OUT_NAME = 'out.fasta'

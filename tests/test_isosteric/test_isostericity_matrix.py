@@ -36,8 +36,8 @@ class IsostericityMatrixTests(TestCase):
     def test_show_isosteric_bp(self):
         """aaa"""
         im = IsostericityMatrices()
-        result = im.show_isosteric_bp('AC','cWW')
-        self.assertEqual(result, ('AC','GU'))
+        result = set(im.show_isosteric_bp('AC','cWW'))
+        self.assertEqual(result, set(('AC','GU')))
    
     def test_show_isosteric_bp_cutoff(self):
        """aaa"""

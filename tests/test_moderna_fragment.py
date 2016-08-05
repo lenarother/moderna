@@ -1,18 +1,8 @@
 #!/usr/bin/env python
-#
-# test_moderna_fragment.py
-#
-# unit tests for ModernaStructure.ModernaFragment
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for ModernaStructure.ModernaFragment
+"""
+
 
 from unittest import main, TestCase
 from moderna.ModernaFragment import ModernaFragment,  ModernaFragment5,  \
@@ -24,7 +14,7 @@ from moderna.sequence.ModernaSequence import Sequence
 from moderna.util.Errors import ModernaFragmentError, ModernaSuperimposerError
 from moderna.Constants import HELIX
 from moderna import load_template, create_model, copy_some_residues, create_fragment
-from test_data import *
+from moderna.tests.test_data import *
 import re
 
 
@@ -195,7 +185,7 @@ class ModernaFragment3Tests(TestCase):
 
     def test_add_discontinuous(self):
         """Tries to add a helix to an end."""
-        helix = ModernaStructure('file','test_data/rna_structures/helix.pdb')
+        helix = ModernaStructure('file',TEST_DATA_PATH + 'rna_structures/helix.pdb')
         helix_frag = ModernaFragment3(helix, anchor3=self.m['1'], strict=False)
         self.m.insert_fragment(helix_frag)
         self.assertEqual(self.m.get_sequence(), Sequence('CCGACCUUCGGCC_GGUGGCCGAAGGGCGGAUUUALCUCAG'))

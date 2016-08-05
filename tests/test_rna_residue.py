@@ -10,7 +10,7 @@ from Bio.PDB import PDBParser
 from moderna.util.Errors import RNAResidueError
 from moderna.sequence.ModernaAlphabet import Alphabet
 
-from test_data import *
+from moderna.tests.test_data import *
 
 
 class RNAResidueTests(TestCase):
@@ -101,7 +101,7 @@ class RNAResidueTests(TestCase):
         
     def test_glycosidic_n(self):
         """Finds N* in tough cases."""
-        chain = PDBParser().get_structure('test_struc', 'test_data/gaps/1h3e_B.pdb')[0].child_list[0]
+        chain = PDBParser().get_structure('test_struc', TEST_DATA_PATH + '/gaps/1h3e_B.pdb')[0].child_list[0]
         resi1 = RNAResidue(chain[(' ', 15, ' ')])
         self.assertTrue(resi1['N*'])
         resi2 = RNAResidue(chain[(' ', 16, ' ')])

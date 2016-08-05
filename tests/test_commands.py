@@ -14,10 +14,10 @@ from moderna.RNAModel import RnaModel
 from Bio.PDB import PDBParser
 from moderna.analyze.GeometryAnalyzer import GeometryAnalyzer
 from moderna.Constants import HELIX
-from test_data import *
+from moderna.tests.test_data import *
 import re
 
-OUTPUT = 'test_data/test_model_result.ent'
+OUTPUT = TEST_DATA_PATH + 'test_model_result.ent'
 
 #TODO: is it possible to get the results of these tests
 #      as a single big log file?

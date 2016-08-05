@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# test_rnamodel.py
-#
-# unit tests for the RNAModel class
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for the RNAModel class
+"""
 
 from unittest import main, TestCase
 from moderna.Template import Template
@@ -27,7 +16,8 @@ from moderna.modifications import exchange_base
 from moderna import load_model, find_fragment, copy_some_residues, \
     insert_fragment, match_template_with_alignment, clean_structure, \
     renumber_chain, match_alignment_with_model
-from test_data import *
+from moderna.tests.test_data import *
+
 
 class RnaModelTests(TestCase):
 
@@ -213,7 +203,7 @@ CAUGCGGAYYYALCUCAGGUA
         self.assertEqual(m.get_sequence(), Sequence('CAUGCGGAYYYALCUCAGGUA'))
         
     def test_model_with_close_gaps(self):
-        t = Template('test_data/rna_structures/2du3_excerpt.ent','file','D')
+        t = Template(TEST_DATA_PATH + 'rna_structures/2du3_excerpt.ent','file','D')
         a = read_alignment('''> 1qru_B.pdb X55374.1/1-72
 GCA-UUCCG
 > 2du3_D.pdb
@@ -261,14 +251,14 @@ class IndelQualityTests(RnaModelTests):
     
     def test_insert_indel_quality_1(self):
         """Insert a fragment without strand break"""
-        t = Template('test_data/gaps/mini_1h4s_T_gap2.pdb', 'file','T')
-        a = read_alignment('test_data/gaps/ali_gap2.fasta')
+        t = Template(TEST_DATA_PATH + 'gaps/mini_1h4s_T_gap2.pdb', 'file','T')
+        a = read_alignment(TEST_DATA_PATH + 'gaps/ali_gap2.fasta')
         m = RnaModel(t, a)
         self.assertEqual(m.get_sequence().seq_with_modifications.find('_'), -1)
 
     def test_insert_best_fragment_quality_1(self):
         """Insert best indel without a strand break"""
-        m = load_model('test_data/gaps/mini_1h4s_T_gap2.pdb','T')
+        m = load_model(TEST_DATA_PATH + 'gaps/mini_1h4s_T_gap2.pdb','T')
         cand = m.insert_best_fragment('64','67', Sequence('GAA'))
         m.fix_backbone()
         self.assertEqual(m.get_sequence().seq_with_modifications.find('_'), -1)
@@ -276,7 +266,7 @@ class IndelQualityTests(RnaModelTests):
     def test_check_fragment_candidate_fitness(self):
         """Checks whether the fitness of fragment candidates increases"""
         last_fitness = None
-        m = load_model('test_data/gaps/mini_1h4s_T_gap2.pdb','T')
+        m = load_model(TEST_DATA_PATH + 'gaps/mini_1h4s_T_gap2.pdb','T')
         cand = m.find_fragment_candidates(m['64'], m['67'], Sequence('GAA'))
         for i in range(20):
             if not last_fitness: last_fitness = cand[i].score
@@ -284,25 +274,25 @@ class IndelQualityTests(RnaModelTests):
             last_fitness = cand[i].score
 
     def test_gap_optimization_example_1(self):
-        t = Template('test_data/gaps/mini_1h4s_T_gap2.pdb', 'file','T')
-        a = read_alignment('test_data/gaps/ali_gap1.fasta')
+        t = Template(TEST_DATA_PATH + 'gaps/mini_1h4s_T_gap2.pdb', 'file','T')
+        a = read_alignment(TEST_DATA_PATH + 'gaps/ali_gap1.fasta')
         m = RnaModel(t, a)
         m.create_model()
             
     def test_gap_optimization_example_2(self):
-        t = Template('test_data/gaps/mini_1h4s_T_gap2.pdb', 'file','T')
-        a = read_alignment('test_data/gaps/ali_gap2.fasta')
+        t = Template(TEST_DATA_PATH + 'gaps/mini_1h4s_T_gap2.pdb', 'file','T')
+        a = read_alignment(TEST_DATA_PATH + 'gaps/ali_gap2.fasta')
         m = RnaModel(t, a)
         m.create_model()
             
     def test_gap_optimization_example_3(self):
-        m = load_model('test_data/gaps/mini_1h4s_T_gap2.pdb','T')
+        m = load_model(TEST_DATA_PATH + 'gaps/mini_1h4s_T_gap2.pdb','T')
         cand = m.find_fragment_candidates(m['63'], m['66'], Sequence('AGA'))
         hit = cand[4]
         m.insert_fragment(hit.fragment_instance)
 
     def test_gap_optimization_example_4(self):
-        m = load_model('test_data/gaps/mini_1h4s_T_gap2.pdb','T')
+        m = load_model(TEST_DATA_PATH + 'gaps/mini_1h4s_T_gap2.pdb','T')
         cand = m.find_fragment_candidates(m['64'], m['67'], Sequence('GAA'))
         hit = cand[6]
         m.insert_fragment(hit.fragment_instance)

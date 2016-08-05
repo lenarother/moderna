@@ -1,26 +1,17 @@
 #!/usr/bin/env python
-#
-# test_write_pdb.py
-#
-# tests for ModernaStructure PDB write feature.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+tests for ModernaStructure PDB write feature.
+"""
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
 from moderna.modifications import exchange_base, add_modification, remove_modification
 from Bio.PDB import PDBParser
-from test_data import *
+from moderna.tests.test_data import *
+import os
 
-TEST_OUTPUT = 'test_data/test_output.ent'
+TEST_OUTPUT = 'test_output.ent'
+
 
 class WritePDBTests(TestCase):
 
@@ -33,8 +24,16 @@ class WritePDBTests(TestCase):
             result.append(resi.resname)
         return result
 
+    def remove_outfile(self):
+        if os.path.exists(TEST_OUTPUT):
+            os.remove(TEST_OUTPUT)
+
     def setUp(self):
+        self.remove_outfile()
         self.s = ModernaStructure('file',MINI_TEMPLATE)
+
+    def tearDown(self):
+        self.remove_outfile()
 
     def test_res_names(self):
         """Names of written residues should be standard."""

@@ -4,7 +4,7 @@ from moderna.ModelingRecipe import RecipeMaker
 from moderna.sequence.RNAAlignment import read_alignment
 import os
 
-from test_data import MINI_ALIGNMENT
+from moderna.tests.test_data import MINI_ALIGNMENT
 
 class RecipeMakerTests(TestCase):
     def setUp(self):
