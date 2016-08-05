@@ -8,7 +8,7 @@ from moderna.sequence.ModernaAlphabet import Alphabet, AlphabetEntry
 from moderna.Constants import UNKNOWN_RESIDUE_SHORT, \
     UNKNOWN_RESIDUE_ONELETTER,  RESIDUE_WITHOUT_ONE_LETTER_ABBREV, \
     MODIFICATION_NAMES_TABLE_PATH
-from tests.test_data import *
+from moderna.tests.test_data import *
 
 
 class AlphabetTests(TestCase):

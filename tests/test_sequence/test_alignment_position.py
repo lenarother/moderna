@@ -1,24 +1,13 @@
 #!/usr/bin/env python
-#
-# test_alignment_position.py
-#
-# unit tests for SequenceAlignment.AlignmentPosition
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for SequenceAlignment.AlignmentPosition
+"""
 
 from unittest import main, TestCase
 from moderna.sequence.RNAAlignment import AlignmentPosition
 from moderna.Constants import ANY_RESIDUE
 from moderna.sequence.ModernaAlphabet import AlphabetEntry
-from tests.test_data import *
+from moderna.tests.test_data import *
 
 
 class AlignmentPositionTests(TestCase):

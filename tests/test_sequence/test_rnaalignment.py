@@ -1,24 +1,11 @@
 #!/usr/bin/env python
-#
-# test_alignment.py
-#
-# unit tests for base exchange functionality
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+
 
 from unittest import main, TestCase
 from moderna.sequence.RNAAlignment import RNAAlignment, RNAAlignmentParser
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.util.Errors import AlignmentError,  AlphabetError, SequenceError
-from tests.test_data import *
+from moderna.tests.test_data import *
 import os
 
 OUT_NAME = 'out.fasta'

@@ -3,8 +3,9 @@
 from moderna.sequence.AlignmentMatcher import AlignmentMatcher
 from moderna.sequence.RNAAlignment import read_alignment
 from moderna.sequence.ModernaSequence import Sequence
-from tests.test_data import *
+from moderna.tests.test_data import *
 from unittest import TestCase, main
+
 
 class AlignmentMatcherTests(TestCase):
     

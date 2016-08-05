@@ -142,3 +142,58 @@ PDB_UNK = TEST_DATA_PATH+ 'rna_structures/unk.pdb'
 PDB_STRANGE = TEST_DATA_PATH+'rna_structures/hybrid2.pdb'
 
 BAD_TEMPLATE = TEST_DATA_PATH+'geometry/mini_bad_geometry.pdb'
+
+
+#
+# alignments
+#
+
+# 14-residue alignment with a small gap
+MINI_ALIGNMENT = """> model sequence for testing
+ACUGUGAYUA[UACCU#PG
+> excerpt of first 15 bases from 1ehz as a fictive template.
+GCGGA----UUUALCUCAG
+"""
+
+# create file for command line tests
+MINI_ALIGNMENT_FILE = TEST_DATA_PATH+'other/mini_alignment.fasta'
+open(MINI_ALIGNMENT_FILE,'w').writelines(MINI_ALIGNMENT)
+
+# other alignments for special cases
+ALIGN_1B23_1QF6 = """>target_1QF6
+GCCGAUAUAGCUCAGDDGGDAGAGCAGCGCAUUCGUEAUGCGAAG7UCGUAGGTPCGACUCCUAUUAUCGGCACCA
+>template_1B23
+GGCGCGU4AACAAAGC-GGDDAUGUAGCGGAPUGCA*APCCGUCUA-GUCCGGTPCGACUCCGGAACGCGCCUCCA
+"""
+
+ALIGN_TARGET_GAP = """> model sequence for testing
+..CUG----ACCU#P
+> this time a gap is in the target.
+GCGGAUUUALCUCAG
+"""
+
+MINI_ALIGNMENT_WITH_UNK = """> model sequence for testing
+..CUGUQQUACCU#P
+> contains unknown bases
+GCGGAUUUALCUCAG
+"""
+
+MINI_ALIGNMENT_INACCURATE = """> model sequence for testing
+ACUGUA7UACCUAPG
+> modification in resi 10 not marked
+GCGGAUUUAGCUCAG
+"""
+
+DNA_ALIGNMENT = """> sequence to be modeled
+tattaatttcgcgggctcgagagcttcatcctctacgccgga
+> from 1e3m crystal structure chain E
+------------agctgccaggcaccagtg------------
+"""
+
+
+SIMILARITY_ALIGNMENT = """> sequence to be modeled
+ACUGP.AAA----------    ACUGP.UUUUAAAACCCCDDDD7777MMMM
+> seq2
+------AAAACUGP.----    ACUGP.PPPPPPPPPPPPPPPPPPPPPPPP
+"""
+
