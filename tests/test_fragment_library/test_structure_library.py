@@ -9,7 +9,7 @@ from moderna.RNAResidue import RNAResidue
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.fragment_library.StructureLibrary import StructureLibrary
 from moderna.Constants import LIR_DIRECTORY_PATH
-from test_data import *
+from moderna.tests.test_data import *
 
 
 class StructureLibraryTests(TestCase):

@@ -8,7 +8,7 @@ from moderna.ModernaFragment import ModernaFragment53
 from moderna.fragment_library.StructureLibrary import StructureLibrary
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.Constants import LIR_DATABASE_PATH, PATH_TO_LIR_STRUCTURES
-from test_data import *
+from moderna.tests.test_data import *
 
 
 class LIRDatabaseTests(TestCase):

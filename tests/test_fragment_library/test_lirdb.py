@@ -9,7 +9,7 @@ from moderna.fragment_library.LIR import LirRecord
 from moderna.fragment_library.SearchLIR import FragmentCandidates, LirQuery, FragmentFinder
 from moderna.ModernaStructure import ModernaStructure
 from moderna.sequence.ModernaSequence import Sequence
-from test_data import *
+from moderna.tests.test_data import *
 import os
 
 LIR_TEST_FILE = TEST_DATA_PATH + 'lir_test_db.out'

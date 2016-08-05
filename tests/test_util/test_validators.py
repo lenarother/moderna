@@ -12,7 +12,7 @@ from moderna.ModernaFragment import ModernaFragment53
 from moderna.sequence.RNAAlignment import read_alignment
 from moderna.sequence.ModernaSequence import Sequence
 from Bio.PDB import PDBParser
-from data import TEST_DATA_PATH, A_RESIDUE, MINI_TEMPLATE, MINI_ALIGNMENT_FILE
+from moderna.tests.test_data import TEST_DATA_PATH, A_RESIDUE, MINI_TEMPLATE, MINI_ALIGNMENT_FILE
 from moderna.util.validators import validate_structure, validate_template, validate_model, \
     validate_alignment, validate_seq, validate_resnum, \
     validate_resi, validate_fragment, \

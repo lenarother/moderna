@@ -7,7 +7,7 @@ from unittest import main, TestCase
 from moderna.fragment_library.LIR import LirRecord,Lir
 from moderna.ModernaStructure import ModernaStructure
 from moderna.sequence.ModernaSequence import Sequence
-from test_data import *
+from moderna.tests.test_data import *
 import os, math
 
 class LirRecordTests(TestCase):

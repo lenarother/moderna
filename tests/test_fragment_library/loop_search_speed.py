@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# test_search_speed.py
-#
-# unit tests for linker searching speed
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for linker searching speed
+"""
 
 # Search for fragment for loop in 1ehz
 # Stem residues: 3,8   
@@ -22,7 +11,7 @@ from moderna.ModernaStructure import *
 from moderna.fragment_library.LIR import LIR
 from moderna.fragment_library.SearchLIR import *
 from moderna.RNAModel import RNAModel 
-from test_data import TEST_DATA_PATH
+from moderna.tests.test_data import TEST_DATA_PATH
 import cProfile
 
 NUMBER_OF_LOOP_CANDIDATES = 20

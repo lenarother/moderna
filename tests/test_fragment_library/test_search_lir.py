@@ -7,7 +7,7 @@ from moderna.ModernaFragment import ModernaFragment
 from moderna.sequence.ModernaSequence import Sequence
 from moderna.fragment_library.SearchLIR import FragmentFinder, FragmentCandidates, LirQuery, LirHit, LirScoringOption
 from moderna import load_model, fix_backbone, find_fragment
-from test_data import *
+from moderna.tests.test_data import *
 import os
 from math import pi,radians
 
