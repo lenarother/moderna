@@ -3,8 +3,9 @@
 unit tests for checking geometry statisticcs
 """
 
-from unittest import main, TestCase
-from moderna.analyze.GeometryStatistics import GeometryStatistics, GeometryResult, GeometryExpression, AtomDefinition
+from unittest import main, TestCase, skip
+from moderna.analyze.GeometryStatistics import GeometryStatistics, GeometryResult
+from moderna.analyze.GeometryStatistics import GeometryExpression, AtomDefinition
 from moderna.ModernaStructure import ModernaStructure
 from moderna.RNAResidue import RNAResidue
 from moderna.tests.test_data import *
@@ -177,16 +178,20 @@ class GeometryStatisticsTests(TestCase):
         result = self.gs.get_dihedrals("X:C5',X:C4',X:C3',X:O3'")
         self.assertTrue(result)
 
+
 class PDBSetGeometryStatisticsTests(TestCase):
+
     def setUp(self):
         self.gs = PDBSetGeometryStatistics(TEST_DATA_PATH+'geometry')
         if os.access('table.txt',os.F_OK): os.remove('table.txt')
         if os.access('plot.png',os.F_OK): os.remove('plot.png')
 
+    @skip('removed set class and other tests require refactoring')
     def tearDown(self):
         if os.access('table.txt',os.F_OK): os.remove('table.txt')
         if os.access('plot.png',os.F_OK): os.remove('plot.png')
 
+    @skip('removed set class and other tests require refactoring')
     def test_main_part(self):
         """GeometryStatistics should calculate dist, angle and dihedral data."""
         result = self.gs.get_distances("X:C5',X:C4'")
@@ -196,6 +201,7 @@ class PDBSetGeometryStatisticsTests(TestCase):
         result = self.gs.get_dihedrals("X:C5',X:C4',X:C3',X:O3'")
         self.assertTrue(len(result)>0)
         
+    @skip('removed set class and other tests require refactoring')
     def test_get_structures(self):
         i = 0
         for s in self.gs.get_structures():
@@ -203,20 +209,24 @@ class PDBSetGeometryStatisticsTests(TestCase):
             i += 1
         self.assertEqual(i,2)
         
+    @skip('removed set class and other tests require refactoring')
     def test_tabular_output(self):
         """Results should be written to a text file."""
         result = self.gs.get_distances("X:C5',X:C4'")
         result.write_table('table.txt')
         self.assertTrue(os.access('table.txt',os.F_OK))
 
+    @skip('removed set class and other tests require refactoring')
     def test_get_distances(self):
         result = self.gs.get_distances("X:C5',X:C4'")
         self.assertTrue(result)
     
+    @skip('removed set class and other tests require refactoring')
     def test_get_angles(self):
         result = self.gs.get_angles("X:C5',X:C4',X:C3'")
         self.assertTrue(result)
     
+    @skip('removed set class and other tests require refactoring')
     def test_get_dihedrals(self):
         result = self.gs.get_dihedrals("X:C5',X:C4',X:C3',X:O3'")
         self.assertTrue(result)
