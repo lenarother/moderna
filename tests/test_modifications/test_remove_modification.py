@@ -1,25 +1,15 @@
 #!/usr/bin/env python
-#
-# test_alphabet.py
-#
-# unit tests for removing modifications
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for removing modifications
+"""
+
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
 from moderna.analyze.BaseRecognizer import BaseRecognizer
 from moderna.modifications import remove_modification
 from moderna.util.Errors import ModernaResidueError
-from test_data import *
+from moderna.tests.test_data import *
 
 
 class RemoveModificationTests(TestCase):

@@ -7,7 +7,7 @@ from moderna.sequence.ModernaAlphabet import Alphabet
 from moderna.util.Errors import ModernaResidueError
 from moderna.modifications import add_modification, remove_modification, exchange_base
 from moderna import load_model
-from test_data import *
+from moderna.tests.test_data import *
 
 class AddModificationTests(TestCase):
     """

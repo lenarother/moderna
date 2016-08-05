@@ -1,18 +1,7 @@
 #!/usr/bin/env python
-#
-# test_exchange_bases.py
-#
-# unit tests for base exchange functionality
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for base exchange functionality
+"""
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
@@ -20,7 +9,7 @@ from moderna.RNAResidue import RNAResidue
 from moderna.analyze.BaseRecognizer import BaseRecognizer
 from moderna.modifications import exchange_base, make_backbone_only_residue, modify_residue
 from moderna.util.Errors import BaseRecognitionError
-from test_data import *
+from moderna.tests.test_data import *
 from Bio.PDB.Vector import calc_dihedral
 from Bio.PDB.PDBParser import PDBParser
 
