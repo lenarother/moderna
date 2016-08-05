@@ -1,23 +1,12 @@
 #!/usr/bin/env python
-#
-# test_secstruc_calculator.py
-#
-# unit tests for calculating 2D structure from 3D
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for calculating 2D structure from 3D
+"""
 
 from unittest import main,TestCase
 from moderna.ModernaStructure import ModernaStructure
 from moderna.modifications import exchange_base
-from test_data import *
+from moderna.tests.test_data import *
 
 class SecStrucCalculatorTests(TestCase):
     """Tests functions to calculate dot-bracket code."""

@@ -8,7 +8,7 @@ from moderna.analyze.BaseRecognizer import BaseRecognizer
 from Bio.PDB import PDBParser
 from moderna.util.Errors import BaseRecognitionError
 from moderna.Constants import PATH_TO_LIR_STRUCTURES
-from test_data import *
+from moderna.tests.test_data import *
 
 
 class BaseRecognizerTests(TestCase):

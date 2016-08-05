@@ -5,7 +5,7 @@ unit tests for different functions calculating base pairs.
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import  ModernaStructure
-from test_data import *
+from moderna.tests.test_data import *
 
 EXAMPLE_CHAR =  TEST_DATA_PATH+'rna_structures/rna_with_char_resid_1n77_C.pdb'
 

@@ -1,23 +1,12 @@
 #!/usr/bin/env python
-#
-# test_stacking_calculator.py
-#
-# unit tests for the StackingCalculator class
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for the StackingCalculator class
+"""
 
 from unittest import TestCase, main
 from moderna.analyze.StackingCalculator import StackingCalculator
 from moderna.ModernaStructure import ModernaStructure
-from test_data import *
+from moderna.tests.test_data import *
 
 EXPECTED_STACKING = [
     ('1','2','>>','<<'),

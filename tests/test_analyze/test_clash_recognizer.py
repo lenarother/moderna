@@ -8,7 +8,7 @@ from unittest import main, TestCase    # for self.assertEqualItems
 from moderna.analyze.ClashRecognizer import ClashRecognizer
 from moderna.ModernaStructure import ModernaStructure
 from Bio.PDB.PDBParser import PDBParser
-from test_data import TEST_DATA_PATH
+from moderna.tests.test_data import TEST_DATA_PATH
 
 CLASH = TEST_DATA_PATH+'clash/clash.ent'
 NOCLASH = TEST_DATA_PATH+'clash/no_clash.ent'

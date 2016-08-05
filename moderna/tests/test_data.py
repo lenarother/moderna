@@ -9,7 +9,8 @@ MODULE_PATH,module_name = os.path.split(__file__)
 if not MODULE_PATH:
     MODULE_PATH = os.getcwd()
 
-TEST_DATA_PATH = MODULE_PATH + '/../test_data/'
+TEST_DATA_PATH = os.path.join(MODULE_PATH, 'test_data') + os.sep
+
 #
 # auxiliary files
 #

@@ -8,7 +8,7 @@ from unittest import main, TestCase
 from moderna.analyze.GeometryAnalyzer import GeometryAnalyzer
 from moderna.ModernaStructure import ModernaStructure
 from moderna.commands import create_model
-from test_data import MINI_TEMPLATE, BAD_TEMPLATE
+from moderna.tests.test_data import MINI_TEMPLATE, BAD_TEMPLATE
 
 
 class GeometryAnalyzerTests(TestCase):

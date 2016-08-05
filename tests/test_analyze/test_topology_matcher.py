@@ -6,7 +6,7 @@ Tests the topology matching algorithm.
 from unittest import main, TestCase
 from moderna.analyze.MolecularGraph import AnnotatedMolecule
 from moderna.analyze.MolGraphParser import Molecule
-from test_data import TEST_DATA_PATH
+from moderna.tests.test_data import TEST_DATA_PATH
 import os
 
 ATTRIBUTES = ['h-bond acceptor','h-bond donor','h-bond hydrogen',\

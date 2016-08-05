@@ -6,7 +6,7 @@ unit tests for pucker calculation
 from unittest import TestCase, main
 from moderna.ModernaStructure import ModernaStructure
 from moderna.analyze.PuckerCalculator import PuckerCalculator
-from test_data import RNA_1EHZ
+from moderna.tests.test_data import RNA_1EHZ
 
 PUCKER_EXAMPLES = [
     ('11', "C3'-endo"),

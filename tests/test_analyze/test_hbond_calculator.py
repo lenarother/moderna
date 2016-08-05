@@ -6,7 +6,7 @@ Unit Tests for checking interactions calculation
 from moderna.analyze.HBondCalculator import HBondCalculator
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
-from test_data import *
+from moderna.tests.test_data import *
 import os
 
 
