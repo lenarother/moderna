@@ -1,26 +1,11 @@
 #!/usr/bin/env python
-#
-# test_fccd_loop_closer
-#
-# unit tests for backbone loop closing
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
-
 """
 Tests for the FCCDLoopCloser module.
 """
 
 from unittest import TestCase, main
 from moderna.builder.FCCDLoopCloser import FCCDLoopCloser
-from test_data import FCCD_EXAMPLE
+from moderna.tests.test_data import FCCD_EXAMPLE
 from Bio.PDB import PDBParser
 from Bio.PDB.Vector import Vector
 import numpy

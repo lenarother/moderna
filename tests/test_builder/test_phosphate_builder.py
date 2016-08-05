@@ -1,19 +1,8 @@
 #!/usr/bin/env python
-#
-# test_backbone_builder.py
-#
-# unit tests for reconstructing P and O5' atoms
-# e.g. after loop insertsions.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for reconstructing P and O5' atoms
+e.g. after loop insertsions.
+"""
 
 from unittest import main, TestCase
 from moderna.ModernaStructure import ModernaStructure
@@ -22,7 +11,7 @@ from moderna.analyze.GeometryParameters import GeometryStandards
 from moderna.analyze.ChainConnectivity import are_residues_connected, is_backbone_intact
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 import math
-from test_data import *
+from moderna.tests.test_data import *
 
 
 class PhosphateBuilderTests(TestCase):

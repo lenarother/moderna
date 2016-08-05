@@ -1,25 +1,15 @@
 #!/usr/bin/env python
-#
-# test_chi_rotation.py
-#
-# unit tests for rotating base around the glycosidic bond
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for rotating base around the glycosidic bond
+"""
 
 from unittest import TestCase, main
 from moderna.ModernaStructure import ModernaStructure
 from moderna.builder.ChiRotator import rotate_chi
-from test_data import *
+from moderna.tests.test_data import *
 from Bio.PDB.Vector import calc_dihedral
 import math
+
 
 class ChiRotationTests(TestCase):
 

@@ -1,39 +1,14 @@
 #!/usr/bin/env python
-#
-# test_coord_builder.py
-#
-# unit tests for coordinates building
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
-
 """
-Tests for the CoordBuilder module.
+Unit Tests for building coordinates
 """
-
-#TODO: Code ready for BioPython. KR 2010/05/07
-
-__author__ = "Kristian Rother, Magdalena Musielak, Tomasz Puton"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__license__ = "GPL"
-__credits__ = ["Janusz Bujnicki"]
-__maintainer__ = "Kristian Rother"
-__email__ = "krother@rubor.de"
-__status__ = "Production"
-
 
 from unittest import main, TestCase
 from moderna.builder.CoordBuilder import build_coord
 from Bio.PDB.Vector import Vector, calc_angle, calc_dihedral
 import math
 from random import random
+
 
 class CoordBuilderTests(TestCase):
     """
@@ -163,13 +138,13 @@ class CoordBuilderTests(TestCase):
 
 
 EXAMPLES = [
-    ( 2.0, 90.0, 0.0),
-    ( 1.0, 45.0, 0.0),
-    ( 1.0, 45.0, -90.0),
-    ( 1.0, 45.0, 90.0),
-    ( 1.0, 45.0, 180.0),
-    ( 1.0, 45.0, 135.0),
-    ]
+    (2.0, 90.0, 0.0),
+    (1.0, 45.0, 0.0),
+    (1.0, 45.0, -90.0),
+    (1.0, 45.0, 90.0),
+    (1.0, 45.0, 180.0),
+    (1.0, 45.0, 135.0),
+]
 
 
 if __name__ == '__main__':

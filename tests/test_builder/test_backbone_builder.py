@@ -1,29 +1,19 @@
 #!/usr/bin/env python
-#
-# test_backbone_builder.py
-#
-# unit tests for reconstructing full backbones
-# e.g. after loop insertsions.
-#
-# http://iimcb.genesilico.pl/moderna/
-#
-__author__ = "Magdalena Rother, Tomasz Puton, Kristian Rother"
-__copyright__ = "Copyright 2008, The Moderna Project"
-__credits__ = ["Janusz Bujnicki"]
-__license__ = "GPL"
-__maintainer__ = "Magdalena Rother"
-__email__ = "mmusiel@genesilico.pl"
-__status__ = "Production"
+"""
+Unit Tests for reconstructing full backbones
+e.g. after loop insertsions.
+"""
 
 from unittest import main, TestCase
 from moderna.analyze.ChainConnectivity import are_residues_connected, is_chain_continuous, is_backbone_intact
 from moderna.ModernaStructure import ModernaStructure
 from moderna.builder.BackboneBuilder import BackboneBuilder
 from moderna.analyze.GeometryParameters import GeometryStandards
-from test_data import *
+from moderna.tests.test_data import *
 
 DISCONNECTED = TEST_DATA_PATH + 'rna_structures/disconnected.pdb'
 BB_MESSED_UP = TEST_DATA_PATH + 'rna_structures/bb_messed_up.pdb'
+
 
 class BackboneBuilderTests(TestCase):
     def setUp(self):
