@@ -536,7 +536,7 @@ class CommandTests(TestCase):
         
     def test_write_fragment_candidates(self):
         """Fragment candidate file should be created."""
-        testout = 'test_data/test_output.pdb'
+        testout = TEST_DATA_PATH + 'test_output.pdb'
         self.remove_frag_cand_files(testout)
         copy_some_residues(self.t['1':'10'],self.m)
         candidates=find_fragment(self.m,'2','8',Sequence('AGCU#'),20)
@@ -545,7 +545,7 @@ class CommandTests(TestCase):
     #----------------------------------------------------------
     def test_write_fragment_candidates_contents(self):
         """Fragment candidate file should contain the right number of models."""
-        testout = 'test_data/test_output.pdb'
+        testout = TEST_DATA_PATH + 'test_output.pdb'
         self.remove_frag_cand_files(testout)
         copy_some_residues(self.t['1':'10'],self.m)
         candidates=find_fragment(self.m,'2','8',Sequence('AGCU#'),7)
