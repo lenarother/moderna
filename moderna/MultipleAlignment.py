@@ -488,8 +488,9 @@ class TemplateWrapper(Template):
         back_coords = {"C4'": multaln.target_atom_coords("C4'"),
                        "C1'": multaln.target_atom_coords("C1'"),
                        "O2'": multaln.target_atom_coords("O2'"),}
-        self.replace_sugars(back_coords, temp_list)
         self.move_residues(back_coords, pair_list)
+        #XXX originally replace_sugars() was *before* move_residues() XXX#
+        self.replace_sugars(back_coords, temp_list)
         base_coords = {"N9/N1": multaln.target_atom_coords("N9/N1"),
                        "C2": multaln.target_atom_coords("C2"),
                        "C6/C4": multaln.target_atom_coords("C6/C4"),}
