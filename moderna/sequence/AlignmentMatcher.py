@@ -123,6 +123,7 @@ class AlignmentMatcher(object):
             result.append((apos.target_letter, GAP))
         elif apos.has_target_gap():
             result.append((GAP, guide))
+            dqueue.next_guide()
         dqueue.next_ap()
     
     def check_matches(self, guide, apos, dqueue, result):
