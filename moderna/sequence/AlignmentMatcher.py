@@ -42,13 +42,14 @@ class PairQueue(object):
         
     def has_more(self):
         """True as long as both queues have elements."""
-        if self.ap_queue and self.guide_queue:
+        if self.ap_queue:
             return True
         
     @property    
     def pair(self):
         """Return current pair of elements."""
-        return self.guide_queue[-1], self.ap_queue[-1]
+        guide = self.guide_queue[-1] if len(self.guide_queue) > 0 else GAP
+        return guide, self.ap_queue[-1]
     
     def next_ap(self):
         """Moves one queue forward."""
